@@ -376,6 +376,8 @@ body {
 #view-summary .flow-item {
   background:var(--c1l); color:var(--c1);
   font-weight:700; padding:4px 10px; border-radius:6px;
+  text-align: center;
+  
 }
 #view-summary .flow-arrow { color:#6b7280; }
 /* 배지 */
@@ -402,6 +404,10 @@ body {
 #view-summary .divider { height:1px; background:#e5e0d8; margin:10px 0; }
 #view-summary .sub {
   font-size:.8em; font-weight:800; color:#6b7280;
+  margin:10px 0 6px; text-transform:uppercase; letter-spacing:.5px;
+}
+#view-summary .sub-tit {
+  font-size:.9em; font-weight:800; color:#000000;
   margin:10px 0 6px; text-transform:uppercase; letter-spacing:.5px;
 }
 #view-summary .no { color:var(--c3); font-weight:700; }
@@ -832,7 +838,7 @@ body {
         <button type="button" class="subject-filter-btn" data-filter="3" onclick="toggleSubjectFilter(3, this)">사회복지와 인권</button>
         <button type="button" class="subject-filter-btn" data-filter="4" onclick="toggleSubjectFilter(4, this)">산업복지론</button>
         <button type="button" class="subject-filter-btn" data-filter="5" onclick="toggleSubjectFilter(5, this)">프로그램 개발과 평가</button>
-        <button type="button" class="subject-filter-btn" data-filter="6" onclick="toggleSubjectFilter(6, this)">사회복지인권과 철학</button>
+        <button type="button" class="subject-filter-btn" data-filter="6" onclick="toggleSubjectFilter(6, this)">사회복지윤리와 철학</button>
       </div>
     </div>
 
@@ -969,13 +975,13 @@ body {
       </div>
     </div>
 
-    <!-- ── 과목 6: 사회복지인권과 철학 ── -->
+    <!-- ── 과목 6: 사회복지윤리와 철학 ── -->
     <div class="subject-card theme-cyan" data-subject-id="6">
       <div class="card-header">
         <div class="card-emoji">💭</div>
         <div class="card-info">
           <div class="card-num">SUBJECT 06</div>
-          <div class="card-title">사회복지인권과 철학</div>
+          <div class="card-title">사회복지윤리와 철학</div>
           <div class="card-desc">
             사회복지 가치·철학·윤리<br>
             <span class="card-tag" style="background:#cffafe;color:#0e7490;">요약카드 15강</span>
@@ -1002,7 +1008,6 @@ body {
       <ul class="how-list">
         <li><span>📖</span><span><b>요약정리</b> — 핵심 내용을 카드 형식으로 정리. 강의별 탭 이동, 키워드 검색, 글씨 크기 조절 가능.</span></li>
         <li><span>✏️</span><span><b>연습문제</b> — 문제은행에서 랜덤 출제. 즉시 정답·해설 확인, 번호판으로 자유 이동.</span></li>
-        <li><span>✏️</span><span>각 과목의 <b>예시 데이터</b>는 사용자가 직접 JavaScript 데이터 객체(<code>SUMMARY_DATA</code>, <code>QUIZ_BANK</code>)를 수정해 추가할 수 있습니다.</span></li>
         <li><span>📱</span><span>모바일·태블릿·PC 모두 최적화. 홈 화면에 추가하면 앱처럼 사용 가능.</span></li>
       </ul>
     </div>
@@ -1010,8 +1015,7 @@ body {
   </div><!-- /idx-main -->
 
   <div class="idx-footer">
-    사회복지사 시험 학습 허브 · 통합 단일 파일<br>
-    SUMMARY_DATA / QUIZ_BANK 객체에 내용을 추가하면 반영됩니다
+    사회복지학과 기말시험 학습 허브 · 통합 단일 파일<br>
   </div>
 
   <!-- ── 전체 과목 요약 검색 오버레이 ── -->
@@ -10184,127 +10188,2277 @@ const SUMMARY_DATA = {
     ]
   },
 
-  /* ── 과목 6: 사회복지인권과 철학 (예시 템플릿) ── */
+  /* ── 과목 6: 사회복지윤리와 철학 요약정리) ── */
   6: {
-    title: '사회복지인권과 철학',
-    subtitle: '1강 ~ 3강 예시 데이터',
+    title: '사회복지윤리와 철학',
+    subtitle: '1강 ~ 15강',
     icon: '💭',
     chapters: [
-      {
-        num: '1강', name: '사회복지의 철학적 기반',
+  {
+        num: "1강", name: "철학이란 무엇인가",
         cards: [
-          {
-            icon: '🌟', title: '사회복지 이념',
-            html: `
-              <div class="hbox hbox-blue">
-                <b>사회복지 이념</b>: 사회복지 정책과 실천에 방향과 정당성을 제공하는 가치 체계
-              </div>
-              <table class="comp-table" style="margin-top:8px">
-                <tr><th>이념</th><th>핵심</th><th>강조</th></tr>
-                <tr><td><b>자유주의</b></td><td>개인의 자유·권리 우선</td><td>잔여적·선별적 복지</td></tr>
-                <tr><td><b>보수주의</b></td><td>전통·가족·공동체 중시</td><td>직역 중심 사회보험</td></tr>
-                <tr><td><b>사회민주주의</b></td><td>평등·연대·국가 역할</td><td>보편적·제도적 복지</td></tr>
-                <tr><td><b>급진주의</b></td><td>자본주의 구조 변혁</td><td>해방적 복지</td></tr>
-              </table>
-              <div class="hbox hbox-yellow" style="margin-top:8px">
-                <b>✏️ 추가 내용</b>: SUMMARY_DATA[6].chapters[0].cards[0].html 을 수정해 내용을 추가하세요
-              </div>
-            `
-          },
-          {
-            icon: '⚖️', title: '정의론',
-            html: `
-              <div class="tag tag-blue">철학적 기반</div>
-              <ul class="pts">
-                <li><b>공리주의(벤담)</b>: 최대 다수의 최대 행복 — 결과주의</li>
-                <li><b>자유주의적 평등(롤스)</b>: 차등의 원칙 — 가장 불리한 사람에게 이득이 될 때 불평등 허용</li>
-                <li><b>능력주의(노직)</b>: 자유 지상주의 — 최소 국가, 개인 권리 절대 존중</li>
-                <li><b>공동체주의</b>: 공동체의 선과 가치 우선 (공동선)</li>
-              </ul>
-              <div class="hbox hbox-yellow" style="margin-top:8px">
-                <b>✏️ 추가 내용</b>: SUMMARY_DATA[6].chapters[0].cards[1].html 을 수정해 내용을 추가하세요
-              </div>
-            `
-          }
+          { icon: "🧠", title: "철학의 의미", html: "<div class=\"hbox hbox-blue\">\n<b>철학(Philosophy)</b> = Philo(사랑) + Sophia(지혜)<br/>\n→ <b>지혜에 대한 사랑</b>, 진리·지에 대한 탐구\n</div>\n<div class=\"sub\">철학의 정의</div>\n<ul class=\"pts\">\n<li>인간과 밀접하게 관련된 주제들을 <b>논리적·체계적으로 탐구</b>하는 것</li>\n<li>가장 간단한 표현: <b>깊게 생각하기</b></li>\n</ul>\n<div class=\"sub\">철학이 다루는 질문</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">인간이란 어떤 존재인가</span>\n<span class=\"badge badge-green\">인간은 어떤 조건에서 사는가</span>\n<span class=\"badge badge-purple\">인간과 인간의 관계는 무엇인가</span>\n<span class=\"badge badge-yellow\">공동체와 사회의 의미는 무엇인가</span>\n</div>" },
+
+          { icon: "📚", title: "철학의 영역", html: "<table class=\"comp-table\">\n<tr><th>영역</th><th>핵심 질문</th></tr>\n<tr><td><b>존재론</b></td><td>인간은 어떤 존재인가?</td></tr>\n<tr><td><b>인식론</b></td><td>우리는 어떻게 지식을 얻을 수 있는가?</td></tr>\n<tr><td><b>논리학</b></td><td>인식에 도달하는 과정이 논리적·체계적인가?</td></tr>\n<tr><td><b>윤리학</b></td><td>인간은 어떻게 살아야 하는가? <span class=\"small\">(규범·도덕)</span></td></tr>\n<tr><td><b>미학</b></td><td>아름다움이란 무엇인가?</td></tr>\n</table>\n<div class=\"sub\">형이상학(Meta)</div>\n<div class=\"hbox hbox-yellow\">\n각 영역의 <b>본질 자체</b>에 대한 질문<br/>\n예) 존재한다는 것, 인식한다는 것, 아름다움 그 자체는 무엇인가?\n</div>" },
+
+          { icon: "⚖️", title: "윤리학의 구분", html: "<div class=\"hbox hbox-blue\">\n윤리학은 크게 <b>규범 윤리학</b>과 <b>메타 윤리학</b>으로 구분된다. <span class=\"kichul\">⭐ 중요</span>\n</div>\n<table class=\"comp-table\" style=\"margin-top:8px\">\n<tr><th></th><th>규범 윤리학</th><th>메타 윤리학</th></tr>\n<tr><td>관심</td><td>윤리적 원칙과 행위 기준</td><td>윤리학의 본질 자체</td></tr>\n<tr><td>질문</td><td>어떻게 살아야 하는가?</td><td>도덕이란 무엇인가?</td></tr>\n<tr><td>예시</td><td>살인하지 말라, 거짓말하지 말라, 남을 도와라</td><td>좋다는 말의 의미 자체는 무엇인가?</td></tr>\n</table>\n<div class=\"sub\">핵심 비교</div>\n<table class=\"comp-table\">\n<tr><th>개념</th><th>규범 윤리학</th><th>메타 윤리학</th></tr>\n<tr><td><b>좋음</b></td><td>좋은 선생님은 어떤 선생님인가</td><td>“좋다”는 말의 의미 자체는 무엇인가</td></tr>\n<tr><td><b>옳음</b></td><td>올바른 행동이란 무엇인가</td><td>“옳음” 자체의 의미는 무엇인가</td></tr>\n</table>" },
+
+          { icon: "🤝", title: "사회복지와 철학", html: "<div class=\"hbox hbox-blue\">\n<b>Welfare(복지)</b> = Well(잘) + Fare(상태)<br/>\n→ <b>잘 있음</b>, 안녕, 행복\n</div>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:8px\">\n<b>사회복지</b> = 사회적 안녕, 사회적으로 행복한 상태<br/>\n<b>사회복지란 사회적 위험에 대한 공적인 대응이다.</b> <span class=\"kichul\">⭐ 중요</span>\n</div>\n<div class=\"sub\">철학적 질문이 필요한 이유</div>\n<ul class=\"pts\">\n<li>행복하다는 것은 어떤 상태인가? → <b>윤리학·존재론</b></li>\n<li>사회적 위험이란 무엇인가? → <b>존재론·인식론</b></li>\n<li>사회는 무엇인가? → <b>존재론</b></li>\n</ul>\n<table class=\"comp-table\">\n<tr><th>철학 영역</th><th>사회복지와의 관계</th></tr>\n<tr><td><b>존재론</b></td><td>인간이 어떤 존재인지 알아야 올바른 정책·제도·법 추구 가능</td></tr>\n<tr><td><b>인식론</b></td><td>사회복지사의 고유한 전문적 역할을 어떻게 알 수 있는가</td></tr>\n<tr><td><b>미학</b></td><td>사회복지는 과학이자 동시에 예술</td></tr>\n</table>" },
+
+          { icon: "🎨", title: "사회복지는 과학이자 예술", html: "<div class=\"hbox hbox-blue\">\n사회복지사는 <b>냉철한 이성의 전문인</b>인 동시에, 다양한 인간의 삶에 <b>창의성·공감·용기</b>로 개입하는 존재이다.\n</div>\n<table class=\"comp-table\" style=\"margin-top:8px\">\n<tr><th>구분</th><th>의미</th></tr>\n<tr><td><b>과학 없는 사회복지</b></td><td>전문성 없는 자의적 활동</td></tr>\n<tr><td><b>예술 없는 사회복지</b></td><td>차갑고 무미건조한 기능인에 불과</td></tr>\n</table>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:8px\">\n사회복지는 <b>전문적 지식</b>과 <b>인간에 대한 섬세한 이해</b>가 함께 필요하다.\n</div>" },
+
+          { icon: "🔎", title: "철학하기의 방법", html: "<div class=\"sub\">철학하기의 단계 <span class=\"kichul\">⭐ 중요</span></div>\n<div style=\"display:flex;flex-direction:column;gap:7px;\">\n<div style=\"background:#eff6ff;border-radius:10px;padding:11px 14px;font-size:.86em;line-height:1.65;color:#1e3a8a;\"><b>1. 깊게 생각하기</b><br/>나 자신, 타인과의 관계, 내가 속한 세계에 대해 깊이 사유</div>\n<div style=\"background:#f0fdf4;border-radius:10px;padding:11px 14px;font-size:.86em;line-height:1.65;color:#166534;\"><b>2. 들여다보기</b><br/>겉으로 쳐다보는 것이 아니라, 이면과 원인의 원인을 보는 것</div>\n<div style=\"background:#fef3c7;border-radius:10px;padding:11px 14px;font-size:.86em;line-height:1.65;color:#92400e;\"><b>3. 근본적으로 질문하기</b><br/>들여다본 뒤 근본적인 질문을 던지는 것</div>\n<div style=\"background:#fdf4ff;border-radius:10px;padding:11px 14px;font-size:.86em;line-height:1.65;color:#7c2d12;\"><b>4. 대화하기</b><br/>나의 생각·보기·질문의 한계를 인정하고 타인의 관점을 받아들이는 것</div>\n</div>\n<div class=\"hbox hbox-blue\" style=\"margin-top:8px\">\n<b>대화하기</b>가 철학하기의 최종 완성\n</div>\n<div class=\"sub\">테오리아(Theoria)</div>\n<div class=\"hbox hbox-yellow\">그리스어로 <b>학문</b>이자 <b>보다</b>의 의미 → 고대 그리스에서 본다는 것은 곧 철학하기</div>" },
+
+          { icon: "⏸️", title: "에포케와 데카르트", html: "<div class=\"sub\">에포케(Epoché)</div>\n<div class=\"hbox hbox-blue\">\n고대 희랍어(그리스어)로 <b>멈추다</b> → 희랍철학과 현상학에서 의미 <b>판단 중지</b>를 의미 <span class=\"kichul\">⭐ 중요</span>\n</div>\n<ul class=\"pts\">\n<li>기존의 편견·선입견을 괄호 쳐 놓기</li>\n<li>감각적 패턴을 일시적으로 지워 놓기</li>\n<li>상대방의 지위·성별·배경에 대한 판단을 중지하기</li>\n</ul>\n<div class=\"sub\">피론(Pyrrho)의 회의주의</div>\n<div class=\"hbox hbox-yellow\">“벌꿀이 누구에게는 달지만, 황달에 걸린 사람에게는 쓰다.”<br/>→ 당연한 것이 정말 당연한 것인가를 의심</div>\n<div class=\"sub\">데카르트의 철학하기</div>\n<div class=\"hbox hbox-blue\">\n<b>Cogito ergo sum</b><br/>“나는 생각한다, 고로 나는 존재한다.”\n</div>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:8px\">\n<b>Dubito ergo cogito ergo sum</b><br/>“나는 의심한다, 고로 나는 생각한다, 고로 나는 존재한다.”\n</div>\n<ul class=\"pts\">\n<li>데카르트 = <b>방법론적 회의주의자</b></li>\n<li>더 이상 의심할 수 없는 것: <b>의심하고 있는 나 자신의 존재</b></li>\n<li><b>질문하기를 멈추는 순간 인간은 존재하기를 멈춘다</b></li>\n</ul>" },
+
+          { icon: "🪤", title: "생각하기 vs 생각 당하기", html: "<div class=\"sub\">우리가 생각하지 못하는 이유</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-yellow\">귀찮음<br/><small>피로·시간 부족으로 깊은 생각 회피</small></span>\n<span class=\"badge badge-red\">확신<br/><small>이미 다 알고 있다는 자기 확신</small></span>\n</div>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n두 경우 모두 <b>질문하기를 멈춘 상태</b> = 철학하기와 거리가 멂\n</div>\n<div class=\"sub\">벼룩 실험 <span class=\"kichul\">⭐ 중요</span></div>\n<ul class=\"pts\">\n<li>벼룩은 자기 몸의 200배 높이를 점프 가능</li>\n<li>20cm 통에 가두고 뚜껑을 덮으면 머리를 부딪히며 점프 높이를 낮추도록 학습</li>\n<li>뚜껑을 제거해도 학습된 무기력 때문에 낮은 높이만 뜀</li>\n</ul>\n<div class=\"hbox hbox-yellow\">\n<b>교훈</b>: 남의 생각을 일방적으로 듣기만 하면 스스로 생각하는 능력 자체가 상실됨\n</div>" },
+
+          { icon: "🕯️", title: "사유 불능과 악의 평범성", html: "<div class=\"sub\">폼젤(Pomsel) 여사의 사례</div>\n<ul class=\"pts\">\n<li>성실·복종의 가치로 엄격하게 교육받음</li>\n<li>히틀러 정권 하에서 괴벨스의 타이피스트로 근무</li>\n<li>주장: “나는 맡은 일만 충실히 했을 뿐이다”</li>\n</ul>\n<div class=\"hbox hbox-red\">\n<b>알지 못함(무지)</b>보다 <b>알려고 하지 않음(고의적 태만)</b>이 더 큰 책임\n</div>\n<div class=\"sub\">프리모 레비(Primo Levi)</div>\n<div class=\"hbox hbox-yellow\">“아는 사람은 말하지 않고, 모르는 사람은 질문하지 않으며, 질문하는 사람에게 대답하지 않는다.”<br/>→ 모두가 철학하기를 멈춘 상태</div>\n<div class=\"sub\">한나 아렌트와 아이히만 <span class=\"kichul\">⭐ 중요</span></div>\n<ul class=\"pts\">\n<li>아이히만: 유럽 유대인을 수용소로 이송시키는 업무 담당</li>\n<li>최소 비용·최대 효율·최고 신속함을 추구하며 열심히 일한 사람</li>\n<li>주장: “나는 단지 맡은 일을 성실히 수행했을 뿐이다.”</li>\n</ul>\n<div class=\"hbox hbox-blue\">\n악은 악마 같은 존재가 만드는 것이 아니라, <b>평범한 사람들이 사유하기를 멈출 때</b> 발생한다.<br/>\n→ <b>사유 불능</b> + <b>악의 평범성</b>\n</div>" },
+
+          { icon: "👁️", title: "판옵티콘과 내면화", html: "<div class=\"sub\">생각 당하게 되는 과정</div>\n<ol class=\"pts\">\n<li>부당한 질서에 처음에는 억울함·분노를 느낌</li>\n<li>권력과 폭력이 압도적이어서 자기 목소리를 내기 두려워짐</li>\n<li>두려움으로 인해 지배 이데올로기를 <b>내면화</b>하기 시작</li>\n<li>결국 아무도 목소리를 내지 않는 <b>침묵의 문화</b> 만연</li>\n</ol>\n<div class=\"sub\">판옵티콘(Panopticon) <span class=\"kichul\">⭐ 중요</span></div>\n<div class=\"hbox hbox-blue\">\n<b>Pan</b>(모든 곳) + <b>Optikon</b>(본다) = “다 보이는 구조”\n</div>\n<table class=\"comp-table\" style=\"margin-top:8px\">\n<tr><th>인물</th><th>내용</th></tr>\n<tr><td><b>제레미 벤담</b></td><td>공리주의자, 판옵티콘 최초 설계 제안</td></tr>\n<tr><td><b>미셸 푸코</b></td><td>권력-감시 구조로 재인용·유명화</td></tr>\n</table>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:8px\">\n타워 안에 감시자가 있는지 알 수 없어 스스로 행동을 통제함<br/>\n→ <b>감시 없이도 스스로 규율에 복종</b> = 지배 이데올로기의 내면화\n</div>" },
+
+          { icon: "🔁", title: "철학하기의 실천", html: "<div class=\"sub\">철학하기의 나선형 반복 구조</div>\n<div style=\"margin:6px 0 10px;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;\">\n<div style=\"background:#dbeafe;padding:10px;text-align:center;font-weight:900;color:#1d4ed8;\">근본적 질문하기</div>\n<div style=\"text-align:center;color:#94a3b8;background:#f8fafc;\">▼</div>\n<div style=\"background:#eff6ff;padding:10px;text-align:center;font-weight:800;color:#1e40af;\">깊게 생각하기 / 들여다보기</div>\n<div style=\"text-align:center;color:#94a3b8;background:#f8fafc;\">▼</div>\n<div style=\"background:#fef3c7;padding:10px;text-align:center;font-weight:800;color:#92400e;\">사회적 부조리·구조적 폭력에 분노</div>\n<div style=\"text-align:center;color:#94a3b8;background:#f8fafc;\">▼</div>\n<div style=\"background:#f0fdf4;padding:10px;text-align:center;font-weight:800;color:#166534;\">동료와 대화하기</div>\n<div style=\"text-align:center;color:#94a3b8;background:#f8fafc;\">▼</div>\n<div style=\"background:#fdf4ff;padding:10px;text-align:center;font-weight:800;color:#7e22ce;\">사회 변화 추구</div>\n<div style=\"text-align:center;color:#94a3b8;background:#f8fafc;\">▼</div>\n<div style=\"background:#1d4ed8;padding:10px;text-align:center;font-weight:900;color:#fff;\">변화된 상태에서 다시 질문하기</div>\n</div>\n<div class=\"hbox hbox-blue\">\n이 끊임없는 반복 = <b>세상 만들기</b>\n</div>\n<div class=\"sub\">선녀와 나무꾼 사례</div>\n<ul class=\"pts\">\n<li>당연하게 여겼던 이야기에 질문 던지기</li>\n<li>법적 관점: 재물은닉, 강제결혼, 스토킹 문제</li>\n<li>윤리적 관점: 선녀의 자유와 행복 침해</li>\n<li><b>비판 없이 수용한 독자</b>가 더 큰 문제</li>\n</ul>" },
+
+          { icon: "🗺️", title: "강의 로드맵과 핵심 개념", html: "<div class=\"sub\">이번 학기 강의 구성</div>\n<table class=\"comp-table\">\n<tr><th>주제</th><th>강</th><th>내용</th></tr>\n<tr><td><b>인간</b></td><td>2강</td><td>인간이란 어떤 존재인가, 행복이란 무엇인가</td></tr>\n<tr><td><b>공동체</b></td><td>3강</td><td>공동체의 의미</td></tr>\n<tr><td><b>실천</b></td><td>4강</td><td>시민 정치, 실천이란 무엇인가</td></tr>\n<tr><td><b>사회 윤리</b></td><td>5강</td><td>개인 윤리 vs 사회 윤리</td></tr>\n<tr><td><b>윤리학의 정통</b></td><td>6강</td><td>목적론 vs 의무론</td></tr>\n<tr><td><b>사회 윤리 주제</b></td><td>7~10강</td><td>자유, 평등, 정의, 역사</td></tr>\n<tr><td><b>적용·실천</b></td><td>11~14강</td><td>여성, 장애, 노년, 노동과 철학</td></tr>\n<tr><td><b>사회복지의 본질</b></td><td>15강</td><td>사회복지의 가치·의미, 사회복지사의 정체성·역할·윤리</td></tr>\n</table>\n<div class=\"sub\">맥락 연결</div>\n<div class=\"hbox hbox-yellow\"><b>인간다움</b> → 공동체다움 → 정치·실천</div>\n<div class=\"sub\">핵심 개념 요약</div>\n<table class=\"comp-table\">\n<tr><th>개념</th><th>정의</th></tr>\n<tr><td><b>철학</b></td><td>인간과 밀접한 주제를 논리적·체계적으로 탐구하는 것</td></tr>\n<tr><td><b>사회복지</b></td><td>사회적 위험에 대한 공적 대응</td></tr>\n<tr><td><b>에포케</b></td><td>판단 중지, 기존 편견·선입견을 괄호 쳐 놓는 태도</td></tr>\n<tr><td><b>악의 평범성</b></td><td>평범한 사람들이 사유를 멈출 때 거대한 악이 발생한다는 통찰</td></tr>\n<tr><td><b>판옵티콘</b></td><td>중앙 감시 구조 → 자기 감시 내면화 → 지배 이데올로기 내면화</td></tr>\n</table>" }
         ]
-      },
-      {
-        num: '2강', name: '사회복지 윤리',
-        cards: [
-          {
-            icon: '📜', title: '사회복지사 윤리강령',
-            html: `
-              <div class="hbox hbox-blue">
-                <b>한국사회복지사 윤리강령</b>: 사회복지사가 전문직으로서 지켜야 할 행동 기준과 가치를 명시
-              </div>
-              <div class="badge-row" style="margin-top:8px">
-                <span class="badge badge-blue">클라이언트에 대한 의무</span>
-                <span class="badge badge-green">동료에 대한 의무</span>
-                <span class="badge badge-yellow">사회에 대한 의무</span>
-                <span class="badge badge-purple">전문직에 대한 의무</span>
-              </div>
-              <div class="hbox hbox-yellow" style="margin-top:8px">
-                <b>✏️ 추가 내용</b>: SUMMARY_DATA[6].chapters[1].cards[0].html 을 수정해 내용을 추가하세요
-              </div>
-            `
-          },
-          {
-            icon: '🤔', title: '윤리적 딜레마',
-            html: `
-              <div class="hbox hbox-blue">
-                <b>윤리적 딜레마</b>: 두 가지 이상의 윤리 원칙이 충돌하여 최선의 선택이 모호한 상황
-              </div>
-              <ul class="pts" style="margin-top:8px">
-                <li><b>자기결정 vs 온정주의</b>: 클라이언트의 자율적 선택 vs 최선의 이익 보호</li>
-                <li><b>비밀보장 vs 공공의 이익</b>: 정보 보호 vs 타인 위험 예방</li>
-                <li><b>진실성 vs 보호</b>: 사실 전달 vs 해로운 정보 차단</li>
-              </ul>
-              <div class="hbox hbox-yellow" style="margin-top:8px">
-                <b>✏️ 추가 내용</b>: SUMMARY_DATA[6].chapters[1].cards[1].html 을 수정해 내용을 추가하세요
-              </div>
-            `
-          }
-        ]
-      },
-      {
-        num: '3강', name: '비판적 사회복지와 역량강화',
-        cards: [
-          {
-            icon: '💪', title: '역량강화(Empowerment) 실천',
-            html: `
-              <div class="hbox hbox-blue">
-                <b>역량강화</b>: 개인·집단·지역사회가 자신의 삶을 통제할 수 있는 힘을 가지도록 돕는 과정
-              </div>
-              <div class="badge-row" style="margin-top:8px">
-                <span class="badge badge-blue">개인 수준</span>
-                <span class="badge badge-green">대인관계 수준</span>
-                <span class="badge badge-yellow">지역사회 수준</span>
-                <span class="badge badge-purple">구조적 수준</span>
-              </div>
-              <div class="hbox hbox-yellow" style="margin-top:8px">
-                <b>✏️ 추가 내용</b>: SUMMARY_DATA[6].chapters[2].cards[0].html 을 수정해 내용을 추가하세요
-              </div>
-            `
-          },
-          {
-            icon: '🌐', title: '사회복지 패러다임의 전환',
-            html: `
-              <div class="tag tag-cyan">패러다임 변화</div>
-              <table class="comp-table">
-                <tr><th>전통적 패러다임</th><th>→</th><th>새로운 패러다임</th></tr>
-                <tr><td>전문가 중심</td><td>→</td><td>클라이언트 중심 (당사자성)</td></tr>
-                <tr><td>결핍·병리 관점</td><td>→</td><td>강점·회복력 관점</td></tr>
-                <tr><td>개인 문제</td><td>→</td><td>구조적 문제 (사회변화)</td></tr>
-                <tr><td>서비스 제공</td><td>→</td><td>권리 실현·역량강화</td></tr>
-              </table>
-              <div class="hbox hbox-yellow" style="margin-top:8px">
-                <b>✏️ 추가 내용</b>: SUMMARY_DATA[6].chapters[2].cards[1].html 을 수정해 내용을 추가하세요
-              </div>
-            `
-          }
-        ]
-      }
-    ]
+    },
+  { num: "2강", name: "인간과 인간다운 삶",
+      cards: [
+{ icon: "📜", title: "인간과 비인간의 역사", html: `
+    <div class="hbox hbox-blue">
+    <b>핵심</b>: 역사 속에서 '인간'으로 인정받는 범위는 시대마다 달랐다.
+    </div>
+    <table class="comp-table">
+    <tr><th>시대</th><th class="th-blue">인간</th><th class="th-red">비인간</th></tr>
+    <tr><td>고대</td><td>자유민</td><td><b>노예</b></td></tr>
+    <tr><td>봉건제</td><td>귀족·영주</td><td><b>농노</b></td></tr>
+    <tr><td>산업화</td><td>노동력을 가진 자</td><td><b>노동력이 없는 자</b></td></tr>
+    </table>
+    <ul class="pts red" style="margin-top:8px">
+    <li>산업화 시대 대표 제도: <b>구빈법(빈민법)</b> — 노동 불능자를 작업장에 수용·징계·처벌</li>
+    <li>역사는 끊임없이 인간과 비인간을 구분해온 역사</li>
+    </ul>` },
+
+        { icon: "🚫", title: "호모 사케르(Homo Sacer)", html: `
+    <div class="hbox hbox-blue">
+    <b>조르조 아감벤</b>이 제시한 개념<br/>
+    호모(생명) + 사케르(신성한) = <b>신성한 생명</b>이자 <b>벌거벗은 생명</b>
+    </div>
+    <div class="sub">조에(Zoé) vs 비오스(Bios) ★★</div>
+    <table class="comp-table">
+    <tr><th>개념</th><th>뜻</th><th>대상</th></tr>
+    <tr><td><b>조에(Zoé)</b></td><td>단순히 생명을 가진 것</td><td>인간·동물·식물 모두</td></tr>
+    <tr><td><b>비오스(Bios)</b></td><td>정치 공동체에 참여하는 삶</td><td>완전한 의미의 인간</td></tr>
+    </table>
+    <ul class="pts" style="margin-top:8px">
+    <li>호모 사케르 = <b>조에</b>에 해당 → 정치 공동체에서 추방·박탈된 존재</li>
+    <li>죽여도 법적 처벌 없음 — 이미 '신의 것'이므로</li>
+    </ul>
+    <div class="sub">역사 속 호모 사케르 사례</div>
+    <div class="badge-row">
+    <span class="badge badge-gray">노예</span>
+    <span class="badge badge-gray">농노</span>
+    <span class="badge badge-gray">유대인(아우슈비츠)</span>
+    <span class="badge badge-gray">장애인</span>
+    <span class="badge badge-gray">실업자</span>
+    <span class="badge badge-gray">난민·소수자·노인·노숙자</span>
+    </div>
+    <div class="hbox hbox-red" style="margin-top:8px">
+    ⚠️ <b>기출 함정</b>: 호모 사케르가 <b>아닌</b> 것 → <b>자본가</b>
+    </div>` },
+
+        { icon: "🤲", title: "인간은 경쟁인가, 협동인가", html: `
+    <div class="hbox hbox-blue">
+    유발 하라리 『사피엔스』: 인간은 경쟁보다 <b>협동 유전자</b>로 진화했다
+    </div>
+    <ul class="pts">
+    <li>인간의 아기는 오랜 기간 가족·부족 전체의 돌봄이 필요</li>
+    <li>진화에서 선호된 것: <b>강한 사회적 결속을 이룰 능력</b></li>
+    </ul>
+    <div class="hbox hbox-yellow" style="margin-top:8px">
+    ⚠️ <b>기출 포인트</b>: "애를 키우려면 가족·이웃의 지속적 도움이 필요하다"<br/>→ 인간의 특징: <b>의존성</b>
+    </div>
+    <div class="sub">이기적 vs 이타적 존재</div>
+    <table class="comp-table">
+    <tr><th>철학자</th><th>주장</th><th>핵심</th></tr>
+    <tr><td><b>홉스</b></td><td>이기적 존재</td><td>인간은 생존에 집착, 자연 상태 = <b>만인의 만인에 대한 투쟁</b></td></tr>
+    <tr><td><b>루소</b></td><td>이타적 존재</td><td>인간은 선하게 태어나며 컴패션(compassion)을 가짐. <b>악은 사회 제도가 만든 것</b></td></tr>
+    <tr><td><b>라캉</b></td><td>관계에 따라 다름</td><td>인간은 관계 속의 존재이므로 어떤 <b>관계</b>에 있느냐에 따라 달라짐</td></tr>
+    </table>` },
+
+        { icon: "🕸️", title: "관계의 존재망과 개인·사회 윤리", html: `
+    <div class="sub">관계의 존재망</div>
+    <table class="comp-table">
+    <tr><th>단계</th><th>개념</th><th>내용</th></tr>
+    <tr><td>①</td><td><b>인접환경</b></td><td>나의 욕구·가족 — 가장 가까이 있는 관계</td></tr>
+    <tr><td>②</td><td><b>패턴화</b></td><td>인접환경 속 역할·행위가 반복 → 관습·관행으로 굳어지는 과정</td></tr>
+    <tr><td>③</td><td><b>인접제도</b></td><td>패턴화된 관계가 구조화된 상태 → 개인의 정체성을 규정</td></tr>
+    <tr><td>④</td><td><b>규율</b></td><td>확립된 제도가 역으로 환경을 강화하고 개인의 행동을 통제하는 순환 구조</td></tr>
+    </table>
+
+    <div class="hbox hbox-yellow" style="margin-top:8px">
+    <b>예시 — 가사노동의 순환</b><br/>
+    밥을 해줌(인접환경) → 자꾸 반복(패턴화) → "밥 해줘야 하는 사람"으로 정체성 고착(인접제도) → 안 하면 이상한 존재가 되는 규율(규율) → 환경이 다시 강화됨(순환)
+    </div>
+
+    <div class="sub" style="margin-top:12px">개인윤리의 장</div>
+    <div class="hbox hbox-blue">
+    나 ↔ <b>인접환경·인접제도</b> 사이에서 발생하는 윤리적 문제를 다루는 영역
+    </div>
+    <ul class="pts" style="margin-top:8px">
+    <li><b>자원동원</b>: 지역 자원·자원봉사·재원 마련 과정의 윤리적 선택과 딜레마</li>
+    <li><b>사례관리</b>: 사회복지사(개인) ↔ 클라이언트(개인) 관계 속 판단과 행동의 윤리</li>
+    </ul>
+
+    <div class="hbox hbox-blue" style="margin-top:12px">
+    📌 범위를 넓히면? — 인접환경 너머에는 <b>이웃·공동체</b>가, 인접제도 너머에는 <b>국가·법·정책</b>이 있다
+    </div>
+
+    <div class="sub" style="margin-top:12px">사회윤리의 장</div>
+    <div class="hbox hbox-blue">
+    나 ↔ <b>국가·법·정책</b>이 만들어내는 더 크고 본질적인 관계 속에서 다루는 윤리 영역
+    </div>
+    <ul class="pts" style="margin-top:8px">
+    <li>사회 <b>정의·분배</b> 문제 — 구조 자체를 다룸</li>
+    <li><b>구조변화·사회관리</b>: 제도와 정책을 바꾸는 거시적 실천</li>
+    <li>법·정책·제도가 서비스 체제 전체에 미치는 영향을 <b>이해·비판·질문</b>하는 것</li>
+    </ul>
+
+    <div class="sub" style="margin-top:12px">관계망의 확장 — 세상읽기의 윤리학, 세상만들기의 윤리학</div>
+    <table class="comp-table">
+    <tr><th>범위</th><th>관계</th></tr>
+    <tr><td>가장 가까운 곳</td><td>나의 욕구·가족</td></tr>
+    <tr><td>조금 멀리</td><td>이웃</td></tr>
+    <tr><td>더 멀리</td><td>공동체</td></tr>
+    <tr><td>가장 큰 틀</td><td>국가·법·정책</td></tr>
+    </table>
+    <div class="hbox hbox-blue" style="margin-top:8px">
+    내가 놓여 있는 관계는 인접환경만이 아니다.<br/>
+    더 크고 본질적인 <b>환경·제도·구조</b> 속에 내가 놓여 있으며,<br/>
+    그 모든 관계의 저변에는 <b>권력관계</b>가 깔려 있다.
+    </div>
+
+    <div class="sub" style="margin-top:12px">세상읽기 → 세상만들기</div>
+    <table class="comp-table">
+    <tr><th>단계</th><th>내용</th></tr>
+    <tr><td><b>세상읽기의 윤리학</b></td><td>나를 둘러싼 관계망 전체(인접환경 → 국가·법·정책)를 <b>이해하고 분석</b>하는 것</td></tr>
+    <tr><td><b>세상만들기의 윤리학</b></td><td>읽는 데 그치지 않고 <b>질문하고 · 분노하고 · 대화하고 · 변화</b>하는 것</td></tr>
+    </table>
+    <ul class="pts green" style="margin-top:8px">
+    <li>세상읽기는 <b>시작</b>이고, 세상만들기가 <b>목적</b>이다</li>
+    <li>이를 위해 내가 어떤 존재인지, 어떤 관계 속에 있는지를 <b>인접환경 너머까지</b> 바라봐야 한다</li>
+    </ul>
+
+    <div class="hbox hbox-yellow" style="margin-top:8px">
+    ⭐ <b>이번 학기 핵심 관점</b><br/>
+    개인윤리의 장 문제도 <b>사회윤리의 장(구조·제도·권력관계)을 철학적으로 이해하고 비판</b>해야만 근본적인 해결이 가능하다
+    </div>
+
+    <div class="hbox hbox-red" style="margin-top:8px">
+    ⚠️ <b>기출 함정</b>: 개인윤리 → <b>자원동원·사례관리</b> / 사회윤리 → <b>구조변화</b> — 혼동 주의!
+    </div>` },
+
+        { icon: "🍞", title: "생존과 실존: 빵과 장미", html: `
+        <div class="sub">동물과 인간의 차이</div>
+    <table class="comp-table">
+    <tr><th>항목</th><th>동물</th><th>인간</th></tr>
+    <tr><td>오늘과 내일</td><td>동일</td><td>다름 (역사성)</td></tr>
+    <tr><td>자아와 비아</td><td>동일</td><td>다름 (자기 객관화)</td></tr>
+    <tr><td>위험</td><td>신호</td><td>성찰</td></tr>
+    <tr><td><b>한계행동</b></td><td><b>없음</b></td><td><b>있음</b></td></tr>
+    <tr><td>행위</td><td>필요충족</td><td>재창조</td></tr>
+    </table>
+    <div class="hbox hbox-blue" style="margin:14px 0 8px 0">
+    인간은 <b>생존(빵)</b>뿐 아니라 <b>실존(장미)</b>을 추구하는 존재다
+    </div>
+    <table class="comp-table">
+    <tr><th>🍞 빵 (생존)</th><th>🌹 장미 (실존)</th></tr>
+    <tr><td>의식주, 소득, 교육</td><td>빵을 <b>권리로 요구</b></td></tr>
+    <tr><td>의료, 주거, 고용</td><td>인간의 존엄·품위·인정·존중</td></tr>
+    <tr><td>먹고 사는 데 필수</td><td>공동체 구성원으로 인정</td></tr>
+    <tr><td>—</td><td>빵 분배에 참여</td></tr>
+    </table>
+    <div class="hbox hbox-yellow" style="margin-top:8px">
+    ★ <b>핵심</b>: "빵이 권리로 보장될 때 장미가 가능하다"
+    </div>` },
+
+        { icon: "📖", title: "인간과 이야기: 이중의 실재", html: `
+    <div class="hbox hbox-blue">
+    인간이 동물과 근본적으로 다른 이유: <b>이야기(이중의 실재)</b>를 만들 수 있기 때문
+    </div>
+    <div class="sub">네안데르탈인 vs 호모 사피엔스</div>
+    <table class="comp-table">
+    <tr><th>구분</th><th>네안데르탈인</th><th>호모 사피엔스</th></tr>
+    <tr><td>사자를 보면</td><td>"강변에 사자 출몰"</td><td>"사자는 우리 선조의 영혼"</td></tr>
+    <tr><td>특징</td><td>사실(객관)</td><td><b>이야기(가상) 창조</b></td></tr>
+    </table>
+    <div class="sub">이중의 실재</div>
+    <table class="comp-table">
+    <tr><th>구분</th><th>내용</th><th>예시</th></tr>
+    <tr><td><b>객관적 실재</b></td><td>감각으로 확인 가능</td><td>강, 나무, 사자, 돌</td></tr>
+    <tr><td><b>가상의 실재</b></td><td>이야기로 만들어진 것</td><td><b>신, 국가, 법인</b></td></tr>
+    </table>
+    <div class="hbox hbox-yellow" style="margin-top:8px">
+    "<b>오직 호모사피엔스만이 실제로 존재하지 않는 것에 대해 말할 수 있고,<br/>
+    아침을 먹기도 전에 불가능한 일을 여섯 가지나 믿어버릴 수 있다.</b> <br/>
+    원숭이를 설득하여 지금 우리에게 바나나 한 개를 준다면<br/>
+    죽은 뒤 원숭이 천국에서 무한히 많은 바나나를 갖게 될 거라고<br/>
+    믿게끔 만드는 일은 불가능하다."<br/>
+    <i style="display:block; text-align:right;">- 유발 하라리</i>
+    </div>` },
+
+    { icon: "🧭", title: "실존주의와 사르트르", html: `
+    <div class="sub">기존 관점: 데카르트·칸트</div>
+    <div class="hbox hbox-yellow">
+    인간의 본질 = <b>이성</b><br/>
+    인간은 이성이라는 본질을 가지고 태어난다고 봄
+    </div>
+
+    <div class="sub">사르트르의 실존주의</div>
+    <div class="hbox hbox-blue">
+    <b>존재가 본질에 앞선다.</b><br/>
+    인간은 아무런 목적도, 본질도 없이 세상에 먼저 존재하고, 이후 스스로 원하는 것이 되어 간다.
+    </div>
+    <div class="hbox hbox-yellow" style="margin-top:8px">
+    "스스로가 만들어 가는 것 외엔 아무것도 아니다. 이것이 실존주의의 제1 법칙이다."
+    </div>
+
+    <div class="sub">피투 vs 투기</div>
+    <table class="comp-table">
+      <tr><th>개념</th><th>원어</th><th>의미</th></tr>
+      <tr><td><b>피투</b></td><td>Thrownness</td><td>이미 구조를 가진 관계 속에 태어나 <b>내던져진</b> 존재 (수동)</td></tr>
+      <tr><td><b>투기</b></td><td>Project</td><td>지향을 가지고 자기 자신을 세계 속으로 <b>능동적으로 내던지는</b> 행위 (능동)</td></tr>
+    </table>
+    <div class="hbox hbox-yellow" style="margin-top:8px">
+    인간 = <b>피투(내던져진 존재)</b>이면서 동시에 <b>투기(내던지는 존재)</b>
+    </div>` },
+{ icon: "🧭", title: "지향을 가진 인간", html: `
+<div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
+
+  <div class="flow-item" style="width:100%; text-align:center; border-radius:999px; background:var(--c1l); border-color:var(--c1);">
+    <div style="color:var(--c1);">나의 의식</div>
+    <div style="font-size:0.80em; font-weight:normal; color:var(--text); line-height:1.6;">관계 속에 던져진 상태에서 의식을 가짐</div>
+    </div>
+  <div style="color:var(--muted);">▼</div>
+  <div class="flow-item" style="width:100%; text-align:center; border-radius:999px; background:var(--c1l); border-color:var(--c1);">
+    <div style="color:var(--c1);">지향</div>
+    <div style="font-size:0.80em; font-weight:normal; color:var(--text); line-height:1.6;">나를 둘러싼 현상(세계) 속에서 나 자신을 지향.</div>
+  </div>
+  <div style="color:var(--muted);">▼</div>
+  <div class="flow-item" style="width:100%; text-align:center; border-radius:999px; background:var(--c1l); border-color:var(--c1);">한계</div>
+  <div style="color:var(--muted);">▼</div>
+
+  <div style="display:grid; grid-template-columns:1fr auto 1fr; gap:8px; width:100%; align-items:center;">
+    <div style="background:var(--c1l); border:1.5px solid var(--c1); border-radius:16px; padding:12px; text-align:center;">
+      <div style="font-size:1.4em; margin-bottom:4px;">✊</div>
+      <div style="font-weight:900; color:var(--c1); margin-bottom:6px;">돌파</div>
+      <div style="font-size:0.82em; color:var(--text); line-height:1.6;">깊게 생각하고<br/>질문하고 · 대화하고<br/>동료와 함께 변화 추구</div>
+    </div>
+    <div style="font-weight:900; color:var(--muted); font-size:0.85em; text-align:center;">OR</div>
+    <div style="background:var(--c4l); border:1.5px solid var(--c4); border-radius:16px; padding:12px; text-align:center;">
+      <div style="font-size:1.4em; margin-bottom:4px;">🏳️</div>
+      <div style="font-weight:900; color:var(--c4); margin-bottom:6px;">순응</div>
+      <div style="font-size:0.82em; color:var(--text); line-height:1.6;">지향하다 부딪혔지만<br/>내던져진 존재에서<br/>그치는 삶</div>
+    </div>
+  </div>
+  </div>
+<div class="hbox hbox-yellow" style="margin-top:8px;">
+인간은 어떤 의미에서든 <b>지향을 가진 존재</b>다 — 자기 자신을 세계에 던지며 만
+</div>
+<div class="sub" style="margin-top:12px">투기가 만들어내는 것</div>
+<div class="flow" style="justify-content:center; gap:4%;">
+  <span style="width:22%; aspect-ratio:1; border-radius:50%; background:var(--c1l); border:2px solid var(--c1); display:flex; align-items:center; justify-content:center; text-align:center; font-weight:700; color:var(--c1); font-size:110%; flex-shrink:0;">투기</span>
+  <span class="flow-arrow">▶</span>
+  <span style="width:22%; aspect-ratio:1; border-radius:50%; background:var(--c2l); border:2px solid var(--c2); display:flex; align-items:center; justify-content:center; text-align:center; font-weight:700; color:var(--c2); font-size:110%; flex-shrink:0;">이야기<br/>(의미)</span>
+  <span class="flow-arrow">▶</span>
+  <span style="width:22%; aspect-ratio:1; border-radius:50%; background:var(--c5l); border:2px solid var(--c5); display:flex; align-items:center; justify-content:center; text-align:center; font-weight:700; color:var(--c5); font-size:110%; flex-shrink:0;">역사</span>
+</div>
+<table class="comp-table" style="margin-top:20px">
+<tr><th>단계</th><th>내용</th></tr>
+<tr><td><b>투기</b></td><td>지향을 가지고 자기 자신을 세계 속에 내던지는 것</td></tr>
+<tr><td><b>이야기 (의미)</b></td><td>투기를 통해 만들어지는 것 — 의미가 쌓여 다발을 이룸</td></tr>
+<tr><td><b>역사</b></td><td>의미의 다발이 굳어지면 세상에서 역사라는 이름을 얻게 됨</td></tr>
+</table>
+<div class="hbox hbox-blue" style="margin-top:12px;">
+사람이 먼저 있어서 세상에 존재하고 세상에 나타나며, 그는 그 다음에 정의된다.
+</div>
+` },
+
+        { icon: "🏛️", title: "역사란 무엇인가", html: `
+    <div class="hbox hbox-blue">
+    이야기(의미)들이 모이면 → <b>역사</b>
+    </div>
+    <div class="sub">역사의 3가지 의미 ★</div>
+    <table class="comp-table">
+    <tr><th>학자</th><th>주장</th></tr>
+    <tr><td><b>E.H. Carr</b></td><td>①역사는 <b>의미의 다발이다.</b> — 현재와 과거의 대화 속에서 <b>호명·해석된 것</b>만이 역사적 사실로 기록됨</td></tr>
+    <tr><td><b>M. Parenti</b></td><td>②역사는 <b>정치가 빚은 그릇이다.</b> — <b>현재의 권력(승자)</b>이 역사가와 지식인을 동원해 역사를 결정</td></tr>
+    <tr><td></td><td>③역사는 <b>비판으로 완성된다.</b> — <b>약자·피억압자·인권의 관점</b>에 의한 비판을 통해 완성됨</td></tr>
+    </table>` },
+
+        { icon: "🗣️", title: "언어와 인간다운 삶", html: `
+    <div class="hbox hbox-blue">
+    <b>"언어는 존재의 집이다"</b> — 하이데거
+    </div>
+    <ul class="pts">
+    <li>천부인권·시민권은 객관적 실재가 아닌 <b>이야기(언어)로 만들어진 가상의 실재</b></li>
+    <li>인간/비인간, 시민/비시민의 구분도 모두 <b>특정 이야기(권력) 속</b>의 산물</li>
+    </ul>
+    <div class="sub">철학이란</div>
+    <ul class="pts green">
+    <li>사물과 자기 자신에 대한 <b>끊임없는 재발견</b></li>
+    <li>우리의 이야기를 <b>창조</b>하기</li>
+    <li>깊게 생각하고, 둘러보고, 질문하고, 대화하는 것</li>
+    </ul>
+    <div class="sub">인간이 인간이기 위해서는?</div>
+    <div style="display:flex; align-items:center; justify-content:center; gap:2%; margin-top:8px;">
+
+      <div style="width:22%; aspect-ratio:1; border-radius:50%; background:var(--c1l); border:2px solid var(--c1); display:flex; align-items:center; justify-content:center; text-align:center; font-weight:700; color:var(--c1); font-size:0.9em; flex-shrink:0;">인간</div>
+      <span class="flow-arrow">▶</span>
+      <div style="width:22%; aspect-ratio:1; border-radius:50%; background:var(--c2l); border:2px solid var(--c2); display:flex; align-items:center; justify-content:center; text-align:center; font-weight:700; color:var(--c2); font-size:0.9em; flex-shrink:0;">공동체</div>
+      <span class="flow-arrow">▶</span>
+      <div style="width:22%; aspect-ratio:1; border-radius:50%; background:var(--c5l); border:2px solid var(--c5); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; font-weight:700; color:var(--c5); font-size:0.85em; flex-shrink:0;">
+        <div>조직된 시민</div>
+        <div style="font-size:0.80em; color:var(--muted); font-weight:500; margin-top:2px;">권리·권력</div>
+      </div>
+  </div>
+    <table class="comp-table" style="margin-top:28px">
+    <tr><th>조직화 방식</th><th>내용</th></tr>
+    <tr><td><b>의식의 조직화</b></td><td>깊게 생각하고 대화할 수 있는 시민</td></tr>
+    <tr><td><b>사람의 조직화</b></td><td>권리를 주장하기 위해 권력을 가진 시민으로 모이는 것</td></tr>
+    </table>` },
+
+        { icon: "📝", title: "2강 핵심 키워드", html: `
+    <table class="comp-table">
+    <tr><th>키워드</th><th>내용 요약</th></tr>
+    <tr><td><b>호모 사케르</b></td><td>신성한 생명 = 벌거벗은 생명 — 정치 공동체에서 추방된 존재 (아감벤)</td></tr>
+    <tr><td><b>조에 / 비오스</b></td><td>단순 생명 / 정치적 인간</td></tr>
+    <tr><td><b>빵과 장미</b></td><td>생존 조건(빵) / 권리·존엄·참여의 실존 조건(장미)</td></tr>
+    <tr><td><b>피투 / 투기</b></td><td>내던져진 존재(수동) / 지향하며 내던지는 존재(능동)</td></tr>
+    <tr><td><b>존재가 본질에 앞선다</b></td><td>사르트르 실존주의의 핵심 명제</td></tr>
+    <tr><td><b>객관적 실재 / 가상의 실재</b></td><td>감각적 실재 / 이야기로 만들어진 실재(국가·신·법인)</td></tr>
+    <tr><td><b>역사는 비판으로 완성된다</b></td><td>약자·피억압자·인권의 관점이 역사를 완성</td></tr>
+    <tr><td><b>언어는 존재의 집이다</b></td><td>하이데거 — 인간은 이야기 속에 산다</td></tr>
+    <tr><td><b>조직된 시민</b></td><td>의식의 조직화 + 사람의 조직화</td></tr>
+    <tr><td><b>개인윤리 / 사회윤리</b></td><td>자원동원·사례관리 / 구조변화·사회관리</td></tr>
+    </table>` },
+
+        { icon: "🎯", title: "기출 핵심 정리", html: `
+    <ul class="star-list">
+    <li>호모 사케르가 <b>아닌</b> 것 → <b>자본가</b></li>
+    <li>개인윤리의 장 → <b>자원동원, 사례관리</b></li>
+    <li>사회윤리의 장 → <b>구조변화</b></li>
+    <li>"인간은 한계행동이 없다" → <b>X (틀림)</b> — 인간에게는 한계행동이 있음</li>
+    <li>감시 없이도 스스로 검열하게 만드는 장치 → <b>파놉티콘(panopticon)</b></li>
+    <li>"애를 키우려면 가족·이웃의 지속적 도움이 필요하다" → 인간의 특징: <b>의존성</b></li>
+    <li>진화에서 선호된 인간의 능력 → <b>강한 사회적 결속을 이룰 능력</b></li>
+    <li>조에 = <b>단순 생명</b> / 비오스 = <b>정치 공동체에 참여하는 삶</b></li>
+    </ul>` }
+      ]
+    },
+  { num: "3강", name: "인간과 공동체",
+  cards: [
+{ icon: "🏛️", title: "1. 오래된 공동체 — 공동체의 어원 (코이노니아)", html: `
+
+<div class="sub">핵심 질문</div>
+    <div class="hbox hbox-blue">개인과 공동체(사회) 중 무엇이 우선인가?<br>
+    → 법과 제도를 만들 때도 항상 쟁점이 되는 철학적 논쟁</div>
+     <div class="sub" style="margin-top:12px">어원의 흐름</div>
+    <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px">
+
+      <div style="background:var(--c1l);border-left:4px solid var(--c1);border-radius:10px;padding:12px 14px">
+        <div style="font-size:.78em;color:var(--c1);font-weight:700;margin-bottom:4px">① 동사 (어원)</div>
+        <div style="font-weight:900;font-size:1em">코이노네인 <span style="font-weight:400;font-size:.85em;color:var(--muted)">(koinonein)</span></div>
+        <div style="font-size:.88em;margin-top:4px;color:var(--text)">공동의 사물·관심사를 공유하거나, 공동의 일에 함께 참여한다</div>
+      </div>
+
+      <div style="text-align:center;font-size:1.3em;color:var(--c1)">▼ 파생</div>
+
+      <div style="background:var(--c5l);border-left:4px solid var(--c5);border-radius:10px;padding:12px 14px">
+        <div style="font-size:.78em;color:var(--c5);font-weight:700;margin-bottom:4px">② 명사 (공동체)</div>
+        <div style="font-weight:900;font-size:1em">코이노니아 <span style="font-weight:400;font-size:.85em;color:var(--muted)">(koinonia)</span></div>
+        <div style="font-size:.88em;margin-top:4px;color:var(--text)">하나의 목적을 향한 동기들이 모여 상호작용·집단적 활동이 이루어지는 터전</div>
+      </div>
+
+    </div>
+
+    <div class="hbox hbox-yellow" style="margin-top:10px">
+    ★ 공동체의 본질 = <b>함께 가지거나, 함께 무언가를 한다</b>
+    </div>
+    <div class="flow" style="margin-top:10px">
+    <span class="flow-item">가족·마을<br><small>생존</small></span>
+    <span class="flow-arrow">▶</span>
+    <span class="flow-item">폴리스(Polis)<br>정치공동체(국가)</span>
+    <span class="flow-arrow">▶</span>
+    <span class="flow-item">최고의<br>좋음 추구</span>
+    </div>
+` },
+
+{ icon: "🏛️", title: "아리스토텔레스의 공동체론", html: `
+    <div class="hbox hbox-blue">
+    "모든 폴리스는 어떤 종류의 공동체(koinonia)이고, 모든 공동체는 어떤 <b>좋음</b>을 위해 구성된다."<br>
+    <small style="color:var(--muted)">— 아리스토텔레스 (BC 384-322)</small>
+    </div>
+    <div class="sub" style="margin-top:12px">폴리스(Polis)란?</div>
+    <ul class="pts">
+    <li>독립적인 정치 체제와 경제적 자급자족이 가능한 <b>도시 규모의 국가</b></li>
+    <li>예: <b>아테네</b>(민주정), <b>스파르타</b>(왕정), 테베, 코린트 등</li>
+    <li>'국가'로 번역 않고 현재는 <b>폴리스</b>로 음역하는 것이 추세</li>
+    </ul>
+    <div class="sub" style="margin-top:12px">공동체의 위계</div>
+    <table class="comp-table">
+    <tr><th>공동체 단위</th><th>추구하는 목적과 좋음</th></tr>
+    <tr><td>개인</td><td>생존·행복 추구</td></tr>
+    <tr><td>가족</td><td>생존 + 후손</td></tr>
+    <tr><td>마을</td><td>경제적·문화적 윤택함</td></tr>
+    <tr><td>부족·더 큰 공동체</td><td>더 다양하고 풍성한 문화·영광</td></tr>
+    <tr><td><b>폴리스(국가)</b></td><td><b>최고의 좋음 → 공동선(common good)</b></td></tr>
+    </table>
+    <div class="hbox hbox-yellow" style="margin-top:10px">
+    ★ 폴리스는 다른 모든 공동체를 <b>포괄하는 최상위 공동체</b>
+    </div>
+` },
+
+{ icon: "🧑‍🤝‍🧑", title: "인간은 정치적 존재다 (Zoon Politikon)", html: `
+    <div class="hbox hbox-blue">
+    "공동의 일을 함께 나눌 수 없는 사람이나, 자족 때문에 나눌(koinonein) 필요가 없는 사람은 폴리스의 부분이 아니다.
+    그러므로 그 사람은 <b>짐승이거나 신이다.</b>"
+    </div>
+    <div class="badge-row" style="margin-top:12px">
+    <span class="badge badge-blue">Zoon Politikon : 폴리스적 동물 = 정치적 동물</span>
+     </div>
+    <div class="badge-row">
+    <span class="badge badge-purple">Homo Politicus : 정치적 인간</span>
+    </div>
+    <div class="hbox hbox-green" style="margin-top:10px">
+    <b>인간은 의존적 존재</b>: 혼자 자족할 수 없으므로 타인과 협력·공유해야 함<br>
+    독립과 자립을 위해서도 먼저 의존적 자원이 필요함
+    </div>
+` },
+
+{ icon: "⚙️", title: "2. 근대사회의 등장", html: `
+    <div class="sub">중세 → 근대의 전환</div>
+    <table class="comp-table">
+    <tr><th>전환</th><th class="th-blue">이전 (중세)</th><th class="th-green">이후 (근대)</th></tr>
+    <tr><td><b>사유 주체</b></td><td>신(神)</td><td>인간</td></tr>
+    <tr><td><b>권력 주체</b></td><td>황제·교황</td><td>시민</td></tr>
+    <tr><td><b>소유 주체</b></td><td>하나님(신)</td><td>인간(개인)</td></tr>
+    </table>
+    <div class="sub" style="color:var(--c1);margin:14px 0 6px;">① 사유 주체 전환 (신 → 인간)</div>
+    <ul class="pts">
+    <li>중세: 신이 존재하기 때문에 내가 존재한다</li>
+    <li>데카르트: <b>"코기토 에르고 숨(Cogito ergo sum)"</b> — 나는 생각한다, 고로 나는 존재한다</li>
+    <li>내가 먼저 존재 → <b>주체의 역전</b></li>
+    </ul>
+    <div class="sub" style="color:var(--c1);margin:14px 0 6px;">② 권력 주체 전환 (황제·교황 → 시민)</div>
+    <ul class="pts green">
+    <li>프랑스 대혁명: <br/><span class="flow-item">1·2,3 신분제 붕괴</span> ▶ <span class="flow-item">3신분(상공업자) 성장</span> ▶ <span class="flow-item">혁명</span><br/></li>
+    <li><b>인간과 시민의 권리에 관한 선언</b> → 권력이 시민에게</li>
+    </ul>
+    <div class="sub" style="color:var(--c1);margin:14px 0 6px;">③ 소유 주체 전환 (하나님 → 인간)</div>
+    <ul class="pts purple">
+    <li>중세: 모든 땅의 주인은 신 → 점유권만 부여</li>
+    <li>로크(Locke): 내 신체는 나의 것 → 노동 결과물 = <b>배타적 재산(소유권)</b></li>
+    <li>아담 스미스가 계승 → 근대 경제학의 출발</li>
+    </ul>
+` },
+
+{ icon: "⚛️", title: "사회라는 개념의 등장", html: `
+    <div class="hbox hbox-yellow">
+    <b>원자론적 개인</b>: 스스로 생각하고, 절대적 주권자이며, 배타적 소유권을 가진 존재<br>
+    <small>비유: 당구공처럼 독립되어 굴러다니는 개인들의 집합 = 사회</small>
+    </div>
+    <div class="hbox hbox-blue">
+    <b>근대적 사고 방식 :</b> 사회는 독립적인 의미와 가치를 지니고 있는것이 아닌 원자론적인 개인들의 총합에 불가하다.
+    </div>
+
+    <div class="sub" style="margin-top:12px">공동체 vs 사회 <small style="font-weight:400">(페르디난트 퇴니스, 『공동사회와 이익사회』)</small></div>
+    <table class="comp-table">
+    <tr><th>구분</th><th class="th-blue">공동체</th><th class="th-green">사회</th></tr>
+    <tr><td>시대</td><td>전통</td><td>근대</td></tr>
+    <tr><td>성격</td><td>본질적</td><td>도구적</td></tr>
+    <tr><td>형성 방식</td><td>자발적·자연적</td><td>인위적·역사적</td></tr>
+    <tr><td>예시</td><td>가족, 친족, 부족, 마을</td><td>기업, 도시, 조합, 국가</td></tr>
+    <tr><td>핵심 가치</td><td>애정, 취향, 관습, 신념, 종교</td><td>이익, 계약</td></tr>
+    <tr><td>규율 방식</td><td>관습·도덕</td><td>법적 강제력</td></tr>
+    </table>
+` },
+
+{ icon: "🤝", title: "연대 사회로의 전환", html: `
+    <div class="flow">
+    <span class="flow-item">산업화·<br>자본주의</span>
+    <span class="flow-arrow">▶</span>
+    <span class="flow-item">무한경쟁·<br>세계대전</span>
+    <span class="flow-arrow">▶</span>
+    <span class="flow-item">사회적 합의</span>
+    <span class="flow-arrow">▶</span>
+    <span class="flow-item"><b>복지 국가</b></span>
+    </div>
+    <div class="sub" style="margin-top:12px">복지 국가 형성 인물</div>
+    <table class="comp-table">
+    <tr><th>인물</th><th>역할</th></tr>
+    <tr><td><b>베버리지</b></td><td>5대 사회악 제시(결핍, 무지, 질병, 불결, 나태)</td></tr>
+    <tr><td><b>키어 하디</b></td><td>영국 노동당 당수, 노동조합의 힘</td></tr>
+    <tr><td><b>케인즈</b></td><td>케인즈주의 경제 원리 제공</td></tr>
+    </table>
+    <div class="sub" style="margin-top:12px">베버리지의 5대 사회악</div>
+    <table class="comp-table">
+    <tr><th>사회악</th><th>의미</th><th>대응</th></tr>
+    <tr><td><b>Want</b></td><td>구조적 빈곤</td><td>소득 보장</td></tr>
+    <tr><td><b>Ignorance</b></td><td>교육 기회 부재</td><td>교육</td></tr>
+    <tr><td><b>Disease</b></td><td>의료 접근 불가</td><td>의료·복지</td></tr>
+    <tr><td><b>Squalor</b></td><td>열악한 주거 환경</td><td>주거</td></tr>
+    <tr><td><b>Idleness</b></td><td>의미 있는 활동 불가</td><td>고용</td></tr>
+    </table>
+    <div class="hbox hbox-red" style="margin-top:10px">
+    ★ 5대 사회악 = 개인의 책임이 아닌 <b>사회의 구조적·환경적 원인</b> → 사회·국가의 책임
+    </div>
+    <div class="divider"></div>
+    <div class="hbox hbox-blue">
+    <b>끈끈한(Sticky) 사회</b>: 정치적·경제적 권력을 두고 이루어지는 이해관계의 갈등을 무마할 수 있을 정도의 충분한 '점성'을 가지고 있는 사회(sticky society) <br>
+    <b style="color:var(--c1)">독립된 개인들의 무한 경쟁</span> ⇒ 사회적 시민권에 바탕을 둔 연대로서의 사회 등장</b>
+    </div>
+` },
+
+{ icon: "🏭", title: "TINA! — 마거릿 대처와 사회의 소멸", html: `
+    <div class="hbox hbox-red">
+    "사회 같은 것은 없습니다. 오직 개개인의 남녀와 가족이 있을 뿐입니다."<br>
+    <b>TINA = There Is No Alternative!</b><br>
+    <small style="color:var(--muted)">— 마거릿 대처 (영국 수상, 1979-1990)</small>
+    </div>
+    <div class="sub" style="margin-top:12px">대처주의(Thatcherism)의 정책</div>
+    <ul class="pts red">
+    <li><b>경제 정책:</b> 국영기업 민영화, 복지 예산 및 공공 지출 대폭 축소 (작은 정부)</li>
+    <li><b>문화교육 개혁:</b> <b>'영혼의 개조'</b>를 통해 질서·품위·용기·자립이라는 빅토리아 시대 가치로 복귀</li>
+    <li><b>철학적 기조:</b> "사회 같은 것은 없다. 개별 남녀와 가족이 있을 뿐!" (철저한 개인주의와 시장 원리)</li>
+    </ul>
+    <div class="sub" style="margin-top:10px">공동체의 위기 (신자유주의 확산, 1980년대~)</div>
+    <div class="badge-row">
+    <span class="badge badge-red">불평등 심화</span>
+    <span class="badge badge-red">경쟁 과열</span>
+    <span class="badge badge-red">이기주의 팽배</span>
+    <span class="badge badge-red">환경 파괴</span>
+    </div>
+    <div class="hbox hbox-yellow" style="margin-top:8px">
+    → <b>공공선(公共善)과 덕(德)의 상실</b> → 민주주의 토대 훼손
+    </div>
+` },
+
+{ icon: "📚", title: "공동체주의의 반격 — 맥킨타이어 (Narrative-self)", html: `
+    <div class="hbox hbox-purple">
+    <b>Narrative-self (서사적 자아)</b><br>
+    인간은 이야기(서사·설화·신화) 속에서 규정되고 성장하는 존재<br>
+    <b>나는 어떤 큰 이야기의 한 부분</b>일 뿐이다
+    </div>
+    <div class="sub" style="margin-top:12px">맥킨타이어의 핵심 <small style="font-weight:400">(『덕 이후, After Virtue』)</small></div>
+    <ul class="pts purple">
+    <li>"나는 누군가의 아들·딸이고, 이 도시의 시민이며, 이 씨족·민족에 속한다"</li>
+    <li>이러한 역할의 담지자로서 <b>부채·유산·기대·책무</b>를 물려받는다</li>
+    <li>그것들이 나의 삶의 주어진 사실과 <b>도덕적 출발점</b>을 구성한다</li>
+    </ul>
+    <div class="divider"></div>
+    <div class="sub">자유주의 vs 공동체주의</div>
+    <table class="comp-table">
+    <tr><th>구분</th><th class="th-blue">자유주의</th><th class="th-green">공동체주의</th></tr>
+    <tr><td>출발점</td><td><b>원자론적 개인</b>이 먼저 존재</td><td><b>공동체</b>가 먼저 존재</td></tr>
+    <tr><td>사회계약</td><td>개인 이익 추구</td><td>공동체 미덕(Virtue) 유지 발전</td></tr>
+    <tr><td>개인 정체성</td><td>공동체와 무관하게 형성</td><td>사회적 맥락 속에서 형성</td></tr>
+    <tr><td>대표 학자</td><td>로크, 아담 스미스</td><td>맥킨타이어, 샌델, 왈저</td></tr>
+    </table>
+` },
+
+{ icon: "⚖️", title: "샌델의 정의론 & 공동체주의의 위험성", html: `
+    <div class="hbox hbox-green">
+    <b>마이클 샌델(Michael Sandel, 1953-)</b><br>
+    "정의란 공동체 속에서 좋은 삶에 대해 함께 고민하고,<br>
+    공동체의 미덕을 키우며 <b>공동선을 추구하는 것</b>이다."<br>
+    <small style="color:var(--muted)">저서: 『정의란 무엇인가(Justice)』</small>
+    </div>
+    <ul class="pts green" style="margin-top:10px">
+    <li>연결 프로그램: <b>클레멘트 코스(Clement Course)</b></li>
+    <li>얼 쇼리스(Earl Shorris)가 설계한 빈곤·소외층을 위한 인문학 교육 프로그램</li>
+    </ul>
+    <div class="divider"></div>
+    <div class="sub">위험한 힘</div>
+    <div class="hbox hbox-red">
+    공동체적 가치(미덕·시민적 태도)는 결국 <b>주류·중산층(부르주아)의 관점</b>일 수 있음<br>
+    → 빈곤층·소외층에게는 <b>적응과 순응의 강요</b>로 작용할 위험성
+    </div>
+` },
+
+{ icon: "🔁", title: "인간의 삶과 공동체", html: `
+    <div class="hbox hbox-blue">
+    현실의 삶에서 공동체와 사회는 명확히 구분되지 않음<br>
+    우리는 두 가지가 <b>중첩된 어딘가</b>에 살고 있음
+    </div>
+    <table class="comp-table" style="margin-top:10px">
+    <tr><th>공동체가 제공하는 것</th><th>사회가 제공하는 것</th></tr>
+    <tr><td>자긍심·존중·인정</td><td>경쟁·협력</td></tr>
+    <tr><td>애착·정체성</td><td>법·제도</td></tr>
+    <tr><td>충성심</td><td>권리·의무</td></tr>
+    </table>
+    <div class="hbox hbox-yellow" style="margin-top:10px">
+    <b>관계의 응축(공동체) ↔ 나 ↔ 제도의 응축(사회)</b> 사이에 존재
+    </div>
+      ` },
+{ icon: "🏘️", title: "인간의 삶 속에서 공동체", html: `
+    <ul class="pts" style="margin-top:4px">
+    <li><b>지리적 영역을 기본으로, 사회·경제·문화의 영역을 공유하는 집단</b><br>
+    <small style="color:var(--muted)">물리적 공간 기반 (온라인 등 비물질적 공간도 포함)</small></li>
+    <li><b>사회적 행위와 관계를 담아내는 그릇</b><br>
+    <small style="color:var(--muted)">다양한 관계들이 얽혀 담겨 있음 → 관계의 응축 = 공동체</small></li>
+    </ul>
+    ` },
+{ icon: "🎯", title: "★ 3강 핵심 키워드 총정리", html: `
+    <ul class="star-list">
+    <li>공동체 어원: <b>코이노니아(koinonia)</b> = 함께 공유·참여</li>
+    <li>아리스토텔레스: 인간은 <b>정치적 존재(Zoon Politikon)</b></li>
+    <li>근대 3대 전환: 사유·권력·소유의 주체 <b>신→인간</b></li>
+    <li>퇴니스: 공동체(전통·본질) vs 사회(근대·도구)</li>
+    <li>복지 국가: <b>끈끈한(sticky) 사회</b> = 연대·시민권</li>
+    <li>대처 TINA: <b>"사회 같은 것은 없다"</b> → 신자유주의</li>
+    <li>맥킨타이어: <b>서사적 자아(Narrative-self)</b></li>
+    <li>샌델: 정의 = <b>공동선 추구</b></li>
+    <li>공동체주의 위험: <b>부르주아적 이상주의</b>로 전락 가능</li>
+    </ul>
+  ` },
+  ]
+},
+  { num: "4강", name: "인간과 정치",
+  cards: [
+
+    { icon: "📋", title: "사회복지 정책이란?",
+      html: `<span class="tag tag-blue">핵심 개념</span>
+<div class="hbox hbox-blue"><b>사회복지 정책</b> = 사회복지적 행위방침을 정하는 것과 관련된 <b>결정과 선택</b>의 총합</div>
+<div class="sub">정책의 구성 요소</div>
+<table class="comp-table">
+<tr><th>요소</th><th class="th-blue">내용</th></tr>
+<tr><td><b>재정</b></td><td>사회복지 서비스 재원</td></tr>
+<tr><td><b>급여</b></td><td>현금, 현물, 이용권(바우처)</td></tr>
+<tr><td><b>전달체계</b></td><td>전문가(사회복지사)가 대상자에게 급여를 전달하는 체계</td></tr>
+<tr><td><b>대상</b></td><td>사회복지 수혜자</td></tr>
+<tr><td><b>이념</b></td><td>급여의 형태·규모·대상을 결정하는 <b>기저 사상</b></td></tr>
+</table>` },
+
+    { icon: "👤", title: "사회복지 정책의 개인 윤리",
+      html: `<span class="tag tag-yellow">전달체계 윤리</span>
+<div class="hbox hbox-yellow"><b>핵심 질문:</b> 효율성·체계성·서비스 전달 방법</div>
+<ul class="pts">
+<li>어떻게 하면 잘 전달할 수 있을까? <b>(효율성)</b></li>
+<li>어떻게 하면 국가·지역 자원을 잘 동원할 수 있을까?</li>
+<li>어떻게 하면 대상의 욕구와 필요를 효율적으로 만족시킬 수 있을까?</li>
+<li>어떻게 하면 성공적인 <b>사례관리</b>가 이루어질까?</li>
+<li>대상의 권리(고유성, 자율성, 행복)를 침해하지 않으면서 윤리적 신념을 지킬 수 있을까?</li>
+</ul>` },
+
+    { icon: "🔺", title: "사회복지는 왜 정치인가?", html: `<span class="tag tag-red">핵심 ★★</span>
+<div class="hbox hbox-blue"><b>사회복지정책은 정치의 결과물</b></div>
+<table class="comp-table">
+<tr><th>이념</th><th class="th-blue">복지 방향</th></tr>
+<tr><td>가난 = 개인의 책임</td><td>선별적 복지, 작은 예산, 대가성 급여</td></tr>
+<tr><td>가난 = 사회·구조의 책임</td><td>보편적 복지, 큰 예산, 권리로서의 복지</td></tr>
+</table>
+<div class="sub">정치의 삼각형</div>
+<div class="flow">
+<span class="flow-item" style="background:var(--c5l);color:var(--c5)">이념(철학)</span>
+<span class="flow-arrow">⟷</span>
+<span class="flow-item">정책</span>
+<span class="flow-arrow">⟷</span>
+<span class="flow-item" style="background:var(--c2l);color:var(--c2)">세력</span>
+</div>
+<ul class="pts purple" style="margin-top:10px">
+<li><b>이념</b>: 인간과 세계의 '좋음'과 '옳음' → 철저히 윤리적 판단의 영역</li>
+<li><b>세력</b>: 이념을 현실 정책으로 뒷받침하는 힘 (정당·기업·노조 등)</li>
+<li><b>정책</b>: 이념이 세력을 통해 현실에 실현된 결과물</li>
+<li><b>praxis</b>: 이념·세력·정책 사이를 잇는 <b>실천</b></li>
+</ul>` },
+
+    { icon: "🏛️", title: "사회복지정책의 사회 윤리",
+      html: `<span class="tag tag-green">사회 윤리 ★★</span>
+<div class="hbox hbox-green"><b>사회 윤리 = 시민정치의 윤리 = 구조의 윤리 + 맥락의 윤리</b></div>
+<ul class="pts green">
+<li>어떻게 하면 <b>제도(법과 정책)를 바꿀</b> 수 있을까?</li>
+<li>어떻게 하면 <b>구조를 바꿀</b> 수 있을까?</li>
+<li>어떻게 하면 <b>관계를 바꿀</b> 수 있을까? (수직적 → 동등한 시민 관계)</li>
+</ul>
+<div class="divider"></div>
+<table class="comp-table">
+<tr><th>구분</th><th class="th-blue">개인 윤리</th><th class="th-green">사회 윤리</th></tr>
+<tr><td>초점</td><td>전달·효율·사례관리</td><td>구조·제도·관계 변화</td></tr>
+<tr><td>행위</td><td>실행 (practice)</td><td>실천 (praxis)</td></tr>
+<tr><td>핵심 질문</td><td>어떻게 잘 전달할까</td><td>어떻게 바꿀 수 있을까</td></tr>
+</table>` },
+
+    { icon: "⚖️", title: "데이비드 이스턴의 정치 정의",
+      html: `<span class="tag tag-blue">정치 정의 ★★</span>
+<div class="hbox hbox-blue">"정치는 <b>가치의 권위적 배분</b>이다." — 데이비드 이스턴 (1953)</div>
+<div class="hbox hbox-red" style="margin-top:8px">⚠️ <b>권위적(authoritative) vs 권위주의적(authoritarian)</b> — 반드시 구분!</div>
+<table class="comp-table" style="margin-top:8px">
+<tr><th></th><th class="th-blue">권위적 (authoritative)</th><th class="th-red">권위주의적 (authoritarian)</th></tr>
+<tr><td>기반</td><td>동의와 정당성</td><td>권력 남용</td></tr>
+<tr><td>예시</td><td>구성원이 합당하다 인정하는 배분</td><td>직위로 일방적 강제</td></tr>
+</table>
+<div class="sub">정치의 세 가지 의미</div>
+<table class="comp-table">
+<tr><th>수준</th><th class="th-blue">내용</th></tr>
+<tr><td><b>좁은 의미</b></td><td>국가(정부) 정책 = 가치의 권위적 배분</td></tr>
+<tr><td><b>중간 의미</b></td><td>정당·기업·노조 등 다양한 세력이 경합하여 정책을 결정하는 과정</td></tr>
+<tr><td><b>넓은 의미</b></td><td>인간 존재 모든 부분에 퍼져 있는 일상적 활동들</td></tr>
+</table>` },
+
+    { icon: "🔄", title: "실행(practice) vs 실천(praxis)",
+      html: `<span class="tag tag-purple">핵심 구분 ★★</span>
+<table class="comp-table">
+<tr><th>구분</th><th class="th-blue">실행 (practice)</th><th class="th-green">실천 (praxis)</th></tr>
+<tr><td>정의</td><td>서비스를 제공하는 행위</td><td>구조·관계를 바꾸기 위한 모든 의식적 활동</td></tr>
+<tr><td>지향</td><td>효율적 전달</td><td>구조·관계·환경 변화</td></tr>
+<tr><td>윤리</td><td>개인 윤리</td><td>사회 윤리</td></tr>
+<tr><td>예시</td><td>사례관리, 자원 전달</td><td>제도 개선 운동, 관계 재구성</td></tr>
+</table>
+<div class="hbox hbox-yellow" style="margin-top:8px">
+★ 실행 = 주어진 것을 <b>기계적으로 전달</b><br/>
+★ 실천 = 구조와 관계를 <b>의식적으로 바꾸려는</b> 모든 활동
+</div>` },
+
+    { icon: "🧠", title: "한나 아렌트의 활동적 삶 (vita activa)",
+      html: `<span class="tag tag-purple">아렌트 ★★</span>
+<table class="comp-table">
+<tr><th>구분</th><th>원어</th><th class="th-blue">의미</th><th>예시</th></tr>
+<tr><td><b>노동</b></td><td>labor</td><td>생명 유지를 위한 활동</td><td>임금 노동</td></tr>
+<tr><td><b>작업</b></td><td>work</td><td>도구·예술·제도를 만드는 활동</td><td>예술 창작</td></tr>
+<tr><td><b>행위</b></td><td>action</td><td>공유하는 세계를 짓는 활동</td><td>시민 참여</td></tr>
+</table>
+<div class="hbox hbox-purple" style="margin-top:8px">아렌트는 셋 중 <b>행위(action)</b>를 가장 강조<br/>"인간은 행위를 통해서만 인간다운 삶을 살 수 있다"</div>
+<div class="sub">행위(action)의 의미</div>
+<ul class="pts purple">
+<li>= <b>praxis</b> = 실존주의의 투기(project)</li>
+<li>사적 영역(내 방) → <b>공적 영역(광장)</b>으로 나아가는 것</li>
+<li>= <b>homo politicus</b> (정치적 인간)</li>
+</ul>` },
+
+    { icon: "🌱", title: "인간, 공동체, 실천의 연결",
+      html: `<span class="tag tag-green">공동체 철학 ★★</span>
+<div class="flow" style="flex-direction:column;align-items:flex-center;gap:4px">
+<span class="flow-item" style="background:var(--c1l);color:var(--c1)">가능태 — 인간은 무한한 가능성을 지닌 존재</span>
+<span class="flow-arrow" style="align-self:center">▼</span>
+<span class="flow-item" style="background:var(--c2l);color:var(--c2)">사회적 우정</span>
+<span class="flow-arrow" style="align-self:center">▼</span>
+<span class="flow-item" style="background:var(--c4l);color:var(--c4)">공동체</span>
+<span class="flow-arrow" style="align-self:center">▼</span>
+<span class="flow-item" style="background:var(--c5l);color:var(--c5)">탁월성 — '인간다움'을 능숙하게 드러내는 것</span>
+<span class="flow-arrow" style="align-self:center">▼</span>
+<span class="flow-item" style="background:var(--c3l);color:var(--c3)">행복 (목적)</span>
+</div>
+<ul class="pts" style="margin-top:10px">
+<li>탁월성을 발휘하기 위해서는 반드시 <b>공동체</b>가 필요</li>
+<li>좋은 공동체를 만들기 위해 가장 필요한 것: <b>사회적 우정</b></li>
+</ul>` },
+
+    { icon: "🏘️", title: "Care Center vs Community Center",
+      html: `<span class="tag tag-cyan">관점 전환 ★★</span>
+<table class="comp-table">
+<tr><th>구분</th><th class="th-red">돌봄 센터 (Care Center)</th><th class="th-green">커뮤니티 센터 (Community Center)</th></tr>
+<tr><td>대상</td><td>취약계층</td><td>시민</td></tr>
+<tr><td>복지사 역할</td><td>Carer (돌보는 사람)</td><td><b>Mediator</b> (중계자)</td></tr>
+<tr><td>행위</td><td>돌봄</td><td>자각과 실천</td></tr>
+</table>
+<div class="sub">Mediator(중계자)의 두 가지 역할</div>
+<ul class="pts green">
+<li>동등한 시민들 사이의 <b>관계를 중계</b> → 평등한 관계 속에서 구조·삶의 의미를 나누도록</li>
+<li>시민이 권리와 권력을 가진 존재임을 <b>자각하도록 중계</b></li>
+</ul>` },
+
+    { icon: "🗺️", title: "실천과 정치의 연결 — 두 가지 상상",
+      html: `<span class="tag tag-blue">praxis ★★</span>
+<div class="hbox hbox-blue"><b>정치 = 어떤 세력이 자신의 철학(이념)을 정책으로 실현시키는 과정</b></div>
+<div class="badge-row" style="margin-top:10px"><span class="badge badge-blue">상상 1 — 정책의 설계도면</span></div>
+<ul class="pts">
+<li>지금의 복지 정책이 아닌 <b>다른 정책을 상상</b>하는 것</li>
+<li>현재 문제점을 인식하고, 더 나은 복지 구조를 그려보는 것</li>
+</ul>
+<div class="badge-row"><span class="badge badge-green">상상 2 — 세력의 설계도면</span></div>
+<ul class="pts green">
+<li>좋은 정책이라도 <b>세력 없이는 실현 불가능</b></li>
+<li>조직된 사람들 = 세력 → 정책 실현의 동력</li>
+</ul>
+<div class="hbox hbox-purple" style="margin-top:8px">두 가지 상상 → 세력의 힘 → 이상적 정책 실현 = <b>praxis(실천)</b></div>` },
+
+    { icon: "⭐", title: "4강 핵심 요약",
+      html: `<ul class="star-list">
+<li>사회복지 전달체계는 <b>정치적 틀 안에서 작동</b>한다.</li>
+<li>사회복지윤리는 <b>개인윤리</b>뿐 아니라 구조와 맥락을 고려하는 <b>사회윤리</b>의 영역이다.</li>
+<li>정치는 <b>가치의 권위있는 배분</b>이다. (데이비드 이스턴, 1953)</li>
+<li>복지정책은 중요한 사회적 가치들을 배분하는 대표적인 <b>정치적 결과물</b>이다.</li>
+<li>사회복지 <b>실행(practice)</b>과 구조·맥락의 변화를 추구하는 <b>실천(praxis)</b>은 구분된다.</li>
+<li>아렌트의 <b>행위(action)</b> = praxis = homo politicus의 활동</li>
+</ul>` }
+
+  ]
+},
+  { num: "5강", name: "개인윤리와 사회윤리",
+  cards: [
+
+    { icon: "📂", title: "1. 개인윤리가 머무는 곳", html: `
+    <div class="hbox hbox-blue">
+    개인윤리는 <b>어디서 발생하는가?</b> — 전문가와 대상 개인 사이의 관계(전달체계) 속에 머문다.
+    </div>` },
+
+    { icon: "📌", title: "개인윤리 vs 사회윤리 — 발생 장소의 차이", html: `
+    <table class="comp-table">
+    <tr><th>구분</th><th class="th-blue">개인윤리</th><th class="th-green">사회윤리</th></tr>
+    <tr><td>발생 장소</td><td>개인과 개인(대상) 사이의 관계</td><td>구조(제도·법·전체 관계의 응축) 속</td></tr>
+    <tr><td>단위</td><td>개인 ~ 가족</td><td>사회 전체 구조</td></tr>
+    </table>
+    <ul class="pts" style="margin-top:8px">
+    <li><b>개인윤리</b>: 서비스 제공자(전문가)와 수혜자(대상) 개인 간 관계에서 발생</li>
+    <li><b>사회윤리</b>: 관계망이 응축된 제도·법·구조 속에서 발생</li>
+    </ul>` },
+
+    { icon: "🏛️", title: "사례관리의 시작 — 자선조직협회(COS)", html: `
+    <div class="hbox hbox-blue">
+    <b>Charity Organization Society</b> — 줄여서 <b>COS</b>
+    </div>
+    <ul class="pts" style="margin-top:8px">
+    <li><b>시기</b>: 1800년대 중반 영국 런던에서 시작 → 이후 미국으로 확산</li>
+    <li><b>배경</b>: 산업화 + 자본주의 자유방임 경쟁 → 도시 빈민 급증</li>
+    <li><b>목표</b>: 빈민의 교정을 통한 <b>자립 자족</b>
+      <ul class="pts" style="margin-top:4px;margin-left:8px">
+      <li>빈민을 다시 시장에 적응하고 근면 성실하게 노동할 수 있는 존재로 만들기</li>
+      </ul>
+    </li>
+    <li><b>방법</b>: 과학적 사례 분석 → 구호 대상 선별
+      <ul class="pts" style="margin-top:4px;margin-left:8px">
+      <li>꼼꼼한 상담·조사로 구호받을 <b>자격 여부</b>를 엄격히 검증</li>
+      <li>기존 빈민 구제의 중복·누락 문제를 개선하려는 시도</li>
+      </ul>
+    </li>
+    </ul>` },
+
+    { icon: "🔎", title: "빈곤의 원인에 대한 자선조직협회의 시각", html: `
+    <div class="flow">
+    <span class="flow-item">개인·가족의 성격적 결함과 나태</span>
+    <span class="flow-arrow">▶</span>
+    <span class="flow-item">빈곤</span>
+    </div>
+    <ul class="pts" style="margin-top:8px">
+    <li>빈곤 원인 = 개인·가족의 문제</li>
+    <li>해결 방법 = <b>개인과 가족을 관리·교정</b>
+      <ul class="pts" style="margin-top:4px;margin-left:8px">
+      <li>가정생활 조언 / 아동교육 조언 / 가정경제 조언</li>
+      <li>음식 중심의 구호품 제공</li>
+      </ul>
+    </li>
+    </ul>` },
+
+    { icon: "🤝", title: "우애방문원 (Friendly Visitor)", html: `
+    <ul class="pts">
+    <li><b>소속</b>: 자선조직협회 소속 활동가</li>
+    <li><b>구성</b>: 중산층 이상의 <b>무보수 자원봉사자</b> (주로 여성)
+      <ul class="pts" style="margin-top:4px;margin-left:8px">
+      <li>19세기 여성의 사회 참여가 제한된 시대 — 자선활동이 허용된 사회적 공간이었음</li>
+      </ul>
+    </li>
+    <li><b>정신</b>:
+      <ul class="pts green" style="margin-top:4px;margin-left:8px">
+      <li><b>박애(博愛)의 정신</b> — 빈민도 인간으로서 사랑받아야 할 존재</li>
+      <li><b>노블리스 오블리제(Noblesse Oblige)</b> — 특권을 가진 자는 공동체에 더 많은 의무를 짐</li>
+      </ul>
+    </li>
+    </ul>` },
+
+    { icon: "📈", title: "사례관리의 진화 — 우애방문원 → 사회복지사", html: `
+    <table class="comp-table">
+    <tr><th>시기</th><th>전문가</th><th>대상</th><th>성격</th></tr>
+    <tr><td>초기 (COS)</td><td>우애방문원</td><td>빈민·빈곤가정</td><td>개인이 개인에게 전달</td></tr>
+    <tr><td>현대</td><td>사회복지사</td><td>보호대상자·수급자·수혜자·클라이언트</td><td>전문가가 대상에게 전달체계 운영</td></tr>
+    </table>
+    <div class="hbox hbox-yellow" style="margin-top:8px">
+    ★ 본질은 동일: <b>전문가 개인이 → 대상 개인에게 → 무언가를 전달</b>하는 구조<br>
+    개인윤리는 바로 이 <b>개인(전문가)과 개인(대상)의 관계 속</b>에 머문다
+    </div>` },
+
+    { icon: "⚖️", title: "클라이언트의 권리", html: `
+    <p>자유주의 확산(20세기 중반) → 대상도 <b>자유권을 지닌 자율적 존재, 독립된 인격체</b>로 인식</p>
+    <table class="comp-table" style="margin-top:8px">
+    <tr><th>권리</th><th class="th-blue">내용</th></tr>
+    <tr><td><b>자기결정권</b></td><td>어떠한 외부 강요 없이 스스로 선택·결정할 권리</td></tr>
+    <tr><td><b>알 권리</b></td><td>자신을 둘러싼 현실에 대한 정보를 자유롭게 알 권리</td></tr>
+    <tr><td><b>프라이버시권(비밀보장)</b></td><td>개인 정보와 상담 내역의 비밀을 보장받을 권리</td></tr>
+    </table>
+    <ul class="pts" style="margin-top:8px">
+    <li>비밀보장의 권리 ↔ 사회복지사의 <b>비밀보장 의무</b> (권리와 의무는 짝꿍)</li>
+    </ul>` },
+
+    { icon: "📂", title: "2. 개인윤리의 갈등과 문제점", html: `
+    <div class="hbox hbox-red">
+    개인윤리 내부의 핵심 갈등 구조: <b>자기결정권 vs 온정주의(온정적 개입주의)</b>
+    </div>` },
+
+    { icon: "🙋", title: "자기결정권의 의미", html: `
+    <div class="hbox hbox-blue">
+    <b>자기결정권</b>: 어떠한 외부적 강요 없이 스스로 선택하고 결정할 권리
+    </div>
+    <ul class="pts" style="margin-top:8px">
+    <li>근거: 클라이언트의 <b>자율성 보장</b>
+      <ul class="pts" style="margin-top:4px;margin-left:8px">
+      <li>자율성 = 모든 인간 각자에게 무엇이 좋은지 최종적으로는 <b>각자의 판단에 맡기는 것이 최선</b>이라는 원칙</li>
+      <li>스스로 판단하지 못한 것은 결과가 좋더라도 도덕적으로 최선이 아님</li>
+      </ul>
+    </li>
+    </ul>` },
+
+    { icon: "🫂", title: "온정주의의 의미", html: `
+    <div class="hbox hbox-green">
+    <b>온정주의(Paternalism)</b>: 도움이 필요하다고 판단되는 사람의 삶에 개입하는 것
+    </div>
+    <ul class="pts" style="margin-top:8px">
+    <li>근거: 사회복지사의 <b>조력(助力)의 의무</b>
+      <ul class="pts" style="margin-top:4px;margin-left:8px">
+      <li>도움이 필요한 사람에게 큰 대가 없이 도울 수 있다면 도울 의무가 있음</li>
+      </ul>
+    </li>
+    <li>문제: 개입은 곧 대상의 <b>자율성 침해</b>로 이어짐</li>
+    </ul>` },
+
+    { icon: "📜", title: "윤리강령 속의 긴장 관계", html: `
+    <div class="hbox hbox-blue">
+    "사회복지사는 클라이언트가 자기결정권을 최대한 행사할 수 있도록 도와야 하며,<br>
+    저들의 이익을 최대한 대변해야 한다."<br>
+    <small>— 한국사회복지사 윤리강령, 사회복지사의 클라이언트에 대한 윤리기준 中</small>
+    </div>
+    <ul class="pts" style="margin-top:8px">
+    <li><b>자기결정권 존중</b> ↔ <b>이익 대변을 위한 개입</b> 사이의 긴장이 내포됨</li>
+    </ul>` },
+
+    { icon: "🔍", title: "개인윤리의 갈등 사례", html: `
+    <p style="margin-bottom:8px"><small>출처: 김기덕·최소연·권자영(2017), 『사회복지윤리와 철학』, pp.216-223</small></p>
+    <table class="comp-table">
+    <tr><th>사례</th><th class="th-red">갈등 내용</th></tr>
+    <tr><td>어머니의 정신건강이 불안정한 한부모 가정</td><td>온정주의적 개입 vs 어머니의 자기결정권</td></tr>
+    <tr><td>복지관 후원금을 담배 구입에 사용하는 어르신</td><td>개입(자기결정 제한) vs 자기결정권 존중</td></tr>
+    <tr><td>가정폭력 재발 위험이 높은데 귀가를 결정한 가정폭력 피해 여성</td><td>보호를 위한 강제 개입 vs 귀가 결정 존중</td></tr>
+    <tr><td>자녀의 후원금을 다른 곳에 유용하는 부모</td><td>개입 vs 부모의 자기결정권</td></tr>
+    </table>
+    <ul class="pts" style="margin-top:8px">
+    <li>★ 핵심 질문: <b>어떠한 경우에 클라이언트의 자기결정권을 제한하면서 온정주의적 개입을 할 수 있는가?</b></li>
+    <li>보편적이고 절대적인 원칙은 존재하기 어려움</li>
+    <li>각 맥락과 사례 속에서 <b>균형점을 찾는 노력</b>이 필요</li>
+    </ul>` },
+
+    { icon: "✍️", title: "알 권리와 고지된 동의(Informed Consent)", html: `
+    <ul class="pts">
+    <li><b>알 권리</b>: 개인이 자신을 둘러싼 현실에 대한 정보를 자유롭게 알 수 있는 권리</li>
+    <li>알 권리 → <b>고지된 동의(Informed Consent)의 원칙</b>으로 이어짐</li>
+    </ul>
+    <div class="hbox hbox-green" style="margin-top:8px">
+    <b>고지된 동의</b>: 자신이 받는 서비스의 내용과 선택에 대한 사실과 정보에 대해,<br><b>사전에 설명을 듣고 이해한 상태에서 동의</b>하는 것
+    </div>
+    <div class="sub">고지해야 할 내용 (개인윤리 관점)</div>
+    <table class="comp-table">
+    <tr><th>항목</th><th class="th-blue">내용</th></tr>
+    <tr><td>①</td><td>서비스의 목적·내용·기간</td></tr>
+    <tr><td>②</td><td>전달 과정에서 발생 가능한 일들</td></tr>
+    <tr><td>③</td><td>질문할 권리</td></tr>
+    <tr><td>④</td><td>거부할 권리</td></tr>
+    </table>
+    <ul class="pts" style="margin-top:8px">
+    <li><b>방식</b>: 전달의 방식 (전문가 → 대상으로 일방적 전달)</li>
+    </ul>` },
+{ icon: "⚠️", title: "개인윤리의 문제점 — 진공 상태의 착각", html: `
+    <div class="hbox hbox-red">
+    <b>개인윤리의 착각</b>: 전문가와 대상 사이가 마치 진공 상태인 것처럼 다룬다
+    </div>
+    <div style="width:70%; border:2px dashed #e5e0d8;border-radius:12px;padding:20px 16px 14px;margin:12px auto;background:var(--white)">
+      <div style="display:flex;align-items:center;justify-content:center;gap:16px">
+        <div style="width:80px;height:80px;border-radius:50%;background:#c0444a;display:flex;align-items:center;justify-content:center;box-shadow:4px 4px 0 #a03338">
+          <span style="color:#fff;font-weight:900;font-size:15px">전문가</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:2px">
+          <span style="color:#c0444a;font-size:20px;letter-spacing:-2px">»»</span>
+        </div>
+        <div style="width:80px;height:80px;border-radius:50%;border:3px solid #c0444a;display:flex;align-items:center;justify-content:center;background:var(--white)">
+          <span style="color:#c0444a;font-weight:900;font-size:15px">대상</span>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-top:12px;padding:0 8px">
+        <span style="font-size:12px;color:var(--muted);background:var(--bg);border-radius:20px;padding:3px 10px">진공상태?</span>
+        <span style="font-size:12px;color:var(--muted);background:var(--bg);border-radius:20px;padding:3px 10px">관계의 응축/구조</span>
+      </div>
+    </div>
+    <ul class="pts">
+    <li>개인윤리는 전문가와 대상 <b>둘 사이의 관계만</b> 다루는 경향이 있음</li>
+    <li>실제로는 두 사람 모두 <b>촘촘한 관계망·제도·구조</b> 속에 놓여 있음
+      <ul class="pts" style="margin-top:4px;margin-left:8px">
+      <li>전문가: 동료 전문가 → 기관·시설 → 지역사회 → 사회 전체</li>
+      <li>대상: 가족 → 친지 → 마을·직장 → 지역사회 → 공동체</li>
+      </ul>
+    </li>
+    <li>이 맥락을 떼버리고 둘 사이의 문제로만 좁히면:
+      <ul class="pts red" style="margin-top:4px;margin-left:8px">
+      <li>윤리가 <b>"전문가가 어떤 선택을 해야 하는가"</b>라는 협소한 문제로 축소됨</li>
+      <li>대상이 <b>일방적으로 돌봄을 필요로 하는 존재</b>로 전락함</li>
+      </ul>
+    </li>
+    </ul>` },
+    { icon: "📂", title: "3. 돌봄의 대상에서 돌봄의 주체로", html: `
+    <div class="hbox hbox-green">
+    구조를 보는 시각으로 전환하고, <b>대화·참여</b>를 통해 클라이언트가 돌봄의 주체인 <b>시민</b>이 된다.
+    </div>` },
+
+    { icon: "🔗", title: "개인윤리의 전달체계", html: `
+    <div class="flow">
+    <span class="flow-item">재정</span>
+    <span class="flow-arrow">▶</span>
+    <span class="flow-item">급여<br><small>(현금·현물·바우처·상담·치료 등)</small></span>
+    <span class="flow-arrow">▶</span>
+    <span class="flow-item">전달체계 → 대상</span>
+    </div>
+    <ul class="pts" style="margin-top:8px">
+    <li>개인 전문가가 개인 대상에게 <b>전달</b>하는 방식</li>
+    <li>이 전달이 마치 <b>진공 상태</b>에서 이루어지는 것처럼 다루어지는 것이 문제</li>
+    </ul>` },
+
+{ icon: "🔭", title: "구조를 보는 시각의 확장", html: `
+    <table class="comp-table">
+    <tr><th>구분</th><th class="th-blue">인접환경 시선 (개인윤리)</th><th class="th-green">구조 시선 (사회윤리)</th></tr>
+    <tr><td>주목 대상</td><td>눈에 보이는 문제·상처</td><td>그 문제를 만들어낸 구조</td></tr>
+    <tr><td>예시</td><td>반지하 곰팡이 벽지 뜯고 새 도배</td><td>왜 반지하에 사람이 살아야 하는가</td></tr>
+    <tr><td>한계</td><td>매년 반복, 근본 해결 없음</td><td>구조 변화를 통한 근본 해결</td></tr>
+    </table>
+    <div class="hbox hbox-yellow" style="margin-top:8px">
+    ★ 비유: 매년 홍수로 침수되는 반지하에 도배봉사를 반복하는 것 vs 반지하 주거 자체가 적합한가를 묻는 것
+    </div>` },
+
+    { icon: "👁️", title: "구조를 보는 방법 — 또 다른 나", html: `
+    <ul class="pts">
+    <li>관계 속에 <b>함몰</b>되어 있으면 구조가 보이지 않음</li>
+    <li>의식적으로 관계 밖으로 나와 <b>"또 다른 나"</b>를 만들어야 함
+      <ul class="pts green" style="margin-top:4px;margin-left:8px">
+      <li><b>대화를 통한 세상읽기</b> → 구조를 파악</li>
+      <li><b>참여를 통한 세상만들기</b> → 구조를 변화</li>
+      </ul>
+    </li>
+    </ul>` },
+
+    { icon: "📢", title: "사회적 알 권리 — 개인윤리 vs 사회윤리 비교", html: `
+    <table class="comp-table">
+    <tr><th>구분</th><th class="th-blue">개인윤리의 관점</th><th class="th-green">사회윤리의 관점</th></tr>
+    <tr><td><b>무엇을 알아야 하나</b></td><td>서비스의 목적·내용·기간 / 발생 가능한 일 / 질문할 권리 / 거부할 권리</td><td>구조에 대한 비판적 정보 / 복지의 권리 / 인정의 권리 / 참여의 권리</td></tr>
+    <tr><td><b>어떻게 알려야 하나</b></td><td><b>전달의 방식</b> (일방적 전달)</td><td><b>대화의 방식</b> (함께 공유)</td></tr>
+    </table>` },
+
+    { icon: "🌱", title: "대상에서 주체로 — 클라이언트에서 시민으로", html: `
+    <div class="flow">
+    <span class="flow-item">돌봄의 대상<br><small>(클라이언트)</small></span>
+    <span class="flow-arrow">▶</span>
+    <span class="flow-item">대화 + 참여</span>
+    <span class="flow-arrow">▶</span>
+    <span class="flow-item">돌봄의 주체<br><small>(시민)</small></span>
+    </div>
+    <ul class="pts" style="margin-top:8px">
+    <li>대화와 참여를 통해 클라이언트는 <b>시민</b>이 됨</li>
+    <li>전문가와 대상이 <b>우열 관계</b>가 아닌 <b>동등한 시민</b>으로서 함께 공동체를 만들어감</li>
+    <li>★ <b>복지관에서 마을로!</b> — 협소한 복지관 공간을 벗어나 마을(공동체)로 나가야 함</li>
+    </ul>` },
+
+    { icon: "📂", title: "4. 사례관리와 사회관리", html: `
+    <div class="hbox hbox-purple">
+    <b>사례관리(클라이언트·homo economicus)</b> vs <b>사회관리(시민·homo politicus)</b> — 사회복지사의 역할 전환
+    </div>` },
+
+    { icon: "📊", title: "사례관리 vs 사회관리 비교표", html: `
+    <table class="comp-table">
+    <tr><th>구분</th><th class="th-blue">사례관리</th><th class="th-green">사회관리</th></tr>
+    <tr><td><b>시선</b></td><td>인접환경</td><td>구조</td></tr>
+    <tr><td><b>인간</b></td><td>시장 내 개인<br>(homo economicus)</td><td>공동체 내 개인<br>(homo politicus)</td></tr>
+    <tr><td><b>주민 성격</b></td><td>클라이언트</td><td>시민</td></tr>
+    <tr><td><b>목표</b></td><td>환경과 시장에 적응</td><td>시민의 관계와 국가를 관리</td></tr>
+    <tr><td><b>기술</b></td><td>전문적 서비스 제공 / 치료와 상담</td><td>세상읽기의 대화 / 세상만들기의 참여</td></tr>
+    </table>` },
+
+    { icon: "👤", title: "사례관리 vs 사회관리 — 사회복지사의 역할 비교", html: `
+    <table class="comp-table">
+    <tr><th>구분</th><th class="th-blue">사례관리의 영역</th><th class="th-green">사회관리의 영역</th></tr>
+    <tr><td><b>이미지</b></td><td>봉사자·해결사</td><td>활동가·동료</td></tr>
+    <tr><td><b>역량</b></td><td>주민의 욕구를 알고, 보살피고, 해소한다</td><td>주민과 의식을 공유하고, 권력을 증진한다</td></tr>
+    <tr><td><b>정체성</b></td><td>서비스 전달자</td><td>교육가·조직가</td></tr>
+    <tr><td><b>장소</b></td><td>케어센터(보건소)</td><td>커뮤니티센터(사회과학실험실)</td></tr>
+    </table>` },
+
+    { icon: "🧭", title: "사회관리에서 사회복지사의 윤리", html: `
+    <ul class="pts">
+    <li><b>교육가</b>로서: 주입식 교육이 아닌 <b>대화의 방식</b>으로 교육해야 함</li>
+    <li><b>조직가</b>로서: "나를 따르라"가 아닌 <b>동등한 시민의 관점</b>에서 조직해야 함</li>
+    <li>목적: 주민이 <b>권리 의식</b>을 갖고 <b>권력(힘)</b>을 실질적으로 행사할 수 있도록 지원</li>
+    </ul>` },
+
+    { icon: "🧪", title: "사회관리의 실험 사례", html: `
+    <div class="sub">실버 바리스타 → 후배 시민 커피 나눔</div>
+    <ul class="pts">
+    <li>복지관에서 배운 커피 기술을 시험 기간 지역 학교에서 학생들에게 나눔</li>
+    <li>단순한 취미·여가를 넘어 <b>마을·공동체와의 관계</b>로 확장</li>
+    <li>세상만들기의 작은 실험</li>
+    </ul>
+    <div class="sub">고립된 어르신의 단계별 변화</div>
+    <div class="flow">
+    <span class="flow-item">고립된 공간</span>
+    <span class="flow-arrow">▶</span>
+    <span class="flow-item">1단계<br><small>복지관으로 나오기<br>혈압 체크·건강 확인</small></span>
+    <span class="flow-arrow">▶</span>
+    <span class="flow-item">2단계<br><small>마을로 나가기<br>동네 건강 둘러보기</small></span>
+    <span class="flow-arrow">▶</span>
+    <span class="flow-item">3단계<br><small>의미 있는 참여<br>마을 개선 토론</small></span>
+    </div>
+    <ul class="pts" style="margin-top:8px">
+    <li>★ 사례관리는 언제 끝나는가? "이사 가시거나 돌아가시면 끝난다" (자조 섞인 말)</li>
+    <li>고립된 공간에서 머무는 한 사례관리는 끝이 없음</li>
+    <li><b>의미 있는 행위(한나 아렌트)를 통해 인간다운 삶으로 복귀</b>가 진정한 목표</li>
+    </ul>` },
+
+    { icon: "✅", title: "5강 핵심 요약", html: `
+    <ul class="star-list">
+    <li><b>개인윤리</b>는 전문가와 대상 개인 사이 관계(전달체계 속)에 머뭄</li>
+    <li><b>사회윤리</b>는 구조(관계의 응축 = 제도·법·국가) 속에서 발생</li>
+    <li>자선조직협회(COS): 빈곤 원인 = 개인·가족의 결함 → 개인·가족 관리·교정</li>
+    <li>우애방문원: 중산층 이상 무보수 자원봉사자, 박애 정신 + 노블리스 오블리제</li>
+    <li>개인윤리의 핵심 권리: <b>자기결정권·알 권리·프라이버시권(비밀보장)</b></li>
+    <li>개인윤리의 핵심 갈등: <b>자기결정권 vs 온정주의(조력의 의무)</b></li>
+    <li>고지된 동의: 충분한 정보를 알고 이해한 상태에서의 동의</li>
+    <li>개인윤리의 문제: 전문가-대상 관계를 <b>진공 상태</b>처럼 다루어 구조를 놓침</li>
+    <li>사회윤리 전환: <b>대화를 통한 세상읽기 + 참여를 통한 세상만들기</b></li>
+    <li>클라이언트 → <b>시민</b>: 돌봄의 대상에서 돌봄의 주체로</li>
+    <li>사례관리(homo economicus·클라이언트) vs <b>사회관리(homo politicus·시민)</b></li>
+    <li>사회복지사: 사례관리(봉사자·해결사) vs 사회관리(<b>활동가·동료·교육가·조직가</b>)</li>
+    </ul>` },
+
+  ]
+},
+{ num: "6강", name: "윤리학의 두 전통",
+  cards: [
+
+    { icon: "📂", title: "1. 윤리와 윤리학", html: `
+    <div class="hbox hbox-blue">
+    윤리학은 <b>"옳음(rightness)"</b>에 대한 학문 — 올바른 행동과 좋은 삶을 탐구한다.
+    </div>` },
+
+    { icon: "📖", title: "윤리의 어원 — 에토스(ethos)", html: `
+    <div class="flow">
+    <span class="flow-item">에토스<br><small>(ethos)</small></span>
+    <span class="flow-arrow">▶</span>
+    <span class="flow-item">윤리학<br><small>(ethics)</small></span>
+    </div>
+    <table class="comp-table" style="margin-top:8px">
+    <tr><th>의미</th><th class="th-blue">내용</th></tr>
+    <tr><td>①</td><td>사람들이 가지고 있는 <b>습관이나 관습</b> (공동체가 오랫동안 반복해 온 것)</td></tr>
+    <tr><td>②</td><td>인간의 <b>정신 상태·마음가짐·품성</b> (사람이라면 마땅히 가져야 할 덕목)</td></tr>
+    </table>
+    <ul class="pts" style="margin-top:8px">
+    <li>윤리학(ethics)은 그리스어 <b>에토스(ethos)</b>에서 유래</li>
+    <li>아리스토텔레스의 책 <b>『에티카(Ethika)』</b> — 국내 번역: 『니코마코스 윤리학』</li>
+    </ul>` },
+
+    { icon: "❓", title: "윤리학의 질문", html: `
+    <table class="comp-table">
+    <tr><th>질문</th><th class="th-blue">의미</th><th class="th-green">관련 영역</th></tr>
+    <tr><td><b>우리는 어떻게 행동해야 하는가?</b></td><td>행위와 의무에 대한 도덕적 판단</td><td>올바른 행동</td></tr>
+    <tr><td><b>우리는 어떻게 살아가야만 하는가?</b></td><td>가치와 미덕에 대한 도덕적 판단</td><td>올바른 삶·좋은 삶</td></tr>
+    </table>
+    <div class="hbox hbox-yellow" style="margin-top:8px">
+    ★ <b>윤리학 = "옳음(rightness)"에 대한 학문</b><br>
+    올바른 행위란 무엇인가 / 올바른 삶·가치 있는 삶·의미 있는 삶이란 무엇인가
+    </div>` },
+
+    { icon: "🔬", title: "윤리학의 종류", html: `
+    <table class="comp-table">
+    <tr><th>구분</th><th class="th-blue">내용</th></tr>
+    <tr><td><b>메타 윤리학</b></td><td>'옳음'이라는 것 자체가 무엇을 의미하는지를 다루는 학문</td></tr>
+    <tr><td><b>실천·응용 윤리학</b></td><td>옳음에 대한 이해를 바탕으로 올바른 행위·삶이 무엇인지 다루는 학문</td></tr>
+    </table>` },
+
+    { icon: "⚖️", title: "윤리학의 두 전통", html: `
+    <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin:10px 0;flex-wrap:wrap">
+      <span class="badge badge-blue" style="padding:8px 16px;font-size:14px">목적론<br><small>결과·목적</small></span>
+      <span style="font-size:18px;color:var(--muted)">←</span>
+      <span class="badge badge-purple" style="padding:8px 16px;font-size:14px">윤리<br><small>올바른 행동<br>좋은 삶</small></span>
+      <span style="font-size:18px;color:var(--muted)">→</span>
+      <span class="badge badge-green" style="padding:8px 16px;font-size:14px">의무론<br><small>동기·의무</small></span>
+    </div>
+    <table class="comp-table" style="margin-top:8px">
+    <tr><th>전통</th><th class="th-blue">판단 기준</th><th>대표 학자</th></tr>
+    <tr><td><b>목적론적 윤리관</b></td><td>목적 (행복·쾌락 등의 <b>결과</b>)</td><td>아리스토텔레스, 벤담, J.S. 밀</td></tr>
+    <tr><td><b>의무론적 윤리관</b></td><td>의무 (도덕 법칙에 따른 <b>동기</b>)</td><td>칸트</td></tr>
+    </table>` },
+
+    { icon: "📂", title: "2. 목적론적 윤리관", html: `
+    <div class="hbox hbox-blue">
+    모든 존재는 목적을 가진다 — 인간의 최고 목적은 <b>행복(eudaimonia)</b>이다.
+    </div>` },
+
+    { icon: "🌰", title: "아리스토텔레스의 목적론 — 도토리의 비유", html: `
+    <div class="hbox hbox-blue">
+    "도토리의 목적은 무엇일까? 너는 도대체 무엇을 위해 존재하니?"
+    </div>
+    <ul class="pts" style="margin-top:8px">
+    <li>도토리 → 울창한 떡갈나무(오크나무)로 성장하는 것이 목적</li>
+    <li>이 세상에 존재하는 <b>모든 것은 각자의 목적을 가진 존재</b></li>
+    </ul>
+    <div class="sub">인간의 목적은 무엇인가?</div>
+    <div class="hbox hbox-yellow">
+    "모든 행위와 선택은 어떤 좋음(선)을 <b>목적(telos)</b>으로 한다.<br>
+    그런데 인간에게 최고의 좋음(선)은 <b>행복(eudaimonia)</b>이다."<br>
+    <small>— 아리스토텔레스</small>
+    </div>
+    <div class="sub">행위의 목적 연쇄 구조</div>
+    <div class="flow">
+    <span class="flow-item">강의 듣기<br><small>(수단)</small></span>
+    <span class="flow-arrow">▶</span>
+    <span class="flow-item">시험·성적·졸업<br><small>(수단)</small></span>
+    <span class="flow-arrow">▶</span>
+    <span class="flow-item">취업·성장<br><small>(수단)</small></span>
+    <span class="flow-arrow">▶</span>
+    <span class="flow-item">행복<br><small>(그 자체로 목적)</small></span>
+    </div>
+    <ul class="pts" style="margin-top:8px">
+    <li><b>에우다이모니아(eudaimonia)</b>: 행복, 그 자체로 좋은 삶</li>
+    <li>더 이상 다른 것의 수단이 아닌, 그 자체로 목적인 것</li>
+    </ul>` },
+
+    { icon: "⚖️", title: "공리주의의 등장 — 벤담(Bentham)", html: `
+    <div class="hbox hbox-blue">
+    "자연은 인류를 고통과 쾌락이라는 두 주인에게서 지배받도록 만들었다."
+    </div>
+    <table class="comp-table" style="margin-top:8px">
+    <tr><th>구분</th><th class="th-blue">정의</th></tr>
+    <tr><td><b>선(善)</b></td><td>쾌락이나 행복을 가져다 주는 것</td></tr>
+    <tr><td><b>악(惡)</b></td><td>행복을 감소시키거나 고통을 가져오는 것</td></tr>
+    </table>
+    <div class="hbox hbox-yellow" style="margin-top:8px">
+    ★ <b>도덕의 최고 법칙: 쾌락의 총량이 고통의 총량보다 많게 하는 것</b>
+    </div>
+    <ul class="pts" style="margin-top:8px">
+    <li>"쾌락의 양이 같다면, 뽁뽁이를 터뜨리는 행위는 시를 읽는 행위만큼이나 좋은 것이다."</li>
+    <li>쾌락의 <b>양(量)</b>이 기준 — 그 사람에게 더 큰 쾌락을 준다면 어떤 행위든 윤리적으로 정당함</li>
+    </ul>` },
+
+    { icon: "🧠", title: "J.S. 밀의 질적 공리주의", html: `
+    <div class="hbox hbox-red">
+    벤담 비판: "인간이 무조건 쾌락이면 좋다고 하면 그건 짐승의 윤리야!"
+    </div>
+    <ul class="pts" style="margin-top:8px">
+    <li>J.S 밀: 쾌락의 양만 중요한 게 아니라 <b>쾌락의 질(質)도 중요</b>하다</li>
+    </ul>
+    <div class="hbox hbox-blue" style="margin-top:8px">
+    "배부른 돼지가 되기보다는 배고픈 인간이 되는 편이 낫고,<br>
+    만족스러운 바보가 되기보다는 불만족스러운 소크라테스가 되는 편이 낫다."<br>
+    <small>— J.S. 밀</small>
+    </div>
+    <ul class="pts" style="margin-top:8px">
+    <li>수준 높은 질의 쾌락(지적·도덕적)이 단순한 쾌락보다 더 가치 있음</li>
+    <li>이를 <b>질적 공리주의</b>라고 함</li>
+    </ul>` },
+
+    { icon: "🔗", title: "벤담과 밀의 공통점 — 결과주의", html: `
+    <div style="display:flex;align-items:center;justify-content:center;gap:1.2em;margin:1em 0;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:0.6em">
+        <div style="position:relative;padding:0.5em 1.4em;font-size:1em;font-weight:900;color:var(--c1);display:flex;align-items:center;justify-content:center">
+          <span style="position:absolute;top:0;left:0;bottom:0;display:flex;align-items:center;font-size:2em;line-height:1;color:var(--c1);font-weight:300">[</span>
+          <span style="position:absolute;top:0;right:0;bottom:0;display:flex;align-items:center;font-size:2em;line-height:1;color:var(--c1);font-weight:300">]</span>
+          행위
+        </div>
+        <div style="position:relative;padding:0.5em 1.4em;font-size:1em;font-weight:900;color:var(--c1);display:flex;align-items:center;justify-content:center">
+          <span style="position:absolute;top:0;left:0;bottom:0;display:flex;align-items:center;font-size:2em;line-height:1;color:var(--c1);font-weight:300">[</span>
+          <span style="position:absolute;top:0;right:0;bottom:0;display:flex;align-items:center;font-size:2em;line-height:1;color:var(--c1);font-weight:300">]</span>
+          규칙
+        </div>
+      </div>
+      <div style="font-size:1.6em;color:var(--muted);font-weight:900;letter-spacing:-0.1em">»</div>
+      <div style="width:5em;height:5em;border-radius:50%;background:var(--c1l);border:2px solid var(--c1);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+        <span style="color:var(--c1);font-size:1.1em;font-weight:900">쾌락</span>
+      </div>
+    </div>
+    <div class="hbox hbox-yellow" style="margin-top:8px">
+    <b>결과주의</b>: 행위나 규칙의 <b>동기보다 결과</b>에 따라 옳고 그름을 평가한다
+    </div>
+    <ul class="pts" style="margin-top:8px">
+    <li>공리주의 = 목적론적 윤리관의 현대적 발전 = <b>결과주의</b></li>
+    </ul>` },
+
+    { icon: "🚃", title: "공리주의, 괜찮은가? — 트롤리 문제", html: `
+    <p style="margin-bottom:8px"><small>필리파 풋, 1960년대 트롤리 딜레마</small></p>
+    <div class="hbox hbox-red">
+    브레이크 고장 기차가 달려오는 상황에서 선로 변경 스위치 앞에 선 나
+    </div>
+    <div class="flow" style="margin-top:8px;">
+    <span class="flow-item" style="border-color:var(--c3)">직진<br><small>5명 희생</small></span>
+    <span class="flow-arrow" style="color:var(--c3)">VS</span>
+    <span class="flow-item" style="border-color:var(--c2)">선로 변경<br><small>1명 희생</small></span>
+    </div>
+    <ul class="pts" style="margin-top:8px">
+    <li>공리주의자라면: 결과만 보고 → 스위치를 당겨 1명 희생으로 5명 구출</li>
+    </ul>
+    <div class="sub">변형 문제</div>
+    <ul class="pts red">
+    <li>다리 위에서 옆 사람을 밀어서 기차를 멈춰 5명을 구할 수 있다면?</li>
+    <li>→ 대부분의 사람들은 선뜻 선택하지 못함</li>
+    <li>→ 인간의 윤리적 판단은 <b>단지 숫자의 결과 말고 다른 무언가</b>를 고려한다</li>
+    <li>→ 공리주의(결과만)로는 설명되지 않는 윤리적 판단 영역이 있음</li>
+    </ul>` },
+
+    { icon: "📂", title: "3. 의무론적 윤리관", html: `
+    <div class="hbox hbox-green">
+    <b>절대적이고 보편적인 도덕 법칙</b>이 존재한다 — 행위의 결과보다 <b>동기</b>가 중요하다.
+    </div>` },
+
+    { icon: "📋", title: "의무론적 윤리관의 핵심", html: `
+    <ul class="pts">
+    <li><b>우리가 반드시 지켜야 할 절대적이고 보편적인 도덕 법칙이 있다</b></li>
+    <li>이 법칙에 의해 옳고 그름이 결정된다</li>
+    <li><b>행위의 결과보다 행위의 동기</b>가 중요하다</li>
+    <li><b>목적이 수단을 정당화할 수 없다</b></li>
+    </ul>
+    <table class="comp-table" style="margin-top:8px">
+    <tr><th>구분</th><th class="th-blue">기준</th><th>대표 학자</th></tr>
+    <tr><td><b>의무론</b></td><td>의무·당위 등의 <b>동기</b></td><td>칸트</td></tr>
+    <tr><td><b>목적론</b></td><td>행복·쾌락 등의 <b>결과</b></td><td>벤담·밀</td></tr>
+    </table>` },
+{ icon: "📚", title: "칸트(Kant)의 출발점 — 3대 비판서", html: `
+    <div class="hbox hbox-blue">
+    <b>인간은 이성적 존재다</b> — 그렇다면 인간의 지식·행위·희망의 근거와 범위는 무엇일까?
+    </div>
+    <div style="margin:1em 0;padding:0 0.5em">
+      <div style="text-align:center;font-size:1em;font-weight:900;border:2px solid var(--text);display:block;padding:0.4em 1.3em;margin:0 auto 1.6em">
+        칸트의 3대 비판서
+      </div>
+      <div style="position:relative;height:14.5em;max-width:22em;margin:0 auto">
+        <svg style="position:absolute;top:0;left:0;width:100%;height:100%" viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+          <line x1="160" y1="55" x2="55" y2="170" stroke="#1a1a2e" stroke-width="2.5"/>
+          <line x1="160" y1="55" x2="265" y2="170" stroke="#1a1a2e" stroke-width="2.5"/>
+          <line x1="55" y1="170" x2="265" y2="170" stroke="#1a1a2e" stroke-width="2.5"/>
+        </svg>
+        <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);text-align:center">
+          <div style="width:4.8em;height:4.8em;border-radius:50%;background:#1a1a2e;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.85em;line-height:1.3;margin:0 auto">순수<br>이성</div>
+          <div style="position:absolute;left:5.2em;top:0.6em;font-size:0.78em;font-weight:700;white-space:nowrap;color:var(--text)">인간은 무엇을<br>알 수 있는가?</div>
+        </div>
+        <div style="position:absolute;bottom:0;left:0;text-align:center">
+          <div style="width:4.8em;height:4.8em;border-radius:50%;background:#1a1a2e;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.85em;line-height:1.3;margin:0 auto">실천<br>이성</div>
+          <div style="font-size:0.78em;font-weight:700;margin-top:0.4em;color:var(--text)">인간은 무엇을<br>해야 하는가?</div>
+        </div>
+        <div style="position:absolute;bottom:0;right:0;text-align:center">
+          <div style="width:4.8em;height:4.8em;border-radius:50%;background:#fff;border:3px solid #1a1a2e;color:var(--text);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.85em;line-height:1.3;margin:0 auto">판단력</div>
+          <div style="font-size:0.78em;font-weight:700;margin-top:0.4em;color:var(--text)">인간은 무엇을<br>바랄 수 있는가?</div>
+        </div>
+      </div>
+    </div>
+    <table class="comp-table" style="margin-top:8px">
+    <tr><th>책</th><th class="th-blue">이성</th><th>질문</th></tr>
+    <tr><td>『순수이성 비판』</td><td>순수이성</td><td>인간은 무엇을 <b>알</b> 수 있는가? (인식론)</td></tr>
+    <tr><td><b>『실천이성 비판』 ★</b></td><td>실천이성</td><td>인간은 무엇을 <b>해야</b> 하는가? (윤리학)</td></tr>
+    <tr><td>『판단력 비판』</td><td>판단력</td><td>인간은 무엇을 <b>바랄</b> 수 있는가? (미학)</td></tr>
+    </table>` },
+    { icon: "📚", title: "칸트(Kant)의 출발점 — 3대 비판서", html: `
+    <div class="hbox hbox-blue">
+    <b>인간은 이성적 존재다</b> — 그렇다면 인간의 지식·행위·희망의 근거와 범위는 무엇일까?
+    </div>
+    <table class="comp-table" style="margin-top:8px">
+    <tr><th>책</th><th class="th-blue">이성</th><th>질문</th></tr>
+    <tr><td>『순수이성 비판』</td><td>순수이성</td><td>인간은 무엇을 <b>알</b> 수 있는가? (인식론)</td></tr>
+    <tr><td>『실천이성 비판』 ★</td><td>실천이성</td><td>인간은 무엇을 <b>해야</b> 하는가? (윤리학)</td></tr>
+    <tr><td>『판단력 비판』</td><td>판단력</td><td>인간은 무엇을 <b>바랄</b> 수 있는가? (미학)</td></tr>
+    </table>` },
+
+  { icon: "💬", title: "정언명령 vs 가언명령", html: `
+    <div class="hbox hbox-blue">
+    칸트 윤리학의 핵심 개념: <b>정언 명령(Categorical Imperative)</b>
+    </div>
+    <table class="comp-table" style="margin-top:8px">
+    <tr><th>구분</th><th class="th-blue">정언 명령</th><th class="th-green">가언 명령</th></tr>
+    <tr><td><b>형식</b></td><td>"~해라" (조건 없음)</td><td>"~하고 싶다면, ~해라"</td></tr>
+    <tr><td><b>초점</b></td><td>선한 의지·동기</td><td>목적·결과</td></tr>
+    <tr><td><b>예시</b></td><td>"거짓말하지 말라"<br>"살인하지 말라"</td><td>"성공하고 싶다면<br>열심히 공부해라"</td></tr>
+    <tr><td><b>특징</b></td><td>절대적·보편적 의무</td><td>조건부 명령</td></tr>
+    </table>
+    <ul class="pts" style="margin-top:8px">
+    <li>강의를 공부 자체가 좋아서 듣는다 → <b>정언 명령</b>에 따른 행동</li>
+    <li>기말고사 잘 보려고 듣는다 → <b>가언 명령</b>에 따른 행동</li>
+    </ul>` },
+
+    { icon: "👆", title: "칸트의 두 가지 정언명령", html: `
+    <div class="hbox hbox-blue">
+    <b>첫 번째 정언명령</b><br>
+    "내 행동 원칙이 보편적인 준칙에 따라,즉 보편적으로 모든 사람들이 동의할 수 있는 방식으로 행위하라."
+    </div>
+    <div class="hbox hbox-green" style="margin-top:8px">
+    <b>두 번째 정언명령</b><br>
+    "인간을 항상 목적으로 대하고,결코 한낱 수단으로 대하지 말아라."
+    </div>
+    <ul class="pts" style="margin-top:8px">
+    <li>친구를 이용하여 이득을 취하려는 마음으로 잘 대해주는 것 → <b>수단</b>으로 대하는 것</li>
+    <li>친구 자체가 좋아서 잘 대하는 것 → <b>목적</b>으로 대하는 것</li>
+    </ul>` },
+
+    { icon: "⚠️", title: "의무론, 괜찮은가? — 칸트의 딜레마", html: `
+    <div class="hbox hbox-red">
+    친구가 살인자를 피해 내 집에 숨어 있다<br>
+    흉기를 든 살인자가 <b>"그 자식 어디 있어?"</b>라고 묻는다
+    </div>
+    <ul class="pts" style="margin-top:8px">
+    <li>칸트의 정언명령("거짓말하지 말아라")을 따르면 → 친구의 <b>죽음</b></li>
+    <li>칸트는 결과를 고려하지 말고 <b>"거짓말을 하지 말라"</b>와 같은 <b>정언명령</b>을 따라야 한다고 말한다</li>
+    </ul>
+    <ul class="pts red" style="margin-top:4px">
+    <li>→ <b>결과를 고려하지 않고 행위하는 것이 정말 괜찮은가?</b></li>
+    <li>→ 사회복지 현장에서 내 선택의 결과가 대상에게 미치는 영향을 무시할 수 있는가?</li>
+    <li>→ 의무론만으로도 현장의 윤리적 판단에 한계가 있음</li>
+    </ul>` },
+
+    { icon: "📂", title: "4. 윤리학과 사회윤리의 가치", html: `
+    <div class="hbox hbox-purple">
+    목적론과 의무론 각각의 한계 → <b>자유·평등·정의</b>라는 사회윤리의 핵심 가치가 토대가 된다.
+    </div>` },
+
+    { icon: "🔄", title: "목적론 + 의무론 — 각각의 한계", html: `
+    <table class="comp-table">
+    <tr><th>윤리관</th><th class="th-red">한계</th></tr>
+    <tr><td><b>목적론(공리주의)</b></td><td>결과만으로 판단할 때 발생하는 문제 (트롤리 딜레마)</td></tr>
+    <tr><td><b>의무론(칸트)</b></td><td>결과를 고려하지 않을 때 발생하는 문제 (살인자 딜레마)</td></tr>
+    </table>
+    <div class="hbox hbox-yellow" style="margin-top:8px">
+    ★ <b>두 관점을 각각의 구체적인 사례와 상황 속에서 적당한 접점을 찾아나가는 과정 자체가 윤리적 행위의 본질</b>
+    </div>` },
+
+    { icon: "🏛️", title: "사회복지 실천의 3대 핵심 사회윤리 가치", html: `
+    <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin:10px 0;flex-wrap:wrap">
+      <span class="badge badge-gray" style="padding:6px 12px">결과</span>
+      <span class="badge badge-blue" style="padding:6px 12px">개인윤리</span>
+      <span class="badge badge-gray" style="padding:6px 12px">동기</span>
+    </div>
+    <div style="text-align:center;font-size:12px;color:var(--muted);margin-bottom:8px">↓ 토대</div>
+    <div class="hbox hbox-purple" style="text-align:center; width:50%; margin:0 auto;">
+    <b>[사회윤리]</b><br>자유 · 평등 · 정의
+    </div>
+    <table class="comp-table" style="margin-top:8px">
+    <tr><th>핵심가치</th><th class="th-blue">사회복지실천</th><th>관련 강</th></tr>
+    <tr><td><b>자유</b></td><td>인간의 자유로운 삶 — 억압받지 않는 삶이란 무엇인가</td><td>7강</td></tr>
+    <tr><td><b>평등</b></td><td>시민의 평등한 관계 — 전문가와 대상이 동등한 시민으로 만남</td><td>8강</td></tr>
+    <tr><td><b>정의</b></td><td>정의로운 분배의 공동체 — 한정된 자원을 어떻게 나눌 것인가</td><td>9강</td></tr>
+    </table>` },
+
+    { icon: "📝", title: "개인윤리 의무들 (복습)", html: `
+    <table class="comp-table">
+    <tr><th>의무</th><th class="th-blue">내용</th></tr>
+    <tr><td><b>자기결정권 존중</b></td><td>클라이언트의 자율성을 보장해야 할 의무</td></tr>
+    <tr><td><b>정보 제공 의무</b></td><td>알 권리에 따라 충분한 정보를 제공해야 할 의무</td></tr>
+    <tr><td><b>비밀보장 의무</b></td><td>상담 내용·개인 신상에 대한 비밀을 보장해야 할 의무</td></tr>
+    </table>
+    <div class="hbox hbox-yellow" style="margin-top:8px">
+    ★ 개인 차원의 윤리적 의무 + <b>자유·평등·정의의 사회 윤리 핵심 가치</b>를 함께 고려할 때 사회복지 실천이 이루어질 수 있다
+    </div>` },
+
+    { icon: "✅", title: "6강 핵심 요약", html: `
+    <ul class="star-list">
+    <li><b>윤리(ethos)</b>: 공동체의 습관·관습 + 인간의 품성·마음가짐</li>
+    <li><b>윤리학</b>: "옳음"에 대한 학문 — 올바른 행동·좋은 삶을 탐구</li>
+    <li>윤리학의 두 전통: <b>목적론(결과·목적)</b> vs <b>의무론(동기·의무)</b></li>
+    <li><b>아리스토텔레스</b>: 인간의 최고 목적 = 행복(eudaimonia), 모든 존재는 목적을 가짐</li>
+    <li><b>벤담(공리주의)</b>: 선 = 쾌락·행복, 도덕의 최고 법칙 = 쾌락 총량 > 고통 총량</li>
+    <li><b>J.S. 밀</b>: 쾌락의 양뿐 아니라 <b>질</b>도 중요 — 질적 공리주의</li>
+    <li>공리주의 = <b>결과주의</b> — 동기보다 결과로 옳고 그름 평가</li>
+    <li><b>트롤리 딜레마</b>: 결과만으로 판단하는 공리주의의 한계를 보여줌</li>
+    <li><b>칸트(의무론)</b>: 절대적·보편적 도덕 법칙 존재, 행위의 동기가 중요, 목적이 수단을 정당화할 수 없음</li>
+    <li>칸트의 3대 비판서: <b>순수이성</b>(알기) / <b>실천이성</b>(행하기, 윤리학) / <b>판단력</b>(바라기)</li>
+    <li><b>정언명령</b>: 무조건 따라야 할 도덕 법칙 (보편적 준칙에 따라 행위하라 / 인간을 목적으로 대하라)</li>
+    <li><b>가언명령</b>: 특정 목적 달성을 위한 조건부 명령 (~하고 싶다면 ~해라)</li>
+    <li>의무론의 한계: 결과를 전혀 고려하지 않는 것의 문제 (살인자 딜레마)</li>
+    <li>사회복지 실천의 3대 핵심 사회윤리 가치: <b>자유(7강) · 평등(8강) · 정의(9강)</b></li>
+    </ul>` },
+
+  ]
+},
+
+{ num: "7강", name: "사회복지와 자유",
+  icon: "🗽",
+  cards: [
+
+    { icon: "📂", title: "1. 자유의 기본 의미", html: `
+    <div class="hbox hbox-blue">핵심 질문: <b>나는 언제 자유롭다고 느끼는가?</b></div>
+    <ul class="pts">
+      <li>하고 싶은 것을 할 때</li>
+      <li>하고 싶은 말을 할 때</li>
+      <li>가고 싶은 곳을 갈 때</li>
+      <li>아무것도 하고 있지 않을 때 (일하고 있지 않을 때)</li>
+      <li>혼자 있을 때 — 누구의 간섭도 받지 않을 때</li>
+    </ul>
+    <div class="hbox hbox-yellow">💡 같은 상황을 뒤집으면 <b>비자유의 상태</b>가 됨</div>` },
+
+{ icon: "⛓️", title: "비자유 → 자유의 의미 (한 쌍으로 이해)", html: `
+    <div class="hbox hbox-yellow">💡 <b>비자유를 뒤집으면 자유가 된다</b> — 노예를 예시로 한 쌍으로 이해할 것</div>
+    <table class="comp-table">
+      <tr><th style="white-space:nowrap">비자유</th><th class="th-red">내용</th><th style="width:20px">↔</th><th style="white-space:nowrap" class="th-blue">자유</th><th class="th-green">핵심 의미</th><th>내용</th></tr>
+      <tr><td style="white-space:nowrap"><b>강제</b></td><td>억지로 일한다<br>(하기 싫은 것을 해야 함)</td><td>→</td><td style="white-space:nowrap"><b>소극적 자유</b><br>(Freedom from)</td><td><b>무언가로부터의 자유</b></td><td>외부적 제약·구속의 부재 / 개인적 선택의 자유</td></tr>
+      <tr><td style="white-space:nowrap"><b>억압</b></td><td>하고 싶은 것을<br>하지 못한다</td><td>→</td><td style="white-space:nowrap"><b>적극적 자유</b><br>(Freedom to)</td><td><b>무언가를 할 수 있는 자유</b></td><td>자율적 지배와 자아실현 / 인간으로서의 가능성 계발</td></tr>
+    </table>
+    <div class="hbox hbox-red">"흑인은 그냥 흑인일 뿐인데, 특정한 <b>관계</b> 속에서 노예가 된다."<br>⭐ 노예는 소극적 자유도, 적극적 자유도 <b>모두</b> 갖지 못한 상태</div>
+    <div class="hbox hbox-blue">⚠️ 소극적·적극적 자유 모두 <b>노예 개인의 자유에 국한된</b> 이야기<br>→ "자유가 이런 개인의 문제에만 국한되는 것인가?" 라는 질문이 생김<br>→ 이 질문이 <b>개인적 자유에서 사회적 자유로 확장</b>되는 전환점</div>` },
+
+    { icon: "⚖️", title: "개인적 자유 vs 사회적 자유 비교", html: `
+    <div class="hbox hbox-yellow">💡 <b>노예제가 사라져도 강제·억압의 관계가 남아있다면?</b><br>→ 노예가 해방되어 악덕 사장이 되어도, 착취·억압의 관계 자체가 사라지지 않으면 진정한 자유가 아님</div>
+    <table class="comp-table">
+      <tr><th>구분</th><th class="th-blue">개인적 자유</th><th class="th-green">사회적 자유</th></tr>
+      <tr><td><b>정의</b></td><td>개인 외부의 강제·억압이 없는 상태</td><td>강제·억압의 사회적 관계가 없는 상태</td></tr>
+      <tr><td><b>인간</b></td><td>원자적 개인</td><td>관계 속 개인</td></tr>
+      <tr><td><b>원리</b></td><td>자기결정 / 자율성</td><td>연대 / 상호의존</td></tr>
+      <tr><td><b>장해물</b></td><td>타자 / 국가(정부)</td><td>부당한 질서 (주로 시장)</td></tr>
+      <tr><td><b>침해방식</b></td><td>행위와 발언에 간섭</td><td>착취와 소외</td></tr>
+      <tr><td><b>권리</b></td><td>자유권, (약한) 정치권</td><td>자유권, (강한) 정치권, 사회권</td></tr>
+    </table>` },
+
+  { icon: "📂", title: "2. 개인적 자유 — 근대적 개인의 등장", html: `
+      <div class="hbox hbox-blue">개인적 자유는 인간을 <b>원자적 개인</b>으로 보는 데서 출발</div>
+      <div class="sub">근대적 개인을 형성한 세 가지 사상적 기반</div>
+      <table class="comp-table">
+        <tr><th>학자</th><th class="th-blue">핵심 개념</th><th class="th-green">내용</th></tr>
+        <tr><td><b>데카르트</b></td><td>Cogito Ergo Sum</td><td>"나는 생각한다, 고로 나는 존재한다" — 사유의 주체가 신에서 인간으로</td></tr>
+        <tr><td><b>칸트</b></td><td>도덕적 자율성</td><td>이성적 존재로서 스스로 도덕 법칙을 세우는 인간</td></tr>
+        <tr><td><b>아담 스미스</b></td><td>이기심</td><td>이기적 개인들의 상호작용(협동과 경쟁)이 사회 질서·경제 성장·사회복지를 이끔</td></tr>
+      </table>
+      <div class="hbox hbox-yellow">💡 근대적 개인 = <b>데카르트</b>(사고의 주체) + <b>칸트</b>(도덕적 주체) + <b>아담 스미스</b>(경제적 주체) 세 가지가 합쳐진 존재 → 생각을 자유롭게 하고, 스스로 법칙을 세우고, 시장에서 자유롭게 경쟁할 수 있을 때 자유롭다</div>` },
+   
+{ icon: "🏛️", title: "국가의 역할 — 개인적 자유체계(최소한의 역할)", html: `
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0">
+      <div style="background:var(--c1l);border:1.5px solid var(--c1);border-radius:10px;padding:12px 8px;text-align:center">
+        <div style="font-weight:700;color:var(--c1);font-size:14px">계약 강제</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:4px">개인 간 계약이<br>지켜지도록 강제</div>
+      </div>
+      <div style="background:var(--c2l);border:1.5px solid var(--c2);border-radius:10px;padding:12px 8px;text-align:center">
+        <div style="font-weight:700;color:var(--c2);font-size:14px">질서(법) 유지</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:4px">법 집행으로 사회 평화 유지</div>
+      </div>
+      <div style="background:var(--c4l);border:1.5px solid var(--c4);border-radius:10px;padding:12px 8px;text-align:center">
+        <div style="font-weight:700;color:var(--c4);font-size:14px">야경꾼 역할</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:4px">국가 간섭을 줄이고 최소 기능만 수행</div>
+      </div>
+      <div style="background:var(--c5l);border:1.5px solid var(--c5);border-radius:10px;padding:12px 8px;text-align:center">
+        <div style="font-weight:700;color:var(--c5);font-size:14px">외적 방어</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:4px">외부 침략으로부터 시장과 경쟁 체제를 보호</div>
+      </div>
+    </div>
+    <div class="hbox hbox-yellow"><b>"국가는 필요악이다"</b> — 토마스 페인 (Thomas Paine)</div>
+    <div class="sub">개인적 자유의 권리 구성</div>
+    <table class="comp-table">
+      <tr><th>권리</th><th>내용</th></tr>
+      <tr><td><b>자유권</b></td><td>국가 간섭 없이 개인의 자유를 보장받는 권리</td></tr>
+      <tr><td><b>(제도적) 정치권</b></td><td>선거·투표·정당 참여 등</td></tr>
+    </table>
+    <div class="hbox hbox-purple">※ 개인적 자유만으로는 부족 → <b>사회적 자유</b>의 필요성으로 이어짐</div>` },
+
+    { icon: "📂", title: "3. 사회적 자유 — 근대의 자유의 역설", html: `
+    <div class="flow">
+      <span class="flow-item">프랑스 대혁명</span>
+      <span class="flow-arrow">▶</span>
+      <span class="flow-item">신분제 철폐</span>
+      <span class="flow-arrow">▶</span>
+      <span class="flow-item">형식적 자유 획득</span>
+    </div>
+    <div class="hbox hbox-red"><b>정말 모두가 자유로워졌는가?</b><br>
+      • <b>계약의 자유?</b> → 그만두면 굶어 죽을 처지 = <b>굶어 죽을 자유</b>에 불과<br>
+      • <b>직업선택의 자유?</b> → 글자도 못 배우고 아동노동에 내몰렸다면 의미 없음
+    </div>
+    <div class="hbox hbox-yellow"><b>카를 마르크스</b>〈유대인 문제에 관하여〉<br>
+      "인간은 종교로부터 해방된 것이 아니라 종교의 자유를 갖게 되었다.<br>
+      인간은 소유로부터 해방되지 않았다. 그는 소유의 자유를 가지게 되었다."<br>
+      인간은 상업의 이기주의로부터 해방되지 않았다. 그는 상업의 자유를 가지게 되었다.<br>
+      → <b>형식적 자유는 있지만 진정한 해방은 아님</b>
+    </div>` },
+
+    { icon: "⚙️", title: "자본주의와 사회적 반자유", html: `
+    <table class="comp-table">
+      <tr><th>개념</th><th class="th-red">정의</th></tr>
+      <tr><td><b>착취</b></td><td>노동의 결실을 타인이 소유 — <b>노동시간과 노동강도</b>를 올리는 방식</td></tr>
+      <tr><td><b>사물화</b></td><td>인간을 노동력이라는 상품으로 여김 — <b>인간 = 노동력 = 상품</b></td></tr>
+      <tr><td><b>소외</b></td><td>인간이 자신의 노동생산물·노동과정·동료인간·인간본성으로부터 소외 되는것</td></tr>
+    </table>
+        <div class="sub">소외의 유형</div>
+    <table class="comp-table">
+      <tr><th>소외 유형</th><th class="th-red">구체적 내용</th></tr>
+      <tr><td><b>노동 생산물</b>으로부터의 소외</td><td>내가 지은 아파트인데 거기서 살 수 없음</td></tr>
+      <tr><td><b>노동 과정</b>으로부터의 소외</td><td>무엇을, 어떻게, 얼마나 만들지 노동자가 결정하지 못함</td></tr>
+      <tr><td><b>동료 인간</b>으로부터의 소외</td><td>동료는 함께하는 사람이 아니라 경쟁자</td></tr>
+      <tr><td><b>인간 본성</b>으로부터의 소외</td><td>회사에서 삶의 의미를 찾지 못하고 퇴근 이후에만 의미를 찾음</td></tr>
+    </table>
+    <div class="hbox hbox-yellow">🎬 <b>찰리 채플린 〈모던타임즈〉(1936):</b> "공장에서는 기계가 인간을 이용한다."<br>
+      →기계의 속도를 조종하는 것은 사장의 지시를 받은 중간 관리자 → 노동자가 자유롭게 살수 있느냐 없느냐는 자본가이 관계에 놓여 있는 문제</b><br><br>
+    🏭 <b>한국의 UPH 시스템</b>: 시간당 처리 단위 실시간 측정 → 수치 하락 시 즉각 통제 → <b>현대판 모던타임즈</b></div>` },
+
+    { icon: "💰", title: "돈과 자유의 관계", html: `
+    <div class="sub">1) 돈이 많다고 자유로워질 수 있을까?</div>
+    <ul class="pts red">
+      <li><b>많이 소비하려면 많이 노동해야 함</b> → 오히려 더 부자유</li>
+    </ul>
+    <div class="sub">2) 노동할 필요가 없으면 자유로워질까?</div>
+    <ul class="pts red">
+      <li>의미 있는 인간적 관계가 사라짐</li>
+      <li><b>활동적 삶(vita activa)의 중지</b> → 진정한 자유가 아님</li>
+    </ul>
+    <div class="hbox hbox-blue">💡 노동·작업·행위 : 내가 무언갈 해야지만 인간과 인간 사이의 관계가 형성된다.</div>` },
+
+    { icon: "💀", title: "네크로필리아(necrophilia)", html: `
+    <div style="display:flex;flex-direction:column;align-items:center;gap:4px;margin:12px 0">
+      <div style="width:20%;background:#1d4ed8;border-radius:6px;padding:8px 0;text-align:center;font-weight:900;color:#fff;position:relative">
+        物神
+        <span style="position:absolute;left:105%;top:50%;transform:translateY(-50%);white-space:nowrap;color:#1d4ed8;font-weight:700;font-size:0.85em">- - 돈</span>
+      </div>
+      <div style="width:30%;background:#93c5fd;border-radius:6px;padding:10px 0;text-align:center;font-weight:700;color:#1e40af">자본가</div>
+      <div style="width:50%;background:#bfdbfe;border-radius:6px;padding:10px 0;text-align:center;font-weight:700;color:#1e40af">정치가</div>
+      <div style="width:70%;background:#dbeafe;border-radius:6px;padding:12px 0;text-align:center;font-weight:700;color:#1e40af">노동자</div>
+    </div>
+    <div class="hbox hbox-blue">
+      자본가나 노동자나 인간적 소외는 동일하게 느낀다.<br>
+      모두가 죽어 있는 것(돈)을 사랑하는 네크로필리아(necrophilia, 시체애호가)가 된다.<br>
+      이러한 사회관계가 계속되는 한 인간은 진정으로 자유로울 수 없다.<br><br>
+      <b>• 네크로필리아:</b> (생명이 없는 돈을 사랑하는 인간)
+    </div>` },
+
+    { icon: "📂", title: "4. 사회복지실천과 자유", html: `
+    <table class="comp-table">
+      <tr><th>구분</th><th class="th-blue">개인적 자유를 위한 실천</th><th class="th-green">사회적 자유를 위한 실천</th></tr>
+      <tr><td><b>핵심 질문</b></td><td>어떻게 대상을 자유롭게 할까?</td><td>어떻게 함께 자유로워질 수 있을까?</td></tr>
+      <tr><td><b>목표</b></td><td>개인의 자원·능력·역량 증진</td><td>관계와 구조의 변화</td></tr>
+      <tr><td><b>핵심</b></td><td>자기결정과 자율성</td><td>권리와 권력</td></tr>
+      <tr><td><b>방식</b></td><td>효율적인 전달 및 배분</td><td>동등한 대화와 참여</td></tr>
+    </table>` },
+
+    { icon: "🔍", title: "자유를 위한 사회복지실천 1: 비판적 세상읽기", html: `
+    <div class="hbox hbox-yellow">"자신이 자유롭다고 오해하는 사람보다 더 절망적으로 노예 상태에 있는 사람은 없다."<br>— <b>괴테</b> (Goethe, 1749-1832)</div>
+    <div class="sub">우리가 사는 세상의 부당한 질서의 특징</div>
+    <table class="comp-table">
+      <tr><th>문제</th><th class="th-red">내용</th></tr>
+      <tr><td>① <b>자유의 공포</b></td><td>지배 질서에 저항하거나 스스로 윤리 법칙을 세우는 것이 두렵고 부담됨</td></tr>
+      <tr><td>② <b>침묵의 문화</b></td><td>자유의 공포로 인해 공동체 전체에 침묵이 확산됨</td></tr>
+      <tr><td>③ <b>수평적 폭력</b></td><td>구조를 바꾸는 대신, 옆의 동료·약자에게 폭력을 행사하는 방식으로 분출</td></tr>
+    </table>
+    <div class="hbox hbox-blue">→ 끊임없이 세상의 부당한 질서에 대해 <b>질문하고 성찰</b>해야 함</div>` },
+
+    { icon: "🌹", title: "자유를 위한 사회복지실천 2: 함께 세상만들기", html: `
+    <div class="hbox hbox-green"><b>인간다움 = 자유</b></div>
+    <table class="comp-table">
+      <tr><th>요소</th><th class="th-blue">내용</th></tr>
+      <tr><td>🍞 <b>빵</b></td><td>생존을 위한 물질적 필요 — 소득, 교육, 의료, 주거, 고용</td></tr>
+      <tr><td>🌹 <b>장미</b></td><td>의미와 실존을 위한 필요 — 존엄, 존중, 인정</td></tr>
+      <tr><td>✊ <b>권력</b></td><td>빵과 장미는 그냥 주어지는 것이 아니라 <b>권력을 통해 쟁취</b>해야 함</td></tr>
+    </table>
+    <div class="flow">
+      <span class="flow-item">🍞 빵 (생존·물질)</span>
+      <span class="flow-arrow">+</span>
+      <span class="flow-item">🌹 장미 (의미·존엄)</span>
+      <span class="flow-arrow">▶</span>
+      <span class="flow-item">✊ 권력으로 쟁취</span>
+      <span class="flow-arrow">▶</span>
+      <span class="flow-item">인간다움 = 자유</span>
+    </div>` },
+
+    { icon: "✅", title: "7강 핵심 요약", html: `
+    <ul class="star-list">
+      <li>비자유의 두 상태: <b>강제</b>(하기 싫은 것 강요) + <b>억압</b>(하고 싶은 것 못 함)</li>
+      <li>소극적 자유: <b>무언가로부터의 자유</b> (외부 제약·구속의 부재)</li>
+      <li>적극적 자유: <b>무언가를 할 수 있는 자유</b> (자율적 지배·자아실현)</li>
+      <li>개인적 자유: 원자적 개인, 자기결정·자율성, 장해물=타자·국가, 자유권+(약한)정치권</li>
+      <li>사회적 자유: 관계 속 개인, 연대·상호의존, 장해물=부당한 질서(시장), 사회권 포함</li>
+      <li>계약의 자유·직업선택의 자유 = <b>형식적 자유</b>일 뿐. 진정한 해방이 아님 (마르크스 비판)</li>
+      <li>자본주의 반자유 3가지: <b>착취·사물화·소외</b></li>
+      <li>소외의 4가지: 노동생산물 / 노동과정 / 동료인간 / 인간본성으로부터의 소외</li>
+      <li>네크로필리아: 죽은 것(돈)을 사랑하는 인간 — 자본가도 노동자도 동일하게 소외됨</li>
+      <li>자유를 위한 사회복지실천 1: <b>비판적 세상읽기</b> (자유의 공포·침묵의 문화·수평적 폭력 극복)</li>
+      <li>자유를 위한 사회복지실천 2: <b>함께 세상만들기</b> (빵+장미를 권력으로 쟁취)</li>
+    </ul>` },
+
+  ]
+},
+{ num: "8강", name: "사회복지와 평등", icon: "⚖️",
+  cards: [
+    { icon: "❓", title: "핵심 질문 — 평등이란 무엇인가?",
+      html: `
+        <div class="hbox hbox-blue">
+          <strong>핵심 질문: 평등하다는 것은 도대체 무엇을 의미하는가?</strong>
+        </div>
+        <ul class="pts" style="margin:8px 0">
+          <li>평등이라는 말은 사람마다 서로 다르게 쓰이고 있음</li>
+          <li>"모든 인간은 평등하다"는 말은 관점에 따라 다양하게 해석됨</li>
+        </ul>
+        <table class="comp-table">
+          <tr><th>관점</th><th class="th-blue">내용</th></tr>
+          <tr><td><strong>자연적 사실</strong></td><td>인간은 신체·정신적으로 서로 다르게 태어남 → 자연적 불평등</td></tr>
+          <tr><td><strong>규범적 주장</strong></td><td>인간은 평등해야만 한다 → 당위로서의 평등</td></tr>
+          <tr><td><strong>사회적 현실</strong></td><td>부잣집·가난한 집 등 출생 환경이 다름 → 현실적 불평등</td></tr>
+          <tr><td><strong>사회적 지향</strong></td><td>시민을 다루는 방식에서는 평등해야 함 → 사회적 목표로서의 평등</td></tr>
+        </table>
+        <div class="hbox hbox-yellow" style="margin-top:10px">
+          <strong>예시</strong>: 여성의 정치 참여 배제 — 18~20세기 초에 "여성의 뇌가 남성보다 작다"는 자연적 사실을 근거로 정치 참여를 부정하거나, "역사적 위인은 모두 남성"이라는 사회적 현실을 근거로 불평등을 주장했던 사례
+        </div>`
+    },
+    { icon: "🌐", title: "사회적 구성물로서의 평등",
+      html: `
+        <div class="hbox hbox-purple" style="margin-bottom:10px">
+          인간은 특정한 자연과 역사적 현실의 규율 속에 살아가지만,<br>
+          동시에 자연을 새롭게 해석하고 역사를 창조하는 능력도 가지고 있다.<br>
+          인간의 (불)평등 문제도 <strong>해석과 창조의 대상</strong>
+        </div>
+        <div class="flow" style="margin-bottom:10px">
+          <span class="flow-item">세상(자연·역사)<br><small>[순응·규율]</small></span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">인간</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">세상(자연·역사)<br><small>[해석·창조]</small></span>
+        </div>
+        <ul class="pts purple">
+          <li>평등/불평등의 내용은 시대마다 달라짐 → <strong>사회적·정치적 구성물의 결과</strong></li>
+          <li>자연과학 법칙처럼 고정된 것이 아니라, 그 사회 구성원들의 생각과 권력 관계의 산물</li>
+        </ul>`
+    },
+    { icon: "📋", title: "평등의 대표적인 형태 4가지",
+      html: `
+        <table class="comp-table">
+          <tr><th>유형</th><th class="th-blue">내용</th></tr>
+          <tr><td><strong>법적 평등</strong></td><td>동일한 사건에는 동일한 처분 → 모든 인간은 <strong>법 앞에 평등</strong>. 귀족·왕의 특권 철폐에서 확립된 법치주의 원칙</td></tr>
+          <tr><td><strong>정치적 평등</strong></td><td>누구나 통치에 참여할 수 있는 평등한 권리 → 선거권·투표권(1인 1표)</td></tr>
+          <tr><td><strong>경제적 평등</strong></td><td>경제적 자산·소득의 불평등 완화 → 물질적 측면에서의 평등</td></tr>
+          <tr><td><strong>사회적 평등</strong></td><td>인종·종교·직업 등 고유성에 무관하게 <strong>시민으로서 평등한 관계 보장</strong> → 차별 금지</td></tr>
+        </table>`
+    },
+    { icon: "⚖️", title: "무엇을 평등하게 분배할 것인가? — 5가지 내용",
+      html: `
+        <table class="comp-table">
+          <tr><th>분배 내용</th><th class="th-blue">설명</th></tr>
+          <tr><td><strong>형식의 평등</strong></td><td>법적 절차·형식에서의 동등한 처우 (예: 변론권, 법적 조력, 1인 1표)</td></tr>
+          <tr><td><strong>기회의 평등</strong></td><td>인생의 동일한 출발선 보장</td></tr>
+          <tr><td><strong>조건의 평등</strong></td><td>출발선뿐 아니라 운동화·체력 등 조건까지 맞춰주는 평등</td></tr>
+          <tr><td><strong>결과의 평등</strong></td><td>개인의 선택·노력과 무관한 구조적 이유로 나쁜 결과가 생길 때 <strong>최소한의 인간적 생활 보장</strong></td></tr>
+          <tr><td><strong>★ 권력의 평등</strong></td><td>어떤 상황에서 어떤 평등이 중요한지를 <strong>결정할 수 있는 권력을 평등하게 나누는 것</strong> → 가장 핵심적</td></tr>
+        </table>
+        <div class="hbox hbox-yellow" style="margin-top:10px">
+          <strong>★ 핵심 정리</strong>: 결국 중요한 것은 기회냐 결과냐의 싸움보다, 그것을 <strong>결정하는 권력을 얼마나 평등하게 나누는가</strong>
+        </div>
+        <ul class="pts" style="margin-top:8px">
+          <li><strong>형식·기회의 평등</strong> 우세 → 자유주의·신자유주의 경쟁 사회</li>
+          <li><strong>조건·결과의 평등</strong> 우세 → 복지 국가 형태</li>
+          <li>두 가지를 모두 결정하는 것은 <strong>권력의 평등</strong> — 시민들의 동등한 목소리 참여</li>
+        </ul>`
+    },
+    { icon: "🏛️", title: "고대 — 자연적 불평등 (플라톤·아리스토텔레스)",
+      html: `
+        <div class="hbox hbox-blue">
+          "인간은 서로 다른 덕성/능력을 가지고 태어난다." - 플라톤·아리스토텔레스
+        </div>
+        <ul class="pts" style="margin:8px 0">
+          <li>인간은 태어나면서부터 서로 다른 능력을 가짐 → <strong>자연적 불평등</strong> 주장</li>
+          <li>더 탁월한 덕성을 가진 사람이 그렇지 못한 사람을 지배하는 것이 자연의 법칙</li>
+          <li><strong>자연적 불평등 → 자연적 권위 도출</strong></li>
+        </ul>
+        <div class="sub">플라톤의 이상국가</div>
+        <table class="comp-table">
+          <tr><th>덕성</th><th class="th-purple">계급</th></tr>
+          <tr><td><strong>지혜</strong></td><td>철학자</td></tr>
+          <tr><td><strong>용기</strong></td><td>전사(수호자)</td></tr>
+          <tr><td><strong>절제</strong></td><td>생산자</td></tr>
+          <tr><td><strong>정의</strong></td><td>각자 자기 일을 하면서 조화로울 때 정의로운 이상 국가가 됨</td></tr>
+        </table>
+        <ul class="pts purple" style="margin-top:8px">
+          <li>각자 자기 일을 하면서 조화를 이룰 때 <strong>정의로운 이상 국가</strong>가 됨</li>
+          <li>계급 간 이동 불가 → 철저히 <strong>불평등한 구조</strong></li>
+        </ul>`
+    },
+    { icon: "✝️", title: "중세 — 자연적 평등의 시작",
+      html: `
+        <div class="hbox hbox-green">
+          "모든 인간은 신의 형상대로 창조되었다."<br>"모두가 동등한 하나님의 자녀"
+        </div>
+        <ul class="pts green" style="margin-top:8px">
+          <li>기독교 문화 내에서 모든 인간이 신 앞에 평등하다는 관념 등장</li>
+          <li>신의 모습을 '왕은 많이, 가난한 자는 조금' 닮은 것이 아님 → <strong>동등하게</strong> 닮음</li>
+          <li><strong>자연적 평등의 시작</strong> — 그러나 현실은 엄격한 신분제(신 아래 신분)</li>
+          <li>이상적 평등과 현실적 불평등의 모순이 공존</li>
+        </ul>`
+    },
+    { icon: "🗽", title: "근대 — 평등한 인간과 시민",
+      html: `
+        <div class="hbox hbox-blue">"인간은 평등하게 태어난다"</div>
+        <div class="flow" style="margin:8px 0">
+          <span class="flow-item" style="background:var(--c1l);color:var(--c1)">자연적 평등<br><small>→ 평등한 인간</small></span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item" style="background:var(--c2l);color:var(--c2)">정치적 평등<br><small>→ 평등한 시민</small></span>
+        </div>
+        <table class="comp-table">
+          <tr><th>학자</th><th class="th-blue">주장</th></tr>
+          <tr><td><strong>토마스 홉스</strong> (1588~1679)</td><td>모든 인간은 죽음을 혐오한다 → 자연 상태에서의 평등</td></tr>
+          <tr><td><strong>존 로크</strong> (1632~1704)</td><td>모든 인간은 자연권을 '평등하게' 지닌다 (신체, 생각, 재산)</td></tr>
+          <tr><td><strong>루소</strong> (1712~1778)</td><td>인간은 자유롭게 태어났으나 모든 곳에서 사슬에 매여 있다</td></tr>
+        </table>
+        <div class="sub">프랑스 혁명과 평등 — 인간과 시민의 권리 선언</div>
+        <table class="comp-table">
+          <tr><th class="th-blue">인간</th><th class="th-green">시민</th></tr>
+          <tr><td>자연적 평등, 태어나면서부터 평등한 인간</td><td><strong>정치 공동체에서 시민권을 가지는 인간</strong></td></tr>
+        </table>
+        <div class="hbox hbox-yellow" style="margin-top:8px">
+          모든 인간은 평등 → 그러나 정치 참여에 평등한 권리를 가진 '시민'이 모든 '인간'은 아님<br>
+          (※ 재산 유무 등에 따라 프롤레타리아 등 빈곤층은 시민의 범주에서 제외됨)
+        </div>`
+    },
+    { icon: "📜", title: "평등한 시민권의 발전 — T. H. 마셜",
+      html: `
+        <table class="comp-table">
+          <tr><th>세기</th><th class="th-blue">시민권 유형</th><th class="th-green">내용</th></tr>
+          <tr><td><strong>18세기</strong></td><td>Civil rights<br>(공민권·자유권)</td><td>신체의 자유, 언론·종교의 자유, 재산권, 계약</td></tr>
+          <tr><td><strong>19세기</strong></td><td>Political rights<br>(정치권)</td><td>선거권·피선거권, 투표권 — 초기에는 재산 있는 남성에게만</td></tr>
+          <tr><td><strong>20세기</strong></td><td>Social rights<br>(사회권)</td><td>교육·의료·소득 등 인간다운 삶을 위한 사회적 권리</td></tr>
+        </table>
+        <ul class="pts" style="margin-top:8px">
+          <li>권리 확장의 흐름: <strong>남성 → 여성 → 흑인 → 모든 시민</strong>으로 점차 확대</li>
+          <li>19세기까지 여성·흑인은 정치적 참여에서 배제 → 투표권·참정권 운동을 통해 확대</li>
+        </ul>`
+    },
+    { icon: "🏛️", title: "소수파 보고서와 비어트리스 웹 — 국민 최저선",
+      html: `
+        <div class="hbox hbox-green">
+          "남녀 모두와 모든 계급에게 동일하게 개방된 문명화된 삶을 위한 <strong>국민 최저선(national minimum)</strong>을 확보해야 한다."<br>— 비어트리스 웹(1858~1943)
+        </div>
+        <ul class="pts green" style="margin-top:8px">
+          <li><strong>핵심</strong>: '모두에게', '모든 계급에게' → <strong>평등 사상</strong> 내포</li>
+          <li>평등의 내용 = <strong>국민 최저선</strong> — 인간다운 삶에 필요한 최소한을 누구에게나 평등하게 보장</li>
+          <li><strong>복지 국가의 출발</strong>에 평등 사상이 담겨 있음</li>
+        </ul>`
+    },
+    { icon: "📑", title: "베버리지 리포트와 복지국가의 시작",
+      html: `
+        <div class="hbox hbox-blue" style="margin-bottom:10px">
+          비어트리스 웹의 소수파 보고서를 계승 → <strong>더 구체적·체계적으로 발전</strong>
+        </div>
+        <table class="comp-table">
+          <tr><th>5대 사회악</th><th class="th-blue">대응 방안</th></tr>
+          <tr><td><strong>결핍 (WANT)</strong></td><td>소득</td></tr>
+          <tr><td><strong>질병 (DISEASE)</strong></td><td>의료</td></tr>
+          <tr><td><strong>무지 (IGNORANCE)</strong></td><td>교육</td></tr>
+          <tr><td><strong>불결 (SQUALOR)</strong></td><td>주거</td></tr>
+          <tr><td><strong>나태 (IDLENESS)</strong></td><td>고용</td></tr>
+        </table>
+        <ul class="pts" style="margin-top:8px">
+          <li><strong>5대 사회악 = 사회적 위험 → 사회·국가의 책임</strong></li>
+          <li>공동체 구성원 누구나 이러한 위험으로부터 보호받을 권리가 있음</li>
+          <li>비어트리스 웹의 평등 사상을 실질적 정책으로 발전시킨 것이 베버리지</li>
+        </ul>`
+    },
+    { icon: "📊", title: "복지국가 등장과 소유 분배의 변화 — 토마 피케티",
+      html: `
+        <div class="sub">1780~2020년 소유 분배 변화 (서유럽 기준)</div>
+        <table class="comp-table">
+          <tr><th>시기</th><th class="th-red">상위 10%의 몫</th><th class="th-blue">중위 40%의 몫</th><th class="th-green">하위 50%의 몫</th></tr>
+          <tr><td><strong>1780년대</strong><br><small>프랑스 혁명 전</small></td><td>80% 독점</td><td>15% 점유</td><td>0~2% 점유</td></tr>
+          <tr><td><strong>1940~1970년대</strong><br><small>복지국가 전성기</small></td><td>점차 감소</td><td>증가(40%)</td><td>소폭 증가</td></tr>
+          <tr><td><strong>1980년대 이후</strong><br><small>신자유주의</small></td><td>다시 증가</td><td>감소</td><td>다시 감소</td></tr>
+        </table>
+        <ul class="pts" style="margin-top:8px">
+          <li><strong>복지 국가 등장</strong> → 소유 분배 측면에서 <strong>좀 더 평등한 사회</strong>로 변화</li>
+          <li><strong>1980년대 이후 신자유주의</strong> (영국 대처, 미국 레이건) → 공기업 매각, 복지 예산 삭감 → <strong>다시 불평등 심화</strong></li>
+        </ul>
+        <div class="sub">복지 국가의 불평등 완화 경로 2가지</div>
+        <ul class="pts blue">
+          <li><strong>조세 정책</strong>: 고소득·고자산에 누진세 → 상위 10%의 소유 축소</li>
+          <li><strong>복지 정책</strong>: 무상 교육·의료 보험 등 → 간접적 소득 효과 + 세대 간 계층 이동 가능성</li>
+        </ul>`
+    },
+    { icon: "📖", title: "토마 피케티의 불평등론",
+      html: `
+        <div class="hbox hbox-purple">
+          "불평등은 무엇보다 사회적·역사적·정치적 구성물이라는 점이다. 똑같은 경제적·기술적 발전 단계일지라도 소유 체계와 경계의 체계, 사회 제도와 정치 제도, 조세 제도와 교육 제도를 만드는 방식은 크게 달라질 수 있다는 뜻이다. 이것은 정치적 선택들이기 때문이다. 여러 사회 집단 간의 권력 관계와 다양한 체계관 간의 권력관계에 의해 좌우되는 이 선택들은 사회와 시대에 따라 극도로 다른 양상을 보이는 불평등의 수준과 구조를 만들어낸다."<br>— 토마 피케티 (1971~ ), 『평등의 짧은 역사』
+        </div>
+        <ul class="pts purple" style="margin-top:8px">
+          <li>불평등은 경제 법칙이 아닌 <strong>정치적 선택</strong>의 결과</li>
+          <li>어떤 제도·세금·교육 체계를 만드느냐 → <strong>권력 관계에 의해 결정</strong></li>
+        </ul>`
+    },
+{ icon: "🔄", title: "복지국가와 불평등 완화",
+  html: `
+    <div style="display:grid;grid-template-columns:1fr 1fr auto;margin:10px 0 4px;gap:0">
+
+      <div style="grid-area:1/1/4/2;background:var(--c1l);border:2.5px solid var(--c1);border-radius:20px;padding:14px 10px;display:flex;flex-direction:column;align-items:center;gap:5px">
+        <div style="background:#fff;border-radius:30px;padding:8px 8px;font-weight:700;color:var(--c1);font-size:.86em;width:100%;text-align:center">시장에 따른 분배</div>
+        <div style="width:28px;height:28px;background:var(--c1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1em;flex-shrink:0">▼</div>
+        <div style="background:#fff;border-radius:30px;padding:8px 8px;font-weight:700;color:var(--c1);font-size:.86em;width:100%;text-align:center">불평등한 분배</div>
+      </div>
+
+      <div style="grid-area:1/2/2/3;min-height:38px"></div>
+
+      <div style="grid-area:2/2/3/3;display:flex;align-items:center;padding:0 0 0 6px">
+        <span style="color:var(--c1);font-size:.9em;flex-shrink:0">◂</span>
+        <span style="display:block;flex:1;height:0;border-top:1.5px dashed var(--c1)"></span>
+        <span style="font-size:.73em;line-height:1.3;padding-left:5px;flex-shrink:0">조세정책을<br>통한 개입</span>
+      </div>
+
+      <div style="grid-area:3/2/4/3;min-height:38px"></div>
+
+      <div style="grid-area:2/3/5/4;border-top:2px dashed var(--c1);border-right:2px dashed var(--c1);border-bottom:2px dashed var(--c1);border-radius:0 8px 8px 0;padding:4px 7px;display:flex;align-items:center;justify-content:center;margin-left:5px;min-width:46px">
+        <span style="font-size:.7em;font-weight:700;color:var(--c1);line-height:1.4;text-align:center">정부에<br>의한<br>(재)분배</span>
+      </div>
+
+      <div style="grid-area:4/1/5/2;text-align:center;font-size:1.5em;color:var(--c1);opacity:.3;line-height:1.6">↓</div>
+
+      <div style="grid-area:4/2/5/3;display:flex;align-items:center;padding:0 0 0 6px">
+        <span style="color:var(--c1);font-size:.9em;flex-shrink:0">◂</span>
+        <span style="display:block;flex:1;height:0;border-top:1.5px dashed var(--c1)"></span>
+        <span style="font-size:.73em;line-height:1.3;padding-left:5px;flex-shrink:0">복지정책을<br>통한 개입</span>
+      </div>
+
+      <div style="grid-area:5/1/6/2;padding-top:6px;text-align:center">
+        <span style="border:2.5px solid var(--c1);border-radius:8px;padding:6px 14px;font-weight:900;color:var(--c1);font-size:.9em;display:inline-block">｢ 불평등 완화 ｣</span>
+      </div>
+
+    </div>
+
+    <ul class="pts" style="margin-top:10px">
+      <li><strong>시장에 따른 분배</strong>: 시장에서 나의 노동을 팔아 임금을 받는 구조 → 노동력의 가치에 따라 임금이 달라짐</li>
+      <li><strong>① 조세 정책</strong>: 고소득(월급·월세 수입 등)에 누진세 부과 → 직접 개입</li>
+      <li><strong>② 복지 정책</strong>: 무상 교육, 전 국민 의료보험 등 → 간접적 소득 효과로 추가 개입</li>
+      <li>두 번의 개입 결과 시장 분배만 뒀을 때보다 불평등이 훨씬 줄어든다</li>
+      <li>피케티: "불평등은 사회적·역사적·정치적 구성물" — 정치적 선택으로 달라진다</li>
+    </ul>`
+},
+    
+    { icon: "🍞", title: "권리와 권력의 평등 — 빵과 장미",
+      html: `
+        <ul class="pts" style="margin-bottom:10px">
+          <li>기회의 평등이냐 결과의 평등이냐를 다투는 것보다, <strong>더 근본적인 것은 권리와 권력을 평등하게 나누는 것</strong></li>
+        </ul>
+        <table class="comp-table">
+          <tr><th>상징</th><th class="th-blue">의미</th></tr>
+          <tr><td>🍞 <strong>빵</strong></td><td>소득·교육·의료·주거·고용 → 생존·먹고사는 문제</td></tr>
+          <tr><td>🌹 <strong>장미</strong></td><td>빵을 <strong>권리로 요구하고 분배에 참여</strong>하는 것 → 존엄·존중·인정</td></tr>
+        </table>
+        <div class="hbox hbox-green" style="margin-top:10px">
+          빵만이 아니라 <strong>장미도 필요</strong> — 자선으로 받는 게 아니라 권리로 요구하고 참여하는 것이 진정한 평등
+        </div>`
+    },
+    { icon: "💬", title: "평등한 대화와 공동 성찰",
+      html: `
+        <ul class="pts blue">
+          <li>권리와 권력의 평등은 <strong>평등한 대화를 통한 공동 성찰</strong>을 통해 얻어짐</li>
+          <li>세상을 함께 읽고, 어떻게 바꿀지 같이 상상하는 과정 = <strong>권리와 권력을 평등하게 나누는 출발</strong></li>
+        </ul>`
+    },
+    { icon: "🏙️", title: "커뮤니티 센터 — 차·편·광",
+      html: `
+        <ul class="pts" style="margin-bottom:10px">
+          <li>케어 센터(care center)가 아닌 <strong>커뮤니티 센터(community center)</strong>에서 평등한 대화가 이루어짐</li>
+          <li><strong>차·편·광</strong> = 차이가 편안하게 드러나는 광장</li>
+        </ul>
+        <span class="sub-tit">👫 커뮤니티 센터에서 이루어지는 것</span>
+        <ul class="pts" style="margin-bottom:10px">
+          <li>배고프지 않는 공동체에 대한 상상</li>
+          <li>누구나 당당할 수 있는 공동체를 위한 참여</li>
+        </ul>
+        <div class="hbox hbox-green" style="margin-top:10px">
+          평등이라는 가치에 기초한 사회복지 실천 = 차이가 편안하게 드러나는 광장에서의 <strong>평등한 대화 + 공동 상상 + 참여</strong>
+        </div>`
+    },
+    { icon: "✅", title: "8강 핵심 요약",
+      html: `
+        <ul class="star-list">
+          <li><b>평등은 사회적·정치적 구성물</b> — 시대마다 그 사회가 만들어내는 해석과 창조의 결과</li>
+          <li><b>평등의 4형태</b>: 법적·정치적·경제적·사회적 평등</li>
+          <li><b>평등의 5내용</b>: 형식 → 기회 → 조건 → 결과 → 권력의 평등 (권력이 핵심)</li>
+          <li><b>평등의 역사</b>: 고대(자연적 불평등) → 중세(신 앞의 평등) → 근대(시민권·자연권) → 현대(사회권)</li>
+          <li><b>시민권 발전</b>: 공민권(18C) → 정치권(19C) → 사회권(20C)</li>
+          <li><b>비어트리스 웹:</b> 국민 최저선(national minimum) — 복지 국가의 평등 사상적 출발</li>
+          <li>베버리지 5대 사회악: <b>결핍·질병·무지·불결·나태</b> → 소득·의료·교육·주거·고용</li>
+          <li>복지 국가 등장 → 소유 불평등 완화 / 신자유주의(1980~) → 불평등 재심화</li>
+          <li>잔여적 복지국가(기회의 평등·시혜) vs 제도적 복지국가(조건·결과의 평등·권리)</li>
+          <li><b>사회복지 실천</b>: 빵(생존) + 장미(존엄) — 자선이 아닌 권리로 요구하고 분배에 참여</li>
+          <li><b>차·편·광</b> = 차이가 편안하게 드러나는 광장 → 평등한 대화와 공동 성찰의 장</li>
+          <li><b>사회적 우정의 윤리</b> = 호의 + 평등 + 충분한 대화 + 공동체 지향 → 사회복지 실천의 핵심</li>
+        </ul>`
+    },
+  ]
+},
+{ num: "9강", name: "사회복지와 정의", icon: "⚖️",
+  cards: [
+    { icon: "📂", title: "1. 정의의 기본 의미", html: `
+      <div class="hbox hbox-blue"><strong>정의(justice) = "옳음(올바름)"</strong><br>특히 <strong>보상과 처벌의 배분</strong>에 관한 도덕적 판단</div>
+    ` },
+    { icon: "⚖️", title: "정의(Justice)란 무엇인가?", html: `
+      <ul class="pts">
+        <li>무언가를 잘했으면 합당한 보상을, 잘못했으면 합당한 처벌을</li>
+        <li>정의로운 사람 = 올바른 사람</li>
+        <li>정의로운 행위 = 올바른 행위</li>
+        <li>정의로운 사회 = 올바른 사회</li>
+        <li>영장류 실험 — 원숭이도 같은 작업에 다른 보상이 오면 분노 → 올바름에 대한 인식은 인류 역사의 시작부터 존재</li>
+      </ul>
+    ` },
+    { icon: "🗡️", title: "정의의 여신 — Iustitia", html: `
+      <table class="comp-table">
+        <tr><th>상징</th><th class="th-blue">의미</th></tr>
+        <tr><td>칼</td><td>엄격함</td></tr>
+        <tr><td>저울</td><td>형평·공평·공정</td></tr>
+        <tr><td>안대</td><td>편견 없이 공정하게 판단 (친소 관계에 흔들리지 않음)</td></tr>
+      </table>
+      <ul class="pts" style="margin-top:8px">
+        <li>라틴어 Iustitia → 영어 Justice로 변형</li>
+        <li>유스티아누스 1세(527~565): "정의란, 각자에게 마땅히 받아야 할 것을 주는 것이다."</li>
+        <li>정의는 <strong>법(jus = law)</strong>과 <strong>권리(jus = right)</strong> 두 가지 의미 모두 포함</li>
+      </ul>
+    ` },
+    { icon: "❓", title: "★ 정의의 핵심 질문", html: `
+      <div class="hbox hbox-yellow"><strong>누가, 무엇을, 어떤 기준에 따라 가질 것인가?</strong></div>
+    ` },
+    { icon: "🔍", title: "★ Concept(개념) vs. Conception(관점)", html: `
+      <table class="comp-table">
+        <tr><th>구분</th><th class="th-blue">내용</th><th>예시</th></tr>
+        <tr><td><strong>Concept (개념)</strong></td><td>정의 그 자체의 의미</td><td>정의 = "옳음" → 누구나 동의</td></tr>
+        <tr><td><strong>Conception (관점)</strong></td><td>정의에 대한 견해</td><td>"무엇이 옳은가?" → 사람마다 다름</td></tr>
+      </table>
+      <ul class="pts" style="margin-top:8px">
+        <li>개념: "사회복지는 위험에 대응하는 것"</li>
+        <li>관점: "불쌍한 사람 도와주는 것" vs. "불쌍한 사람이 생기지 않는 공동체를 만드는 것"</li>
+      </ul>
+      <div class="hbox hbox-yellow" style="margin-top:8px">정의의 관점(정의관) 두 가지 대표적 견해<br>① <strong>자격(merit)에 따라</strong> 나누는 것이 올바르다<br>② <strong>필요(needs)에 따라</strong> 나누는 것이 올바르다<br>→ 둘 중 뭐가 옳은지는 <strong>맥락</strong>을 봐야 판단 가능</div>
+    ` },
+    { icon: "📂", title: "2. 자격에 따라 나누자", html: `
+      <div class="hbox hbox-blue">나의 <strong>능력</strong>과 <strong>노력</strong>에 따라 무언가를 가질 자격이 생긴다</div>
+      <ul class="pts" style="margin-top:8px">
+        <li>열심히 일한 사람이 가져야 한다</li>
+        <li>기여한 사람이 가져야 한다</li>
+        <li>뛰어난 사람이 가져야 한다</li>
+      </ul>
+      <div class="sub">자격의 논리 구조</div>
+      <div class="flow">
+        <span class="flow-item">나의 신체</span>
+        <span class="flow-arrow">▶</span>
+        <span class="flow-item">나의 노동 투입</span>
+        <span class="flow-arrow">▶</span>
+        <span class="flow-item">나의 능력 + 노력</span>
+        <span class="flow-arrow">▶</span>
+        <span class="flow-item">자격(merit) 발생</span>
+      </div>
+    ` },
+    { icon: "🔑", title: "★ 존 로크(John Locke, 1632~1704)의 소유권론", html: `
+      <ul class="pts">
+        <li>인간은 태어날 때 아무것도 가지고 태어나지 않음</li>
+        <li><strong>자기소유(신체)</strong> → 노동 투입 → <strong>사물에 대한 소유 발생</strong></li>
+        <li>내 신체는 오로지 나의 것 → 내 신체를 통한 노동의 결과도 내 것</li>
+        <li>이 논리가 자격에 따라 나누는 것이 올바르다는 주장의 철학적 기반</li>
+      </ul>
+    ` },
+    { icon: "🏛️", title: "★ 로버트 노직(Robert Nozick, 1938~2002)의 자격 이론", html: `
+      <div class="hbox hbox-blue">"어떤 분배가 정의로운가는 이 분배가 <strong>어떻게 이루어졌는가</strong>에 달려 있다."</div>
+      <ul class="pts" style="margin-top:8px">
+        <li><strong>취득에서의 정의</strong>: 처음 어떻게 가지게 되었는가</li>
+        <li><strong>이전에서의 정의</strong>: 어떻게 주고받았는가</li>
+        <li><strong>역사적 부정의의 교정</strong>: 잘못된 취득·이전은 교정되어야 함</li>
+      </ul>
+      <div class="hbox hbox-yellow" style="margin-top:8px">→ 과정이 공정했다면 결과의 불평등도 정당하다</div>
+    ` },
+    { icon: "📏", title: "★ 로크적 단서 (Lockean Proviso) — \"enough and as good\"", html: `
+      <table class="comp-table">
+        <tr><th>조건</th><th class="th-blue">내용</th></tr>
+        <tr><td><strong>enough</strong> (충분히)</td><td>내가 가져가고도 다른 사람이 가질 수 있는 것이 충분히 남아 있어야 한다</td></tr>
+        <tr><td><strong>as good</strong> (그만큼 좋은)</td><td>내가 가져감으로써 다른 사람의 처지가 더 나빠지지 않아야 한다</td></tr>
+      </table>
+      <ul class="pts" style="margin-top:8px">
+        <li>로크·노직 모두 다른 사람을 해치면서 마구잡이로 부를 축적하는 것에는 찬성하지 않음</li>
+        <li>단, 이 기준을 충족해서 얻은 것은 <strong>절대적으로 나의 것</strong></li>
+      </ul>
+      <ul class="pts red" style="margin-top:8px">
+        <li>정부가 세금으로 떼가는 것 → <strong>올바르지 않다</strong></li>
+        <li>어려운 처지의 사람을 도우라고 법적으로 강제하는 것 → <strong>올바르지 않다</strong></li>
+      </ul>
+    ` },
+    { icon: "🏆", title: "★ 능력주의(meritocracy)와 정의", html: `
+      <div class="flow" style="flex-wrap:wrap">
+        <span class="flow-item">기회의 평등</span>
+        <span class="flow-arrow">▶</span>
+        <span class="flow-item">자격(merit)에 따라</span>
+        <span class="flow-arrow">▶</span>
+        <span class="flow-item">불평등한 결과</span>
+        <span class="flow-arrow">▶</span>
+        <span class="flow-item">능력주의(meritocracy)</span>
+        <span class="flow-arrow">▶</span>
+        <span class="flow-item">공정한 절차 ≒ 정의</span>
+      </div>
+      <ul class="pts" style="margin-top:8px">
+        <li>규칙만 지킨다면 불평등한 결과도 <strong>정의로운 것</strong></li>
+        <li>결과가 아닌 <strong>과정·절차의 공정함</strong>이 핵심</li>
+        <li>자격에 따라 나누는 것 = <strong>기회의 평등</strong>과 항상 연결됨</li>
+        <li>한국 사회에서 '공정'이 중요한 가치로 부상 → 그 안에는 <strong>기회의 평등 + 자격에 따른 분배</strong>라는 특정 정의관이 담겨 있음</li>
+      </ul>
+      <div class="sub" style="margin-top:8px">능력주의의 맹점</div>
+      <table class="comp-table">
+        <tr><th>구분</th><th class="th-blue">내용</th></tr>
+        <tr><td>장점</td><td>불평등한 결과를 정당화할 수 있음 (절차가 공정했으니까)</td></tr>
+        <tr><td>단점</td><td>올바르지 않은 불평등까지 정당화할 위험</td></tr>
+      </table>
+      <ul class="pts red" style="margin-top:8px">
+        <li>타고난 신체·정신적 차이</li>
+        <li>성장 환경의 차이</li>
+        <li>태어날 때 어떤 가정(수저)인가의 차이</li>
+      </ul>
+      <div class="hbox hbox-yellow" style="margin-top:8px">★ 공정한 기회의 평등이 진짜 공정하려면 <strong>경기장 자체의 조건</strong>부터 따져봐야 한다</div>
+    ` },
+    { icon: "🛡️", title: "자격 관점에서 본 복지", html: `
+      <div class="flow" style="flex-wrap:wrap">
+        <span class="flow-item">위험</span>
+        <span class="flow-arrow">▶</span>
+        <span class="flow-item">개인 → 능력에 따라 대처</span>
+        <span class="flow-arrow">▶</span>
+        <span class="flow-item">정의의 요구 ✕</span>
+      </div>
+      <ul class="pts" style="margin-top:8px">
+        <li>위험이 닥쳤을 때 개인·가족의 능력에 따라 결과가 달라짐</li>
+        <li>개인의 선택에 따른 위험 → 정의의 요구에 따라 도와줄 의무가 없을 수도 있음</li>
+        <li>도움의 성격: <strong>동정과 연민, 자선과 시혜</strong> — 이것은 <strong>정의의 요구가 아님</strong> → 즉 권리가 아님</li>
+        <li>도움의 주체: 개인 / 단체 / 국가 모두 가능하나 <strong>선별적·일방적</strong></li>
+      </ul>
+      <div class="hbox hbox-yellow" style="margin-top:8px">★ 사회복지 제도로는 → <strong>선별적·잔여적 복지</strong>로 나타남</div>
+      <div class="sub" style="margin-top:8px">자격 관점의 두 가지 허들 (비판적 질문)</div>
+      <table class="comp-table">
+        <tr><th>질문</th><th class="th-blue">내용</th></tr>
+        <tr><td>① 위험이 정말 개인의 문제인가?</td><td>사실은 사회적 위험이 아닌가?</td></tr>
+        <tr><td>② 능력이 정말 개인·가족만의 것인가?</td><td>사회적 관계와 구조 속에서 만들어진 능력은 아닌가?</td></tr>
+      </table>
+      <ul class="pts" style="margin-top:8px">
+        <li>위험과 능력 모두 <strong>큰 구조 속에서만</strong> 판단 가능</li>
+        <li>→ <strong>개인 윤리를 넘어 사회 윤리</strong>의 관점이 필요한 이유</li>
+      </ul>
+    ` },
+    { icon: "📂", title: "3. 필요에 따라 나누자", html: `
+      <div class="hbox hbox-green">필요(needs) = 인간이라면 누구나 마땅히 가져야 할 <strong>기본적인 것</strong></div>
+    ` },
+    { icon: "🔴", title: "★ 마르크스의 필요 원칙 — 《고타강령비판(1875)》", html: `
+      <table class="comp-table">
+        <tr><th>사회 단계</th><th class="th-blue">원칙</th></tr>
+        <tr><td>사회주의 (낮은 단계)</td><td>능력에 따라 일하고, <strong>기여에 따라 받는다</strong></td></tr>
+        <tr><td>공산주의 (높은 단계)</td><td>능력에 따라 일하고, <strong>필요에 따라 받는다</strong></td></tr>
+      </table>
+      <ul class="pts" style="margin-top:8px">
+        <li>마르크스: 생산력이 충분히 발전하면 필요에 따라 받는 세상이 가능하다고 낙관</li>
+      </ul>
+    ` },
+    { icon: "💡", title: "★ 필요(needs) vs. 선호(preference)·취향(taste)", html: `
+      <table class="comp-table">
+        <tr><th>구분</th><th class="th-blue">내용</th></tr>
+        <tr><td><strong>필요(needs)</strong></td><td>인간이라면 누구나 마땅히 가져야 할 기본적인 것</td></tr>
+        <tr><td><strong>선호·취향</strong></td><td>개인의 가치관에 따른 비싼 욕구 (예: 타워팰리스, 고급 레스토랑)</td></tr>
+      </table>
+      <div class="hbox hbox-yellow" style="margin-top:8px">필요에 따라 나눈다 = 비싼 선호·취향을 다 충족시키는 것이 아님<br>→ 기본적이고 보편적인 필요<strong>(national minimum)</strong>를 보장하는 것</div>
+    ` },
+    { icon: "🖼️", title: "돌아온 탕자와 국민 최저선", html: `
+      <ul class="pts">
+        <li>렘브란트 〈The Return of the Prodigal Son〉</li>
+        <li>방탕하다 거지꼴로 돌아온 둘째 아들에게 아버지가 좋은 옷, 가락지, 신발, 송아지 잔치를 베풂</li>
+        <li>핵심 메시지: <strong>가족 구성원이라면 누구나 최소한의 대우를 받아야 한다</strong></li>
+        <li>→ 이것이 사회 제도로 자리 잡은 것이 <strong>국민 최저선(national minimum)</strong></li>
+      </ul>
+    ` },
+    { icon: "🏠", title: "모든 인간이 마땅히 받아야 할 것은?", html: `
+      <ul class="pts">
+        <li>음식·물</li>
+        <li>머리 위의 지붕</li>
+        <li>적절한 의료</li>
+        <li>육체적·정서적 안정</li>
+      </ul>
+    ` },
+    { icon: "🗽", title: "★ 루즈벨트 대통령의 연두교서(1941) — 4대 자유", html: `
+      <table class="comp-table">
+        <tr><th>자유</th><th class="th-blue">내용</th></tr>
+        <tr><td>언론과 의사표현의 자유</td><td>표현의 자유</td></tr>
+        <tr><td>신앙의 자유</td><td>양심의 자유</td></tr>
+        <tr><td><strong>결핍으로부터의 자유</strong></td><td>기본 생활의 보장</td></tr>
+        <tr><td><strong>공포로부터의 자유</strong></td><td>전쟁·범죄로부터의 안전</td></tr>
+      </table>
+      <ul class="pts" style="margin-top:8px">
+        <li>→ 자유주의 관점에서의 기본적 필요</li>
+      </ul>
+    ` },
+    { icon: "📋", title: "★ 베버리지 리포트(1942)와 5대 거악 — 사회권으로서의 필요", html: `
+      <table class="comp-table">
+        <tr><th>5대 사회악</th><th class="th-red">영어</th><th class="th-green">기본적 필요</th></tr>
+        <tr><td><strong>결핍</strong></td><td>WANT</td><td>소득</td></tr>
+        <tr><td><strong>무지</strong></td><td>IGNORANCE</td><td>교육</td></tr>
+        <tr><td><strong>질병</strong></td><td>DISEASE</td><td>의료</td></tr>
+        <tr><td><strong>불결</strong></td><td>SQUALOR</td><td>주거</td></tr>
+        <tr><td><strong>나태(실업)</strong></td><td>IDLENESS</td><td>고용</td></tr>
+      </table>
+      <ul class="pts" style="margin-top:8px">
+        <li>이 5가지는 <strong>개인이 아닌 사회에서 오는 위험</strong> → 사회적 책임</li>
+        <li><strong>기본적 필요 = 권리</strong> → 정의의 요구</li>
+      </ul>
+    ` },
+    { icon: "🏗️", title: "필요 관점에서 본 복지", html: `
+      <ul class="pts green">
+        <li>기본적 필요(소득·의료·교육·주거·고용)를 위협하는 위험 = <strong>사회적 댐(복지국가)</strong>을 세워 차단</li>
+        <li><strong>보편적·제도적 사회복지</strong></li>
+        <li><strong>정의의 요구 = 개인의 권리</strong>에 기초</li>
+      </ul>
+    ` },
+    { icon: "📂", title: "4. 자본주의 윤리와 정의", html: `
+      <div class="hbox hbox-blue"><strong>시장에서의 경쟁에 따른 분배</strong> → 경제적 불평등 발생<br>능력·자격, 공정한 기회의 평등, 공정한 절차에 의한 결과 → 그 결과로 발생하는 경제적 불평등은 정당화됨</div>
+    ` },
+    { icon: "🏛️", title: "★ 자본주의 윤리의 4가지 토대", html: `
+      <table class="comp-table">
+        <tr><th>#</th><th class="th-blue">내용</th><th>배경</th></tr>
+        <tr><td>①</td><td><strong>나는 생각의 주체</strong></td><td>데카르트 "코기토 에르고 숨" — 인간이 신을 대신해 사유</td></tr>
+        <tr><td>②</td><td><strong>나는 소유의 주체</strong></td><td>로크의 소유권론 — 내 노동의 결과는 내 것</td></tr>
+        <tr><td>③</td><td><strong>이기적이어도 괜찮아</strong></td><td>중세의 이타적 윤리에서 이기심의 긍정으로 전환</td></tr>
+        <tr><td>④</td><td><strong>부자가 천국도 간다</strong></td><td>칼뱅의 종교개혁 — 부의 축적이 신의 은총의 증거</td></tr>
+      </table>
+    ` },
+    { icon: "👁️", title: "★ 자본주의와 비인간화 — 두 가지 신화", html: `
+      <table class="comp-table">
+        <tr><th>신화</th><th class="th-red">상징하는 것</th></tr>
+        <tr><td><strong>키클롭스</strong> (눈이 하나인 거인)</td><td>자본주의는 오로지 <strong>돈(이윤)만</strong> 본다</td></tr>
+        <tr><td><strong>프로크루스테스의 침대</strong></td><td>인간이 시장의 규칙에 <strong>맞춰야</strong> 하는 비인간화 — 기계가 사람을 다루는 세상</td></tr>
+      </table>
+      <ul class="pts" style="margin-top:8px">
+        <li>프로크루스테스: 나그네를 침대에 묶고 키가 크면 다리를 자르고, 키가 작으면 잡아당겨 죽인 연쇄살인범 신화</li>
+        <li>→ 자본주의는 사람을 시장의 규칙(침대)에 억지로 끼워맞춤</li>
+      </ul>
+    ` },
+    { icon: "🔀", title: "★ 자본주의 속 세 가지 선택지", html: `
+      <table class="comp-table">
+        <tr><th>선택</th><th class="th-blue">내용</th><th class="th-green">배분 원칙</th></tr>
+        <tr><td><strong>유지</strong></td><td>경쟁·적응 → 체제 유지</td><td>자격에 따라</td></tr>
+        <tr><td><strong>혁명</strong></td><td>자본주의 철폐 (마르크스 공산주의)</td><td>필요에 따라</td></tr>
+        <tr><td><strong>개혁</strong></td><td>인간의 얼굴을 한 자본주의 + 보편적 복지국가</td><td>필요에 따라</td></tr>
+      </table>
+      <div class="hbox hbox-yellow" style="margin-top:8px"><strong>인간의 얼굴을 한 자본주의</strong> = 자본주의를 유지하되 보편적 복지국가와 함께 가는 방식 = 필요에 따라 나누는 정의관에 기반</div>
+    ` },
+    { icon: "⚖️", title: "★ 자격 vs. 필요 — 정의관 종합 비교", html: `
+      <table class="comp-table">
+        <tr><th>구분</th><th class="th-blue">자격에 따라 (merit)</th><th class="th-green">필요에 따라 (needs)</th></tr>
+        <tr><td>핵심 원리</td><td>내 능력·노력의 결과는 내 것</td><td>인간이라면 기본적 필요가 있다</td></tr>
+        <tr><td>이론적 기반</td><td>로크의 소유권론, 노직의 자격 이론</td><td>마르크스, 비어트리스 웹, 베버리지</td></tr>
+        <tr><td>불평등 인식</td><td>공정한 절차의 결과 → 정당</td><td>구조적 문제 → 사회적 책임</td></tr>
+        <tr><td>복지 성격</td><td>동정·연민·자선·시혜</td><td><strong>권리 = 정의의 요구</strong></td></tr>
+        <tr><td>복지 유형</td><td>잔여적·선별적 복지</td><td><strong>보편적·제도적 복지</strong></td></tr>
+        <tr><td>자본주의 관계</td><td>시장 경쟁 유지</td><td>인간의 얼굴을 한 자본주의</td></tr>
+      </table>
+    ` },
+    { icon: "⭐", title: "9강 핵심 요약", html: `
+      <ul class="star-list">
+        <li>정의(justice) = <strong>옳음</strong> — 특히 보상과 처벌의 배분에 관한 도덕적 판단</li>
+        <li>유스티아누스: "정의란 <strong>각자에게 마땅히 받아야 할 것을 주는 것</strong>"</li>
+        <li>Concept(개념): 정의 = 옳음 (누구나 동의) / Conception(관점): 무엇이 옳은가 (사람마다 다름)</li>
+        <li>자격(merit): 나의 능력·노력에서 소유의 자격이 나옴 — 로크, 노직</li>
+        <li>능력주의(meritocracy): 기회의 평등 + 공정한 절차 → 결과의 불평등도 정당</li>
+        <li>자격 관점: 복지 = 동정·자선·시혜 (정의의 요구 아님) → 잔여적 복지</li>
+        <li>마르크스 《고타강령비판》: 사회주의 "기여에 따라" → 공산주의 "<strong>필요에 따라</strong>"</li>
+        <li>필요 ≠ 선호·취향 — 필요 = 인간이라면 마땅히 가져야 할 기본적인 것</li>
+        <li>루즈벨트 4대 자유(1941): 언론의 자유 / 신앙의 자유 / 결핍으로부터의 자유 / 공포로부터의 자유</li>
+        <li>베버리지 5대 거악: 결핍·무지·질병·불결·나태 → 소득·교육·의료·주거·고용 = <strong>기본적 필요(권리)</strong></li>
+        <li>필요 관점: 복지 = <strong>정의의 요구(권리)</strong> → 보편적·제도적 복지</li>
+        <li>자본주의 윤리 4토대: 나는 생각의 주체 / 소유의 주체 / 이기심 허용 / 부의 축적 긍정</li>
+        <li>키클롭스 = 돈만 보는 자본주의 / 프로크루스테스의 침대 = 인간을 시장에 맞추는 비인간화</li>
+        <li>자본주의 속 선택: <strong>유지</strong>(자격 원칙) / <strong>혁명</strong>(자본주의 철폐) / <strong>개혁</strong>(인간의 얼굴을 한 자본주의 + 보편적 복지국가)</li>
+      </ul>
+    ` },
+  ]
+}
+]
   }
 };
 
@@ -15827,7 +17981,7 @@ const QUIZ_BANK = {
   }
   ],
 
-  /* ── 과목 4: 산업복지론 예시 문제 3개 ── */
+  /* ── 과목 4: 산업복지론 연습문제 ── */
   4: [
    {
     "id": "iw_ch1_q01",
@@ -17750,7 +19904,7 @@ const QUIZ_BANK = {
     "explanation": "【정답: ①】 작업장 위험의 근본 원인은 기계에 의한 생산 시스템 도입(②), 이윤 축적을 위한 대량 생산 체계(③), 노동력의 도구화(④) 등이다. 안전 장치와 비용의 투입(①)은 위험을 방지하는 것이므로 위험 발생의 원인이 아니다."
   }
   ],
-  /* ── 과목 5: 프로그램 개발과 평가 예시 문제 3개 ── */
+  /* ── 과목 5: 프로그램 개발과 평가 연습문제 ── */
     5: [
   {
   "id": "hr_ch1_q1",
@@ -21384,48 +23538,1287 @@ const QUIZ_BANK = {
   }
   ],
 
-  /* ── 과목 6: 사회복지인권과 철학 예시 문제 3개 ── */
+  /* ── 과목 6: 사회복지윤리와 철학 연습 문제 ── */
+  
   6: [
-    {
-      id:'sub6_q01', chapter:1,
-      question:"롤스(Rawls)의 정의론에 대한 설명으로 옳지 않은 것은?",
-      options:[
-        "무지의 베일 뒤에서 합리적 사람들이 동의할 원칙을 정의로 본다.",
-        "차등의 원칙: 불평등은 사회적으로 가장 불리한 사람에게 이익이 될 때만 정당화된다.",
-        "자유 원칙이 차등 원칙보다 우선한다.",
-        "결과의 평등을 절대적 기준으로 삼는다."
-      ],
-      answer:3,
-      occurrence:[],
-      explanation:"롤스는 결과의 완전한 평등이 아닌 공정으로서의 정의를 추구합니다. 차등의 원칙은 가장 불리한 처지의 사람에게 이익이 될 경우 불평등을 허용하는 것으로, 형식적 평등이 아닌 공정한 분배를 강조합니다. 자유 원칙이 차등 원칙보다 우선합니다."
-    },
-    {
-      id:'sub6_q02', chapter:2,
-      question:"사회복지사 윤리에서 '클라이언트의 자기결정권'이 제한될 수 있는 경우로 옳은 것은?",
-      options:[
-        '클라이언트가 경제적 어려움에 처해 있을 때',
-        '클라이언트의 선택이 전문가 판단과 다를 때',
-        '클라이언트의 결정이 자신 또는 타인에게 심각한 해를 끼칠 우려가 있을 때',
-        '클라이언트가 서비스 이용에 동의하지 않을 때'
-      ],
-      answer:2,
-      occurrence:[],
-      explanation:"자기결정권은 사회복지의 핵심 가치이나, 클라이언트의 결정이 자신이나 타인에게 심각한 해를 끼칠 우려가 있을 때는 제한될 수 있습니다. 이는 선의의 후견주의(paternalism)의 적용 사례입니다."
-    },
-    {
-      id:'sub6_q03', chapter:3,
-      question:"'역량강화(Empowerment) 실천'에 대한 설명으로 옳지 않은 것은?",
-      options:[
-        '클라이언트의 강점과 자원에 초점을 맞춘다.',
-        '개인·집단·지역사회 수준에서 이루어질 수 있다.',
-        '전문가가 클라이언트 대신 문제를 해결해 주는 것을 핵심으로 한다.',
-        '클라이언트가 자신의 삶을 통제할 수 있는 힘을 키우는 과정이다.'
-      ],
-      answer:2,
-      occurrence:[],
-      explanation:"역량강화 실천의 핵심은 클라이언트가 스스로 문제를 해결하는 능력을 키우도록 돕는 것입니다. 전문가가 대신 해결해 주는 것은 역량강화가 아닌 의존성을 만드는 방식입니다. 역량강화는 당사자의 능동적 참여와 자기결정을 중시합니다."
-    }
-  ]
+      {
+    "id": "hr_ch1_q1",
+    "chapter": 1,
+    "question": "다음은 무엇에 대한 설명인가?\n\n이것은 일차적으로\"지혜(sophia)에 대한 사랑(philos)\"을 의미하며, 인간과 매우 밀접하게 관련된 주제들에 관한 논리적이고 체계적인 고찰을 뜻한다.",
+    "options": ["철학", "과학", "예술", "문화"],
+    "answer": 0,
+    "occurrence": ["워크북"],
+    "frequencyCount": 1,
+    "explanation": "【정답: 1번 철학】 '필로소피(philosophy)'는 '지혜(sophia)에 대한 사랑(philo)'을 의미한다. 철학은 인간과 밀접하게 관련된 주제(인간의 본질, 관계, 공동체 등)를 논리적이고 체계적으로 탐구하는 활동이다."
+  },
+  {
+    "id": "hr_ch1_q2",
+    "chapter": 1,
+    "question": "다음 중 철학하기와 관련이 없는 것은?",
+    "options": ["생각하기", "보기", "질문하기", "침묵하기"],
+    "answer": 3,
+    "occurrence": ["워크북"],
+    "frequencyCount": 1,
+    "explanation": "【정답: 4번 침묵하기】 철학하기의 핵심은 깊게 생각하기, 보기(들여다보기), 근본적인 질문하기, 대화하기, 세상 읽기이다. '침묵하기'는 생각을 멈추는 것으로, 오히려 철학하기와 반대되는 행위이다."
+  },
+  {
+    "id": "hr_ch1_q3",
+    "chapter": 1,
+    "question": "다음은 무엇에 대한 설명인가?\n\n이것은 원래 희랍어에서 '멈추다'는 뜻이었다. 철학에서 이것은 선입견과 편견을 배제하기 위한 '판단중지'를 의미한다.",
+    "options": ["프락시스", "에포케", "에토스", "파토스"],
+    "answer": 1,
+    "occurrence": ["워크북"],
+    "frequencyCount": 1,
+    "explanation": "【정답: 2번 에포케】 '에포케(epoché)'는 기존의 편견과 선입견을 넘어 철학하기의 중요한 시작점이다. 피론의 회의주의처럼, 우리가 당연하다고 믿는 것들이 정말 당연한 것인지 끊임없이 질문하는 태도이다."
+  },
+  {
+    "id": "hr_ch1_q4",
+    "chapter": 1,
+    "question": "\"나는 생각한다, 고로 존재한다\"는 표현은 인간의 어떤 면을 강조하고 있는가?",
+    "options": ["이기심", "이성", "감정", "공감능력"],
+    "answer": 1,
+    "occurrence": ["워크북"],
+    "frequencyCount": 1,
+    "explanation": "【정답: 2번 이성】 데카르트의 방법론적 회의론에 따르면, 데카르트는 끊임없는 의심을 통해 흔들리지 않는 진리의 토대(자신의 존재, 이성)에 도달했다. 인간은 의심하는 동안만큼은 자신의 존재를 의심할 수 없으며, 이는 인간이 이성적 존재임을 강조한다."
+  },
+  {
+    "id": "hr_ch1_q5",
+    "chapter": 1,
+    "question": "인류의 거대한 악은 평범한 사람들이 생각하기를 멈출 때 발생한다는 것을 설명하기 위한 개념은 다음 중 무엇인가?",
+    "options": ["능력주의", "악의 평범성", "지배이데올로기", "홀로코스트"],
+    "answer": 1,
+    "occurrence": ["워크북"],
+    "frequencyCount": 1,
+    "explanation": "【정답: 2번 악의 평범성】 한나 아렌트의 '예루살렘의 아이히만' 사례에서, 악이 반드시 거대하고 악마적인 존재에 의해서만 발생하는 것이 아니라, 평범한 사람들의 '사유 불능' 상태에서 비롯될 수 있음을 시사한다. '악의 평범성'은 스스로 생각하지 않는 삶의 위험성을 경고한다."
+  },
+  {
+    "id": "hr_ch1_q6",
+    "chapter": 1,
+    "question": "다음 중 감시하지 않아도 자신의 행동을 스스로 검열하도록 만드는 장치는 무엇인가?",
+    "options": ["시놉티콘(synopticon)", "시놉시스(synopsis)", "파놉티콘(panopticon)", "판도라(pandora)"],
+    "answer": 2,
+    "occurrence": ["워크북"],
+    "frequencyCount": 1,
+    "explanation": "【정답: 3번 파놉티콘(panopticon)】 파놉티콘은 감시와 통제의 구조로 개인의 자유로운 사고를 억압하고 지배 질서에 순응하게 만드는 메커니즘을 보여준다. 감시하지 않아도 감시받는다는 인식으로 스스로 행동을 검열하게 된다."
+  },
+  {
+    "id": "hr_ch1_q7",
+    "chapter": 1,
+    "question": "다음 이야기가 옳으면 ○, 틀리면 X를 하시오.\n인간다움에 대한 관점은 공동체다움에 대한 관점과 아무런 관련이 없다. (      )",
+    "options": ["○ (옳다)", "X (틀리다)"],
+    "answer": 1,
+    "occurrence": ["워크북"],
+    "frequencyCount": 1,
+    "explanation": "【정답: 2번 X (틀리다)】 강의 요약에 따르면, 인간다움에 대한 관점은 공동체다움에 대한 관점과 깊이 연관되어 있다. 인간은 관계 속의 존재이며, 욕구-가족-인접 환경-인접 제도로 확장되는 공동체 속에서 정체성이 형성된다."
+  },
+  {
+    "id": "hr_ch2_q1",
+    "chapter": 2,
+    "question": "다음 중 역사 속 호모 사케르가 아닌 것은?",
+    "options": ["노예", "아우슈비츠의 유대인", "농노", "자본가"],
+    "answer": 3,
+    "explanation": "【정답: 4번 자본가】 호모 사케르(homo sacer)는 신성한 생명이자 벌거벗은 생명으로, 공동체에서 추방되어 법적 보호를 받지 못하는 존재를 의미한다. 역사 속 사례로는 노예, 아우슈비츠의 유대인, 농노 등이 있다."
+  },
+  {
+    "id": "hr_ch2_q2",
+    "chapter": 2,
+    "question": "다음 중 인접환경의 자원을 동원하고 사례를 관리하는 것에 관련된 윤리적 영역은 무엇인가?",
+    "options": ["개인윤리", "공동체윤리", "사회윤리", "국가윤리"],
+    "answer": 0,
+    "explanation": "【정답: 1번 개인윤리】 개인윤리는 인접 환경의 자원을 동원하고 사례를 관리하는 과정에서 발생하는 윤리적 기준과 원칙을 다룬다."
+  },
+  {
+    "id": "hr_ch2_q3",
+    "chapter": 2,
+    "question": "다음 중 사회윤리의 장에 속하는 것은 무엇인가?",
+    "options": ["사례관리", "자원동원", "인접환경", "구조변화"],
+    "answer": 3,
+    "explanation": "【정답: 4번 구조변화】 사회윤리는 사회 구조와 맥락을 고려하는 윤리적 실천을 다루며, 구조변화가 그 핵심이다."
+  },
+  {
+    "id": "hr_ch2_q4",
+    "chapter": 2,
+    "question": "다음 이야기가 옳으면 ○, 틀리면 X를 하시오.\n인간은 한계행동이 없다. (      )",
+    "options": ["○ (옳다)", "X (틀리다)"],
+    "answer": 1,
+    "explanation": "【정답: X】 인간은 한계행동을 가지며, 이를 성찰하고 재창조하는 존재이다."
+  },
+  {
+    "id": "hr_ch2_q5",
+    "chapter": 2,
+    "question": "인간은 오늘과 내일을 다르게 인식하기 때문에, 동물과 달리 ( )을(를) 가진다.",
+    "options": ["질서", "역사", "가족", "사회"],
+    "answer": 1,
+    "explanation": "【정답: 2번 역사】 인간은 시간의 흐름을 인식하고 과거와 미래를 연결하는 존재로서 역사를 가진다."
+  },
+  {
+    "id": "hr_ch2_q6",
+    "chapter": 2,
+    "question": "다음 중 인간에 대한 설명이 아닌 것은 무엇인가?",
+    "options": ["자아와 비아를 구분한다.", "위험을 성찰한다.", "자연을 주어진 것으로 무조건 받아들인다.", "재창조를 위한 행위를 한다."],
+    "answer": 2,
+    "explanation": "【정답: 3번 자연을 주어진 것으로 무조건 받아들인다】 인간은 자연을 단순히 수용하지 않고 성찰하며 재창조하는 존재이다."
+  },
+  {
+    "id": "hr_ch2_q7",
+    "chapter": 2,
+    "question": "인간에게는 생존을 위한 ( A )와(과) 실존을 위한 ( B )가 필요하다. 다음 중 A와 B에 들어갈 단어로 적절하게 짝지어진 것은 무엇인가?",
+    "options": ["A: 망치, B: 집", "A: 무기, B: 식량", "A: 사회, B: 가족", "A: 빵, B: 장미"],
+    "answer": 3,
+    "explanation": "【정답: 4번 빵과 장미】 빵은 생존을 위한 의식주를 의미하고, 장미는 존엄과 품위, 의미를 추구하는 실존을 의미한다."
+  },
+  {
+    "id": "hr_ch2_q8",
+    "chapter": 2,
+    "question": "다음 중 장미가 아닌 빵에 속하는 것은 무엇인가?",
+    "options": ["인간의 존엄", "의식주", "인정", "분배에 참여"],
+    "answer": 1,
+    "explanation": "【정답: 2번 의식주】 빵은 생존을 위한 기본적 필요(의식주)를 의미한다."
+  },
+  {
+    "id": "hr_ch2_q9",
+    "chapter": 2,
+    "question": "네안데르탈인과 호모 사피엔스가 대화를 나눈다. 이때 호모 사피엔스가 만들어낸 것은 무엇인가?\n\n네안데르탈인: \"강변에 사자가 나타났다!!!\"\n호모 사피엔스: \"사자는 우리 선조들의 영혼이다.\"",
+    "options": ["이야기", "위험", "신호", "필요"],
+    "answer": 0,
+    "explanation": "【정답: 1번 이야기】 인간은 단순한 신호를 넘어 의미와 이야기를 만들어내는 존재이다."
+  },
+  {
+    "id": "hr_ch2_q10",
+    "chapter": 2,
+    "question": "다음 중 가상의 실재에 해당하는 것은 무엇인가?",
+    "options": ["강", "사자", "신", "나무"],
+    "answer": 2,
+    "explanation": "【정답: 3번 신】 인간은 객관적 실재와 더불어 신, 국가, 법인과 같은 가상의 실재 속에서도 살아간다."
+  },
+  {
+    "id": "hr_ch2_q11",
+    "chapter": 2,
+    "question": "다음 이야기가 옳으면 ○, 틀리면 X를 하시오.\n인간은 객관적 실재가 아니라 가상의 실재에서만 살아간다. (      )",
+    "options": ["○ (옳다)", "X (틀리다)"],
+    "answer": 1,
+    "explanation": "【정답: X】 인간은 객관적 실재와 가상의 실재가 결합된 '이중의 실재' 속에서 살아간다."
+  },
+  {
+    "id": "hr_ch2_q12",
+    "chapter": 2,
+    "question": "다음 중 실존주의에 대한 설명이 아닌 것은 무엇인가?",
+    "options": ["존재가 본질에 앞선다", "인간은 지향을 가지고 세계에 자신을 내던지는 존재다.", "인간은 먼저 세상에 존재하고, 그 다음에 정의된다.", "인간은 세상에 그냥 묻혀 사는 존재다."],
+    "answer": 3,
+    "explanation": "【정답: 4번 인간은 세상에 그냥 묻혀 사는 존재다】 실존주의는 인간이 지향을 가지고 세계에 자신을 내던지는 존재임을 강조한다."
+  },
+  {
+    "id": "hr_ch2_q13",
+    "chapter": 2,
+    "question": "다음 중 역사에 대한 설명으로 다른 것은 무엇인가?",
+    "options": ["역사는 의미의 다발이다.", "역사는 고정불변의 진리이다.", "역사는 정치가 빚은 그릇이다.", "역사는 비판으로 완성된다."],
+    "answer": 1,
+    "explanation": "【정답: 2번 역사는 고정불변의 진리이다】 역사는 권력과 사회적 맥락에 따라 해석되며, 비판을 통해 완성된다."
+  },
+  {
+    "id": "hr_ch2_q14",
+    "chapter": 2,
+    "question": "인간이 인간으로 살기 위해서는 특정한 방식으로 조직된 ( )이어야 한다.",
+    "options": ["시민", "소비자", "가족", "자본가"],
+    "answer": 0,
+    "explanation": "【정답: 1번 시민】 인간다운 삶을 위해서는 공동체 속에서 권리와 책임을 가진 시민으로 조직되어야 한다."
+  },
+  {
+    "id": "hr_ch3_q1",
+    "chapter": 3,
+    "question": "다음에서 설명하는 것은 무엇인가?\n\n이곳은 어떤 하나의 목적을 향해 나아가고자 하는 동기들이 모여 상호작용과 집단적 활동이 이루어지며, 구성원들이 공동의 사물이나 관심사를 공유하거나 공동의 일에 함께 참여하는 터전이다.",
+    "options": ["가족", "공동체", "시장", "자연"],
+    "answer": 1,
+    "explanation": "【정답: 2번 공동체】 공동체는 구성원들이 공동의 관심사와 목적을 공유하며 함께 참여하는 집단적 터전이다."
+  },
+  {
+    "id": "hr_ch3_q2",
+    "chapter": 3,
+    "question": "다음 중 아리스토텔레스가 최고의 좋음을 목표로 하는 공동체로 언급한 것은 무엇인가?",
+    "options": ["경제 공동체", "군사 공동체", "정치 공동체", "기술 공동체"],
+    "answer": 2,
+    "explanation": "【정답: 3번 정치 공동체】 아리스토텔레스는 폴리스(정치 공동체)를 최고의 좋음을 목표로 하는 공동체로 보았다."
+  },
+  {
+    "id": "hr_ch3_q3",
+    "chapter": 3,
+    "question": "다음은 무엇에 대한 설명인가?\n\n\"그들이 나의 이야기의 부분인 것 같이 나는 그들의 이야기의 부분이다. 어떤 사람의 서사는 전체적으로 연결되는 서사의 한 부분이다.\"",
+    "options": ["원자론적 개인", "이기적 개인", "수동적 자아", "서사적 자아"],
+    "answer": 3,
+    "explanation": "【정답: 4번 서사적 자아】 매킨타이어는 인간을 공동체 속 이야기의 일부로서 존재하는 '서사적 자아'로 설명하였다."
+  },
+  {
+    "id": "hr_ch3_q4",
+    "chapter": 3,
+    "question": "다음 중 \"인간은 공동체 속에서 살 수 밖에 없다\"는 생각을 반영하고 있는 것은?",
+    "options": ["인간은 정치적 존재다", "인간은 도구적 존재다", "인간은 유희적 존재다", "인간은 이성적 존재다"],
+    "answer": 0,
+    "explanation": "【정답: 1번 인간은 정치적 존재다】 아리스토텔레스는 인간을 폴리스 속에서 살아가는 정치적 존재로 규정하였다."
+  },
+  {
+    "id": "hr_ch3_q5",
+    "chapter": 3,
+    "question": "다음 중 개인과 근대적 사회에 관해 올바르게 설명하고 있는 것은?",
+    "options": ["사유의 주체가 인간에서 신으로 바뀌었다", "권력의 주체가 시민에서 황제로 바뀌었다", "소유의 주체가 하나님에서 인간으로 바뀌었다", "노동의 주체가 시민에서 자본가로 바뀌었다"],
+    "answer": 2,
+    "explanation": "【정답: 3번 소유의 주체가 하나님에서 인간으로 바뀌었다】 근대 사회에서는 소유의 주체가 신에서 인간으로 전환되었다."
+  },
+  {
+    "id": "hr_ch3_q6",
+    "chapter": 3,
+    "question": "다음 중 전통적 공동체의 특징이 아닌 것은?",
+    "options": ["본질적", "자연적", "자발적", "도구적"],
+    "answer": 3,
+    "explanation": "【정답: 4번 도구적】 전통적 공동체는 본질적이고 자연적이며 자발적이지만, 도구적이지 않다."
+  },
+  {
+    "id": "hr_ch3_q7",
+    "chapter": 3,
+    "question": "다음 중 \"이해관계의 갈등을 무마할 수 있을 정도의 충분한 '점성'을 가지고 있는 사회\"를 표현하는 말은 무엇인가?",
+    "options": ["느슨한 사회", "끈끈한 사회", "경쟁적 사회", "위계적 사회"],
+    "answer": 1,
+    "explanation": "【정답: 2번 끈끈한 사회】 끈끈한 사회는 갈등을 무마할 수 있는 충분한 점성을 가진 사회를 의미한다."
+  },
+  {
+    "id": "hr_ch3_q8",
+    "chapter": 3,
+    "question": "다음 이야기가 옳으면 ○, 틀리면 X를 하시오.\n공동체주의는 \"사회 같은 것은 없다\"고 선언하였다. (      )",
+    "options": ["○ (옳다)", "X (틀리다)"],
+    "answer": 1,
+    "explanation": "【정답: X】 '사회 같은 것은 없다'는 선언은 신자유주의적 관점이며, 공동체주의는 오히려 공동체의 중요성을 강조한다."
+  },
+  {
+    "id": "hr_ch3_q9",
+    "chapter": 3,
+    "question": "다음 중 공동체주의자들이 언급한 공동체의 위기에 해당하지 않는 것은 무엇인가?",
+    "options": ["불평등", "경쟁", "경제성장", "이기주의"],
+    "answer": 2,
+    "explanation": "【정답: 3번 경제성장】 공동체주의자들은 불평등, 경쟁, 이기주의를 공동체의 위기로 보았지만 경제성장은 해당하지 않는다."
+  },
+  {
+    "id": "hr_ch3_q10",
+    "chapter": 3,
+    "question": "다음 중 공동체와 사회에 대한 설명으로 잘못된 것은 무엇인가?",
+    "options": ["공동체는 사회적 행위와 관계를 담아내는 그릇이다.", "사회는 개인들이 권리와 의무를 바탕으로 경쟁하거나 협력하는 공간이다.", "공동체는 구성원들의 존중과 정체성을 형성한다.", "공동체와 사회는 명확하게 구분된다."],
+    "answer": 3,
+    "explanation": "【정답: 4번 공동체와 사회는 명확하게 구분된다】 공동체와 사회는 상호작용하며 혼합된 형태로 존재하기 때문에 명확히 구분되지 않는다."
+  },
+  {
+    "id": "hr_ch4_q1",
+    "chapter": 4,
+    "question": "다음 중 \"사회복지적 행위방침을 정하는 것과 관련된 결정과 선택\"을 의미하는 것은?",
+    "options": ["사회복지재정", "사회복지정책", "사회복지세력", "사회복지급여"],
+    "answer": 1,
+    "explanation": "【정답: 2번 사회복지정책】 사회복지정책은 사회복지적 행위방침을 정하는 것과 관련된 결정과 선택을 의미한다."
+  },
+  {
+    "id": "hr_ch4_q2",
+    "chapter": 4,
+    "question": "다음은 무엇에 대한 설명인가?\n\n\"이것은 복잡하게 얽히고설켜 있는 인간관계망 안에 책임 있게 자신을 내던지는 인간의 실천이자, 공유하는 세계를 짓는 활동이다.\"",
+    "options": ["노동", "작업", "행위", "실행"],
+    "answer": 2,
+    "explanation": "【정답: 3번 행위】 아렌트는 인간의 활동을 노동, 작업, 행위로 구분했으며, 행위는 공유하는 세계를 짓는 인간 고유의 활동이다."
+  },
+  {
+    "id": "hr_ch4_q3",
+    "chapter": 4,
+    "question": "다음 중 사회복지 정책의 개인윤리에 해당하지 않는 것은 무엇인가?",
+    "options": ["어떻게 하면 잘 전달할 수 있을까?", "어떻게 하면 구조를 바꿀 수 있을까?", "어떻게 하면 자원을 잘 동원할 수 있을까?", "어떻게 하면 성공적인 사례관리를 할 수 있을까?"],
+    "answer": 1,
+    "explanation": "【정답: 2번 어떻게 하면 구조를 바꿀 수 있을까?】 구조 변화는 사회윤리의 영역이며, 개인윤리와는 거리가 있다."
+  },
+  {
+    "id": "hr_ch4_q4",
+    "chapter": 4,
+    "question": "다음 중 사회복지 정책의 사회윤리에 해당하는 것은 무엇인가?",
+    "options": ["어떻게 하면 잘 전달할 수 있을까?", "어떻게 하면 자원을 잘 동원할 수 있을까?", "어떻게 하면 대상의 권리와 나의 윤리적 신념 사이의 충돌을 해결할 수 있을까?", "어떻게 하면 구조를 바꿀 수 있을까?"],
+    "answer": 3,
+    "explanation": "【정답: 4번 어떻게 하면 구조를 바꿀 수 있을까?】 사회윤리는 구조와 맥락을 고려하는 윤리적 실천을 다룬다."
+  },
+  {
+    "id": "hr_ch4_q5",
+    "chapter": 4,
+    "question": "다음 중 사회복지의 사회윤리와 가장 거리가 먼 것은 무엇인가?",
+    "options": ["시민정치의 윤리", "전달체계의 윤리", "구조의 윤리", "맥락의 윤리"],
+    "answer": 1,
+    "explanation": "【정답: 2번 전달체계의 윤리】 전달체계의 윤리는 개인윤리적 관점에 더 가깝다."
+  },
+  {
+    "id": "hr_ch4_q6",
+    "chapter": 4,
+    "question": "다음 이야기가 옳으면 ○, 틀리면 X를 하시오.\n사회복지정책의 개인윤리는 구조와 맥락을 중요하게 고려한다. (      )",
+    "options": ["○ (옳다)", "X (틀리다)"],
+    "answer": 1,
+    "explanation": "【정답: X】 구조와 맥락은 사회윤리의 핵심이며, 개인윤리는 전달과 자원 동원에 초점을 둔다."
+  },
+  {
+    "id": "hr_ch4_q7",
+    "chapter": 4,
+    "question": "\"( )는 가치의 권위적 배분이다.\" - 데이비드 이스턴",
+    "options": ["경제", "문화", "정치", "전쟁"],
+    "answer": 2,
+    "explanation": "【정답: 3번 정치】 데이비드 이스턴은 정치를 '가치의 권위적 배분'이라고 정의하였다."
+  },
+  {
+    "id": "hr_ch4_q8",
+    "chapter": 4,
+    "question": "다음 중 사회복지실천(praxis)의 주된 목표가 아닌 것은 무엇인가?",
+    "options": ["사회 환경의 변화", "사회 구조의 변화", "사회 관계의 변화", "전달 체계의 변화"],
+    "answer": 3,
+    "explanation": "【정답: 4번 전달 체계의 변화】 사회복지실천은 환경, 구조, 관계의 변화를 목표로 하지만 전달체계 변화는 핵심 목표가 아니다."
+  },
+  {
+    "id": "hr_ch4_q9",
+    "chapter": 4,
+    "question": "다음 중 '사회복지사가 환경과 구조, 관계를 바꾸기 위해 행하는 모든 의식적 활동’을 의미하는 말은 무엇인가?",
+    "options": ["실천", "실행", "실시", "추진"],
+    "answer": 0,
+    "explanation": "【정답: 1번 실천】 사회복지실천(praxis)은 사회복지사가 환경과 구조, 관계를 바꾸기 위해 행하는 모든 의식적 활동을 의미한다."
+  },
+  {
+    "id": "hr_ch4_q10",
+    "chapter": 4,
+    "question": "다음 중 \"가능성을 가진 인간이 자신의 '인간다움'을 능숙하게 드러내는 것\"을 무엇이라고 부르는가?",
+    "options": ["자율성", "우월성", "전문성", "탁월성"],
+    "answer": 3,
+    "explanation": "【정답: 4번 탁월성】 탁월성은 인간다움을 능숙하게 드러내는 것으로, 인간은 이를 통해 행복을 느낀다."
+  },
+  {
+    "id": "hr_ch4_q11",
+    "chapter": 4,
+    "question": "다음 중 \"돌봄센터(care center)\"와 \"커뮤니티센터(community center)\"에 대한 비교이다. 잘못 서술된 것은 무엇인가?",
+    "options": ["Care Center는 취약계층을 대상으로 한다.", "Care Center의 사회복지사는 중재자(mediator)이다.", "Community Center는 시민과 함께 한다.", "Community Center는 자각과 실천이 이루어지는 공간이다."],
+    "answer": 1,
+    "explanation": "【정답: 2번 Care Center의 사회복지사는 중재자(mediator)이다】 Care Center의 사회복지사는 돌봄 제공자이며, 중재자는 Community Center의 역할이다."
+  },
+  {
+    "id": "hr_ch4_q12",
+    "chapter": 4,
+    "question": "다음 중 \"정치의 삼각형\"에 속하지 않는 것은 무엇인가?",
+    "options": ["철학", "시장", "세력", "정책"],
+    "answer": 0,
+    "explanation": "【정답: 1번 철학】 정치의 삼각형은 시장, 세력, 정책으로 구성되며 철학은 포함되지 않는다."
+  },
+  {
+    "id": "hr_ch5_q1",
+    "chapter": 5,
+    "question": "다음은 무엇에 대한 설명인가?\n\n\"빈민의 교정을 통한 자립 자족을 목표로 하였으며, 과학적 사례 분석의 시작으로 평가받는다.\"",
+    "options": ["자선조직협회(COS)", "세틀먼트운동(SHM)", "페이비언협회", "차티스트 운동"],
+    "answer": 0,
+    "explanation": "【정답: 1번 자선조직협회(COS)】 COS는 빈민의 자립 자족을 목표로 하였으며, 과학적 사례 관리의 시작으로 평가받는다."
+  },
+  {
+    "id": "hr_ch5_q2",
+    "chapter": 5,
+    "question": "다음 중 자선조직협회에 대한 설명으로 틀린 것은?",
+    "options": ["구호 대상을 선별하였다.", "우애방문원이 빈곤가정을 방문하였다.", "박애의 정신과 노블리스 오블레제의 윤리를 기초로 한다.", "빈곤의 원인을 사회에서 찾았다."],
+    "answer": 3,
+    "explanation": "【정답: 4번 빈곤의 원인을 사회에서 찾았다】 COS는 빈곤의 원인을 개인이나 가족에게 있다고 보았다."
+  },
+  {
+    "id": "hr_ch5_q3",
+    "chapter": 5,
+    "question": "다음 중 자선조직협회의 사례관리가 아닌 것은 무엇인가?",
+    "options": ["빈곤의 원인이 개인이나 가족에게 있다고 본다.", "가정생활, 아동교육, 가정경제에 대해 조언한다.", "사회구조의 변화를 추구한다.", "박애와 노블리스 오블리제의 정신에 기초한다."],
+    "answer": 2,
+    "explanation": "【정답: 3번 사회구조의 변화를 추구한다】 COS는 구조적 변화보다는 개인과 가족의 문제 해결에 초점을 맞췄다."
+  },
+  {
+    "id": "hr_ch5_q4",
+    "chapter": 5,
+    "question": "다음 중 사례관리의 대상에 대한 관점이 아닌 것은 무엇인가?",
+    "options": ["보호대상자", "시민", "수혜자", "클라이언트"],
+    "answer": 1,
+    "explanation": "【정답: 2번 시민】 사례관리의 대상은 보호대상자, 수혜자, 클라이언트로 이해되며 '시민'은 사회관리의 관점이다."
+  },
+  {
+    "id": "hr_ch5_q5",
+    "chapter": 5,
+    "question": "다음 중 외부적 강요 없이 스스로 선택하고 결정할 권리는 무엇인가?",
+    "options": ["알권리", "비밀보장의 권리", "자기결정권", "참여권"],
+    "answer": 2,
+    "explanation": "【정답: 3번 자기결정권】 자기결정권은 외부적 강요 없이 스스로 선택하고 결정할 권리를 의미한다."
+  },
+  {
+    "id": "hr_ch5_q6",
+    "chapter": 5,
+    "question": "다음 중 개인이 자신과 관련된 정보를 자유롭게 알 수 있는 권리는 무엇인가?",
+    "options": ["알권리", "비밀보장의 권리", "자기결정권", "소유권"],
+    "answer": 0,
+    "explanation": "【정답: 1번 알권리】 알권리는 개인이 자신과 관련된 정보를 자유롭게 알 수 있는 권리이다."
+  },
+  {
+    "id": "hr_ch5_q7",
+    "chapter": 5,
+    "question": "다음 중 개인의 자유권과 가장 거리가 먼 것은 무엇인가?",
+    "options": ["자기결정권", "알권리", "프라이버시권", "참여권"],
+    "answer": 3,
+    "explanation": "【정답: 4번 참여권】 참여권은 사회적 권리에 가까우며, 개인의 자유권과는 거리가 있다."
+  },
+  {
+    "id": "hr_ch5_q8",
+    "chapter": 5,
+    "question": "다음 중 개인윤리의 영역에서 자기결정권과 주로 갈등하는 것은 무엇인가?",
+    "options": ["알권리", "프라이버시권", "온정주의", "자율성 보장"],
+    "answer": 2,
+    "explanation": "【정답: 3번 온정주의】 자기결정권은 클라이언트의 선택을 존중하지만, 온정주의는 전문가가 개입하는 태도로 갈등을 일으킨다."
+  },
+  {
+    "id": "hr_ch5_q9",
+    "chapter": 5,
+    "question": "다음 중 올바르게 서술된 것은 무엇인가?",
+    "options": ["개인윤리는 구조에 관심을 가진다.", "개인윤리는 전문적 서비스를 제공하는 과정에서 발생한다.", "사회윤리의 개인은 자유권을 가진 자율적 존재다.", "사회윤리는 전문가와 대상을 이분법적으로 구분한다."],
+    "answer": 1,
+    "explanation": "【정답: 2번 개인윤리는 전문적 서비스를 제공하는 과정에서 발생한다】 개인윤리는 클라이언트와의 관계 속에서 발생한다."
+  },
+  {
+    "id": "hr_ch5_q10",
+    "chapter": 5,
+    "question": "다음 이야기가 옳으면 ○, 틀리면 X를 하시오.\n개인윤리의 관점은 대화의 방식을 통해 정보를 제공한다. (      )",
+    "options": ["○ (옳다)", "X (틀리다)"],
+    "answer": 0,
+    "explanation": "【정답: ○】 개인윤리의 관점은 대화를 통해 정보를 제공하는 방식으로 이루어진다."
+  },
+  {
+    "id": "hr_ch5_q11",
+    "chapter": 5,
+    "question": "다음 중 돌봄의 대상에서 돌봄의 주체가 되기 위해 필요한 것은 무엇인가?",
+    "options": ["전문적 서비스", "치료", "상담", "대화"],
+    "answer": 3,
+    "explanation": "【정답: 4번 대화】 대화를 통해 클라이언트는 돌봄의 주체로 참여할 수 있다."
+  },
+  {
+    "id": "hr_ch5_q12",
+    "chapter": 5,
+    "question": "다음 중 '사회적' 알권리에 속하는 것은 무엇인가?",
+    "options": ["구조에 대한 비판적 정보", "서비스의 목적, 내용, 기간", "전달과정에서 발생 가능한 일들", "거부할 권리를 가지고 있음"],
+    "answer": 0,
+    "explanation": "【정답: 1번 구조에 대한 비판적 정보】 사회적 알권리는 구조와 사회적 맥락에 대한 정보를 포함한다."
+  },
+  {
+    "id": "hr_ch5_q13",
+    "chapter": 5,
+    "question": "다음 중 올바르게 서술된 것은 무엇인가?",
+    "options": ["사례관리의 시선은 구조를 향한다.", "사례관리의 인간은 공동체 내 개인이다.", "사회관리의 주민은 시민이다.", "사회관리는 치료와 상담 기술을 활용한다."],
+    "answer": 2,
+    "explanation": "【정답: 3번 사회관리의 주민은 시민이다】 사회관리는 시민을 중심으로 구조와 공동체를 관리한다."
+  },
+  {
+    "id": "hr_ch5_q14",
+    "chapter": 5,
+    "question": "다음 중 올바르게 서술된 것은 무엇인가?",
+    "options": ["사례관리에서 사회복지사는 활동가이자 동료의 이미지를 가진다.", "사례관리에서 사회복지사는 주민의 욕구를 아는 역량을 갖춰야 한다.", "사회관리에서 사회복지사는 교육가면서 조직가의 정체성을 지닌다.", "사회관리에서 사회복지사는 케어센터에서 일한다."],
+    "answer": 2,
+    "explanation": "【정답: 3번 사회관리에서 사회복지사는 교육가면서 조직가의 정체성을 지닌다】 사회관리의 사회복지사는 공동체적 변화와 교육·조직 활동을 담당한다."
+  },
+  {
+    "id": "hr_ch6_q1",
+    "chapter": 6,
+    "question": "다음은 무엇에 대한 설명인가?\n\n\"이것은 우리가 어떻게 행동해야 하는가, 우리가 어떻게 살아가야만 하는가에 대한 도덕적 판단을 의미한다.\"",
+    "options": ["윤리", "문화", "과학", "이성"],
+    "answer": 0,
+    "explanation": "【정답: 1번 윤리】 윤리는 올바른 행위와 삶에 대한 기준과 원칙을 뜻하며, 도덕적 판단을 의미한다."
+  },
+  {
+    "id": "hr_ch6_q2",
+    "chapter": 6,
+    "question": "다음 중 윤리 혹은 윤리학(ethics)의 어원으로, 사람들이 가지고 있는 습관이나 관습 혹은 인간의 정신 상태나 마음가짐을 의미하는 것은 무엇인가?",
+    "options": ["파토스(pathos)", "로고스(logos)", "에토스(ethos)", "피지스(physis)"],
+    "answer": 2,
+    "explanation": "【정답: 3번 에토스(ethos)】 에토스는 습관, 관습, 마음가짐을 의미하며 윤리학의 어원이다."
+  },
+  {
+    "id": "hr_ch6_q3",
+    "chapter": 6,
+    "question": "다음 중 아리스토텔레스가 인간의 목적으로 제시한 것은 무엇인가?",
+    "options": ["구원", "의무", "이익", "행복"],
+    "answer": 3,
+    "explanation": "【정답: 4번 행복】 아리스토텔레스는 인간의 궁극적 목적을 행복(에우다이모니아)이라고 보았다."
+  },
+  {
+    "id": "hr_ch6_q4",
+    "chapter": 6,
+    "question": "다음 이야기가 옳으면 ○, 틀리면 X를 하시오.\n벤담은 쾌락이나 행복을 가져다 주는 것이 '선'이라 주장하였다. (      )",
+    "options": ["○ (옳다)", "X (틀리다)"],
+    "answer": 0,
+    "explanation": "【정답: ○】 벤담은 쾌락과 행복을 가져다주는 것이 선이라고 주장하며 공리주의를 제시했다."
+  },
+  {
+    "id": "hr_ch6_q5",
+    "chapter": 6,
+    "question": "다음 중 공리주의의 도덕법칙은 무엇인가?",
+    "options": ["절대적 도덕법칙을 따르는 것", "쾌락의 총량이 많게 하는 것", "보편적 도덕법칙을 따르는 것", "선의지에 의해 행위하는 것"],
+    "answer": 1,
+    "explanation": "【정답: 2번 쾌락의 총량이 많게 하는 것】 공리주의는 최대 다수의 최대 행복을 추구하며, 쾌락의 총량을 기준으로 도덕성을 판단한다."
+  },
+  {
+    "id": "hr_ch6_q6",
+    "chapter": 6,
+    "question": "결과주의는 행위나 규칙의 ( A )보다 ( B )에 따라 옳고 그름을 평가한다. 알맞게 짝지어진 것은?",
+    "options": ["A: 목적, B: 결과", "A: 결과, B: 동기", "A: 동기, B: 결과", "A: 결과, B: 의무"],
+    "answer": 2,
+    "explanation": "【정답: 3번 A: 동기, B: 결과】 결과주의는 행위의 동기보다 결과에 따라 옳고 그름을 평가한다."
+  },
+  {
+    "id": "hr_ch6_q7",
+    "chapter": 6,
+    "question": "다음 중 의무론적 윤리관에서 중요한 것은 무엇인가?",
+    "options": ["동기", "행복", "쾌락", "결과"],
+    "answer": 0,
+    "explanation": "【정답: 1번 동기】 의무론적 윤리관은 행위의 결과와 상관없이 동기와 의무를 중시한다."
+  },
+  {
+    "id": "hr_ch6_q8",
+    "chapter": 6,
+    "question": "다음 중 칸트의 실천이성에 해당하는 것은 무엇인가?",
+    "options": ["인간은 무엇을 알 수 있는가?", "인간은 무엇을 바랄 수 있는가?", "인간은 무엇을 해야 하는가?", "인간은 무엇을 가져야 하는가?"],
+    "answer": 2,
+    "explanation": "【정답: 3번 인간은 무엇을 해야 하는가?】 칸트의 실천이성은 인간이 무엇을 해야 하는가에 대한 도덕적 실천을 탐구한다."
+  },
+  {
+    "id": "hr_ch6_q9",
+    "chapter": 6,
+    "question": "다음 중 칸트 철학의 출발점은 무엇인가?",
+    "options": ["인간은 이기적 존재다.", "인간은 이성적 존재다.", "인간은 감정적 존재다.", "인간은 실존적 존재다."],
+    "answer": 1,
+    "explanation": "【정답: 2번 인간은 이성적 존재다】 칸트 철학은 인간을 이성적 존재로 규정하며 출발한다."
+  },
+  {
+    "id": "hr_ch6_q10",
+    "chapter": 6,
+    "question": "다음 중 칸트의 정언명령과 관련된 것은 무엇인가?",
+    "options": ["성적을 잘 받으려면 열심히 공부해라.", "선한 의지(선의지)에 따라 행위해라.", "친구를 구해야 하는 경우라면 거짓말을 해라.", "좋은 결과로 이어질 수 있는 선택을 해라."],
+    "answer": 1,
+    "explanation": "【정답: 2번 선한 의지에 따라 행위해라】 칸트의 정언명령은 선의지에 따라 무조건적으로 행위해야 한다는 도덕 명령이다."
+  },
+  {
+    "id": "hr_ch7_q1",
+    "chapter": 7,
+    "question": "다음은 ( )에 들어갈 적당한 표현은 무엇인가?\n\n\"흑인은 그냥 흑인일 뿐인데 특정한 ( ) 속에서 노예가 된다.\"",
+    "options": ["선택", "관계", "사랑", "목적"],
+    "answer": 1,
+    "explanation": "【정답: 2번 관계】 인간은 특정한 사회적 관계 속에서 자유를 잃고 억압받을 수 있다."
+  },
+  {
+    "id": "hr_ch7_q2",
+    "chapter": 7,
+    "question": "다음 중 소극적 자유에 속하지 않는 것은 무엇인가?",
+    "options": ["무언가로부터의 자유", "외부적 제약이나 구속의 부재", "개인적 선택의 자유", "자아실현"],
+    "answer": 3,
+    "explanation": "【정답: 4번 자아실현】 자아실현은 적극적 자유에 속한다."
+  },
+  {
+    "id": "hr_ch7_q3",
+    "chapter": 7,
+    "question": "다음 중 사회적 자유를 방해하는 것은 무엇인가?",
+    "options": ["다른 사람(타자)", "국가", "부당한 질서", "정부"],
+    "answer": 2,
+    "explanation": "【정답: 3번 부당한 질서】 사회적 자유는 부당한 질서와 억압적 구조에 의해 방해받는다."
+  },
+  {
+    "id": "hr_ch7_q4",
+    "chapter": 7,
+    "question": "다음 중 개인적 자유에 대한 설명이 아닌 것은 무엇인가?",
+    "options": ["원자적 개인을 전제로 한다.", "연대와 상호의존의 원리를 가지고 있다.", "행위와 발언에 간섭할 때 침해받는다.", "자유권과 약한 정치권을 권리로 주장한다."],
+    "answer": 1,
+    "explanation": "【정답: 2번 연대와 상호의존의 원리를 가지고 있다】 이는 사회적 자유의 특징이며, 개인적 자유는 원자적 개인을 전제로 한다."
+  },
+  {
+    "id": "hr_ch7_q5",
+    "chapter": 7,
+    "question": "다음 이야기가 옳으면 ○, 틀리면 X를 하시오.\n사회적 자유는 자유권만으로 보장될 수 있다. (      )",
+    "options": ["○ (옳다)", "X (틀리다)"],
+    "answer": 1,
+    "explanation": "【정답: X】 사회적 자유는 단순한 자유권만으로는 보장되지 않으며, 관계와 구조의 변화가 필요하다."
+  },
+  {
+    "id": "hr_ch7_q6",
+    "chapter": 7,
+    "question": "다음 중 '개인적' 자유를 보장하기 위해 국가가 하는 일이 아닌 것은 무엇인가?",
+    "options": ["보편적 복지", "계약강제", "외적 방어", "법을 통한 질서유지"],
+    "answer": 0,
+    "explanation": "【정답: 1번 보편적 복지】 보편적 복지는 사회적 자유를 위한 국가의 역할이다."
+  },
+  {
+    "id": "hr_ch7_q7",
+    "chapter": 7,
+    "question": "다음 중 '사회적' 자유를 위해 필요한 것은 무엇인가?",
+    "options": ["자원 확보", "역량 강화", "개인의 자율성 보장", "관계와 구조의 변화"],
+    "answer": 3,
+    "explanation": "【정답: 4번 관계와 구조의 변화】 사회적 자유는 관계와 구조의 변화 속에서 보장된다."
+  },
+  {
+    "id": "hr_ch7_q8",
+    "chapter": 7,
+    "question": "다음 중 자본주의 체제의 사회적 반자유에 해당하지 않는 것은 무엇인가?",
+    "options": ["착취", "사물화", "생산성", "소외"],
+    "answer": 2,
+    "explanation": "【정답: 3번 생산성】 생산성은 반자유가 아니라 경제적 개념이며, 반자유는 착취·사물화·소외와 관련된다."
+  },
+  {
+    "id": "hr_ch7_q9",
+    "chapter": 7,
+    "question": "다음 중 '생명이 없는 돈을 사랑하는 인간'을 설명하는 단어는 무엇인가?",
+    "options": ["필로소피아", "네크로필리아", "바이오필리아", "제노포비아"],
+    "answer": 1,
+    "explanation": "【정답: 2번 네크로필리아】 네크로필리아는 '죽은 것에 대한 사랑'을 의미하며, 돈을 숭배하는 인간을 비유한다."
+  },
+  {
+    "id": "hr_ch7_q10",
+    "chapter": 7,
+    "question": "다음 중 사회적 자유와 거리가 먼 것은 무엇인가?",
+    "options": ["관계와 구조", "개인의 역량", "권리와 권력", "대화와 참여"],
+    "answer": 1,
+    "explanation": "【정답: 2번 개인의 역량】 사회적 자유는 관계, 구조, 권리, 권력, 대화와 참여 속에서 실현되며, 개인의 역량만으로는 충분하지 않다."
+  },
+  {
+    "id": "hr_ch8_q1",
+    "chapter": 8,
+    "question": "다음 이야기가 옳으면 ○, 틀리면 X를 하시오.\n'인간은 평등한가'에 대한 답변은 사회적·정치적으로 구성된다. (      )",
+    "options": ["○ (옳다)", "X (틀리다)"],
+    "answer": 0,
+    "explanation": "【정답: ○】 인간의 평등은 자연적 사실이 아니라 사회적·정치적 맥락 속에서 구성된다."
+  },
+  {
+    "id": "hr_ch8_q2",
+    "chapter": 8,
+    "question": "다음 중 동등한 정치참여를 의미하며 선거권과 피선거권, 투표권 등으로 이루어지는 평등은 무엇인가?",
+    "options": ["법적 평등", "정치적 평등", "경제적 평등", "사회적 평등"],
+    "answer": 1,
+    "explanation": "【정답: 2번 정치적 평등】 정치적 평등은 선거권, 피선거권, 투표권 등 정치 참여의 권리를 의미한다."
+  },
+  {
+    "id": "hr_ch8_q3",
+    "chapter": 8,
+    "question": "다음은 무엇에 대한 설명인가?\n\n\"개인이나 집단의 고유성이 차별의 근거가 되어서는 안된다\"는 생각으로 지위에 있어서의 평등을 의미한다. 다른 형태의 평등들을 전제로 하는 가장 포괄적인 형태의 평등이다.",
+    "options": ["사회적 평등", "법적 평등", "정치적 평등", "경제적 평등"],
+    "answer": 0,
+    "explanation": "【정답: 1번 사회적 평등】 사회적 평등은 지위와 존중의 평등을 의미하며 가장 포괄적인 형태의 평등이다."
+  },
+  {
+    "id": "hr_ch8_q4",
+    "chapter": 8,
+    "question": "다음 중 \"인간은 서로 다른 덕성과 능력을 가지고 태어난다\"는 주장은 무엇인가?",
+    "options": ["자연적 평등", "자연적 불평등", "사회적 평등", "사회적 불평등"],
+    "answer": 1,
+    "explanation": "【정답: 2번 자연적 불평등】 자연적 불평등은 인간이 서로 다른 능력과 덕성을 가지고 태어난다는 생각이다."
+  },
+  {
+    "id": "hr_ch8_q5",
+    "chapter": 8,
+    "question": "다음 중 플라톤의 이상국가에서 '지혜'가 필요한 계급은 무엇인가?",
+    "options": ["철학자", "전사", "생산자", "위에 언급된 모든 계급들"],
+    "answer": 0,
+    "explanation": "【정답: 1번 철학자】 플라톤의 이상국가에서 철학자는 지혜를 필요로 한다."
+  },
+  {
+    "id": "hr_ch8_q6",
+    "chapter": 8,
+    "question": "다음 중 플라톤의 이상국가에서 '각자 자기 일을 하면서 조화되는 것'을 의미하는 것은 무엇인가?",
+    "options": ["지혜", "용기", "절제", "정의"],
+    "answer": 3,
+    "explanation": "【정답: 4번 정의】 정의는 각자가 자기 일을 하면서 조화를 이루는 것을 의미한다."
+  },
+  {
+    "id": "hr_ch8_q7",
+    "chapter": 8,
+    "question": "다음은 무엇에 대한 설명인가?\n\n\"모든 인간은 신의 형상대로 창조되었다.\" \"모두가 동등한 하나님의 자녀다.\"",
+    "options": ["자연적 평등", "자연적 불평등", "사회적 평등", "사회적 불평등"],
+    "answer": 0,
+    "explanation": "【정답: 1번 자연적 평등】 자연적 평등은 모든 인간이 태어나면서 평등한 존재라는 생각을 의미한다."
+  },
+  {
+    "id": "hr_ch8_q8",
+    "chapter": 8,
+    "question": "다음 중 자연적 평등에 관한 생각이 아닌 것은 무엇인가?",
+    "options": ["모든 인간은 죽음을 혐오한다.", "모든 인간은 자연권을 지닌다.", "모든 인간은 자유롭게 태어났으나 모든 곳에서 사슬에 매여 있다.", "모든 인간은 서로 다른 덕성을 가지고 태어난다."],
+    "answer": 3,
+    "explanation": "【정답: 4번 모든 인간은 서로 다른 덕성을 가지고 태어난다】 이는 자연적 불평등에 해당한다."
+  },
+  {
+    "id": "hr_ch8_q9",
+    "chapter": 8,
+    "question": "다음 중 T.H. 마샬이 말한 평등한 시민권의 발전 순서로 맞는 것은 무엇인가?",
+    "options": ["정치권→사회권→공민권", "사회권→정치권→공민권", "공민권→정치권→사회권", "사회권→공민권→정치권"],
+    "answer": 2,
+    "explanation": "【정답: 3번 공민권→정치권→사회권】 T.H. 마샬은 시민권의 발전을 공민권, 정치권, 사회권 순서로 설명하였다."
+  },
+  {
+    "id": "hr_ch8_q10",
+    "chapter": 8,
+    "question": "다음 중 잔여적 복지국가의 윤리가 아닌 것은 무엇인가?",
+    "options": ["경쟁", "근면", "자립", "연대"],
+    "answer": 3,
+    "explanation": "【정답: 4번 연대】 잔여적 복지국가는 경쟁, 근면, 자립의 윤리를 기초로 하지만 연대는 제도적 복지국가의 윤리이다."
+  },
+  {
+    "id": "hr_ch8_q11",
+    "chapter": 8,
+    "question": "다음은 무엇에 대한 설명인가?\n\n\"차이와 다양성이 편안하게 드러나는 광장의 줄임말로, 배고프지 않는 공동체에 대한 상상과 누구나 당당한 공동체를 위한 대화와 참여가 이루어지는 공간이다.\"",
+    "options": ["우걸길", "상상상", "상상마실", "차편광"],
+    "answer": 3,
+    "explanation": "【정답: 4번 차편광】 차편광은 차이가 드러나는 편안한 광장을 의미하며, 평등한 공동체를 위한 참여 공간이다."
+  },
+  {
+    "id": "hr_ch8_q12",
+    "chapter": 8,
+    "question": "다음 중 사회적 우정의 윤리적 구성 요소가 아닌 것은 무엇인가?",
+    "options": ["호의", "허구적 관용", "소금 한 가마니", "공동체"],
+    "answer": 2,
+    "explanation": "【정답: 3번 소금 한 가마니】 사회적 우정은 호의, 허구적 관용, 공동체를 구성 요소로 한다."
+  },
+  {
+    "id": "hr_ch9_q1",
+    "chapter": 9,
+    "question": "다음은 무엇에 대한 묘사인가?\n\n\"각자에게 마땅히 받아야 할 것을 주는 것\"",
+    "options": ["자유", "평등", "정의", "평화"],
+    "answer": 2,
+    "explanation": "【정답: 3번 정의】 정의는 각자에게 마땅히 받아야 할 것을 주는 것으로, 올바른 배분에 관한 도덕적 판단이다."
+  },
+  {
+    "id": "hr_ch9_q2",
+    "chapter": 9,
+    "question": "다음 중 '자격'에 따라 나누자는 주장과 관련이 없는 것은?",
+    "options": ["열심히 일한 사람이 가져가야 한다.", "많이 기여한 사람이 가져가야 한다.", "더욱 뛰어난 사람이 가져가야 한다.", "많이 필요한 사람이 가져가야 한다."],
+    "answer": 3,
+    "explanation": "【정답: 4번 많이 필요한 사람이 가져가야 한다】 필요에 따른 분배는 능력주의가 아니라 평등주의적 관점이다."
+  },
+  {
+    "id": "hr_ch9_q3",
+    "chapter": 9,
+    "question": "어떤 사람들은 자격(merit)에 따라 나누는 것을 정의라고 말한다. 다음 중 자격을 만드는 것과 관련이 없는 것은 무엇인가?",
+    "options": ["나의 신체", "나의 능력", "나의 노력", "나의 필요"],
+    "answer": 3,
+    "explanation": "【정답: 4번 나의 필요】 자격은 신체, 능력, 노력과 관련되며 필요는 자격의 기준이 아니다."
+  },
+  {
+    "id": "hr_ch9_q4",
+    "chapter": 9,
+    "question": "다음 중 로크에 따르면 사물에 대한 소유권을 만드는 것은 무엇인가?",
+    "options": ["노동", "필요", "선호", "취향"],
+    "answer": 0,
+    "explanation": "【정답: 1번 노동】 로크는 노동을 통해 얻은 결과물이 개인의 소유권을 만든다고 주장하였다."
+  },
+  {
+    "id": "hr_ch9_q5",
+    "chapter": 9,
+    "question": "다음 중 로버트 노직이 자격을 만드는 원칙으로 언급하지 않은 것은 무엇인가?",
+    "options": ["재분배의 정의", "취득에서의 정의", "이전에서의 정의", "역사적 부정의의 교정"],
+    "answer": 0,
+    "explanation": "【정답: 1번 재분배의 정의】 노직은 취득, 이전, 역사적 부정의 교정을 정의의 원칙으로 언급했으나 재분배의 정의는 거부하였다."
+  },
+  {
+    "id": "hr_ch9_q6",
+    "chapter": 9,
+    "question": "다음 중 자격에 따라 나누는 것에 관련된 체제는 무엇인가?",
+    "options": ["평등주의", "능력주의", "민주주의", "공산주의"],
+    "answer": 1,
+    "explanation": "【정답: 2번 능력주의】 능력주의는 자격(재능, 노력)에 따라 자원을 나누는 체제를 의미한다."
+  },
+  {
+    "id": "hr_ch9_q7",
+    "chapter": 9,
+    "question": "다음 이야기가 옳으면 ○, 틀리면 X를 하시오.\n필요는 선호나 취향과 의미가 같다. (      )",
+    "options": ["○ (옳다)", "X (틀리다)"],
+    "answer": 1,
+    "explanation": "【정답: X】 필요는 생존과 존엄을 위한 기본적 조건이며, 단순한 선호나 취향과는 다르다."
+  },
+  {
+    "id": "hr_ch9_q8",
+    "chapter": 9,
+    "question": "다음 중 베버리지가 언급한 기본적 필요에 해당하지 않는 것은 무엇인가?",
+    "options": ["소득", "의료", "주거", "교통"],
+    "answer": 3,
+    "explanation": "【정답: 4번 교통】 베버리지는 기본적 필요로 소득, 의료, 주거, 교육, 고용을 언급했으며 교통은 포함되지 않는다."
+  },
+  {
+    "id": "hr_ch10_q1",
+    "chapter": 10,
+    "question": "다음은 괄호 안에 들어갈 알맞은 단어는 무엇인가?\n\n역사는 ( )가 빚은 그릇이다.",
+    "options": ["경제", "문화", "정치", "예술"],
+    "answer": 2,
+    "explanation": "【정답: 3번 정치】 역사는 정치가 빚은 그릇으로, 권력과 사회적 맥락에 따라 해석된다."
+  },
+  {
+    "id": "hr_ch10_q2",
+    "chapter": 10,
+    "question": "다음 이야기가 옳으면 ○, 틀리면 X를 하시오.\n프랑스 혁명은 모든 인간이 자유롭고 평등한 세상을 만들었다. (      )",
+    "options": ["○ (옳다)", "X (틀리다)"],
+    "answer": 1,
+    "explanation": "【정답: X】 프랑스 혁명은 자유와 평등을 주장했지만 실제로는 완전한 평등을 실현하지 못했다."
+  },
+  {
+    "id": "hr_ch10_q3",
+    "chapter": 10,
+    "question": "다음 중 근대 이후 시장의 특징으로 잘못된 것은 무엇인가?",
+    "options": ["핵심적", "보조적", "일상적", "필수적"],
+    "answer": 1,
+    "explanation": "【정답: 2번 보조적】 근대 이후 시장은 경제생활의 핵심이 되었으며 보조적이지 않다."
+  },
+  {
+    "id": "hr_ch10_q4",
+    "chapter": 10,
+    "question": "다음 중 로크의 자연권에 해당하지 않는 것은 무엇인가?",
+    "options": ["자아실현", "생명(신체)", "자유", "재산"],
+    "answer": 0,
+    "explanation": "【정답: 1번 자아실현】 로크의 자연권은 생명, 자유, 재산이며 자아실현은 포함되지 않는다."
+  },
+  {
+    "id": "hr_ch10_q5",
+    "chapter": 10,
+    "question": "다음 중 아담 스미스가 사회 전체의 이익을 위한 \"보이지 않는 손\"이라고 주장한 것은 무엇인가?",
+    "options": ["정치", "국가", "세금", "시장"],
+    "answer": 3,
+    "explanation": "【정답: 4번 시장】 아담 스미스는 시장의 자율적 조정 기능을 '보이지 않는 손'으로 설명하였다."
+  },
+  {
+    "id": "hr_ch10_q6",
+    "chapter": 10,
+    "question": "다음 중 영국에서 빈민을 통제하기 위해 1601년에 제정된 법은 무엇인가?",
+    "options": ["빈민법", "길버트법", "스핀햄랜드법", "사회보장법"],
+    "answer": 0,
+    "explanation": "【정답: 1번 빈민법】 1601년 엘리자베스 여왕 시대에 제정된 빈민법은 빈민 구제를 목적으로 했으나 실제로는 통제의 성격이 강했다."
+  },
+  {
+    "id": "hr_ch10_q7",
+    "chapter": 10,
+    "question": "다음 이야기가 옳으면 ○, 틀리면 X를 하시오.\n엘리자베스 여왕 시대의 빈민법은 노동을 할 수 있는 사람과 그렇지 않은 사람을 구분하지 않았다. (      )",
+    "options": ["○ (옳다)", "X (틀리다)"],
+    "answer": 1,
+    "explanation": "【정답: X】 빈민법은 노동할 수 있는 사람과 노동할 수 없는 사람을 구분하여 다른 방식으로 대우하였다."
+  },
+  {
+    "id": "hr_ch10_q8",
+    "chapter": 10,
+    "question": "다음 중 1832년부터 1834년까지 실시된 왕립빈민법관리조사의 결론이 아닌 것은 무엇인가?",
+    "options": ["빈민은 다시 부지런해졌다.", "빈민은 검소한 습관을 발전시켰다.", "빈민은 사회적 구조로 인해 빈곤에서 벗어나지 못한다.", "빈민의 노동에 대한 요구가 증가하였다."],
+    "answer": 2,
+    "explanation": "【정답: 3번 빈민은 사회적 구조로 인해 빈곤에서 벗어나지 못한다】 당시 조사 결론은 빈민의 태도 변화에 초점을 맞췄으며 구조적 원인을 인정하지 않았다."
+  },
+  {
+    "id": "hr_ch10_q9",
+    "chapter": 10,
+    "question": "다음 중 신빈민법(1834년)의 원칙이 아닌 것은 무엇인가?",
+    "options": ["균일처우의 원칙", "교정의 원칙", "원외구호금지의 원칙", "열등처우의 원칙"],
+    "answer": 1,
+    "explanation": "【정답: 2번 교정의 원칙】 신빈민법은 균일처우, 원외구호금지, 열등처우를 원칙으로 삼았다."
+  },
+  {
+    "id": "hr_ch10_q10",
+    "chapter": 10,
+    "question": "다음 중 러다이트 운동이 문제의 원인으로 지목한 것은 무엇인가?",
+    "options": ["기계", "정치", "관계", "구조"],
+    "answer": 0,
+    "explanation": "【정답: 1번 기계】 러다이트 운동은 기계제 대공업으로 인한 대량 실업을 문제의 원인으로 보고 기계를 파괴하였다."
+  },
+  {
+    "id": "hr_ch10_q11",
+    "chapter": 10,
+    "question": "다음 중 베버리지 보고서의 윤리적 원칙이 아닌 것은 무엇인가?",
+    "options": ["분파이익 금지", "5대악의 금지", "국가와 개인의 협력", "능력에 따른 분배"],
+    "answer": 3,
+    "explanation": "【정답: 4번 능력에 따른 분배】 베버리지 보고서는 능력에 따른 분배가 아니라 결핍, 무지, 질병, 불결, 나태의 5대악을 해결하는 것을 강조했다."
+  },
+  {
+    "id": "hr_ch10_q12",
+    "chapter": 10,
+    "question": "다음 중 대처 수상이 주장한 빅토리아 시대의 윤리와 관련이 없는 것은 무엇인가?",
+    "options": ["질서", "연대", "용기", "자립"],
+    "answer": 1,
+    "explanation": "【정답: 2번 연대】 대처 수상은 빅토리아 시대의 윤리로 질서, 용기, 자립을 강조했으나 연대는 포함되지 않았다."
+  },
+  {
+    "id": "hr_ch11_q1",
+    "chapter": 11,
+    "question": "다음 내용은 무엇에 대한 설명인가?\n\n\"여성은 태어나는 것이 아니라, 만들어지는 것이다.\"",
+    "options": ["성별(sex)", "젠더(gender)", "성정체성", "장애"],
+    "answer": 1,
+    "explanation": "【정답: 2번 젠더(gender)】 젠더는 사회적으로 구성된 성별을 의미하며, '여성다움'과 '남성다움' 같은 사회적 역할을 반영한다."
+  },
+  {
+    "id": "hr_ch11_q2",
+    "chapter": 11,
+    "question": "다음 이야기가 옳으면 ○, 틀리면 X를 하시오.\n집안일은 사람의 몸을 살아 숨 쉬는 상태로 유지하게 만드는 여러 종류의 행동을 말한다. (      )",
+    "options": ["○ (옳다)", "X (틀리다)"],
+    "answer": 0,
+    "explanation": "【정답: ○】 집안일은 생명을 유지하는 데 필요한 다양한 활동을 포함한다."
+  },
+  {
+    "id": "hr_ch11_q3",
+    "chapter": 11,
+    "question": "다음 중 \"유리천장을 깨자\"는 주장은 억압의 원인을 무엇이라고 생각하는가?",
+    "options": ["기회의 불평등", "자본주의의 착취", "공적영역과 사적영역의 구분", "소비문화"],
+    "answer": 2,
+    "explanation": "【정답: 3번 공적영역과 사적영역의 구분】 유리천장은 공적영역과 사적영역의 구분에서 비롯된 사회적 장벽을 의미한다."
+  },
+  {
+    "id": "hr_ch11_q4",
+    "chapter": 11,
+    "question": "다음 중 사적영역에 속하는 것은?",
+    "options": ["회사", "국가", "가정", "학교"],
+    "answer": 2,
+    "explanation": "【정답: 3번 가정】 가정은 사적영역에 속하며, 국가·회사·학교는 공적영역에 속한다."
+  },
+  {
+    "id": "hr_ch11_q5",
+    "chapter": 11,
+    "question": "다음 이야기가 옳으면 ○, 틀리면 X를 하시오.\n아담 스미스는 집안일도 노동가치가 가진다고 주장했다. (      )",
+    "options": ["○ (옳다)", "X (틀리다)"],
+    "answer": 1,
+    "explanation": "【정답: X】 아담 스미스는 집안일을 노동가치로 인정하지 않았다."
+  },
+  {
+    "id": "hr_ch11_q6",
+    "chapter": 11,
+    "question": "다음 중 자유주의적 복지국가에 해당하는 내용은 무엇인가?",
+    "options": ["가장 중심의 사회보장제도", "남성 중심의 노동시장", "돌봄에 대한 국가책임제", "공정한 경쟁의 기회"],
+    "answer": 3,
+    "explanation": "【정답: 4번 공정한 경쟁의 기회】 자유주의적 복지국가는 공정한 경쟁의 기회를 강조한다."
+  },
+  {
+    "id": "hr_ch11_q7",
+    "chapter": 11,
+    "question": "다음 중 보수주의적 복지국가에 대한 설명으로 맞는 것은 무엇인가?",
+    "options": ["민주적 계급투쟁", "가장 중심의 사회보장제도", "잔여적 복지", "경쟁적 시장"],
+    "answer": 2,
+    "explanation": "【정답: 3번 잔여적 복지】 보수주의적 복지국가는 잔여적 복지 형태를 띠며, 가족 중심의 사회보장제도를 강조한다."
+  },
+  {
+    "id": "hr_ch11_q8",
+    "chapter": 11,
+    "question": "다음 중 사민주의적 복지국가에 대한 설명이 아닌 것은 무엇인가?",
+    "options": ["적극적 노동시장 정책", "보편적 복지", "성평등의 다양한 가족", "여성 중심의 노동시장"],
+    "answer": 3,
+    "explanation": "【정답: 4번 여성 중심의 노동시장】 사민주의적 복지국가는 성평등을 강조하지만 여성 중심의 노동시장으로 한정하지 않는다."
+  },
+  {
+    "id": "hr_ch12_q1",
+    "chapter": 12,
+    "question": "다음 중 '벌거벗은 생명'이라는 뜻으로, 공동체로부터 정치적 삶을 박탈당한 존재들을 지칭하는 단어는 무엇인가?",
+    "options": ["호모 폴리티쿠스", "호모 이코노미쿠스", "호모 사케르", "호모 파베르"],
+    "answer": 2,
+    "explanation": "【정답: 3번 호모 사케르】 호모 사케르는 신성한 생명이자 벌거벗은 생명을 의미하며, 공동체에서 배제된 존재를 지칭한다."
+  },
+  {
+    "id": "hr_ch12_q2",
+    "chapter": 12,
+    "question": "다음 이야기가 옳으면 ○, 틀리면 X를 하시오.\n자본주의는 \"살게 만들고, 그냥 죽게 내버려두는 권력\"을 행사한다. (      )",
+    "options": ["○ (옳다)", "X (틀리다)"],
+    "answer": 0,
+    "explanation": "【정답: ○】 자본주의 권력은 생명을 유지시키면서도 죽음을 방치하는 권력을 행사한다."
+  },
+  {
+    "id": "hr_ch12_q3",
+    "chapter": 12,
+    "question": "다음 중 근대 이후 생산양식의 특징으로 올바른 것은 무엇인가?",
+    "options": ["토지에 밀착되어 있는 농민이 주된 생산자이다.", "자급자족 경제를 기본으로 한다.", "대다수 생산자와 생산수단이 결합되어 있다.", "생산자인 노동자와 생산수단인 기계가 분리되어 있다."],
+    "answer": 3,
+    "explanation": "【정답: 4번 생산자인 노동자와 생산수단인 기계가 분리되어 있다】 근대 이후 생산양식은 노동자와 생산수단의 분리를 특징으로 한다."
+  },
+  {
+    "id": "hr_ch12_q4",
+    "chapter": 12,
+    "question": "다음 중 장애에 대한 사회적 모델에 해당하는 내용은 무엇인가?",
+    "options": ["장애는 개인적 비극이다.", "장애인은 권리를 가진 존재다.", "장애인은 통제의 대상이다.", "개인의 적응을 목표로 한다."],
+    "answer": 1,
+    "explanation": "【정답: 2번 장애인은 권리를 가진 존재다】 사회적 모델은 장애를 사회적 조건과 억압의 문제로 보고, 권리와 사회적 변화를 강조한다."
+  },
+  {
+    "id": "hr_ch12_q5",
+    "chapter": 12,
+    "question": "다음 중 장애에 대한 개별적 모델에 해당하는 내용은 무엇인가?",
+    "options": ["전문가의 지식보다 장애인 고유의 경험을 중요하게 여긴다.", "장애는 전문적 권위가 아니라 집단적 책임의 문제다.", "장애인의 삶은 개인의 적응을 통해 개선될 수 있다.", "장애인은 보호의 대상이 아니라 권리를 가진 존재다."],
+    "answer": 2,
+    "explanation": "【정답: 3번 장애인의 삶은 개인의 적응을 통해 개선될 수 있다】 개별적 모델은 장애를 개인적 비극으로 보고 적응을 강조한다."
+  },
+  {
+    "id": "hr_ch12_q6",
+    "chapter": 12,
+    "question": "다음 빈칸에 들어갈 알맞은 단어는 무엇인가?\n\n\"손상이 있는 사람들을 장애인으로 만드는 것은 바로 ( )이다.\"",
+    "options": ["예술", "장애인 본인", "장애인 가족", "사회"],
+    "answer": 3,
+    "explanation": "【정답: 4번 사회】 사회적 조건과 구조가 손상을 장애로 만든다."
+  },
+  {
+    "id": "hr_ch12_q7",
+    "chapter": 12,
+    "question": "다음 중 나머지 셋과 다른 관점을 가진 질문은 무엇인가?",
+    "options": ["당신 신체의 어떤 결함이 물건을 다루는 데 어려움을 발생시킵니까?", "사람들이 당신과 의사소통하는 능력을 가지지 못해 어려움이 있습니까?", "교통수단이나 재정적 문제가 당신의 외출을 방해하나요?", "부적절하게 설계된 버스가 당신의 버스 이용을 어렵게 하나요?"],
+    "answer": 0,
+    "explanation": "【정답: 1번 신체 결함 질문】 나머지는 사회적 조건을 묻는 반면, 신체 결함은 개인적 모델의 관점이다."
+  },
+  {
+    "id": "hr_ch12_q8",
+    "chapter": 12,
+    "question": "다음은 인간의 어떤 특징을 묘사하고 있는가?\n\n\"애를 키우려면 가족의 다른 구성원 및 이웃의 지속적인 도움이 필요하다.\"",
+    "options": ["독립성", "자립성", "자율성", "의존성"],
+    "answer": 3,
+    "explanation": "【정답: 4번 의존성】 인간은 타인과의 관계와 도움 속에서 살아가는 의존적 존재이다."
+  },
+  {
+    "id": "hr_ch12_q9",
+    "chapter": 12,
+    "question": "다음 빈칸에 들어갈 단어로 가장 적절한 것은 무엇인가?\n\n\"손상은 손상일 뿐인데 특정한 ( ) 속에서 손상은 장애가 된다.\"",
+    "options": ["성격", "관계", "의지", "협동"],
+    "answer": 1,
+    "explanation": "【정답: 2번 관계】 손상은 사회적 관계 속에서 장애로 규정된다."
+  },
+  {
+    "id": "hr_ch12_q10",
+    "chapter": 12,
+    "question": "다음 중 장애복지정책을 넘어 장애복지정치의 영역에서 고려해야 하는 것은 무엇인가?",
+    "options": ["급여", "재정", "철학", "전달"],
+    "answer": 2,
+    "explanation": "【정답: 3번 철학】 장애복지정치는 정책뿐 아니라 철학과 세력을 함께 고려해야 한다."
+  },
+  {
+    "id": "hr_ch13_q1",
+    "chapter": 13,
+    "question": "다음 중 No人의 이미지와 관련이 없는 것은 무엇인가?",
+    "options": ["돌봄의 대상", "불통의 존재", "쓸모없는 존재", "자기 목소리를 가진 존재"],
+    "answer": 3,
+    "explanation": "【정답: 4번 자기 목소리를 가진 존재】 No人은 노인을 돌봄의 대상, 불통, 쓸모없는 존재로 보는 부정적 이미지이며, 자기 목소리를 가진 존재는 해당하지 않는다."
+  },
+  {
+    "id": "hr_ch13_q2",
+    "chapter": 13,
+    "question": "다음 중 '노인이 나이가 들면서 인간 관계와 사회로부터 물러난다'고 설명하는 관점은 무엇인가?",
+    "options": ["착취이론", "욕망이론", "분리이론", "성공적 노화론"],
+    "answer": 2,
+    "explanation": "【정답: 3번 분리이론】 분리이론은 노인이 나이가 들면서 기존 관계와 사회로부터 점차 물러난다고 보는 관점이다."
+  },
+  {
+    "id": "hr_ch13_q3",
+    "chapter": 13,
+    "question": "다음 중 Know人의 이미지와 거리가 먼 것은 무엇인가?",
+    "options": ["도서관", "사회적 짐", "노마지지(老馬之智)", "어르신"],
+    "answer": 1,
+    "explanation": "【정답: 2번 사회적 짐】 Know人은 지혜와 지식을 가진 존재로 칭송되는 이미지이며, 사회적 짐은 거리가 먼 부정적 이미지다."
+  },
+  {
+    "id": "hr_ch13_q4",
+    "chapter": 13,
+    "question": "다음 중 '어르신다움'에 해당하지 않는 것은 무엇인가?",
+    "options": ["자신의 욕망을 억눌러야 한다", "자신의 선호를 표현하면 안된다", "무언가를 선택하기보다는 양보해야 한다", "현명한 판단을 할 필요가 없다"],
+    "answer": 3,
+    "explanation": "【정답: 4번 현명한 판단을 할 필요가 없다】 '어르신다움'은 욕망 억제, 양보, 인내를 강조하지만 현명한 판단을 하지 않아도 된다는 것은 해당하지 않는다."
+  },
+  {
+    "id": "hr_ch13_q5",
+    "chapter": 13,
+    "question": "다음 중 액티브 시니어와 관련이 없는 것은 무엇인가?",
+    "options": ["고립", "성공", "개성", "취향"],
+    "answer": 0,
+    "explanation": "【정답: 1번 고립】 액티브 시니어는 은퇴 후에도 활발히 사회 활동과 여가를 즐기는 존재로, 고립과는 거리가 있다."
+  },
+  {
+    "id": "hr_ch13_q6",
+    "chapter": 13,
+    "question": "다음 중 '노인들은 그 수만큼이나 다양하다'는 생각과 관련된 것은 무엇인가?",
+    "options": ["단순화의 눈", "총체성의 눈", "획일화의 눈", "일반화의 눈"],
+    "answer": 1,
+    "explanation": "【정답: 2번 총체성의 눈】 총체성의 눈은 노인을 이해할 때 개성과 상황의 다양성을 모두 고려해야 한다는 관점이다."
+  },
+  {
+    "id": "hr_ch13_q7",
+    "chapter": 13,
+    "question": "다음 중 선배시민에 대한 설명으로 잘못된 것은 무엇인가?",
+    "options": ["시민의 삶을 먼저 사는 존재다", "앞장서서 권리를 요구하는 존재다", "돌봄이 필요한 존재다", "공동체에 참여하는 존재다"],
+    "answer": 2,
+    "explanation": "【정답: 3번 돌봄이 필요한 존재다】 선배시민은 돌봄의 대상이 아니라 권리를 요구하고 공동체에 참여하는 시민이다."
+  },
+  {
+    "id": "hr_ch13_q8",
+    "chapter": 13,
+    "question": "다음 중 선배시민의 실천이 아닌 것은 무엇인가?",
+    "options": ["세상읽기를 통한 학습", "동료와의 소통(대화)", "세상만들기를 통한 변화", "적응을 위한 역량강화"],
+    "answer": 3,
+    "explanation": "【정답: 4번 적응을 위한 역량강화】 선배시민은 학습, 대화, 참여를 통한 변화에 집중하며 단순한 적응을 위한 역량강화는 해당하지 않는다."
+  },
+  {
+    "id": "hr_ch14_q1",
+    "chapter": 14,
+    "question": "다음 중 루터의 ‘소명(천직으로서의 직업)’과 칼뱅의 ‘예정설’이 초래한 결과가 아닌 것은 무엇인가?",
+    "options": ["일하지 않는 자는 신에게 반항하는 자가 되었다.", "일하지 않는 자는 죄악에 물든 자가 되었다.", "일하지 않는 자는 부도덕한 자가 되었다.", "일하지 않는 자는 천국행이 예정된 자가 되었다."],
+    "answer": 3,
+    "explanation": "【정답: 4번】 루터와 칼뱅의 사상은 노동을 신의 뜻으로 보고 게으름을 죄악으로 규정했지만, '일하지 않는 자는 천국행이 예정되었다'는 결과는 해당하지 않는다."
+  },
+  {
+    "id": "hr_ch14_q2",
+    "chapter": 14,
+    "question": "다음 빈칸에 들어갈 말로 가장 적당한 것은 무엇인가?\n\n재화나 서비스의 경제적 가치는 ( )에 의해 결정된다. (아담 스미스)",
+    "options": ["희소성", "소비자의 선호", "노동시간", "선택"],
+    "answer": 2,
+    "explanation": "【정답: 3번 노동시간】 아담 스미스의 노동가치론은 재화나 서비스의 경제적 가치는 필요한 노동시간에 의해 결정된다고 본다."
+  },
+  {
+    "id": "hr_ch14_q3",
+    "chapter": 14,
+    "question": "다음 중 인간을 노동력이라는 상품으로 여기는 현상을 뜻하는 것은 무엇인가?",
+    "options": ["착취", "사물화", "인간화", "사회화"],
+    "answer": 1,
+    "explanation": "【정답: 2번 사물화】 사물화는 인간을 노동력이라는 상품으로 간주하여 마치 물건처럼 여기는 현상을 의미한다."
+  },
+  {
+    "id": "hr_ch14_q4",
+    "chapter": 14,
+    "question": "다음 중 인간의 활동적 삶에 대한 설명으로 틀린 것은 무엇인가?",
+    "options": ["노동이나 작업과 달리 행위는 공적인 활동이다.", "노동과 작업은 도구적 활동이지만 행위는 본질적 활동이다.", "작업은 자연의 요구에 종속된다.", "행위는 새로운 관계를 창조한다."],
+    "answer": 2,
+    "explanation": "【정답: 3번 작업은 자연의 요구에 종속된다】 작업은 자연의 요구에 종속되는 것이 아니라 도구, 제도, 예술을 만드는 창조적 활동이다."
+  },
+  {
+    "id": "hr_ch14_q5",
+    "chapter": 14,
+    "question": "다음 중 4차 산업혁명으로 등장한 ‘불안정한 노동계급’을 가리키는 말은 무엇인가?",
+    "options": ["프롤레타리아트", "부르주아지", "프레카리아트", "상퀼로트"],
+    "answer": 2,
+    "explanation": "【정답: 3번 프레카리아트】 프레카리아트는 '불안정한(precarious)'과 '노동계급(proletariat)'의 합성어로, 불안정한 노동자 계층을 의미한다."
+  },
+  {
+    "id": "hr_ch14_q1",
+    "chapter": 14,
+    "question": "다음 중 루터의 ‘소명(천직으로서의 직업)’과 칼뱅의 ‘예정설’이 초래한 결과가 아닌 것은 무엇인가?",
+    "options": ["일하지 않는 자는 신에게 반항하는 자가 되었다.", "일하지 않는 자는 죄악에 물든 자가 되었다.", "일하지 않는 자는 부도덕한 자가 되었다.", "일하지 않는 자는 천국행이 예정된 자가 되었다."],
+    "answer": 3,
+    "explanation": "【정답: 4번】 루터와 칼뱅의 사상은 노동을 신의 뜻으로 보고 게으름을 죄악으로 규정했지만, '일하지 않는 자는 천국행이 예정되었다'는 결과는 해당하지 않는다."
+  },
+  {
+    "id": "hr_ch14_q2",
+    "chapter": 14,
+    "question": "다음 빈칸에 들어갈 말로 가장 적당한 것은 무엇인가?\n\n재화나 서비스의 경제적 가치는 ( )에 의해 결정된다. (아담 스미스)",
+    "options": ["희소성", "소비자의 선호", "노동시간", "선택"],
+    "answer": 2,
+    "explanation": "【정답: 3번 노동시간】 아담 스미스의 노동가치론은 재화나 서비스의 경제적 가치는 필요한 노동시간에 의해 결정된다고 본다."
+  },
+  {
+    "id": "hr_ch14_q3",
+    "chapter": 14,
+    "question": "다음 중 인간을 노동력이라는 상품으로 여기는 현상을 뜻하는 것은 무엇인가?",
+    "options": ["착취", "사물화", "인간화", "사회화"],
+    "answer": 1,
+    "explanation": "【정답: 2번 사물화】 사물화는 인간을 노동력이라는 상품으로 간주하여 마치 물건처럼 여기는 현상을 의미한다."
+  },
+  {
+    "id": "hr_ch14_q4",
+    "chapter": 14,
+    "question": "다음 중 인간의 활동적 삶에 대한 설명으로 틀린 것은 무엇인가?",
+    "options": ["노동이나 작업과 달리 행위는 공적인 활동이다.", "노동과 작업은 도구적 활동이지만 행위는 본질적 활동이다.", "작업은 자연의 요구에 종속된다.", "행위는 새로운 관계를 창조한다."],
+    "answer": 2,
+    "explanation": "【정답: 3번 작업은 자연의 요구에 종속된다】 작업은 자연의 요구에 종속되는 것이 아니라 도구, 제도, 예술을 만드는 창조적 활동이다."
+  },
+  {
+    "id": "hr_ch14_q5",
+    "chapter": 14,
+    "question": "다음 중 4차 산업혁명으로 등장한 ‘불안정한 노동계급’을 가리키는 말은 무엇인가?",
+    "options": ["프롤레타리아트", "부르주아지", "프레카리아트", "상퀼로트"],
+    "answer": 2,
+    "explanation": "【정답: 3번 프레카리아트】 프레카리아트는 '불안정한(precarious)'과 '노동계급(proletariat)'의 합성어로, 불안정한 노동자 계층을 의미한다."
+  },
+  {
+    "id": "hr_ch14_q1",
+    "chapter": 14,
+    "question": "다음 중 루터의 ‘소명(천직으로서의 직업)’과 칼뱅의 ‘예정설’이 초래한 결과가 아닌 것은 무엇인가?",
+    "options": ["일하지 않는 자는 신에게 반항하는 자가 되었다.", "일하지 않는 자는 죄악에 물든 자가 되었다.", "일하지 않는 자는 부도덕한 자가 되었다.", "일하지 않는 자는 천국행이 예정된 자가 되었다."],
+    "answer": 3,
+    "explanation": "【정답: 4번】 루터와 칼뱅의 사상은 노동을 신의 뜻으로 보고 게으름을 죄악으로 규정했지만, '일하지 않는 자는 천국행이 예정되었다'는 결과는 해당하지 않는다."
+  },
+  {
+    "id": "hr_ch14_q2",
+    "chapter": 14,
+    "question": "다음 빈칸에 들어갈 말로 가장 적당한 것은 무엇인가?\n\n재화나 서비스의 경제적 가치는 ( )에 의해 결정된다. (아담 스미스)",
+    "options": ["희소성", "소비자의 선호", "노동시간", "선택"],
+    "answer": 2,
+    "explanation": "【정답: 3번 노동시간】 아담 스미스의 노동가치론은 재화나 서비스의 경제적 가치는 필요한 노동시간에 의해 결정된다고 본다."
+  },
+  {
+    "id": "hr_ch14_q3",
+    "chapter": 14,
+    "question": "다음 중 인간을 노동력이라는 상품으로 여기는 현상을 뜻하는 것은 무엇인가?",
+    "options": ["착취", "사물화", "인간화", "사회화"],
+    "answer": 1,
+    "explanation": "【정답: 2번 사물화】 사물화는 인간을 노동력이라는 상품으로 간주하여 마치 물건처럼 여기는 현상을 의미한다."
+  },
+  {
+    "id": "hr_ch14_q4",
+    "chapter": 14,
+    "question": "다음 중 인간의 활동적 삶에 대한 설명으로 틀린 것은 무엇인가?",
+    "options": ["노동이나 작업과 달리 행위는 공적인 활동이다.", "노동과 작업은 도구적 활동이지만 행위는 본질적 활동이다.", "작업은 자연의 요구에 종속된다.", "행위는 새로운 관계를 창조한다."],
+    "answer": 2,
+    "explanation": "【정답: 3번 작업은 자연의 요구에 종속된다】 작업은 자연의 요구에 종속되는 것이 아니라 도구, 제도, 예술을 만드는 창조적 활동이다."
+  },
+  {
+    "id": "hr_ch14_q5",
+    "chapter": 14,
+    "question": "다음 중 4차 산업혁명으로 등장한 ‘불안정한 노동계급’을 가리키는 말은 무엇인가?",
+    "options": ["프롤레타리아트", "부르주아지", "프레카리아트", "상퀼로트"],
+    "answer": 2,
+    "explanation": "【정답: 3번 프레카리아트】 프레카리아트는 '불안정한(precarious)'과 '노동계급(proletariat)'의 합성어로, 불안정한 노동자 계층을 의미한다."
+  },
+  {
+    "id": "hr_ch15_q1",
+    "chapter": 15,
+    "question": "다음 중 사회복지윤리의 이중적 초점으로 잘못 짝지어진 것은 무엇인가?",
+    "options": [
+      "영역: 개인-인접환경 / 사회-사회구조",
+      "목표: 개인-사례관리 / 사회-사회관리",
+      "기술: 개인-대화와 참여 / 사회-상담과 치료",
+      "정체성: 개인-서비스 전달자 / 사회-교육가 및 조직가"
+    ],
+    "answer": 2,
+    "explanation": "【정답: ③】 사회복지윤리의 기술은 개인에게 상담·치료, 사회에는 대화·참여가 맞으며, 제시된 짝은 잘못되었다."
+  },
+  {
+    "id": "hr_ch15_q2",
+    "chapter": 15,
+    "question": "다음 이야기가 옳으면 ○, 틀리면 X를 하시오.\n사회 관리가 우선되기 때문에, 사례 관리는 중요하지 않다.",
+    "options": ["○ (옳다)", "X (틀리다)"],
+    "answer": 1,
+    "explanation": "【정답: X】 사회 관리가 중요하지만 사례 관리 역시 필수적이며, 두 영역은 상호 보완적이다."
+  },
+  {
+    "id": "hr_ch15_q3",
+    "chapter": 15,
+    "question": "다음 빈칸에 들어갈 말로 알맞게 짝지어진 것은 무엇인가?\n\n한국의 사회복지사 윤리강령(2023년)은 핵심가치로 ( A )와 ( B )을 제시하고 있다.",
+    "options": [
+      "A - 인간의 존엄성, B - 사회정의",
+      "A - 자선과 시혜, B - 공정한 기회",
+      "A - 전문적 자세, B - 기술과 능력",
+      "A - 인권의 보호, B - 자율성"
+    ],
+    "answer": 0,
+    "explanation": "【정답: ①】 한국 사회복지사 윤리강령은 핵심가치로 인간의 존엄성과 사회정의를 제시한다."
+  },
+  {
+    "id": "hr_ch15_q4",
+    "chapter": 15,
+    "question": "다음 중 한국 사회복지사 윤리강령의 '사회정의'에 해당하는 내용이 아닌 것은 무엇인가?",
+    "options": [
+      "사회복지사는 개인, 가족, 집단, 지역사회의 다양성을 존중하는 포용적 지역사회를 만들기 위해 노력한다.",
+      "사회복지사는 클라이언트의 자율성을 존중하고, 자기 결정을 지원한다.",
+      "사회복지사는 부적절하고 억압적이며 불공정한 사회제도와 관행을 변화시키기 위해 사회의 다양한 구성원들과 협력한다.",
+      "사회복지사는 포용적이고 책임 있는 사회를 만들어 가기 위해 연대 활동을 한다."
+    ],
+    "answer": 1,
+    "explanation": "【정답: ②】 클라이언트의 자율성 존중은 '사회정의'가 아니라 '인간의 존엄성' 가치에 해당한다."
+  },
+  {
+    "id": "hr_ch15_q5",
+    "chapter": 15,
+    "question": "다음은 무엇에 대한 설명인가?\n\n이것은 사회복지사가 대상자와 전문적인 관계 이외의 또 다른 역할을 할 때 발생한다. 사회복지사가 자신의 이익이나 욕구를 충족시키기 위해 자신의 지위를 이용하는 행위는 비윤리적인 행위로 엄격히 금지된다.",
+    "options": ["알권리", "정보에 입각한 동의", "권익 옹호", "이중관계"],
+    "answer": 3,
+    "explanation": "【정답: ④】 이중관계는 사회복지사가 전문적 관계 외에 사적 관계를 맺는 것으로, 비윤리적 행위로 금지된다."
+  },
+  {
+    "id": "hr_ch15_q6",
+    "chapter": 15,
+    "question": "다음 중 자신의 이념을 타인에게 강제하지 않으면서 다양한 논쟁이 드러나도록 만드는 실천 기술을 무엇이라 부르는가?",
+    "options": ["정치적 중립주의", "전략적 중립주의", "윤리적 중립주의", "철학적 중립주의"],
+    "answer": 1,
+    "explanation": "【정답: ②】 전략적 중립주의는 강압을 피하면서도 다양한 논쟁을 드러내고 시민 참여를 촉진하는 실천 기술이다."
+  }
+]
 };
 
 /* ════════════════════════════════════════════════════════════
@@ -21439,7 +24832,7 @@ const SUBJECT_META = {
   3: { name:'사회복지와 인권', icon:'🤝', range:'0~15강', color:'var(--green)' },
   4: { name:'산업복지론', icon:'🏭', range:'1~15강', color:'var(--orange)' },
   5: { name:'프로그램 개발과 평가', icon:'📊', range:'1~15강', color:'var(--red)' },
-  6: { name:'사회복지인권과 철학', icon:'💭', range:'1~15강', color:'var(--cyan)' }
+  6: { name:'사회복지윤리와 철학', icon:'💭', range:'1~15강', color:'var(--cyan)' }
 };
 
 /* 현재 퀴즈 상태 */
