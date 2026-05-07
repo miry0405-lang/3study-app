@@ -356,7 +356,9 @@ body {
 #view-summary .comp-table td:first-child { font-weight:700; color:#6b7280; font-size:.85em; white-space:nowrap; }
 #view-summary .comp-table tr:nth-child(even) td { background:#fafafa; }
 #view-summary .th-blue { background:var(--c1)!important; }
-#view-summary .th-green { background:var(--c2)!important; }
+#view-summary .th-green { background:var(--c2)!important; }|
+#view-summary .th-purple { background:var(--c5)!important; }
+
 /* 하이라이트 박스 */
 #view-summary .hbox {
   border-radius:10px; padding:12px 14px; margin-top:8px;
@@ -8496,9 +8498,28 @@ const SUMMARY_DATA = {
                 <tr><td>가족·선생님과의 <b>의사소통 증진</b></td><td>보호자·교사의 <b>선입견 변화</b></td></tr>
               </table>
             `
+          },
+          {
+              icon: '🐟', title: '제인 아담스 — "물고기 잡는 법" 비유 ★',
+              html: `
+                <span class="kichul">⭐ 기출</span>
+                <div class="hbox hbox-blue"><b>제인 아담스(Jane Addams)</b>: 미국 사회개혁가·여성운동가 / 노벨 평화상 수상<br>대표 기관: <b>헐 하우스(Hull House)</b> — 1889년 시카고 설립 (빈곤 이민자 지원)</div>
+                <div class="sub">인보관 운동의 핵심 철학 — "물고기" 비유</div>
+                <table class="comp-table">
+                  <tr><th>구분</th><th class="th-blue">잔여적 방식 (COS)</th><th class="th-green">제도적 방식 (인보관)</th></tr>
+                  <tr><td><b>비유</b></td><td>물고기를 <b>잡아다 주는</b> 방식</td><td>물고기 <b>잡는 법을 가르치는</b> 방식</td></tr>
+                  <tr><td><b>대상 인식</b></td><td>수혜자·자선 대상</td><td><b>이웃이자 동등한 존재</b></td></tr>
+                  <tr><td><b>방식</b></td><td>시혜·자선 중심</td><td>함께 살며 가르치고 연대</td></tr>
+                </table>
+                <div class="sub">헐 하우스 주요 활동</div>
+                <ul class="pts green">
+                  <li>아동 돌봄 / 영어 교육 / 직업 훈련 / 문화 프로그램 제공</li>
+                  <li>빈곤 이민자를 이웃으로 대하며 <b>함께 거주</b></li>
+                </ul>
+              `
           }
-        ]
-      },
+         ]
+        },
       {
         num: '3강', name: '사회복지 프로그램의 기획',
         cards: [
@@ -8540,6 +8561,73 @@ const SUMMARY_DATA = {
                 <li>클라이언트의 <b>동기 부여</b></li>
                 <li>조직 구성원의 <b>사기 증진</b></li>
               </ul>
+            `
+          },
+          {
+            icon: '🔗', title: '정보의 사슬 (Chain of Information) ★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <div class="hbox hbox-blue"><b>정보의 사슬</b>: 프로그램 기획은 일회성 과정이 아니라 <b>순환적·반복적 과정</b>. 질문의 질이 프로그램 성과의 질로 연결됨</div>
+              <div class="sub">정보의 사슬 순환 구조</div>
+              <div class="flow" style="flex-wrap:wrap">
+                <span class="flow-item">① 질문하기</span>
+                <span class="flow-arrow">▶</span>
+                <span class="flow-item">② 답 구하기<br>(질문 소화)</span>
+                <span class="flow-arrow">▶</span>
+                <span class="flow-item">③ 기획하기</span>
+                <span class="flow-arrow">▶</span>
+                <span class="flow-item">④ 행동</span>
+                <span class="flow-arrow">▶</span>
+                <span class="flow-item">① 새 질문<br>(순환)</span>
+              </div>
+              <div class="hbox hbox-yellow">평가 결과 → 새로운 질문의 근거 → 다시 기획 → 행동 → 순환 반복<br>💡 <b>반복 순환</b>을 통해 질 좋은 프로그램 개발이 가능함</div>
+              <div class="sub">기출 선지 분석</div>
+              <table class="comp-table">
+                <tr><th>선지</th><th>정오</th></tr>
+                <tr><td>정보는 한 번만 수집하면 충분하다</td><td>❌</td></tr>
+                <tr><td><b>반복되는 과정의 순환을 통해 질 좋은 프로그램 개발이 가능하다</b></td><td>✅ 정답</td></tr>
+                <tr><td>정보 수집은 외부 전문가에게만 맡긴다</td><td>❌</td></tr>
+                <tr><td>정보의 사슬은 프로그램 평가 단계에서만 필요하다</td><td>❌</td></tr>
+              </table>
+            `
+          },
+          {
+            icon: '📐', title: '프로그램 기획 주요 활동 순서 ★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <div class="sub">프로그램 기획 주요 활동 올바른 순서</div>
+              <div class="flow" style="flex-wrap:wrap">
+                <span class="flow-item">① 상황분석</span>
+                <span class="flow-arrow">▶</span>
+                <span class="flow-item">② 사회문제 분석<br>및 욕구조사</span>
+                <span class="flow-arrow">▶</span>
+                <span class="flow-item">③ 목적 및<br>목표 설정</span>
+                <span class="flow-arrow">▶</span>
+                <span class="flow-item">④ 참여자 선정</span>
+              </div>
+              <table class="comp-table">
+                <tr><th>단계</th><th>활동 내용</th></tr>
+                <tr><td><b>① 상황분석</b></td><td>지역사회 현황, 기관 역량, 가용 자원 파악</td></tr>
+                <tr><td><b>② 사회문제 분석·욕구조사</b></td><td>문제의 원인·크기 파악, 대상자 욕구 확인</td></tr>
+                <tr><td><b>③ 목적 및 목표 설정</b></td><td>달성하고자 하는 방향과 구체적 목표 수립</td></tr>
+                <tr><td><b>④ 참여자 선정</b></td><td>일반집단 → 위험집단 → 표적집단 → 클라이언트</td></tr>
+              </table>
+            `
+          },
+            {
+            icon: '🧠', title: '기획 필요성 — 합리성 증진의 의미 ★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <div class="hbox hbox-blue"><b>합리성 증진</b>: 타당한 인과관계를 바탕으로 <b>논리적이고 체계적인 의사결정</b>을 하는 것</div>
+              <div class="sub">기획 필요성 5가지 — 핵심 의미 정리</div>
+              <table class="comp-table">
+                <tr><th>필요성</th><th>핵심 의미</th></tr>
+                <tr><td><b>합리성 증진</b></td><td>타당한 인과관계 기반 <b>논리적·체계적 의사결정</b></td></tr>
+                <tr><td><b>효과성·효율성 증진</b></td><td>목표 달성 + <b>비용 대비 최대 성과</b></td></tr>
+                <tr><td><b>책임성 증진</b></td><td>자원을 효과적·효율적으로 사용했음을 <b>증명</b></td></tr>
+                <tr><td><b>클라이언트 동기 부여</b></td><td>참여 의지와 변화 <b>동기 강화</b></td></tr>
+                <tr><td><b>구성원 사기 증진</b></td><td>팀의 목표 공유와 <b>참여 의식 향상</b></td></tr>
+              </table>
             `
           },
           {
@@ -13570,7 +13658,7 @@ const SUMMARY_DATA = {
 
     { icon: "📊", title: "2022년 성별 주요 고용 지표", html: `
       <table class="comp-table">
-        <tr><th>지표</th><th class="th-red">여성</th><th class="th-blue">남성</th></tr>
+        <tr><th>지표</th><th  class="th-blue">여성</th><th>남성</th></tr>
         <tr><td>15~64세 고용률</td><td>60.0%</td><td>76.9%</td></tr>
         <tr><td>평균 시간당 임금</td><td>18,113원</td><td>25,866원</td></tr>
         <tr><td><b>비정규직 비율</b></td><td><strong style="color:var(--c3)">46.0%</b></td><td>30.6%</td></tr>
@@ -13609,7 +13697,7 @@ const SUMMARY_DATA = {
         <span class="flow-item">공동 지향점 모색</span>
       </div>
       <ul class="pts green">
-        <li>여성, 장애인, 노인 등의 <b>연대</b>를 통한 조직화</li>
+        <li>여성, 장애인, 노인 소수자의 <b>연대</b>를 통한 조직화</li>
         <li>여성만의 이익이 아닌 <b>시민으로서의 권리 획득</b>을 위한 조직화</li>
         <li>문화적 무시 + 경제적 부정의 극복 → <b>동등한 시민으로 공동체 참여</b></li>
         <li>권리 → 권력 획득으로 나아가는 것이 핵심</li>
@@ -13647,7 +13735,7 @@ const SUMMARY_DATA = {
 
     { icon: '📂', title: '1. 장애와 벌거벗은 생명',
       html: `<div class="hbox hbox-red">
-<b>★ 핵심 문제 제기</b><br/>
+<b>핵심 문제 제기</b><br/>
 지적장애 일가족 숨진 채 발견 — 이것은 <b>사회적 타살</b>인가, 아니면 죽도록 <b>방치</b>한 것인가?
 </div>
 <ul class="pts red">
@@ -13661,7 +13749,7 @@ const SUMMARY_DATA = {
 <tr><td>권력 행사</td><td><b>"죽게 만들고, 그냥 살게 내버려두는"</b> 방식<br/>국왕·영주가 생사여탈권 행사</td><td><b>"살게 만들고, 그냥 죽게 내버려두는"</b> 방식<br/>고용되지 않은 인민에 생사여탈권 행사</td></tr>
 </table>
 <div class="hbox hbox-yellow" style="margin-top:10px">
-★ <b>핵심 전환</b>: 근대 이전 = <b>죽게 만드는</b> 권력 → 자본주의 = <b>살게 만드는</b> 권력<br/>
+<span class="kichul">⭐ 기출</span> <b>핵심 전환</b>: 근대 이전 = <b>죽게 만드는</b> 권력 → 자본주의 = <b>살게 만드는</b> 권력<br/>
 단, 쓸모없다고 판단되면 죽게 내버려 둠
 </div>` },
 
@@ -13728,8 +13816,9 @@ const SUMMARY_DATA = {
 <tr><td><b>장애<br/>(Disability)</b></td><td>신체적 손상을 지닌 사람들에 대해 거의 또는 아무런 고려도 하지 않음으로써, 주류 사회활동의 참여에서 배제하는 <b>당대의 사회 조직에 의해 야기된 불리함이나 활동의 제한</b></td></tr>
 </table>
 <div class="hbox hbox-yellow" style="margin-top:10px">
-★ <b>"손상이 있는 사람들을 장애인으로 만드는 것은 바로 사회다."</b>
-</div>` },
+우리의 관점에서 <b>손상(impairment)이 있는 사람들을 장애인으로 만드는것은 바로 사회다.</b> 장애(disability)는 사회의 완전한 참여에서 불필요하게 고립되고 배제됨으로써 우리의 신체적 손상에 덧붙여 부과되는 것이다. 즉 장애인은 사회 내에서 억압받는 집단인 것이다. 이것을 이해하기 위해 서는 신체적 손상과 장애라고 불리는 사회적 상태 사이의 차이를 이해하는 것이 필요하다. 우리는 <b>손상</b>을 팔다리의 일부나 전부가 부재한 것, 또는 팔다리, 몸의 기관 이나 작동방식에 결함을 지니고 있는 것으로 정의한다. 그리고 <b>장애</b>는 신체적 손상을 지닌 사람들에 대해 거의 또는 아무런 고려도 하지 않음 으로써, 그들을 주류 사회활동의 참여에서 배제하는 당대의 사회 조직에 의해 야기된 불리함이나 활동의 제한을 말한다.
+</div>
+` },
 
     { icon: '🔄', title: '마이클 올리버의 질문 재구성',
       html: `<span class="kichul">⭐ 기출</span>
@@ -13783,7 +13872,7 @@ const SUMMARY_DATA = {
 ★ <b>"의존 자원이 많을수록 독립적 삶을 살 수 있다."</b>
 </div>` },
 
-    { icon: '🇸🇪', title: '스웨덴 콘라드 사례 & 총체적 의존 체계',
+    { icon: '🧑‍🦽', title: '스웨덴 콘라드 사례 & 총체적 의존 체계',
       html: `<span class="kichul">⭐ 기출</span>
 <div class="hbox hbox-green">
 <b>스웨덴 콘라드</b> — 스톡홀름의 17세 소년, 3층에서 추락해 목 부상·휠체어 사용<br/>
@@ -13884,6 +13973,7 @@ const SUMMARY_DATA = {
     `},
 
     { icon: "🚫", title: "No人 — 부정적 이미지", html: `
+      <span class="kichul">⭐ 기출</span>
       <div class="sub">사람들이 떠올리는 노인 이미지</div>
       <div class="badge-row">
         <span class="badge badge-red">허약하다</span>
@@ -13917,15 +14007,14 @@ const SUMMARY_DATA = {
       <div class="sub">한국 통계 (분리이론을 뒷받침)</div>
       <table class="comp-table">
         <tr><th>지표</th><th class="th-red">수치</th></tr>
-        <tr><td>노인 빈곤율</td><td><b>40.4%</b> (OECD 1위)</td></tr>
-        <tr><td>노인 취업률</td><td>36.2% (단, 대부분 질 나쁜 일자리)</td></tr>
+        <tr><td>노인 빈곤율</td><td><b>40.4%</b> (2020) (OECD 1위)</td></tr>
+        <tr><td>노인 취업률</td><td>36.2% (2022) (단, 대부분 질 나쁜 일자리)</td></tr>
         <tr><td>노인 자살률</td><td>인구 10만 명당 <b>39.9명</b></td></tr>
       </table>
       <div class="hbox hbox-red">취업률이 높아 보여도 <b>사회로부터 분리된 채 홀로 하는 질 나쁜 일자리</b>라는 점이 핵심</div>
     `},
 
     { icon: "⚠️", title: "연령 차별주의 (Ageism)", html: `
-      <span class="kichul">⭐ 기출</span>
       <div class="hbox hbox-blue">나이 때문에 받는 <b>부정적 태도·부당한 대우</b></div>
       <div class="sub">어르신 언어 (Elderspeak) 사례</div>
       <ul class="pts red">
@@ -13967,6 +14056,7 @@ const SUMMARY_DATA = {
 
     /* ───────── 2. 노인의 두 번째 이미지 ───────── */
     { icon: "📂", title: "2. 노인의 두 번째 이미지 — Know人", html: `
+    <span class="kichul">⭐ 기출</span>
       <div class="badge-row">
         <span class="badge badge-green">지혜</span>
         <span class="badge badge-green">칭송</span>
@@ -14018,9 +14108,9 @@ const SUMMARY_DATA = {
       <div class="sub">세 가지 하위 개념</div>
       <table class="comp-table">
         <tr><th>개념</th><th class="th-green">내용</th></tr>
-        <tr><td><b>활동적 노화</b></td><td>왕성한 활동을 하는 노년</td></tr>
-        <tr><td><b>생산적 노화</b></td><td>은퇴 후에도 경제활동에 참여하여 사회 성장에 기여</td></tr>
-        <tr><td><b>성공적 노화</b></td><td>질병·장애 가능성을 낮추고, 인지·신체 기능 유지, 삶에 적극 참여</td></tr>
+        <tr><td><b>활동적 노화</b></td><td>활기찬 노년, 행복한 노년</td></tr>
+        <tr><td><b>생산적 노화</b></td><td>경제적 능력, 경제적 참여, 경제적 기여</td></tr>
+        <tr><td><b>성공적 노화</b></td><td>질병과 장애의 낮은 가능성, 높은 인지적, 물리적 기능 유지, 삶에 적극적인 참여</td></tr>
       </table>
       <div class="sub">액티브 시니어의 조건 (한계)</div>
       <ul class="pts red">
@@ -14050,7 +14140,7 @@ const SUMMARY_DATA = {
       <div class="hbox hbox-blue"><b>"노인들은 그 수만큼이나 다양하다"</b></div>
       <ul class="pts">
         <li>NO人·Know人·액티브 시니어 모두 노인을 <b>단순화·획일화·일반화</b>하는 시선</li>
-        <li>총체성의 눈: 각각의 노인은 모두 다른 개성·능력·개인적 상황·사회적 상황을 가진 존재</li>
+        <li><b>총체성의 눈</b>: 각각의 노인은 모두 다른 개성·능력·개인적 상황·사회적 상황을 가진 존재</li>
         <li>신체적 능력은 저하됐어도 정신적 능력이 더 왕성할 수 있음</li>
         <li>신체 기능도 부위마다 능력의 차이가 다름</li>
       </ul>
@@ -14066,10 +14156,10 @@ const SUMMARY_DATA = {
       </table>
       <div class="flow" style="flex-direction:column;gap:6px;margin-top:10px">
         <span class="flow-item">세상에 던져진 노인</span>
-        <span class="flow-arrow">▼ (선택)</span>
+        <span class="flow-arrow">     ▼ (선택)</span>
         <div style="display:flex;gap:8px">
-          <span class="flow-item" style="flex:1;background:var(--c3l);color:var(--c3);font-size:0.85em">순응·수능<br>No·Know 틀 속에서<br>체념·숙명론</span>
-          <span class="flow-item" style="flex:1;background:var(--c2l);color:var(--c2);font-size:0.85em">돌파<br>나이 든 보통 사람의<br>삶을 살아감</span>
+          <span class="flow-item" style="flex:1;background:var(--c3l);color:var(--c3);font-size:0.85em">순응<br>No·Know<br> 틀 속에서<br>체념·숙명론</span>
+          <span class="flow-item" style="flex:1;background:var(--c2l);color:var(--c2);font-size:0.85em">돌파<br>나이 든<br>보통 사람의<br>삶을 살아감</span>
         </div>
       </div>
     `},
@@ -14080,7 +14170,7 @@ const SUMMARY_DATA = {
       <table class="comp-table">
         <tr><th>대상</th><th class="th-red">이분법적 선택지</th><th class="th-green">진짜 답</th></tr>
         <tr><td>장애인</td><td>장애 극복 OR 절망에 빠진 존재</td><td>그냥 <b>보통 사람</b></td></tr>
-        <tr><td>노인</td><td>에No人 OR 액티브 시니어</td><td>그냥 <b>나이 든 보통 사람</b></td></tr>
+        <tr><td>노인</td><td>No人 OR 액티브 시니어</td><td>그냥 <b>나이 든 보통 사람</b></td></tr>
       </table>
       <div class="divider"></div>
       <div class="sub">보통 사람으로 살기 위한 조건</div>
@@ -14106,7 +14196,7 @@ const SUMMARY_DATA = {
     { icon: "🏛️", title: "선배 시민 (Social Senior Citizen) 의 정의", html: `
       <span class="kichul">⭐ 기출</span>
       <div class="hbox hbox-purple">
-        "시민권이 당연한 권리임을 <b>자각</b>하고, 시민권을 실현하기 위해 <b>공동체에 참여</b>하며, <b>후배 시민과 함께</b> 인간이자 시민으로서 목소리를 내는 노인"
+        "<b>시민권이 당연한 권리임을 자각</b>하고, 시민권을 실현하기 위해 <b>공동체에 참여</b>하며, <b>후배 시민과 함께</b> 인간이자 시민으로서 목소리를 내는 노인"
       </div>
       <div class="sub">노인도 시민이다 — 세 가지 의미</div>
       <table class="comp-table">
@@ -14139,15 +14229,8 @@ const SUMMARY_DATA = {
       <span class="kichul">⭐ 기출</span>
       <table class="comp-table">
         <tr><th>구분</th><th class="th-red">명사로서의 선배 ✗</th><th class="th-green">동사로서의 선배 ✓</th></tr>
-        <tr><td>의미</td><td>직장·군대·학교 선배처럼<br>단순히 먼저 태어난 사람</td><td><b>먼저 한다, 마중한다</b><br>시민의 삶을 먼저 살아가며 후배 시민과 함께 공동체의 길을 걷는 것</td></tr>
+        <tr><td>의미</td><td>직장·군대·학교 선배처럼 단순히 먼저 태어난 사람</td><td><b>먼저 한다, 마중한다</b><br>시민의 삶을 먼저 살아가며 후배 시민과 함께 공동체의 길을 걷는 것</td></tr>
       </table>
-      <div class="flow" style="margin-top:10px">
-        <span class="flow-item" style="background:var(--c1l)">후배 시민</span>
-        <span class="flow-arrow">← 바라보며 마중 ←</span>
-        <span class="flow-item" style="background:var(--c2l)">선배 시민</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-item">공동체의 길</span>
-      </div>
       <div class="hbox hbox-purple" style="margin-top:10px">선배 시민에서 핵심은 <b>선배</b>가 아니라 <b>시민</b> — 선배 시민·후배 시민 모두 <b>같은 시민</b> (상대적 개념)</div>
     `},
 
@@ -14173,7 +14256,7 @@ const SUMMARY_DATA = {
 
     { icon: "⚖️", title: "산업화 시대 vs 신자유주의 시대", html: `
       <table class="comp-table">
-        <tr><th>구분</th><th class="th-blue">산업화 시대</th><th class="th-red">신자유주의 시대 (현재)</th></tr>
+        <tr><th>구분</th><th>산업화 시대</th><th class="th-blue">신자유주의 시대 (현재)</th></tr>
         <tr><td>경제 성장</td><td>고성장·일자리 풍부</td><td>저성장·좋은 일자리 부족</td></tr>
         <tr><td>물가</td><td>낮음</td><td>높음 (특히 주거·교육비)</td></tr>
         <tr><td>자녀 수</td><td>많음</td><td>적음</td></tr>
@@ -14184,7 +14267,6 @@ const SUMMARY_DATA = {
     `},
 
     { icon: "🌾", title: "자식 농사 → 국가 농사로의 전환", html: `
-      <span class="kichul">⭐ 기출</span>
       <div class="sub">산업화 시대의 논리</div>
       <div class="hbox hbox-blue">"애를 잘 키워놓으면 내 노후가 대비됐다"<br><small>→ 빈곤한 노년 = 자식들의 불효 탓</small></div>
       <div class="sub">현재의 논리</div>
@@ -14193,7 +14275,6 @@ const SUMMARY_DATA = {
     `},
 
     { icon: "🏠", title: "시민의 집 — 한 손(Hansson) 총리의 비유", html: `
-      <span class="kichul">⭐ 기출</span>
       <div class="hbox hbox-blue" style="font-size:0.9em">"훌륭한 가족은 그 어떤 구성원도 특별 대우하거나 천대하지 않습니다. 형제들 간에 평등, 배려, 협력, 도움이 존재합니다. 이를 국민과 시민의 위대한 가족 개념에 적용할 경우, 이는 <b>특권을 가진 자와 천대받는 자, 지배자와 종속자, 부자와 빈자, 약탈자와 약탈당한 자로 갈라놓는 모든 사회적·경제적 장벽의 철폐</b>를 의미합니다."</div>
       <div class="sub">시민의 집의 특징</div>
       <table class="comp-table">
@@ -14207,13 +14288,14 @@ const SUMMARY_DATA = {
     `},
 
     { icon: "🔄", title: "선배 시민의 실천 = 시민의 집 만들기", html: `
+    <span class="kichul">⭐ 기출</span>
       <div class="flow" style="flex-direction:column;gap:6px">
         <div style="display:flex;gap:8px">
-          <span class="flow-item" style="flex:1;background:var(--c1l)">📖 학습<br>(세상읽기)</span>
+          <span class="flow-item" style="flex:1;background:var(--c1l)">📖<br>학습<br>(세상읽기)</span>
           <span class="flow-arrow" style="align-self:center">＋</span>
-          <span class="flow-item" style="flex:1;background:var(--c2l)">🤝 소통·연대<br>(후배 시민과)</span>
+          <span class="flow-item" style="flex:1;background:var(--c2l)">🤝<br>소통·연대<br>(후배 시민과)</span>
           <span class="flow-arrow" style="align-self:center">＋</span>
-          <span class="flow-item" style="flex:1;background:var(--c4l)">🌍 변화 참여<br>(세상만들기)</span>
+          <span class="flow-item" style="flex:1;background:var(--c4l)">🌍<br>변화 참여<br>(세상만들기)</span>
         </div>
         <span class="flow-arrow">▼</span>
         <span class="flow-item" style="background:var(--c5l);color:var(--c5)">🏠 시민의 집</span>
@@ -14321,7 +14403,6 @@ const SUMMARY_DATA = {
     ` },
 
     { icon: "🔒", title: "17세기 '대감금'의 시대", html: `
-      <span class="kichul">⭐ 기출</span>
       <ul class="pts">
         <li>배경: 인클로저 운동으로 토지를 잃은 농민, 면직 병사, 실직 직인, 가난한 학생, 병자</li>
         <li>공통점: <b>노동하지 않는 자들</b></li>
@@ -14332,7 +14413,7 @@ const SUMMARY_DATA = {
         <span class="badge badge-gray">전 유럽으로 확산</span>
       </div>
       <div class="hbox hbox-red" style="margin-top:10px">
-        칼뱅주의 영향: "노동하지 않음 = 부도덕" → 감금 시설이 먼저 세워짐
+        <b>칼뱅주의 영향: "노동하지 않음 = 부도덕"</b> → 감금 시설이 먼저 세워짐
       </div>
     ` },
 
@@ -14358,7 +14439,6 @@ const SUMMARY_DATA = {
     ` },
 
     { icon: "🔄", title: "과거 vs 새로운 생산 양식", html: `
-      <span class="kichul">⭐ 기출</span>
       <table class="comp-table">
         <tr><th>구분</th><th class="th-blue">과거의 생산 양식</th><th class="th-green">새로운 생산 양식(산업혁명 이후)</th></tr>
         <tr><td>동력</td><td>자연적 힘(바람·물·동물·인체)</td><td>인공적 힘(기계)</td></tr>
@@ -14480,7 +14560,6 @@ const SUMMARY_DATA = {
     ` },
 
     { icon: "🍞", title: "생존 문제 해결 방식 (빵의 문제)", html: `
-      <span class="kichul">⭐ 기출</span>
       <div class="hbox hbox-yellow">
         인간은 생존 문제(빵)가 해결되어야 <b>의미 있는 작업과 행위</b>가 가능하다
       </div>
@@ -14521,20 +14600,22 @@ const SUMMARY_DATA = {
     ` },
 
     { icon: "📊", title: "가이 스탠딩의 계급 구조", html: `
-      <div style="display:flex;flex-direction:column;gap:6px">
-        <div class="hbox hbox-yellow" style="text-align:center;padding:6px 10px">극소수 부호 계급</div>
-        <div class="hbox hbox-yellow" style="text-align:center;padding:6px 10px">엘리트 계급</div>
-        <div class="hbox hbox-blue" style="text-align:center;padding:6px 10px">샐러리아트 (상대적으로 안정된 봉급생활자)</div>
-        <div class="hbox hbox-green" style="text-align:center;padding:6px 10px">프로피시언 (프리랜서 전문가 계급)</div>
-        <div class="hbox hbox-blue" style="text-align:center;padding:6px 10px">프롤레타리아 (핵심 노동 계급)</div>
-        <div style="border-top:2px dashed var(--c3);margin:2px 0"></div>
-        <div class="hbox hbox-red" style="text-align:center;padding:6px 10px"><b>프레카리아트 (비정규직) ← 점점 더 많은 인구가 내몰림</b></div>
-        <div class="hbox hbox-red" style="text-align:center;padding:6px 10px">룸펜 프레카리아트 (노숙자·극빈층)</div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:3px;padding:0.5rem 0;width:100%">
+      <div style="width:18%;min-width:110px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:4px;background:#FAEEDA;color:#633806;border:1.5px solid #EF9F27;font-size:13px;font-weight:500;text-align:center">극소수 부호 계급</div>
+      <div style="width:28%;min-width:140px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:4px;background:#FAEEDA;color:#633806;border:1.5px solid #EF9F27;font-size:13px;font-weight:500;text-align:center">엘리트 계급</div>
+      <div style="width:45%;min-width:180px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:4px;background:#E6F1FB;color:#0C447C;border:1.5px solid #378ADD;font-size:13px;font-weight:500;text-align:center">샐러리아트 (안정된 봉급생활자)</div>
+      <div style="width:52%;min-width:210px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:4px;background:#EAF3DE;color:#27500A;border:1.5px solid #639922;font-size:13px;font-weight:500;text-align:center">프로피시언 (프리랜서 전문가)</div>
+      <div style="width:64%;min-width:240px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:4px;background:#E6F1FB;color:#0C447C;border:1.5px solid #378ADD;font-size:13px;font-weight:500;text-align:center">프롤레타리아 (핵심 노동 계급)</div>
+      <div style="border-top:2px dashed #E24B4A;width:80%;margin:4px 0"></div>
+      <div style="width:78%;min-width:280px;height:42px;display:flex;align-items:center;justify-content:center;border-radius:4px;background:#FCEBEB;color:#791F1F;border:2px solid #E24B4A;font-size:13px;font-weight:500;text-align:center">
+        <b>프레카리아트 (비정규직)</b>&nbsp;<span style="font-size:10px;background:#E24B4A;color:#fff;padding:2px 6px;border-radius:3px">← 점점 증가</span>
       </div>
+  <div style="width:88%;min-width:300px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:4px;background:#FCEBEB;color:#791F1F;border:1.5px solid #E24B4A;font-size:13px;font-weight:500;text-align:center">룸펜 프레카리아트 (노숙자·극빈층)</div>
+
+</div>
     ` },
 
     { icon: "⚖️", title: "변하지 않는 본질 — 경제적 부정의 3가지", html: `
-      <span class="kichul">⭐ 기출</span>
       <div class="sub">출처: 낸시 프레이저 외(2016). 《불평등과 모욕을 넘어》</div>
       <table class="comp-table">
         <tr><th>개념</th><th class="th-red">내용</th></tr>
@@ -14548,7 +14629,6 @@ const SUMMARY_DATA = {
     ` },
 
     { icon: "🌍", title: "공동체 참여를 통한 정의", html: `
-      <span class="kichul">⭐ 기출</span>
       <ul class="pts purple">
         <li>여성·장애인·노인·프레카리아트 모두 공통 문제: <b>문화적 무시 + 경제적 부정의</b></li>
       </ul>
@@ -14576,9 +14656,9 @@ const SUMMARY_DATA = {
         <li>변하지 않는 본질: <b>착취·주변화·박탈</b> — 형태가 바뀌어도 경제적 부정의는 지속</li>
       </ul>
     ` },
-
   ]
-},{
+},
+{
   num: "15강", name: "사회복지사의 정체성과 윤리", icon: "🧭",
   cards: [
 
@@ -14598,7 +14678,7 @@ const SUMMARY_DATA = {
           <tr><td>초점</td><td>개인</td><td>사회 구조</td></tr>
           <tr><td>관심</td><td>인접 환경</td><td>사회 구조·법·정책</td></tr>
           <tr><td>실천 방식</td><td>사례 관리</td><td>사회 관리</td></tr>
-          <tr><td>주요 기술</td><td>상담·치료·안내·정보 제공</td><td>대화·소통·비판</td></tr>
+          <tr><td>실천 기술</td><td>상담·치료·안내·정보 제공</td><td>대화·소통·비판</td></tr>
           <tr><td>주요 갈등</td><td>자기결정권 vs 온정주의, 알 권리 vs 비밀 유지</td><td>구조적 불평등·억압·착취</td></tr>
         </table>
         <div class="hbox hbox-yellow" style="margin-top:10px">
@@ -14631,6 +14711,52 @@ const SUMMARY_DATA = {
         </table>
       `
     },
+    { icon: "📜", title: "사회복지사 윤리강령(전문)", html: `
+  <div class="hbox hbox-blue">
+    <strong>핵심 사상:</strong>
+    <div class="badge-row" style="margin-top:8px">
+      <span class="badge badge-blue">인본주의</span>
+      <span class="badge badge-blue">평등주의</span>
+      <span class="badge badge-green">인간 존엄성</span>
+      <span class="badge badge-purple">사회정의</span>
+      <span class="badge badge-yellow">자기결정권</span>
+    </div>
+  </div>
+
+  <div class="sub" style="margin-top:14px">핵심 요약</div>
+  <ul class="pts">
+    <li>모든 인간의 <strong>존엄성·가치 존중</strong> — 천부의 자유권·생존권 보장 활동 헌신 <span class="kichul">⭐ 기출</span></li>
+    <li>사회적·경제적 <strong>약자 편에 서서</strong> 사회정의·평등·자유·민주주의 가치 실현</li>
+    <li>도움 필요한 사람의 <strong>사회적 지위와 기능 향상</strong>을 위해 함께 일함</li>
+    <li><strong>사회제도 개선</strong> 관련 제반 활동에 주도적 참여</li>
+    <li><strong>개인의 주체성·자기결정권</strong> 보장에 최선 <span class="kichul">⭐ 기출</span></li>
+    <li>어떠한 여건에서도 <strong>개인이 부당하게 희생되는 일 없도록</strong> 함</li>
+    <li>전문적 지식·기술 개발, <strong>능력과 품위 유지</strong></li>
+  </ul>
+
+  <div class="divider"></div>
+
+  <!-- 접기/펼치기 전문 -->
+  <button
+    onclick="(function(btn){
+      const box = btn.nextElementSibling;
+      const isOpen = box.style.display === 'block';
+      box.style.display = isOpen ? 'none' : 'block';
+      btn.innerHTML = isOpen ? '📄 전문 펼쳐보기 ▾' : '📄 전문 접기 ▴';
+    })(this)"
+    style="width:100%;padding:10px 14px;background:var(--c1l);border:1.5px solid var(--c1);
+           border-radius:8px;color:var(--c1);font-weight:700;font-size:14px;
+           cursor:pointer;text-align:left;margin-top:2px;font-family:inherit">
+    📄 전문 펼쳐보기 ▾
+  </button>
+  <div style="display:none;margin-top:8px;padding:16px;background:#f9f7f4;
+              border:1.5px solid var(--border);border-radius:10px;
+              font-size:14px;line-height:1.9;color:var(--text);white-space:pre-wrap">
+사회복지사는 인본주의·평등주의 사상에 기초하여, 모든 <b>인간의 존엄성</b>과 가치를 존중하고 천부의 자유권과 생존권의 보장 활동에 헌신한다. 특히 사회적·경제적 약자들의 <b>편에 서서 사회정의</b>와 평등·자유와 민주주의 가치를 실현하는 데 앞장선다. 또한, 도움을 필요로 하는 사람들의 사회적 지위와 기능을 향상시키기 위해 저들과 <b>함께</b> 일하며, 사회제도 개선과 관련된 제반 활동에 주도적으로 <b>참여</b>한다. 사회복지사는 개인의 주체성과 자기 결정권을 보장하는 데 최선을 다하고, 어떠한 여건에서도 개인이 부당하게 희생되는 일이 없도록 한다.
+
+이러한 사명을 실천하기 위하여 전문적 지식과 기술을 개발하고, 사회적 가치를 실현하는 전문가로서의 능력과 품위를 유지하기 위해 노력한다. 이에 우리는 클라이언트·동료·기관 그리고, 지역사회 및 전체사회와 관련된 <b>사회복지사의 행위와 활동을 판단·평가하며 인도하는 윤리기준</b>을 다음과 같이 선언하고 이를 준수할 것을 다짐한다.
+  </div>
+` },
     {
       icon: "📜", title: "윤리강령 전문 핵심 — '편에 선다'의 해석",
       html: `
@@ -14662,7 +14788,7 @@ const SUMMARY_DATA = {
       icon: "🏅", title: "핵심가치 1 — 인간 존엄성",
       html: `
         <span class="kichul">⭐ 기출</span>
-        <div class="hbox hbox-blue" style="margin-bottom:8px"><b>원칙:</b> 사회복지사는 인간의 존엄성과 가치를 인정하고 존중한다.</div>
+        <div class="hbox hbox-blue" style="margin-bottom:8px"><b>윤리 원칙:</b> 사회복지사는 인간의 존엄성과 가치를 인정하고 존중한다.</div>
         <ul class="pts">
           <li>개인적·사회적·문화적·정치적·종교적 <b>다양성을 고려</b>하며 인권 보호·존중</li>
           <li>클라이언트의 <b>자율성과 자기결정권</b> 존중·지원</li>
@@ -14675,11 +14801,11 @@ const SUMMARY_DATA = {
       icon: "⚖️", title: "핵심가치 2 — 사회정의",
       html: `
         <span class="kichul">⭐ 기출</span>
-        <div class="hbox hbox-green" style="margin-bottom:8px"><b>원칙:</b> 사회복지사는 사회정의 실현을 위해 앞장선다.</div>
+        <div class="hbox hbox-green" style="margin-bottom:8px"><b>윤리 원칙:</b> 사회복지사는 사회정의 실현을 위해 앞장선다.</div>
         <ul class="pts green">
           <li><b>차별에 도전</b>하여 사회정의 촉진 (개인적·집단적·사회적·문화적·정치적·종교적)</li>
-          <li>다양성을 존중하는 <b>포용적 지역사회</b> 형성 노력</li>
-          <li>억압적이고 불공정한 사회제도와 관행 변화를 위해 <b>협력</b></li>
+          <li>다양성을 존중하는 <b>포용적 지역사회</b> 형성 노력(개인,가족,집단,지역사회</li>
+          <li>부적절, 억압적, 불공정한 사회제도와 관행 변화를 위해 <b>협력</b></li>
           <li><b>포용적이고 책임 있는 사회</b>를 만들기 위한 연대 활동</li>
         </ul>
       `
@@ -14689,9 +14815,9 @@ const SUMMARY_DATA = {
       html: `
         <table class="comp-table">
           <tr><th>구분</th><th class="th-blue">세부 내용</th></tr>
-          <tr><td>Ⅰ. 기본적 윤리기준</td><td>전문가로서의 자세, 전문성 개발, 전문가로서의 실천</td></tr>
-          <tr><td>Ⅱ. 클라이언트</td><td>①권익 옹호 ②자기결정권 ③사생활·비밀 보장 ④정보에 입각한 동의 ⑤기록·정보 관리 ⑥직업적 경계 ⑦서비스 종결</td></tr>
-          <tr><td>Ⅲ. 동료</td><td>동료, 슈퍼바이저</td></tr>
+          <tr><td>Ⅰ. 기본적 윤리기준</td><td>①전문가로서의 자세, ②전문성 개발, ③전문가로서의 실천</td></tr>
+          <tr><td>Ⅱ. 클라이언트</td><td>①권익 옹호 ②자기결정권 ③사생활·비밀 보장 ④정보에 입각한 동의 ⑤기록·정보 관리 ⑥직업적 경계(이중관계) ⑦서비스 종결</td></tr>
+          <tr><td>Ⅲ. 동료</td><td>①동료, ②슈퍼바이저</td></tr>
           <tr><td>Ⅳ. 기관</td><td>—</td></tr>
           <tr><td>Ⅴ. 사회</td><td>사회정책 수립·법령 제·개정 지원, 사회재난 대응, 생태적 실천</td></tr>
         </table>
@@ -14705,11 +14831,11 @@ const SUMMARY_DATA = {
         <div class="divider"></div>
         <div class="sub">Ⅴ. 사회에 대한 윤리기준</div>
         <ul class="pts cyan">
-          <li>클라이언트가 지역사회에서 서로 도우며 살아가도록 지원</li>
-          <li>사회정의를 위한 <b>사회정책 수립과 법령 제·개정 지원·옹호</b></li>
-          <li>사회재난·국가 위급 상황에서 <b>적극적으로 활동</b></li>
-          <li>지역사회·국가·전 세계 구성원의 복지 증진을 위해 <b>적극 노력</b></li>
-          <li>인간과 자연환경, 생명 등 <b>생태에 미칠 영향을 생각하며 실천</b></li>
+          <li>일하는 지역사회를 이해하고, 클라이언트가 지역사회에서 서로 도우며 살아가도록 지원</li>
+          <li><b>정치적 영역</b>이 클라이언트의 권익과 사회복지 실천에 미치는 영향을 인식하여 사회정의를 위한 <b>사회정책 수립과 법령 제·개정 지원·옹호</b></li>
+          <li>사회재난·국가 위급 상황에서 <b>문제 해결을 위해 적극적으로 활동</b></li>
+          <li>지역사회·국가·전 세계 구성원의 복지 증진, 삶의 질 향상을 위해 <b>적극 노력</b></li>
+          <li>인간과 자연이 떨어져 살수 없음을 깨닫고, 인간과 자연환경, 생명 등 <b>생태에 미칠 영향을 생각하며 실천</b></li>
         </ul>
       `
     },
@@ -14724,7 +14850,6 @@ const SUMMARY_DATA = {
     {
       icon: "🔺", title: "정치의 삼각형 — 빠진 것은 세력",
       html: `
-        <span class="kichul">⭐ 기출</span>
         <div style="text-align:center;margin:12px 0">
           <div style="display:inline-block;padding:8px 20px;background:var(--c5l);border-radius:8px;font-weight:700;color:var(--c5)">철학<br><small style="font-weight:400">(인간 존엄성·사회정의)</small></div>
           <div style="margin:6px 0">▼</div>
@@ -14742,7 +14867,6 @@ const SUMMARY_DATA = {
     {
       icon: "🗳️", title: "수당의 정치 vs 권리의 정치",
       html: `
-        <span class="kichul">⭐ 기출</span>
         <table class="comp-table">
           <tr><th>구분</th><th class="th-blue">수당의 정치</th><th class="th-green">권리의 정치</th></tr>
           <tr><td>주체</td><td>정부 (중앙·지방)</td><td><b>조직된 시민</b></td></tr>
@@ -14797,7 +14921,6 @@ const SUMMARY_DATA = {
     {
       icon: "🌟", title: "사회복지사의 정체성 — 4가지 역할",
       html: `
-        <span class="kichul">⭐ 기출</span>
         <table class="comp-table">
           <tr><th>역할</th><th class="th-blue">의미</th></tr>
           <tr><td>인권의 옹호자 <span class="badge badge-blue">advocate</span></td><td>개인이 가진 인권을 옹호</td></tr>
@@ -14824,7 +14947,6 @@ const SUMMARY_DATA = {
     {
       icon: "🎵", title: "호모 폴리티쿠스 (Homo Politicus)",
       html: `
-        <span class="kichul">⭐ 기출</span>
         <table class="comp-table">
           <tr><th>절</th><th class="th-blue">핵심 메시지</th><th class="th-green">연결 내용</th></tr>
           <tr><td>1절</td><td>생각하는가 vs 생각 당하는가 / 세상을 읽는다 / 토론하는 동료와 함께</td><td>1강: 철학하기 = 깊게 생각하기</td></tr>
