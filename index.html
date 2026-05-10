@@ -94,7 +94,7 @@ body {
   border-radius:20px; padding:5px 14px;
   font-size:.75em; font-weight:700; margin-top:14px; color:rgba(255,255,255,.9);
 }
-.idx-main { max-width:720px; margin:0 auto; padding:20px 14px 60px; }
+.idx-main { max-width:720px; margin:0 auto; padding:16px 14px 60px; }
 .section-label {
   display:flex; align-items:center; gap:8px;
   font-size:.74em; font-weight:800; color:var(--muted);
@@ -795,6 +795,420 @@ body {
   transition:all .2s; box-shadow:0 4px 15px rgba(5,150,105,.25);
 }
 .btn-retry:hover { transform:translateY(-2px); box-shadow:0 6px 20px rgba(5,150,105,.35); }
+
+/* ══════════════════════════════════════════
+   학습 현황 접이식 패널
+══════════════════════════════════════════ */
+.ssp-summary {
+  display:flex; align-items:center; gap:9px;
+  padding:9px 14px; background:#fff;
+  border:1.5px solid #e2e8f0; border-radius:12px;
+  cursor:pointer; transition:border-color .15s;
+  margin-bottom:0;
+}
+.ssp-summary:hover { border-color:#93c5fd; }
+.ssp-label { font-size:.7em; font-weight:800; color:#94a3b8; letter-spacing:.5px; white-space:nowrap; }
+.ssp-chips { display:flex; gap:5px; flex-wrap:wrap; flex:1; }
+.ssp-chip {
+  font-size:.72em; font-weight:700; padding:2px 8px;
+  border-radius:20px; white-space:nowrap;
+}
+.ssp-chip-blue { background:#eff6ff; color:#2563eb; }
+.ssp-chip-purple { background:#f5f3ff; color:#7c3aed; }
+.ssp-chip-gray { background:#f1f5f9; color:#94a3b8; }
+.ssp-arrow {
+  font-size:.85em; color:#94a3b8; flex-shrink:0;
+  transition:transform .22s; display:inline-block;
+}
+.ssp-arrow.open { transform:rotate(90deg); }
+.ssp-body {
+  display:none; padding-top:8px;
+  border-left:2px solid #e2e8f0;
+  margin-left:14px; padding-left:10px;
+  margin-bottom:4px;
+}
+.ssp-body.open { display:block; animation:fadeIn .18s; }
+.resume-banner {
+  background:#ffffff;
+  border:1.5px solid #e2e8f0; border-radius:12px;
+  padding:9px 14px; margin-bottom:12px;
+  display:flex; align-items:center; gap:10px;
+  cursor:pointer; transition:all .18s;
+  box-shadow:0 1px 4px rgba(0,0,0,.06);
+}
+.resume-banner:hover { border-color:#93c5fd; box-shadow:0 2px 8px rgba(37,99,235,.12); }
+.resume-banner-icon { font-size:1.15em; flex-shrink:0; }
+.resume-banner-info { flex:1; min-width:0; }
+.resume-banner-label { font-size:.65em; font-weight:800; color:#2563eb; letter-spacing:.5px; margin-bottom:1px; }
+.resume-banner-title { font-size:.84em; font-weight:800; color:#1e293b; line-height:1.3; }
+.resume-banner-sub { font-size:.72em; color:#94a3b8; margin-top:1px; }
+.resume-banner-arrow { font-size:1em; color:#94a3b8; flex-shrink:0; }
+
+/* ══════════════════════════════════════════
+   [추가] 기능 2: 즐겨찾기
+══════════════════════════════════════════ */
+/* 요약 카드 즐겨찾기 버튼 */
+.fav-btn {
+  position:absolute; top:12px; right:12px;
+  background:none; border:none; cursor:pointer;
+  font-size:1.2em; padding:4px; line-height:1;
+  transition:transform .2s; z-index:5;
+  opacity:.5;
+}
+.fav-btn:hover { transform:scale(1.25); opacity:1; }
+.fav-btn.active { opacity:1; }
+#view-summary .card { position:relative; }
+
+/* 즐겨찾기 오버레이 */
+#fav-overlay {
+  display:none; position:fixed; inset:0; z-index:800;
+  background:#f7f4ef; flex-direction:column;
+  animation:fadeIn .2s;
+}
+#fav-overlay.open { display:flex; }
+.fav-ov-header {
+  background:#1a1a2e; color:#fff;
+  padding:12px 16px; display:flex; align-items:center; gap:10px;
+  position:sticky; top:0; z-index:10;
+}
+.fav-ov-close {
+  background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.25);
+  color:#fff; border-radius:8px; padding:5px 10px;
+  font-family:inherit; font-size:.82em; font-weight:700; cursor:pointer;
+}
+.fav-ov-title { font-size:.95em; font-weight:800; flex:1; }
+.fav-ov-body { flex:1; overflow-y:auto; padding:14px 14px 60px; max-width:720px; margin:0 auto; width:100%; }
+.fav-ov-empty { text-align:center; padding:60px 20px; color:#6b7280; }
+.fav-ov-empty .ei { font-size:2.5em; margin-bottom:12px; }
+.fav-card-wrap {
+  background:#fff; border:1px solid #e5e0d8; border-radius:14px;
+  padding:14px; margin-bottom:12px; position:relative;
+  box-shadow:0 1px 4px rgba(0,0,0,.05);
+}
+/* 즐겨찾기 오버레이 내 card 스타일 (summary 스코프 밖) */
+#fav-overlay .card {
+  background:#fff; border-radius:14px; padding:16px;
+  margin-bottom:12px; border:1px solid #e5e0d8;
+  box-shadow:0 1px 4px rgba(0,0,0,.05);
+}
+#fav-overlay .card-head { display:flex; align-items:center; gap:8px; margin-bottom:12px; }
+#fav-overlay .card-icon { font-size:1.1em; }
+#fav-overlay .card-title { font-size:.9em; font-weight:900; color:#1a1a2e; }
+#fav-overlay .tag {
+  display:inline-block; padding:2px 8px; border-radius:4px;
+  font-size:.7em; font-weight:700; margin-bottom:8px;
+}
+#fav-overlay .tag-blue { background:var(--c1l); color:var(--c1); }
+#fav-overlay .tag-green { background:var(--c2l); color:var(--c2); }
+#fav-overlay .tag-red { background:var(--c3l); color:var(--c3); }
+#fav-overlay .tag-yellow { background:var(--c4l); color:var(--c4); }
+#fav-overlay .tag-purple { background:var(--c5l); color:var(--c5); }
+#fav-overlay .tag-cyan { background:var(--c6l); color:var(--c6); }
+#fav-overlay .pts { list-style:none; display:flex; flex-direction:column; gap:6px; word-break:keep-all; }
+#fav-overlay .pts li { display:block; position:relative; padding-left:16px; font-size:.88em; line-height:1.65; }
+#fav-overlay .pts li::before { content:'▸'; color:var(--c1); position:absolute; left:0; top:0; }
+#fav-overlay .pts.green li::before { color:var(--c2); }
+#fav-overlay .pts.red li::before { color:var(--c3); }
+#fav-overlay .pts.purple li::before { color:var(--c5); }
+#fav-overlay .pts.yellow li::before { color:var(--c4); }
+#fav-overlay .star-list { list-style:none; display:flex; flex-direction:column; gap:5px; }
+#fav-overlay .star-list li { display:block; position:relative; padding-left:18px; font-size:.87em; line-height:1.65; }
+#fav-overlay .star-list li::before { content:'★'; color:#f59e0b; position:absolute; left:0; top:0; }
+#fav-overlay .hbox { border-radius:10px; padding:12px 14px; margin-top:8px; font-size:.87em; line-height:1.6; }
+#fav-overlay .hbox-blue { background:var(--c1l); border-left:3px solid var(--c1); }
+#fav-overlay .hbox-green { background:var(--c2l); border-left:3px solid var(--c2); }
+#fav-overlay .hbox-yellow { background:var(--c4l); border-left:3px solid var(--c4); }
+#fav-overlay .hbox-red { background:var(--c3l); border-left:3px solid var(--c3); }
+#fav-overlay .hbox-purple { background:var(--c5l); border-left:3px solid var(--c5); }
+#fav-overlay .hbox b { font-weight:800; }
+#fav-overlay .comp-table { width:100%; border-collapse:collapse; font-size:.82em; margin-top:4px; }
+#fav-overlay .comp-table th { background:#1a1a2e; color:#fff; padding:7px 8px; text-align:center; font-weight:700; }
+#fav-overlay .comp-table td { padding:7px 8px; border-bottom:1px solid #e5e0d8; vertical-align:top; }
+#fav-overlay .comp-table tr:last-child td { border-bottom:none; }
+#fav-overlay .comp-table td:first-child { font-weight:700; color:#6b7280; font-size:.85em; white-space:nowrap; }
+#fav-overlay .comp-table tr:nth-child(even) td { background:#fafafa; }
+#fav-overlay .th-blue { background:var(--c1)!important; }
+#fav-overlay .th-green { background:var(--c2)!important; }
+#fav-overlay .th-purple { background:var(--c5)!important; }
+#fav-overlay .th-red { background:var(--c3)!important; }
+#fav-overlay .badge-row { display:flex; flex-wrap:wrap; gap:6px; margin-top:6px; }
+#fav-overlay .badge { padding:4px 12px; border-radius:20px; font-size:.78em; font-weight:700; border:1.5px solid; }
+#fav-overlay .badge-blue { background:var(--c1l); color:var(--c1); border-color:#93c5fd; }
+#fav-overlay .badge-green { background:var(--c2l); color:var(--c2); border-color:#6ee7b7; }
+#fav-overlay .badge-red { background:var(--c3l); color:var(--c3); border-color:#fca5a5; }
+#fav-overlay .badge-yellow { background:var(--c4l); color:var(--c4); border-color:#fcd34d; }
+#fav-overlay .badge-purple { background:var(--c5l); color:var(--c5); border-color:#c4b5fd; }
+#fav-overlay .badge-gray { background:#f1f5f9; color:#475569; border-color:#cbd5e1; }
+#fav-overlay .flow { display:flex; align-items:center; flex-wrap:wrap; gap:4px; font-size:.82em; margin-top:6px; }
+#fav-overlay .flow-item { background:var(--c1l); color:var(--c1); font-weight:700; padding:4px 10px; border-radius:6px; text-align:center; }
+#fav-overlay .flow-arrow { color:#6b7280; }
+#fav-overlay .kichul { display:inline-flex; align-items:center; gap:3px; background:#fef2f2; color:#b91c1c; border:1.2px solid #fca5a5; border-radius:5px; font-size:.72em; font-weight:800; padding:1px 6px; margin-left:5px; vertical-align:middle; }
+#fav-overlay .sub { font-size:.8em; font-weight:800; color:#6b7280; margin:10px 0 6px; letter-spacing:.5px; }
+#fav-overlay .sub-tit { font-size:.9em; font-weight:800; color:#000; margin:10px 0 6px; }
+#fav-overlay .divider { height:1px; background:#e5e0d8; margin:10px 0; }
+#fav-overlay strong { font-weight:800; }
+#fav-overlay .no { color:var(--c3); font-weight:700; }
+#fav-overlay .ok { color:var(--c2); font-weight:700; }
+
+/* ══════════════════════════════════════════
+   [추가] 기능 4: 강별 연습문제 미리보기 모달
+══════════════════════════════════════════ */
+/* 섹션 하단 버튼 */
+.ch-quiz-btn {
+  display:flex; align-items:center; gap:8px;
+  width:100%; padding:10px 14px; margin:6px 0 18px;
+  background:#fff;
+  border:1.5px solid #e2e8f0; border-radius:12px;
+  color:#475569; font-family:inherit; font-size:.84em; font-weight:700;
+  cursor:pointer; transition:all .18s; text-align:left;
+}
+.ch-quiz-btn:hover { border-color:#93c5fd; color:#2563eb; box-shadow:0 2px 8px rgba(37,99,235,.08); }
+.ch-quiz-btn .cqb-count {
+  margin-left:auto; background:#2563eb; color:#fff;
+  border-radius:20px; padding:2px 10px; font-size:.76em;
+}
+.ch-quiz-btn .cqb-none {
+  margin-left:auto; color:#cbd5e1; font-size:.78em; font-weight:500;
+}
+
+/* 모달 오버레이 */
+#rq-modal {
+  display:none; position:fixed; inset:0; z-index:900;
+  background:rgba(0,0,0,.45); align-items:flex-end;
+  animation:fadeIn .15s;
+}
+#rq-modal.open { display:flex; }
+.rq-sheet {
+  background:#fff; width:100%; max-height:88vh;
+  border-radius:20px 20px 0 0;
+  display:flex; flex-direction:column;
+  animation:slideUp .22s ease-out;
+}
+@keyframes slideUp { from{transform:translateY(100%)} to{transform:translateY(0)} }
+.rq-sheet-header {
+  padding:16px 18px 12px; border-bottom:1px solid #e5e0d8;
+  display:flex; align-items:center; gap:10px; flex-shrink:0;
+}
+.rq-sheet-drag {
+  width:36px; height:4px; background:#e5e0d8;
+  border-radius:2px; margin:0 auto 12px; flex-shrink:0;
+}
+.rq-sheet-title { font-size:.95em; font-weight:900; color:#1a1a2e; flex:1; }
+.rq-sheet-count { font-size:.78em; color:#6b7280; }
+.rq-close-btn {
+  background:#f1f5f9; border:none; border-radius:8px;
+  padding:6px 12px; font-family:inherit; font-size:.82em;
+  font-weight:700; color:#475569; cursor:pointer;
+}
+.rq-sheet-body { flex:1; overflow-y:auto; padding:14px 16px 30px; }
+
+/* 문제 카드 */
+.rq-q-card {
+  border:1.5px solid #e5e0d8; border-radius:12px;
+  padding:14px; margin-bottom:12px;
+  background:#fafafa;
+}
+.rq-q-top {
+  display:flex; align-items:center; gap:8px; margin-bottom:8px;
+}
+.rq-q-num {
+  background:#1a1a2e; color:#fff; border-radius:6px;
+  font-size:.72em; font-weight:800; padding:2px 8px; flex-shrink:0;
+}
+.rq-occ-tag {
+  background:#fef3c7; border:1px solid #fcd34d;
+  color:#92400e; border-radius:6px;
+  font-size:.7em; font-weight:700; padding:2px 7px;
+}
+.rq-q-text {
+  font-size:.9em; font-weight:700; line-height:1.7;
+  color:#1a1a2e; white-space:pre-line; margin-bottom:10px;
+}
+.rq-opts { display:flex; flex-direction:column; gap:6px; margin-bottom:10px; }
+.rq-opt {
+  background:#fff; border:1.5px solid #e5e0d8;
+  border-radius:9px; padding:9px 13px;
+  font-size:.85em; color:#374151; line-height:1.5;
+  transition:border-color .15s;
+}
+.rq-opt.rq-correct { border-color:#059669; background:#f0fdf4; color:#065f46; font-weight:700; }
+.rq-opt.rq-hidden-ans { border-color:#e5e0d8; color:#9ca3af; }
+.rq-toggle-btn {
+  background:#1a1a2e; color:#fff; border:none;
+  border-radius:8px; padding:7px 14px;
+  font-family:inherit; font-size:.8em; font-weight:700;
+  cursor:pointer; transition:all .15s; margin-bottom:8px;
+}
+.rq-toggle-btn:hover { background:#2563eb; }
+.rq-exp {
+  background:#f0fdf4; border:1px solid #bbf7d0;
+  border-left:3px solid #059669; border-radius:8px;
+  padding:10px 12px; font-size:.82em; line-height:1.65;
+  color:#374151; display:none;
+}
+.rq-exp.show { display:block; animation:fadeIn .2s; }
+.rq-no-q {
+  text-align:center; padding:50px 20px; color:#9ca3af;
+}
+.rq-no-q .rq-no-icon { font-size:2em; margin-bottom:10px; }
+/* 전체 답 토글 바 */
+.rq-global-bar {
+  display:flex; align-items:center; justify-content:space-between;
+  padding:10px 0 14px; border-bottom:1px solid #e5e0d8; margin-bottom:14px;
+}
+.rq-global-label { font-size:.8em; color:#6b7280; font-weight:600; }
+.rq-global-toggle {
+  background:#f1f5f9; border:1.5px solid #e2e8f0;
+  color:#475569; border-radius:8px; padding:6px 14px;
+  font-family:inherit; font-size:.8em; font-weight:700;
+  cursor:pointer; transition:all .15s;
+}
+.rq-global-toggle.on { background:#059669; border-color:#059669; color:#fff; }
+.fav-card-meta {
+  display:flex; align-items:center; gap:6px;
+  font-size:.72em; color:#6b7280; margin-bottom:8px;
+}
+.fav-card-subj {
+  padding:2px 8px; border-radius:4px; font-weight:700;
+  font-size:.9em; color:#fff;
+}
+.fav-card-title {
+  font-size:.9em; font-weight:800; color:#1a1a2e; margin-bottom:10px;
+}
+.fav-card-go {
+  background:#1a1a2e; color:#fff; border:none; border-radius:8px;
+  padding:7px 14px; font-family:inherit; font-size:.78em; font-weight:700;
+  cursor:pointer; transition:all .15s;
+}
+.fav-card-go:hover { background:#2563eb; }
+.fav-card-del {
+  position:absolute; top:10px; right:10px;
+  background:none; border:none; cursor:pointer;
+  font-size:1em; color:#9ca3af; padding:4px; transition:color .15s;
+}
+.fav-card-del:hover { color:#dc2626; }
+/* 메인 즐겨찾기 버튼 */
+.hero-fav-btn {
+  position:absolute; top:16px; right:62px; z-index:10;
+  background:rgba(255,255,255,.18); border:1.5px solid rgba(255,255,255,.35);
+  color:#fff; border-radius:50%; width:42px; height:42px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.15em; cursor:pointer; transition:all .2s;
+  box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+.hero-fav-btn:hover { background:rgba(255,255,255,.32); transform:scale(1.08); }
+.fav-count-badge {
+  position:absolute; top:-4px; right:-4px;
+  background:#f59e0b; color:#fff; border-radius:50%;
+  width:16px; height:16px; font-size:10px; font-weight:800;
+  display:flex; align-items:center; justify-content:center;
+  display:none;
+}
+
+/* ══════════════════════════════════════════
+   [추가] 기능 3: 오답노트
+══════════════════════════════════════════ */
+.btn-wrongnote {
+  width:100%; padding:14px;
+  background:linear-gradient(135deg,#7c3aed,#6d28d9);
+  border:none; border-radius:14px; color:#fff; font-family:inherit;
+  font-size:1em; font-weight:700; cursor:pointer; margin-top:10px;
+  transition:all .2s; box-shadow:0 4px 15px rgba(124,58,237,.25);
+  display:none;
+}
+.btn-wrongnote:hover { transform:translateY(-2px); box-shadow:0 6px 20px rgba(124,58,237,.35); }
+/* 오답노트 뷰 (퀴즈 내 서브 뷰) */
+#qz-wrongnote { padding-top:16px; }
+.wn-header {
+  background:linear-gradient(135deg,#f5f3ff,#ede9fe);
+  border:1px solid #c4b5fd; border-radius:16px;
+  padding:20px; text-align:center; margin-bottom:14px;
+}
+.wn-header h2 { font-size:1.1em; font-weight:900; color:#5b21b6; margin-bottom:4px; }
+.wn-header p { font-size:.82em; color:#7c3aed; }
+.wn-stat { display:inline-block; background:#7c3aed; color:#fff; border-radius:20px; padding:4px 14px; font-size:.78em; font-weight:700; margin-top:8px; }
+.wn-card {
+  background:#fff; border:1.5px solid #e5e0d8; border-radius:14px;
+  padding:16px; margin-bottom:12px;
+  box-shadow:0 1px 4px rgba(0,0,0,.05);
+}
+.wn-q-badge {
+  display:inline-block; background:#fee2e2; color:#b91c1c;
+  border:1px solid #fca5a5; border-radius:20px;
+  font-size:.72em; font-weight:700; padding:3px 10px; margin-bottom:8px;
+}
+.wn-q-text { font-weight:700; line-height:1.7; margin-bottom:10px; white-space:pre-line; }
+.wn-ans-row { font-size:.84em; margin-bottom:6px; }
+.wn-ans-correct { color:#059669; font-weight:700; }
+.wn-ans-wrong { color:#dc2626; font-weight:700; }
+.wn-exp { font-size:.82em; color:#475569; line-height:1.6; border-top:1px solid #e5e0d8; padding-top:8px; margin-top:6px; }
+.wn-subj-badge {
+  display:inline-block; border-radius:4px; padding:2px 8px;
+  font-size:.72em; font-weight:700; color:#fff; margin-bottom:10px;
+}
+.wn-retry-btn {
+  width:100%; padding:14px;
+  background:linear-gradient(135deg,#dc2626,#b91c1c);
+  border:none; border-radius:14px; color:#fff; font-family:inherit;
+  font-size:1em; font-weight:700; cursor:pointer; margin-top:10px;
+  transition:all .2s; box-shadow:0 4px 15px rgba(220,38,38,.25);
+}
+.wn-retry-btn:hover { transform:translateY(-2px); }
+.wn-clear-btn {
+  width:100%; padding:11px;
+  background:#fff; border:1.5px solid #dc2626; color:#dc2626;
+  border-radius:12px; font-family:inherit;
+  font-size:.88em; font-weight:700; cursor:pointer; margin-top:8px;
+  transition:all .15s;
+}
+.wn-clear-btn:hover { background:#fee2e2; }
+/* 메인 오답노트 접근 버튼 */
+.wrong-note-main-btn {
+  background:linear-gradient(135deg,#f5f3ff,#ede9fe);
+  border:1.5px solid #c4b5fd; border-radius:14px;
+  padding:14px 18px; margin-bottom:14px;
+  display:flex; align-items:center; gap:12px;
+  cursor:pointer; transition:all .18s;
+}
+.wrong-note-main-btn:hover { transform:translateY(-2px); box-shadow:0 4px 14px rgba(124,58,237,.15); }
+.wnm-info { flex:1; }
+.wnm-label { font-size:.7em; font-weight:800; color:#7c3aed; letter-spacing:.5px; margin-bottom:2px; }
+.wnm-title { font-size:.9em; font-weight:800; color:#4c1d95; }
+.wnm-sub { font-size:.74em; color:#6b7280; margin-top:2px; }
+/* 오답노트 빈 상태 */
+.wn-empty-state {
+  background:#fff; border:1.5px solid #e2e8f0;
+  border-radius:14px; padding:16px 18px;
+  display:flex; align-items:center; gap:12px;
+  margin-bottom:14px;
+}
+.wn-empty-icon { font-size:1.4em; flex-shrink:0; opacity:.4; }
+.wn-empty-text { font-size:.8em; color:#94a3b8; line-height:1.5; }
+/* 과목별 오답 행 */
+.wn-subj-row {
+  background:#fff; border:1.5px solid #e2e8f0;
+  border-radius:12px; padding:11px 15px; margin-bottom:8px;
+  display:flex; align-items:center; gap:10px;
+  cursor:pointer; transition:all .15s;
+}
+.wn-subj-row:hover { border-color:#c4b5fd; box-shadow:0 2px 8px rgba(124,58,237,.1); }
+.wn-subj-dot {
+  width:8px; height:8px; border-radius:50%; flex-shrink:0;
+}
+.wn-subj-name { font-size:.84em; font-weight:700; color:#1e293b; flex:1; }
+.wn-subj-cnt {
+  background:#7c3aed; color:#fff;
+  border-radius:20px; padding:2px 10px;
+  font-size:.72em; font-weight:800; flex-shrink:0;
+}
+.wn-total-row {
+  background:linear-gradient(135deg,#f5f3ff,#ede9fe);
+  border:1.5px solid #c4b5fd; border-radius:12px;
+  padding:11px 15px; margin-bottom:8px;
+  display:flex; align-items:center; gap:10px;
+  cursor:pointer; transition:all .15s;
+}
+.wn-total-row:hover { box-shadow:0 2px 8px rgba(124,58,237,.15); }
 </style>
 </head>
 <body>
@@ -808,6 +1222,10 @@ body {
 <div id="view-index" class="app-view active">
 
   <div class="hero-header">
+    <!-- 즐겨찾기 버튼 -->
+    <button class="hero-fav-btn" onclick="openFavOverlay()" title="즐겨찾기 카드 보기">
+      ⭐<span class="fav-count-badge" id="favCountBadge"></span>
+    </button>
     <!-- 전체 검색 버튼 -->
     <button class="hero-search-btn" onclick="openMainSearch()" title="전체 요약 검색">🔍</button>
     <div class="hero-icon">📚</div>
@@ -816,16 +1234,31 @@ body {
     <div class="hero-badge">🎓 방송통신대 사회복지학과 3학년 1학기 기말고사 대비</div>
   </div>
 
+  <!-- 글자 크기 조절 바 — 전체 너비, 헤더에 밀착 -->
+  <div class="idx-fs-bar">
+    <span class="idx-fs-label">🔤 글자 크기</span>
+    <div class="idx-fs-btns">
+      <button class="idx-fsb idx-fsb-small"  data-key="작게"   onclick="setIdxFs(13,'작게')">가</button>
+      <button class="idx-fsb idx-fsb-mid active" data-key="보통"   onclick="setIdxFs(15,'보통')">가</button>
+      <button class="idx-fsb idx-fsb-large"  data-key="크게"   onclick="setIdxFs(17,'크게')">가</button>
+      <button class="idx-fsb idx-fsb-xlarge" data-key="더크게" onclick="setIdxFs(19,'더크게')">가</button>
+    </div>
+  </div>
+
   <div class="idx-main">
 
-    <!-- 글자 크기 조절 바 -->
-    <div class="idx-fs-bar">
-      <span class="idx-fs-label">🔤 글자 크기</span>
-      <div class="idx-fs-btns">
-        <button class="idx-fsb idx-fsb-small"  data-key="작게"   onclick="setIdxFs(13,'작게')">가</button>
-        <button class="idx-fsb idx-fsb-mid active" data-key="보통"   onclick="setIdxFs(15,'보통')">가</button>
-        <button class="idx-fsb idx-fsb-large"  data-key="크게"   onclick="setIdxFs(17,'크게')">가</button>
-        <button class="idx-fsb idx-fsb-xlarge" data-key="더크게" onclick="setIdxFs(19,'더크게')">가</button>
+    <!-- 학습 현황 접이식 패널 -->
+    <div id="studyStatusPanel" style="margin-top:4px;margin-bottom:14px">
+      <div class="ssp-summary" onclick="toggleStudyPanel()">
+        <span class="ssp-label">📊 학습 현황</span>
+        <span class="ssp-chips" id="sspChips">
+          <span class="ssp-chip ssp-chip-gray">연습문제 후 업데이트</span>
+        </span>
+        <span class="ssp-arrow" id="sspArrow">›</span>
+      </div>
+      <div class="ssp-body" id="sspBody">
+        <div id="resumeBanner"></div>
+        <div id="wrongNoteSection"></div>
       </div>
     </div>
 
@@ -1054,6 +1487,37 @@ body {
 
 
 <!-- ═══════════════════════════════════════════════════════════
+     [추가] 즐겨찾기 오버레이 (전체 앱 공통)
+═══════════════════════════════════════════════════════════ -->
+<div id="fav-overlay">
+  <div class="fav-ov-header">
+    <button class="fav-ov-close" onclick="closeFavOverlay()">← 돌아가기</button>
+    <span class="fav-ov-title">⭐ 즐겨찾기 카드</span>
+    <span id="favOvCount" style="font-size:.78em;color:#94a3b8"></span>
+  </div>
+  <div class="fav-ov-body" id="favOvBody"></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     [추가] 강별 연습문제 미리보기 모달 (바텀시트)
+═══════════════════════════════════════════════════════════ -->
+<div id="rq-modal" onclick="closeRqModal(event)">
+  <div class="rq-sheet" onclick="event.stopPropagation()">
+    <div class="rq-sheet-drag"></div>
+    <div class="rq-sheet-header">
+      <div style="flex:1;min-width:0">
+        <div class="rq-sheet-title" id="rq-sheet-title">연습문제</div>
+        <div class="rq-sheet-count" id="rq-sheet-count"></div>
+      </div>
+      <button class="rq-global-toggle" id="rq-global-toggle" onclick="toggleAllAnswers()">정답 보기</button>
+      <button class="rq-close-btn" onclick="closeRqModal()">닫기</button>
+    </div>
+    <div class="rq-sheet-body" id="rq-sheet-body"></div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════
      뷰 2: 요점정리 (summary.html 기반)
      - 동적 렌더링: SUMMARY_DATA 객체에서 챕터·카드 생성
      - 챕터 탭 전환 / 키워드 검색 / 글씨 크기 조절
@@ -1203,6 +1667,20 @@ body {
       </div>
       <div class="result-list" id="qz-result-list"></div>
       <button class="btn-retry" onclick="startQuiz()">🔄 새 문제로 다시 풀기</button>
+      <button class="btn-wrongnote" id="btnWrongNote" onclick="showWrongNoteView()">📝 오답노트 보기</button>
+    </div>
+
+    <!-- ── 오답노트 화면 ── -->
+    <div id="qz-wrongnote" class="qz-screen">
+      <div class="wn-header">
+        <h2>📝 오답노트</h2>
+        <p id="wn-subj-name">과목명</p>
+        <span class="wn-stat" id="wn-stat-text">0문제</span>
+      </div>
+      <div id="wn-list"></div>
+      <button class="wn-retry-btn" onclick="retryWrongOnly()">🔁 틀린 문제만 다시 풀기</button>
+      <button class="wn-clear-btn" onclick="clearWrongNote()">🗑️ 이 과목 오답노트 초기화</button>
+      <button class="btn-nav" style="margin-top:10px" onclick="showQzScreen('qz-result')">← 결과로 돌아가기</button>
     </div>
 
   </div><!-- /qz-app -->
@@ -1407,6 +1885,8 @@ function showView(id) {
 /** 메인 인덱스로 이동 */
 function goIndex() {
   showView('view-index');
+  updateWrongNoteMainBtn();
+  renderResumeBanner();
 }
 
 const SUBJECT_FILTER_STORAGE_KEY = 'sw-study-selected-subjects';
@@ -1486,12 +1966,16 @@ restoreSubjectFilterState();
 function goSummary(subjectId) {
   renderSummaryView(subjectId);
   showView('view-summary');
+  // 마지막 위치 저장
+  saveLastPosition({ type:'summary', subjectId, chapterIdx:0 });
 }
 
 /** 퀴즈 뷰로 이동 (subjectId: 1~6) */
 function goQuiz(subjectId) {
   initQuizView(subjectId);
   showView('view-quiz');
+  // 마지막 위치 저장
+  saveLastPosition({ type:'quiz', subjectId });
 }
 
 
@@ -8265,7 +8749,7 @@ const SUMMARY_DATA = {
               <div class="sub">해외 학자</div>
               <table class="comp-table">
                 <tr><th>학자</th><th>정의 핵심</th></tr>
-                <tr><td>Romanyshyn(1971)</td><td>개인·사회 복지 증진을 위한 모든 형태의 사회적 노력 (치료·예방·인적자원개발 포함)</td></tr>
+                <tr><td>Romanyshyn(1971)<span class="kichul">⭐ 기출</span></td><td>개인·사회 복지 증진을 위한 모든 형태의 사회적 노력 (치료·예방·인적자원개발 포함)</td></tr>
                 <tr><td>Friedlander &amp; Apte(1980)</td><td>사회적 욕구 충족을 위한 입법·프로그램·급여·서비스의 <b>제도(system)</b></td></tr>
               </table>
               <div class="sub">국내 학자</div>
@@ -8526,6 +9010,7 @@ const SUMMARY_DATA = {
           {
             icon: '📐', title: '프로그램 기획의 정의',
             html: `
+            <span class="kichul">⭐ 기출</span>
               <table class="comp-table">
                 <tr><th>학자</th><th>정의 핵심</th></tr>
                 <tr><td>드로어(1967)</td><td>최적 수단으로 목적 성취를 위한 미래 행동의 <b>일련의 결정을 준비하는 과정</b></td></tr>
@@ -8633,7 +9118,7 @@ const SUMMARY_DATA = {
           {
             icon: '💡', title: '아이디어 설정 기술 6가지 + 기획자 역량 5가지',
             html: `
-              <div class="sub">프로그램 아이디어 설정 기술 6가지</div>
+              <div class="sub">프로그램 아이디어 설정 기술 6가지<span class="kichul">⭐ 기출</span></div>
               <table class="comp-table">
                 <tr><th>설정 기술</th><th>내용</th><th>예시</th></tr>
                 <tr><td><b>대화</b></td><td>사회복지 종사자·기관 리더·클라이언트·지역주민 등과 대화</td><td>지역주민 간담회</td></tr>
@@ -8851,6 +9336,7 @@ const SUMMARY_DATA = {
           {
             icon: '💡', title: '욕구의 개념·특성 — 상대적·탄력적 ★',
             html: `
+            <span class="kichul">⭐ 기출</span>
               <div class="hbox hbox-blue">
                 <b>욕구(Needs)</b>: 인간의 생활에 있어 필요하지만 충족되지 못해 그것을 필요로 하는 상태<br>
                 현재 상태와 바람직한 상태 사이에 존재하는 <b>격차 또는 조건</b>
@@ -8890,7 +9376,8 @@ const SUMMARY_DATA = {
               </table>
               <div class="hbox hbox-yellow">어떤 원인에 초점을 맞추느냐에 따라 프로그램의 <b>유형과 방향성</b>이 결정됨 ← 기출 핵심</div>
             `
-          }        ]
+          }
+        ]
       },
       {
         num: '5강', name: '프로그램 목적 및 목표의 설정',
@@ -15008,9 +15495,12 @@ const SUMMARY_DATA = {
 ════════════════════════════════════════════════════════════ */
 
 /** 특정 과목의 요점정리 뷰를 렌더링합니다 */
+let currentSummarySubjectId = 1; // 현재 요점정리 과목 추적
+
 function renderSummaryView(subjectId) {
   const data = SUMMARY_DATA[subjectId];
   if (!data) return;
+  currentSummarySubjectId = subjectId;
 
   // 헤더 정보 업데이트
   document.getElementById('sum-title-text').textContent = data.icon + ' ' + data.title + ' 요점정리';
@@ -15022,25 +15512,43 @@ function renderSummaryView(subjectId) {
     `<button class="sum-ch-btn${i===0?' active':''}" onclick="showSumCh(${i},this)">${ch.num}</button>`
   ).join('');
 
-  // 챕터 섹션 및 카드 생성
+  // 챕터 섹션 및 카드 생성 (즐겨찾기 버튼 포함)
   const main = document.getElementById('sumMain');
-  main.innerHTML = data.chapters.map((ch, i) => `
+  main.innerHTML = data.chapters.map((ch, i) => {
+    // 이 강의 문제 수 미리 계산
+    const chNum = parseInt(ch.num);
+    const bank = (QUIZ_BANK[subjectId] || []).filter(q => q.chapter === chNum);
+    const qCount = bank.length;
+    const btnLabel = qCount > 0
+      ? `<span class="cqb-count">${qCount}문제</span>`
+      : `<span class="cqb-none">문제 없음</span>`;
+
+    return `
     <section class="ch-section${i===0?' active':''}" id="sumSec${i}">
       <div class="ch-title">
         <span class="ch-num">${ch.num}</span>
         <span class="ch-name">${ch.name}</span>
       </div>
-      ${ch.cards.map(card => `
-        <div class="card">
+      ${ch.cards.map(card => {
+        const favKey = makeFavKey(subjectId, i, card.title);
+        const isFav = isFavorite(favKey);
+        return `
+        <div class="card" data-fav-key="${favKey}">
+          <button class="fav-btn${isFav?' active':''}"
+            onclick="toggleFav(${subjectId},${i},'${card.title.replace(/'/g,"\\'")}','${card.icon}',this)"
+            title="${isFav?'즐겨찾기 해제':'즐겨찾기 추가'}">${isFav?'⭐':'☆'}</button>
           <div class="card-head">
             <span class="card-icon">${card.icon}</span>
             <span class="card-title">${card.title}</span>
           </div>
           ${card.html}
-        </div>
-      `).join('')}
-    </section>
-  `).join('');
+        </div>`;
+      }).join('')}
+      <button class="ch-quiz-btn" onclick="openRqModal(${subjectId}, ${chNum}, '${ch.num} ${ch.name.replace(/'/g,"\\'")}')">
+        📝 이 강 연습문제 보기 ${btnLabel}
+      </button>
+    </section>`;
+  }).join('');
 
   // 검색 인덱스 초기화
   sumSearchIdx = null;
@@ -15068,6 +15576,9 @@ function showSumCh(idx, btn) {
   document.querySelectorAll('#sumChNav .sum-ch-btn').forEach(b => b.classList.remove('active'));
   if (btn) btn.classList.add('active');
   window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  // 마지막 챕터 위치 저장
+  saveLastPosition({ type:'summary', subjectId: currentSummarySubjectId, chapterIdx: idx });
 }
 
 /** 글씨 크기 조절 (요점정리 전용) */
@@ -27535,6 +28046,17 @@ function showQzResult() {
     list.appendChild(item);
   });
 
+  // 오답 저장
+  saveWrongAnswers(currentSubjectId, quizList, quizCorrect, quizAnswers);
+
+  // 오답노트 버튼 표시
+  const wrongCount = quizCorrect.filter(v => !v).length;
+  const btnWN = document.getElementById('btnWrongNote');
+  if (btnWN) {
+    btnWN.style.display = wrongCount > 0 ? 'block' : 'none';
+    btnWN.textContent = `📝 오답노트 보기 (${wrongCount}문제)`;
+  }
+
   showQzScreen('qz-result');
   window.scrollTo({ top: 0 });
 }
@@ -27570,6 +28092,562 @@ function shuffle(arr) {
     }
   } catch(e) {}
 })();
+
+/* ════════════════════════════════════════════════════════════
+   [추가] 기능 1: 마지막 본 위치 저장 / 이어서 보기
+════════════════════════════════════════════════════════════ */
+const LAST_POS_KEY = 'sw-last-position';
+
+function saveLastPosition(pos) {
+  try { localStorage.setItem(LAST_POS_KEY, JSON.stringify(pos)); } catch(e) {}
+  renderResumeBanner();
+}
+
+function loadLastPosition() {
+  try { return JSON.parse(localStorage.getItem(LAST_POS_KEY)); } catch(e) { return null; }
+}
+
+function renderResumeBanner() {
+  const pos = loadLastPosition();
+  const el = document.getElementById('resumeBanner');
+  if (!el) return;
+
+  if (!pos) {
+    el.innerHTML = '';
+    updateSspChips();
+    return;
+  }
+
+  const meta = SUBJECT_META[pos.subjectId];
+  const data = SUMMARY_DATA[pos.subjectId];
+  if (!meta) { el.innerHTML = ''; updateSspChips(); return; }
+
+  let mainTitle, subTitle, onclick;
+  if (pos.type === 'summary' && data) {
+    const ch = data.chapters[pos.chapterIdx] || data.chapters[0];
+    mainTitle = `${meta.icon} ${meta.name}`;
+    subTitle = ch ? `${ch.num} ${ch.name}` : '요점정리';
+    onclick = `resumeSummary(${pos.subjectId}, ${pos.chapterIdx || 0})`;
+  } else if (pos.type === 'quiz') {
+    mainTitle = `${meta.icon} ${meta.name}`;
+    subTitle = '연습문제 이어하기';
+    onclick = `goQuiz(${pos.subjectId})`;
+  } else { el.innerHTML = ''; updateSspChips(); return; }
+
+  el.innerHTML = `
+    <div class="resume-banner" onclick="${onclick}">
+      <div class="resume-banner-icon">▶️</div>
+      <div class="resume-banner-info">
+        <div class="resume-banner-label">이어서 보기</div>
+        <div class="resume-banner-title">${mainTitle}</div>
+        <div class="resume-banner-sub">${subTitle}</div>
+      </div>
+      <div class="resume-banner-arrow">›</div>
+    </div>`;
+
+  updateSspChips();
+}
+
+function resumeSummary(subjectId, chapterIdx) {
+  // goSummary() 를 쓰면 내부에서 chapterIdx:0 으로 덮어써버리므로
+  // renderSummaryView + showView 를 직접 호출
+  renderSummaryView(subjectId);
+  showView('view-summary');
+  // 챕터 복원
+  setTimeout(() => {
+    const btns = document.querySelectorAll('#sumChNav .sum-ch-btn');
+    if (btns[chapterIdx]) {
+      showSumCh(chapterIdx, btns[chapterIdx]);
+    }
+  }, 100);
+}
+
+// 페이지 로드 시 배너 렌더
+renderResumeBanner();
+
+/* ── 학습 현황 패널 토글 ── */
+function toggleStudyPanel() {
+  const body = document.getElementById('sspBody');
+  const arrow = document.getElementById('sspArrow');
+  if (!body) return;
+  const isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  arrow.classList.toggle('open', !isOpen);
+}
+
+function updateSspChips() {
+  const chips = document.getElementById('sspChips');
+  if (!chips) return;
+
+  const pos = loadLastPosition();
+  const chipList = [];
+
+  // 이어보기 칩
+  if (pos && SUBJECT_META[pos.subjectId]) {
+    const meta = SUBJECT_META[pos.subjectId];
+    chipList.push(`<span class="ssp-chip ssp-chip-blue">▶ ${meta.icon} ${meta.name}</span>`);
+  }
+
+  // 오답 칩
+  let totalWrong = 0;
+  for (let i = 1; i <= 6; i++) {
+    totalWrong += Object.keys(loadWrongNotes(i)).length;
+  }
+  if (totalWrong > 0) {
+    chipList.push(`<span class="ssp-chip ssp-chip-purple">✗ 오답 ${totalWrong}문제</span>`);
+  }
+
+  if (!chipList.length) {
+    chips.innerHTML = `<span class="ssp-chip ssp-chip-gray">연습문제 후 업데이트</span>`;
+  } else {
+    chips.innerHTML = chipList.join('');
+  }
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   [추가] 기능 2: 즐겨찾기 (요약 카드)
+════════════════════════════════════════════════════════════ */
+const FAV_KEY = 'sw-favorites';
+
+function loadFavorites() {
+  try { return JSON.parse(localStorage.getItem(FAV_KEY)) || {}; } catch(e) { return {}; }
+}
+
+function saveFavorites(favs) {
+  try { localStorage.setItem(FAV_KEY, JSON.stringify(favs)); } catch(e) {}
+}
+
+function makeFavKey(subjectId, chapterIdx, cardTitle) {
+  return `${subjectId}_${chapterIdx}_${cardTitle.replace(/[^a-zA-Z0-9가-힣]/g,'_')}`;
+}
+
+function isFavorite(favKey) {
+  const favs = loadFavorites();
+  return !!favs[favKey];
+}
+
+function toggleFav(subjectId, chapterIdx, cardTitle, cardIcon, btn) {
+  const favs = loadFavorites();
+  const key = makeFavKey(subjectId, chapterIdx, cardTitle);
+
+  if (favs[key]) {
+    delete favs[key];
+    btn.textContent = '☆';
+    btn.classList.remove('active');
+    btn.title = '즐겨찾기 추가';
+  } else {
+    const data = SUMMARY_DATA[subjectId];
+    const ch = data && data.chapters[chapterIdx];
+    const card = ch && ch.cards.find(c => c.title === cardTitle);
+    favs[key] = {
+      subjectId, chapterIdx, cardTitle, cardIcon,
+      cardHtml: card ? card.html : '',
+      subjectTitle: data ? data.title : '',
+      subjectIcon: data ? data.icon : '',
+      chapterNum: ch ? ch.num : '',
+      chapterName: ch ? ch.name : '',
+      savedAt: Date.now()
+    };
+    btn.textContent = '⭐';
+    btn.classList.add('active');
+    btn.title = '즐겨찾기 해제';
+    // 찜 효과
+    btn.style.transform = 'scale(1.4)';
+    setTimeout(() => { btn.style.transform = ''; }, 300);
+  }
+
+  saveFavorites(favs);
+  updateFavCountBadge();
+}
+
+function updateFavCountBadge() {
+  const favs = loadFavorites();
+  const count = Object.keys(favs).length;
+  const badge = document.getElementById('favCountBadge');
+  if (badge) {
+    badge.style.display = count > 0 ? 'flex' : 'none';
+    badge.textContent = count > 9 ? '9+' : count;
+  }
+}
+
+function openFavOverlay() {
+  const ov = document.getElementById('fav-overlay');
+  ov.classList.add('open');
+  renderFavOverlay();
+}
+
+function closeFavOverlay() {
+  document.getElementById('fav-overlay').classList.remove('open');
+}
+
+function renderFavOverlay() {
+  const favs = loadFavorites();
+  const keys = Object.keys(favs);
+  const countEl = document.getElementById('favOvCount');
+  if (countEl) countEl.textContent = `총 ${keys.length}개`;
+
+  const body = document.getElementById('favOvBody');
+  if (!keys.length) {
+    body.innerHTML = `
+      <div class="fav-ov-empty">
+        <div class="ei">⭐</div>
+        <p>아직 즐겨찾기한 카드가 없습니다.<br>요약정리의 카드 우측 상단 ☆을 눌러<br>중요한 카드를 저장하세요.</p>
+      </div>`;
+    return;
+  }
+
+  const colors = { 1:'#2563eb', 2:'#7c3aed', 3:'#059669', 4:'#d97706', 5:'#dc2626', 6:'#0891b2' };
+  keys.sort((a,b) => (favs[b].savedAt||0) - (favs[a].savedAt||0));
+
+  body.innerHTML = keys.map(key => {
+    const f = favs[key];
+    const color = colors[f.subjectId] || '#64748b';
+    return `
+      <div class="fav-card-wrap" id="favCard_${key}">
+        <button class="fav-card-del" onclick="removeFav('${key}')" title="즐겨찾기 삭제">✕</button>
+        <div class="fav-card-meta">
+          <span class="fav-card-subj" style="background:${color}">${f.subjectIcon} ${f.subjectTitle}</span>
+          <span>${f.chapterNum} · ${f.chapterName}</span>
+        </div>
+        <div class="card" style="margin:0 0 10px;box-shadow:none;border:1px solid #e5e0d8;">
+          <div class="card-head">
+            <span class="card-icon">${f.cardIcon}</span>
+            <span class="card-title">${f.cardTitle}</span>
+          </div>
+          ${f.cardHtml}
+        </div>
+        <button class="fav-card-go"
+          onclick="favGoCard(${f.subjectId},${f.chapterIdx},'${f.cardTitle.replace(/'/g,"\\'")}')">
+          📖 원본 카드로 이동
+        </button>
+      </div>`;
+  }).join('');
+}
+
+function removeFav(key) {
+  const favs = loadFavorites();
+  delete favs[key];
+  saveFavorites(favs);
+  updateFavCountBadge();
+  renderFavOverlay();
+}
+
+function favGoCard(subjectId, chapterIdx, cardTitle) {
+  closeFavOverlay();
+  goSummary(subjectId);
+  setTimeout(() => {
+    const btns = document.querySelectorAll('#sumChNav .sum-ch-btn');
+    if (btns[chapterIdx]) showSumCh(chapterIdx, btns[chapterIdx]);
+    setTimeout(() => {
+      // 해당 카드로 스크롤
+      const cards = document.querySelectorAll('#sumMain .card');
+      cards.forEach(c => {
+        const titleEl = c.querySelector('.card-title');
+        if (titleEl && titleEl.textContent.trim() === cardTitle) {
+          c.scrollIntoView({ behavior:'smooth', block:'center' });
+          c.style.outline = '3px solid #f59e0b';
+          setTimeout(() => { c.style.outline = ''; }, 1500);
+        }
+      });
+    }, 200);
+  }, 80);
+}
+
+// 초기화
+updateFavCountBadge();
+
+
+/* ════════════════════════════════════════════════════════════
+   [추가] 기능 3: 오답노트 (연습문제)
+════════════════════════════════════════════════════════════ */
+const WRONG_NOTE_KEY_PREFIX = 'sw-wrong-note-';
+
+function getWrongNoteKey(subjectId) {
+  return WRONG_NOTE_KEY_PREFIX + subjectId;
+}
+
+function saveWrongAnswers(subjectId, qList, qCorrect, qAnswers) {
+  const key = getWrongNoteKey(subjectId);
+  let existing = {};
+  try { existing = JSON.parse(localStorage.getItem(key)) || {}; } catch(e) {}
+
+  qList.forEach((q, i) => {
+    if (!qCorrect[i]) {
+      // 오답인 경우 저장 (기존 오답 누적, 중복은 id로 제거)
+      existing[q.id] = {
+        ...q,
+        myAnswer: qAnswers[i],
+        savedAt: Date.now()
+      };
+    }
+  });
+
+  try { localStorage.setItem(key, JSON.stringify(existing)); } catch(e) {}
+  updateWrongNoteMainBtn();
+}
+
+function loadWrongNotes(subjectId) {
+  try { return JSON.parse(localStorage.getItem(getWrongNoteKey(subjectId))) || {}; } catch(e) { return {}; }
+}
+
+function updateWrongNoteMainBtn() {
+  const section = document.getElementById('wrongNoteSection');
+  if (!section) return;
+
+  const colors = { 1:'#2563eb', 2:'#7c3aed', 3:'#059669', 4:'#d97706', 5:'#dc2626', 6:'#0891b2' };
+  const subjects = [];
+  let total = 0;
+
+  for (let i = 1; i <= 6; i++) {
+    const notes = loadWrongNotes(i);
+    const cnt = Object.keys(notes).length;
+    if (cnt > 0) {
+      total += cnt;
+      subjects.push({ id: i, cnt, meta: SUBJECT_META[i], color: colors[i] });
+    }
+  }
+
+  if (total === 0) {
+    section.innerHTML = '';
+    updateSspChips();
+    return;
+  }
+
+  const rows = subjects.map(s => `
+    <div class="wn-subj-row" onclick="openWrongNoteFromMain(${s.id})">
+      <div class="wn-subj-dot" style="background:${s.color}"></div>
+      <span class="wn-subj-name">${s.meta.icon} ${s.meta.name}</span>
+      <span class="wn-subj-cnt">✗ ${s.cnt}문제</span>
+      <span style="color:#94a3b8;font-size:.9em">›</span>
+    </div>`).join('');
+
+  section.innerHTML = `
+    <div class="wn-total-row" onclick="openWrongNoteFromMain(0)">
+      <span style="font-size:1.1em">📝</span>
+      <span style="font-size:.85em;font-weight:800;color:#4c1d95;flex:1">전체 오답노트 — 총 ${total}문제</span>
+      <span style="color:#7c3aed;font-size:.9em">›</span>
+    </div>
+    ${rows}`;
+
+  updateSspChips();
+}
+
+function showWrongNoteView() {
+  const notes = loadWrongNotes(currentSubjectId);
+  const list = Object.values(notes).sort((a,b) => b.savedAt - a.savedAt);
+  const meta = SUBJECT_META[currentSubjectId];
+
+  document.getElementById('wn-subj-name').textContent = `${meta.icon} ${meta.name}`;
+  document.getElementById('wn-stat-text').textContent = `오답 ${list.length}문제`;
+
+  const colors = { 1:'#2563eb', 2:'#7c3aed', 3:'#059669', 4:'#d97706', 5:'#dc2626', 6:'#0891b2' };
+  const color = colors[currentSubjectId] || '#64748b';
+
+  const wnList = document.getElementById('wn-list');
+  if (!list.length) {
+    wnList.innerHTML = `<div style="text-align:center;padding:40px 20px;color:#6b7280">오답이 없습니다! 🎉</div>`;
+  } else {
+    wnList.innerHTML = list.map((q, idx) => {
+      const myAns = q.myAnswer;
+      return `
+        <div class="wn-card">
+          <span class="wn-subj-badge" style="background:${color}">${meta.icon} ${meta.name}</span>
+          <span class="wn-q-badge">✗ 오답 · 제${q.chapter}강</span>
+          <div class="wn-q-text">${q.question}</div>
+          <div class="wn-ans-row">
+            <span class="wn-ans-correct">✓ 정답: ${['①','②','③','④'][q.answer]} ${q.options[q.answer]}</span>
+          </div>
+          ${myAns !== undefined && myAns !== -1 ? `
+          <div class="wn-ans-row">
+            <span class="wn-ans-wrong">✗ 내 답: ${['①','②','③','④'][myAns]} ${q.options[myAns]}</span>
+          </div>` : ''}
+          <div class="wn-exp">${q.explanation}</div>
+        </div>`;
+    }).join('');
+  }
+
+  showQzScreen('qz-wrongnote');
+  window.scrollTo({ top: 0 });
+}
+
+function retryWrongOnly() {
+  const notes = loadWrongNotes(currentSubjectId);
+  const wrongList = Object.values(notes);
+
+  if (!wrongList.length) { alert('오답 목록이 없습니다.'); return; }
+
+  quizLen = wrongList.length;
+  quizList = shuffle([...wrongList]);
+  quizCurrent = 0;
+  quizAnswers = new Array(quizLen).fill(-1);
+  quizCorrect = new Array(quizLen).fill(false);
+
+  document.getElementById('qz-check-btn').disabled = true;
+  document.getElementById('qz-res-denom').textContent = '/ ' + quizLen;
+
+  showQzScreen('qz-quiz');
+  renderQzQuestion();
+  renderQzGrid();
+  window.scrollTo({ top: 0 });
+}
+
+function clearWrongNote() {
+  const btn = document.querySelector('.wn-clear-btn');
+  if (!btn) return;
+
+  if (btn.dataset.confirm !== 'ready') {
+    // 1차 클릭: 경고 상태로 변경
+    btn.dataset.confirm = 'ready';
+    btn.textContent = '⚠️ 한 번 더 누르면 초기화됩니다';
+    btn.style.background = '#fee2e2';
+    btn.style.borderColor = '#fca5a5';
+    btn.style.color = '#dc2626';
+    // 3초 후 원래 상태로
+    setTimeout(() => {
+      if (btn.dataset.confirm === 'ready') {
+        btn.dataset.confirm = '';
+        btn.textContent = '🗑️ 이 과목 오답노트 초기화';
+        btn.style.background = '';
+        btn.style.borderColor = '';
+        btn.style.color = '';
+      }
+    }, 3000);
+  } else {
+    // 2차 클릭: 실제 삭제
+    btn.dataset.confirm = '';
+    btn.textContent = '🗑️ 이 과목 오답노트 초기화';
+    btn.style.background = '';
+    btn.style.borderColor = '';
+    btn.style.color = '';
+    try { localStorage.removeItem(getWrongNoteKey(currentSubjectId)); } catch(e) {}
+    updateWrongNoteMainBtn();
+    showWrongNoteView();
+  }
+}
+
+function openWrongNoteFromMain(subjectId) {
+  if (subjectId && subjectId > 0) {
+    goQuiz(subjectId);
+    setTimeout(() => showWrongNoteView(), 100);
+  } else {
+    for (let i = 1; i <= 6; i++) {
+      const notes = loadWrongNotes(i);
+      if (Object.keys(notes).length > 0) {
+        goQuiz(i);
+        setTimeout(() => showWrongNoteView(), 100);
+        return;
+      }
+    }
+  }
+}
+
+// 초기화
+updateWrongNoteMainBtn();
+updateSspChips();
+
+/* ════════════════════════════════════════════════════════════
+   [추가] 기능 4: 강별 연습문제 미리보기 모달
+════════════════════════════════════════════════════════════ */
+let rqShowAnswers = false; // 전체 정답 표시 여부
+
+function openRqModal(subjectId, chapterNum, chapterLabel) {
+  const bank = (QUIZ_BANK[subjectId] || []).filter(q => q.chapter === chapterNum);
+  const meta = SUBJECT_META[subjectId];
+
+  document.getElementById('rq-sheet-title').textContent =
+    `${meta.icon} ${chapterLabel}`;
+  document.getElementById('rq-sheet-count').textContent =
+    bank.length ? `연습문제 ${bank.length}문제` : '등록된 문제가 없습니다';
+
+  rqShowAnswers = false;
+  const tog = document.getElementById('rq-global-toggle');
+  tog.textContent = '정답 보기';
+  tog.classList.remove('on');
+
+  const body = document.getElementById('rq-sheet-body');
+
+  if (!bank.length) {
+    body.innerHTML = `
+      <div class="rq-no-q">
+        <div class="rq-no-icon">📭</div>
+        <p>이 강에 등록된 연습문제가 없습니다.</p>
+      </div>`;
+  } else {
+    body.innerHTML = bank.map((q, idx) => {
+      const occ = q.occurrence && q.occurrence.length
+        ? q.occurrence.map(o => `<span class="rq-occ-tag">📌 ${o}</span>`).join(' ')
+        : '';
+      const opts = q.options.map((opt, oi) => `
+        <div class="rq-opt${rqShowAnswers && oi === q.answer ? ' rq-correct' : ''}" data-opt="${oi}">
+          ${['①','②','③','④'][oi]} ${opt}
+        </div>`).join('');
+      return `
+        <div class="rq-q-card" id="rqCard${idx}" data-answer="${q.answer}">
+          <div class="rq-q-top">
+            <span class="rq-q-num">Q${idx+1}</span>
+            ${occ}
+          </div>
+          <div class="rq-q-text">${q.question}</div>
+          <div class="rq-opts" id="rqOpts${idx}">${opts}</div>
+          <button class="rq-toggle-btn" onclick="toggleRqAnswer(${idx})">💡 정답·해설 보기</button>
+          <div class="rq-exp" id="rqExp${idx}">
+            <b>정답:</b> ${['①','②','③','④'][q.answer]} ${q.options[q.answer]}<br><br>
+            ${q.explanation}
+          </div>
+        </div>`;
+    }).join('');
+  }
+
+  document.getElementById('rq-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeRqModal(e) {
+  if (e && e.target !== document.getElementById('rq-modal')) return;
+  document.getElementById('rq-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function toggleRqAnswer(idx) {
+  const exp = document.getElementById(`rqExp${idx}`);
+  const card = document.getElementById(`rqCard${idx}`);
+  const answer = parseInt(card.dataset.answer);
+  const btn = card.querySelector('.rq-toggle-btn');
+  const isShow = exp.classList.toggle('show');
+
+  // 정답 선지 하이라이트
+  card.querySelectorAll('.rq-opt').forEach((opt, i) => {
+    opt.classList.toggle('rq-correct', isShow && i === answer);
+  });
+
+  btn.textContent = isShow ? '💡 정답·해설 숨기기' : '💡 정답·해설 보기';
+}
+
+function toggleAllAnswers() {
+  rqShowAnswers = !rqShowAnswers;
+  const tog = document.getElementById('rq-global-toggle');
+  tog.textContent = rqShowAnswers ? '정답 숨기기' : '정답 보기';
+  tog.classList.toggle('on', rqShowAnswers);
+
+  document.querySelectorAll('.rq-q-card').forEach(card => {
+    const answer = parseInt(card.dataset.answer);
+    const exp = card.querySelector('.rq-exp');
+    const btn = card.querySelector('.rq-toggle-btn');
+
+    if (rqShowAnswers) {
+      exp.classList.add('show');
+      btn.textContent = '💡 정답·해설 숨기기';
+    } else {
+      exp.classList.remove('show');
+      btn.textContent = '💡 정답·해설 보기';
+    }
+
+    card.querySelectorAll('.rq-opt').forEach((opt, i) => {
+      opt.classList.toggle('rq-correct', rqShowAnswers && i === answer);
+    });
+  });
+}
 
 </script>
 </body>
