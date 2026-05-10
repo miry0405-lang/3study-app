@@ -286,6 +286,33 @@ body {
 #view-summary .sum-site-header {
   background:#1a1a2e; color:#fff;
   padding:12px 14px 10px;
+  transition: all .25s ease;
+  cursor:default;
+}
+/* 접힌 상태 - 얇은 띠 */
+#view-summary .sum-site-header.collapsed {
+  padding:8px 14px;
+  cursor:pointer;
+}
+#view-summary .sum-site-header.collapsed .sum-title-row,
+#view-summary .sum-site-header.collapsed .sum-search-row {
+  display:none;
+}
+/* 접힌 상태 안내 띠 */
+.sum-collapsed-bar {
+  display:none;
+  align-items:center; justify-content:space-between;
+}
+#view-summary .sum-site-header.collapsed .sum-collapsed-bar {
+  display:flex;
+}
+.sum-collapsed-title {
+  font-size:13px; font-weight:700; color:rgba(255,255,255,.9);
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.sum-collapsed-hint {
+  font-size:12px; color:rgba(255,255,255,.6);
+  white-space:nowrap; margin-left:10px; flex-shrink:0;
 }
 /* 행1: 제목 전용 (버튼 없음) */
 #view-summary .sum-title-row {
@@ -337,7 +364,18 @@ body {
   overflow-x:auto; background:#fff;
   border-bottom:1px solid #e5e0d8;
   scrollbar-width:none;
+  align-items:center;
 }
+/* 헤더 펼치기 버튼 */
+#sum-expand-btn {
+  flex-shrink:0; margin-left:auto; padding:5px 10px;
+  background:#f1f5f9; border:1.5px solid #e2e8f0;
+  border-radius:20px; font-family:inherit; font-size:12px;
+  font-weight:700; color:#374151; cursor:pointer;
+  transition:all .15s; white-space:nowrap; display:none;
+}
+#sum-expand-btn.show { display:inline-flex; align-items:center; gap:4px; }
+#sum-expand-btn:hover { background:#dbeafe; border-color:#93c5fd; color:#1d4ed8; }
 #view-summary .sum-ch-nav::-webkit-scrollbar { display:none; }
 #view-summary .sum-ch-btn {
   flex-shrink:0; padding:7px 14px; border-radius:20px;
@@ -379,7 +417,7 @@ body {
 #view-summary .card details p {
   margin-top:8px; line-height:1.65; color:#374151;
 }
-#view-summary .card-head { display:flex; align-items:center; gap:8px; margin-bottom:12px; }
+#view-summary .card-head { display:flex; align-items:center; gap:8px; margin-bottom:12px; padding-right:32px; }
 #view-summary .card-icon { font-size:1.2em; }
 #view-summary .card-title { font-size:1.0em; font-weight:900; color:#1a1a2e; }
 /* 태그 */
@@ -491,7 +529,7 @@ body {
 #view-summary strong { font-weight:800; }
 /* 검색 결과 오버레이 */
 #sumSearchResults {
-  display:none; position:fixed; top:0; left:0; right:0; bottom:0;
+  display:none; position:fixed; top:var(--gbar-h); left:0; right:0; bottom:0;
   z-index:500; background:#f7f4ef; overflow-y:auto;
 }
 #sumSearchResults .sr-body { padding:12px; max-width:720px; margin:0 auto; padding-bottom:60px; }
@@ -508,11 +546,14 @@ body {
 }
 .sr-chip:hover { background:#bfdbfe; }
 /* search results chapter nav */
+.sr-sticky-wrap {
+  position:sticky; top:0; z-index:10; background:#fff;
+}
 .sr-ch-nav {
   display:flex; gap:6px; padding:8px 12px;
   overflow-x:auto; background:#fff;
   border-bottom:1px solid #e5e0d8;
-  scrollbar-width:none; position:sticky; top:48px; z-index:9;
+  scrollbar-width:none;
 }
 .sr-ch-nav::-webkit-scrollbar { display:none; }
 .sr-ch-btn {
@@ -531,7 +572,6 @@ body {
 .no-result .nri { font-size:2.5em; margin-bottom:10px; }
 /* 검색 결과 상단 바 */
 #sumSearchResults .sr-top-bar {
-  position:sticky; top:0; z-index:10;
   display:flex; align-items:center; gap:8px;
   background:#1a1a2e; padding:10px 14px;
 }
@@ -1623,7 +1663,12 @@ body {
 <div id="view-summary" class="app-view">
 
   <div class="sum-sticky">
-    <div class="sum-site-header">
+    <div class="sum-site-header" id="sumSiteHeader" onclick="handleHeaderClick()">
+      <!-- 접힌 상태 안내 띠 -->
+      <div class="sum-collapsed-bar">
+        <span class="sum-collapsed-title" id="sum-collapsed-title-text">📚 요점정리</span>
+        <span class="sum-collapsed-hint">▼ 눌러서 펼치기</span>
+      </div>
       <!-- 행1: 과목 제목 전용 -->
       <div class="sum-title-row">
         <div class="sum-header-titles">
@@ -1643,8 +1688,10 @@ body {
         </div>
       </div>
     </div>
-    <!-- 챕터 내비 (JS로 동적 생성) -->
-    <nav class="sum-ch-nav" id="sumChNav"></nav>
+    <!-- 챕터 내비 (JS로 동적 생성) + 펼치기 버튼 -->
+    <nav class="sum-ch-nav" id="sumChNav">
+      <button id="sum-expand-btn" onclick="expandSumHeader()" title="제목·검색창 펼치기">▲ 펼치기</button>
+    </nav>
   </div>
 
   <!-- 카드 콘텐츠 영역 (JS로 동적 생성) -->
@@ -1652,18 +1699,20 @@ body {
 
   <!-- 검색 결과 오버레이 -->
   <div id="sumSearchResults">
-    <div class="sr-top-bar">
-      <button class="sr-back-btn" onclick="clearSumSearch()">← 돌아가기</button>
-      <div class="sr-search-box">
-        <span>🔍</span>
-        <input type="text" id="sumSearchInput2" placeholder="키워드 검색..."
-          oninput="syncSumSearch(this.value)">
-        <button class="sum-srch-clear" id="sumClearBtn2"
-          onclick="clearSumSearch()" style="display:none">✕</button>
+    <div class="sr-sticky-wrap">
+      <div class="sr-top-bar">
+        <button class="sr-back-btn" onclick="clearSumSearch()">← 돌아가기</button>
+        <div class="sr-search-box">
+          <span>🔍</span>
+          <input type="text" id="sumSearchInput2" placeholder="키워드 검색..."
+            oninput="syncSumSearch(this.value)">
+          <button class="sum-srch-clear" id="sumClearBtn2"
+            onclick="clearSumSearch()" style="display:none">✕</button>
+        </div>
+        <span class="sr-count" id="sumSrCount"></span>
       </div>
-      <span class="sr-count" id="sumSrCount"></span>
+      <nav class="sr-ch-nav" id="srChNav"></nav>
     </div>
-    <nav class="sr-ch-nav" id="srChNav"></nav>
     <div class="sr-body" id="sumSrBody"></div>
   </div>
 
@@ -15608,12 +15657,21 @@ function renderSummaryView(subjectId) {
   // 헤더 정보 업데이트
   document.getElementById('sum-title-text').textContent = data.icon + ' ' + data.title + ' 요점정리';
   document.getElementById('sum-subtitle-text').textContent = data.subtitle;
+  const ct = document.getElementById('sum-collapsed-title-text');
+  if (ct) ct.textContent = data.icon + ' ' + data.title;
 
   // 챕터 내비 버튼 생성
   const nav = document.getElementById('sumChNav');
   nav.innerHTML = data.chapters.map((ch, i) =>
     `<button class="sum-ch-btn${i===0?' active':''}" onclick="showSumCh(${i},this)">${ch.num}</button>`
   ).join('');
+  // 펼치기 버튼 재추가 (innerHTML 덮어쓰기로 사라지므로)
+  const expandBtn = document.createElement('button');
+  expandBtn.id = 'sum-expand-btn';
+  expandBtn.title = '제목·검색창 펼치기';
+  expandBtn.textContent = '▲ 펼치기';
+  expandBtn.onclick = expandSumHeader;
+  nav.appendChild(expandBtn);
 
   // 챕터 섹션 및 카드 생성 (즐겨찾기 버튼 포함)
   const main = document.getElementById('sumMain');
@@ -15665,6 +15723,49 @@ function renderSummaryView(subjectId) {
                || JSON.parse(localStorage.getItem('sumFontKey'));
     if (saved) setGlobalFs(saved.px, saved.label);
   } catch(e) {}
+
+  // 헤더 초기 펼침 상태로 리셋 + 스크롤 감지 시작
+  expandSumHeader();
+  initSumScrollCollapse();
+}
+
+/* ── 요점정리 헤더 스크롤 접힘 ── */
+let _sumScrollHandler = null;
+let _sumScrollPaused = false;
+
+function initSumScrollCollapse() {
+  if (_sumScrollHandler) window.removeEventListener('scroll', _sumScrollHandler);
+
+  _sumScrollHandler = function() {
+    if (_sumScrollPaused) return;
+    if (!document.getElementById('view-summary').classList.contains('active')) return;
+    const scrollY = window.scrollY || document.documentElement.scrollTop;
+    const header = document.getElementById('sumSiteHeader');
+    const btn = document.getElementById('sum-expand-btn');
+    if (!header) return;
+    if (scrollY > 60) {
+      header.classList.add('collapsed');
+      if (btn) btn.classList.add('show');
+    }
+  };
+  window.addEventListener('scroll', _sumScrollHandler, { passive: true });
+}
+
+function handleHeaderClick() {
+  const header = document.getElementById('sumSiteHeader');
+  if (header && header.classList.contains('collapsed')) {
+    expandSumHeader();
+  }
+}
+
+function expandSumHeader() {
+  const header = document.getElementById('sumSiteHeader');
+  const btn = document.getElementById('sum-expand-btn');
+  if (header) header.classList.remove('collapsed');
+  if (btn) btn.classList.remove('show');
+  // 펼친 후 2초간 스크롤 감지 중단 (바로 재접힘 방지)
+  _sumScrollPaused = true;
+  setTimeout(() => { _sumScrollPaused = false; }, 2000);
 }
 
 /** 챕터 탭 전환 */
