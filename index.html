@@ -568,7 +568,7 @@ body {
 
 /* 전체 검색 오버레이 */
 #main-search-overlay {
-  display:none; position:fixed; inset:0; z-index:900;
+  display:none; position:fixed; inset:0; top:var(--gbar-h); z-index:900;
   background:#f0f4ff; flex-direction:column;
   animation:fadeIn .2s;
 }
@@ -935,7 +935,7 @@ body {
 
 /* 즐겨찾기 오버레이 */
 #fav-overlay {
-  display:none; position:fixed; inset:0; z-index:800;
+  display:none; position:fixed; inset:0; top:var(--gbar-h); z-index:800;
   background:#f7f4ef; flex-direction:column;
   animation:fadeIn .2s;
 }
@@ -1047,7 +1047,7 @@ body {
 
 /* 모달 오버레이 */
 #rq-modal {
-  display:none; position:fixed; inset:0; z-index:900;
+  display:none; position:fixed; inset:0; top:var(--gbar-h); z-index:900;
   background:rgba(0,0,0,.45); align-items:flex-end;
   animation:fadeIn .15s;
 }
@@ -1589,7 +1589,7 @@ body {
 ═══════════════════════════════════════════════════════════ -->
 <div id="fav-overlay">
   <div class="fav-ov-header">
-    <button class="fav-ov-close" onclick="closeFavOverlay()">← 돌아가기</button>
+    <button class="fav-ov-close" onclick="closeFavOverlay()" style="display:none">← 돌아가기</button>
     <span class="fav-ov-title">⭐ 즐겨찾기 카드</span>
     <span id="favOvCount" style="font-size:.78em;color:#94a3b8"></span>
   </div>
@@ -1985,6 +1985,9 @@ function goIndex() {
   updateWrongNoteMainBtn();
   renderResumeBanner();
   updateHomeBtn(true);
+  // 열려있는 오버레이 닫기
+  const fav = document.getElementById('fav-overlay');
+  if (fav) fav.classList.remove('open');
 }
 
 const SUBJECT_FILTER_STORAGE_KEY = 'sw-study-selected-subjects';
@@ -28398,10 +28401,12 @@ function openFavOverlay() {
   const ov = document.getElementById('fav-overlay');
   ov.classList.add('open');
   renderFavOverlay();
+  updateHomeBtn(false); // 홈버튼 활성화
 }
 
 function closeFavOverlay() {
   document.getElementById('fav-overlay').classList.remove('open');
+  updateHomeBtn(true); // 홈버튼 다시 비활성화
 }
 
 function renderFavOverlay() {
