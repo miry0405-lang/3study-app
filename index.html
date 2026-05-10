@@ -1179,12 +1179,16 @@ body {
 }
 .rq-global-toggle.on { background:#059669; border-color:#059669; color:#fff; }
 .fav-card-meta {
-  display:flex; align-items:center; gap:6px;
-  font-size:.72em; color:#6b7280; margin-bottom:8px;
+  display:flex; flex-direction:column; gap:4px;
+  margin-bottom:8px;
 }
 .fav-card-subj {
   padding:2px 8px; border-radius:4px; font-weight:700;
-  font-size:.9em; color:#fff;
+  font-size:11px; color:#fff; align-self:flex-start;
+  white-space:nowrap;
+}
+.fav-card-chapter {
+  font-size:.82em; color:#374151; font-weight:600;
 }
 .fav-card-title {
   font-size:.9em; font-weight:800; color:#1a1a2e; margin-bottom:10px;
@@ -2034,7 +2038,7 @@ function goIndex() {
   updateWrongNoteMainBtn();
   renderResumeBanner();
   updateHomeBtn(true);
-  // 열려있는 오버레이 닫기
+  document.body.style.overflow = '';
   const fav = document.getElementById('fav-overlay');
   if (fav) fav.classList.remove('open');
 }
@@ -2126,7 +2130,6 @@ function goSummary(subjectId) {
 function goQuiz(subjectId) {
   initQuizView(subjectId);
   showView('view-quiz');
-  saveLastPosition({ type:'quiz', subjectId });
   updateHomeBtn(false);
 }
 
@@ -15732,21 +15735,34 @@ function renderSummaryView(subjectId) {
 /* ── 요점정리 헤더 스크롤 접힘 ── */
 let _sumScrollHandler = null;
 let _sumScrollPaused = false;
+let _sumScrollSaveTimer = null;
 
 function initSumScrollCollapse() {
   if (_sumScrollHandler) window.removeEventListener('scroll', _sumScrollHandler);
 
   _sumScrollHandler = function() {
-    if (_sumScrollPaused) return;
     if (!document.getElementById('view-summary').classList.contains('active')) return;
     const scrollY = window.scrollY || document.documentElement.scrollTop;
     const header = document.getElementById('sumSiteHeader');
     const btn = document.getElementById('sum-expand-btn');
-    if (!header) return;
-    if (scrollY > 60) {
-      header.classList.add('collapsed');
-      if (btn) btn.classList.add('show');
+
+    // 헤더 접힘
+    if (!_sumScrollPaused && header) {
+      if (scrollY > 60) {
+        header.classList.add('collapsed');
+        if (btn) btn.classList.add('show');
+      }
     }
+
+    // 스크롤 위치 저장 (디바운스 800ms)
+    clearTimeout(_sumScrollSaveTimer);
+    _sumScrollSaveTimer = setTimeout(() => {
+      const pos = loadLastPosition();
+      if (pos && pos.type === 'summary') {
+        pos.scrollY = scrollY;
+        try { localStorage.setItem('sw-last-position', JSON.stringify(pos)); } catch(e) {}
+      }
+    }, 800);
   };
   window.addEventListener('scroll', _sumScrollHandler, { passive: true });
 }
@@ -15770,7 +15786,6 @@ function expandSumHeader() {
 
 /** 챕터 탭 전환 */
 function showSumCh(idx, btn) {
-  // 검색 결과가 열려 있으면 닫기
   const sr = document.getElementById('sumSearchResults');
   if (sr && sr.style.display !== 'none') clearSumSearch();
 
@@ -15781,8 +15796,8 @@ function showSumCh(idx, btn) {
   if (btn) btn.classList.add('active');
   window.scrollTo({ top: 0, behavior: 'smooth' });
 
-  // 마지막 챕터 위치 저장
-  saveLastPosition({ type:'summary', subjectId: currentSummarySubjectId, chapterIdx: idx });
+  // 마지막 챕터 위치 저장 (새 챕터니까 scrollY=0)
+  saveLastPosition({ type:'summary', subjectId: currentSummarySubjectId, chapterIdx: idx, scrollY: 0 });
 }
 
 /** 글씨 크기 조절 (요점정리 전용) */
@@ -28325,17 +28340,17 @@ function renderResumeBanner() {
   const data = SUMMARY_DATA[pos.subjectId];
   if (!meta) { el.innerHTML = ''; updateSspChips(); return; }
 
-  let mainTitle, subTitle, onclick;
-  if (pos.type === 'summary' && data) {
-    const ch = data.chapters[pos.chapterIdx] || data.chapters[0];
-    mainTitle = `${meta.icon} ${meta.name}`;
-    subTitle = ch ? `${ch.num} ${ch.name}` : '요점정리';
-    onclick = `resumeSummary(${pos.subjectId}, ${pos.chapterIdx || 0})`;
-  } else if (pos.type === 'quiz') {
-    mainTitle = `${meta.icon} ${meta.name}`;
-    subTitle = '연습문제 이어하기';
-    onclick = `goQuiz(${pos.subjectId})`;
-  } else { el.innerHTML = ''; updateSspChips(); return; }
+  // 요약카드만 노출 (연습문제는 이어보기 제외)
+  if (pos.type !== 'summary' || !data) {
+    el.innerHTML = '';
+    updateSspChips();
+    return;
+  }
+
+  const ch = data.chapters[pos.chapterIdx] || data.chapters[0];
+  const mainTitle = `${meta.icon} ${meta.name}`;
+  const subTitle = ch ? `${ch.num} ${ch.name}` : '요점정리';
+  const onclick = `resumeSummary(${pos.subjectId}, ${pos.chapterIdx || 0})`;
 
   el.innerHTML = `
     <div class="resume-banner" onclick="${onclick}">
@@ -28352,17 +28367,26 @@ function renderResumeBanner() {
 }
 
 function resumeSummary(subjectId, chapterIdx) {
-  // goSummary() 를 쓰면 내부에서 chapterIdx:0 으로 덮어써버리므로
-  // renderSummaryView + showView 를 직접 호출
   renderSummaryView(subjectId);
   showView('view-summary');
-  // 챕터 복원
+  updateHomeBtn(false);
+
+  const pos = loadLastPosition();
+  const savedScrollY = (pos && pos.scrollY) ? pos.scrollY : 0;
+
   setTimeout(() => {
     const btns = document.querySelectorAll('#sumChNav .sum-ch-btn');
     if (btns[chapterIdx]) {
-      showSumCh(chapterIdx, btns[chapterIdx]);
+      // 탭 전환 (내부 scrollTo 0 방지를 위해 직접 처리)
+      document.querySelectorAll('#sumMain .ch-section').forEach((s, i) => {
+        s.classList.toggle('active', i === chapterIdx);
+      });
+      btns.forEach(b => b.classList.remove('active'));
+      btns[chapterIdx].classList.add('active');
     }
-  }, 100);
+    // 저장된 스크롤 위치 복원
+    window.scrollTo({ top: savedScrollY, behavior: 'smooth' });
+  }, 150);
 }
 
 // 페이지 로드 시 배너 렌더
@@ -28502,12 +28526,14 @@ function openFavOverlay() {
   const ov = document.getElementById('fav-overlay');
   ov.classList.add('open');
   renderFavOverlay();
-  updateHomeBtn(false); // 홈버튼 활성화
+  updateHomeBtn(false);
+  document.body.style.overflow = 'hidden'; // 배경 스크롤 잠금
 }
 
 function closeFavOverlay() {
   document.getElementById('fav-overlay').classList.remove('open');
-  updateHomeBtn(true); // 홈버튼 다시 비활성화
+  updateHomeBtn(true);
+  document.body.style.overflow = ''; // 스크롤 복원
 }
 
 function renderFavOverlay() {
@@ -28537,7 +28563,7 @@ function renderFavOverlay() {
         <button class="fav-card-del" onclick="removeFav('${key}')" title="즐겨찾기 삭제">✕</button>
         <div class="fav-card-meta">
           <span class="fav-card-subj" style="background:${color}">${f.subjectIcon} ${f.subjectTitle}</span>
-          <span>${f.chapterNum} · ${f.chapterName}</span>
+          <span class="fav-card-chapter">${f.chapterNum} · ${f.chapterName}</span>
         </div>
         <div class="card" style="margin:0 0 10px;box-shadow:none;border:1px solid #e5e0d8;">
           <div class="card-head">
