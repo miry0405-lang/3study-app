@@ -8898,145 +8898,241 @@ const SUMMARY_DATA = {
         num: '1강', name: '사회복지와 프로그램의 이해',
         cards: [
           {
-            icon: '🌍', title: '사회복지의 정의 — 학자별 비교',
+            icon: '📂', title: '01. 사회복지의 개념과 의미',
             html: `
-              <div class="hbox hbox-blue"><b>공통 키워드</b>: 사회적 욕구 충족 + 인간 행복 추구 + 사회적 노력</div>
-              <div class="sub">해외 학자</div>
+              <div class="badge-row">
+                <span class="badge badge-blue">사회복지 정의 — 학자별 비교</span>
+                <span class="badge badge-green">사회복지의 역사 3단계</span>
+                <span class="badge badge-purple">에스핑-앤더슨 복지국가 유형론</span>
+              </div>
+            `
+          },
+          {
+            icon: '🌍', title: '사회복지의 정의 — 학자별 비교 ★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <div class="hbox hbox-blue"><b>사회복지</b>란 사회적 욕구 충족 + 인간 행복 추구 + 사회적 노력을 포괄하는 다의적 개념</div>
+              <div class="sub">해외 학자 정의</div>
               <table class="comp-table">
                 <tr><th>학자</th><th>정의 핵심</th></tr>
-                <tr><td>Romanyshyn(1971)<span class="kichul">⭐ 기출</span></td><td>개인·사회 복지 증진을 위한 모든 형태의 사회적 노력 (치료·예방·인적자원개발 포함)</td></tr>
-                <tr><td>Friedlander &amp; Apte(1980)</td><td>사회적 욕구 충족을 위한 입법·프로그램·급여·서비스의 <b>제도(system)</b></td></tr>
+                <tr><td><b>Romanyshyn (1971)</b></td><td>개인·사회 전체의 복지 증진을 위한 모든 형태의 <b>사회적 노력</b> (치료·예방·인적자원개발 포함)</td></tr>
+                <tr><td><b>Friedlander &amp; Apte (1980)</b></td><td>사회적 욕구 충족을 위한 입법·프로그램·급여·서비스의 <b>제도(system)</b></td></tr>
               </table>
-              <div class="sub">국내 학자</div>
+              <div class="sub">국내 학자 정의</div>
               <table class="comp-table">
                 <tr><th>학자</th><th>정의 핵심</th></tr>
-                <tr><td>조흥식 외(2015)</td><td>인간 개개인의 전 생애에 걸친 행복과 안정된 삶 추구</td></tr>
-                <tr><td>김상균 외(2011)</td><td>다 함께 행복 추구를 위한 상부상조 기능 — 공동체적 노력</td></tr>
-                <tr><td>유범상 외(2022)</td><td>사회적 위험에 대한 <b>공적인 대응</b></td></tr>
+                <tr><td><b>조흥식 외 (2015)</b></td><td>인간 개개인의 전 생애에 걸친 <b>행복과 안정된 삶</b> 추구</td></tr>
+                <tr><td><b>김상균 외 (2011)</b></td><td>다 함께 행복 추구를 위한 상부상조 기능 — <b>공동체적 노력</b></td></tr>
+                <tr><td><b>최미영 외 (2022)</b></td><td>사회구성원 모두의 행복 추구를 위한 <b>서비스·프로그램 활동</b></td></tr>
+                <tr><td><b>유범상 외 (2022)</b></td><td>사회적 위험에 대한 <b>공적인 대응</b></td></tr>
               </table>
-              <div class="hbox hbox-yellow">해외 학자 공통점: <b>사회서비스와 제도</b> / 국내 학자 공통점: <b>행복을 추구하기 위한 사회적 노력</b></div>
+              <div class="hbox hbox-yellow">💡 해외 학자 공통점: <b>사회서비스와 제도</b> / 국내 학자 공통점: <b>행복을 추구하기 위한 사회적 노력</b></div>
+              <div class="hbox hbox-red">❌ "사회적 위험에 대한 공적 대응" → <b>유범상 외(2022)</b> (로마니쉰 아님!) / 프리드랜더 = <b>제도(system)</b>이지 '행복' 키워드 없음</div>
             `
           },
           {
             icon: '📅', title: '사회복지의 역사 — 발달 3단계 ★',
             html: `
               <span class="kichul">⭐ 기출</span>
+              <div class="hbox hbox-blue">사회복지는 빈민법 시대 → 사회보험 시대 → 복지국가 시대 순으로 발전 (출처: 원석조, 2008)</div>
               <table class="comp-table">
                 <tr><th>구분</th><th class="th-blue">빈민법 시대</th><th class="th-green">사회보험 시대</th><th class="th-purple">복지국가 시대</th></tr>
-                <tr><td><b>대상</b></td><td>걸인·부랑자·구제 가치 있는 빈민</td><td>노동자 계급</td><td>시민·개인</td></tr>
+                <tr><td><b>대상</b></td><td>걸인·부랑자·구제 가치 있는 빈민</td><td><b>노동자 계급</b></td><td>시민·개인</td></tr>
                 <tr><td><b>복지 제공 주체</b></td><td>국가·교회·봉건 영주</td><td>국가·노동조합</td><td>국가·시민단체</td></tr>
                 <tr><td><b>대상 욕구</b></td><td>최소한의 생존</td><td>산업화로 인한 사회적 위험 최소 지원</td><td>국민최저 이상, 직업보장과 복지 관련성 중시</td></tr>
                 <tr><td><b>주요 제도</b></td><td>시설보호·거택보호·공공부조</td><td>사회보험·공중보건·주택복지</td><td>확대된 사회보장·시장보완 사회경제정책</td></tr>
                 <tr><td><b>권리 수준</b></td><td>권리 없음 (당국 재량)</td><td>사회보험에 입각한 권리</td><td><b>시민권</b></td></tr>
               </table>
+              <div class="hbox hbox-red">❌ 사회보험 시대 대상 = <b>노동자 계급</b> (시민 전체 아님) / 공중보건·주택복지 = <b>사회보험 시대</b> (복지국가 시대 아님) / 시설보호·공공부조 = <b>빈민법 시대</b></div>
             `
           },
           {
-            icon: '🏛️', title: '에스핑-앤더슨 복지국가 3유형 ★',
+            icon: '🏛️', title: '에스핑-앤더슨 복지국가 유형론 ★ (1990)',
             html: `
               <span class="kichul">⭐ 기출</span>
-              <div class="hbox hbox-blue">분류 기준: 정부·시장·가족의 역할 / 추구하는 가치 / 주요 수급대상 및 급여수준</div>
+              <div class="hbox hbox-blue">정부·시장·가족의 역할 비중, 추구 가치, 주요 수급대상 및 급여수준으로 3가지 복지국가 유형 분류</div>
               <table class="comp-table">
                 <tr><th>구분</th><th class="th-blue">자유주의</th><th class="th-green">보수주의</th><th class="th-purple">사민주의</th></tr>
-                <tr><td>정부 역할</td><td>주변적</td><td>보조적</td><td><b>중심적</b></td></tr>
-                <tr><td>시장 역할</td><td><b>중심적</b></td><td>주변적</td><td>주변적</td></tr>
-                <tr><td>가족 역할</td><td>주변적</td><td><b>중심적</b></td><td>주변적</td></tr>
-                <tr><td>최고 가치</td><td>자조·자립·근면</td><td>전통·질서</td><td>평등·연대</td></tr>
-                <tr><td>수급대상</td><td>빈민·취약계층</td><td>남성 노동자</td><td>사회구성원 전체</td></tr>
-                <tr><td>제도 특징</td><td>공공부조 중심</td><td>사회보험 중심</td><td>사회서비스 중심</td></tr>
-                <tr><td>급여수준</td><td>매우 낮음</td><td>대체로 높음</td><td>대체로 높음</td></tr>
-                <tr><td>대표 국가</td><td><b>미국</b></td><td><b>독일·이탈리아</b></td><td><b>스웨덴</b></td></tr>
+                <tr><td><b>정부 역할</b></td><td>주변적</td><td><b>보조적</b></td><td><b>중심적</b></td></tr>
+                <tr><td><b>시장 역할</b></td><td><b>중심적</b></td><td>주변적</td><td>주변적</td></tr>
+                <tr><td><b>가족 역할</b></td><td>주변적</td><td><b>중심적</b></td><td>주변적</td></tr>
+                <tr><td><b>최고 가치</b></td><td>자조·자립·근면</td><td>전통·질서</td><td><b>평등·연대</b></td></tr>
+                <tr><td><b>주요 수급대상</b></td><td>빈민·취약계층</td><td>남성 노동자</td><td>사회구성원 <b>전체</b></td></tr>
+                <tr><td><b>제도적 특징</b></td><td>공공부조 중심</td><td>사회보험 중심</td><td>사회서비스 중심</td></tr>
+                <tr><td><b>급여수준</b></td><td><b>매우 낮음</b></td><td>대체로 높음</td><td>대체로 높음</td></tr>
+                <tr><td><b>대표 국가</b></td><td><b>미국</b></td><td><b>독일·이탈리아</b></td><td><b>스웨덴</b></td></tr>
               </table>
+              <div class="hbox hbox-yellow">💡 암기: 자유주의=시장중심 / 보수주의=가족중심 / 사민주의=정부중심</div>
+              <div class="hbox hbox-red">❌ 독일·이탈리아 → <b>보수주의</b> (사민주의 아님!) / 보수주의 정부 역할 = <b>보조적</b> (중심적 아님) / 자유주의 급여수준 = <b>매우 낮음</b> (낮음 아님)</div>
+            `
+          },
+          {
+            icon: '📂', title: '02. 프로그램의 개념 및 필요성',
+            html: `
+              <div class="badge-row">
+                <span class="badge badge-blue">프로그램의 정의 — 어원 + 학자별</span>
+                <span class="badge badge-green">사회복지 프로그램 유형 5기준</span>
+                <span class="badge badge-purple">프로그램 기획 5단계</span>
+              </div>
+            `
+          },
+          {
+            icon: '📋', title: '프로그램의 정의 — 어원 + 학자별 비교',
+            html: `
+              <div class="hbox hbox-blue"><b>어원</b>: 그리스어 prographein = pro(before, 미리) + graphein(to write, 기록) → 어떤 일을 하기 전에 미리 기록하고 적어둔 <b>계획안</b>, 또는 그러한 계획안을 만드는 행위</div>
+              <div class="sub">주요 학자 정의 — 공통점: 사회복지적 목적·목표 달성을 위해 계획된 활동</div>
+              <table class="comp-table">
+                <tr><th>학자</th><th>정의 핵심</th></tr>
+                <tr><td><b>정무성 외 (2005)</b></td><td>사회복지적 목표 달성을 위한 활동들의 <b>집합체</b></td></tr>
+                <tr><td><b>최미영 외 (2022)</b></td><td>문제나 욕구 충족을 위한 국가·단체·조직의 <b>구체적 활동</b></td></tr>
+                <tr><td><b>이봉주 외 (2019)</b></td><td>목적 달성을 위한 계획된 활동들의 <b>구조화된 집합체</b></td></tr>
+                <tr><td><b>김상곤 외 (2012)</b></td><td>목적·목표 성취를 위해 설계된 <b>조직적인 활동</b></td></tr>
+              </table>
+            `
+          },
+          {
+            icon: '📊', title: '사회복지 프로그램의 유형 5가지 기준 ★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <table class="comp-table">
+                <tr><th>구분 기준</th><th>유형</th><th>예시</th></tr>
+                <tr><td><b>대상별</b></td><td>영유아·아동·노인·장애인·여성 대상</td><td>노인 재활, 장애인 권익보호·자치조직화·의식화, 여성 치유 프로그램</td></tr>
+                <tr><td><b>시점별</b></td><td>일회성 / 연속성</td><td>아동학대예방 캠페인 / 노인 컴퓨터교육 프로그램</td></tr>
+                <tr><td><b>제공별</b></td><td>직접 제공 / 간접 제공</td><td>상담·나들이 / <b>행정지원·후원 제공</b></td></tr>
+                <tr><td><b>재원별</b></td><td>공공재원 우선형 / 민간재원 우선형 / 민관혼합형</td><td>정부 사업 / 아산·삼성복지재단 / 복지관 사업</td></tr>
+                <tr><td><b>내용별</b></td><td>전문임상 / 문화생활 / 사회연계 / 사회운동 / 사회보장</td><td>심리치료 / 축제행사 / 홍보·자조모임·<b>자원봉사</b> / 권익보호 / 공교육·의료보장</td></tr>
+              </table>
+              <div class="hbox hbox-red">❌ 행정지원·후원물품 = <b>간접 제공(제공별)</b> (사회연계 아님!) / 장애인 권익보호·의식화 = <b>대상별</b> 분류 (내용별 아님)</div>
+            `
+          },
+          {
+            icon: '📌', title: '프로그램의 필요성 + 기획 5단계 ★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <div class="sub">프로그램의 목적 및 의의</div>
+              <ul class="pts">
+                <li>사회복지의 궁극적 목적 = <b>인간의 삶에서 긍정적인 변화</b> 추구</li>
+                <li>프로그램의 목적 = 클라이언트의 <b>삶의 질 향상</b></li>
+                <li>목적 달성을 위해 무엇을 어떻게 할지에 대한 세심한 <b>계획</b>이 필요 → 프로그램 기획의 의의</li>
+              </ul>
+              <div class="sub">프로그램 기획 5단계 (순서 암기 필수)</div>
+              <div class="flow">
+                <span class="flow-item">① 문제 확인·욕구 사정</span>
+                <span class="flow-arrow">▶</span>
+                <span class="flow-item">② 개입논리 개발</span>
+                <span class="flow-arrow">▶</span>
+                <span class="flow-item">③ 내용 구체화</span>
+                <span class="flow-arrow">▶</span>
+                <span class="flow-item">④ 실행</span>
+                <span class="flow-arrow">▶</span>
+                <span class="flow-item">⑤ 평가</span>
+              </div>
+              <div class="hbox hbox-red">❌ 3단계 = <b>내용의 구체화</b> (프로그램 실행 아님!) / 프로그램 목표 = <b>목표지향적</b> 활동 계획 (목적지향적 아님)</div>
+            `
+          },
+          {
+            icon: '📂', title: '03. 사회복지 프로그램의 두 관점',
+            html: `
+              <div class="badge-row">
+                <span class="badge badge-blue">잔여주의 vs 제도주의</span>
+                <span class="badge badge-green">잔여적 실천 vs 제도적 실천</span>
+                <span class="badge badge-purple">COS vs 인보관 운동</span>
+                <span class="badge badge-yellow">로마니쉰 7방향 · 맥킨타이어 비판</span>
+              </div>
             `
           },
           {
             icon: '⚖️', title: '잔여주의 vs 제도주의 ★★',
             html: `
               <span class="kichul">⭐ 기출</span>
+              <div class="hbox hbox-blue">사회복지 프로그램을 바라보는 두 가지 근본 관점 — 문제의 원인을 어디에서 찾느냐가 핵심</div>
               <table class="comp-table">
                 <tr><th>구분</th><th class="th-blue">잔여주의 (Residual)</th><th class="th-green">제도주의 (Institutional)</th></tr>
-                <tr><td>문제 원인</td><td><b>개인·가족</b></td><td><b>환경·구조</b></td></tr>
-                <tr><td>기본가치</td><td>경쟁·자조·자립·근면</td><td>사회적 연대·평등</td></tr>
-                <tr><td>평등</td><td>기회의 평등</td><td>조건·결과의 평등</td></tr>
-                <tr><td>자유</td><td>소극적 자유</td><td>적극적 자유</td></tr>
-                <tr><td>권리</td><td>자유권·정치권</td><td>자유권·정치권·<b>사회권</b></td></tr>
-                <tr><td>복지 성격</td><td>시혜·시장 보충</td><td><b>권리</b></td></tr>
-                <tr><td>재원 원칙</td><td>낸 만큼 씀 (간접세)</td><td>필요에 따라 씀 (직접세)</td></tr>
-                <tr><td>스티그마(낙인)</td><td><b>있음</b></td><td><b>없음</b></td></tr>
+                <tr><td><b>문제 원인</b></td><td><b>개인·가족</b></td><td><b>환경·구조</b></td></tr>
+                <tr><td><b>시장 인식</b></td><td>부분적 결함 있지만 <b>진보의 핵심 동력</b></td><td>교정되어야 할 제도·<b>불평등의 온상</b></td></tr>
+                <tr><td><b>기본가치</b></td><td>경쟁·자조·자립·근면</td><td>사회적 연대·평등</td></tr>
+                <tr><td><b>평등</b></td><td><b>기회의 평등</b></td><td><b>조건·결과의 평등</b></td></tr>
+                <tr><td><b>자유</b></td><td><b>소극적 자유</b></td><td><b>적극적 자유</b></td></tr>
+                <tr><td><b>권리</b></td><td>자유권·정치권</td><td>자유권·정치권·<b>사회권</b></td></tr>
+                <tr><td><b>사회복지 성격</b></td><td>시혜·시장에 대한 <b>보충성</b></td><td><b>권리</b></td></tr>
+                <tr><td><b>재원 원칙</b></td><td>낸 만큼 씀 → 시장임금·<b>간접세</b>·소득보존</td><td>필요에 따라 씀 → 사회적 임금·<b>직접세</b>·소득이전</td></tr>
+                <tr><td><b>스티그마(낙인)</b></td><td><b>있음</b></td><td><b>없음</b></td></tr>
               </table>
+              <div class="hbox hbox-red">❌ 재원 원칙 뒤바꾸기 함정 — 잔여: <b>낸 만큼·간접세</b> / 제도: <b>필요에 따라·직접세</b> / 사회권은 <b>제도주의만</b> 해당</div>
             `
           },
           {
-            icon: '🏠', title: '자선조직협회 vs 인보관 운동 ★',
+            icon: '🔀', title: '잔여적 실천 vs 제도적 실천 — 접근방법 비교',
+            html: `
+              <div class="hbox hbox-blue">같은 사회문제도 어떤 관점에서 접근하느냐에 따라 실천 방법이 달라진다</div>
+              <table class="comp-table">
+                <tr><th>잔여적 접근 (인접환경 강조)</th><th>제도적 접근 (사회경제구조 강조)</th></tr>
+                <tr><td>기술·훈련·직접적 원조</td><td>사회교육</td></tr>
+                <tr><td>수동적 자원 활용</td><td>적극적 자원 활용</td></tr>
+                <tr><td>정서적 공감</td><td>사회적 공감</td></tr>
+                <tr><td>정서적 지지</td><td>사회적 지지</td></tr>
+                <tr><td>자기자각 상담</td><td>비판적 자각역량 강화</td></tr>
+                <tr><td>가족치료 관계 작업</td><td>사회적 옹호</td></tr>
+              </table>
+              <div class="hbox hbox-red">❌ 잔여적 접근의 개인 개입 목표 = <b>개인의 행동 수정·의사소통 증진</b> (구조 변화 아님)</div>
+            `
+          },
+          {
+            icon: '🏠', title: '자선조직협회(COS) vs 인보관 운동 ★',
             html: `
               <span class="kichul">⭐ 기출</span>
+              <div class="hbox hbox-blue">사회복지 발달의 두 민간 흐름 — 문제 원인을 개인으로 보느냐(COS), 구조로 보느냐(인보관)</div>
               <table class="comp-table">
                 <tr><th>구분</th><th class="th-blue">자선조직협회 (COS)</th><th class="th-green">인보관 운동</th></tr>
-                <tr><td>관점</td><td><b>잔여적</b></td><td><b>제도적</b></td></tr>
-                <tr><td>문제 원인</td><td>구매력 없는 <b>개인·가족</b></td><td><b>지원체계(구조)</b> 미비</td></tr>
-                <tr><td>참여자</td><td>상류층·우애방문원</td><td>교육받은 노동계급·지역주민</td></tr>
-                <tr><td>목표</td><td>빈민구제·빈곤조사·문화개조</td><td>사회개혁·연대·구조개선</td></tr>
-                <tr><td>실천</td><td>기존 기관 서비스 조정</td><td>시민교육·조직력 향상</td></tr>
-                <tr><td>영향</td><td><b>공동모금회</b>로 발전</td><td>사회운동·노동시민연대</td></tr>
-                <tr><td>출현</td><td>영국 1869년·미국 1877년</td><td>영국 1884년·미국 1886년</td></tr>
+                <tr><td><b>관점</b></td><td><b>잔여적</b></td><td><b>제도적</b></td></tr>
+                <tr><td><b>문제 원인</b></td><td>구매력 없는 <b>개인·가족</b></td><td><b>지원체계(구조)</b> 미비</td></tr>
+                <tr><td><b>참여자</b></td><td>상류층·우애방문원</td><td>교육받은 노동계급·지역주민</td></tr>
+                <tr><td><b>목표</b></td><td>빈민구제·빈곤조사·문화개조</td><td>사회개혁·연대·구조개선</td></tr>
+                <tr><td><b>실천</b></td><td>기존 기관 서비스 조정</td><td>시민교육·조직력 향상</td></tr>
+                <tr><td><b>영향</b></td><td><b>공동모금회</b>·복지관련 협회로 발전</td><td>사회운동·노동시민연대</td></tr>
+                <tr><td><b>출현</b></td><td>영국 1869년·미국 1877년</td><td>영국 1884년·미국 1886년</td></tr>
               </table>
-              <div class="hbox hbox-yellow">핵심 차이: 문제 원인을 <b>"개인"</b>으로 보느냐(COS) vs <b>"구조"</b>로 보느냐(인보관)</div>
+              <div class="hbox hbox-red">❌ "자선을 통한 빈민구제" = <b>COS</b> (인보관은 사회개혁!) / COS 영향 = <b>공동모금회</b> (사회운동 아님) / 국가 복지 발달 단계에 인보관 운동 <b>포함 안 됨</b></div>
             `
           },
           {
-            icon: '📋', title: '프로그램의 정의·유형·기획 5단계',
-            html: `
-              <div class="hbox hbox-blue"><b>프로그램 어원</b>: 그리스어 prographein = pro(미리) + graphein(기록) → <b>어떤 일을 하기 전 미리 기록한 계획안</b></div>
-              <div class="sub">주요 학자 정의 — 공통점: 사회복지적 목적·목표 달성을 위해 계획된 활동</div>
-              <table class="comp-table">
-                <tr><th>학자</th><th>정의 핵심</th></tr>
-                <tr><td>정무성 외(2005)</td><td>사회복지적 목표 달성을 위한 활동들의 <b>집합체</b></td></tr>
-                <tr><td>최미영 외(2002)</td><td>문제나 욕구 충족을 위한 국가·단체·조직의 <b>구체적 활동</b></td></tr>
-                <tr><td>이봉주 외(2019)</td><td>목적 달성을 위한 계획된 활동들의 <b>구조화된 집합체</b></td></tr>
-                <tr><td>김상곤 외(2012)</td><td>목적·목표 성취를 위해 설계된 <b>조직적인 활동</b></td></tr>
-              </table>
-              <div class="sub">프로그램 유형 분류 5기준</div>
-              <ul class="pts">
-                <li><b>대상별</b>: 영유아·아동·노인·장애인·여성</li>
-                <li><b>시점별</b>: 일회성 / 연속성</li>
-                <li><b>제공별</b>: 직접 제공 / 간접 제공</li>
-                <li><b>재원별</b>: 공공재원 우선형 / 민간재원 우선형 / 민관혼합형</li>
-                <li><b>내용별</b>: 전문임상·문화생활·사회연계·사회운동·사회보장</li>
-              </ul>
-              <div class="sub">프로그램 기획 5단계</div>
-              <div class="flow">
-                <span class="flow-item">①문제 확인·욕구 사정</span>
-                <span class="flow-arrow">▶</span>
-                <span class="flow-item">②개입논리 개발</span>
-                <span class="flow-arrow">▶</span>
-                <span class="flow-item">③내용 구체화</span>
-                <span class="flow-arrow">▶</span>
-                <span class="flow-item">④실행</span>
-                <span class="flow-arrow">▶</span>
-                <span class="flow-item">⑤평가</span>
-              </div>
-            `
-          },
-          {
-            icon: '📜', title: '로마니쉰 발전 7방향 + 맥킨타이어 비판',
+            icon: '📜', title: '로마니쉰의 사회복지 발전 7방향 ★',
             html: `
               <span class="kichul">⭐ 기출</span>
-              <div class="sub">로마니쉰(Romanyshyn, 1971) — 사회복지 발전 방향</div>
+              <div class="hbox hbox-blue">Romanyshyn(1971): 사회복지는 다음 방향으로 발전한다</div>
               <ul class="star-list">
                 <li>잔여적 접근 → <b>제도적 접근</b></li>
                 <li>자선 → <b>시민의 권리</b></li>
                 <li>특수성 → <b>보편성</b></li>
-                <li>최저 조건 → <b>적정 조건 급여·서비스</b></li>
+                <li>최저 조건 보장 → <b>적정 조건 급여·서비스</b></li>
                 <li>개인의 변화 → <b>사회개혁</b> 지향</li>
                 <li>민간 지원 → <b>공공 지원</b></li>
                 <li>빈민복지 → <b>복지사회 구현</b></li>
               </ul>
-              <div class="sub">맥킨타이어(McIntyre, 1982) — 잔여적 실천 3가지 문제점</div>
+              <div class="sub">맥킨타이어(McIntyre, 1982) — 잔여적 실천의 3가지 문제점</div>
               <ul class="pts red">
-                <li><b>개인화</b>: 사회문제를 개인의 심리 문제로 축소 → 피해자 비난(blame the victim)</li>
-                <li><b>고립화</b>: 사회문제를 사적인 것으로 치부 → 집합적 해결 가능성 차단</li>
-                <li><b>체제 강화</b>: 자본주의 억압 질서를 강화하고 순응하도록 만듦</li>
+                <li><b>개인화</b>: 복잡한 사회문제를 개인의 심리적 문제로 축소 → 피해자 비난(blame the victim)</li>
+                <li><b>고립화</b>: 사회문제를 사적인 것으로 치부 → 공통 경험 공유·집합적 해결 가능성 차단</li>
+                <li><b>체제 강화</b>: 자본주의적 억압 질서를 강화하고 그에 순응하도록 만듦</li>
               </ul>
+            `
+          },
+          {
+            icon: '📝', title: '1강 핵심 요약',
+            html: `
+              <table class="comp-table">
+                <tr><th>개념</th><th>핵심 내용</th></tr>
+                <tr><td><b>사회복지 정의</b></td><td>로마니쉰(1971) → 모든 사회적 노력 / 프리드랜더(1980) → <b>제도(system)</b> / 유범상(2022) → <b>사회적 위험에 대한 공적 대응</b></td></tr>
+                <tr><td><b>학자 공통점</b></td><td>해외 = <b>사회서비스와 제도</b> / 국내 = <b>행복을 추구하기 위한 사회적 노력</b></td></tr>
+                <tr><td><b>역사 3단계</b></td><td>빈민법(권리 없음·당국 재량) → 사회보험(<b>노동자 계급</b>·공중보건·주택복지) → 복지국가(<b>시민권</b>·시장보완 사회경제정책)</td></tr>
+                <tr><td><b>에스핑-앤더슨</b></td><td>자유주의 = 시장중심·공공부조·미국·<b>급여 매우 낮음</b> / 보수주의 = <b>가족중심</b>·사회보험·독일이탈리아·<b>정부 보조적</b> / 사민주의 = <b>정부중심</b>·사회서비스·스웨덴·전체</td></tr>
+                <tr><td><b>잔여주의</b></td><td>개인·가족 탓 / 기회의 평등 / 소극적 자유 / 자유권·정치권 / 낸 만큼 씀(간접세·소득보존) / 스티그마 <b>있음</b></td></tr>
+                <tr><td><b>제도주의</b></td><td>환경·구조 탓 / 조건·결과의 평등 / 적극적 자유 / 자유권·정치권·<b>사회권</b> / 필요에 따라 씀(직접세·소득이전) / 스티그마 <b>없음</b></td></tr>
+                <tr><td><b>COS vs 인보관</b></td><td>COS = 잔여적·개인 탓·빈민구제·<b>공동모금회</b>로 발전 / 인보관 = 제도적·구조 탓·<b>사회개혁</b>·노동시민연대 (국가 복지 발달 단계 <b>포함 안 됨</b>)</td></tr>
+                <tr><td><b>프로그램 기획 5단계</b></td><td>문제확인·욕구사정 → 개입논리 개발 → <b>내용 구체화</b> → 실행 → 평가</td></tr>
+                <tr><td><b>로마니쉰 7방향</b></td><td>잔여→제도 / 자선→권리 / 특수→보편 / 최저→적정 / 개인변화→사회개혁 / 민간→공공 / 빈민복지→복지사회</td></tr>
+                <tr><td><b>맥킨타이어 비판</b></td><td>개인화(피해자 비난) · 고립화(집합적 해결 차단) · 체제 강화(자본주의 순응)</td></tr>
+              </table>
             `
           }
         ]
@@ -9955,17 +10051,37 @@ const SUMMARY_DATA = {
       {
         num: '8강', name: '프로그램 실행의 이해',
         cards: [
+
           {
-            icon: '⚙️', title: '프로그램 실행 개념 + 주요 과업 4가지 ★',
+            icon: '📂', title: '01. 프로그램 실행의 개념 및 주요 과업',
+            html: `
+              <div class="badge-row">
+                <span class="badge badge-blue">광의 vs 협의 개념</span>
+                <span class="badge badge-green">주요 과업 4가지</span>
+                <span class="badge badge-purple">모니터링</span>
+                <span class="badge badge-yellow">기록 및 정보관리</span>
+                <span class="badge badge-red">홍보·참여자 확보</span>
+                <span class="badge badge-gray">서비스 질 관리</span>
+              </div>
+            `
+          },
+          {
+            icon: '⚙️', title: '프로그램 실행 개념 — 광의 vs 협의 ★',
             html: `
               <span class="kichul">⭐ 기출</span>
-              <div class="sub">광의 vs 협의 개념</div>
+              <div class="hbox hbox-yellow">💡 핵심 포인트: <b>광의 vs 협의</b>를 정확히 구분할 것!</div>
               <table class="comp-table">
-                <tr><th>구분</th><th>내용</th></tr>
-                <tr><td><b>광의(넓은 개념)</b></td><td>조직 편성 → 프로그램 활동 실천 → 기록·정리 → 평가에 이르는 <b>일련의 과정 전체</b></td></tr>
-                <tr><td><b>협의(좁은 개념)</b></td><td>활동 내용을 매개로 참여자들과 <b>직접적으로 활동이 전개되는 과정</b></td></tr>
+                <tr><th>구분</th><th class="th-blue">개념</th></tr>
+                <tr><td><b>광의<br>(넓은 의미)</b></td><td>계획된 프로그램을 실제 실행하기 위해 <b>운영 조직 편성</b>에서부터 프로그램 활동 실천, 결과 기록·정리, <b>평가 활동에 이르기까지의 일련의 과정 전체</b></td></tr>
+                <tr><td><b>협의<br>(좁은 의미)</b></td><td>해당 프로그램의 활동 내용을 매개로 <b>참여자들과 직접적으로 활동이 전개되는 과정</b></td></tr>
               </table>
-              <div class="sub">실행의 주요 과업 4가지</div>
+            `
+          },
+          {
+            icon: '🔑', title: '프로그램 실행의 주요 과업 4가지 ★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <div class="hbox hbox-blue">총 <b>4가지</b> 과업. <b>'정보의 수집'은 과업이 아님</b>에 주의!</div>
               <div class="flow" style="flex-wrap:wrap">
                 <span class="flow-item">① 모니터링</span><span class="flow-arrow">▶</span>
                 <span class="flow-item">② 기록 및 정보관리</span><span class="flow-arrow">▶</span>
@@ -9975,49 +10091,68 @@ const SUMMARY_DATA = {
             `
           },
           {
-            icon: '🔍', title: '모니터링 + 기록 및 정보관리 ★',
+            icon: '🔍', title: '모니터링 개념 + 주요 질문 5가지 ★★',
             html: `
               <span class="kichul">⭐ 기출</span>
-              <div class="hbox hbox-blue"><b>모니터링</b>: 프로그램이 본래 의도한 방향으로 잘 진행되고 있는지 확인하는 점검 장치. 의도된 방향에서 <b>벗어나는 것을 경고</b>해주는 기능</div>
-              <div class="sub">모니터링 주요 질문들</div>
-              <ul class="pts">
-                <li>기획·설계대로 실행되고 있는가?</li>
-                <li>지역사회 욕구를 어느 정도 충족시키는가?</li>
-                <li>적합한 대상 집단에게만 제공되고 있는가?</li>
-                <li>제공되는 서비스의 양은 적절한가?</li>
-                <li>재원 제공 기관의 기준에 부합하는가?</li>
-              </ul>
-              <div class="sub">사회복지실천 기록의 주요 유형 6가지</div>
+              <div class="hbox hbox-blue">
+                <b>모니터링 개념</b><br>
+                • 프로그램 활동 내용들이 <b>본래 의도한 방향으로 잘 진행되고 있는지</b> 확인하는 실질적인 점검 장치<br>
+                • 클라이언트 집단에게 <b>인적·물적 자원을 적절하게 투입</b>하고 있는지 종합 검토하는 과정<br>
+                • 의도된 방향에서 <b>벗어나는 것을 경고</b>해주는 기능
+              </div>
+              <div class="sub">모니터링을 위한 질문 5가지 <span class="kichul">⭐ 기출</span></div>
+              <table class="comp-table">
+                <tr><th>#</th><th>질문</th></tr>
+                <tr><td>1</td><td>프로그램이 원래 의도한 <b>기획 및 설계대로 실행</b>되고 있는가?</td></tr>
+                <tr><td>2</td><td>프로그램이 <b>지역사회 욕구를 어느 정도 충족</b>시켜 주는가?</td></tr>
+                <tr><td>3</td><td>프로그램이 <b>적합한 대상 집단의 클라이언트에게만</b> 제공되고 있는가?</td></tr>
+                <tr><td>4</td><td>프로그램을 통해 제공되는 <b>서비스의 양</b>은 적절한가?</td></tr>
+                <tr><td>5</td><td>재원을 제공한 <b>정부 및 민간단체에서 제시한 기준에 부합</b>하고 있는가?</td></tr>
+              </table>
+            `
+          },
+          {
+            icon: '📝', title: '기록 및 정보관리 — 기록 종류·서식 단계 ★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <div class="sub">기록의 종류 6가지 <span class="kichul">⭐ 기출</span></div>
               <div class="badge-row">
-                <span class="badge badge-blue">과정기록</span>
-                <span class="badge badge-green">교수/학습기록</span>
-                <span class="badge badge-yellow">핵심기록</span>
+                <span class="badge badge-blue">과정 기록</span>
+                <span class="badge badge-green">교수/학습 기록</span>
+                <span class="badge badge-yellow">핵심 기록</span>
                 <span class="badge badge-purple">이야기체 기록</span>
                 <span class="badge badge-gray">문제중심 기록</span>
                 <span class="badge badge-blue">단일사례 기록</span>
               </div>
-              <div class="sub">단계별 기록 서식</div>
+              <div class="hbox hbox-blue">기록의 역할 = <b>동적인 실행 과정을 체계적으로 문서화하여 기록물로 변환</b></div>
+              <div class="sub">기록 서식 단계 — 3단계 <span class="kichul">⭐ 기출</span></div>
               <table class="comp-table">
-                <tr><th>단계</th><th>기록 서식</th></tr>
-                <tr><td><b>준비 단계</b></td><td>프로그램 계획서, 욕구조사서, 개별 구성원 목표서·계약서, 사전사후검사지</td></tr>
-                <tr><td><b>실행 단계</b></td><td>개별기록(사례관리·상담·관찰), 집단기록(과정기록·진행일지), 중간평가서</td></tr>
-                <tr><td><b>평가·종결 단계</b></td><td>전체 프로그램 평가서, 종결 기록, 목표성취 기록, 의뢰서, 사후지도 계획서</td></tr>
+                <tr><th>단계</th><th>주요 기록 서식</th></tr>
+                <tr><td><b>① 준비단계</b></td><td>프로그램 계획서, 욕구조사서(개별/집단), 개별 구성원 목표서·계약서(동의서), 사전사후검사지 등</td></tr>
+                <tr><td><b>② 실행단계</b></td><td><b>개별기록</b>: 사례관리 차원 통합 기록, 상담·관찰기록<br><b>집단기록</b>: 집단과정 기록, 프로그램 진행 일지, 중간평가서</td></tr>
+                <tr><td><b>③ 평가·종결단계</b></td><td>전체 프로그램 평가서, 종결 기록, 개별 구성원 목표성취 기록, 의뢰서, 사후지도 계획서</td></tr>
               </table>
-              <div class="sub">사회복지 조직 차원의 정보 유형 (황성철, 2005)</div>
-              <table class="comp-table">
-                <tr><th>정보 유형</th><th>내용</th></tr>
-                <tr><td><b>지역사회 정보</b></td><td>인구통계학적 정보, 사회적·경제적 특성, 유사 서비스 기관 목록</td></tr>
-                <tr><td><b>클라이언트 정보</b></td><td>현존 문제, 개인력, 서비스 수혜 유형·기간, 만족도</td></tr>
-                <tr><td><b>서비스 정보</b></td><td>기관의 서비스 단위, 클라이언트 수, 제공·종결 클라이언트 수</td></tr>
-                <tr><td><b>직원 정보</b></td><td>프로그램 수행 참여 시간, 담당 기간, 임면·전직·보직 변경</td></tr>
-                <tr><td><b>자원할당 정보</b></td><td>전체 비용, 서비스 유형별 비용, 예산 및 결산보고서 관련 자료</td></tr>
-              </table>
-              <div class="sub">클라이언트 정보를 얻는 방법 7가지</div>
+            `
+          },
+          {
+            icon: '🗂️', title: '정보관리 항목 + 클라이언트 정보 얻는 방법 7가지 ★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <div class="sub">정보관리 항목 5가지</div>
+              <div class="badge-row">
+                <span class="badge badge-blue">지역사회 정보</span>
+                <span class="badge badge-green">클라이언트 정보</span>
+                <span class="badge badge-yellow">서비스 정보</span>
+                <span class="badge badge-purple">직원 정보</span>
+                <span class="badge badge-gray">자원 할당 정보</span>
+              </div>
+              <div class="sub">클라이언트의 정보를 얻는 방법 7가지</div>
+              <div class="hbox hbox-blue">총 <b>7가지</b>. '클라이언트를 감시'는 포함되지 않음!</div>
               <ul class="pts">
                 <li>① 클라이언트의 <b>진술</b></li>
-                <li>② 클라이언트가 작성한 <b>서류</b></li>
+                <li>② 클라이언트가 <b>작성한 서류</b></li>
                 <li>③ 사회복지사의 <b>관찰</b></li>
-                <li>④ <b>심리검사 결과</b></li>
+                <li>④ <b>심리검사</b> 결과</li>
                 <li>⑤ 클라이언트의 <b>비언어적 행동</b></li>
                 <li>⑥ 클라이언트의 <b>주위환경</b></li>
                 <li>⑦ 사회복지사의 <b>주관적 경험</b></li>
@@ -10025,97 +10160,205 @@ const SUMMARY_DATA = {
             `
           },
           {
-            icon: '📢', title: '홍보·참여자 확보 + 서비스 질 관리',
-            html: `
-              <div class="sub">홍보 대상</div>
-              <ul class="pts">
-                <li><b>핵심 참여자</b>: 성과목표 달성에 직결되는 사람</li>
-                <li><b>주변 참여자</b>: 핵심 참여자 또는 목표 달성과 밀접하게 관련된 주변인</li>
-              </ul>
-              <div class="sub">홍보 대상 — 핵심 vs 주변 참여자 상세</div>
-              <table class="comp-table">
-                <tr><th>구분</th><th>정의</th><th>예시 (조부모 손자녀 양육기술 향상 프로그램)</th></tr>
-                <tr><td><b>핵심 참여자</b></td><td>성과목표 달성의 주인공, 직결되는 사람</td><td>손자녀의 <b>조부모</b></td></tr>
-                <tr><td><b>주변 참여자</b></td><td>핵심 참여자의 실질적 변화에 밀접하게 관여하는 주변인</td><td>손자녀의 <b>부모</b></td></tr>
-              </table>
-              <div class="sub">사례 적용 예시</div>
-              <ul class="pts">
-                <li>발달장애인 자녀 자기주도 역량강화 프로그램: 핵심=<b>발달장애인 자녀</b>, 주변=<b>부모</b></li>
-                <li>아동학대 고위험가정 재학대 예방 프로그램: 핵심=<b>피해아동+학대행위자</b>, 주변=<b>가족 구성원</b></li>
-              </ul>
-              <div class="sub">참여자 선정기준 고려 질문 3가지</div>
-              <ul class="pts purple">
-                <li>욕구의 크기 우선인가, <b>저소득층 우선</b>인가?</li>
-                <li>변화의 가능성이 엿보여야 하는가, 변화의 가능성을 <b>발굴하는</b> 쪽이어야 하는가?</li>
-                <li>제도권에 있는가, 아니면 <b>경계선급</b>인가?</li>
-              </ul>
-              <div class="sub">홍보 내용 필수 포함사항</div>
-              <ul class="pts">
-                <li>프로그램 제목·대상자·신청자격·목적·목표·내용·일시·장소·참가비용·담당자 연락처·신청방법</li>
-              </ul>
-              <div class="sub">서비스의 질 관리 — 관점</div>
-              <table class="comp-table">
-                <tr><th>관점</th><th>내용</th></tr>
-                <tr><td><b>수요자(클라이언트)</b></td><td>서비스가 자신의 욕구와 문제에 <b>적합한 정도</b></td></tr>
-                <tr><td><b>공급자(사회복지조직)</b></td><td>목적 성취에 바람직한 <b>기법이나 절차를 얼마나 활용했는지</b></td></tr>
-              </table>
-              <div class="sub">질 관리 접근 방법</div>
-              <ul class="pts green">
-                <li><b>분석적 접근방법</b>: 클라이언트의 <b>만족도</b>를 중시</li>
-                <li><b>인적자원 접근방법</b>: 제공 인력의 <b>전문성</b>(자격증·학위·경험)을 중시</li>
-              </ul>
-            `
-          },
-          {
-            icon: '📋', title: '5W1H 체크리스트 + 참여자 선정 4단계 ★',
+            icon: '📢', title: '홍보 및 참여자 확보 ★',
             html: `
               <span class="kichul">⭐ 기출</span>
-              <div class="sub">5W1H 실행계획 체크리스트</div>
-              <table class="comp-table">
-                <tr><th>요소</th><th>확인 내용</th></tr>
-                <tr><td><b>Who (누가)</b></td><td>실행하는 사람은? 반드시 참여해야 할 사람은?</td></tr>
-                <tr><td><b>When (언제)</b></td><td>언제 실행하는 것이 바람직한가? 시기가 무리하지 않은가?</td></tr>
-                <tr><td><b>Where (어디서)</b></td><td>여기서 실행하는 것이 좋은가? 다른 장소는 없는가?</td></tr>
-                <tr><td><b>What (무엇을)</b></td><td>어떤 활동이 실행되고 있는가? 무관한 활동은 없는가?</td></tr>
-                <tr><td><b>Why (왜)</b></td><td>왜 그 방법으로 활동을 하는가? 목적달성에 무리·무관성은?</td></tr>
-                <tr><td><b>How (어떻게)</b></td><td>어떤 방법으로 실행되는가? 방법상의 일관성은 유지되는가?</td></tr>
-              </table>
-              <div class="sub">참여자 선정과정 4단계</div>
-              <div class="flow" style="flex-wrap:wrap">
-                <span class="flow-item">일반집단</span><span class="flow-arrow">▶</span>
-                <span class="flow-item">위험집단</span><span class="flow-arrow">▶</span>
-                <span class="flow-item">표적집단</span><span class="flow-arrow">▶</span>
-                <span class="flow-item">클라이언트 집단</span>
+              <div class="sub">홍보 대상</div>
+              <div class="badge-row">
+                <span class="badge badge-blue">핵심 참여자</span>
+                <span class="badge badge-green">주변 참여자</span>
               </div>
+              <div class="sub">홍보에 포함되어야 하는 내용</div>
+              <div class="hbox hbox-blue">프로그램 <b>제목·대상자·신청자격·목적·목표·내용·일시·장소·참가비용·담당자 연락처·신청방법</b></div>
+              <div class="sub">홍보 방법 — 과거 vs 최근</div>
               <table class="comp-table">
-                <tr><th>집단</th><th>정의</th></tr>
-                <tr><td><b>일반집단</b></td><td>해당 문제나 욕구를 가질 수 있다고 판단되는 가장 <b>포괄적인</b> 인구집단</td></tr>
-                <tr><td><b>위험집단</b></td><td>특히 <b>노출될 위험이 크거나 높은 욕구</b>를 가진 집단</td></tr>
-                <tr><td><b>표적집단</b></td><td>프로그램 개발자가 직접적으로 <b>서비스를 제공하고자 의도</b>하는 집단</td></tr>
-                <tr><td><b>클라이언트 집단</b></td><td>실제로 서비스·교육·상담·정보제공 등을 받게 되는 <b>직접 참여자</b></td></tr>
+                <tr><th>시기</th><th>홍보 방법</th></tr>
+                <tr><td><b>과거</b></td><td>포스터, 유인물, 홍보 부스(길거리 홍보), 우편물, 가정통신문, 신문, 방송 매체</td></tr>
+                <tr><td><b>최근</b></td><td>휴대폰 문자 메시지, 인터넷(기관 홈페이지·광고·사회복지관련 사이트), <b>SNS</b></td></tr>
               </table>
-              <div class="hbox hbox-yellow">적용 예시 (학교폭력 피해청소년 우울예방): 일반집단=○○동 청소년 → 위험집단=학폭 피해청소년 → 표적집단=우울선별 검사에서 가능성 있는 청소년 → 클라이언트=실제 참여 가능 인원</div>
+              <ul class="pts purple">
+                <li>입소문, 유명인을 통한 홍보</li>
+                <li>관련기관(학교, 복지관, 상담센터 등)에 공문 발송</li>
+              </ul>
             `
           },
           {
-            icon: '⚠️', title: '윤리적 고려사항 + 결과 왜곡 잠재요소 ★',
+            icon: '🌟', title: '서비스의 질 관리 ★',
             html: `
-              <div class="sub">프로그램 실행 시 윤리적 고려사항</div>
+              <span class="kichul">⭐ 기출</span>
+              <div class="sub">서비스의 질 — 관점별 개념</div>
+              <table class="comp-table">
+                <tr><th>입장</th><th>개념</th></tr>
+                <tr><td><b>수요자<br>(클라이언트)</b></td><td>서비스가 자신의 <b>욕구와 문제에 적합한 정도</b></td></tr>
+                <tr><td><b>공급자<br>(사회복지조직)</b></td><td>서비스 제공자가 <b>목적 성취에 바람직한 기법이나 절차를 얼마나 활용</b>했는지</td></tr>
+              </table>
+              <div class="hbox hbox-blue">핵심: 서비스의 질 = <b>① 클라이언트의 만족도</b> + <b>② 제공 인력의 전문성</b>(자격증·학위·경력 등)</div>
+            `
+          },
+          {
+            icon: '⚖️', title: '프로그램 실행 시 윤리적 고려사항 ★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
               <ul class="star-list">
-                <li><b>자발적 참여와 정보 제공에 근거한 동의</b>: 참여 강요 금지, 목적 등에 대한 솔직한 정보 제공</li>
-                <li><b>익명성과 비밀 보장의 원칙</b>: 참여자의 프라이버시 보호</li>
-                <li><b>프로그램 실행 결과에 대한 정직성</b>: 효과적 성과뿐만 아니라 <b>실패 또한 공개</b>해야 함</li>
-                <li><b>지도자의 편견 배제</b>: 자신이 가진 편견을 인식하고 최대한 배제</li>
+                <li><b>자발적 참여</b>와 정보 제공에 근거한 동의</li>
+                <li><b>익명성과 비밀보장</b>의 원칙</li>
+                <li>프로그램 실행 결과에 대한 <b>정직성</b></li>
+                <li><b>지도자의 편견 배제</b></li>
               </ul>
-              <div class="sub">결과를 왜곡하는 잠재요소 (토마스·로스만, 1994)</div>
+            `
+          },
+          {
+            icon: '📋', title: '5W1H 실행계획·의사결정 체크리스트 ★',
+            html: `
+              <div class="hbox hbox-blue"><b>5W1H</b> 원칙으로 실행계획을 수립하고 문제를 확인하는 틀</div>
+              <table class="comp-table">
+                <tr><th>5W1H</th><th>실행계획수립 주요 요소</th><th>실행과정 문제확인 요소</th></tr>
+                <tr>
+                  <td><b>Who<br>(누가)</b></td>
+                  <td>프로그램 주최자·주관자<br>실행 준비하는 사람<br>담당자·외부전문가·자원봉사자</td>
+                  <td>현재 실행하는 사람은 누구인가<br>반드시 참여해야 할 사람은<br>일관성 없이 무리하게 참여하는 사람은</td>
+                </tr>
+                <tr>
+                  <td><b>When<br>(언제)</b></td>
+                  <td>프로그램 실행의 예정 일시<br>프로그램 실행의 기간</td>
+                  <td>언제 실행하는 것이 바람직한가<br>정해진 시기·기간 외에 가능한가<br>실행 시기가 무리하게 정해지지 않았는가</td>
+                </tr>
+                <tr>
+                  <td><b>Where<br>(어디서)</b></td>
+                  <td>가장 적합한 장소<br>차선으로 간주되는 장소</td>
+                  <td>여기서 실행하는 것이 좋은가<br>그 밖에 다른 장소는 없는가<br>실행 장소가 무리하게 정해지지 않았는가</td>
+                </tr>
+                <tr>
+                  <td><b>What<br>(무엇을)</b></td>
+                  <td>프로그램 형태와 제목<br>프로그램의 핵심적 요소</td>
+                  <td>어떤 활동이 실행되고 있는가<br>다른 활동으로 필요한 것은 없는가<br>무관하게 이루어지는 활동은 없는가</td>
+                </tr>
+                <tr>
+                  <td><b>Why<br>(왜)</b></td>
+                  <td>프로그램 목적<br>프로그램 주제<br>프로그램에서 강조점</td>
+                  <td>왜 그 사람이 그 활동을 하는가<br>왜 그 시간과 장소에서 하는가<br>목적달성에서 무리·무관성·무일관성은 없는가</td>
+                </tr>
+                <tr>
+                  <td><b>How<br>(어떻게)</b></td>
+                  <td>프로그램의 구조와 절차<br>예산과 인력의 준비<br>홍보와 프로그램 수단</td>
+                  <td>어떤 방법으로 실행되고 있는가<br>다른 방법은 없는가<br>방법상의 일관성은 유지되는가</td>
+                </tr>
+              </table>
+            `
+          },
+          {
+            icon: '⚠️', title: '결과를 왜곡할 수 있는 잠재요소 ★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <div class="hbox hbox-blue">출처: Thomas, Rothman (1994)</div>
               <ul class="pts red">
-                <li>사회복지사의 <b>전문성과 숙련성에서의 차이</b></li>
-                <li><b>평가절차·평가도구·평가자</b>에서의 차이</li>
-                <li><b>실험적인 조건의 구축과 비교</b> 불가능</li>
-                <li>프로그램 세부 활동과 <b>서비스의 양에서의 차이</b></li>
-                <li>정해진 절차로부터의 <b>이탈, 활동 내용의 중도 수정</b></li>
-                <li>세부 절차와 지침의 <b>통합성 부족</b></li>
+                <li>사회복지사의 <b>전문성과 숙련성</b>에서의 차이</li>
+                <li><b>평가절차와 평가도구, 평가자</b>에서의 차이</li>
+                <li><b>실험적인 조건</b>의 구축과 비교 불가능</li>
+                <li><b>프로그램 세부 활동과 서비스의 양</b>에서의 차이</li>
+                <li><b>정해진 절차와 지침으로부터의 이탈</b>, 활동 내용의 중도 수정</li>
+                <li><b>세부 절차와 지침의 통합성</b> 부족</li>
               </ul>
+            `
+          },
+
+          {
+            icon: '📂', title: '02. 프로그램 참여자',
+            html: `
+              <div class="badge-row">
+                <span class="badge badge-blue">참여자 종류</span>
+                <span class="badge badge-green">선정기준</span>
+                <span class="badge badge-purple">선정과정 4단계</span>
+              </div>
+            `
+          },
+          {
+            icon: '👥', title: '프로그램 참여자 종류 — 핵심 vs 주변 ★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <table class="comp-table">
+                <tr><th>구분</th><th>개념</th><th>예시<br>(조부모 양육기술향상)</th></tr>
+                <tr>
+                  <td><b>핵심 참여자</b><br>(main participants)</td>
+                  <td>성과목표 달성에의 주인공으로서 <b>성과목표 달성 여부와 직결</b>되는 사람</td>
+                  <td><b>조부모</b></td>
+                </tr>
+                <tr>
+                  <td><b>주변 참여자</b><br>(sub participants)</td>
+                  <td>성과목표 달성 또는 핵심참여자가 실질적으로 변화하는 데 <b>매우 밀접하게 관여</b>하는 중요한 주변인</td>
+                  <td><b>손자녀의 부모</b></td>
+                </tr>
+              </table>
+              <div class="sub">사례별 핵심·주변 참여자 구분</div>
+              <table class="comp-table">
+                <tr><th>프로그램</th><th>핵심 참여자</th><th>주변 참여자</th></tr>
+                <tr><td>발달장애인 자녀<br>자기주도 역량강화 향상</td><td>발달장애인 <b>자녀</b></td><td>발달장애인 자녀의 <b>부모(어머니)</b></td></tr>
+                <tr><td>아동학대 고위험가정<br>재학대 예방 심리정서 지원</td><td>피해아동 20명 +<br>학대행위자 20명</td><td>핵심 참여자의<br>가족구성원 60명</td></tr>
+              </table>
+            `
+          },
+          {
+            icon: '📏', title: '참여자 선정기준 3가지 질문',
+            html: `
+              <div class="hbox hbox-blue">아래 3가지 질문을 기준으로 참여자 선정 원칙 수립</div>
+              <ul class="pts purple">
+                <li>① <b>욕구의 크기</b> 우선인가, <b>저소득층</b> 우선인가?</li>
+                <li>② <b>변화의 가능성</b>이 어느 정도 엿보여야 하는가, 변화의 가능성을 <b>발굴</b>하는 쪽이어야 하는가?</li>
+                <li>③ <b>제도권</b>에 있는가, 아니면 <b>경계선급</b>인가?</li>
+              </ul>
+            `
+          },
+          {
+            icon: '🔽', title: '참여자 선정과정 4단계 (깔때기 모형) ★★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <div class="hbox hbox-blue">깔때기 모양: <b>일반 → 위험 → 표적 → 클라이언트</b> 순서로 좁아짐</div>
+              <div class="flow" style="flex-wrap:wrap">
+                <span class="flow-item" style="background:#dbeafe">일반집단<br><small>(가장 넓음)</small></span>
+                <span class="flow-arrow">▼</span>
+                <span class="flow-item" style="background:#fef3c7">위험집단</span>
+                <span class="flow-arrow">▼</span>
+                <span class="flow-item" style="background:#fde68a">표적집단</span>
+                <span class="flow-arrow">▼</span>
+                <span class="flow-item" style="background:#fee2e2">클라이언트 집단<br><small>(가장 좁음)</small></span>
+              </div>
+              <table class="comp-table">
+                <tr><th>단계</th><th>개념</th></tr>
+                <tr><td><b>① 일반집단</b></td><td>해당 문제나 욕구를 가질 수 있다고 판단되는 <b>가장 포괄적인</b> 인구집단</td></tr>
+                <tr><td><b>② 위험집단</b></td><td>일반 집단 중 해당 문제에 <b>특히 노출될 위험이 크거나 욕구가 높은</b> 인구집단</td></tr>
+                <tr><td><b>③ 표적집단</b></td><td>프로그램 개발자가 <b>직접적으로 서비스를 제공하고자 의도</b>하는 인구집단</td></tr>
+                <tr><td><b>④ 클라이언트 집단</b></td><td>실제로 프로그램을 통해 <b>서비스·교육·상담·정보제공 등을 받는</b> 프로그램 직접 참여자</td></tr>
+              </table>
+              <div class="sub">사례 적용 — 학교폭력 피해청소년 우울 예방 프로그램</div>
+              <table class="comp-table">
+                <tr><th>구분</th><th>참여자 산출 근거</th></tr>
+                <tr><td><b>일반집단</b></td><td>○○동의 청소년</td></tr>
+                <tr><td><b>위험집단</b></td><td>○○동의 <b>학교폭력 피해</b> 청소년</td></tr>
+                <tr><td><b>표적집단</b></td><td>학교폭력 피해 청소년 중 <b>우울선별검사에서 우울증 가능성이 있는</b> 청소년</td></tr>
+                <tr><td><b>클라이언트 집단</b></td><td>표적대상 중 <b>기관이 프로그램을 실시할 수 있는 적정 인원</b></td></tr>
+              </table>
+            `
+          },
+          {
+            icon: '📝', title: '8강 핵심 요약',
+            html: `
+              <table class="comp-table">
+                <tr><th>개념</th><th>핵심 내용</th></tr>
+                <tr><td><b>프로그램 실행 (광의)</b></td><td>운영조직 편성부터 평가활동까지 일련의 과정 전체</td></tr>
+                <tr><td><b>프로그램 실행 (협의)</b></td><td>참여자들과 직접적으로 활동이 전개되는 과정</td></tr>
+                <tr><td><b>주요 과업 4가지</b></td><td>모니터링 / 기록 및 정보관리 / 홍보 및 참여자 확보 / 서비스의 질 관리</td></tr>
+                <tr><td><b>모니터링</b></td><td>본래 의도한 방향으로 진행되는지 확인하는 점검 장치, 의도 이탈 시 경고 기능</td></tr>
+                <tr><td><b>기록 서식 단계</b></td><td>준비단계 → 실행단계 → 평가·종결단계 (3단계)</td></tr>
+                <tr><td><b>클라이언트 정보 얻는 방법</b></td><td>진술 / 작성서류 / 관찰 / 심리검사 / 비언어적 행동 / 주위환경 / 사회복지사 주관적 경험 (7가지)</td></tr>
+                <tr><td><b>홍보 최근 방법</b></td><td>문자 메시지, 인터넷(홈페이지·광고·사회복지 사이트), SNS</td></tr>
+                <tr><td><b>서비스의 질</b></td><td>수요자(클라이언트 만족도) + 공급자(제공 인력 전문성) 양측 모두 고려</td></tr>
+                <tr><td><b>윤리적 고려사항</b></td><td>자발적 참여 / 익명성·비밀보장 / 결과에 대한 정직성 / 지도자 편견 배제</td></tr>
+                <tr><td><b>5W1H 체크리스트</b></td><td>Who·When·Where·What·Why·How로 실행계획 수립 및 문제 확인</td></tr>
+                <tr><td><b>결과 왜곡 잠재요소</b></td><td>사회복지사 전문성·평가도구·실험조건·서비스 양·절차 이탈·통합성 부족 (Thomas, Rothman)</td></tr>
+                <tr><td><b>핵심 참여자</b></td><td>성과목표 달성 여부와 직결되는 사람</td></tr>
+                <tr><td><b>주변 참여자</b></td><td>핵심참여자의 변화에 밀접하게 관여하는 주변인</td></tr>
+                <tr><td><b>참여자 선정과정</b></td><td>일반집단 → 위험집단 → 표적집단 → 클라이언트 집단</td></tr>
+              </table>
             `
           }
         ]
@@ -10124,354 +10367,755 @@ const SUMMARY_DATA = {
         num: '9강', name: '프로그램 평가의 이해(1)',
         cards: [
           {
-            icon: '📊', title: '프로그램 평가의 개념·특성·이유 ★',
+            icon: '📂', title: '01. 프로그램 평가의 개념 및 의의',
+            html: `
+              <div class="badge-row">
+                <span class="badge badge-blue">평가 개념·3단계</span>
+                <span class="badge badge-green">평가 특성 3가지</span>
+                <span class="badge badge-yellow">평가 이유 3가지</span>
+                <span class="badge badge-red">역기능적 요소 4가지</span>
+              </div>
+            `
+          },
+          {
+            icon: '📊', title: '프로그램 평가의 개념 ★',
             html: `
               <span class="kichul">⭐ 기출</span>
-              <div class="hbox hbox-blue"><b>프로그램 평가</b>: 수용가능한 기준(defensible criteria)을 구체화하고, 사회적·과학적 방법으로 적용하는 과정<br>→ 평가 결과: 프로그램을 축소·계속·확장할 것인지 결정하는 근거</div>
+              <div class="hbox hbox-blue">
+                수용 가능한 기준(defensible criteria)을 <b>구체화(identification) → 설명(clarification) → 적용(application)</b>하는 과정을 사회적·과학적 방법으로 수행하는 것
+              </div>
               <div class="sub">평가 3단계 과정</div>
               <table class="comp-table">
-                <tr><th>과정</th><th>내용</th></tr>
-                <tr><td>① 기준 설정</td><td>효과성·서비스 질·효율성·영향 등 측정 기준 설정</td></tr>
-                <tr><td>② 자료 수집·분석</td><td>기획·실행·결과에 관한 자료를 수집하고 기준 활용 분석</td></tr>
-                <tr><td>③ 의사결정 지원</td><td>서비스 질 향상 또는 이해관계자의 중요 의사결정을 돕는 과정</td></tr>
+                <tr><th>#</th><th>내용</th></tr>
+                <tr><td>①</td><td>절대적 혹은 상대적으로 판정할 수 있는 <b>기준을 결정</b>하고</td></tr>
+                <tr><td>②</td><td>관련 <b>자료를 수집</b>하며</td></tr>
+                <tr><td>③</td><td>기준을 평가 대상의 <b>가치, 질, 활용성, 효과성, 중요성 등을 결정</b>할 수 있도록 적용</td></tr>
               </table>
+              <div class="sub">사회복지 프로그램 평가 종합 정의</div>
+              <table class="comp-table">
+                <tr><th>#</th><th>내용</th></tr>
+                <tr><td>①</td><td>프로그램 성과(효과성·서비스 질·효율성·영향 등)를 측정하기 위해 <b>기준을 설정</b>하고</td></tr>
+                <tr><td>②</td><td>프로그램 기획·실행·결과에 관한 <b>자료를 수집하고 기준을 활용하여 분석</b>하여</td></tr>
+                <tr><td>③</td><td>프로그램 서비스 질 향상이나 이해관계자의 <b>중요한 의사결정을 돕는 과정</b></td></tr>
+              </table>
+              <div class="hbox hbox-yellow">💡 평가 결과는 프로그램을 <b>축소 / 계속 / 확장</b>할 것인지 결정하는 근거<br>→ 평가 결과로 프로그램을 <b>새로 개발</b>하는 것은 아님 ★</div>
+            `
+          },
+          {
+            icon: '🔍', title: '평가 특성 3가지 + 평가 이유 3가지 ★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
               <div class="sub">사회복지 프로그램 평가의 특성 3가지</div>
-              <ul class="pts">
-                <li><b>효과성 측정과 의사결정</b>: 평가를 통해 효과성 등 피드백(환류정보)을 얻고, 투입·활동·산출·성과에 관한 의사결정 가능</li>
-                <li><b>체계적 절차와 조사방법 활용</b>: 평가를 위해 연구설계와 조사방법을 사전에 결정하고, 이를 바탕으로 자료수집과 분석 수행</li>
-                <li><b>정치사회적 특성</b>: 평가의 목적, 평가 수행 주체, 자료수집 내용 등 정치사회적 맥락에 따라 평가 결과에 차이 발생 가능</li>
-              </ul>
+              <table class="comp-table">
+                <tr><th>#</th><th>특성</th><th>설명</th></tr>
+                <tr><td>①</td><td><b>효과성 측정과 의사결정</b></td><td>평가를 통한 환류 정보로 프로그램 투입·활동·산출·성과에 관한 중요한 의사결정 가능</td></tr>
+                <tr><td>②</td><td><b>체계적 절차와 조사방법 활용</b></td><td>연구설계와 조사방법이 결정되어 이에 따라 자료수집과 분석이 수행됨</td></tr>
+                <tr><td>③</td><td><b>정치사회적 특성</b></td><td>평가대상·수행주체·자료수집 내용 등의 목적에 따라 다른 결과를 가져올 수 있음</td></tr>
+              </table>
               <div class="sub">평가를 수행하는 3가지 이유</div>
               <ul class="star-list">
-                <li><b>합리적 의사결정 근거</b>: 프로그램 계속·확대·축소 여부 결정의 객관적 근거</li>
-                <li><b>지식기반 확충</b>: 평가결과 누적 → 사회복지실천 지식 산출</li>
-                <li><b>책무성 입증</b>: 사회로부터 할당받은 자원을 효과적·효율적으로 사용했음을 증명</li>
+                <li><b>합리적 의사결정</b>을 위한 객관적 근거로 활용</li>
+                <li>사회복지 <b>지식기반을 확충</b></li>
+                <li>사회복지 프로그램의 <b>책무성을 입증</b></li>
               </ul>
-              <div class="sub">역기능적 요소 (부정적 영향)</div>
+              <div class="hbox hbox-blue">핵심: 평가를 통해 프로그램의 성공이 <b>자동으로 보장되지는 않음</b><br>→ 평가는 주관적 영향력 행사가 아닌 <b>객관적 사실 인식</b>을 목적으로 함</div>
+            `
+          },
+          {
+            icon: '⚠️', title: '프로그램 평가의 역기능적 요소 ★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
               <ul class="pts red">
-                <li>프로그램 관리자·담당자가 <b>과도한 효과성</b>을 기대함</li>
-                <li>평가가 <b>전문직의 가치를 훼손</b>한다고 보는 인식</li>
-                <li>프로그램 진행 방해 및 <b>클라이언트 보호</b> 측면에서 부정적 태도</li>
-                <li>평가 결과가 <b>인력·예산 감축, 프로그램 종결</b>을 위한 자료로 활용될 것에 대한 두려움</li>
+                <li>① 프로그램 관리자 및 담당자가 <b>과도한 효과성을 기대</b>함</li>
+                <li>② 프로그램 평가가 <b>전문직의 가치 훼손</b>을 가져온다고 보는 인식</li>
+                <li>③ 프로그램 진행상의 방해와 클라이언트 보호 측면에서 <b>부정적인 태도</b>를 보일 수 있음</li>
+                <li>④ 평가 결과가 <b>인력·예산 감축과 프로그램 종결</b>을 위한 자료로 활용되는 것에 대한 두려움</li>
               </ul>
+              <div class="hbox hbox-yellow">💡 ③번은 <b>부정적</b> 태도임에 주의 (긍정적 태도가 아님)</div>
+            `
+          },
+          {
+            icon: '📂', title: '02. 프로그램 평가의 기준 및 유형',
+            html: `
+              <div class="badge-row">
+                <span class="badge badge-blue">평가 기준 7가지</span>
+                <span class="badge badge-green">형성 vs 총괄평가</span>
+                <span class="badge badge-yellow">양적 vs 질적평가</span>
+                <span class="badge badge-purple">내부 vs 외부평가</span>
+              </div>
             `
           },
           {
             icon: '📏', title: '프로그램 평가 기준 7가지 ★★',
             html: `
               <span class="kichul">⭐ 기출</span>
+              <div class="hbox hbox-blue">총 <b>7가지</b> — 각 기준의 정의를 정확히 구분할 것!</div>
               <table class="comp-table">
-                <tr><th>기준</th><th>평가 내용</th></tr>
-                <tr><td><b>① 노력성 (effort)</b></td><td>프로그램 <b>활동의 양</b> — 얼마나 열심히 했는가</td></tr>
-                <tr><td><b>② 효과성 (effectiveness)</b></td><td>프로그램 <b>목표 달성 정도</b></td></tr>
-                <tr><td><b>③ 효율성 (efficiency)</b></td><td><b>산출 대비 비용</b> 정도</td></tr>
-                <tr><td><b>④ 영향 (impact)</b></td><td>사회문제나 클라이언트 욕구 변화에 미친 <b>영향</b></td></tr>
-                <tr><td><b>⑤ 서비스의 질 (quality)</b></td><td>프로그램 <b>전문성, 클라이언트 만족도</b></td></tr>
-                <tr><td><b>⑥ 과정 (process)</b></td><td>프로그램 <b>결과 경로</b></td></tr>
-                <tr><td><b>⑦ 형평성 (equity)</b></td><td>프로그램 <b>배분의 공평성</b></td></tr>
+                <tr><th>#</th><th>기준</th><th>영문</th><th>핵심 정의</th></tr>
+                <tr><td>①</td><td><b>노력성</b></td><td>effort</td><td>프로그램 <b>활동의 양</b></td></tr>
+                <tr><td>②</td><td><b>효과성</b></td><td>effectiveness</td><td>프로그램 <b>목표 달성 정도</b></td></tr>
+                <tr><td>③</td><td><b>효율성</b></td><td>efficiency</td><td><b>산출 대비 비용</b> 정도</td></tr>
+                <tr><td>④</td><td><b>영향</b></td><td>impact</td><td>사회문제나 클라이언트 <b>욕구 변화에 미친 영향</b></td></tr>
+                <tr><td>⑤</td><td><b>서비스의 질</b></td><td>quality of services</td><td>프로그램 전문성, 클라이언트 <b>만족도</b></td></tr>
+                <tr><td>⑥</td><td><b>과정</b></td><td>process</td><td>프로그램 <b>결과 경로</b></td></tr>
+                <tr><td>⑦</td><td><b>형평성</b></td><td>equity</td><td>프로그램 <b>배분 공평성</b></td></tr>
               </table>
-              <div class="sub">노력성(effort) — 주요 자료</div>
+              <div class="hbox hbox-yellow">💡 혼동 주의: <b>효과성</b>(목표 달성) ≠ <b>효율성</b>(산출 대비 비용)<br>서비스와 성취된 결과 간의 관계 = <b>효과성</b> (효율성 아님)</div>
+            `
+          },
+          {
+            icon: '💪', title: '노력성 세부 측정 항목',
+            html: `
+              <div class="hbox hbox-blue"><b>노력성(effort)</b> = 프로그램 활동의 양</div>
               <ul class="pts">
-                <li>클라이언트 수, 나이, 성별, 소득수준, 가족구성 등</li>
-                <li>표적인구의 서비스 활용 정도</li>
-                <li>클라이언트의 서비스 경험 (접촉 수와 빈도, 중도탈락 수 등)</li>
-                <li>서비스 담당자의 활동 (<b>케이스부담률</b>, 서비스 유형 등)</li>
+                <li>클라이언트: 수, 나이, 성별, 소득수준, 가족구성 등</li>
+                <li>클라이언트의 서비스 경험: 서비스 접촉 수·빈도, 응급구조 시간, 중도탈락 사례 수 등</li>
+                <li>서비스 담당자의 활동: <b>케이스부담률</b>, 서비스 제공 단위, 서비스 유형·방법 등</li>
+                <li>서비스 담당자 업무수행의 질: 적절한 치료 기법 활용, 행정 규칙 준수 등</li>
                 <li>지출과 자원 활용, 서비스 비용</li>
               </ul>
-              <div class="sub">효과성 — 성과 정보 유형</div>
+              <div class="hbox hbox-yellow">💡 클라이언트의 서비스 경험은 <b>노력성</b> 평가 기준 (효율성 아님)</div>
+            `
+          },
+          {
+            icon: '🎯', title: '효과성·효율성 자료 유형 및 측정',
+            html: `
+              <div class="sub">효과성(effectiveness) 자료 유형</div>
               <table class="comp-table">
-                <tr><th>자료 유형</th><th>설명</th><th>예시</th></tr>
-                <tr><td><b>직접 자료</b></td><td>클라이언트에 대한 의도된 성과를 직접 측정</td><td>생활수준 향상, 가족기능 증진</td></tr>
-                <tr><td><b>간접 자료</b></td><td>간접 지표로 성과를 추정</td><td>'노인 여가 선용' 성과를 위한 '서비스 만족도'</td></tr>
+                <tr><th>구분</th><th>개념</th><th>예시</th></tr>
+                <tr><td><b>직접 자료</b></td><td>의도된 성과를 직접 측정한 자료</td><td>생활수준 향상, 가족기능 증진</td></tr>
+                <tr><td><b>간접 자료</b></td><td>간접 지표로 성과를 추정하는 자료</td><td>노인 여가 선용 성과 추정을 위한 서비스 만족도</td></tr>
               </table>
-              <div class="sub">효율성 — 필요 자료</div>
+              <div class="sub">효율성(efficiency) 측정 방법</div>
               <ul class="pts">
-                <li>프로그램 산출물 단위와 관련한 비용 (예: 한 아이의 입양 비용)</li>
-                <li>목표 성취에 부과된 비용 (인력·재료·장비 등)</li>
-                <li>다른 프로그램과 비교한 <b>상대적 비용 (기회비용)</b></li>
+                <li>프로그램 산출물 단위와 관련한 비용 (예: 한 아이의 입양에 드는 비용)</li>
+                <li>프로그램 목표 성취에 부과된 비용 (예: 인력, 재료, 장비)</li>
+                <li>다른 프로그램과의 비교를 통한 <b>상대적 비용 (기회비용)</b></li>
                 <li>프로그램 비용과 편익의 <b>화폐 가치 환산</b></li>
               </ul>
+              <div class="sub">효율성 비교 예시</div>
+              <table class="comp-table">
+                <tr><th>구분</th><th>A프로그램</th><th>B프로그램</th></tr>
+                <tr><td>프로그램 비용</td><td>200,000</td><td>150,000</td></tr>
+                <tr><td>유의한 변화 클라이언트 수</td><td>10명</td><td>10명</td></tr>
+                <tr><td><b>1명당 비용</b></td><td>20,000</td><td><b>15,000 (더 효율적)</b></td></tr>
+              </table>
             `
           },
           {
             icon: '⚖️', title: '형성평가 vs 총괄평가 ★★',
             html: `
               <span class="kichul">⭐ 기출</span>
+              <div class="hbox hbox-blue">평가 목적에 따른 구분: <b>형성평가(도중)</b> vs <b>총괄평가(종결 후)</b></div>
               <table class="comp-table">
                 <tr><th>구분</th><th class="th-blue">형성평가 (Formative)</th><th class="th-green">총괄평가 (Summative)</th></tr>
-                <tr><td><b>시기</b></td><td>프로그램 운영 <b>도중</b></td><td>프로그램 <b>종결 이후</b></td></tr>
-                <tr><td><b>목적</b></td><td>문제점 발견 → 수정·보완</td><td>성과와 영향 파악</td></tr>
-                <tr><td><b>용도</b></td><td>프로그램 발전</td><td>계속·채택 여부 결정</td></tr>
+                <tr><td><b>목적</b></td><td colspan="2">가치나 질을 결정하기 위해서</td></tr>
+                <tr><td><b>용도</b></td><td>프로그램을 <b>발전</b>시키기 위해서</td><td>프로그램의 <b>장래 또는 채택</b>에 대한 결정</td></tr>
+                <tr><td><b>시기</b></td><td>운영 <b>도중</b></td><td><b>종결 이후</b></td></tr>
                 <tr><td><b>이해당사자</b></td><td>프로그램 집행자와 직원</td><td>집행자, 잠재 소비자, 자금제공기관</td></tr>
-                <tr><td><b>수행 주체</b></td><td>주로 <b>내부평가자</b></td><td>주로 <b>외부평가자</b></td></tr>
-                <tr><td><b>자료수집 빈도</b></td><td>자주</td><td>드물게</td></tr>
-                <tr><td><b>표본 수</b></td><td>때로는 적게</td><td>일반적으로 많이</td></tr>
+                <tr><td><b>수행 주체</b></td><td>주로 <b>내부</b>평가자</td><td>주로 <b>외부</b>평가자</td></tr>
+                <tr><td><b>주요 특징</b></td><td>발전시킬 수 있도록 <b>피드백</b> 제공</td><td>계속·선택 여부에 대한 <b>정보</b> 제공</td></tr>
+                <tr><td><b>자료수집 목적</b></td><td><b>진단</b>을 위해서</td><td><b>결정</b>을 위해서</td></tr>
+                <tr><td><b>방법</b></td><td>때로는 <b>비공식적</b>으로</td><td><b>타당하고 신뢰할 수 있도록</b></td></tr>
+                <tr><td><b>자료수집 빈도</b></td><td><b>자주</b></td><td>드물게</td></tr>
+                <tr><td><b>표본 수</b></td><td>때로는 <b>적게</b></td><td>일반적으로 <b>많이</b></td></tr>
               </table>
-              <div class="sub">총괄평가의 세부 유형</div>
-              <ul class="pts">
-                <li><b>효과성 평가</b>: 의도했던 목표를 달성했는지에 주목 (프로그램 효과가 프로그램으로 인해 발생했는가?)</li>
-                <li><b>효율성 평가</b>: 프로그램 성과와 비용을 함께 고려 (직접 비용은 얼마인가?)</li>
+              <div class="sub">총괄평가 세부 유형</div>
+              <table class="comp-table">
+                <tr><th>구분</th><th>효과성 평가</th><th>효율성 평가</th></tr>
+                <tr><td><b>초점</b></td><td>원래 의도했던 <b>목표 달성</b> 여부</td><td>프로그램 <b>성과와 비용</b>을 함께 고려</td></tr>
+                <tr><td><b>예시 질문</b></td><td>"의도한 효과가 프로그램으로 인해 발생했는가?"</td><td>"프로그램을 위한 직접적 비용은 얼마인가?"</td></tr>
+              </table>
+            `
+          },
+          {
+            icon: '🔢', title: '양적평가 vs 질적평가 ★★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <div class="hbox hbox-blue">평가 방법에 따른 구분</div>
+              <table class="comp-table">
+                <tr><th>구분</th><th class="th-blue">양적(quantitative) 평가</th><th class="th-green">질적(qualitative) 평가</th></tr>
+                <tr><td><b>자료 성격</b></td><td>주로 <b>계량화</b>된 자료</td><td><b>수량화하지 않은</b> 자연스러운 상황</td></tr>
+                <tr><td><b>분석 방법</b></td><td><b>연역적</b>으로 분석</td><td><b>귀납적</b>으로 획득·분석</td></tr>
+                <tr><td><b>도구</b></td><td>척도·설문지·계량화된 측정기준</td><td>관찰·면접, 면접기록지·현장노트</td></tr>
+                <tr><td><b>특징</b></td><td>통계적 이론 기반, 가설 검증, 모집단 특성 추정</td><td>내·외면적 인간 행위와 상호작용, 심도 있는 통찰과 세부묘사</td></tr>
+              </table>
+              <div class="sub">평가설계 — 도구 — 유형 연결</div>
+              <table class="comp-table">
+                <tr><th>평가설계</th><th>세부 방법</th><th>평가도구</th><th>유형</th></tr>
+                <tr><td>실험설계</td><td>단일집단 전후 설계</td><td>표준화척도, 평정척도, 수치세기</td><td><b>양적평가</b></td></tr>
+                <tr><td>비실험설계</td><td>목표 대비 실적 평가</td><td>표준화척도</td><td>양적평가</td></tr>
+                <tr><td>비실험설계</td><td>설문/만족도 조사</td><td>설문지</td><td>양적평가</td></tr>
+                <tr><td>비실험설계</td><td>심층면접</td><td>면접기록지</td><td><b>질적평가</b></td></tr>
+                <tr><td>비실험설계</td><td>현장관찰</td><td>현장노트</td><td>질적평가</td></tr>
+                <tr><td>비실험설계</td><td>문서 및 사진</td><td>소감문, 활동사진</td><td>질적평가</td></tr>
+              </table>
+            `
+          },
+          {
+            icon: '🏛️', title: '내부평가 vs 외부평가 ★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <div class="hbox hbox-blue">평가 주체에 따른 구분</div>
+              <table class="comp-table">
+                <tr><th>구분</th><th class="th-blue">내부(inhouse) 평가</th><th class="th-green">외부(outsider) 평가</th></tr>
+                <tr><td><b>수행 주체</b></td><td>프로그램을 직접 수행하는 사람 (기관 관리자·프로그램 담당자 등 <b>조직 내 구성원</b>)</td><td>기관 밖의 <b>전문가</b>가 컨설턴트로서 수행</td></tr>
+                <tr><td><b>성격</b></td><td><b>자기반성적</b> 평가</td><td>외부 전문가에 의한 <b>객관적</b> 평가</td></tr>
+                <tr><td><b>목적</b></td><td>프로그램을 <b>개선</b>하려는 목적</td><td>조직운영이나 프로그램의 <b>개선</b></td></tr>
+              </table>
+            `
+          },
+          {
+            icon: '📂', title: '03. 프로그램 평가의 과정',
+            html: `
+              <div class="badge-row">
+                <span class="badge badge-blue">1단계: 기획 및 설계</span>
+                <span class="badge badge-green">2단계: 자료수집 및 분석</span>
+                <span class="badge badge-yellow">3단계: 결과 판단 및 활용</span>
+                <span class="badge badge-gray">4단계: 보고서 작성</span>
+              </div>
+            `
+          },
+          {
+            icon: '🔄', title: '프로그램 평가 절차 4단계 ★★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <div class="flow" style="flex-wrap:wrap">
+                <span class="flow-item">1단계<br>평가 기획<br>및 설계</span><span class="flow-arrow">▶</span>
+                <span class="flow-item">2단계<br>자료수집<br>및 분석</span><span class="flow-arrow">▶</span>
+                <span class="flow-item">3단계<br>결과 판단<br>및 활용</span><span class="flow-arrow">▶</span>
+                <span class="flow-item">4단계<br>보고서<br>작성</span>
+              </div>
+              <div class="sub">1단계. 평가 기획 및 설계 ★ — 평가 과정 중 <b>가장 먼저</b> 해야 할 단계</div>
+              <table class="comp-table">
+                <tr><th>#</th><th>과업</th><th>내용</th></tr>
+                <tr><td>①</td><td><b>평가 목적 확인</b></td><td>누가 어떤 이유로 평가를 필요로 하고, 어떤 목적을 달성하려는지 검토</td></tr>
+                <tr><td>②</td><td><b>평가 대상과 범위 설정</b></td><td>단일 프로그램 vs. 여러 프로그램 집합체 평가 여부 결정</td></tr>
+                <tr><td>③</td><td><b>평가방법과 도구 결정</b></td><td>양적·질적 평가 중 목적에 적합한 방법 및 도구 선택</td></tr>
+                <tr><td>④</td><td><b>평가 절차와 일정 확정</b></td><td></td></tr>
+              </table>
+              <div class="hbox hbox-yellow">💡 가장 먼저 해야 할 과업 = <b>① 평가 목적 확인</b><br>'자료 출처 확인과 선정'은 <b>2단계(자료수집과 분석)</b> 과업임</div>
+              <div class="sub">2단계. 자료수집과 분석</div>
+              <ul class="pts green">
+                <li>① 자료 출처 확인과 선정</li>
+                <li>② 지표 정리 및 선정</li>
+                <li>③ 자료수집방법에 따른 체계적 수집</li>
+                <li>④ 적절한 분석방법과 기법 활용</li>
+                <li>⑤ 평가결과 종합정리</li>
+              </ul>
+              <div class="sub">3단계. 결과 판단 및 활용 ★</div>
+              <ul class="pts yellow">
+                <li>① 평가결과 추론</li>
+                <li>② 가치판단</li>
+                <li>③ 평가보고서 작성과 제출</li>
+                <li>④ 평가결과 활용</li>
               </ul>
             `
           },
           {
-            icon: '🔢', title: '양적평가 vs 질적평가 + 평가 과정 4단계 ★',
+            icon: '📝', title: '9강 핵심 요약',
             html: `
-              <span class="kichul">⭐ 기출</span>
-              <div class="sub">양적평가 vs 질적평가</div>
               <table class="comp-table">
-                <tr><th>구분</th><th class="th-blue">양적평가</th><th class="th-green">질적평가</th></tr>
-                <tr><td>자료 성격</td><td>계량화된 자료</td><td>수량화하지 않은 자료</td></tr>
-                <tr><td>분석 방법</td><td><b>연역적</b> 분석</td><td><b>귀납적</b> 분석</td></tr>
-                <tr><td>도구</td><td>척도·설문지·통계</td><td>관찰·면접</td></tr>
-                <tr><td>특징</td><td>가설 검증, 모집단 특성 추정</td><td>심층 통찰, 객관적 관찰기록·세부묘사</td></tr>
+                <tr><th>개념</th><th>핵심 내용</th></tr>
+                <tr><td><b>프로그램 평가</b></td><td>수용 가능한 기준의 구체화→설명→적용 과정을 사회적·과학적으로 수행</td></tr>
+                <tr><td><b>평가 결과 활용</b></td><td>프로그램 축소·계속·확장 결정의 근거 (신규 개발 ❌)</td></tr>
+                <tr><td><b>평가의 이유</b></td><td>합리적 의사결정 근거 / 지식기반 확충 / 책무성 입증</td></tr>
+                <tr><td><b>역기능적 요소</b></td><td>과도한 효과성 기대 / 가치 훼손 인식 / 부정적 태도 / 인력·예산 감축 두려움</td></tr>
+                <tr><td><b>평가 기준 7가지</b></td><td>노력성(활동 양) / 효과성(목표 달성) / 효율성(산출 대비 비용) / 영향 / 서비스의 질 / 과정 / 형평성</td></tr>
+                <tr><td><b>노력성 vs 효율성</b></td><td>클라이언트 서비스 경험 = <b>노력성</b> / 산출 대비 비용 = <b>효율성</b></td></tr>
+                <tr><td><b>형성평가</b></td><td>프로그램 <b>운영 도중</b> 수행, 수정·보완 목적, 내부평가자 주도</td></tr>
+                <tr><td><b>총괄평가</b></td><td>프로그램 <b>종결 후</b> 수행, 성과·영향 파악, 외부평가자 주도</td></tr>
+                <tr><td><b>양적평가</b></td><td>계량화·연역적 분석, 통계적 이론, 설문지·척도</td></tr>
+                <tr><td><b>질적평가</b></td><td>수량화 ❌, 귀납적 분석, 관찰·면접, 면접기록지·현장노트</td></tr>
+                <tr><td><b>내부평가</b></td><td>조직 내 구성원이 수행, 자기반성적 평가</td></tr>
+                <tr><td><b>외부평가</b></td><td>기관 밖 전문가(컨설턴트)가 수행</td></tr>
+                <tr><td><b>평가 절차 4단계</b></td><td>기획 및 설계 → 자료수집 및 분석 → 결과 판단 및 활용 → 보고서 작성</td></tr>
+                <tr><td><b>1단계 첫 과업</b></td><td>평가 <b>목적 확인</b> (목표 진술·설계 선정·도구 선택이 아님)</td></tr>
+                <tr><td><b>단계별 과업 구분</b></td><td>자료 출처 확인과 선정 = <b>2단계</b> (1단계 아님)</td></tr>
+                <tr><td><b>3단계 주요 과업</b></td><td>평가결과 추론 / 가치판단 / 보고서 작성·제출 / 결과 활용</td></tr>
               </table>
-              <div class="sub">내부평가 vs 외부평가</div>
-              <table class="comp-table">
-                <tr><th>구분</th><th>내부평가</th><th>외부평가</th></tr>
-                <tr><td>수행 주체</td><td>프로그램 직접 수행자 (관리자·수행인력)</td><td>기관 밖 외부 전문가(컨설턴트)</td></tr>
-                <tr><td>성격</td><td>자기반성적 평가</td><td>외부 시각의 객관적 평가</td></tr>
-              </table>
-              <div class="sub">프로그램 평가 과정 4단계</div>
-              <div class="flow" style="flex-wrap:wrap">
-                <span class="flow-item">① 평가 기획<br>및 설계</span><span class="flow-arrow">▶</span>
-                <span class="flow-item">② 자료수집<br>및 분석</span><span class="flow-arrow">▶</span>
-                <span class="flow-item">③ 결과 판단<br>및 활용</span><span class="flow-arrow">▶</span>
-                <span class="flow-item">④ 보고서<br>작성</span>
-              </div>
-              <ul class="pts">
-                <li><b>1단계</b>: 평가 목적 확인·대상·범위 설정·방법과 도구 결정·절차와 일정 확정</li>
-                <li><b>2단계</b>: 자료 출처 확인·지표 선정·체계적 수집·분석·결과 종합정리</li>
-                <li><b>3단계</b>: 평가결과 추론·가치판단·보고서 작성·결과 활용</li>
-              </ul>
             `
           }
         ]
       },
       {
-        num: '10강', name: '프로그램 평가의 이해(2) — 양적 평가',
+        num: '10강', name: '프로그램 평가의 이해(2)',
         cards: [
           {
-            icon: '📐', title: '양적 평가 기초 원리 + 실험설계 3요소 ★',
+            icon: '📂', title: '01. 프로그램 양적 평가의 기초 원리 및 유형',
+            html: `
+              <div class="badge-row">
+                <span class="badge badge-blue">양적 평가 기초 원리</span>
+                <span class="badge badge-green">실험설계</span>
+                <span class="badge badge-yellow">준실험설계</span>
+                <span class="badge badge-purple">원시실험설계</span>
+                <span class="badge badge-gray">단일사례설계</span>
+              </div>
+            `
+          },
+          {
+            icon: '📐', title: '양적 평가 기초 원리 ★',
             html: `
               <span class="kichul">⭐ 기출</span>
-              <div class="hbox hbox-blue"><b>양적 평가</b>: 계량적 방법으로 자료를 수집하고, 실험조사 설계를 통해 <b>객관적인 자료를 연역적으로 분석</b>하는 평가방법</div>
-              <div class="sub">양적 평가 vs 질적 평가</div>
               <table class="comp-table">
-                <tr><th>구분</th><th class="th-blue">양적 평가</th><th class="th-green">질적 평가</th></tr>
-                <tr><td>자료 수집</td><td>계량적(수치화)</td><td>관찰기록·세부묘사</td></tr>
-                <tr><td>분석 방법</td><td>통계적 이론 기반</td><td>심도있는 통찰 활용</td></tr>
-                <tr><td>접근 방식</td><td><b>연역적</b></td><td><b>귀납적</b></td></tr>
-                <tr><td>특성</td><td>객관성·일반화</td><td>내면적·총체적 이해</td></tr>
+                <tr><th>구분</th><th>개념</th></tr>
+                <tr><td><b>양적 평가</b></td><td>평가를 위해 수집되는 자료가 주로 <b>계량화</b>되고, 실험조사와 같은 조사 설계를 통해 <b>객관적 자료가 연역적으로 분석</b>되는 평가방법</td></tr>
+                <tr><td><b>질적 평가</b></td><td>대상 집단(개인)에서 나타나는 <b>내·외면적 인간 행위와 상호작용</b>, 총체적 증거에 대해 <b>심도 있는 통찰</b>을 활용하여 관찰기록 또는 세부묘사를 추구하는 연구방법을 활용한 평가</td></tr>
               </table>
+              <div class="sub">양적 평가 세부 특징</div>
+              <ul class="pts">
+                <li>표본 집단을 대상으로 <b>계량화된 측정 기준</b> 사용</li>
+                <li>수량적 결과들에 대해 <b>통계적 이론</b>을 기반으로 결과 기술</li>
+                <li><b>가설을 검증</b>하여 모집단의 특성을 추정하는 연구방법을 프로그램 평가에 적용</li>
+              </ul>
+              <div class="sub">양적 평가 유형 4가지</div>
+              <div class="flow" style="flex-wrap:wrap">
+                <span class="flow-item">① 실험설계</span><span class="flow-arrow">▶</span>
+                <span class="flow-item">② 준실험설계</span><span class="flow-arrow">▶</span>
+                <span class="flow-item">③ 원시실험설계</span><span class="flow-arrow">▶</span>
+                <span class="flow-item">④ 단일사례설계</span>
+              </div>
+            `
+          },
+          {
+            icon: '🔬', title: '실험설계 — 3가지 요소 ★★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <div class="hbox hbox-blue">프로그램의 <b>효과성 입증</b>을 위해서는 프로그램으로 인해 클라이언트의 욕구가 해결된다는 <b>인과관계</b>를 증명해야 함 → 이를 위한 논리적 방법으로 <b>실험설계 평가</b>가 자주 활용됨</div>
               <div class="sub">실험설계의 3가지 요소</div>
               <table class="comp-table">
                 <tr><th>요소</th><th>내용</th></tr>
-                <tr><td><b>(1) 통제</b></td><td>실험집단(개입 대상) + 통제집단(비교 집단) 구성<br><b>난선화(random)</b>: 무작위 선정으로 두 집단 배치<br><b>선택 편의(Selection Bias)</b>: 인위적 배치로 효과 입증 실패하는 경우</td></tr>
-                <tr><td><b>(2) 비교</b></td><td>사전검사(프로그램 전, <b>기초선 baseline</b> 역할) vs 사후검사(프로그램 후)<br>사전검사 = 실험·통제집단의 <b>동질성 확인</b> 기능</td></tr>
-                <tr><td><b>(3) 개입</b></td><td>실험집단의 긍정적 변화 원인 = <b>사회복지사가 수행하는 프로그램</b><br>클라이언트의 욕구 해결·문제 감소와 직접 연관이 있어야 함</td></tr>
+                <tr><td><b>(1) 통제</b></td><td>실험집단과 통제집단의 구성</td></tr>
+                <tr><td><b>(2) 비교</b></td><td>사전검사와 사후검사의 비교</td></tr>
+                <tr><td><b>(3) 개입</b></td><td>프로그램의 효과</td></tr>
               </table>
+              <div class="sub">(1) 통제 — 실험집단과 통제집단의 구성</div>
+              <ul class="pts">
+                <li><b>실험집단</b>: 사회복지사의 개입 혹은 프로그램의 참여 대상이 되는 집단</li>
+                <li><b>통제집단</b>: 실험집단의 변화에 외부 영향요인이 있는지를 통제하기 위한 <b>비교집단</b> (없다면 변화가 프로그램에 기인한 것인지 확인 어려움)</li>
+                <li>집단 구분 방법: <b>난선화(random, 무작위 선정)</b> 방식</li>
+                <li>인위적으로 나누거나 배치한 경우 → <b>선택 편의(selection bias)</b> 발생</li>
+              </ul>
+              <div class="sub">(2) 비교 — 사전검사와 사후검사의 비교</div>
+              <ul class="pts green">
+                <li>사전검사 없으면 사후검사 결과를 <b>신뢰하기 어려움</b></li>
+                <li>사전검사 결과 = 프로그램 가치 판단의 기준인 <b>기초선(baseline)</b></li>
+                <li>사전검사로 실험집단·통제집단의 <b>동질성 확인</b>도 중요</li>
+              </ul>
+              <div class="sub">(3) 개입 — 프로그램의 효과</div>
+              <ul class="pts purple">
+                <li>실험집단의 긍정적 변화 원인 = <b>사회복지사가 수행하는 프로그램(개입)</b></li>
+                <li>개입의 목표와 프로그램 수행 내용 = 프로그램 효과 평가의 <b>주요 기준</b></li>
+                <li>개입은 클라이언트의 <b>욕구 해결·문제 감소</b>와 직접 연관이 있어야 함</li>
+              </ul>
+              <div class="sub">실험설계 흐름</div>
               <div class="flow" style="flex-wrap:wrap">
-                <span class="flow-item">실험집단<br>사전검사 → 개입 → 사후검사</span>
-                <span class="flow-arrow">비교</span>
-                <span class="flow-item">통제집단<br>사전검사 → (없음) → 사후검사</span>
+                <span class="flow-item">실험 대상자<br>난선화(random)</span><span class="flow-arrow">▶</span>
+                <span class="flow-item">실험집단<br>사전검사→개입→사후검사</span><span class="flow-arrow">비교</span>
+                <span class="flow-item">통제집단<br>사전검사→(없음)→사후검사</span><span class="flow-arrow">▶</span>
+                <span class="flow-item">가설검증</span>
               </div>
             `
           },
           {
-            icon: '🔬', title: '양적 평가 4가지 유형 비교 ★★',
+            icon: '🔀', title: '준실험설계 (유사실험설계) ★★',
             html: `
               <span class="kichul">⭐ 기출</span>
+              <div class="hbox hbox-blue"><b>quasi-experimental design</b><br>실험설계와 유형·검증방법은 동일하지만, 실험집단과 통제집단을 <b>무작위로 배치하지 않고 임의 혹은 매칭(matching)을 통해 배치</b>한 것이 다름</div>
+              <div class="sub">특징</div>
+              <ul class="pts">
+                <li><b>비동일 통제집단 비교설계</b>라고도 함</li>
+                <li>실험집단과 통제집단 = 서로 다른 형태로 구성된 <b>이질적인 집단</b></li>
+                <li>사회복지사의 <b>편의(bias)</b>가 집단 구분에서 나타날 수 있음 → 실험설계만큼의 <b>타당성은 부족</b></li>
+                <li><b>무작위 배치가 윤리적·현실적으로 어려울 때</b> 적용</li>
+                <li>사회복지 분야의 집단설계에서 <b>가장 많이 사용</b>하는 방식</li>
+              </ul>
+              <div class="sub">실험설계 vs 준실험설계 비교</div>
+              <table class="comp-table">
+                <tr><th>구분</th><th class="th-blue">실험설계</th><th class="th-green">준실험설계</th></tr>
+                <tr><td><b>집단 배치</b></td><td>난선화(무작위)</td><td>임의배치 or 매칭</td></tr>
+                <tr><td><b>타당성</b></td><td>높음</td><td>실험설계보다 낮음</td></tr>
+                <tr><td><b>현장 활용</b></td><td>어려움</td><td><b>가장 많이 사용</b></td></tr>
+              </table>
+            `
+          },
+          {
+            icon: '⚗️', title: '원시실험설계 ★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <div class="hbox hbox-blue"><b>pre-experimental design</b><br>실험설계의 중요 요소 중 <b>난선화</b>와 함께 <b>사전검사가 결핍</b>된 실험설계</div>
+              <div class="sub">특징</div>
+              <ul class="pts red">
+                <li>사회복지 현장에서 통제집단을 구하기 어렵거나, 사전검사를 부득이하게 할 수 없을 경우 사용</li>
+                <li>사회복지 현장에서 <b>가장 많이 사용</b>하는 방식으로 볼 수 있음</li>
+                <li><b>내적 타당도가 심각하게 손상</b> → 프로그램 효과성의 검증 논리는 <b>매우 낮은 수준</b></li>
+              </ul>
+              <div class="sub">준실험설계 vs 원시실험설계 비교</div>
+              <table class="comp-table">
+                <tr><th>구분</th><th class="th-blue">준실험설계</th><th class="th-green">원시실험설계</th></tr>
+                <tr><td><b>난선화</b></td><td>❌ (임의/매칭)</td><td>❌</td></tr>
+                <tr><td><b>사전검사</b></td><td>✅ 있음</td><td>❌ <b>없음</b></td></tr>
+                <tr><td><b>내적 타당도</b></td><td>보통</td><td><b>심각하게 손상</b></td></tr>
+              </table>
+            `
+          },
+          {
+            icon: '📈', title: '단일사례설계 (Single Case Design) ★★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <div class="hbox hbox-blue"><b>single case design</b><br>하나의 사례에 대하여 개입을 실시한 후, <b>변화가 발생하는지 여부를 관찰을 통하여 기록·평가</b>하는 방식</div>
+              <div class="sub">사용 조건</div>
+              <ul class="pts">
+                <li>개입효과를 비교하기 위한 <b>통제사례(집단)를 만들기 현실적으로 어려울 때</b></li>
+                <li>한 클라이언트와 동일하거나 유사한 클라이언트가 주변에 없을 때</li>
+                <li>있더라도 <b>통계적 검증이 소수의 클라이언트에게 적용하기 어려울 때</b></li>
+              </ul>
+              <div class="sub">원리</div>
+              <ul class="pts green">
+                <li>개입 <b>전</b>에 반복 측정 → <b>A 구간 (기초선 구간)</b></li>
+                <li>개입 <b>이후</b>부터 반복 측정 → <b>B 구간 (개입 구간)</b></li>
+                <li>주로 1명에 대해서만 조사 → <b>여러 번 측정</b>하여 안정적인 값을 얻음</li>
+              </ul>
+              <div class="hbox hbox-blue" style="font-family:monospace;font-size:.88em;letter-spacing:2px">
+                O₁ O₂ O₃ O₄ O₅ &nbsp;<b>X</b>&nbsp; O₆ O₇ O₈ O₉ O₁₀<br>
+                <span style="font-size:.8em">[── 기초선(A) ──]&nbsp;&nbsp;&nbsp;[──── 개입(B) ────]</span>
+              </div>
+              <div class="sub">설계 유형</div>
+              <table class="comp-table">
+                <tr><th>설계</th><th>활용</th></tr>
+                <tr><td><b>AB설계</b></td><td>사회복지 현장에서 <b>주로 활용</b></td></tr>
+                <tr><td>ABA설계 / ABAB설계 / BAB설계</td><td>일반적으로 <b>연구논문</b>을 위해 활용</td></tr>
+              </table>
+              <div class="sub">AB설계 적용 예시 — 발달장애아동 일상생활훈련 (상의 입기)</div>
+              <table class="comp-table">
+                <tr><th>구분</th><th>기초선(A)</th><th>개입(B)</th></tr>
+                <tr><td><b>측정시점</b></td><td>1 · 2 · 3 · 4 · 5</td><td>6 · 7 · 8 · 9 · 10 · 11 · 12 · 13 · 14</td></tr>
+                <tr><td><b>시간(초)</b></td><td>26 · 24 · 29 · 30 · 31</td><td>28 · 24 · 19 · 17 · 15 · 16 · 13 · 12 · 10</td></tr>
+              </table>
+              <div class="hbox hbox-yellow">💡 개입 이후 상의 입기 시간이 점차 <b>감소</b> → 프로그램 효과 입증</div>
+            `
+          },
+          {
+            icon: '📋', title: '4가지 유형 종합 비교표',
+            html: `
               <table class="comp-table">
                 <tr><th>유형</th><th>난선화</th><th>사전검사</th><th>통제집단</th><th>내적 타당도</th><th>현장 활용</th></tr>
                 <tr><td><b>실험설계</b></td><td>✅ 무작위</td><td>✅</td><td>✅</td><td>높음</td><td>어려움</td></tr>
-                <tr><td><b>준실험설계</b></td><td>❌ 임의/매칭</td><td>✅</td><td>✅</td><td>중간</td><td><b>많이 사용</b></td></tr>
-                <tr><td><b>원시실험설계</b></td><td>❌</td><td>❌</td><td>△</td><td>심각하게 손상</td><td><b>가장 많이 사용</b></td></tr>
+                <tr><td><b>준실험설계</b></td><td>❌ 임의/매칭</td><td>✅</td><td>✅</td><td>보통</td><td><b>많이 사용</b></td></tr>
+                <tr><td><b>원시실험설계</b></td><td>❌</td><td>❌</td><td>△</td><td>심각 손상</td><td><b>가장 많이 사용</b></td></tr>
                 <tr><td><b>단일사례설계</b></td><td>❌</td><td>(반복측정)</td><td>❌</td><td>낮음</td><td>소수 사례</td></tr>
               </table>
-              <div class="sub">준실험설계 (Quasi-Experimental Design)</div>
-              <ul class="pts">
-                <li><b>비동일 통제집단 비교설계</b>라고도 함</li>
-                <li>집단을 <b>무작위가 아닌 임의 혹은 매칭</b>으로 배치 → 사회복지사의 편의(bias) 가능</li>
-                <li>무작위 배치가 윤리적·현실적으로 어려울 때 적용. 실제 사회복지 분야에서 <b>많이 사용</b></li>
-              </ul>
-              <div class="sub">원시실험설계 (Pre-Experimental Design)</div>
-              <ul class="pts">
-                <li>난선화 + 사전검사가 <b>결핍</b>된 유형 → 내적 타당도가 <b>심각하게 손상</b></li>
-                <li>통제집단을 구하기 어렵거나, 사전검사 불가능 시 사용</li>
-                <li>사회복지 현장에서 <b>가장 많이 사용</b>되는 방식</li>
-              </ul>
             `
           },
           {
-            icon: '📈', title: '단일사례설계 (Single Case Design) ★',
+            icon: '📂', title: '02. 프로그램 만족도 조사',
             html: `
-              <span class="kichul">⭐ 기출</span>
-              <div class="hbox hbox-blue"><b>단일사례설계</b>: 하나의 사례에 개입 후 변화 여부를 관찰·기록·평가하는 방식</div>
-              <div class="sub">사용 상황</div>
-              <ul class="pts">
-                <li>통제사례(집단)를 만들기 현실적으로 어려울 때</li>
-                <li>동일·유사한 클라이언트가 없을 때</li>
-                <li>인원수가 소수라 통계적 검증 적용이 어려울 때</li>
-              </ul>
-              <div class="sub">원리</div>
-              <ul class="pts">
-                <li>개입 <b>전</b>: 반복 측정 → 기초선 구간 (<b>A 구간</b>)</li>
-                <li>개입 <b>후</b>: 반복 측정 → 개입 구간 (<b>B 구간</b>)</li>
-                <li>1회씩만 측정하면 신뢰 어려움 → <b>여러 번 측정</b>으로 안정적 평균값 도출</li>
-              </ul>
-              <div class="sub">설계 유형</div>
-              <table class="comp-table">
-                <tr><th>유형</th><th>설명</th><th>주요 사용처</th></tr>
-                <tr><td><b>AB설계</b> ★</td><td>기초선(A) → 개입(B)</td><td><b>사회복지 현장에서 주로 활용</b></td></tr>
-                <tr><td>ABA설계</td><td>기초선 → 개입 → 기초선 재측정</td><td>연구논문</td></tr>
-                <tr><td>ABAB설계</td><td>A → B → A → B 반복</td><td>연구논문</td></tr>
-                <tr><td>BAB설계</td><td>개입 → 기초선 → 개입</td><td>연구논문</td></tr>
-              </table>
-              <div class="hbox hbox-yellow">실제 사회복지 현장에서는 <b>AB설계</b>를 주로 활용</div>
-              <div class="sub">AB설계 측정 도식</div>
-              <div class="hbox hbox-blue" style="font-family:monospace; font-size:0.85em;">
-                O₁ O₂ O₃ O₄ O₅ &nbsp;<b>X</b>&nbsp; O₆ O₇ O₈ O₉ O₁₀<br>
-                [── 기초선(A) ──] &nbsp;&nbsp;&nbsp;[── 개입(B) ──]<br>
-                <span style="font-size:0.8em;">O = 측정 &nbsp;|&nbsp; X = 프로그램(개입)</span>
-              </div>
-              <div class="sub">AB설계 적용 예시 — 발달장애아동 일상생활훈련</div>
-              <table class="comp-table">
-                <tr><th>구분</th><th>기초선(A)</th><th>개입(B)</th></tr>
-                <tr><td>측정시점</td><td>1·2·3·4·5</td><td>6·7·8·9·10·11·12·13·14</td></tr>
-                <tr><td>상의 입는 시간(분)</td><td>26·24·29·30·31</td><td>28·24·19·17·15·16·13·12·10</td></tr>
-              </table>
-              <div class="hbox hbox-yellow">💡 기초선 단계에서 상의 입는 시간 반복 측정 → 프로그램 개입 후 시간이 점차 <b>감소</b> → 효과 입증</div>
-            `
-          },
-          {
-            icon: '😊', title: '만족도 조사 — 방법·형식·7가지 내용 ★',
-            html: `
-              <span class="kichul">⭐ 기출</span>
-              <div class="hbox hbox-blue"><b>만족도 조사</b>: 클라이언트에게 프로그램에 대해 어떻게 생각하는지, 어느 정도 만족하였는지 묻는 것<br>→ 가장 <b>쉽게 시행</b>할 수 있고, 가장 <b>자주 사용</b>되는 프로그램 평가 방법</div>
-              <div class="sub">만족도 조사 방법</div>
               <div class="badge-row">
-                <span class="badge badge-blue">전화 조사</span>
-                <span class="badge badge-green">우편 조사</span>
-                <span class="badge badge-yellow">이메일 조사</span>
-                <span class="badge badge-purple">현장 직접 조사</span>
-                <span class="badge badge-gray">온라인 설문</span>
+                <span class="badge badge-blue">만족도 조사 개념·의의</span>
+                <span class="badge badge-green">방법 4가지</span>
+                <span class="badge badge-yellow">형식 2가지</span>
+                <span class="badge badge-purple">내용 7가지</span>
               </div>
-              <div class="sub">만족도 조사의 형식</div>
-              <table class="comp-table">
-                <tr><th>유형</th><th>특징</th></tr>
-                <tr><td><b>객관식 질문</b></td><td>5점 척도 활용 (①매우 만족 ~ ⑤매우 불만족)</td></tr>
-                <tr><td><b>주관식 질문</b></td><td>좋았던 점·부족한 점·이용경험 등 개방형 질문</td></tr>
-              </table>
-              <div class="sub">만족도 조사 내용 7가지 (Soliman &amp; Poulin, 1997)</div>
-              <ul class="star-list">
-                <li>① 프로그램의 <b>적절성</b> (appropriateness)</li>
-                <li>② 프로그램의 <b>유용성</b> (availability)</li>
-                <li>③ 프로그램의 <b>명확성</b> (clarity)</li>
-                <li>④ 프로그램 <b>제공의 시기</b> (timing)</li>
-                <li>⑤ 프로그램의 <b>질적 수준</b> (dignified treatment)</li>
-                <li>⑥ 프로그램의 <b>효과</b> (impact)</li>
-                <li>⑦ 사회복지사의 <b>유능성</b> (skillfulness)</li>
+            `
+          },
+          {
+            icon: '😊', title: '프로그램 만족도 조사 개념 + 방법 ★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <div class="hbox hbox-blue">
+                클라이언트에게 <b>프로그램에 대해 어떻게 생각하는지, 어느 정도로 만족하였는지</b> 묻는 조사<br>
+                → <b>간단하면서도 쉽게 시행</b>할 수 있고, <b>가장 자주 사용</b>되는 프로그램 평가 방법
+              </div>
+              <div class="sub">만족도 조사의 의의</div>
+              <ul class="pts">
+                <li>기관이 클라이언트의 <b>의견을 중시</b>하고, 그들의 경험과 생각을 귀중하게 간주한다는 <b>메시지 전달</b></li>
+                <li>클라이언트의 서비스 경험을 이해하여 <b>프로그램 개선점을 찾고 보완</b>하는 데 도움</li>
               </ul>
+              <div class="sub">만족도 조사 방법 4가지</div>
+              <div class="badge-row">
+                <span class="badge badge-blue">① 전화 조사</span>
+                <span class="badge badge-green">② 우편 조사</span>
+                <span class="badge badge-yellow">③ 이메일 조사</span>
+                <span class="badge badge-purple">④ 현장에서 직접 조사</span>
+              </div>
+              <div class="hbox hbox-blue">최근에는 <b>온라인 설문지</b>를 활용한 조사도 활용됨</div>
+            `
+          },
+          {
+            icon: '📝', title: '만족도 조사 형식 — 객관식·주관식 ★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <div class="sub">형식 2가지</div>
+              <table class="comp-table">
+                <tr><th>형식</th><th>특징</th><th>예시</th></tr>
+                <tr><td><b>① 객관식 질문</b></td><td>5점 척도 등으로 질문</td><td>매우 만족 / 만족 / 보통 / 불만족 / 매우 불만족</td></tr>
+                <tr><td><b>② 주관식 질문</b></td><td>개방형 질문으로 자유롭게 응답</td><td>좋았던 점 / 부족했던 점 / 장점 / 단점</td></tr>
+              </table>
+              <div class="sub">객관식 질문 예시</div>
+              <ul class="pts">
+                <li>우리 기관에 대해 전반적으로 어느 정도로 만족하십니까? → ①매우만족 ②만족 ③보통 ④불만족 ⑤매우불만족</li>
+                <li>우리 기관의 프로그램을 다른 사람들에게 추천하시겠습니까? → ①적극 추천 ②추천할 것 같다 ③추천 안 할 것 같다 ④절대 추천 안 함</li>
+              </ul>
+              <div class="sub">주관식 질문 예시</div>
+              <ul class="pts green">
+                <li>우리 기관의 프로그램에서 <b>좋았던 점</b>은 무엇입니까?</li>
+                <li>우리 기관의 프로그램에서 <b>부족했던 점</b>은 무엇입니까?</li>
+                <li>우리 기관의 <b>장점</b>은 무엇입니까?</li>
+                <li>우리 기관의 <b>단점</b>은 무엇입니까?</li>
+              </ul>
+            `
+          },
+          {
+            icon: '🗂️', title: '만족도 조사 내용 7가지 ★★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <div class="hbox hbox-blue">출처: Soliman &amp; Poulin (1997) — 총 <b>7가지</b> 항목</div>
+              <table class="comp-table">
+                <tr><th>#</th><th>항목</th><th>영어</th></tr>
+                <tr><td>①</td><td><b>프로그램의 적절성</b></td><td>appropriateness</td></tr>
+                <tr><td>②</td><td><b>프로그램의 유용성</b></td><td>availability</td></tr>
+                <tr><td>③</td><td><b>프로그램의 명확성</b></td><td>clarity</td></tr>
+                <tr><td>④</td><td><b>프로그램 제공의 시기</b></td><td>timing</td></tr>
+                <tr><td>⑤</td><td><b>프로그램의 질적 수준</b></td><td>dignified treatment</td></tr>
+                <tr><td>⑥</td><td><b>프로그램의 효과</b></td><td>impact</td></tr>
+                <tr><td>⑦</td><td><b>사회복지사의 유능성</b></td><td>skillfulness</td></tr>
+              </table>
+              <div class="sub">만족도 조사 예시 — 청소년 리더십 향상 프로그램</div>
+              <div class="hbox hbox-blue">척도: ① 매우 그렇지 않다 ② 약간 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다</div>
+              <div class="sub" style="margin-top:8px">프로그램 운영과정 (문항 1~9)</div>
+              <ul class="pts" style="font-size:.88em">
+                <li>1. 프로그램실 환경이 활동하기에 적절하다</li>
+                <li>2. 마이크, 빔 프로젝트, 책걸상 등 기자재가 잘 구비되어 있다</li>
+                <li>3. 프로그램 자료(교재)의 질이 좋았다</li>
+                <li>4. 강사 선생님이 전문성을 갖추었다</li>
+                <li>5. 프로그램 신청 절차에 대해 만족한다</li>
+                <li>6. 프로그램이 계획대로 잘 운영되었다</li>
+                <li>7. 프로그램 내용이 리더십 개발을 잘 반영하고 있다</li>
+                <li>8. 참여자들의 관계가 친밀했다</li>
+                <li>9. 강사 선생님이 참여자들의 질문에 잘 대답했다</li>
+              </ul>
+              <div class="sub">프로그램 참가 후 경험 (문항 10~15)</div>
+              <ul class="pts green" style="font-size:.88em">
+                <li>10. 모든 프로그램에 결석 없이 참여했다</li>
+                <li>11. 모든 과제를 성실하게 제출했다</li>
+                <li>12. 프로그램을 통해 리더십이 무엇인지 알게 되었다</li>
+                <li>13. 프로그램을 통해 리더십을 향상하게 되었다</li>
+                <li>14. 프로그램을 통해 친구들을 돕게 되었다</li>
+                <li>15. 프로그램을 통해 섬기는 리더십을 배웠다</li>
+              </ul>
+            `
+          },
+          {
+            icon: '📝', title: '10강 핵심 요약',
+            html: `
+              <table class="comp-table">
+                <tr><th>개념</th><th>핵심 내용</th></tr>
+                <tr><td><b>양적 평가</b></td><td>계량화된 자료를 통계적 이론으로 분석하는 연역적 평가방법</td></tr>
+                <tr><td><b>질적 평가</b></td><td>인간 행위와 상호작용에 대한 심도 있는 통찰로 관찰기록·세부묘사</td></tr>
+                <tr><td><b>양적 평가 유형 4가지</b></td><td>실험설계 / 준실험설계 / 원시실험설계 / 단일사례설계</td></tr>
+                <tr><td><b>실험설계 요소 3가지</b></td><td>통제(실험·통제집단) / 비교(사전·사후검사) / 개입(프로그램 효과)</td></tr>
+                <tr><td><b>난선화(random)</b></td><td>실험설계에서 실험집단과 통제집단을 무작위로 나누는 방법</td></tr>
+                <tr><td><b>선택 편의(selection bias)</b></td><td>집단을 인위적으로 배치하여 변화 원인이 불명확해지는 것</td></tr>
+                <tr><td><b>기초선(baseline)</b></td><td>사전검사 결과 = 프로그램 가치 판단의 기준</td></tr>
+                <tr><td><b>준실험설계</b></td><td>임의배치·매칭 사용, 비동일 통제집단 비교설계, 사회복지 현장에서 가장 많이 사용</td></tr>
+                <tr><td><b>원시실험설계</b></td><td>난선화 + 사전검사 모두 결핍, 내적 타당도 심각 손상</td></tr>
+                <tr><td><b>단일사례설계</b></td><td>1명 사례, 반복 측정, AB설계 주로 활용</td></tr>
+                <tr><td><b>A 구간</b></td><td>기초선 구간 (개입 전 측정)</td></tr>
+                <tr><td><b>B 구간</b></td><td>개입 구간 (프로그램 제공 기간 측정)</td></tr>
+                <tr><td><b>만족도 조사</b></td><td>가장 쉽고 자주 사용되는 평가방법, 클라이언트 의견 중시 메시지 전달</td></tr>
+                <tr><td><b>만족도 조사 방법 4가지</b></td><td>전화 / 우편 / 이메일 / 현장 직접 조사</td></tr>
+                <tr><td><b>만족도 조사 형식</b></td><td>객관식 질문 + 주관식 질문</td></tr>
+                <tr><td><b>만족도 조사 내용 7가지</b></td><td>적절성·유용성·명확성·시기·질적 수준·효과·사회복지사 유능성 (Soliman &amp; Poulin, 1997)</td></tr>
+              </table>
             `
           }
         ]
       },
       {
-        num: '11강', name: '프로그램 평가의 이해(3) — 질적 평가',
+        num: '11강', name: '프로그램 평가의 이해(3)',
         cards: [
           {
-            icon: '💬', title: '질적 평가 기초 원리 + 수행 4가지 경우 ★',
+            icon: '📂', title: '01. 프로그램 질적 평가의 기초 원리 및 유형',
+            html: `
+              <div class="badge-row">
+                <span class="badge badge-blue">질적 평가 기초 원리</span>
+                <span class="badge badge-green">수행 4가지 경우</span>
+                <span class="badge badge-yellow">유형 3가지</span>
+                <span class="badge badge-purple">분석 과정 3단계</span>
+              </div>
+            `
+          },
+          {
+            icon: '💬', title: '질적 평가 기초 원리 ★',
             html: `
               <span class="kichul">⭐ 기출</span>
               <div class="hbox hbox-blue"><b>질적 평가</b>: 질적 연구방법을 적용하여 <b>프로그램이나 서비스의 과정 및 성과</b>를 평가하는 것</div>
               <div class="sub">핵심 특징 3가지</div>
               <table class="comp-table">
-                <tr><th>특징</th><th>내용</th></tr>
-                <tr><td>① 목적</td><td>사물·현상의 양을 숫자로 단순화하지 않고, <b>속성·가치·유용성을 파악</b></td></tr>
-                <tr><td>② 방법</td><td>연역법보다 <b>귀납법</b> 활용</td></tr>
-                <tr><td>③ 관점</td><td>특정 현상을 <b>있는 그대로 이해</b>하고 의미를 해석하며 본질 탐구</td></tr>
+                <tr><th>#</th><th>특징</th><th>내용</th></tr>
+                <tr><td>①</td><td><b>목적</b></td><td>사물·현상의 양을 숫자로 단순화하기보다 <b>속성·가치·유용성을 파악</b></td></tr>
+                <tr><td>②</td><td><b>방법</b></td><td>연역법보다 <b>귀납법</b> 활용</td></tr>
+                <tr><td>③</td><td><b>관점</b></td><td>특정 현상을 <b>있는 그대로 이해</b>하고 의미를 해석하며 본질 탐구</td></tr>
               </table>
+              <div class="hbox hbox-yellow">💡 질적 접근으로 프로그램 평가 시 기존 실증적 양적 접근의 한계(조작화·측정·표집 등)를 <b>보완</b>할 수 있음</div>
               <div class="hbox hbox-red">❌ "사물이나 현상의 양을 숫자로 단순화한다" → 질적 평가의 특징이 <b>아님</b></div>
-              <div class="sub">질적 평가를 수행하는 4가지 경우</div>
-              <ul class="pts">
-                <li>① 양적 평가 결과를 <b>적절히 얻기 어려운</b> 경우 (예: 사회적 바람직성 편향 발생)</li>
-                <li>② 평가 결과를 <b>수치화하기 어려운</b> 경우 (예: 발달장애인·영유아 대상)</li>
-                <li>③ 양적 평가의 의미를 <b>더 풍부하게 이해</b>하기 위해 (양적 평가와 병행)</li>
-                <li>④ <b>프로그램 과정을 평가</b>하기 위해 (당초 계획대로 추진되었는지 확인)</li>
-              </ul>
+            `
+          },
+          {
+            icon: '🔎', title: '질적 평가를 수행하는 4가지 경우 ★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <table class="comp-table">
+                <tr><th>#</th><th>수행 상황</th><th>예시</th></tr>
+                <tr><td><b>첫째</b></td><td>양적 평가 결과를 <b>적절히 얻기 어려운</b> 경우 (양적 평가 결과의 함정)</td><td>가정폭력 감소 프로그램의 사전-사후 검사 효과가 왜곡될 가능성 / 장애인 바리스타 교육 참여자 성과</td></tr>
+                <tr><td><b>둘째</b></td><td>평가 결과를 <b>수치화하기 어려운</b> 경우</td><td>발달장애인·영유아 등을 대상으로 하는 프로그램 참여자들의 성과 측정</td></tr>
+                <tr><td><b>셋째</b></td><td>양적 평가의 의미를 <b>더 풍부하게 이해</b>하기 위해 (양적 평가와 병행)</td><td>독거노인 대상 우울증 예방 프로그램의 우울증 감소 결과</td></tr>
+                <tr><td><b>넷째</b></td><td><b>프로그램 과정을 평가</b>하기 위해 (당초 계획대로 추진되었는지 이해)</td><td></td></tr>
+              </table>
               <div class="hbox hbox-red">❌ "프로그램 비용을 정확히 측정하기 위해" → 질적 평가 수행 이유가 <b>아님</b></div>
             `
           },
           {
-            icon: '🎙️', title: '심층면접 ★★ — 형태·유의사항·Patton 3유형',
+            icon: '🗂️', title: '질적 평가 유형 3가지',
             html: `
-              <span class="kichul">⭐ 기출</span>
-              <div class="hbox hbox-blue"><b>심층면접</b>: 질적 연구에서 <b>가장 일반화된 자료수집방법</b>. 특정 주제에 초점을 두고 면접자와 피면접자가 주의 깊게 나누는 대화 형식</div>
-              <div class="sub">심층면접 형태</div>
+              <div class="flow" style="flex-wrap:wrap">
+                <span class="flow-item">① 심층 면접</span><span class="flow-arrow">▶</span>
+                <span class="flow-item">② (참여) 관찰</span><span class="flow-arrow">▶</span>
+                <span class="flow-item">③ 사례 기록</span>
+              </div>
+              <div class="sub">유형별 수집 자료 요약</div>
               <table class="comp-table">
-                <tr><th>형태</th><th>내용</th></tr>
-                <tr><td>개입 전·후 회기 면접</td><td>1~2시간 정도 면접 진행</td></tr>
-                <tr><td>수시 평가 면접</td><td>개입 초기/중간/매 회기마다 10~20분 진행</td></tr>
-                <tr><td><b>FGI (초점집단인터뷰)</b></td><td>소집단 형식 <b>(5~15명)</b>, 2시간 정도 집단 면접</td></tr>
+                <tr><th>수집방법</th><th>자료의 내용 및 수집</th></tr>
+                <tr><td><b>심층 면접</b></td><td>비구조화·개방형 면접 기록, 녹음 후 필사, 반구조화 면접, 초점집단면접(FGI) 필사</td></tr>
+                <tr><td><b>관찰</b></td><td>참여자·관찰자로서 현장노트(field note) 수집, 외부인→내부인으로 관찰</td></tr>
+                <tr><td><b>문서 및 기존자료</b></td><td>일지·일기·사적 서류·공문서·자서전·사진/비디오·전자우편·전자 메시지 등</td></tr>
               </table>
-              <div class="hbox hbox-red">❌ FGI는 대규모 단체집단이 아니라 <b>소집단 형식(5~15명)</b></div>
-              <div class="sub">면접 시 유의사항</div>
-              <ul class="pts">
-                <li>반드시 <b>녹음이나 녹화</b> 필요 (연구참여자 <b>동의</b> 필수)</li>
-                <li>가능한 한 빨리 <b>녹취록</b> 작성</li>
-              </ul>
-              <div class="sub">Patton(1990) — 3가지 개방적 면접 유형 (구조화 정도)</div>
-              <table class="comp-table">
-                <tr><th>유형</th><th>구조화</th><th>특징</th></tr>
-                <tr><td><b>표준화된 개방적 면접</b></td><td>가장 높음</td><td>사전 계획된 질문으로 일관성 확보. 시간·자원 부족 시 필요</td></tr>
-                <tr><td><b>면접지침접근법</b></td><td>중간</td><td>표준화보다 덜 구조화, 비공식보다 더 구조화. 어느 정도 순서에 따라 진행</td></tr>
-                <tr><td><b>비공식대화면접</b></td><td>가장 낮음 (가장 개방적)</td><td>계획되지 않고 자연스럽게 일어나는 언어적 상호작용. 일상적 대화와 구별해야 함</td></tr>
-              </table>
-              <div class="hbox hbox-red">❌ 면접지침접근법은 표준화된 개방적 면접보다 <b>더 구조화</b>되어 있다 → 오답 (덜 구조화)</div>
             `
           },
           {
-            icon: '👁️', title: '관찰 7단계 + 기록 ★',
+            icon: '🎙️', title: '심층면접 개념 + 형태 + 유의사항 ★★',
             html: `
               <span class="kichul">⭐ 기출</span>
-              <div class="sub">관찰 두 가지 유형</div>
+              <div class="hbox hbox-blue"><b>심층면접</b>: 질적 연구에서 <b>가장 일반화된 자료수집방법</b><br>특정 주제에 초점을 두고 면접자와 피면접자가 주의 깊게 나누는 <b>대화 형식의 자료수집방법</b></div>
+              <div class="hbox hbox-yellow">💡 평가자는 개방적 질문으로 참여자의 생각·의도·행동 패턴을 알아내고 <b>비언어적 의사표현</b>의 의미도 밝혀낼 수 있음</div>
+              <div class="sub">심층면접 형태 3가지</div>
+              <table class="comp-table">
+                <tr><th>형태</th><th>내용</th></tr>
+                <tr><td><b>개입 전·후 회기 면접</b></td><td>개입 이전과 종결 시점에서 별도 회기로 <b>1~2시간</b> 면접</td></tr>
+                <tr><td><b>수시 평가 면접</b></td><td>개입 초기·중간·매 회기마다 <b>10~20분</b> 면접</td></tr>
+                <tr><td><b>FGI (초점집단인터뷰)</b></td><td>특정 주제로 소집단 형식 <b>(5~15명)</b>, <b>2시간</b> 정도 집단 면접</td></tr>
+              </table>
+              <div class="hbox hbox-red">❌ FGI는 대규모 단체집단이 아니라 <b>소집단 형식 (5~15명)</b></div>
+              <div class="sub">면접 시 유의사항</div>
+              <ul class="pts">
+                <li>반드시 <b>녹음이나 녹화</b> 필요 → 연구참여자에게 <b>동의</b>를 얻어야 함</li>
+                <li>면접 후 가능한 한 빨리 <b>녹취록</b> 작성</li>
+              </ul>
+              <div class="sub">심층면접 시 많이 활용되는 질문 예시</div>
+              <ul class="pts green">
+                <li>"이 프로그램을 통해 귀하의 무엇이 <b>변화</b>되었습니까?"</li>
+                <li>"이 프로그램이 귀하에게 <b>도움</b>이 되었습니까? 만일 그렇다면 어떤 측면에서 도움이 되었습니까?"</li>
+              </ul>
+            `
+          },
+          {
+            icon: '📋', title: 'Patton(1990) 3가지 개방적 면접 유형 ★★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <div class="hbox hbox-blue">구조화 정도: <b>표준화된 개방적 면접</b> (가장 높음) > <b>면접지침접근법</b> (중간) > <b>비공식대화면접</b> (가장 낮음)</div>
+              <table class="comp-table">
+                <tr><th>유형</th><th>구조화</th><th>특징</th></tr>
+                <tr>
+                  <td><b>표준화된<br>개방적 면접</b></td>
+                  <td>가장 높음</td>
+                  <td>평가자의 영향·편견을 최소화하면서 <b>사전 계획된 질문</b>으로 면접 <b>일관성</b> 확보<br>시간·자원이 부족한 상황, 오랜 기간 참여자를 추적 면접하는 경우 필요<br>질문의 표현 방식과 순서에 많은 주의 기울여야 효과적</td>
+                </tr>
+                <tr>
+                  <td><b>면접지침<br>접근법</b></td>
+                  <td>중간</td>
+                  <td>표준화된 면접보다 <b>덜 구조화</b>, 비공식보다 <b>더 구조화</b><br>개방형 질문이지만 <b>어느 정도 순서에 따라</b> 진행<br>구조화 정도가 높을수록 평가자 편견 감소·일관성 증가<br>면접에서 다룰 주제를 열거하고 지침 순서에 따라 시행</td>
+                </tr>
+                <tr>
+                  <td><b>비공식<br>대화면접</b></td>
+                  <td>가장 낮음<br>(가장 개방적)</td>
+                  <td>현장관찰 과정 중 평가자와 참여자 사이에 <b>계획되지 않고 자연스럽게</b> 일어나는 예상치 못한 언어적 상호작용<br>가장 개방적 → 참여자가 어떤 방향으로든 자유롭게 발화 가능<br>일상의 대화와 너무 비슷 → 평가자는 <b>일상적 대화가 아님을 계속 주지</b>시켜야 함</td>
+                </tr>
+              </table>
+              <div class="hbox hbox-red">❌ 면접지침접근법은 표준화된 개방적 면접보다 <b>더 구조화</b>되어 있다 → 오답 (<b>덜</b> 구조화)</div>
+            `
+          },
+          {
+            icon: '📄', title: '심층면접 질문지 예시 구조',
+            html: `
+              <div class="hbox hbox-blue">OO 프로그램 평가를 위한 심층 면접 (50분)</div>
+              <table class="comp-table">
+                <tr><th>구분</th><th>시간</th><th>주요 질문 내용</th></tr>
+                <tr><td><b>I. 인사</b></td><td>5분</td><td>면접의 목적 및 과정 소개, 참석자 소개 및 인사</td></tr>
+                <tr><td><b>II. 프로그램 참가</b></td><td>10분</td><td>복지관 이용 시기 / 프로그램 참석 계기 / 처음 기대감</td></tr>
+                <tr><td><b>III. 프로그램 과정</b></td><td>10분</td><td>가장 기억에 남는 일 / 불편했던 점 / 담당 직원에 대한 생각</td></tr>
+                <tr><td><b>IV. 프로그램 결과</b></td><td>10분</td><td>참여 만족도 및 이유 / 프로그램을 통해 얻은 유익 / 참가 전후 변화 / 목표 달성 여부</td></tr>
+                <tr><td><b>V. 건의사항</b></td><td>5분</td><td>개선점 및 건의사항 / 기타 자유 의견</td></tr>
+              </table>
+            `
+          },
+          {
+            icon: '👁️', title: '(참여) 관찰 — 유형 + 7단계 절차 ★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <div class="hbox hbox-blue">심층 면접 다음으로 많이 활용되는 질적 자료수집방법</div>
+              <div class="sub">관찰 2가지 유형</div>
               <table class="comp-table">
                 <tr><th>구분</th><th>내용</th></tr>
-                <tr><td><b>참여관찰</b></td><td>관찰자가 참여자들과 <b>상호작용</b>하면서 참여자 입장에서 프로그램 경험</td></tr>
-                <tr><td><b>비참여관찰</b></td><td>관찰자가 참여자들과 <b>전혀 상호작용하지 않으면서</b> 관찰의 영향력 최소화</td></tr>
+                <tr><td><b>참여관찰</b><br>(participant observation)</td><td>관찰자가 프로그램 과정 중에 참여자들과 <b>상호작용</b>하면서 <b>참여자 입장</b>에서 프로그램을 경험하는 방법</td></tr>
+                <tr><td><b>비참여관찰</b><br>(non-participant observation)</td><td>관찰자가 참여자들과 <b>전혀 상호작용하지 않으면서</b> 관찰의 영향력을 최소화하려는 방법</td></tr>
               </table>
               <div class="sub">관찰 진행 절차 7단계</div>
               <ul class="pts">
-                <li>① <b>관찰할 장소(site) 선택 + 접근 허가 취득</b> ← 가장 먼저</li>
-                <li>② 누구를, 언제, 얼마나 오랫동안, <b>무엇을 관찰할지 확인</b> (문지기/주요 정보제공자 활용)</li>
-                <li>③ 초기에 <b>관찰자로서의 역할 결정</b> (완전한 참여자 ~ 완전한 관찰자)</li>
-                <li>④ 현장 노트 기록 방법으로 <b>관찰지침서 작성</b> (기술 노트 + 반영 노트 포함)</li>
-                <li>⑤ 정보제공자, 물리적 세팅, 특별 사건, 자신의 반응 <b>묘사 기록</b></li>
-                <li>⑥ 관찰 중 수동적·우호적 자세 유지, 초기 세션은 <b>제한적 관찰</b></li>
-                <li>⑦ 관찰 이후 참여자에게 사의 표시 후 <b>천천히 철수</b></li>
+                <li><b>1단계</b>: 관찰할 <b>장소(site) 선택</b> + 접근에 필요한 <b>허가 취득</b> ← 가장 먼저</li>
+                <li><b>2단계</b>: 누구를, 언제, 얼마나 오랫동안, <b>무엇을 관찰할지 확인</b> (문지기·주요 정보제공자 활용)</li>
+                <li><b>3단계</b>: 초기에 <b>관찰자로서의 역할 결정</b> (완전한 참여자 ~ 완전한 관찰자)</li>
+                <li><b>4단계</b>: 현장노트 기록 방법으로 <b>관찰지침서 작성</b> (기술 노트 + 반영 노트 포함)</li>
+                <li><b>5단계</b>: 정보제공자·물리적 세팅·특별한 사건·자신의 반응에 대한 <b>묘사 기록</b></li>
+                <li><b>6단계</b>: 관찰 중 <b>수동적·우호적 자세</b> 유지, 초기 세션은 <b>제한적 관찰</b></li>
+                <li><b>7단계</b>: 관찰 이후 참여자에게 <b>사의 표시</b> 후 <b>천천히 철수</b></li>
               </ul>
+              <div class="hbox hbox-blue">관찰 도구: 체크리스트(checklist), 관찰일지, 현장노트를 활용하여 물리적 공간·행위자·행위·상호작용·관계·느낌 등 최대한 많은 정보 기록 후 의미 해석</div>
+            `
+          },
+          {
+            icon: '📁', title: '사례 기록 + 문서 및 기존자료',
+            html: `
+              <div class="hbox hbox-blue">일지·클라이언트 기록물·메모 등 <b>문서화된 기록물</b>도 질적 평가의 자료가 됨</div>
               <div class="sub">기록물 예시</div>
               <ul class="pts green">
-                <li>프로그램 진행일지, 상담일지, 소감문, 활동지(가계도·생태도·자서전·인생 곡선·포토보이스)</li>
-                <li>일지나 면접지의 빈 공간에 기록한 메모, 관찰일지</li>
+                <li>프로그램 진행일지 혹은 상담일지</li>
+                <li>프로그램 소감문이나 활동지 (가계도·생태도·자서전·인생 곡선 그리기·포토보이스를 위한 사진 찍기 등)</li>
+                <li>일지나 면접지·관찰일지 등의 빈 공간에 기록한 메모</li>
+              </ul>
+              <div class="hbox hbox-yellow">💡 기록물에는 참여자의 말·행동·비언어적 의사소통·상호작용뿐 아니라 <b>프로그램 담당자의 소감이나 특이한 관찰 내용</b>도 포함</div>
+              <div class="sub">문서 및 기존자료 수집 방법</div>
+              <ul class="pts purple">
+                <li>연구기간 동안 일지 작성 / 참여자들이 일지·일기를 쓰도록 함</li>
+                <li>참여자로부터 사적인 서류 수집 / 공문서 분석 / 자서전·전기 조사</li>
+                <li>정보제공자가 사진·비디오 촬영 / 개인·집단·사회적 상황 비디오테이프 녹화</li>
+                <li>전자우편이나 전자 메시지 수집</li>
               </ul>
               <div class="hbox hbox-red">❌ <b>설문지</b>는 기록물에 해당하지 않음 → 양적 평가 자료수집 방법</div>
             `
           },
           {
-            icon: '🔺', title: '질적 평가 분석 3단계 + 다원화(삼각 측정) ★',
+            icon: '🔺', title: '질적 평가 분석 과정 3단계 + 다원화(삼각 측정) ★',
             html: `
               <span class="kichul">⭐ 기출</span>
-              <div class="sub">질적 평가 분석 과정 3단계</div>
+              <div class="hbox hbox-blue">표준화된 절차는 없지만 많이 활용되는 공통적인 3단계 분석 과정</div>
               <table class="comp-table">
                 <tr><th>단계</th><th>과정</th><th>내용</th></tr>
-                <tr><td><b>1단계</b></td><td>질적 자료 선별</td><td>수집된 자료 중 유용한 자료 선별 + <b>유사한 내용끼리 범주화</b></td></tr>
-                <tr><td><b>2단계</b></td><td>의미 해석</td><td>어떤 변화가 <b>왜, 어떻게, 얼마나</b> 발생했는지 의미 찾기</td></tr>
-                <tr><td><b>3단계</b></td><td>주제 제시</td><td>해석된 내용을 기초로 <b>프로그램 목표와 관련된 단어·문장</b>으로 의미 제시</td></tr>
+                <tr><td><b>1단계</b></td><td>질적 자료 선별</td><td>수집된 자료 중 프로그램 평가에 유용한 자료를 선별하고 <b>유사한 내용끼리 범주화</b></td></tr>
+                <tr><td><b>2단계</b></td><td>의미 해석</td><td>선별된 자료를 검토하면서 어떤 변화가 <b>왜, 어떻게, 얼마나</b> 발생했는지 의미를 찾아내고 해석</td></tr>
+                <tr><td><b>3단계</b></td><td>주제 제시</td><td>해석된 내용을 기초로 요약하여 <b>프로그램 목표와 관련된 단어나 문장</b>으로 발견된 의미를 제시</td></tr>
               </table>
-              <div class="hbox hbox-yellow">분석 과정은 한 번에 완성되지 않음 → <b>반복적·순환적 작업</b>을 통해 수정 완성</div>
-              <div class="sub">다원화(삼각 측정, Triangulation) — 객관성 확보 방법</div>
+              <div class="hbox hbox-yellow">💡 분석 과정은 한 번에 완성되기 어려우며 각 과정에 대한 <b>반복적·순환적 작업</b>을 통해 수정을 거쳐 완성됨</div>
+              <div class="sub">다원화 (삼각 측정, Triangulation) — 객관성 확보 방법</div>
               <table class="comp-table">
                 <tr><th>유형</th><th>내용</th></tr>
                 <tr><td><b>자료의 다원화</b></td><td>다양한 출처의 자료를 활용</td></tr>
@@ -10479,12 +11123,36 @@ const SUMMARY_DATA = {
                 <tr><td><b>방법론적 다원화</b></td><td>다양한 평가 방법을 활용</td></tr>
               </table>
               <div class="hbox hbox-red">❌ "다양한 지역에서 동일한 프로그램을 평가" → 다원화 방법이 <b>아님</b></div>
-              <div class="sub">질적 평가 유형별 수집 자료 요약</div>
+            `
+          },
+          {
+            icon: '📂', title: '02. 심층 면접 (Patton 3유형 심화)',
+            html: `
+              <div class="badge-row">
+                <span class="badge badge-blue">표준화된 개방적 면접</span>
+                <span class="badge badge-green">면접지침접근법</span>
+                <span class="badge badge-purple">비공식대화면접</span>
+              </div>
+            `
+          },
+          {
+            icon: '📝', title: '11강 핵심 요약',
+            html: `
               <table class="comp-table">
-                <tr><th>수집방법</th><th>주요 자료</th></tr>
-                <tr><td><b>심층면접</b></td><td>비구조화/반구조화 개방형 면접 기록, 녹음 필사, FGI</td></tr>
-                <tr><td><b>관찰</b></td><td>참여관찰·비참여관찰을 통한 현장노트(field note)</td></tr>
-                <tr><td><b>문서 및 기존 자료</b></td><td>일지·일기·사적 서류·공문서·자서전·사진/비디오·전자우편 등</td></tr>
+                <tr><th>개념</th><th>핵심 내용</th></tr>
+                <tr><td><b>질적 평가</b></td><td>질적 연구방법으로 프로그램 과정 및 성과 평가. 귀납법, 있는 그대로 이해, 속성·가치·유용성 파악</td></tr>
+                <tr><td><b>질적 평가 수행 4경우</b></td><td>양적 결과 함정 / 수치화 어려움 / 양적 의미 풍부화 / 과정 평가</td></tr>
+                <tr><td><b>질적 평가 유형 3가지</b></td><td>심층 면접 / (참여) 관찰 / 사례 기록</td></tr>
+                <tr><td><b>심층면접</b></td><td>질적 연구에서 가장 일반화된 자료수집방법. 개방적 질문으로 생각·의도·행동 패턴 파악</td></tr>
+                <tr><td><b>FGI</b></td><td>소집단 형식 (5~15명), 2시간, 초점집단인터뷰</td></tr>
+                <tr><td><b>면접 유의사항</b></td><td>반드시 녹음·녹화 (참여자 동의 필수) + 빨리 녹취록 작성</td></tr>
+                <tr><td><b>표준화된 개방적 면접</b></td><td>가장 구조화. 사전 계획 질문, 일관성 확보. 시간·자원 부족 시 활용</td></tr>
+                <tr><td><b>면접지침접근법</b></td><td>중간 구조화. 표준화보다 덜, 비공식보다 더. 주제 열거 후 순서대로</td></tr>
+                <tr><td><b>비공식대화면접</b></td><td>가장 개방적. 계획되지 않은 자연스러운 상호작용. 일상 대화와 구별 주의</td></tr>
+                <tr><td><b>참여관찰 vs 비참여관찰</b></td><td>참여관찰 = 상호작용 O / 비참여관찰 = 상호작용 X, 영향력 최소화</td></tr>
+                <tr><td><b>관찰 절차 7단계</b></td><td>장소 선택 → 관찰 내용 확인 → 역할 결정 → 관찰지침서 → 묘사 기록 → 제한적 관찰 → 사의 후 철수</td></tr>
+                <tr><td><b>분석 과정 3단계</b></td><td>자료 선별·범주화 → 의미 해석 → 주제 제시</td></tr>
+                <tr><td><b>삼각 측정(다원화)</b></td><td>자료의 다원화 / 평가자의 다원화 / 방법론적 다원화</td></tr>
               </table>
             `
           }
@@ -10494,103 +11162,256 @@ const SUMMARY_DATA = {
         num: '12강', name: '프로그램 실행 및 평가 실제',
         cards: [
           {
-            icon: '📋', title: '결과보고서의 의미 + 작성 원칙 ★',
+            icon: '📂', title: '01. 프로그램 결과보고서의 의미 및 구성 요소',
             html: `
-              <span class="kichul">⭐ 기출</span>
-              <div class="sub">결과보고서 개념</div>
-              <ul class="pts">
-                <li><b>결과보고서</b>: 사업이 <b>종료된 시점</b>에서 내·외부 이해관계자들에게 사업 수행 <b>과정과 결과</b>에 대해 보고하는 것</li>
-                <li><b>결과(평가)보고서</b>: 평가를 시행한 이후, 결과를 제시하고 <b>실천적·정책적 제언</b>을 제시하는 것</li>
-              </ul>
-              <div class="hbox hbox-red">❌ 프로그램 진행 과정 중 발생한 문제를 나열하는 것 → 결과보고서가 <b>아님</b></div>
-              <div class="sub">결과보고서 작성 원칙</div>
-              <table class="comp-table">
-                <tr><th>원칙</th><th>내용</th></tr>
-                <tr><td><b>평가 초점 ★</b></td><td>결과보고서는 <b>'평가'</b>에 초점. 사업의 목적을 달성하였는지 <b>객관적</b>으로 확인</td></tr>
-                <tr><td><b>가독성</b></td><td>과장 없이 정확하고 가독성 있게 작성</td></tr>
-                <tr><td><b>자료 수집</b></td><td>사업 수행 과정에서 발생하는 <b>모든 자료</b> 수집</td></tr>
-              </table>
-              <div class="hbox hbox-yellow">가장 중요한 점: <b>사업 목적 달성 여부를 객관적으로 확인</b> ('평가'에 초점)<br>❌ 단순 과정 설명 / 재무 상황 분석 / 향후 계획 제시 → 해당 안 됨</div>
+              <div class="badge-row">
+                <span class="badge badge-blue">결과보고서 개념</span>
+                <span class="badge badge-green">작성 원칙 3가지</span>
+                <span class="badge badge-yellow">사업명 3요소</span>
+                <span class="badge badge-purple">필요성 작성 3파트</span>
+              </div>
             `
           },
           {
-            icon: '📁', title: '수집 자료 종류 + 집행 금액·기관 현황 ★',
+            icon: '📋', title: '결과보고서 개념 + 작성 원칙 ★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <table class="comp-table">
+                <tr><th>구분</th><th>개념</th></tr>
+                <tr><td><b>결과보고서</b></td><td>사업이 <b>종료된 시점</b>에서 사업 수행 기관의 내·외부 이해관계자들에게 사업 수행 <b>과정과 결과</b>에 대해 일정한 형식으로 보고하는 것</td></tr>
+                <tr><td><b>결과(평가)보고서</b></td><td>평가 연구를 시행한 이후, 결과를 제시하고 <b>실천적·정책적 제언</b>을 제공하는 것</td></tr>
+              </table>
+              <div class="sub">결과보고서 작성 원칙 3가지</div>
+              <table class="comp-table">
+                <tr><th>원칙</th><th>내용</th></tr>
+                <tr><td><b>① 평가 초점 ★</b></td><td>결과보고서는 <b>'평가'</b>에 초점 → 사업의 목적을 달성하였는지 <b>객관적</b>으로 확인</td></tr>
+                <tr><td><b>② 가독성</b></td><td>과장 없이 <b>정확</b>하고 <b>가독성</b> 있게 작성</td></tr>
+                <tr><td><b>③ 자료 수집</b></td><td>사업 수행 과정에서 발생하는 <b>모든 자료</b> 수집</td></tr>
+              </table>
+              <div class="hbox hbox-yellow">💡 가장 중요한 점: <b>'평가'에 초점</b> → 사업 목적 달성 여부 객관적 확인<br>❌ 단순 과정 설명 / 재무 상황 분석 / 향후 계획 제시 → 해당 안 됨</div>
+            `
+          },
+          {
+            icon: '📁', title: '수집 자료 종류 + 집행금액 작성 ★',
             html: `
               <span class="kichul">⭐ 기출</span>
               <div class="sub">수집해야 할 자료 종류</div>
               <table class="comp-table">
-                <tr><th>구분</th><th>자료</th></tr>
-                <tr><td><b>결과 평가 자료</b></td><td>홍보 관련 자료, 대상자 선정 서류, 행사 사진, 회의록, 위원 명단, 대상자별 기록지 등</td></tr>
-                <tr><td><b>회계 평가 자료</b></td><td>현금출납부, 통장 사본, 회계 장부, 결의서, 급여대장, 종합증빙서류 등</td></tr>
+                <tr><th>구분</th><th>예시</th></tr>
+                <tr><td><b>결과 평가 자료</b></td><td>홍보 관련 자료, 대상자 선정 관련 서류, 행사 사진, 각종 회의록, 위원 명단 자료, 대상자별 관련 기록지 등</td></tr>
+                <tr><td><b>회계 평가 자료</b></td><td>현금출납부, 통장 사본, 회계 장부, 결의서, 급여대장, 각종 증빙서류 등</td></tr>
               </table>
-              <div class="sub">집행 금액 작성 방법</div>
-              <ul class="star-list">
-                <li>결과보고서 작성 기준일까지 <b>자부담 비용을 제외</b>하고 집행한 총금액</li>
-                <li><b>이자 수입 집행분 포함</b>하여 작성 ★</li>
-              </ul>
-              <div class="hbox hbox-red">❌ "이자 수입 집행분 <b>제외</b>하고 작성한다" → <b>오답</b></div>
-              <div class="sub">신청기관 현황 작성 요령</div>
-              <ul class="pts">
-                <li>기관의 특성과 실적을 일목요연하게 작성</li>
-                <li>직원 현황에는 <b>상근자 수</b> 반드시 기록</li>
-                <li>동일한 내용의 프로그램이라도 효과성이 좋아 확산·보급이 필요한 경우 <b>3년 이상 지속 수행 가능</b> ★</li>
-              </ul>
-              <div class="hbox hbox-red">❌ "3년 이상 수행하지 않는 것을 원칙으로 한다" → <b>오답</b></div>
+              <div class="sub">집행금액 작성 방법 ★</div>
+              <div class="hbox hbox-blue">집행금액 = 결과보고 기준일까지 집행한 총 금액 (<b>이자수입 집행분 포함</b>, <b>자부담 제외</b>)<br>집행률 = 집행금액 ÷ 현재까지 지원액 × 100</div>
+              <div class="hbox hbox-red">❌ "이자 수입 집행분 <b>제외</b>하고 작성한다" → 오답<br>❌ "3년 이상 수행하지 않는 것을 원칙으로 한다" → 오답<br>✅ 효과성이 좋으면 <b>3년 이상 지속 수행 가능</b></div>
             `
           },
           {
-            icon: '✍️', title: '사업명 작성 + 필요성 3파트 (복습·심화) ★',
+            icon: '✍️', title: '사업명 작성 3요소 + 원칙 ★',
             html: `
               <span class="kichul">⭐ 기출</span>
-              <div class="sub">사업명 필수 3요소 + 작성 원칙</div>
+              <div class="sub">사업명 3가지 필수 요소</div>
               <div class="badge-row">
-                <span class="badge badge-blue">① 대상</span>
-                <span class="badge badge-green">② 목적</span>
-                <span class="badge badge-yellow">③ 방법</span>
+                <span class="badge badge-blue">① 대상 — 누구를 위한 사업인가</span>
+                <span class="badge badge-green">② 목적 — 무엇을 달성하려는가</span>
+                <span class="badge badge-yellow">③ 방법 — 어떤 방법으로 수행하는가</span>
               </div>
+              <div class="sub">작성 원칙</div>
               <ul class="pts">
-                <li>제목만 보고도 사업 내용의 전개방향을 감잡을 수 있어야 함</li>
-                <li>화려한 슬로건 ❌ → <b>정확한 슬로건</b> ✅</li>
-                <li>부제는 핵심 내용을 함축적으로 나타내는 줄임말·상징 사용 가능</li>
+                <li>제목만 보고도 <b>사업 내용의 전개방향에 대해 감을 잡을</b> 수 있어야 함</li>
+                <li><b>화려한 슬로건</b> ❌ → <b>정확한 슬로건</b> ✅</li>
+                <li>필요시 <b>부제</b>(슬로건·별명) 추가 가능 — 단, 사회적 편견 포함 소지 주의</li>
               </ul>
-              <div class="sub">사업명 적절·부적절 사례</div>
+              <div class="sub">작성 형식 예시</div>
+              <table class="comp-table">
+                <tr><th>형식</th><th>예시</th></tr>
+                <tr><td>①대상의 ②목적을 위한 ③방법 사업</td><td>노숙인의 자립 지원을 위한 희망가득 프로그램 사업</td></tr>
+                <tr><td>③방법을 통한 ①대상의 ②목적 사업</td><td>희망가득 프로그램을 통한 노숙인의 자립 지원 사업</td></tr>
+              </table>
+              <div class="sub">적절 vs 부적절 사례</div>
               <table class="comp-table">
                 <tr><th>판정</th><th>사례</th><th>이유</th></tr>
-                <tr><td>❌ 부적절</td><td>"내 일을 잡(job)아라! 너의 손안에 펼쳐질 세계가 있다."</td><td>대상·목적·방법이 불명확</td></tr>
-                <tr><td>✅ 적절</td><td>성인 발달장애인의 자립생활을 지원하기 위한 식생활 개선 프로그램</td><td>3요소 명확히 포함</td></tr>
-                <tr><td>✅ 적절</td><td>저소득층 방임아동의 보호·학습 지원을 위한 야간보호사업 "꿈나무" 교실</td><td>3요소 + 부제 활용</td></tr>
+                <tr><td>❌</td><td>"내 일을 잡(job)아라! 너의 손안에 펼쳐질 세계가 있다."</td><td>대상·목적·방법 불명확</td></tr>
+                <tr><td>✅</td><td>성인 발달장애인의 자립생활을 지원하기 위한 식생활 개선 프로그램</td><td>3요소 명확 포함</td></tr>
+                <tr><td>✅</td><td>장애·비장애 청소년의 지역 네트워크 형성을 통한 또래 통합 프로그램</td><td>3요소 명확 포함</td></tr>
+                <tr><td>✅</td><td>저소득층 방임아동의 보호·학습 지원을 위한 야간보호사업 "꿈나무" 교실</td><td>3요소 + 부제 활용</td></tr>
               </table>
-              <div class="sub">필요성 작성 3파트</div>
-              <table class="comp-table">
-                <tr><th>파트</th><th>내용</th></tr>
-                <tr><td><b>(1) 사업 계획 배경</b></td><td>왜 이 사업을 기획했는가 설득 / 참여자 집단 특성·지역사회 문제·새로운 관점 제시</td></tr>
-                <tr><td><b>(2) 기존 유사사업과의 차별성</b></td><td>기존 성공·실패 요인 분석 / 새로운 아이디어·접근방식의 필요성</td></tr>
-                <tr><td><b>(3) 신청기관의 강점</b></td><td>기관의 기획·수행 경험 / 동원 가능한 인적·물적 자원 및 활용계획</td></tr>
-              </table>
-              <div class="hbox hbox-red">❌ '사업을 성공적으로 펀딩받기 위해' → 필요성 작성 이유가 아님<br>❌ '기획자의 경력사항' → 필요성 작성에 포함하지 않음</div>
-              <div class="sub">필요성 작성의 이유 3가지 ★</div>
+            `
+          },
+          {
+            icon: '🎯', title: '필요성 작성 — 이유 3가지 + 구성 3파트 ★',
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <div class="sub">필요성 작성의 이유 3가지</div>
               <ul class="star-list">
                 <li>사업이 어떻게 시작하게 되었는지 <b>근거를 설명</b>하기 위해</li>
                 <li>무엇이 가장 심각하고 시급한지 <b>우선순위를 정하기</b> 위해</li>
                 <li>객관적 근거와 사례를 통해 <b>사업의 필요성을 강조</b>하기 위해</li>
               </ul>
-              <div class="hbox hbox-red">❌ '사업을 성공적으로 <b>펀딩받기 위해</b>' → 필요성 작성 이유에 <b>해당하지 않음</b> (기출 오답 선지)</div>
+              <div class="hbox hbox-red">❌ '사업을 성공적으로 <b>펀딩받기 위해</b>' → 필요성 작성 이유에 해당하지 않음</div>
+              <div class="sub">필요성 작성 3가지 구성</div>
+              <table class="comp-table">
+                <tr><th>구성</th><th>내용</th></tr>
+                <tr><td><b>(1) 프로그램 사업 계획 배경</b></td><td>왜 해당 사업을 기획했는지 설득 / 참여자 집단의 특성·지역사회 문제·새로운 관점 제시</td></tr>
+                <tr><td><b>(2) 기존 유사사업과의 차별성</b></td><td>기존 시행착오를 뛰어넘는 아이디어·접근방식 / 기존의 성공·실패 요인 모두 분석</td></tr>
+                <tr><td><b>(3) 신청기관의 강점</b></td><td>기관이 기획·수행했던 경험 / 동원 가능한 인적·물적 자원 및 활용계획</td></tr>
+              </table>
             `
           },
           {
-            icon: '📊', title: '기출 핵심 O/X 정리',
+            icon: '📂', title: '02. 결과보고서 실제 양식 — 6개 항목',
+            html: `
+              <div class="badge-row">
+                <span class="badge badge-blue">1. 사업추진내용</span>
+                <span class="badge badge-green">2. 목표·평가</span>
+                <span class="badge badge-yellow">3. 효과·향후계획</span>
+                <span class="badge badge-purple">4. 예산변경</span>
+                <span class="badge badge-gray">5. 보완사항</span>
+                <span class="badge badge-red">6. 기타의견</span>
+              </div>
+            `
+          },
+          {
+            icon: '📝', title: '결과보고서 표지 기재 항목',
             html: `
               <span class="kichul">⭐ 기출</span>
-              <div class="sub">기출 핵심 O/X 정리</div>
               <table class="comp-table">
-                <tr><th>내용</th><th>정오</th></tr>
-                <tr><td>결과보고서는 <b>'평가'</b>에 초점을 두어야 한다</td><td>✅ O</td></tr>
-                <tr><td>결과보고서는 <b>'결과'</b>에 초점을 두어야 한다</td><td>❌ X</td></tr>
-                <tr><td>집행금액: 이자 수입 집행분 <b>포함</b>하여 작성</td><td>✅ O</td></tr>
-                <tr><td>집행금액: 이자 수입 집행분 <b>제외</b>하고 작성</td><td>❌ X</td></tr>
-                <tr><td>동일 프로그램 효과성 좋으면 <b>3년 이상 수행 가능</b></td><td>✅ O</td></tr>
-                <tr><td>사업명 요소: 대상 + 목적 + 방법 3가지 반드시 포함</td><td>✅ O</td></tr>
-                <tr><td>화려한 슬로건보다 <b>정확한</b> 슬로건</td><td>✅ O</td></tr>
+                <tr><th>항목</th><th>작성 방법</th></tr>
+                <tr><td><b>총 지원액</b></td><td>모금회로부터 지원받기로 예정된 총 금액 (<b>자부담 제외</b>)</td></tr>
+                <tr><td><b>현재까지 지원액</b></td><td>기준일까지 모금회 지원금 + <b>이자수입 합계</b></td></tr>
+                <tr><td><b>집행금액 ★</b></td><td>기준일까지 집행한 총 금액 (<b>이자수입 집행분 포함</b>, 자부담 제외)</td></tr>
+                <tr><td><b>집행률</b></td><td><b>집행금액 ÷ 현재까지 지원액 × 100</b></td></tr>
+                <tr><td><b>총 사업기간</b></td><td>사업계획서의 사업기간과 <b>일치</b>시켜 작성</td></tr>
+                <tr><td><b>달성률</b></td><td><b>결과 인원 ÷ 계획 인원 × 100</b></td></tr>
+              </table>
+            `
+          },
+          {
+            icon: '📊', title: '결과보고서 본문 6개 항목 세부 내용',
+            html: `
+              <table class="comp-table">
+                <tr><th>#</th><th>항목</th><th>세부 내용</th></tr>
+                <tr>
+                  <td><b>1</b></td>
+                  <td><b>사업 추진내용</b></td>
+                  <td>
+                    1) 사업 참여자: 참여대상·인원(달성률) / 선정기준·모집방법<br>
+                    2) 세부 사업별 추진 내용: 계획대비 추진결과 / 일정별 수행현황 (○=계획, ●=실제)<br>
+                    3) 기관 연계협력: 계획 vs 실제 진행된 연계협력 내용<br>
+                    4) 계획대비 차이와 원인 (차이 없으면 "해당없음")
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>2</b></td>
+                  <td><b>목표 및 평가</b></td>
+                  <td>1) 산출목표: 세부 사업별 산출목표·결과·달성률<br>2) 성과목표: 성과목표 + 평가도구·방법 + 평가결과</td>
+                </tr>
+                <tr>
+                  <td><b>3</b></td>
+                  <td><b>사업의 효과 및 향후 계획</b></td>
+                  <td>1) 영향력 및 기여도: 객관적 자료 근거하여 기술<br>2) 주요 성공 사례: 참여자의 긍정적 변화<br>3) 향후 계획: 결과물 활용 및 사업 발전 방안</td>
+                </tr>
+                <tr>
+                  <td><b>4</b></td>
+                  <td><b>사업 및 예산 변경 현황</b></td>
+                  <td>기관내부 변경내역 / 모금회 승인내역</td>
+                </tr>
+                <tr>
+                  <td><b>5</b></td>
+                  <td><b>중간점검 보완요청사항 반영 정도</b></td>
+                  <td>보완요청사항 / 반영·미반영(√) / 이행결과<br>해당 없으면 "해당없음"</td>
+                </tr>
+                <tr>
+                  <td><b>6</b></td>
+                  <td><b>기타 의견</b></td>
+                  <td>사업 진행·인력·예산 관련 의견 / 모금회 협조 희망 사항</td>
+                </tr>
+              </table>
+            `
+          },
+          {
+            icon: '💰', title: '사업 및 예산 변경 기관 내부 변경 기준',
+            html: `
+              <div class="sub">기관 내부 변경 기준 (모금회에 사후 보고)</div>
+              <table class="comp-table">
+                <tr><th>사업 규모</th><th>내부 변경 가능 기준</th></tr>
+                <tr><td><b>500만원 이하 사업</b></td><td>변경 금액 <b>100만원 이하(누적)</b> 또는 배분금의 <b>50% 이하(누적)</b></td></tr>
+                <tr><td><b>500만원 초과 사업</b></td><td>배분금의 <b>20% 이하(누적)</b> 또는 변경 금액 <b>1,000만원 이하(누적)</b></td></tr>
+              </table>
+              <div class="sub">정산보고서 수입지출 총괄표 구성</div>
+              <div class="badge-row">
+                <span class="badge badge-blue">합계</span>
+                <span class="badge badge-green">지원금</span>
+                <span class="badge badge-yellow">이자수입</span>
+                <span class="badge badge-gray">자부담</span>
+              </div>
+              <div class="hbox hbox-blue">예산집행 세부내역 목 구성: <b>인건비 / 사업비 / 관리운영비</b> (각 소계 포함)<br>이자수입: <b>모금회 지원금의 이자 수입만</b> 기재</div>
+            `
+          },
+          {
+            icon: '🏢', title: '사회복지공동모금회 배분사업 종류',
+            html: `
+              <table class="comp-table">
+                <tr><th>구분</th><th>사업내용</th><th>배분한도</th></tr>
+                <tr><td><b>신청사업</b></td><td>자유주제 공모형태로 복지사업을 신청받아 배분</td><td><b>3,000만원 이하</b></td></tr>
+                <tr><td><b>기획사업</b></td><td>모금회가 주제를 정하여 배분 (시범·전문적 사업)</td><td>별도지정</td></tr>
+                <tr><td><b>긴급지원사업</b></td><td>재난재해 등 긴급히 지원해야 할 경우</td><td>별도지정</td></tr>
+                <tr><td><b>지정기탁사업</b></td><td>기부자가 배분지역·대상·용도 지정 시</td><td>별도지정</td></tr>
+              </table>
+              <div class="sub">신청사업 세부 내용</div>
+              <ul class="pts">
+                <li><b>프로그램사업</b>: 지역사회 변화와 주민의 삶의 질 향상을 위해 계획된 서비스 및 활동</li>
+                <li><b>기능보강사업</b>: 효과적인 서비스 제공을 위한 개·보수, 장비구입 등</li>
+                <li><b>신청자격</b>: 사회복지사업 기타 사회복지활동을 행하는 법인·기관·단체 및 시설</li>
+              </ul>
+            `
+          },
+          {
+            icon: '🐘', title: '실제 사례 — 사이버정글 가디언 푸른코끼리',
+            html: `
+              <div class="hbox hbox-blue">2022 사랑의열매 배분사업 우수사례</div>
+              <table class="comp-table">
+                <tr><th>항목</th><th>내용</th></tr>
+                <tr><td><b>사업명</b></td><td>사이버정글 가디언 푸른코끼리</td></tr>
+                <tr><td><b>수행기관</b></td><td>푸른나무재단(청소년폭력예방재단)</td></tr>
+                <tr><td><b>핵심 참여자</b></td><td>초등학생 <b>66,607명</b></td></tr>
+                <tr><td><b>주변 참여자</b></td><td>중고등학생·학교장·교사·부모·일반시민 등 <b>242,334명</b></td></tr>
+                <tr><td><b>사업 기간</b></td><td>2020.1.1. ~ 2029.12.31. (10년)</td></tr>
+              </table>
+              <div class="sub">성과목표 3가지</div>
+              <ul class="pts">
+                <li>처벌과 선도가 아닌 <b>교육적 접근</b>을 통해 아이들의 내적 변화 유도</li>
+                <li>개인·가정·학교·지역사회 자원을 연계한 <b>전문적 회복 지원</b></li>
+                <li>청소년과 기성세대의 자발적 참여를 통해 <b>사이버 폭력 예방문화 발굴·확산</b></li>
+              </ul>
+              <div class="sub">산출목표 → 산출결과 예시</div>
+              <table class="comp-table">
+                <tr><th>산출목표</th><th>산출결과</th></tr>
+                <tr><td>예방교육 12,000명 실시</td><td><b>12,472명</b> 실시</td></tr>
+                <tr><td>가족 캠프 1회 실시</td><td><b>1회</b> 실시</td></tr>
+                <tr><td>사례관리 100명</td><td><b>156명</b></td></tr>
+              </table>
+            `
+          },
+          {
+            icon: '📝', title: '12강 핵심 요약',
+            html: `
+              <table class="comp-table">
+                <tr><th>개념</th><th>핵심 내용</th></tr>
+                <tr><td><b>결과보고서</b></td><td>사업 종료 후 이해관계자에게 과정·결과 보고</td></tr>
+                <tr><td><b>결과보고서 초점</b></td><td><b>'평가'</b>에 초점 (사업 목적 달성 여부 객관적 확인)</td></tr>
+                <tr><td><b>집행금액 작성</b></td><td>이자수입 집행분 <b>포함</b>, 자부담 <b>제외</b></td></tr>
+                <tr><td><b>집행률 계산</b></td><td>집행금액 ÷ 현재까지지원액 × 100</td></tr>
+                <tr><td><b>달성률 계산</b></td><td>결과인원 ÷ 계획인원 × 100</td></tr>
+                <tr><td><b>3년 이상 수행</b></td><td>효과성이 좋은 경우 <b>가능</b> ("원칙적으로 불가"는 오답)</td></tr>
+                <tr><td><b>사업명 3요소</b></td><td>①대상 + ②목적 + ③방법</td></tr>
+                <tr><td><b>사업명 슬로건</b></td><td>화려한 슬로건 ❌ → 정확한 슬로건 ✅</td></tr>
+                <tr><td><b>필요성 작성 이유</b></td><td>근거 설명 / 우선순위 설정 / 필요성 강조 (펀딩 목적 ❌)</td></tr>
+                <tr><td><b>필요성 3구성</b></td><td>사업 계획 배경 / 기존사업과 차별성 / 신청기관 강점</td></tr>
+                <tr><td><b>결과보고서 6개 항목</b></td><td>사업추진내용 → 목표·평가 → 효과·향후계획 → 예산변경 → 보완사항 → 기타의견</td></tr>
+                <tr><td><b>500만원 이하 사업</b></td><td>내부 변경: 100만원 이하(누적) 또는 배분금 50% 이하</td></tr>
+                <tr><td><b>500만원 초과 사업</b></td><td>내부 변경: 배분금 20% 이하 또는 1,000만원 이하</td></tr>
+                <tr><td><b>신청사업 한도</b></td><td>3,000만원 이하</td></tr>
               </table>
             `
           }
@@ -25805,126 +26626,6 @@ const QUIZ_BANK = {
     "explanation": "【정답: ①노력성: 사회문제나 클라이언트 욕구에 미친 영향】 '사회문제나 클라이언트 욕구에 미친 영향'은 영향(impact)의 정의이다. 노력성(effort)은 '프로그램 활동의 양'으로, 투입한 인력·예산과 전개된 활동의 양을 산출하는 기준이다."
   },
     {
-    "id": "hr_ch10_q1",
-    "chapter": 10,
-    "question": "다음은 괄호 안에 들어갈 알맞은 단어는 무엇인가?\n역사는 (     )가 빚은 그릇이다.",
-    "options": ["경제", "문화", "정치", "예술"],
-    "answer": 2,
-    "occurrence": ["워크북"],
-    "frequencyCount": 2,
-    "explanation": "【정답: 3번 정치】 마이클 패런티(Michael Parenti)의 관점에서 역사는 승자, 권력자가 결정하고 강제한다. '정치'가 빚은 그릇이라는 표현은 역사가 정치권력에 의해 구성된다는 비판적 역사관을 반영한다."
-  },
-  {
-    "id": "hr_ch10_q2",
-    "chapter": 10,
-    "question": "다음 이야기가 옳으면 ○, 틀리면 X를 하시오.\n프랑스 혁명은 모든 인간이 자유롭고 평등한 세상을 만들었다. (     )",
-    "options": ["○", "×"],
-    "answer": 1,
-    "occurrence": ["워크북"],
-    "frequencyCount": 2,
-    "explanation": "【정답: × (틀림)】 프랑스 혁명은 신분제 철폐 등 형식적 자유와 평등을 가져왔으나, 산업화 이후 자본주의 체제 속에서 계약의 자유, 직업 선택의 자유 등은 형식적인 자유에 머물렀다. 마르크스의 비판처럼 실질적 평등과 자유는 이루어지지 않았다."
-  },
-  {
-    "id": "hr_ch10_q3",
-    "chapter": 10,
-    "question": "다음 중 근대 이후 시장의 특징으로 잘못된 것은 무엇인가?",
-    "options": ["핵심적", "보조적", "일상적", "필수적"],
-    "answer": 1,
-    "occurrence": ["워크북"],
-    "frequencyCount": 2,
-    "explanation": "【정답: 2번 보조적】 근대 이후 시장은 경제생활의 핵심적·일상적·필수적 공간으로 변화하였다. '보조적'은 전근대 시장의 특징으로, 근대 이전에는 시장이 경제생활에서 보조적 역할을 담당하였다."
-  },
-  {
-    "id": "hr_ch10_q4",
-    "chapter": 10,
-    "question": "다음 중 로크의 자연권에 해당하지 않는 것은 무엇인가?",
-    "options": ["자아실현", "생명(신체)", "자유", "재산"],
-    "answer": 0,
-    "occurrence": ["워크북"],
-    "frequencyCount": 2,
-    "explanation": "【정답: 1번 자아실현】 존 로크(John Locke)는 자연권으로 생명(신체), 자유, 재산을 제시하였다. '자아실현'은 로크의 자연권 개념에 포함되지 않으며, 이는 이후 인본주의 심리학 등에서 다루는 개념이다."
-  },
-  {
-    "id": "hr_ch10_q5",
-    "chapter": 10,
-    "question": "다음 중 아담 스미스가 사회 전체의 이익을 위한 \"보이지 않는 손\"이라고 주장한 것은 무엇인가?",
-    "options": ["정치", "국가", "세금", "시장"],
-    "answer": 3,
-    "occurrence": ["워크북"],
-    "frequencyCount": 2,
-    "explanation": "【정답: 4번 시장】 아담 스미스는 개인의 이기심에 따른 경제 활동이 시장의 '보이지 않는 손'에 의해 조율되어 사회 전체의 이익을 증진한다고 주장하였다. 이는 자본주의 윤리 형성의 핵심 내용이다."
-  },
-  {
-    "id": "hr_ch10_q6",
-    "chapter": 10,
-    "question": "다음 중 영국에서 빈민을 통제하기 위해 1601년에 제정된 법은 무엇인가?",
-    "options": ["빈민법", "길버트법", "스핀햄랜드법", "사회보장법"],
-    "answer": 0,
-    "occurrence": ["워크북"],
-    "frequencyCount": 2,
-    "explanation": "【정답: 1번 빈민법】 엘리자베스 빈민법(1601년)은 영국에서 빈민을 통제하기 위해 제정된 법으로, 노동 가능 빈민과 노동 불가능 빈민을 구분하여 처우하였다. 노동 가능 빈민은 노동 교화소 수용·처벌, 노동 불가능 빈민은 구빈세를 통한 구호가 이루어졌다."
-  },
-  {
-    "id": "hr_ch10_q7",
-    "chapter": 10,
-    "question": "다음 이야기가 옳으면 ○, 틀리면 X를 하시오.\n엘리자베스 여왕 시대의 빈민법은 노동을 할 수 있는 사람과 그렇지 않은 사람을 구분하지 않았다. (     )",
-    "options": ["○", "×"],
-    "answer": 1,
-    "occurrence": ["워크북"],
-    "frequencyCount": 2,
-    "explanation": "【정답: × (틀림)】 엘리자베스 빈민법(1601년)은 노동 가능 빈민(노동 교화소 수용·처벌)과 노동 불가능 빈민(구빈세를 통한 구호)을 명확히 구분하였다."
-  },
-  {
-    "id": "hr_ch10_q8",
-    "chapter": 10,
-    "question": "다음 중 1832년부터 1834년까지 실시된 왕립빈민법관리조사의 결론이 아닌 것은 무엇인가?",
-    "options": ["빈민은 다시 부지런해졌다.", "빈민은 검소한 습관을 발전시켰다.", "빈민은 사회적 구조로 인해 빈곤에서 벗어나지 못한다.", "빈민의 노동에 대한 요구가 증가하였다."],
-    "answer": 2,
-    "occurrence": ["워크북"],
-    "frequencyCount": 1,
-    "explanation": "【정답: 3번 빈민은 사회적 구조로 인해 빈곤에서 벗어나지 못한다.】 왕립빈민법관리조사(1832~1834)는 도덕적·사회적 조건 향상을 결론으로 제시하였다. 빈민을 도덕적 문제로 보아 피처벌을 통한 근면성·검소함·노동 의욕 증진을 강조하였으며, 빈곤의 구조적 원인은 인정하지 않았다."
-  },
-  {
-    "id": "hr_ch10_q9",
-    "chapter": 10,
-    "question": "다음 중 신빈민법(1834년)의 원칙이 아닌 것은 무엇인가?",
-    "options": ["균일처우의 원칙", "교정의 원칙", "원외구호금지의 원칙", "열등처우의 원칙"],
-    "answer": 1,
-    "occurrence": ["워크북"],
-    "frequencyCount": 1,
-    "explanation": "【정답: 2번 교정의 원칙】 신빈민법(1834년)의 3대 원칙은 균일처우의 원칙(전국 단위 빈민 구호 방식 통일), 원외구호금지(작업장 밖 구호 금지), 열등처우의 원칙(구호 대상자의 처우를 최저 노동자보다 열악하게 유지)이다. '교정의 원칙'은 신빈민법의 공식 원칙에 해당하지 않는다."
-  },
-  {
-    "id": "hr_ch10_q10",
-    "chapter": 10,
-    "question": "다음 중 러다이트 운동이 문제의 원인으로 지목한 것은 무엇인가?",
-    "options": ["기계", "정치", "관계", "구조"],
-    "answer": 0,
-    "occurrence": ["워크북"],
-    "frequencyCount": 1,
-    "explanation": "【정답: 1번 기계】 러다이트 운동은 기계 파괴를 통해 일자리를 보전하려 한 운동이다. 그러나 강의 자료에 따르면 문제의 본질은 기계 자체가 아님을 인식하게 되었고, 이후 차티스트 운동 등 정치 참여를 통한 해결 모색으로 발전하였다."
-  },
-  {
-    "id": "hr_ch10_q11",
-    "chapter": 10,
-    "question": "다음 중 베버리지 보고서의 윤리적 원칙이 아닌 것은 무엇인가?",
-    "options": ["분파이익 금지", "5대악의 금지", "국가와 개인의 협력", "능력에 따른 분배"],
-    "answer": 3,
-    "occurrence": ["워크북"],
-    "frequencyCount": 1,
-    "explanation": "【정답: 4번 능력에 따른 분배】 베버리지 보고서의 윤리적 원칙은 분파이익 추구 금지, 5가지 사회적 악(결핍·질병·무지·불결·나태) 반대, 국가와 개인의 협력 추구이다. '능력에 따른 분배'는 베버리지 보고서가 아닌 자본주의 체제의 원리에 해당한다."
-  },
-  {
-    "id": "hr_ch10_q12",
-    "chapter": 10,
-    "question": "다음 중 대처 수상이 주장한 빅토리아 시대의 윤리와 관련이 없는 것은 무엇인가?",
-    "options": ["질서", "연대", "용기", "자립"],
-    "answer": 1,
-    "occurrence": ["워크북"],
-    "frequencyCount": 1,
-    "explanation": "【정답: 2번 연대】 대처 수상은 빅토리아 시대의 개인 윤리(질서, 품위, 용기, 자립, 독립심)를 강조하였다. '연대'는 개인 책임과 자립을 강조한 대처의 신자유주의적 윤리관과 상반되는 사회적 가치로, 빅토리아 시대 윤리 목록에 포함되지 않는다."
-  },
-  {
     "id": "hr_ch10_q2",
     "chapter": 10,
     "question": "실험설계에서 실험집단과 통제집단을 나누는 방법은?",
@@ -26077,7 +26778,7 @@ const QUIZ_BANK = {
   },
   {
     "id": "hr_ch11_q1",
-    "chapter": 11,
+    "chapter": 10,
     "question": "프로그램의 만족도 조사에서 참여자들에게 확인해야 할 주요 내용이 아닌 것은?",
     "options": [
       "프로그램의 적절성",
