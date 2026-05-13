@@ -11039,298 +11039,720 @@ const SUMMARY_DATA = {
           }
         ]
       },
-      {
-        num: '2강', name: '관점에 따라 상이한 프로그램 개발과 평가',
-        cards: [
-          {
-            icon: '⚡', title: '사회적 위험과 공적 대응',
-            html: `
-              <div class="hbox hbox-blue"><b>사회복지</b> = "사회적 위험에 대한 공적인 대응" (유범상 외, 2022)</div>
-              <div class="sub">공적 대응의 두 방식</div>
-              <table class="comp-table">
-                <tr><th>구분</th><th class="th-blue">잔여적 복지</th><th class="th-green">보편적 복지</th></tr>
-                <tr><td>위험 인식</td><td><b>개인의 실패</b></td><td>누구나 경험할 수 있는 <b>일시적 위기</b></td></tr>
-                <tr><td>국가 개입</td><td>시혜적·제한적</td><td>공동체 구성원의 인간다운 삶 보장</td></tr>
-                <tr><td>복지 방식</td><td>공공부조 중심·<b>선별적</b></td><td>권리 기반·<b>사회서비스 중심</b></td></tr>
-              </table>
-            `
-          },
-          {
-            icon: '🔬', title: '잔여적 vs 제도적 접근 — 실천기술·사회적 요인',
-            html: `
-              <span class="kichul">⭐ 기출</span>
-              <div class="sub">실천기술 비교</div>
-              <table class="comp-table">
-                <tr><th>잔여적 접근 (미시·인접환경)</th><th>제도적 접근 (거시·사회경제구조)</th></tr>
-                <tr><td>기술·훈련·직접적 원조</td><td>사회교육</td></tr>
-                <tr><td><b>수동적</b> 자원 활용</td><td><b>적극적</b> 자원 활용</td></tr>
-                <tr><td><b>정서적</b> 공감·지지</td><td><b>사회적</b> 공감·지지</td></tr>
-                <tr><td>자기자각 상담</td><td>비판적 자각역량 강화</td></tr>
-                <tr><td>가족치료 관계 작업</td><td>사회적 옹호</td></tr>
-              </table>
-              <div class="sub">사회적 요인 범주</div>
-              <table class="comp-table">
-                <tr><th>잔여적 (인접환경)</th><th>제도적 (사회경제구조)</th></tr>
-                <tr><td>의사소통 패턴·역할기대</td><td>사회적 권력의 불균형·불평등</td></tr>
-                <tr><td>집단 및 가족규범</td><td>지배 이데올로기의 실천·신념</td></tr>
-                <tr><td>과거의 사회적 경험</td><td>역사적·사회적 변환</td></tr>
-                <tr><td>대인관계·사회지지망</td><td>사회적 낙인 과정</td></tr>
-                <tr><td>물질적 자원</td><td>사회경제구조</td></tr>
-              </table>
-              <div class="sub">잔여주의 vs 제도주의 — 사회적 요인 인식 방식 ★ (Fook, 2007)</div>
-              <table class="comp-table">
-                <tr><th>잔여주의</th><th>제도주의</th></tr>
-                <tr><td>사회적 요인 개념이 <b>사회적 인접환경</b>으로 제한</td><td>사회적 요인 개념이 <b>사회구조</b>로 확대</td></tr>
-                <tr><td>사회적 요인이 배경·분석으로만 강조, 실천 <b>적용이 취약</b></td><td>사회적 요인이 강조되며 문제 설명과 실천에 <b>활용</b></td></tr>
-                <tr><td>문제 원인을 <b>개인</b>으로 보고, 환경에 대한 <b>순응과 조정</b> 강조</td><td>문제 원인을 <b>사회구조</b>로 보고, 개인과 환경 간의 <b>변화</b> 강조</td></tr>
-                <tr><td>심리적·사회적 요인에 관심, 그러나 <b>연결하는 데 취약</b></td><td>심리적 요인과 사회적 요인 간 <b>상호작용</b>에 관심</td></tr>
-              </table>
-            `
-          },
-          {
-            icon: '👦', title: '지훈 사례 — 잔여적 vs 제도적 접근 적용',
-            html: `
-              <div class="hbox hbox-blue">지훈(남, K고 중퇴) — 가정폭력·방임으로 3년째 가출, 조손가정, 차상위 빈곤</div>
-              <div class="sub">잔여적 접근 — 사정 6요인 + 목표</div>
-              <table class="comp-table">
-                <tr><th>사정 요인</th><th>목표</th></tr>
-                <tr><td>부적절하고 비효과적인 상호작용</td><td>개인 간 상호작용 개선</td></tr>
-                <tr><td>역할기대 스트레스·역할수행능력 부재</td><td>스트레스 경감·기대 수정</td></tr>
-                <tr><td>집단·가족 규범 간의 갈등</td><td>개인 간 갈등 해소</td></tr>
-                <tr><td>과거 경험을 통한 부정적 학습</td><td>부정적 학습 수정·현재·과거 경험 분리</td></tr>
-                <tr><td>대인관계 문제·사회적 지지 부족</td><td>대인관계 개선·사회적 지지 증가</td></tr>
-                <tr><td>물질적 자원의 결여</td><td>물질적 자원 제공</td></tr>
-              </table>
-              <div class="sub">잔여적 접근 — 주요 개입 활동 예시</div>
-              <ul class="pts">
-                <li>지훈·보호자 갈등 중재 → <b>정서적 지지·공감</b></li>
-                <li>담임교사에게 인접환경 설명 및 <b>옹호</b></li>
-                <li>가정·학교 내 <b>행동수정 프로그램</b></li>
-                <li>개별상담(변화 동기 부여), 가족상담(의사소통 개선)</li>
-                <li>경제적 후원·물품 제공 / 사회기술훈련·분노조절·진로지도 연계</li>
-              </ul>
-              <div class="sub">제도적 접근 — 사정 6요인 + 목표</div>
-              <table class="comp-table">
-                <tr><th>사정 요인</th><th>목표</th></tr>
-                <tr><td>권력의 결여</td><td>피착취자의 권력 증진</td></tr>
-                <tr><td>이데올로기로 인한 역할 제한</td><td>이데올로기의 제약 완화</td></tr>
-                <tr><td>이익집단 간 갈등·집단규범의 은폐된 기능</td><td>권력의 불균형 제거·착취 경감</td></tr>
-                <tr><td>변화능력 부재·사회변화 대처 능력 부재</td><td>삶에 대한 변화·통제 능력 향상</td></tr>
-                <tr><td>사회적 낙인 과정의 영향</td><td>사회적 낙인에 대한 저항</td></tr>
-                <tr><td>사회경제구조적 제한</td><td>구조적 제한 변화와 자원 제공</td></tr>
-              </table>
-              <div class="sub">제도적 접근 — 주요 개입 활동 예시</div>
-              <ul class="pts green">
-                <li>지훈의 행동을 사회·구조적 상황의 표출로 이해 → <b>사회적 공감·지지</b></li>
-                <li>아동·청소년의 가정 내 <b>권리 보장 옹호</b></li>
-                <li>사회의 본질적 문제를 자각하도록 하는 <b>시민교육</b></li>
-                <li>문제의식을 가진 시민들을 모아내는 <b>조직화 활동</b></li>
-                <li>청소년을 서비스 이용자가 아닌 <b>권한을 가진 주체</b>로 성장 → <b>역량강화</b></li>
-                <li>조손가정 자녀에 대한 <b>낙인</b> 문제 각인 → 비판적 사고로 저항 지원</li>
-              </ul>
-              <div class="sub">최종 개입 목표 비교</div>
-              <table class="comp-table">
-                <tr><th>잔여적</th><th>제도적</th></tr>
-                <tr><td>지훈의 <b>행동 수정</b></td><td>청소년에게 <b>더 많은 권한 부여</b></td></tr>
-                <tr><td>가족·선생님과의 <b>의사소통 증진</b></td><td>보호자·교사의 <b>선입견 변화</b></td></tr>
-              </table>
-            `
-          },
-          {
-              icon: '🐟', title: '제인 아담스 — "물고기 잡는 법" 비유 ★',
-              html: `
-                <span class="kichul">⭐ 기출</span>
-                <div class="hbox hbox-blue"><b>제인 아담스(Jane Addams)</b>: 미국 사회개혁가·여성운동가 / 노벨 평화상 수상<br>대표 기관: <b>헐 하우스(Hull House)</b> — 1889년 시카고 설립 (빈곤 이민자 지원)</div>
-                <div class="sub">인보관 운동의 핵심 철학 — "물고기" 비유</div>
-                <table class="comp-table">
-                  <tr><th>구분</th><th class="th-blue">잔여적 방식 (COS)</th><th class="th-green">제도적 방식 (인보관)</th></tr>
-                  <tr><td><b>비유</b></td><td>물고기를 <b>잡아다 주는</b> 방식</td><td>물고기 <b>잡는 법을 가르치는</b> 방식</td></tr>
-                  <tr><td><b>대상 인식</b></td><td>수혜자·자선 대상</td><td><b>이웃이자 동등한 존재</b></td></tr>
-                  <tr><td><b>방식</b></td><td>시혜·자선 중심</td><td>함께 살며 가르치고 연대</td></tr>
-                </table>
-                <div class="sub">헐 하우스 주요 활동</div>
-                <ul class="pts green">
-                  <li>아동 돌봄 / 영어 교육 / 직업 훈련 / 문화 프로그램 제공</li>
-                  <li>빈곤 이민자를 이웃으로 대하며 <b>함께 거주</b></li>
-                </ul>
-              `
-          }
-         ]
-        },
-      {
-        num: '3강', name: '사회복지 프로그램의 기획',
-        cards: [
-          {
-            icon: '📐', title: '프로그램 기획의 정의',
-            html: `
-            <span class="kichul">⭐ 기출</span>
-              <table class="comp-table">
-                <tr><th>학자</th><th>정의 핵심</th></tr>
-                <tr><td>드로어(1967)</td><td>최적 수단으로 목적 성취를 위한 미래 행동의 <b>일련의 결정을 준비하는 과정</b></td></tr>
-                <tr><td>길버트&amp;스펙트(1977)</td><td>통찰력·체계적 사고·조사·가치 적용으로 사회문제를 해결하고 <b>미래 사건을 통제하려는 의식적 노력</b></td></tr>
-                <tr><td>스키드모어(1995)</td><td>목적과 표적물을 기대하고 <b>계획을 준비하는 과정</b></td></tr>
-                <tr><td>정무성(2005)</td><td>특정 기간·담당자·방법·자원을 사용하여 특정 사람을 바람직한 상태로 이끄는 <b>사전에 마련된 구체적 시도</b></td></tr>
-              </table>
-              <div class="sub">기획(Planning) vs 계획(Plan)</div>
-              <table class="comp-table">
-                <tr><th>기획(Planning)</th><th>계획(Plan)</th></tr>
-                <tr><td><b>과정</b> 중심 — 계획을 세워가는 활동</td><td><b>결과</b> 중심 — 결정된 행동 노선</td></tr>
-                <tr><td>미래지향적·계속적</td><td>기획 과정에서 도출된 결론</td></tr>
-              </table>
-            `
-          },
-          {
-            icon: '🎯', title: '요크(York) 기획 속성 5가지 + 필요성',
-            html: `
-              <span class="kichul">⭐ 기출</span>
-              <div class="sub">프로그램 기획의 5가지 속성</div>
-              <ul class="star-list">
-                <li>프로그램 기획은 <b>미래지향적</b>이다</li>
-                <li>프로그램 기획은 <b>일련의 연속적인 과정</b>이다</li>
-                <li>프로그램 기획은 <b>의사결정 과정과 불가분의 관계</b>에 있다</li>
-                <li>프로그램 개발은 <b>목표지향적</b>이다</li>
-                <li>프로그램 개발은 <b>목표와 수단을 연결</b>하는 작업이다</li>
-              </ul>
-              <div class="sub">기획의 필요성 5가지</div>
-              <ul class="pts green">
-                <li><b>합리성</b> 증진</li>
-                <li><b>효과성 및 효율성</b> 증진</li>
-                <li>사회복지조직의 <b>책임성</b> 증진</li>
-                <li>클라이언트의 <b>동기 부여</b></li>
-                <li>조직 구성원의 <b>사기 증진</b></li>
-              </ul>
-            `
-          },
-          {
-            icon: '🔗', title: '정보의 사슬 (Chain of Information) ★',
-            html: `
-              <span class="kichul">⭐ 기출</span>
-              <div class="hbox hbox-blue"><b>정보의 사슬</b>: 프로그램 기획은 일회성 과정이 아니라 <b>순환적·반복적 과정</b>. 질문의 질이 프로그램 성과의 질로 연결됨</div>
-              <div class="sub">정보의 사슬 순환 구조</div>
-              <div class="flow" style="flex-wrap:wrap">
-                <span class="flow-item">① 질문하기</span>
-                <span class="flow-arrow">▶</span>
-                <span class="flow-item">② 답 구하기<br>(질문 소화)</span>
-                <span class="flow-arrow">▶</span>
-                <span class="flow-item">③ 기획하기</span>
-                <span class="flow-arrow">▶</span>
-                <span class="flow-item">④ 행동</span>
-                <span class="flow-arrow">▶</span>
-                <span class="flow-item">① 새 질문<br>(순환)</span>
-              </div>
-              <div class="hbox hbox-yellow">평가 결과 → 새로운 질문의 근거 → 다시 기획 → 행동 → 순환 반복<br>💡 <b>반복 순환</b>을 통해 질 좋은 프로그램 개발이 가능함</div>
-              <div class="sub">기출 선지 분석</div>
-              <table class="comp-table">
-                <tr><th>선지</th><th>정오</th></tr>
-                <tr><td>정보는 한 번만 수집하면 충분하다</td><td>❌</td></tr>
-                <tr><td><b>반복되는 과정의 순환을 통해 질 좋은 프로그램 개발이 가능하다</b></td><td>✅ 정답</td></tr>
-                <tr><td>정보 수집은 외부 전문가에게만 맡긴다</td><td>❌</td></tr>
-                <tr><td>정보의 사슬은 프로그램 평가 단계에서만 필요하다</td><td>❌</td></tr>
-              </table>
-            `
-          },
-          {
-            icon: '📐', title: '프로그램 기획 주요 활동 순서 ★',
-            html: `
-              <span class="kichul">⭐ 기출</span>
-              <div class="sub">프로그램 기획 주요 활동 올바른 순서</div>
-              <div class="flow" style="flex-wrap:wrap">
-                <span class="flow-item">① 상황분석</span>
-                <span class="flow-arrow">▶</span>
-                <span class="flow-item">② 사회문제 분석<br>및 욕구조사</span>
-                <span class="flow-arrow">▶</span>
-                <span class="flow-item">③ 목적 및<br>목표 설정</span>
-                <span class="flow-arrow">▶</span>
-                <span class="flow-item">④ 참여자 선정</span>
-              </div>
-              <table class="comp-table">
-                <tr><th>단계</th><th>활동 내용</th></tr>
-                <tr><td><b>① 상황분석</b></td><td>지역사회 현황, 기관 역량, 가용 자원 파악</td></tr>
-                <tr><td><b>② 사회문제 분석·욕구조사</b></td><td>문제의 원인·크기 파악, 대상자 욕구 확인</td></tr>
-                <tr><td><b>③ 목적 및 목표 설정</b></td><td>달성하고자 하는 방향과 구체적 목표 수립</td></tr>
-                <tr><td><b>④ 참여자 선정</b></td><td>일반집단 → 위험집단 → 표적집단 → 클라이언트</td></tr>
-              </table>
-            `
-          },
-            {
-            icon: '🧠', title: '기획 필요성 — 합리성 증진의 의미 ★',
-            html: `
-              <span class="kichul">⭐ 기출</span>
-              <div class="hbox hbox-blue"><b>합리성 증진</b>: 타당한 인과관계를 바탕으로 <b>논리적이고 체계적인 의사결정</b>을 하는 것</div>
-              <div class="sub">기획 필요성 5가지 — 핵심 의미 정리</div>
-              <table class="comp-table">
-                <tr><th>필요성</th><th>핵심 의미</th></tr>
-                <tr><td><b>합리성 증진</b></td><td>타당한 인과관계 기반 <b>논리적·체계적 의사결정</b></td></tr>
-                <tr><td><b>효과성·효율성 증진</b></td><td>목표 달성 + <b>비용 대비 최대 성과</b></td></tr>
-                <tr><td><b>책임성 증진</b></td><td>자원을 효과적·효율적으로 사용했음을 <b>증명</b></td></tr>
-                <tr><td><b>클라이언트 동기 부여</b></td><td>참여 의지와 변화 <b>동기 강화</b></td></tr>
-                <tr><td><b>구성원 사기 증진</b></td><td>팀의 목표 공유와 <b>참여 의식 향상</b></td></tr>
-              </table>
-            `
-          },
-          {
-            icon: '💡', title: '아이디어 설정 기술 6가지 + 기획자 역량 5가지',
-            html: `
-              <div class="sub">프로그램 아이디어 설정 기술 6가지<span class="kichul">⭐ 기출</span></div>
-              <table class="comp-table">
-                <tr><th>설정 기술</th><th>내용</th><th>예시</th></tr>
-                <tr><td><b>대화</b></td><td>사회복지 종사자·기관 리더·클라이언트·지역주민 등과 대화</td><td>지역주민 간담회</td></tr>
-                <tr><td><b>관찰</b></td><td>클라이언트 체계적 관찰</td><td>사례관리 기록</td></tr>
-                <tr><td><b>개인 및 집단면접</b></td><td>개별·집단 클라이언트 면접</td><td>프로그램 이용자 간담회</td></tr>
-                <tr><td><b>사회지표</b></td><td>정부·교육·연구·사회서비스 기관 등의 생성 지표</td><td>2024년 아동학대 발생률</td></tr>
-                <tr><td><b>설문조사(욕구조사)</b></td><td>온·오프라인 설문조사</td><td>지역 아동 보육 욕구조사</td></tr>
-                <tr><td><b>문서분석</b></td><td>기획보고서·사례집·웹사이트·정책 매뉴얼·연차보고서·학회지 등</td><td>성과평가 보고서</td></tr>
-              </table>
-              <div class="sub">프로그램 기획자의 역량 5가지</div>
-              <ul class="star-list">
-                <li><b>모험가 정신과 위험 감수의 용기</b> — 새로운 도전 정신</li>
-                <li><b>확신감 전파 능력</b> — 참여자 사기 고취</li>
-                <li><b>명확하고 구체화된 목적 설정</b> — 성공의 필수요소</li>
-                <li><b>큰 목적을 작은 과업으로 분해하는 능력</b> — 달성 가능한 세부목표로 구체화</li>
-                <li><b>철저한 기록과 모니터링 시스템 활용</b> — 책임성과 실천 향상</li>
-              </ul>
-            `
-          },
-          {
-            icon: '🔄', title: '프로그램 기획 4단계 ★★',
-            html: `
-              <span class="kichul">⭐ 기출</span>
-              <div class="flow" style="flex-wrap:wrap">
-                <span class="flow-item">1단계<br>문제의 이해</span>
-                <span class="flow-arrow">▶</span>
-                <span class="flow-item">2단계<br>개입 논리 개발</span>
-                <span class="flow-arrow">▶</span>
-                <span class="flow-item">3단계<br>내용 구체화</span>
-                <span class="flow-arrow">▶</span>
-                <span class="flow-item">4단계<br>프로그램 평가</span>
-              </div>
-              <ul class="pts">
-                <li><b>1단계 — 문제의 이해</b>: 기획의 출발점. "누가·언제·어디서·무엇을·어떻게·왜" 질문으로 문제의 크기·원인 파악</li>
-                <li><b>2단계 — 개입 논리 개발</b>: 사회문제 발생 원인 이해. 원인의 작용을 <b>차단·완화</b>하는 활동 방향 결정</li>
-                <li><b>3단계 — 내용 구체화</b>: 개입 논리에 맞는 프로그램 체계 4요소(자원·활동·산출·성과) 구성</li>
-                <li><b>4단계 — 평가</b>: 기획한 대로 실제로 이루어졌는지 점검. 기획 자체가 <b>평가의 첫 단계</b></li>
-              </ul>
-            `
-          },
-          {
-            icon: '🗂️', title: '프로그램 체계 4구성요소 ★★',
-            html: `
-              <span class="kichul">⭐ 기출</span>
-              <table class="comp-table">
-                <tr><th>구성요소</th><th>내용</th><th>예시</th></tr>
-                <tr><td><b>자원/투입</b></td><td>과업 수행에 필요한 인적·재정적·물적·지역사회 자원</td><td>인력, 예산, 장비, 네트워크</td></tr>
-                <tr><td><b>활동</b></td><td>자원을 이용하여 성과 도출을 위해 행해지는 과업</td><td>프로그램 과정·도구·행사·개입방법</td></tr>
-                <tr><td><b>산출</b></td><td>활동에서 <b>직접적으로 생산되는 일차적 결과물</b></td><td>서비스 유형·수·양, 참여 인원 수</td></tr>
-                <tr><td><b>성과/결과</b></td><td>참여 클라이언트의 태도·지식·기술·기능수준의 <b>긍정적 변화</b></td><td>클라이언트 삶의 질 향상</td></tr>
-              </table>
-              <div class="hbox hbox-yellow">
-                <b>산출 vs 성과 구분</b><br>
-                산출 = 활동의 <b>일차적 결과물</b> (수치·양) &nbsp;|&nbsp; 성과 = 클라이언트의 <b>긍정적 변화</b> (단기·장기)
-              </div>
-            `
-          }
-        ]
-      },
+{ num: "2강", name: "관점에 따라 상이한 프로그램 개발과 평가", icon: "⚖️",
+  cards: [
+
+    /* ────────── 01. 섹션 헤더 ────────── */
+    { icon: "📂", title: "01. 사회복지 개념과 사회적 위험",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">사회복지의 개념</span>
+          <span class="badge badge-green">사회적 위험</span>
+          <span class="badge badge-purple">공적 대응 두 가지 방식</span>
+        </div>
+      `
+    },
+
+    /* ── 사회복지의 개념 ── */
+    { icon: "🏛️", title: "사회복지의 개념 — 2강 출발점",
+      html: `
+        <div class="hbox hbox-blue">사회복지 = <b>사회적 위험에 대한 공적인 대응</b> — 위험을 어떻게 정의하느냐에 따라 대응 방식과 주체가 달라진다</div>
+        <div class="sub">핵심 구조</div>
+        <div class="flow">
+          <span class="flow-item">사회적 위험 정의 방식</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">공적 대응의 형태·정도 결정</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">국가·사회마다 상이</span>
+        </div>
+        <div class="hbox hbox-yellow">💡 사회적 위험을 어떻게 정의하느냐 + 국가 개입 정당성 인정 범위 → 두 가지 모두 공적 대응 정도를 결정한다</div>
+      `
+    },
+
+    /* ── 사회적 위험 ── */
+    { icon: "⚠️", title: "사회적 위험 ★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">문명 사회 발전에 따라 위험의 종류와 범위도 확장 — <b>어떤 것이 사회적 위험인가</b>에 대한 해석 차이가 잔여주의 vs 제도주의로 나뉜다</div>
+        <div class="sub">사회적 위험 예시</div>
+        <ul class="pts">
+          <li>실업, 과열 입시경쟁, 자살, 고독사</li>
+          <li>교통사고, 천재지변, 코로나19 등</li>
+        </ul>
+        <div class="sub">핵심 질문</div>
+        <div class="flow">
+          <span class="flow-item">이 중 어떤 것이 '사회적 위험'인가?</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">해석 차이</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">잔여주의 vs 제도주의</span>
+        </div>
+      `
+    },
+
+    /* ── 공적 대응 두 가지 방식 ── */
+    { icon: "🔀", title: "공적 대응의 두 가지 방식 — 잔여적 vs 보편적 ★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">사회적 위험을 <b>개인의 실패</b>로 보면 잔여적 복지 / <b>누구나 겪을 수 있는 일시적 위기</b>로 보면 보편적 복지</div>
+        <div class="sub">두 방식 비교</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th class="th-blue">잔여적 복지</th><th class="th-green">보편적 복지</th></tr>
+          <tr><td>사회적 위험 인식</td><td><b>개인의 실패</b></td><td>누구나 경험할 수 있는 <b>일시적 위기</b></td></tr>
+          <tr><td>국가 개입 관점</td><td>시혜적, 제한적</td><td>공동체 구성원의 인간다운 삶 보장</td></tr>
+          <tr><td>복지 방식</td><td><b>공공부조</b> 중심, <b>선별적</b> 복지</td><td>권리 기반, <b>사회서비스 중심</b> 복지</td></tr>
+        </table>
+        <div class="hbox hbox-red">❌ 잔여적 복지 = <b>공공부조 중심</b> (사회서비스 중심 ✗) / 보편적 복지 = <b>사회서비스 중심</b> (공공부조 중심 ✗)</div>
+      `
+    },
+
+    /* ────────── 02. 섹션 헤더 ────────── */
+    { icon: "📂", title: "02. 사회복지 발달의 두 흐름 — COS vs 인보관",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">COS vs 인보관 운동 비교</span>
+          <span class="badge badge-green">핵심 가치관 비교</span>
+          <span class="badge badge-purple">제인 아담스·헐 하우스</span>
+        </div>
+      `
+    },
+
+    /* ── COS vs 인보관 ── */
+    { icon: "🏢", title: "자선조직협회(COS) vs 인보관 운동 ★★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">COS = <b>잔여적 관점</b>(개인 탓) / 인보관 = <b>제도적 관점</b>(구조 탓) — 사회복지 발달의 두 민간 흐름</div>
+        <div class="sub">전체 비교</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th class="th-blue">자선조직협회 (COS)</th><th class="th-green">인보관 운동</th></tr>
+          <tr><td>관점 기반</td><td><b>잔여적 관점</b></td><td><b>제도적 관점</b></td></tr>
+          <tr><td>문제의 원인</td><td>구매력 없는 <b>개인·가족</b></td><td>개인·가족의 <b>지원체계(구조) 미비</b></td></tr>
+          <tr><td>참여자</td><td>상류층, 우애방문원</td><td>교육받은 노동계급, 지역주민</td></tr>
+          <tr><td>목표</td><td>자선·빈민구제, 빈곤조사, 빈곤문화개조</td><td>기존 제도·질서 비판, <b>사회개혁</b>, 구조개선</td></tr>
+          <tr><td>실천</td><td><b>기존 기관들의 서비스 조정</b></td><td>시민교육, 변화역량·조직력·상호관계 향상</td></tr>
+          <tr><td>영향</td><td><b>공동모금회</b>, 복지관련 협회로 발전</td><td>사회운동, 신사회운동, <b>노동시민연대</b></td></tr>
+          <tr><td>출현</td><td>영국 <b>1869년</b> 런던 / 미국 <b>1877년</b> 버팔로</td><td>영국 <b>1884년</b> 런던 토인비 홀 / 미국 <b>1886년</b> 뉴욕·시카고</td></tr>
+        </table>
+        <div class="sub">핵심 가치관 비교</div>
+        <table class="comp-table">
+          <tr><th class="th-blue">COS (잔여)</th><th class="th-green">인보관 (제도)</th></tr>
+          <tr><td>어떤 환경이든 <b>개인이 노력하면</b> 된다</td><td><b>누구나 환경의 영향</b>을 받게 된다</td></tr>
+          <tr><td>구조는 그 사람을 둘러싼 <b>환경일 뿐</b></td><td>구조는 그 사람의 <b>모든 것을 결정</b>한다</td></tr>
+        </table>
+        <div class="hbox hbox-red">❌ "기존 기관들의 서비스 조정" → <b>COS</b> 실천 (인보관 ✗) / 인보관 목표 = <b>사회개혁·구조개선</b> (자선·빈민구제 ✗) / COS 영향 = <b>공동모금회</b> (노동시민연대 ✗) / 인보관 대표 = <b>1884년 토인비 홀</b> (1869년 COS ✗)</div>
+      `
+    },
+
+    /* ── 제인 아담스 ── */
+    { icon: "👩", title: "제인 아담스(Jane Addams)와 헐 하우스",
+      html: `
+        <div class="hbox hbox-blue">제인 아담스 = 미국 사회개혁가·여성운동가·<b>노벨평화상</b> 수상자 / <b>헐 하우스(Hull House)</b> 1889년 시카고 설립</div>
+        <div class="sub">헐 하우스 활동</div>
+        <ul class="pts green">
+          <li>빈곤 이민자 지원</li>
+          <li>아동 돌봄, 영어 교육, 직업 훈련, 문화 프로그램 제공</li>
+        </ul>
+        <div class="sub">역사적 의의</div>
+        <ul class="pts purple">
+          <li>단순 복지 시설을 넘어 <b>사회개혁의 중심지</b></li>
+          <li>현대 사회복지·인권운동의 기초 마련</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 제인 아담스 = <b>인보관 운동</b> 연결 / 헐 하우스 = <b>1889년 시카고</b> (토인비 홀 1884년 런던과 구분)</div>
+        <div class="hbox hbox-red">❌ 인보관 운동 = 국가 복지 발달 단계에 포함되지 않음 — <b>민간복지 흐름</b></div>
+      `
+    },
+
+    /* ────────── 03. 섹션 헤더 ────────── */
+    { icon: "📂", title: "03. 잔여적 vs 제도적 접근 이론 비교",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">잔여주의 vs 제도주의 사회적 요인</span>
+          <span class="badge badge-green">사회적 요인 범주 비교</span>
+          <span class="badge badge-purple">접근방법·실천기술 비교</span>
+        </div>
+      `
+    },
+
+    /* ── 잔여주의 vs 제도주의 사회적 요인 ── */
+    { icon: "🔍", title: "잔여주의 vs 제도주의 — 사회적 요인 ★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">잔여주의 = 사회적 요인을 <b>인접환경</b>으로 제한 / 제도주의 = <b>사회구조</b>로 확대 <span class="tag tag-blue">Fook(2007)</span></div>
+        <div class="sub">핵심 비교표</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th class="th-blue">잔여주의</th><th class="th-green">제도주의</th></tr>
+          <tr><td>사회적 요인 범위</td><td>사회적 <b>인접환경</b>으로 제한</td><td><b>사회구조</b>로 확대</td></tr>
+          <tr><td>요인 강조 방식</td><td>배경·분석으로만 강조, 실천 적용 <b>취약</b></td><td>문제 설명과 실천에 <b>활용</b></td></tr>
+          <tr><td>문제 원인</td><td><b>개인</b>으로 봄, 환경에 대한 <b>순응·조정</b> 강조</td><td><b>사회구조</b>로 봄, 개인과 환경 간 <b>변화</b> 강조</td></tr>
+          <tr><td>심리·사회적 요인</td><td>관심은 있으나 <b>연결하는 데 취약</b></td><td>심리·사회 요인 간 <b>상호작용</b>에 관심</td></tr>
+        </table>
+        <div class="hbox hbox-red">❌ 잔여주의 = 사회적 요인을 <b>인접환경</b>으로 제한 (사회구조로 확대 ✗) / 잔여주의도 사회적 요인에 관심을 두지만 → <b>실천 연결이 취약</b>하다는 점이 핵심</div>
+      `
+    },
+
+    /* ── 사회적 요인 범주 ── */
+    { icon: "📋", title: "잔여적 vs 제도적 — 사회적 요인 범주 ★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">잔여적 = <b>인접환경</b> 강조(의사소통·역할기대·가족규범 등) / 제도적 = <b>사회경제구조</b> 강조(권력불균형·이데올로기·낙인 등) <span class="tag tag-blue">Fook(2007)</span></div>
+        <div class="sub">범주 비교</div>
+        <table class="comp-table">
+          <tr><th class="th-blue">잔여적 접근 (인접환경)</th><th class="th-green">제도적 접근 (사회경제구조)</th></tr>
+          <tr><td>의사소통 패턴</td><td>사회적 <b>권력의 불균형·불평등</b></td></tr>
+          <tr><td>역할기대</td><td>지배 이데올로기의 <b>실천(비판)</b></td></tr>
+          <tr><td>집단 및 가족규범</td><td>지배 이데올로기의 <b>신념</b></td></tr>
+          <tr><td>과거의 사회적 경험</td><td><b>역사적·사회적 변환</b></td></tr>
+          <tr><td>대인관계: <b>사회 지지망</b></td><td><b>사회적 낙인 과정</b></td></tr>
+          <tr><td><b>물질적 자원</b></td><td><b>사회경제구조</b></td></tr>
+        </table>
+        <div class="hbox hbox-red">❌ '사회적 낙인 과정' → <b>제도적</b> 접근 (잔여적 ✗) / '물질적 자원' → <b>잔여적</b> 접근 (제도적 ✗) / '의사소통 패턴·역할기대·가족규범' → 모두 <b>잔여적</b> 접근 범주</div>
+      `
+    },
+
+    /* ── 접근방법·실천기술 ── */
+    { icon: "🛠️", title: "잔여적 vs 제도적 — 접근방법·실천기술 ★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">잔여적 = 개인의 <b>적응·대처 전략</b>(정서적 공감·자기자각·가족치료) / 제도적 = <b>변화·통제 전략</b>(사회적 옹호·비판적 자각역량) <span class="tag tag-blue">Fook(2007)</span></div>
+        <div class="sub">실천기술 비교</div>
+        <table class="comp-table">
+          <tr><th class="th-blue">잔여적 접근 (적응·대처)</th><th class="th-green">제도적 접근 (변화·통제)</th></tr>
+          <tr><td>기술, 훈련, <b>직접적 원조</b></td><td><b>사회교육</b></td></tr>
+          <tr><td><b>수동적</b> 자원 활용</td><td><b>적극적</b> 자원 활용</td></tr>
+          <tr><td><b>정서적</b> 공감</td><td><b>사회적</b> 공감</td></tr>
+          <tr><td><b>정서적</b> 지지</td><td><b>사회적</b> 지지</td></tr>
+          <tr><td><b>자기자각</b> 상담</td><td><b>비판적 자각역량</b> 강화</td></tr>
+          <tr><td><b>가족치료</b> 관계 작업</td><td><b>사회적 옹호</b></td></tr>
+          <tr><td>개인의 환경 <b>적응</b>에 초점</td><td>구조를 <b>바꾸려는 시민</b> 형성</td></tr>
+        </table>
+        <div class="hbox hbox-yellow">💡 잔여: 정서적 / 수동적 / 자기자각 / 가족치료 ↔ 제도: 사회적 / 적극적 / 비판적 자각역량 / 사회적 옹호</div>
+        <div class="hbox hbox-red">❌ <b>사회적 옹호</b> → 제도적 실천기술 (잔여적 ✗) / <b>가족치료</b> → 잔여적 (제도적 ✗) / <b>비판적 자각역량 강화</b> → 제도적 (잔여적 = 자기자각 상담)</div>
+      `
+    },
+
+    /* ────────── 04. 섹션 헤더 ────────── */
+    { icon: "📂", title: "04. 로마니쉰·맥킨타이어",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">로마니쉰의 사회복지 발전 7방향</span>
+          <span class="badge badge-red">맥킨타이어의 잔여적 실천 비판 3가지</span>
+        </div>
+      `
+    },
+
+    /* ── 로마니쉰 ── */
+    { icon: "📈", title: "로마니쉰의 사회복지 발전 방향 ★★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">Romanyshyn(1971): 국가 발전에 따라 사회복지는 <b>잔여·민간·특수·최저 → 제도·공공·보편·적정</b> 방향으로 발전</div>
+        <div class="sub">7가지 발전 방향</div>
+        <ul class="star-list">
+          <li>① 잔여적(residual) → <b>제도적(institutional)</b></li>
+          <li>② 자선(charity) → <b>시민의 권리(citizen right)</b></li>
+          <li>③ 특수성(special) → <b>보편성(universal)</b></li>
+          <li>④ 최저(minimum) 조건 → <b>적정(optimum) 조건</b> 급여·서비스</li>
+          <li>⑤ 개인의 변화(individual change) → <b>사회개혁(social reform)</b></li>
+          <li>⑥ 민간(voluntary) 지원 → <b>공공(public) 지원</b></li>
+          <li>⑦ 빈민복지(welfare for the poor) → <b>복지사회(welfare society)</b> 구현</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 암기 공식: 잔여→제도 / 자선→권리 / 특수→보편 / 최저→적정 / 개인변화→사회개혁 / 민간→공공 / 빈민복지→복지사회</div>
+        <div class="hbox hbox-red">❌ 방향이 <b>반대</b>로 제시되는 선택지 자주 출제 — "제도→잔여" / "공공→민간" / "보편→특수" / "적정→최저" 모두 틀림</div>
+      `
+    },
+
+    /* ── 맥킨타이어 ── */
+    { icon: "❗", title: "맥킨타이어의 잔여적 실천 비판 3가지 ★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">McIntyre(1982): 잔여적 사회복지 실천의 3가지 문제점 — <b>개인화·고립화·체제 강화</b></div>
+        <div class="sub">3가지 비판</div>
+        <ul class="pts red">
+          <li><b>① 개인화(축소)</b> — 복잡한 사회문제를 개인의 심리적 문제로 축소, 사회구조적 원인을 클라이언트가 책임지게 함 → <b>"희생자 비난(blame the victim)"</b> 효과</li>
+          <li><b>② 고립화(사사화)</b> — 사회문제를 사적(private)인 것으로 치부, 공통 경험 공유·집합적 해결 가능성 차단</li>
+          <li><b>③ 체제 강화</b> — 자본주의라는 억압적 사회질서를 강화하고 그에 순응 (Payne, 2001: 345)</li>
+        </ul>
+        <div class="hbox hbox-red">❌ 맥킨타이어의 비판 = <b>잔여적</b> 실천 비판 (제도적 비판 ✗) / 3가지 = <b>개인화·고립화·체제강화</b> — 순서와 내용 정확히 암기</div>
+      `
+    },
+
+    /* ────────── 05. 섹션 헤더 ────────── */
+    { icon: "📂", title: "05. 사정과 목표 — 잔여적·제도적 실천",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">잔여적 실천의 사정과 목표</span>
+          <span class="badge badge-green">제도적 실천의 사정과 목표</span>
+        </div>
+      `
+    },
+
+    /* ── 잔여적 사정·목표 ── */
+    { icon: "🎯", title: "잔여적 사회복지실천의 사정과 목표 ★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">사정 초점: <b>환경에 대처하지 못하는 개인의 취약점</b> / 개입 목표: <b>사회 상황에 적응하고 대처할 수 있도록 원조</b> <span class="tag tag-blue">Fook(2007)</span></div>
+        <div class="sub">사정 요인 → 목표</div>
+        <table class="comp-table">
+          <tr><th>사정 요인</th><th>목표</th></tr>
+          <tr><td>부적절하고 비효과적인 상호작용</td><td><b>개인 간 상호작용 개선</b></td></tr>
+          <tr><td>역할기대 스트레스, 역할수행능력 부재, 비현실적 역할기대</td><td><b>스트레스 경감, 기대의 수정</b></td></tr>
+          <tr><td>집단 혹은 가족 규범 간의 갈등</td><td><b>개인 간 갈등 해소</b></td></tr>
+          <tr><td>과거 경험을 통한 부정적 학습</td><td><b>부정적 학습 수정, 현재·과거 경험 분리</b></td></tr>
+          <tr><td>대인관계문제, 사회적 지지 부족, 사회적 고립</td><td><b>대인관계 개선, 사회적 지지 증가</b></td></tr>
+          <tr><td>물질적 자원의 결여</td><td><b>물질적 자원 제공</b></td></tr>
+        </table>
+        <div class="hbox hbox-red">❌ "사회경제구조적 제한을 변화" → <b>제도적</b> 접근 목표 (잔여적 ✗) / 잔여적 개입 = 행동 수정·의사소통 증진·대인관계 개선</div>
+      `
+    },
+
+    /* ── 제도적 사정·목표 ── */
+    { icon: "🔧", title: "제도적 사회복지실천의 사정과 목표 ★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">사정 초점: <b>부적절한 사회경제적 구조</b> / 개입 목표: <b>사회 상황의 구조적 측면을 변화시키고 통제할 수 있도록 원조</b> <span class="tag tag-green">Fook(2007)</span></div>
+        <div class="sub">사정 요인 → 목표</div>
+        <table class="comp-table">
+          <tr><th>사정 요인</th><th>목표</th></tr>
+          <tr><td>권력의 결여</td><td><b>피착취자의 권력 증진</b></td></tr>
+          <tr><td>이데올로기로 인한 역할 제한, 지배적 사회풍습·신념에 따른 제한</td><td><b>이데올로기 제약(행동과 신념 모두) 완화</b></td></tr>
+          <tr><td>이익집단 간의 갈등: 집단규범의 은폐된 사회적 기능</td><td><b>권력의 불균형 제거, 착취 경감</b></td></tr>
+          <tr><td>변화능력 부재, 사회변화 대처 능력 부재</td><td><b>삶에 대한 변화·통제능력 향상</b></td></tr>
+          <tr><td>사회적 낙인 과정의 영향</td><td><b>사회적 낙인 영향의 거부</b></td></tr>
+          <tr><td>사회경제구조적 제한</td><td><b>구조적 제한 변화, 물질적 자원 제공</b></td></tr>
+        </table>
+        <div class="hbox hbox-red">❌ "피착취자의 권력 증진" → <b>제도적</b> 접근 목표 (잔여적 ✗) / 잔여적 목표 = 개인 행동 수정·대인관계 개선</div>
+      `
+    },
+
+    /* ────────── 06. 섹션 헤더 ────────── */
+    { icon: "📂", title: "06. 실천 사례 적용 — 지훈 사례",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">잔여적 접근 개입 활동</span>
+          <span class="badge badge-green">제도적 접근 개입 활동</span>
+          <span class="badge badge-purple">최종 개입 목표 비교</span>
+        </div>
+      `
+    },
+
+    /* ── 지훈 사례 ── */
+    { icon: "👦", title: "지훈 사례 — 잔여적 vs 제도적 개입 ★★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">K고 중퇴 남학생 지훈 — 가정폭력·방임, 3년째 가출, 조손가정, 차상위 빈곤, 학교 퇴학 / 두 관점에 따라 <b>사정 초점과 개입 목표가 달라진다</b></div>
+        <div class="sub">잔여적 접근 개입 활동</div>
+        <ul class="pts">
+          <li>지훈·보호자 갈등 중재 → <b>정서적 지지·정서적 공감</b> 제공</li>
+          <li>담임교사에게 <b>인접환경</b> 설명 → 이해·변호</li>
+          <li>가정·학교 내 <b>행동수정 프로그램</b></li>
+          <li><b>개별상담</b>(변화 동기 부여), <b>가족상담</b>(가족 의사소통 개선)</li>
+          <li>경제적 후원·물품 제공</li>
+          <li>학교생활 적응·사회기술훈련·분노조절·진로지도 프로그램 연계</li>
+        </ul>
+        <div class="sub">제도적 접근 개입 활동</div>
+        <ul class="pts green">
+          <li>지훈 행동을 <b>사회·구조적 상황의 표출</b>로 이해 → <b>사회적 지지·공감</b> 끌어냄</li>
+          <li>아동·청소년의 가정 내 권리 보장 <b>옹호</b></li>
+          <li>사회의 본질적 문제 자각 돕는 <b>시민교육</b></li>
+          <li>문제의식 시민 모아 교육제도·복지시스템 변화 위한 <b>조직화 활동</b></li>
+          <li>청소년을 <b>권한을 가진 주체</b>로 성장 → <b>역량강화</b></li>
+          <li>조손가정 자녀에 대한 <b>낙인</b> 문제 각인 → 비판적 사고로 저항 지원</li>
+        </ul>
+        <div class="sub">관점별 개입 목표 비교 ★</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th class="th-blue">잔여적 접근</th><th class="th-green">제도적 접근</th></tr>
+          <tr><td>사정 초점</td><td>환경 대처 못하는 <b>개인의 취약점</b></td><td>부적절한 <b>사회경제구조</b></td></tr>
+          <tr><td>개입 목표 1</td><td>학급·가정·학교에서 <b>지훈의 행동 수정</b></td><td>지훈·청소년들에게 <b>더 많은 힘(권한) 부여</b></td></tr>
+          <tr><td>개입 목표 2</td><td>가족·선생님과의 <b>의사소통 증진</b></td><td>보호자·교사들의 <b>정형화된 선입견(관점) 변화</b></td></tr>
+        </table>
+        <div class="hbox hbox-red">❌ "청소년에게 더 많은 권력 부여" → <b>제도적</b> 목표 / "교사들의 편견 변화" → <b>제도적</b> 목표 / "지훈의 행동 수정" → <b>잔여적</b> 목표 / "의사소통 증진" → <b>잔여적</b> 목표</div>
+      `
+    },
+
+    /* ────────── 핵심 요약 ────────── */
+    { icon: "📝", title: "2강 핵심 요약",
+      html: `
+        <table class="comp-table">
+          <tr><th>개념</th><th>핵심 내용</th></tr>
+          <tr><td><b>사회복지 정의</b></td><td>사회적 위험에 대한 <b>공적인 대응</b> — 위험 정의 방식에 따라 대응 달라짐</td></tr>
+          <tr><td><b>잔여적 복지</b></td><td><b>공공부조 중심·선별적</b> / 사회적 위험 = 개인의 실패</td></tr>
+          <tr><td><b>보편적 복지</b></td><td><b>사회서비스 중심</b> / 사회적 위험 = 누구나 겪는 일시적 위기</td></tr>
+          <tr><td><b>COS</b></td><td>잔여적 관점 / 개인 탓 / 상류층·우애방문원 / <b>공동모금회</b>로 발전 / 1869년 런던</td></tr>
+          <tr><td><b>인보관 운동</b></td><td>제도적 관점 / 구조 탓 / 노동계급 / <b>노동시민연대</b> / 1884년 토인비 홀</td></tr>
+          <tr><td><b>제인 아담스</b></td><td>노벨평화상 / <b>헐 하우스</b> 1889년 시카고 / 인보관 운동</td></tr>
+          <tr><td><b>잔여적 사회적 요인</b></td><td>인접환경 — 의사소통·역할기대·가족규범·과거경험·사회지지망·물질적 자원</td></tr>
+          <tr><td><b>제도적 사회적 요인</b></td><td>사회구조 — 권력불균형·이데올로기·역사적변환·사회적낙인·사회경제구조</td></tr>
+          <tr><td><b>잔여적 실천기술</b></td><td>정서적 공감·지지 / 자기자각 상담 / <b>가족치료</b> / 수동적 자원</td></tr>
+          <tr><td><b>제도적 실천기술</b></td><td>사회적 공감·지지 / <b>비판적 자각역량</b> / <b>사회적 옹호</b> / 적극적 자원</td></tr>
+          <tr><td><b>로마니쉰 7방향</b></td><td>잔여→제도 / 자선→권리 / 특수→보편 / 최저→적정 / 개인변화→사회개혁 / 민간→공공 / 빈민복지→복지사회</td></tr>
+          <tr><td><b>맥킨타이어 3비판</b></td><td><b>개인화</b>(희생자 비난) / <b>고립화</b>(사사화) / <b>체제 강화</b>(자본주의 순응)</td></tr>
+          <tr><td><b>지훈 — 잔여적 목표</b></td><td>행동 수정 + 의사소통 증진 (개인에 초점)</td></tr>
+          <tr><td><b>지훈 — 제도적 목표</b></td><td>권한 부여 + 선입견(정형화된 관점) 변화 (구조에 초점)</td></tr>
+        </table>
+      `
+    },
+
+  ]
+},
+{ num: "3강", name: "사회복지 프로그램의 기획", icon: "📋",
+  cards: [
+
+    /* ────────── 01. 섹션 헤더 ────────── */
+    { icon: "📂", title: "01. 기획의 정의와 개념",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">기획이란?</span>
+          <span class="badge badge-green">학자별 기획 정의</span>
+          <span class="badge badge-purple">기획 vs 계획</span>
+        </div>
+      `
+    },
+
+    /* ── 기획이란 ── */
+    { icon: "💡", title: "기획(Planning)이란?",
+      html: `
+        <div class="hbox hbox-blue">사회복지 프로그램 기획 = 사회문제 해결·복지 증진이라는 목적 달성을 위해 <b>계획을 수립하고 준비하는 과정</b></div>
+        <div class="sub">적용 범위</div>
+        <ul class="pts">
+          <li>다양한 분야에서 사용 — 기획상품, 기획재정부, 연예기획사 등</li>
+          <li>사회복지에서는 <b>사회문제 해결 + 복지 증진</b>이라는 목적 중심</li>
+        </ul>
+        <div class="sub">학자별 공통점</div>
+        <div class="hbox hbox-yellow">💡 모든 정의의 공통점 = <b>목표달성을 위한 계획·과정</b>의 측면 강조</div>
+      `
+    },
+
+    /* ── 학자별 기획 정의 ── */
+    { icon: "📖", title: "학자별 프로그램 기획 정의 ★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">기획 정의 — 해외 3인·국내 2인 / 핵심 키워드로 구분하여 암기</div>
+        <div class="sub">해외 학자</div>
+        <table class="comp-table">
+          <tr><th>학자</th><th>정의 핵심</th></tr>
+          <tr><td><b>드로어(1967)</b></td><td>최적의 수단으로 목적 성취를 위한 미래 행동의 <b>일련의 결정을 준비하는 과정</b></td></tr>
+          <tr><td><b>길버트와 스펙트(1977)</b></td><td>통찰력·체계적 사고·조사·가치 적용을 통해 사회문제를 해결하고 <b>미래 사건을 통제하려는 의식적 노력</b></td></tr>
+          <tr><td><b>스키드모어(1995)</b></td><td>목적과 표적물을 기대하고, 목적·기대에 도달하기 위한 <b>계획을 준비하는 과정</b></td></tr>
+        </table>
+        <div class="sub">국내 학자</div>
+        <table class="comp-table">
+          <tr><th>학자</th><th>정의 핵심</th></tr>
+          <tr><td><b>정무성(2005)</b></td><td>①특정 기간에 ②담당자들이 ③특정 방법과 자원을 사용하여 ④특정한 사람들을 ⑤바람직한 상태로 이끌기 위한 <b>사전에 마련된 구체적 시도</b></td></tr>
+          <tr><td><b>이봉주·김기덕(2008)</b></td><td>클라이언트의 삶의 질을 향상하는 목적을 효과적으로 달성할 수 있도록 <b>내용과 과정을 개발하는 과정</b></td></tr>
+        </table>
+        <div class="hbox hbox-yellow">💡 정무성 5요소 암기: <b>①기간 ②담당자 ③방법·자원 ④특정 사람들 ⑤바람직한 상태</b></div>
+        <div class="hbox hbox-red">❌ 드로어 = <b>결정을 준비하는 과정</b> (실행 과정 ✗) / 길버트·스펙트 = <b>의식적 노력</b> (무의식적·반복적 관행 ✗)</div>
+      `
+    },
+
+    /* ── 기획 vs 계획 ── */
+    { icon: "🔀", title: "기획(Planning) vs 계획(Plan) ★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">기획(Planning) = <b>과정</b> 중심 / 계획(Plan) = <b>결과</b> 중심 — 가장 핵심 구분 포인트</div>
+        <div class="sub">비교표</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th class="th-blue">기획(Planning)</th><th class="th-green">계획(Plan)</th></tr>
+          <tr><td>성격</td><td><b>과정</b> 중심 — 계획을 세워가는 활동</td><td><b>결과</b> 중심 — 결정된 행동 노선</td></tr>
+          <tr><td>특징</td><td>미래지향적, 계속적, 의사결정과 연결</td><td>기획 과정에서 도출된 결론</td></tr>
+        </table>
+        <div class="sub">기획의 특징 5가지</div>
+        <ul class="star-list">
+          <li>① <b>미래지향적</b></li>
+          <li>② <b>연속적인 과정</b></li>
+          <li>③ <b>의사결정과 연결</b></li>
+          <li>④ <b>목표지향적</b></li>
+          <li>⑤ <b>목표를 위한 수단</b></li>
+        </ul>
+        <div class="hbox hbox-red">❌ 기획 = <b>과정</b> / 계획 = <b>결과</b> / 기획 = <b>미래지향적</b> (현실지향적 ✗) / 기획 = <b>연속적 과정</b> (단기적·일시적 ✗)</div>
+      `
+    },
+
+    /* ────────── 02. 섹션 헤더 ────────── */
+    { icon: "📂", title: "02. 기획의 필요성·속성·활동·아이디어 설정",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">기획의 필요성 5가지</span>
+          <span class="badge badge-green">요크의 기획 속성 5가지</span>
+          <span class="badge badge-purple">주요 활동 흐름</span>
+          <span class="badge badge-yellow">아이디어 설정 기술 6가지</span>
+        </div>
+      `
+    },
+
+    /* ── 기획의 필요성 ── */
+    { icon: "✅", title: "프로그램 기획의 필요성 5가지 ★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">기획을 통해 기대할 수 있는 5가지 효과 — <b>합리성·효과효율성·책임성·동기부여·사기증진</b></div>
+        <div class="sub">5가지 필요성</div>
+        <ul class="star-list">
+          <li>① <b>합리성</b> 증진 — 타당한 인과관계 설명을 위해 필수적</li>
+          <li>② <b>효과성 및 효율성</b> 증진</li>
+          <li>③ 사회복지조직의 <b>책임성</b> 증진</li>
+          <li>④ 클라이언트의 <b>동기 부여</b> — 참여 시 성취감</li>
+          <li>⑤ 사회복지조직 구성원의 <b>사기 증진</b> — 직무만족도 향상</li>
+        </ul>
+        <div class="hbox hbox-red">❌ <b>"사회복지조직의 인력 증가"</b> → 기획 필요성에 해당하지 않음</div>
+      `
+    },
+
+    /* ── 요크 속성 ── */
+    { icon: "⚙️", title: "요크(York)의 프로그램 기획 속성 5가지 ★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">York(1982) 제시 — <b>기획</b>의 속성 3가지 + <b>개발</b>의 속성 2가지 / 주어가 다름에 주의</div>
+        <div class="sub">기획(Planning)의 속성 — 3가지</div>
+        <ul class="pts">
+          <li>① 프로그램 기획은 <b>미래지향적</b>이다</li>
+          <li>② 프로그램 기획은 <b>일련의 연속적인 과정</b>이다</li>
+          <li>③ 프로그램 기획은 <b>의사결정 과정과 불가분의 관계</b>에 있다</li>
+        </ul>
+        <div class="sub">개발(Development)의 속성 — 2가지</div>
+        <ul class="pts green">
+          <li>④ 프로그램 <b>개발</b>은 <b>목표지향적</b>이다</li>
+          <li>⑤ 프로그램 <b>개발</b>은 <b>목표와 수단을 연결</b>하는 작업이다</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 ①②③ = <b>기획</b>의 속성 / ④⑤ = <b>개발</b>의 속성 — 주어가 다르다는 점이 핵심 출제 포인트</div>
+        <div class="hbox hbox-red">❌ <b>"단기적이고 일시적인 과정"</b> → 기획 속성 아님 (연속적 과정) / <b>"프로그램 평가와 불가분"</b> → <b>의사결정 과정</b>과 불가분 (평가 ✗)</div>
+      `
+    },
+
+    /* ── 주요 활동 흐름 ── */
+    { icon: "🔄", title: "프로그램 기획의 주요 활동 흐름",
+      html: `
+        <div class="hbox hbox-blue">사회복지 프로그램 기획에 공통으로 포함되는 4가지 주요 활동 — 순서대로 진행</div>
+        <div class="sub">활동 순서</div>
+        <div class="flow">
+          <span class="flow-item">① 상황분석 + 아이디어 (Brain Storming)</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">② 사회문제 분석 + 욕구조사</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">③ 목적·목표 설정 + 개입전략 수립</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">④ 참여자 선정</span>
+        </div>
+      `
+    },
+
+    /* ── 아이디어 설정 기술 ── */
+    { icon: "🗂️", title: "프로그램 아이디어 설정 기술 6가지 ★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">아이디어 설정 기술 6가지 — <b>대화·관찰·면접·사회지표·설문조사·문서분석</b> / 대화가 가장 주관적</div>
+        <div class="sub">6가지 기술 비교</div>
+        <table class="comp-table">
+          <tr><th>설정 기술</th><th>내용·예시</th><th>특징</th></tr>
+          <tr><td><b>대화</b></td><td>종사자·기관 리더·자원봉사자·외부전문가·클라이언트·지역주민 (예: 지역주민 간담회)</td><td>가장 <b>주관적</b></td></tr>
+          <tr><td><b>관찰</b></td><td>클라이언트 체계적 관찰 (예: 사례관리 기록)</td><td></td></tr>
+          <tr><td><b>개인 및 집단면접</b></td><td>개별·집단 클라이언트 면접 (예: 프로그램 이용자 간담회)</td><td></td></tr>
+          <tr><td><b>사회지표</b></td><td>정부·교육·연구·사회서비스기관 등 생성 지표 (예: 2024년 아동학대 발생률)</td><td></td></tr>
+          <tr><td><b>설문조사(욕구조사)</b></td><td>온·오프라인 설문조사 (예: 2024년 지역 아동 보육 욕구조사)</td><td>단점: <b>비용·시간</b></td></tr>
+          <tr><td><b>문서분석</b></td><td>기획 보고서·사례집·웹사이트·정책 매뉴얼·성과평가·회의록·연차보고서·학회지·규정·법규 등</td><td></td></tr>
+        </table>
+        <div class="hbox hbox-red">❌ <b>대화</b> = 가장 <b>주관적</b>인 방법 / <b>설문조사</b> = 단점으로 비용과 시간이 많이 소요</div>
+      `
+    },
+
+    /* ────────── 03. 섹션 헤더 ────────── */
+    { icon: "📂", title: "03. 기획자의 역량과 4단계 기획 과정",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">기획자 역량 5가지</span>
+          <span class="badge badge-green">기획 4단계 과정 개요</span>
+        </div>
+      `
+    },
+
+    /* ── 기획자 역량 ── */
+    { icon: "🦸", title: "프로그램 기획자의 역량 5가지 ★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">성공적인 기획을 위해 기획자가 갖춰야 할 5가지 역량 — <b>모험·확신·목적·분해·기록</b></div>
+        <div class="sub">5가지 역량</div>
+        <ul class="star-list">
+          <li>① <b>모험가 정신과 위험 감수의 용기</b> — 새로운 도전 정신</li>
+          <li>② <b>확신감 전파 능력</b> — 프로그램 성공에 대한 확신을 참여자에게 전파</li>
+          <li>③ <b>명확하고 구체화된 목적 설정</b> — 성공의 필수요소</li>
+          <li>④ <b>큰 목적을 작은 과업으로 분해하는 능력</b> — 달성 가능한 세부목표로 구체화</li>
+          <li>⑤ <b>철저한 기록과 모니터링 시스템 활용</b> — 책임성과 실천 향상</li>
+        </ul>
+        <div class="hbox hbox-red">❌ <b>"프로그램의 성공을 설득시키는 것"</b> → 기획자 역량 중 <b>확신감 전파 능력</b>이지, 개입논리의 개발 단계 내용과 혼동하지 말 것</div>
+      `
+    },
+
+    /* ── 4단계 과정 개요 ── */
+    { icon: "🗺️", title: "프로그램 기획 4단계 과정 ★★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">기획 4단계: <b>문제의 이해 → 개입논리 개발 → 내용 구체화 → 프로그램 평가</b> — 순서 정확히 암기</div>
+        <div class="sub">4단계 흐름</div>
+        <div class="flow">
+          <span class="flow-item">1단계<br><b>문제의 이해</b></span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">2단계<br><b>개입 논리의 개발</b></span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">3단계<br><b>프로그램 내용의 구체화</b></span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">4단계<br><b>프로그램 평가</b></span>
+        </div>
+        <div class="hbox hbox-yellow">💡 1강 5단계(욕구사정→개입논리→내용구체화→<b>실행</b>→평가)와 구분! 3강 4단계에는 <b>'실행' 단계 없음</b></div>
+        <div class="hbox hbox-red">❌ 순서 역순 오답 주의 — "평가→내용구체화→개입논리→문제이해" 등 역순 선택지 자주 출제</div>
+      `
+    },
+
+    /* ────────── 04. 섹션 헤더 ────────── */
+    { icon: "📂", title: "04. 기획 단계별 상세 내용",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">1단계: 문제의 이해</span>
+          <span class="badge badge-green">2단계: 개입 논리의 개발</span>
+          <span class="badge badge-purple">3단계: 내용의 구체화</span>
+          <span class="badge badge-yellow">4단계: 프로그램 평가</span>
+        </div>
+      `
+    },
+
+    /* ── 1단계: 문제의 이해 ── */
+    { icon: "🔎", title: "1단계 — 문제의 이해 ★★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">기획의 <b>출발점</b> — 클라이언트 문제에 대한 정확한 <b>사정(사전조사)</b> / 문제의 <b>무엇·크기·종류·원인</b> 파악</div>
+        <div class="sub">파악 내용</div>
+        <ul class="pts">
+          <li>문제가 <b>무엇인지</b></li>
+          <li>문제의 <b>크기와 종류</b></li>
+          <li>문제 발생 <b>원인</b></li>
+          <li><b>"누가, 언제, 어디서, 무엇을, 어떻게, 왜"</b> 라는 폭넓은 질문 제기</li>
+        </ul>
+        <div class="sub">정보의 사슬 (순환 구조)</div>
+        <div class="flow">
+          <span class="flow-item">질문하기</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">답 구하기</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">기획하기</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">행동</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">(다시) 질문하기</span>
+        </div>
+        <div class="hbox hbox-red">❌ 문제의 이해 단계 내용 <b>아닌 것</b> = <b>"문제로 인한 국가의 경제적 손실"</b> → 이 단계는 문제의 크기·종류·원인·사정 (경제적 손실 파악 ✗)</div>
+      `
+    },
+
+    /* ── 2단계: 개입 논리의 개발 ── */
+    { icon: "🔗", title: "2단계 — 개입 논리의 개발 ★★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">사회문제를 발생시키는 <b>원인을 이해</b>하고 → 개입 대상 결정 → 프로그램 방향 설정 / 원인의 작용을 <b>차단·완화</b>하는 것이 사회복지 프로그램의 역할</div>
+        <div class="sub">인과관계 도식</div>
+        <div class="flow">
+          <span class="flow-item">사회문제의 원인<br>(사회적 위험)</span>
+          <span class="flow-arrow">▶ 인과관계</span>
+          <span class="flow-item">사회문제의 결과</span>
+        </div>
+        <div class="hbox hbox-blue" style="margin-top:8px">↑ 사회복지 프로그램이 개입하여 <b>차단·완화</b></div>
+        <div class="sub">청소년 가출(비행) 예시</div>
+        <div class="flow">
+          <span class="flow-item">낮은 교육수준</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">낮은 소득수준</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">청소년 학대·방임</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">청소년 가출(비행)</span>
+        </div>
+        <div class="hbox hbox-yellow">💡 어느 인과관계 지점에 개입하느냐에 따라 프로그램 유형이 달라진다</div>
+        <div class="hbox hbox-red">❌ 개입논리 단계 내용 <b>아닌 것</b> = <b>"프로그램의 성공을 설득시키는 것"</b> → 이건 기획자 역량(확신감 전파) / 개입논리 단계 ✗ / 개입논리 = <b>인과관계 파악 + 차단·완화 지점 결정</b> (참여자 모집 방법 ✗)</div>
+      `
+    },
+
+    /* ── 3단계: 내용의 구체화 ── */
+    { icon: "🏗️", title: "3단계 — 프로그램 내용의 구체화 ★★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">개입 논리에 맞는 프로그램 내용 구성 — 체계 4요소 순서: <b>자원/투입 → 활동 → 산출 → 성과/결과</b></div>
+        <div class="sub">체계 구성요소 4가지</div>
+        <table class="comp-table">
+          <tr><th>구성요소</th><th>정의</th><th>예시</th></tr>
+          <tr><td><b>자원/투입</b></td><td>과업 수행에 필요한 <b>인적·재정적·물적·지역사회</b> 자원</td><td>인력, 예산, 장비, 지역 네트워크</td></tr>
+          <tr><td><b>활동</b></td><td>자원을 이용해 성과 도출을 위해 행해지는 <b>여러 과업</b> (프로그램 과정, 도구, 행사, 개입방법)</td><td>상담 프로그램 실시, 교육 진행</td></tr>
+          <tr><td><b>산출</b></td><td>활동에 따라 <b>직접적으로 생산되는 일차적 결과물</b> (서비스 유형·수·양, 참여 인원 수)</td><td>상담 10회, 교육 참여자 30명</td></tr>
+          <tr><td><b>성과/결과</b></td><td>참여 클라이언트의 태도·지식·기술·지위·기능수준의 <b>긍정적 변화</b> = 클라이언트 삶의 질 향상</td><td>자존감 향상, 취업률 증가</td></tr>
+        </table>
+        <div class="sub">성과 구분</div>
+        <ul class="pts purple">
+          <li><b>단기적 성과</b>: 태도, 지식, 기술 등의 <b>변화</b></li>
+          <li><b>장기적 성과</b>: 클라이언트의 <b>지위나 기능수준의 향상</b></li>
+        </ul>
+        <div class="sub">산출 vs 성과 구분 예시</div>
+        <table class="comp-table">
+          <tr><th>예시</th><th>분류</th></tr>
+          <tr><td>따돌림 피해 중학생이 또래상담 프로그램에 <b>10회 참여</b>한다</td><td><b>산출목표</b></td></tr>
+          <tr><td>따돌림 피해 중학생의 <b>학교 적응력이 향상</b>된다</td><td><b>성과목표</b></td></tr>
+          <tr><td>프로그램 참여 인원 수, 서비스 제공 횟수</td><td><b>산출</b></td></tr>
+          <tr><td>자존감 향상, 취업률 증가</td><td><b>성과/결과</b></td></tr>
+        </table>
+        <div class="hbox hbox-red">❌ 체계 순서 오답 — <b>자원/투입→활동→산출→성과</b> (자원→산출→활동→성과 ✗ / 활동→자원→성과→산출 ✗) / <b>산출</b> = 숫자로 측정 가능한 일차 결과물 / <b>성과</b> = 참여자의 변화·혜택</div>
+      `
+    },
+
+    /* ── 4단계: 프로그램 평가 ── */
+    { icon: "📊", title: "4단계 — 프로그램 평가 ★★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">프로그램이 <b>기획(의도)한 대로 실제로 이루어졌는지</b> 점검 / 기획 자체가 <b>프로그램 평가의 첫 단계</b></div>
+        <div class="sub">체계 요소별 평가 준거 틀</div>
+        <table class="comp-table">
+          <tr><th>평가 기준</th><th>평가 질문</th></tr>
+          <tr><td><b>자원/투입</b></td><td>투입은 <b>기획한 대로</b> 이루어졌는가?</td></tr>
+          <tr><td><b>활동</b></td><td>활동은 <b>기획한 대로</b> 이루어졌는가?</td></tr>
+          <tr><td><b>산출</b></td><td>산출은 <b>기획한 대로</b> 이루어졌는가?</td></tr>
+          <tr><td><b>성과/결과</b></td><td>결과는 <b>기획한 대로</b> 이루어졌는가?</td></tr>
+        </table>
+        <div class="sub">기획의 순환적 특성</div>
+        <div class="flow">
+          <span class="flow-item">기획</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">실행</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">평가</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">새로운 질문 근거</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">다시 기획</span>
+        </div>
+        <div class="hbox hbox-yellow">💡 모든 평가 질문의 핵심 = <b>"기획한 대로 이루어졌는가?"</b> / 기획 = 프로그램 평가의 <b>첫 단계</b></div>
+        <div class="hbox hbox-red">❌ 투입 평가 = <b>"자원을 최대한 많이 확보했는가?"</b> ✗ / 활동 평가 = <b>"펀딩기관을 만족시켰는가?"</b> ✗ / 성과 평가 = <b>"100% 달성했는가?"</b> ✗ → 모두 <b>기획한 대로 이루어졌는가</b>가 정답</div>
+      `
+    },
+
+    /* ────────── 핵심 요약 ────────── */
+    { icon: "📝", title: "3강 핵심 요약",
+      html: `
+        <table class="comp-table">
+          <tr><th>개념</th><th>핵심 내용</th></tr>
+          <tr><td><b>기획 정의</b></td><td>계획을 수립하고 준비하는 <b>과정</b> / 목표달성을 위한 계획·과정 강조</td></tr>
+          <tr><td><b>드로어</b></td><td>미래 행동의 <b>일련의 결정을 준비하는 과정</b></td></tr>
+          <tr><td><b>길버트·스펙트</b></td><td>사회문제 해결·미래 통제를 위한 <b>의식적 노력</b></td></tr>
+          <tr><td><b>정무성 5요소</b></td><td>①기간 ②담당자 ③방법·자원 ④특정 사람들 ⑤바람직한 상태</td></tr>
+          <tr><td><b>기획 vs 계획</b></td><td>기획 = <b>과정</b> / 계획 = <b>결과</b>(결정된 행동 노선)</td></tr>
+          <tr><td><b>기획 필요성 5가지</b></td><td>합리성 / 효과·효율성 / 책임성 / 동기부여 / 사기 증진</td></tr>
+          <tr><td><b>요크 속성 5가지</b></td><td>기획: ①미래지향 ②연속적 과정 ③의사결정과 불가분 / 개발: ④목표지향 ⑤목표와 수단 연결</td></tr>
+          <tr><td><b>아이디어 기술 6가지</b></td><td>대화(주관적)·관찰·면접·사회지표·설문조사(비용·시간)·문서분석</td></tr>
+          <tr><td><b>기획자 역량 5가지</b></td><td>모험·위험감수 / 확신감 전파 / 목적 설정 / 과업 분해 / 기록·모니터링</td></tr>
+          <tr><td><b>기획 4단계</b></td><td>문제이해 → 개입논리 개발 → 내용 구체화 → 프로그램 평가</td></tr>
+          <tr><td><b>체계 4요소 순서</b></td><td><b>자원/투입 → 활동 → 산출 → 성과/결과</b></td></tr>
+          <tr><td><b>산출</b></td><td>활동의 <b>직접적 일차 결과물</b> — 서비스 수·양·인원 (숫자 측정)</td></tr>
+          <tr><td><b>성과</b></td><td>클라이언트의 <b>긍정적 변화</b> — 단기(태도·지식·기술) / 장기(지위·기능 향상)</td></tr>
+          <tr><td><b>평가 핵심</b></td><td>모든 준거 = <b>"기획한 대로 이루어졌는가?"</b> / 기획 = 평가의 <b>첫 단계</b></td></tr>
+        </table>
+      `
+    },
+
+  ]
+},
+
       {
         num: '4강', name: '문제의 확인 및 욕구사정',
         cards: [
