@@ -1509,7 +1509,7 @@ body {
           <div class="card-title">산업복지론</div>
           <div class="card-desc">
             노동의 역사·산업복지 개념·분류와 관점·노동권보호·위험의 사회화<br>
-            <span class="card-tag" style="background:#fef3c7;color:#92400e;">요약카드 15강</span>
+            <span class="card-tag" style="background:#fef3c7;color:#92400e;">요약카드 14강</span>
             <span class="card-tag" style="background:#d1fae5;color:#065f46;">연습문제</span>
           </div>
         </div>
@@ -9182,1226 +9182,1611 @@ const SUMMARY_DATA = {
     },
   ]
 },
-      {
-        num: '9강', name: '사업주 및 기업의 책임',
-        cards: [
-          {
-            icon: '🔀', title: '미시적 vs 거시적 측면 — 두 가지 접근 ★ [기출]',
-            html: `
-              <span class="tag tag-blue">핵심 기출</span>
-              <table class="comp-table">
-                <tr><th>구분</th><th class="th-blue">미시적 측면 (micro)</th><th class="th-green">거시적 측면 (macro)</th></tr>
-                <tr><td><b>관점</b></td><td>잔여주의·대상체계적</td><td>제도주의·구조체계적</td></tr>
-                <tr><td><b>개념</b></td><td>이윤창출 = 기업의 유일한 사회적 책임 (Friedman, 1970)</td><td>이익의 분배과정 참여 + 민주적 운영 참여</td></tr>
-                <tr><td><b>초점</b></td><td>주주 이익 극대화 (비용절감)</td><td>노동조합의 단체협상 → 공동경영 참여 (예: 노동이사제)</td></tr>
-                <tr><td><b>핵심</b></td><td>기업 성장·수익 창출을 위한 활동</td><td>산업민주주의 확장</td></tr>
-                <tr><td><b>관계성</b></td><td>자본(주체) vs 노동자·시민(객체)</td><td>노동정치 → 복지정치 → 복지국가</td></tr>
-                <tr><td><b>책임성</b></td><td>임의적·선별적 복지급여 제공</td><td>참여성·민주성·투명성</td></tr>
-                <tr><td><b>사례</b></td><td>미국 3대 직장 복리후생</td><td>독일 공동결정제·노동이사제</td></tr>
-              </table>
-            `
-          },
-          {
-            icon: '🇺🇸', title: '미시적 측면 — 미국 사례 ★ [기출]',
-            html: `
-              <span class="tag tag-yellow">미시적 접근</span>
-              <div class="hbox hbox-yellow">
-                <b>기본 개념</b>: 이윤 창출이 기업의 유일한 사회적 책임 (Friedman, 1970)<br>
-                성격: <b>시장 중심적 가치 접근</b>
-              </div>
-              <div class="sub">복리후생 프로그램 내용</div>
-              <ul class="pts">
-                <li><b>방식</b>: 부가급여, 보충임금, 근로자 원조프로그램(EAP), 비임금지급, 추가보상 등</li>
-                <li><b>지원 대상 문제</b>: 가족·건강·정신건강·알코올·재정·육아·청소년 자녀문제 등</li>
-                <li><b>생활지원</b>: 급식·통근·자녀학자금·공제조합·근로자저축</li>
-                <li><b>시설·주거</b>: 문화·체육·보건위생시설, 사택·기숙사·주택자금대부</li>
-              </ul>
-              <div class="sub">미국 산업복지의 특징 (신자유주의 복지국가)</div>
-              <ul class="pts red">
-                <li>국가의 사회복지비 지출이 낮으며 개인과 가족의 욕구 충족에 <b>시장의존적</b></li>
-                <li>개인주의, 자율, 효율성을 강조하는 이데올로기적 환경</li>
-                <li>기업 규모·개별 고용계약에 따른 복지혜택 격차 → <b>자연스러운 현상으로 수용</b></li>
-                <li>유럽 복지국가 모형 대비 공공복지 매우 취약, 기업별 복지 비용 상대적으로 높음</li>
-              </ul>
-              <div class="sub">지역사회 사회공헌 활동 (사례 2)</div>
-              <ul class="pts yellow">
-                <li><b>선별주의</b>: 미국식 자유주의 복지국가 모형의 <b>자선활동 형태</b>로 나타남</li>
-                <li>노동자·가족 → 임금과 인센티브 제공으로 보상</li>
-                <li>시민·지역사회 → 자선과 기부 활동</li>
-              </ul>
-            `
-          },
-          {
-            icon: '🇩🇪', title: '거시적 측면 — 독일 사례 & 작업장 민주주의 ★ [기출]',
-            html: `
-              <span class="tag tag-green">거시적 접근</span>
-              <div class="hbox hbox-blue">
-                "사회 속에 묻어 있는 시장" — <b>칼 폴라니</b><br>
-                기업의 성장부터 이윤 분배, 공동경영까지 노동조합이 참여 → <b>산업민주주의 확장</b>
-              </div>
-              <div class="sub">독일의 운영방식 (사례 3)</div>
-              <ul class="pts green">
-                <li>조직된 노동안전 시민권: <b>적극적·확장성</b>을 지님</li>
-                <li><b>집단적 발언효과(voice effect)</b>: 조직된 노동에 의한 아래로부터의 노동안전 시민권 (Freeman &amp; Medoff, 1984)</li>
-                <li>집단적 발언효과 → 전체 노동시민의 안전을 위한 <b>연대성으로 발전</b></li>
-              </ul>
-              <div class="flow" style="margin-top:8px">
-                <span class="flow-item">작업장 안전</span>
-                <span class="flow-arrow">+</span>
-                <span class="flow-item">조직된 노동의 시민권</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-item green">확대된 연대적 시민 안전권</span>
-              </div>
-              <div class="sub">작업장 민주주의 ★ [기출]</div>
-              <div class="hbox hbox-purple">
-                "민주주의는 공장 문 앞에서 멈추지 않는다"<br>
-                — <b>캐나다 도널드 럼볼, 1979년</b> → 거시적 관점, 사업주와 사회의 책임
-              </div>
-              <ul class="pts purple" style="margin-top:8px">
-                <li>작업장 민주주의 기반 → <b>제도적 민주주의 기반 확장</b> → 복지국가의 이념과 정책의 기본 바탕</li>
-                <li>산업민주주의 → 직장민주주의 / 노동 소외 현상 → <b>노동의 인간화</b></li>
-              </ul>
-            `
-          },
-          {
-            icon: '⚖️', title: '작업장 책임의 주체 & 핵심 총정리 ★ [기출]',
-            html: `
-              <span class="tag tag-red">기출 핵심</span>
-              <table class="comp-table">
-                <tr><th>항목</th><th>내용</th></tr>
-                <tr><td><b>작업장의 개념</b></td><td>생애주기에서 <b>가장 오랜 기간</b>을 보내게 되는 삶의 현장</td></tr>
-                <tr><td><b>작업장내 관계성</b></td><td>불평등한 권력관계 유지 <b>vs</b> 평등한 협력 관계의 달성</td></tr>
-                <tr><td><b>책임 주체</b></td><td>사업주의 <b>선한 책임성</b> vs 공동의 <b>균등 책임성</b></td></tr>
-                <tr><td><b>복지국가의 지향점</b></td><td><b>노동의 탈상품화</b> 달성</td></tr>
-              </table>
-              <div class="hbox hbox-yellow" style="margin-top:8px">
-                <b>[9강 기출 포인트 정리]</b><br>
-                · 미시적 관점의 개념: <b>이윤창출 = 기업의 유일한 사회적 책임</b> (Friedman, 1970)<br>
-                · 거시적 관점 사례: 도널드 럼볼 → <b>거시적 관점</b><br>
-                · 미시적 관점의 특징: 이윤창출을 위한 <b>사회적 투자</b> 측면이 강함<br>
-                · 복지국가의 지향점: <b>노동의 탈상품화</b><br>
-                · 독일 운영방식: <b>집단적 발언효과(voice effect)</b>, 노동이사제
-              </div>
-              <div class="sub">9강 학습 정리</div>
-              <ul class="pts">
-                <li>미시적 관점: 기업의 모든 활동은 <b>이윤창출을 위한 사회적 투자</b>의 측면이 강함</li>
-                <li>거시적 관점: 기업의 책임은 <b>공동의 운영을 위한 구조를 마련</b>하는 것</li>
-                <li>사업주의 선한 책임성 vs 공동의 균등 책임성 → 복지국가의 지향점인 <b>노동의 탈상품화</b>와 깊이 연관</li>
-              </ul>
-            `
-          }
-        ]
-      },
-      {
-        num: '10강', name: '노동보호제도: 여성의 노동시장 참여',
-        cards: [
-          {
-            icon: '👩', title: '여성노동에 대한 관점 — 젠더적 접근 ★ [기출]',
-            html: `
-              <span class="tag tag-pink">기출 핵심</span>
-              <div class="hbox hbox-red">
-                <b>"가장 늦게 채용되고, 가장 먼저 해고된다"</b><br>
-                <b>last hired, first fired</b> — 노동시장에서 여성의 지위를 나타내는 상징적 표현 [기출]
-              </div>
-              <div class="sub">젠더(gender)란? ★ [기출]</div>
-              <div class="hbox hbox-purple">
-                여성과 남성의 의식·행동·성역할·사회적 지위·규범 등과 관련된 차이가<br>
-                단순히 <b>생물학적 차이</b>에서 비롯된 것이 아니라<br>
-                <b>사회문화적으로 형성</b>된 개념으로 보는 것
-              </div>
-              <ul class="pts red" style="margin-top:8px">
-                <li>남성중심적 사회에서 여성에 대한 차별과 불평등을 <b>정당화하고 재생산</b>하는 기제로 작동</li>
-                <li>노동시장 진입 이전부터 <b>여성 또는 남성으로 사회화가 강제</b>됨</li>
-                <li>노동, 직업, 고용형태, 임금, 노동환경 등 <b>모든 영역</b>에 영향</li>
-                <li>취업 후에도 승진 등 노동조건 불리함 (예: <b>유리천장</b>)</li>
-              </ul>
-            `
-          },
-          {
-            icon: '🏠', title: '여성노동의 가치배제 — 무급 가사노동 [기출]',
-            html: `
-              <span class="tag tag-yellow">가치배제</span>
-              <div class="sub">성별에 따른 노동 개념의 차별</div>
-              <ul class="pts yellow">
-                <li>가사노동과 작업장 노동의 구분 기준: <b>취업 여부</b></li>
-                <li><b>사회적 영역</b>에서 수행되는 활동만을 노동이라고 규정</li>
-                <li>임금 노동(취업) 여성에 한하여 '일하는 집단'으로 규정하는 사회적 관념</li>
-                <li>작업장의 불평등한 권력관계가 <b>젠더 불평등으로 확장</b></li>
-                <li>여성 노동자는 <b>가사노동과 작업장 노동 모두</b>에서 불평등의 대상화</li>
-              </ul>
-              <div class="sub">여성의 작업장 진출 확대</div>
-              <table class="comp-table">
-                <tr><th>시기</th><th>내용</th></tr>
-                <tr><td><b>산업혁명 이전</b></td><td>가족 구성원 모두 생존을 위한 생산활동에 노동력 투입</td></tr>
-                <tr><td><b>산업혁명 이후</b></td><td>남성은 작업장, 여성은 가정내 돌봄의 <b>분업화</b> 양상</td></tr>
-                <tr><td><b>산업화 발달</b></td><td>노동력 수급 필요성 + 부의 양극화 + 대중교육 확대 → 여성의 경제적 독립 욕구 → <b>노동시장 참여율 향상</b></td></tr>
-              </table>
-            `
-          },
-          {
-            icon: '💼', title: '여성노동의 3대 특징 ★★ [기출]',
-            html: `
-              <span class="tag tag-red">기출 ★★</span>
-              <div class="hbox hbox-red">
-                여성노동의 3대 특징: <b>감정노동 + 돌봄노동 + 비정규직</b><br>
-                [기출] 여성노동의 특징으로 볼 수 없는 것 → <b>인권가치노동</b> ❌
-              </div>
-              <div class="sub">① 감정노동 [기출]</div>
-              <ul class="pts purple">
-                <li><b>정의</b>: 개인의 적절한 감정 상태를 도출하기 위해 노동자 자신의 감정을 이끌어 내거나 억제하는 노동</li>
-                <li>인간의 감정을 매개로 이윤을 축적 → <b>감정의 상품화</b></li>
-                <li>육체노동·정신노동과 <b>병행하여 제공</b></li>
-                <li>노동시간: 노동자 스스로가 자신으로부터 <b>소외</b>시키는 과정</li>
-              </ul>
-              <div class="sub">② 돌봄노동 [기출]</div>
-              <ul class="pts green">
-                <li><b>정의</b>: 독립적인 신체 활동이 어려운 개인과 가족에게 자신의 노동을 제공하여 일상 생활을 지원하는 노동</li>
-                <li><b>주대상</b>: 영유아, 아동, 장애인, 환자 등</li>
-                <li>가족 안에서 이루어지던 가사노동이 사회적 영역으로 이전 → 임금노동 분야로 확립</li>
-                <li>전통적으로 여성이 전담해 왔다는 배경 → <b>직무 가치에 대한 적절한 평가 이루어지지 못함</b></li>
-              </ul>
-              <div class="sub">③ 비정규직 [기출]</div>
-              <ul class="pts yellow">
-                <li><b>노동유연화의 집중 대상</b>: 미숙련의 단기적 노동자</li>
-                <li>고학력일수록 남성에 비해 <b>비정규직 비율 압도적</b></li>
-                <li>20대: 정규직 + 비정규직 혼합 / 40대: <b>비정규직 압도적</b></li>
-              </ul>
-            `
-          },
-          {
-            icon: '🛡️', title: '여성의 노동권 보장과 보호 ★',
-            html: `
-              <span class="tag tag-green">보장과 보호</span>
-              <table class="comp-table">
-                <tr><th>문제</th><th>방향</th></tr>
-                <tr><td>장시간·강도 높은 노동 규범</td><td><b>일·가정 양립</b> 제도와 문화 정착</td></tr>
-                <tr><td>주부양자 남성 모델 지배</td><td><b>성평등 인식의 노동가치</b> 확립</td></tr>
-                <tr><td>지체된 돌봄의 사회화</td><td><b>공공 사회서비스 영역</b> 강화</td></tr>
-                <tr><td>개별적 노동 대응의 한계</td><td><b>확장된 노동 연대와 조직화</b></td></tr>
-              </table>
-              <div class="hbox hbox-yellow" style="margin-top:8px">
-                <b>[10강 기출 포인트]</b><br>
-                · "last hired, first fired"에 필요한 관점 → <b>젠더 관점</b><br>
-                · 여성노동의 특징으로 볼 수 없는 것 → <b>인권가치노동</b> ❌<br>
-                · 복지국가 수준 = <b>여성 노동권 보장 수준</b>
-              </div>
-              <div class="sub">10강 핵심 정리</div>
-              <ul class="pts">
-                <li>젠더적 관점 기반: 노동·직업·고용형태·임금·노동환경 등 <b>모든 영역</b>에서 여성의 노동은 취약한 환경</li>
-                <li>작업장 노동 + <b>가사노동</b> 모두에서 불평등의 대상화</li>
-                <li>감정노동·돌봄노동에 집중된 여성 노동 → <b>비정규직</b>이라는 차별적 고용지위</li>
-                <li>여성 노동권 보장 = <b>남성중심 노동규범 전환 + 돌봄의 사회화 + 노동 연대·조직화</b></li>
-              </ul>
-            `
-          }
-        ]
-      }
-      ,{
-        num: '11강', name: '적극적 차별정책: 장애인의 노동권 보장',
-        cards: [
-          {
-            icon: '📊', title: '작업장에서의 장애인 — 현황과 차별 구조 [기출]',
-            html: `
-              <span class="tag tag-red">기출 핵심</span>
-              <div class="sub">장애인 vs 비장애인 비교 수치 [기출]</div>
-              <table class="comp-table">
-                <tr><th>구분</th><th class="th-red">장애인</th><th class="th-blue">비장애인</th></tr>
-                <tr><td><b>경제활동 참가율</b> (2016)</td><td>38.5%</td><td>63.3%</td></tr>
-                <tr><td><b>단순노무 종사 비율</b> (2019)</td><td>27.4%</td><td>13.3%</td></tr>
-                <tr><td><b>월평균 급여</b> (2019)</td><td>183.1만원</td><td>255.8만원</td></tr>
-              </table>
-              <div class="hbox hbox-red" style="margin-top:8px">
-                ★ 장애인 단순노무 비율은 전체 인구 대비 <b>2배</b> 수준 (2019년 기준)<br>
-                결과: <b>고실업, 저임금, 불안정한 직종과 지위</b>에 집중
-              </div>
-              <div class="sub">차별의 구조적 특성</div>
-              <table class="comp-table">
-                <tr><th>원인</th><th>결과</th></tr>
-                <tr><td>불안정한 노동으로 인한 취약성</td><td>→ <b>빈곤</b></td></tr>
-                <tr><td>장애로 인한 차별성</td><td>→ <b>인권사각지대</b></td></tr>
-                <tr><td>작업장 진입 장벽이 체계적·항시적 존재</td><td>→ <b>암묵적 제도화</b></td></tr>
-                <tr><td>편견된 인식, 고용불안정, 저임금 고착</td><td>→ <b>구조화</b></td></tr>
-              </table>
-              <div class="hbox hbox-yellow" style="margin-top:8px">
-                <b>연구 결과</b> [기출]<br>
-                · 외국: 고용주의 10%가 장애인이 비장애인보다 <b>업무수행능력 높다</b>고 평가 (70%는 비슷하다고 평가)<br>
-                · 한국: 3개 전자회사 생산라인에서 <b>장애인 그룹의 불량률이 더 낮은</b> 경우 2개사<br>
-                → ★ <b>사회적 인식이 장애인의 노동참여에 가장 큰 장애요인</b>으로 작용
-              </div>
-            `
-          },
-          {
-            icon: '🔍', title: '차별의 배경 — 두 가지 관점 ★ [기출]',
-            html: `
-              <span class="tag tag-purple">기출 ★</span>
-              <div class="sub">1) 인적자본 관점 [시장주의 기제]</div>
-              <ul class="pts red">
-                <li>노동을 인간 자체가 아닌 <b>자본(인적자본)</b> 개념으로 바라봄</li>
-                <li>장애 = <b>흠집난 기계</b> → 생산력이 낮을 것이라는 편견</li>
-                <li>결과: 노동의 가치를 실현할 기회 상실 → <b>인간소외</b> 발생</li>
-              </ul>
-              <div class="sub">2) 이중노동시장 관점 ★ [기출]</div>
-              <table class="comp-table">
-                <tr><th>구분</th><th>특징</th><th>주요 종사자</th></tr>
-                <tr><td><b>1차 노동시장</b> (핵심시장)</td><td>고임금, 질 좋은 노동환경, 다양한 승진기회, 고용 안정성 보장</td><td>엘리트집단, 관리직, 숙련 기술직, 전문직</td></tr>
-                <tr><td><b>2차 노동시장</b> (주변시장)</td><td>저임금, 열악한 노동환경, 비정규직, 고용 불안정</td><td><b>여성, 장애인, 이주노동자, 빈곤계층</b></td></tr>
-              </table>
-              <div class="hbox hbox-red" style="margin-top:8px">
-                결과: <b>빈곤의 양극화</b>, 사회적 취약계층으로 유지
-              </div>
-            `
-          },
-          {
-            icon: '⚠️', title: '차별의 5가지 내용 ★★ [기출]',
-            html: `
-              <span class="tag tag-red">기출 ★★</span>
-              <div class="sub">1) 의도적 노동차별 (1차적 차별) [기출]</div>
-              <ul class="pts red">
-                <li>고용주가 장애를 이유로 <b>고용의 기회를 의도적으로 부정</b></li>
-                <li>고용주/책임자 개인의 의도적인 <b>위법한 차별</b></li>
-                <li>기업·기관의 복합적이고 <b>제도적인 차별</b></li>
-              </ul>
-              <div class="sub">2) 결과적 노동차별 (2차적 차별) [기출]</div>
-              <ul class="pts yellow">
-                <li>고용에 차별이 없는 것처럼 보이나 <b>직무 배치에서 차별</b> 발생</li>
-                <li>장애인 채용이 주로 <b>인턴·비정규직</b>으로 채워짐</li>
-                <li>순환제 업무 배치 등 기계적 공정성을 제시하나 오히려 차별적 요소로 작용</li>
-              </ul>
-              <div class="sub">3) 진입 전 차별 (사회적 차별) ★ [기출]</div>
-              <div class="hbox hbox-red">
-                [기출 Q37] 장애인들의 노동력에 대한 가치 저하와 비난 → <b>낙인화</b> → 사회통합에 큰 장벽<br>
-                → 정답: <b>진입 전 차별</b>
-              </div>
-              <ul class="pts red" style="margin-top:8px">
-                <li>장애에 대한 사회의 <b>태도와 인식</b>의 차별</li>
-                <li><b>낙인화</b>: 고용주의 고용기회 박탈 + 장애인 스스로의 <b>무력감</b> 형성</li>
-              </ul>
-              <div class="sub">4) 작업장 차별</div>
-              <ul class="pts">
-                <li>작업장으로의 <b>물리적·심리적 접근성</b> 한계 (경사로, 계단, 의사소통 도구 등)</li>
-                <li>비장애인만을 중심으로 한 작업장 환경 / 인사 및 복리후생의 불평등</li>
-              </ul>
-              <div class="sub">5) 교육적 차별 → 노동시민으로서의 성장 기회 박탈 [기출]</div>
-              <ul class="pts yellow">
-                <li>고등교육 기회의 한계성 / 다양하지 못한 직업교육 프로그램</li>
-                <li>최신기술·고급기술의 접근 한계성</li>
-                <li>⇒ 고용기회의 <b>근본적 제한 조건</b>으로 작용</li>
-              </ul>
-            `
-          },
-          {
-            icon: '🛡️', title: '적극적 차별정책 ★★ [기출]',
-            html: `
-              <span class="tag tag-green">기출 ★★</span>
-              <div class="sub">★ 사회적 보호고용 [기출]</div>
-              <div class="hbox hbox-green">
-                [기출 Q38] 작업장 및 직무의 다양성에 기반하여 노동 기회를 제공하는 적극적 차별 정책<br>
-                → 정답: <b>사회적 보호고용</b>
-              </div>
-              <ul class="pts green" style="margin-top:8px">
-                <li>작업장과 직무를 <b>장애인에게 맞도록 다양화</b>시켜서 장애인 고용을 높이는 제도</li>
-                <li>장애인의 <b>경제적 자립</b> 및 <b>사회통합</b>의 기회를 제공</li>
-                <li>장애인이 지닌 장점과 직무의 특성을 <b>접목</b>한 작업장과 작업환경 조성</li>
-              </ul>
-              <div class="sub">적극적 차별정책의 의미</div>
-              <div class="flow">
-                <span class="flow-item">세분화</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-item">다각화</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-item">다차원화</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-item green">복합화</span>
-              </div>
-              <div class="sub">의무고용제의 문제점</div>
-              <ul class="pts red">
-                <li>장애인을 고용하기보다 <b>부담금 납부를 선호</b>하는 현상</li>
-                <li>장애인이 지닌 개인적 요인보다 <b>사회적 요인</b>이 장애 요인으로 작용</li>
-              </ul>
-              <div class="sub">노동의 가치 등식 (핵심 이념) ★</div>
-              <div class="hbox hbox-blue">
-                노동의 가치 = 인간의 조건 = 동등한 공동체의 구성원<br>
-                = 장애인의 노동도 공동체의 행복 달성에 기여 = <b>사회통합</b><br>
-                이념적 가치: <b>인권 보장</b> + 실천적 가치: <b>사회통합</b> 추구
-              </div>
-              <div class="hbox hbox-yellow" style="margin-top:8px">
-                <b>[11강 기출 포인트]</b><br>
-                · 장애인 단순노무 비율: 전체 인구 대비 <b>2배</b> (27.4% vs 13.3%)<br>
-                · 진입 전 차별 = <b>낙인화</b> = 사회적 차별<br>
-                · 사회적 보호고용 = 적극적 차별정책의 제도적 수단<br>
-                · 교육적 차별 = <b>노동시민으로서의 성장 기회 박탈</b><br>
-                · 적극적 차별정책 = 고용정책 <b>세분화·다차원화·복합화</b><br>
-                · 사회적 인식 = <b>장애인 노동참여에 가장 큰 장애요인</b>
-              </div>
-            `
-          }
-        ]
-      },
-      {
-        num: '12강', name: '분화된 노동시장: 비정규직과 플랫폼 노동',
-        cards: [
-          {
-            icon: '🔀', title: '노동시장의 분화와 유연화 ★ [기출]',
-            html: `
-              <span class="tag tag-blue">기출 핵심</span>
-              <div class="hbox hbox-blue">
-                시장은 이윤 축적의 효과성을 위해 지속적으로 <b>노동 관련 비용을 줄이려</b> 함<br>
-                <b>노동시장 유연화</b> → 비정규직 외부노동시장 분화 → 플랫폼 노동 확산
-              </div>
-              <table class="comp-table">
-                <tr><th>구분</th><th>내용</th></tr>
-                <tr><td><b>이념·시기</b></td><td><b>신자유주의 + IMF 이후</b></td></tr>
-                <tr><td><b>형식</b></td><td>내부 노동시장(1차) ↔ 유연화된 외부 노동시장(2차)</td></tr>
-                <tr><td><b>내용</b></td><td>정규직(전형) vs 비정규직(비전형) 양분</td></tr>
-                <tr><td><b>결과</b></td><td>전체 노동인구의 30% 이상이 비정규 고용 형태로 외부노동시장에 존재</td></tr>
-              </table>
-              <div class="sub">핵심 개념 ★ [기출]</div>
-              <ul class="pts blue">
-                <li><b>노동시장의 분화</b>: 노동시장이 내부노동시장(1차·전형)과 외부노동시장(2차·비전형)으로 구분되는 현상</li>
-                <li><b>노동시장의 유연화</b>: 기업이 고용과 해고를 쉽게 할 수 있음</li>
-                <li>전통적인 작업장 기반 복지국가 모형에 <b>위기</b>를 가져옴</li>
-              </ul>
-              <div class="flow" style="margin-top:8px">
-                <span class="flow-item">아웃소싱·외주화</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-item">플랫폼 기업 모델</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-item green">노동비용 절감</span>
-              </div>
-            `
-          },
-          {
-            icon: '📉', title: '비정규직 노동의 증가 ★ [기출]',
-            html: `
-              <span class="tag tag-yellow">1차적 비용절감</span>
-              <div class="hbox hbox-yellow">
-                비정규직 노동 = <b>2차 노동시장의 비용을 절감하는 1차적 방법</b>
-              </div>
-              <div class="sub">비정규직의 정의 ★ [기출]</div>
-              <div class="hbox hbox-red">
-                고용계약기간, 근로시간, 고용계약 주체와 사용자의 일치 여부, 계약 유형 등 여러 기준 중<br>
-                <b>어느 한 가지라도 전형적 형태에서 벗어나는 경우</b>
-              </div>
-              <div class="sub">핵심 특징</div>
-              <ul class="pts red">
-                <li><b>규모</b>: 전체 노동인구의 30% 이상 (2019년 36%, 748만 명)</li>
-                <li><b>증가시점</b>: IMF 이후 정리해고와 근로자 파견제 합법화 → 노동시장 유연화</li>
-                <li><b>집중 대상</b>: 저학력·미숙련, 여성, 청년, 노년, 장애인</li>
-                <li><b>집중 직군</b>: 서비스업, 대면·감정 노동, 단순노무, 건설현장, 돌봄노동, 배달노동, 플랫폼노동</li>
-                <li><b>저임금</b>: 월평균 임금이 정규직의 <b>45%</b> 수준 (비정규직 164만 원 vs 정규직 361만 원)</li>
-              </ul>
-              <div class="sub">외주화·특수고용직</div>
-              <ul class="pts yellow">
-                <li>용역업체·하청업체에 고용되고 원청업체에 파견되어 일함</li>
-                <li>고용주와 사용자가 일치하지 않는 <b>비전형적 고용관계</b></li>
-              </ul>
-              <div class="sub">문제점</div>
-              <ul class="pts">
-                <li>내부노동시장으로의 이동에 제약이 높거나 사실상 불가능</li>
-                <li>가격 경쟁에서 임금 하락을 떠맡음 → <b>2중 임금제도의 하층부</b>로 전락</li>
-                <li>나쁜 일자리라는 인식 확산 → <b>세대 간 사회통합 저해</b></li>
-                <li>노동의 조직화가 어렵고 노동권의 사각지대에 놓임</li>
-              </ul>
-            `
-          },
-          {
-            icon: '📱', title: '플랫폼 노동의 등장과 특징 ★★ [기출]',
-            html: `
-              <span class="tag tag-red">기출 ★★</span>
-              <div class="hbox hbox-red">
-                플랫폼 노동 = <b>2차 노동시장의 비용을 절감하는 2차적 방법</b><br>
-                정보통신기술 발전 + 온라인 플랫폼 확산 → 노동력 거래와 노동계약 변화
-              </div>
-              <div class="sub">등장 배경</div>
-              <ul class="pts">
-                <li>정보통신과학기술의 발전</li>
-                <li>온라인 플랫폼을 활용한 노동력 거래 → 노동계약의 변화</li>
-                <li>오프라인 작업장 → 온라인 플랫폼으로 작업장 확대</li>
-                <li>외형만 변형되었을 뿐 운영·내용은 기존 노동시장 구조를 유지</li>
-              </ul>
-              <table class="comp-table">
-                <tr><th>특징</th><th>내용</th></tr>
-                <tr><td><b>탈공간화</b></td><td>작업장이 오프라인에서 온라인 플랫폼으로 확대됐지만 노동력의 형태는 동일</td></tr>
-                <tr><td><b>단순추출 보상방식</b></td><td>콜별·건별·프로젝트별 보상 → 이동시간·준비시간·휴게시간 제외 → 임금 하락</td></tr>
-                <tr><td><b>탈노동자화</b></td><td>노동자가 개인사업자로 분류 → 노동을 제공함에도 사업주로 둔갑</td></tr>
-                <tr><td><b>위험의 외주화</b></td><td>모든 비용과 위험을 당사자가 부담, 근로기준법·노동조합법·사회보험 적용 배제</td></tr>
-                <tr><td><b>이윤의 비대칭적 분배</b></td><td>수수료 등 플랫폼 제도가 자본가에게 유리 → 이윤이 노동자에게 적게 분배</td></tr>
-                <tr><td><b>노동력 상품화 극대화</b></td><td>노동시민 개별화·원자화·파편화 → 노동 불안정성 증폭</td></tr>
-              </table>
-              <div class="hbox hbox-yellow" style="margin-top:8px">
-                <b>[기출 포인트]</b><br>
-                · 플랫폼 노동의 4대 특징: <b>탈공간화·탈노동자화·위험의 개인화·이윤의 비대칭적 분배</b><br>
-                · 플랫폼 노동 특징이 아닌 것: <b>고객만족과 서비스</b> ❌<br>
-                · 플랫폼 노동자 수: 2019년 기준 전체 노동인구의 2%, 약 54만 명
-              </div>
-            `
-          },
-          {
-            icon: '🏛️', title: '플랫폼 노동과 복지국가의 위기 ★',
-            html: `
-              <span class="tag tag-green">복지국가 위기</span>
-              <div class="sub">전통적 복지국가 구조</div>
-              <table class="comp-table">
-                <tr><th>단계</th><th>내용</th></tr>
-                <tr><td><b>1단계</b></td><td>고용주와 노동자 간의 고용관계를 복지국가의 시작으로 봄</td></tr>
-                <tr><td><b>2단계</b></td><td>불평등 고용관계 개선 위해 노동조합 결성 / 단체협상</td></tr>
-                <tr><td><b>3단계</b></td><td>단체협상 기술을 바탕으로 노·사·정이 사회 전반의 정책과 제도를 만듦</td></tr>
-                <tr><td><b>4단계</b></td><td>사회협약 → 사회통합으로 발전, 복지제도 구축 → <b>사회임금 강화</b></td></tr>
-                <tr><td><b>5단계</b></td><td>국가·지방자치단체가 생애주기에 맞춰 의료·보육·교육·요양 등 사회서비스 제공</td></tr>
-              </table>
-              <div class="sub">플랫폼 시장 모형의 긍정적 주장</div>
-              <ul class="pts green">
-                <li>인터넷만 구비되면 원하는 시간·장소에서 노동 가능</li>
-                <li>1차 노동시장 진입이 어려운 저숙련 노동자에게 학력·경력 무관 기회 제공</li>
-                <li>음식배달업, 가사서비스, 대리운전, 택배 등 일상과 밀접한 다양한 영역</li>
-              </ul>
-              <div class="sub">운영 방식의 실제</div>
-              <ul class="pts red">
-                <li><b>디지털 노동분업</b>: 단편적 노동 제공, 노동 관련 비용 본인 부담</li>
-                <li><b>노동비용의 파편화</b>: 콜별·건별·프로젝트별 임금 지급</li>
-                <li><b>초단기 노동</b>: 일감을 그때그때 받아 일하는 비정규직 형태</li>
-                <li>고객의 노동자 평가 → 결국 자본가의 이윤 최대 창출에 기여</li>
-              </ul>
-              <div class="hbox hbox-purple" style="margin-top:8px">
-                복지국가의 지표인 <b>노동의 탈상품화 수준이 점점 낮아지고</b><br>
-                상품화 지표가 강화됨
-              </div>
-            `
-          },
-          {
-            icon: '🕳️', title: '플랫폼 노동과 사회복지 사각지대 ★ [기출]',
-            html: `
-              <span class="tag tag-purple">사회복지 쟁점</span>
-              <div class="sub">복지정책의 사각지대 3가지 ★ [기출]</div>
-              <table class="comp-table">
-                <tr><th>구분</th><th>내용</th></tr>
-                <tr><td><b>사회보험 배제</b></td><td>개별사업자·특수고용직으로 분류 → 노동자성 불인정 → 산재보험·고용보험 등 적용 배제</td></tr>
-                <tr><td><b>파편화된 노동력</b></td><td>노동력의 개별화·파편화로 조직된 노동운동이 불가능, 불평등한 계약관계 개선 어려움</td></tr>
-                <tr><td><b>부의 양극화 심화</b></td><td>경제적 빈곤 → 복지제도와 정책의 지지기반 약화</td></tr>
-              </table>
-              <div class="hbox hbox-red" style="margin-top:8px">
-                자발적 사회보험 예외 및 기여 회피 → <b>위험분산의 기회 상실</b>, <b>노후소득 불안정</b>
-              </div>
-              <div class="sub">사회서비스의 시장화</div>
-              <ul class="pts yellow">
-                <li>플랫폼 노동의 형태와 사회복지 서비스가 접목될 경우 <b>사회복지 서비스의 시장화 가속</b></li>
-                <li>공공성과 시장화의 한복판에 사회복지 실천이 놓이게 됨</li>
-                <li>생애주기 위기(출생, 양육, 취업, 실직, 퇴직 등)가 <b>개인적 위험</b>으로 전환</li>
-                <li>이윤 축적이 목적인 시장 기제 → 서비스 약화와 노동착취 심화</li>
-                <li>사회서비스의 안정성이 떨어짐</li>
-              </ul>
-            `
-          },
-          {
-            icon: '🧭', title: '대안 및 핵심 비교 총정리 ★ [기출]',
-            html: `
-              <span class="tag tag-red">12강 총정리</span>
-              <div class="sub">대안 및 대책</div>
-              <ul class="pts green">
-                <li><b>사회보장 제도 측면</b>: 상품·서비스의 생산방식 변화에 대응 필요 → 새로운 사회적 보호시스템 논의</li>
-                <li><b>노동자성 개념 확장</b>: 플랫폼 시장의 새로운 고용관계에 맞게 노동자성 재정립</li>
-                <li><b>새로운 패러다임 적용</b>: 자본과 노동의 계약관계 변화 필요</li>
-                <li><b>인간의 조건</b>: 플랫폼 노동이라도 인간 노동의 본질은 동일</li>
-                <li><b>네덜란드 사례</b>: 1982년 노·사·정 대타협 이후 전일제와 시간제 노동자가 동등한 대우</li>
-              </ul>
-              <div class="sub">비정규직 vs 플랫폼 노동 비교</div>
-              <table class="comp-table">
-                <tr><th>구분</th><th class="th-blue">비정규직</th><th class="th-green">플랫폼 노동</th></tr>
-                <tr><td><b>노동시장 절감 방법</b></td><td>2차 노동시장 비용 절감의 <b>1차적</b> 방법</td><td>2차 노동시장 비용 절감의 <b>2차적</b> 방법</td></tr>
-                <tr><td><b>고용 형태</b></td><td>기간제·파견제 등 간접고용</td><td>독립계약자(개인사업자)로 분류</td></tr>
-                <tr><td><b>임금</b></td><td>정규직의 45% 수준</td><td>콜·건·프로젝트별 초단기 지급</td></tr>
-                <tr><td><b>사회보험</b></td><td>일부 적용 가능</td><td>사실상 배제</td></tr>
-                <tr><td><b>노동조직화</b></td><td>어려움</td><td>매우 어려움 (파편화)</td></tr>
-                <tr><td><b>대표 사례</b></td><td>공장·사무직 계약직</td><td>배달, 대리운전, 가사서비스</td></tr>
-              </table>
-              <div class="hbox hbox-yellow" style="margin-top:8px">
-                <b>[12강 기출 포인트]</b><br>
-                · 노동시장 분화의 이념·시기: <b>신자유주의 + IMF</b><br>
-                · 비정규직 정의: 전형적 형태에서 <b>어느 한 가지라도</b> 벗어나는 경우<br>
-                · 비정규직 임금 수준: 정규직의 <b>45%</b><br>
-                · 플랫폼 노동 = 2차 노동시장 비용 절감의 <b>2차적 방법</b><br>
-                · 복지국가 위기: 노동의 <b>탈상품화</b> 수준 하락<br>
-                · 대안: <b>새로운 사회적 보호시스템 + 노동자성 개념 확장 + 새로운 패러다임 적용</b>
-              </div>
-            `
-          }
-        ]
-      },
-      {
-        num: '13강', name: '노동과 이민: 외국인 노동',
-        cards: [
-          {
-            icon: '🌏', title: '한국의 외국인 노동 현황 ★ [기출]',
-            html: `
-              <span class="tag tag-blue">기출 핵심</span>
-              <div class="hbox hbox-blue">
-                지난 <b>20년간</b> 외국에서 한국으로의 노동력 이주는 꾸준히 증가<br>
-                한국 경제의 여러 산업분야에서 <b>노동 수요를 충족</b>하는 중요한 축이 됨
-              </div>
-              <table class="comp-table">
-                <tr><th>구분</th><th>내용</th></tr>
-                <tr><td><b>증가 추세</b></td><td>2010년 64만 명 → 2018년 103만 명, 매년 약 10% 증가</td></tr>
-                <tr><td><b>인구 비율</b></td><td>총 인구의 <b>3%</b>, 경제활동 인구의 <b>3.7%</b></td></tr>
-                <tr><td><b>저숙련 임시 노동자</b></td><td>한국 거주 외국인 약 5명 중 1명 수준, 약 <b>25%</b></td></tr>
-                <tr><td><b>고용 사업장</b></td><td>5인 이상 사업장 10곳 중 1곳은 외국인 노동자 고용</td></tr>
-                <tr><td><b>총 고용</b></td><td>전체 고용의 약 <b>10%</b> 충당</td></tr>
-              </table>
-              <div class="sub">배경과 원인</div>
-              <ul class="pts">
-                <li><b>특정 산업 인력 부족</b>: 제조업·중소기업·건설현장·어업·농업 등 3D 업종 내국인 취업 기피</li>
-                <li><b>인구 감소·고령화</b>: 생산가능인구 감소로 공동체 유지를 위한 노동력 필요</li>
-                <li><b>고학력 청년 세대</b>: 고학력에 맞는 일자리 부족 → 이중 노동시장 구조 심화</li>
-              </ul>
-              <div class="sub">부정적 현상 ★</div>
-              <ul class="pts red">
-                <li>임금 착취, 강제노동, 열악한 작업환경 등 <b>노동권·인권 착취</b> 발생</li>
-                <li>3D 작업장 문제와 함께 양극화된 임금구조의 <b>최하위 계층</b> 형성</li>
-                <li>공동체 행복 달성 기제인 작업장이 <b>인권 사각지대</b>로 낙인</li>
-              </ul>
-            `
-          },
-          {
-            icon: '👷', title: '외국인 노동자의 개념과 역사 ★ [기출]',
-            html: `
-              <span class="tag tag-yellow">개념·역사</span>
-              <div class="hbox hbox-yellow">
-                <b>외국인 노동자</b>: 대한민국 국적이 아닌 외국인으로서<br>
-                국내의 작업장에서 <b>임금 노동을 제공하는 자</b>
-              </div>
-              <table class="comp-table">
-                <tr><th>구분</th><th>직종 예시</th></tr>
-                <tr><td><b>전문직</b></td><td>교수, 연구, 기술지도, 예술흥행, 특정활동 등</td></tr>
-                <tr><td><b>비전문직·저숙련</b></td><td>육체적 노동의 단순노무직 등</td></tr>
-              </table>
-              <div class="sub">외국인 노동의 역사 ★ [기출]</div>
-              <table class="comp-table">
-                <tr><th>연도</th><th>내용</th></tr>
-                <tr><td><b>1980년대 후반</b></td><td>국내 노동시장에서 3D 업종 취업 기피 → 인력 부족 현상 발생</td></tr>
-                <tr><td><b>1994년</b></td><td><b>산업연수생 제도</b> 실시 → 외국인 노동자 공식 유입 시작</td></tr>
-                <tr><td><b>2007년</b></td><td><b>고용허가제</b>로 전환 → 중소기업 인력 지원 목적</td></tr>
-              </table>
-              <div class="sub">2020년 기준 현황</div>
-              <ul class="pts">
-                <li>취업자격 체류 외국인: <b>574,379명</b> (전체 체류 외국인의 23.7%)</li>
-                <li><b>95%</b>: 저숙련 비전문직 노동자</li>
-                <li><b>5%</b>: 전문직 종사자</li>
-                <li>주요 종사 분야: 중소 제조업체, 건설현장, 농장·양식장·어선 등</li>
-              </ul>
-            `
-          },
-          {
-            icon: '📄', title: '고용허가제와 사회적 인식 ★ [기출]',
-            html: `
-              <span class="tag tag-green">제도 핵심</span>
-              <div class="hbox hbox-green">
-                <b>고용허가제</b>: 정부가 관리 주체가 되어<br>
-                MOU 체결 국가의 노동자들이 한국 정부의 허가를 받아 고용되는 제도
-              </div>
-              <div class="sub">고용허가제 상세 ★ [기출]</div>
-              <ul class="pts green">
-                <li>일정 기간 내국인 노동자를 채용하지 못하면 <b>외국인 노동자 고용을 허가</b>받는 방식</li>
-                <li>중소기업 인력 지원을 목적으로 운영</li>
-                <li>고용주가 계약 갱신·해지 권한을 전적으로 가짐</li>
-                <li>결과적으로 외국인 노동자의 <b>협상력 취약</b></li>
-              </ul>
-              <div class="sub">사회적 인식과 시각 ★</div>
-              <ul class="pts red">
-                <li><b>사회심리적 인식</b>: 저개발국 출신 이주노동자에 대한 심리적 거리감 형성</li>
-                <li><b>차별적 인권 현장</b>: 일상생활과 작업장 전반에서 차별의 대상</li>
-                <li><b>임금격차</b>: 내국인 임금 대비 약 <b>50%</b> 수준</li>
-                <li><b>임금체불</b>: 빈번하게 발생</li>
-                <li><b>산업복지 측면</b>: 노동권과 기본권의 사각지대</li>
-              </ul>
-              <div class="sub">이주노동자의 작업환경</div>
-              <div class="hbox hbox-red">
-                <b>3D 작업장</b>: Difficult(어렵고) + Dirty(지저분하며) + Dangerous(위험한) 환경
-              </div>
-              <ul class="pts yellow" style="margin-top:8px">
-                <li>내국인이 3D 작업장을 기피하는 이유: 낮은 임금, 낮은 사회적 인식, 노동능력 상실 위험</li>
-                <li>합법·불법 체류 여부와 무관하게 위험한 작업장에서 노동력 제공</li>
-              </ul>
-            `
-          },
-          {
-            icon: '⚖️', title: '정부 정책과 작업장의 현실 ★ [기출]',
-            html: `
-              <span class="tag tag-purple">제도와 현실</span>
-              <div class="sub">정부 정책 및 제도 ★ [기출]</div>
-              <table class="comp-table">
-                <tr><th>제도</th><th>내용</th></tr>
-                <tr><td><b>노동 3권 보장</b></td><td>단결권·단체교섭권·단체행동권의 법률적 인정</td></tr>
-                <tr><td><b>노동법 적용</b></td><td>최저임금법·근로기준법·산업재해보상법 적용</td></tr>
-                <tr><td><b>표준근로계약서</b></td><td>고용주와의 불평등한 고용계약관계 개선을 위한 법적 장치</td></tr>
-                <tr><td><b>실태 점검</b></td><td>고용노동부가 외국인 고용실태·주거실태 점검</td></tr>
-                <tr><td><b>근로감독관</b></td><td>최저임금·강제근로·인권 사각지대 등에 대한 감시</td></tr>
-              </table>
-              <div class="sub">작업장의 현실: 제도의 허점 ★</div>
-              <table class="comp-table">
-                <tr><th>문제</th><th>내용</th></tr>
-                <tr><td><b>강제근로 취약성</b></td><td>계약 갱신·해지 권한이 고용주에게 집중 → 임금협상·근로환경 개선 요구 어려움</td></tr>
-                <tr><td><b>열악한 주거환경</b></td><td>최저임금에서 기준 없는 숙식비 공제 + 열악한 주거환경 생활</td></tr>
-                <tr><td><b>작업장 안전 미보장</b></td><td>안전교육·안전장치 미충족 작업장이 <b>66.5%</b></td></tr>
-                <tr><td><b>임금격차·임금체불</b></td><td>저임금 노동을 위해 입국한 신분으로 인해 노동력 제공 전 과정에서 차별 발생</td></tr>
-              </table>
-              <div class="hbox hbox-yellow" style="margin-top:8px">
-                <b>[기출 포인트]</b><br>
-                · 고용허가제의 허점: <b>계약 갱신·해지 권한이 고용주에게 집중</b><br>
-                · 안전 미충족 작업장 비율: <b>66.5%</b>
-              </div>
-            `
-          },
-          {
-            icon: '🤝', title: '산업복지적 접근 ① 포괄적 차별금지와 국제법 ★ [기출]',
-            html: `
-              <span class="tag tag-red">기출 중요</span>
-              <div class="hbox hbox-red">
-                <b>역사적 교훈</b>: 100년 전 멕시코 애니깽, 1960년대 파독 간호사·광부,<br>
-                1980년대 중동 건설 현장의 한국인도 그 나라에서 <b>외국인 노동자</b>였다.
-              </div>
-              <div class="sub">포괄적 차별금지 ★ [기출]</div>
-              <ul class="pts purple">
-                <li><b>인종차별금지</b>를 넘어 <b>포괄적 차별금지법</b> 제정 필요</li>
-                <li>차별의 근저에는 인종뿐 아니라 사회계층·직업·빈부·출신국 등 복합 요소가 작용</li>
-                <li>인종차별금지법만으로는 문제 해결 불가능</li>
-                <li>이주노동자 역시 공동체 행복 달성을 위한 <b>공동체 구성원</b>으로 인식해야 함</li>
-              </ul>
-              <div class="sub">국제법의 국내 적용 ★ [기출]</div>
-              <table class="comp-table">
-                <tr><th>국제법</th><th>내용</th></tr>
-                <tr><td><b>국제인권규약</b></td><td>인간 존엄성에 기반한 국제적 기준</td></tr>
-                <tr><td><b>이주노동자권리협약</b></td><td>이주노동자의 권리 보장에 관한 국제 협약</td></tr>
-                <tr><td><b>ILO 협약</b></td><td>모든 차별에 대한 금지와 균등한 대우</td></tr>
-              </table>
-              <div class="hbox hbox-blue" style="margin-top:8px">
-                목적: 국내 노동자와 외국인 노동자의 <b>균등한 대우</b> 보장<br>
-                한계: 비준하지 않은 국제법은 <b>국내 효력에 한계</b>가 있음
-              </div>
-            `
-          },
-          {
-            icon: '🏭', title: '산업복지적 접근 ② 작업장 민주주의 ★★ [기출]',
-            html: `
-              <span class="tag tag-green">작업장 민주주의</span>
-              <div class="hbox hbox-green">
-                차별과 배제의 작업장을 <b>통합과 연대의 시작점</b>으로 전환해야 함
-              </div>
-              <div class="flow" style="margin-top:8px">
-                <span class="flow-item">작업장 민주주의</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-item">산업복지</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-item green">복지국가</span>
-              </div>
-              <div class="sub">사회정책적 상징성</div>
-              <ul class="pts">
-                <li><b>국경 없는 자본과 노동의 이동</b>은 현대에 필연적 현상</li>
-                <li>외국인 이민을 차별 문제가 아니라 <b>사회적 연대·인권 차원</b>으로 인식 전환 필요</li>
-                <li>문화적 다양성은 사회 발전과 밀접한 관련</li>
-                <li>이주노동자의 <b>인권 수준 = 그 사회의 인권 수준</b>을 직접적으로 반영</li>
-              </ul>
-              <div class="sub">작업장 민주주의 핵심 ★★ [기출]</div>
-              <ul class="pts green">
-                <li>내국인·외국인 구분 없이 <b>불평등한 고용관계</b>는 안 됨</li>
-                <li>모든 노동자는 우리 사회의 구성원으로서 동일하게 노동의 가치와 사회적 가치를 보장받아야 함</li>
-                <li>작업장은 공동체 행복 달성을 위한 기제이므로 차별과 배제가 아닌 <b>통합과 연대</b>의 공간이어야 함</li>
-              </ul>
-              <div class="hbox hbox-yellow" style="margin-top:8px">
-                <b>[13강 기출 포인트]</b><br>
-                · 산업복지적 접근 4가지: <b>포괄적 차별금지, 국제법 국내 적용, 사회정책적 상징성, 작업장 민주주의</b><br>
-                · 작업장 민주주의 → <b>산업복지</b> → <b>복지국가</b>
-              </div>
-            `
-          },
-          {
-            icon: '📝', title: '13강 핵심 총정리 ★ [기출]',
-            html: `
-              <span class="tag tag-red">13강 총정리</span>
-              <table class="comp-table">
-                <tr><th>항목</th><th>핵심 내용</th></tr>
-                <tr><td><b>외국인 노동 증가</b></td><td>지속적으로 증가, 전체 고용의 <b>10%</b> 수준 차지</td></tr>
-                <tr><td><b>활용 분야</b></td><td>건설·농업·어업·제조업 등 특정 산업분야 노동력 수요 대응</td></tr>
-                <tr><td><b>공동체 위치</b></td><td>생산과 소비 부문에서 비율 증가 → <b>공동체의 당사자</b>로 자리매김</td></tr>
-                <tr><td><b>제도와 현실</b></td><td>정책·제도는 노동권·기본권 보장을 목표로 하나, 현실은 차별과 인권 사각지대 존재</td></tr>
-                <tr><td><b>산업복지 방향</b></td><td><b>포괄적 차별금지</b> + <b>작업장 민주주의</b> 측면의 노동권 보장 중요</td></tr>
-              </table>
-              <div class="sub">핵심 키워드 체크</div>
-              <ul class="pts">
-                <li>이주노동자 비율: 총 인구의 <b>3%</b>, 경제활동 인구의 <b>3.7%</b></li>
-                <li>산업연수생 제도 → 고용허가제 전환: <b>1994년 → 2007년</b></li>
-                <li>저숙련 노동자 <b>95%</b> / 전문직 <b>5%</b></li>
-                <li>3D 업종: <b>Difficult, Dirty, Dangerous</b></li>
-                <li>고용허가제의 허점: 계약 갱신·해지 권한이 고용주에게 집중</li>
-                <li>안전 미충족 작업장 비율: <b>66.5%</b></li>
-                <li>국제법 3가지: <b>국제인권규약, 이주노동자권리협약, ILO 협약</b></li>
-                <li>작업장 민주주의 → 산업복지 → 복지국가</li>
-              </ul>
-            `
-          }
-        ]
-      },
-      {
-        num: '14강', name: '사회서비스와 노동',
-        cards: [
-          {
-            icon: '🤲', title: '사회서비스의 개념과 제공 주체 ★ [기출]',
-            html: `
-              <span class="tag tag-blue">기출 핵심</span>
-              <div class="hbox hbox-blue">
-                사회서비스는 생애주기에서 발생하는 개인과 가족의 생활유지 요인을<br>
-                사회적 차원에서 <b>상품과 서비스로 제공 혹은 지원</b>하는 것
-              </div>
-              <table class="comp-table">
-                <tr><th>구분</th><th>내용</th></tr>
-                <tr><td><b>광의적 개념</b></td><td>소득보장, 의료, 교육, 주거, 문화, 관광 등 보편적·기본적 인간 욕구 해결 분야</td></tr>
-                <tr><td><b>협의적 개념</b></td><td>건강, 교육, 고용, 사회적 보호 등 공동체 구성원을 대상으로 한 <b>대인사회서비스</b></td></tr>
-              </table>
-              <div class="sub">협의의 사회서비스 명칭 ★</div>
-              <ul class="pts">
-                <li><b>대인사회서비스</b> (personal social service)</li>
-                <li><b>사회적 돌봄</b> (social care)</li>
-                <li><b>사회적 보호</b> (social protection)</li>
-                <li><b>휴먼서비스</b> (human service)</li>
-              </ul>
-              <div class="sub">목적</div>
-              <ul class="pts green">
-                <li>개인의 삶의 질, 즉 <b>복지</b>를 향상시킴</li>
-                <li>일상적 참여의 기회를 향상시킴</li>
-                <li>보호를 담당했던 가족구성원이 사회적 활동에 참여하도록 함</li>
-              </ul>
-              <table class="comp-table">
-                <tr><th>제공 주체</th><th>재원</th></tr>
-                <tr><td><b>국가</b> (중앙정부 + 지방정부)</td><td>세금</td></tr>
-                <tr><td><b>시장</b> (국가에 만족하지 못할 때)</td><td>비용·이용료</td></tr>
-              </table>
-            `
-          },
-          {
-            icon: '🏥', title: '사회서비스의 등장 배경과 시장화 ★ [기출]',
-            html: `
-              <span class="tag tag-yellow">등장 배경</span>
-              <div class="hbox hbox-yellow">
-                <b>베버리지 보고서</b>를 통해 복지국가 시스템이 마련되면서 사회서비스 등장<br>
-                원칙: <b>국민 개인의 생존이 국가의 의무</b>
-              </div>
-              <div class="sub">복지국가와 사회서비스 노동자</div>
-              <ul class="pts">
-                <li>복지국가는 사회서비스 정책에 전체 예산의 약 <b>30%</b> 투입</li>
-                <li>예산의 대부분은 사회서비스 노동자의 임금으로 사용</li>
-                <li>대표적 서비스: <b>NHS</b> (National Health Service)</li>
-              </ul>
-              <div class="sub">탈산업화와 신사회위험</div>
-              <ul class="pts green">
-                <li><b>탈산업화</b>: 제조업·공업 중심 → 서비스산업 중심으로 산업구조 전환</li>
-                <li><b>신사회위험</b>: 여성의 서비스산업 노동시장 진출</li>
-                <li>전통적 무임금노동인 가사·돌봄이 <b>유급 휴먼서비스 노동</b>으로 전환</li>
-                <li>대표 서비스: 보육서비스, 요양서비스</li>
-              </ul>
-              <div class="sub">사회서비스 영역의 시장화 ★</div>
-              <ul class="pts red">
-                <li><b>신자유주의 등장</b>: 노동유연성 증가, 노동임금 하락, 열악한 노동환경</li>
-                <li><b>복지국가의 축소</b>: 복지예산 감소, 공공서비스 축소</li>
-                <li><b>신사회위험 등장</b>: 돌봄·요양·가사 등 사회서비스 욕구 강화</li>
-                <li><b>가계수입 불안정</b>: 여성의 사회서비스 노동 진출 가속화</li>
-              </ul>
-              <div class="hbox hbox-red" style="margin-top:8px">
-                <b>사회서비스 영역의 시장화</b> + 가사·돌봄·요양 노동의 상품화 가속<br>
-                → <b>사회서비스의 공공성 약화</b>
-              </div>
-            `
-          },
-          {
-            icon: '🧩', title: '한국 사회서비스 노동의 분야와 특징 ★ [기출]',
-            html: `
-              <span class="tag tag-green">한국 사회서비스</span>
-              <div class="hbox hbox-green">
-                사회가 발전할수록 시민의 욕구가 다양해지므로<br>
-                사회서비스 영역도 <b>질적·양적으로 강화</b>될 필요가 있음
-              </div>
-              <div class="sub">사회서비스 노동의 8대 대분류</div>
-              <table class="comp-table">
-                <tr><th>대분류</th><th>포괄 범위</th></tr>
-                <tr><td><b>종합 서비스업</b></td><td>돌봄, 재활, 상담 등 복지시설·협회 서비스</td></tr>
-                <tr><td><b>돌봄서비스업</b></td><td>노인, 장애인 요양·보호 및 단순 돌봄 대상자 지원</td></tr>
-                <tr><td><b>상담·재활서비스업</b></td><td>상담 서비스와 의료·발달재활서비스</td></tr>
-                <tr><td><b>건강지원 서비스업</b></td><td>의료 등 보건서비스</td></tr>
-                <tr><td><b>교육 및 역량 개발</b></td><td>유아·청소년 발달 지원, 평생교육, 직장교육 등</td></tr>
-                <tr><td><b>문화·체육 서비스</b></td><td>예술단체, 미술관, 박물관 등 문화·예술·체육 서비스</td></tr>
-                <tr><td><b>사회 참여 지원</b></td><td>고용지원서비스, 직업재활, 파견·중개·알선</td></tr>
-                <tr><td><b>사회서비스 행정</b></td><td>보건, 교육, 문화, 환경, 노동 등 관련 관리 기능</td></tr>
-              </table>
-              <div class="sub">핵심 사회서비스 영역 국제 비교 ★ [기출]</div>
-              <table class="comp-table">
-                <tr><th>비교 항목</th><th class="th-blue">한국</th><th class="th-green">비교국</th></tr>
-                <tr><td><b>사회서비스 노동자 고용률</b></td><td><b>13%</b></td><td>스웨덴 <b>32%</b></td></tr>
-                <tr><td><b>사회복지지출 규모</b></td><td><b>11%</b></td><td>프랑스 <b>31%</b></td></tr>
-                <tr><td><b>OECD 평균 고용비중</b></td><td>한국은 최하위권</td><td><b>21.3%</b></td></tr>
-                <tr><td><b>OECD 평균 공공사회복지지출</b></td><td>한국 11%</td><td><b>20.1%</b></td></tr>
-              </table>
-              <div class="hbox hbox-yellow" style="margin-top:8px">
-                <b>한국 사회서비스 노동자 특징</b><br>
-                저임금, 불규칙한 노동시간, 비정규직 채용, 감정노동, 노동자의 <b>92%가 여성</b>
-              </div>
-            `
-          },
-          {
-            icon: '👩‍🍼', title: '4대 사회서비스 ★ [기출]',
-            html: `
-              <span class="tag tag-red">기출 핵심</span>
-              <div class="hbox hbox-red">
-                <b>4대 사회서비스</b>: 생애주기에 걸쳐 기존에 가정에서 담당하던<br>
-                가사와 돌봄 영역이 사회서비스로 전환되면서 생긴 노동영역
-              </div>
-              <table class="comp-table">
-                <tr><th>서비스 종류</th><th>대상</th></tr>
-                <tr><td><b>산모·신생아 도우미서비스</b></td><td>산모와 신생아</td></tr>
-                <tr><td><b>가사·간병서비스</b></td><td>가사 및 간병이 필요한 자</td></tr>
-                <tr><td><b>장애인 활동보조인 서비스</b></td><td>장애인</td></tr>
-                <tr><td><b>노인 돌봄서비스</b></td><td>노인</td></tr>
-              </table>
-              <div class="sub">4대 사회서비스의 특징</div>
-              <ul class="pts purple">
-                <li>신사회위험에 따른 가족기능 약화에 대응하는 사회적 기제</li>
-                <li><b>무급 가사노동의 유급화</b></li>
-                <li>4대 사회서비스 노동자의 <b>92.7%가 여성</b></li>
-                <li>저임금 노동: 월평균 급여 약 <b>87만 원</b></li>
-                <li>불규칙한 노동시간, 만성적 고용불안, 대인서비스 감성노동</li>
-              </ul>
-              <div class="hbox hbox-yellow" style="margin-top:8px">
-                <b>핵심 논점</b><br>
-                무급 가사노동을 안정적 노동환경에 기반한<br>
-                <b>신뢰성 있는 휴먼서비스 노동</b>으로 전환해야 함
-              </div>
-              <div class="sub">노동자와 이용자에게 요구되는 점</div>
-              <ul class="pts">
-                <li>피제공자는 노동자의 전문성, 노동 안정성, 사회적 연대성을 살펴봐야 함</li>
-                <li>사회서비스 노동자는 전문성, 책임성, 연대감을 갖추고 노동조건을 살펴봐야 함</li>
-              </ul>
-            `
-          },
-          {
-            icon: '🇸🇪', title: '복지국가와 사회서비스 노동 ★ [기출]',
-            html: `
-              <span class="tag tag-blue">복지국가 원칙</span>
-              <div class="hbox hbox-blue">
-                복지국가에서 시민은 <b>사회서비스 노동자이면서 동시에 이용자</b><br>
-                휴먼서비스로서 <b>전문성·신뢰성·연대성</b>이 전제됨
-              </div>
-              <div class="sub">복지국가에서의 사회서비스 원칙</div>
-              <ul class="pts green">
-                <li>시민이 사회서비스 노동자이면서 동시에 이용자</li>
-                <li>휴먼서비스로서 전문성, 신뢰성, 연대성이 필요</li>
-                <li>신사회위험은 복지국가의 다양한 정책적 대응을 요구</li>
-                <li>사회서비스의 확대가 필요</li>
-              </ul>
-              <div class="sub">스웨덴 vs 한국 비교 ★ [기출]</div>
-              <table class="comp-table">
-                <tr><th>구분</th><th class="th-green">스웨덴</th><th class="th-blue">한국</th></tr>
-                <tr><td><b>서비스 방식</b></td><td>시설 입소보다 <b>재가서비스</b> 중심</td><td>재가서비스 제공하나 일괄적</td></tr>
-                <tr><td><b>방문 빈도</b></td><td>하루 최대 <b>8번</b> 짧고 자주 방문</td><td>한 번에 몇 시간씩 머물며 일괄 서비스</td></tr>
-                <tr><td><b>특징</b></td><td><b>맞춤형</b> 서비스</td><td>정형화된 서비스</td></tr>
-              </table>
-              <div class="sub">사회서비스 확대 방향 논쟁 ★</div>
-              <div class="hbox hbox-purple">
-                확대되는 사회서비스를 <b>시장화·상품화</b>로 해결할 것인가?<br>
-                아니면 <b>공공의 사회서비스 확대</b>로 해결할 것인가?
-              </div>
-              <ul class="pts" style="margin-top:8px">
-                <li><b>국가</b>: 전문성, 신뢰성, 연대성이 보장된 사회서비스를 준비해야 함</li>
-                <li><b>사회서비스 노동자</b>: 노동조합을 형성하고 시민과 연대성을 갖춰야 함</li>
-                <li>사회서비스 노동자의 조직화 → 복지국가 지지세력으로 성장 → 시민성과 연대성의 필요조건</li>
-              </ul>
-            `
-          },
-          {
-            icon: '🏁', title: '산업복지의 완성 & 14강 총정리 ★ [기출]',
-            html: `
-              <span class="tag tag-red">최종 정리</span>
-              <table class="comp-table">
-                <tr><th>문제</th><th>전환 방향</th></tr>
-                <tr><td><b>작업장에서의 소외</b></td><td><b>노동보호</b></td></tr>
-                <tr><td><b>작업장에서의 위험</b></td><td><b>사회적 안전</b></td></tr>
-                <tr><td><b>작업장에서의 차별</b></td><td><b>연대</b></td></tr>
-              </table>
-              <div class="hbox hbox-green" style="margin-top:8px">
-                노동은 개인이 공동체의 구성원임을 확인하도록 하는 기본 기제이며,<br>
-                작업장은 이것이 실현되는 현장
-              </div>
-              <ul class="pts">
-                <li><b>불평등한 계약관계의 개선</b>, 즉 작업장 민주주의 실현 = 복지국가의 시초</li>
-                <li>작업장을 넘어 사회 전반의 불평등한 권력관계를 개선하는 것 = 복지국가의 완성</li>
-                <li><b>"노동이 곧 복지"</b>라는 복지국가의 기본 가치를 지켜나가는 것이 산업복지의 완성</li>
-              </ul>
-              <div class="sub">14강 기출 핵심 요약</div>
-              <table class="comp-table">
-                <tr><th>키워드</th><th>핵심 내용</th></tr>
-                <tr><td><b>사회서비스 협의 개념</b></td><td>대인사회서비스 = 사회적 돌봄 = 사회적 보호 = 휴먼서비스</td></tr>
-                <tr><td><b>4대 사회서비스</b></td><td>산모·신생아, 가사·간병, 장애인활동보조, 노인돌봄</td></tr>
-                <tr><td><b>한국 사회서비스 노동자</b></td><td>92% 여성, 저임금, 비정규직, 열악한 환경</td></tr>
-                <tr><td><b>국제 비교</b></td><td>한국 고용률 13% vs 스웨덴 32%, 한국 복지지출 11% vs 프랑스 31%</td></tr>
-                <tr><td><b>핵심 논쟁</b></td><td>시장화 vs 공공 사회서비스 확대</td></tr>
-                <tr><td><b>베버리지 보고서</b></td><td>사회서비스 등장 근거, 전체 예산의 30% 투입</td></tr>
-                <tr><td><b>신사회위험</b></td><td>탈산업화 + 여성 사회진출 → 돌봄의 유급화 필요</td></tr>
-              </table>
-            `
-          }
-        ]
-      },      
-      {
-        num: '15강', name: '산업복지의 과제',
-        cards: [
-          {
-            icon: '🛠️', title: '노동의 의미와 직업으로서의 노동 ★ [기출]',
-            html: `
-              <span class="tag tag-blue">기출 핵심</span>
-              <div class="hbox hbox-blue">
-                <b>노동</b> = 인간이 활동을 통하여 사회적 생산을 하는 것<br>
-                = <b>사회를 만들어가는 힘</b>
-              </div>
-              <ul class="pts">
-                <li>노동은 인간사회 형성의 <b>필수적 요소</b></li>
-                <li>사회의 존속과 발전을 위한 <b>기본 조건</b></li>
-                <li>개인의 생존뿐 아니라 공동체의 복리후생을 달성하는 활동</li>
-              </ul>
-              <div class="sub">직업으로서의 노동 ★ [기출]</div>
-              <table class="comp-table">
-                <tr><th>구분</th><th>내용</th></tr>
-                <tr><td><b>생업으로서의 직업</b></td><td>자신과 가족의 의식주 및 생활상의 수요, 즉 행복을 충당하기 위한 수단</td></tr>
-                <tr><td><b>사회적 역할 분담으로서의 직업</b></td><td>직업을 통해 사회 공동체를 형성하고 공동 행복, 존속·발전에 기여</td></tr>
-              </table>
-              <div class="hbox hbox-yellow" style="margin-top:8px">
-                <b>핵심 등식</b><br>
-                <b>노동 = 직업 = 공동체의 복리후생 달성</b>
-              </div>
-              <div class="hbox hbox-green" style="margin-top:8px">
-                인간의 조건 = 노동 = 직업 = 공동체의 복리후생 달성
-              </div>
-            `
-          },
-          {
-            icon: '🧑‍⚖️', title: '노동권 보장과 노동의 탈상품화 ★ [기출]',
-            html: `
-              <span class="tag tag-green">노동권 핵심</span>
-              <div class="hbox hbox-green">
-                <b>노동권</b> = 일할 권리<br>
-                <b>노동권 보장 = 사회권 보장</b>
-              </div>
-              <ul class="pts">
-                <li>복지국가는 노동자에 대한 보호가 <b>체제 운영의 목적</b></li>
-                <li>복지국가 유형의 중요 기준: <b>노동의 탈상품화 수준</b> (Esping-Anderson, 1990)</li>
-                <li>노동권과 사회권은 헌법에 보장되며, 명문 규정을 넘어 <b>실질적 보장</b>이 중요</li>
-              </ul>
-              <div class="sub">노동의 탈상품화 ★ [기출]</div>
-              <table class="comp-table">
-                <tr><th>구분</th><th>내용</th></tr>
-                <tr><td><b>고용 보장</b></td><td>고용을 보장함으로써 기본적인 생활이 지속적으로 유지될 수 있도록 함</td></tr>
-                <tr><td><b>사회안전망</b></td><td>고용이 일시 유지되지 않더라도 국가가 제공하는 사회안전망으로 생활 유지</td></tr>
-              </table>
-              <div class="sub">헌법 조항</div>
-              <table class="comp-table">
-                <tr><th>조항</th><th>내용</th></tr>
-                <tr><td><b>제32조</b></td><td>근로의 권리·의무, 최저임금제, 인간의 존엄성, 여성·연소자 근로 특별보호</td></tr>
-                <tr><td><b>제33조</b></td><td>노동 3권 보장: 단결권·단체교섭권·단체행동권</td></tr>
-                <tr><td><b>제34조</b></td><td>사회복지권</td></tr>
-              </table>
-              <div class="hbox hbox-purple" style="margin-top:8px">
-                <b>산업복지 = 사회복지 = 사회정책</b><br>
-                세 영역은 동일한 가치를 추구함
-              </div>
-            `
-          },
-          {
-            icon: '🏭', title: '작업장과 공동체의 행복 ★ [기출]',
-            html: `
-              <span class="tag tag-yellow">작업장 의미</span>
-              <div class="hbox hbox-yellow">
-                작업장은 공동체의 행복 달성을 위한<br>
-                <b>상품과 서비스의 생산현장</b>
-              </div>
-              <ul class="pts">
-                <li>사회 한 부분으로 역할이 기대된 전통적 인식</li>
-                <li>노동자와 고용주의 개인적 계약관계 → <b>노동 vs 자본의 집단적 관계</b>로 확대</li>
-                <li>자본은 상품과 서비스 가격에서 이윤을 추구하고 임금 조정으로 잉여이윤을 축적</li>
-                <li>고용주·자본은 노동자에 대해 불평등한 계약을 통해 <b>우위의 권력관계</b> 유지</li>
-              </ul>
-              <div class="hbox hbox-red" style="margin-top:8px">
-                시장 논리가 작업장에서 강화되면<br>
-                작업장의 역할이 <b>자본가의 이익 추구 공간</b>으로 전도됨
-              </div>
-              <div class="sub">작업장에서 노동의 조직화</div>
-              <ul class="pts green">
-                <li><b>노동시민의 자각</b>: 노동과 자본의 불평등한 권력관계 인식</li>
-                <li>노동자 개인 vs 고용주의 계약관계 → 조직된 노동 vs 자본의 집단적 계약관계로 전환</li>
-                <li>노동자의 조직화 결과 → <b>노동조합</b> 탄생</li>
-              </ul>
-              <div class="hbox hbox-blue" style="margin-top:8px">
-                작업장 내 불평등한 권력관계를 개선시키는 것<br>
-                = <b>산업복지의 첫 시작</b>
-              </div>
-            `
-          },
-          {
-            icon: '⚖️', title: '산업복지의 해결 구조와 갈등의 제도화 ★ [기출]',
-            html: `
-              <span class="tag tag-red">산업복지 핵심</span>
-              <div class="sub">산업복지의 해결 구조 ★ [기출]</div>
-              <table class="comp-table">
-                <tr><th>구분</th><th>주체</th><th>내용</th></tr>
-                <tr><td><b>1차적 해결</b></td><td>작업장 영역의 <b>노·사</b></td><td><b>시장임금</b>의 균형</td></tr>
-                <tr><td><b>2차적 해결</b></td><td>사회적 영역의 <b>노·사·정</b></td><td><b>사회임금</b>의 확대</td></tr>
-              </table>
-              <div class="sub">갈등의 제도화 ★ [기출]</div>
-              <div class="hbox hbox-purple">
-                <b>노동–자본–정부</b> 3자 관계가 대표적인 갈등의 제도화
-              </div>
-              <ul class="pts purple" style="margin-top:8px">
-                <li>노·사 간 갈등, 교섭, 타협에 대한 <b>규칙과 제도</b>가 만들어지는 과정</li>
-                <li>노동자조직, 사용자단체, 정부의 성격과 역할이 명확해짐</li>
-                <li>복지국가를 향한 <b>필수적인 과정</b></li>
-              </ul>
-              <div class="sub">산업복지의 기조</div>
-              <table class="comp-table">
-                <tr><th>목표</th><th>내용</th></tr>
-                <tr><td><b>불평등 해소</b></td><td>작업장에서의 불평등 해소</td></tr>
-                <tr><td><b>지위 향상</b></td><td>노동계층의 사회경제적 지위 향상</td></tr>
-                <tr><td><b>사회통합</b></td><td>공동체 전체의 사회통합 달성</td></tr>
-              </table>
-            `
-          },
-          {
-            icon: '🗳️', title: '작업장 민주주의와 복지국가 ★ [기출]',
-            html: `
-              <span class="tag tag-green">작업장 민주주의</span>
-              <div class="hbox hbox-green">
-                작업장 내 관계성을 <b>불평등한 권력관계</b>에서<br>
-                <b>평등한 협력관계</b>로 개선하는 것
-              </div>
-              <ul class="pts">
-                <li>이윤 창출에 참여한 주체들이 <b>이익의 분배과정</b>에 참여</li>
-                <li>민주적 운영 참여를 통해 작업장 내부의 권력관계 개선</li>
-                <li>"사회 속에 묻어 있는 시장" — <b>칼 폴라니</b></li>
-                <li>노동조합이 기업의 성장·수익·이윤 분배·공동 경영까지 참여</li>
-                <li>핵심: <b>산업민주주의 확장</b></li>
-                <li>사례: <b>노동이사제</b></li>
-              </ul>
-              <div class="flow" style="margin-top:8px">
-                <span class="flow-item">작업장 민주주의 실현</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-item">불평등한 계약관계 개선</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-item green">복지국가의 시초</span>
-              </div>
-              <div class="hbox hbox-yellow" style="margin-top:8px">
-                <b>핵심</b>: 불평등한 계약관계의 개선인 작업장 민주주의 실현<br>
-                = <b>복지국가의 시초</b>
-              </div>
-            `
-          },
-          {
-            icon: '⚠️', title: '노동의 유연화와 위험의 계층화 ★ [기출]',
-            html: `
-              <span class="tag tag-red">사회적 위험</span>
-              <div class="hbox hbox-red">
-                <b>위험의 외주화</b>: 중층적 계약관계에 따른 위험 몰아주기<br>
-                → 저임금·불안전한 노동환경의 제도화
-              </div>
-              <table class="comp-table">
-                <tr><th>구분</th><th>내용</th></tr>
-                <tr><td><b>집중 대상</b></td><td>여성, 청년층, 외국인 노동자</td></tr>
-                <tr><td><b>직무 영역</b></td><td>물리적·화학적·생물학적·심리사회적 위험요인이 집중된 노동현장</td></tr>
-                <tr><td><b>위험 수준</b></td><td>콜센터 감정노동, 배달 노동 특수고용, 3D 업종 등 차별적 업무 환경</td></tr>
-              </table>
-              <div class="sub">위험의 사회적 확장 ★ [기출]</div>
-              <div class="flow" style="margin-top:8px">
-                <span class="flow-item">작업장 위험</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-item">노동자 가족의 위험</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-item red">사회적 위험</span>
-              </div>
-              <ul class="pts red" style="margin-top:8px">
-                <li>작업장에서의 위험을 승인하면 확장된 사회적 위험도 승인하게 됨</li>
-                <li><b>안전불감증</b>: 작업장의 부정 효과가 사회적 부정 효과로 확대</li>
-                <li>복지국가 모델은 산업재해를 사회서비스 영역으로 포함</li>
-                <li>산재보험은 베버리지 보고서와 연결됨</li>
-              </ul>
-              <div class="hbox hbox-purple" style="margin-top:8px">
-                <b>울리히 벡(1986)</b>: 부의 사회적 생산에는<br>
-                위험의 사회적 생산이 체계적으로 수반됨
-              </div>
-            `
-          },
-          {
-            icon: '🛡️', title: '작업장 안전과 시민권적 접근 ★ [기출]',
-            html: `
-              <span class="tag tag-blue">참여권</span>
-              <div class="hbox hbox-blue">
-                작업장 위험은 개인 문제가 아니라 <b>사회적 문제</b><br>
-                시민권적 측면에서 생산과정의 안전 보장이 필요함
-              </div>
-              <div class="sub">참여권 정의 ★ [기출]</div>
-              <div class="hbox hbox-yellow">
-                <b>참여권</b>: 작업장의 안전 문제에 관해 영향력을 행사하고<br>
-                의사결정에 참여할 권리
-              </div>
-              <table class="comp-table">
-                <tr><th>구분</th><th>특징</th></tr>
-                <tr><td><b>정부 주도 노동안전 시민권</b></td><td>수동적이고 한정적</td></tr>
-                <tr><td><b>조직된 노동 안전 시민권</b></td><td>적극적이고 확장성을 지님</td></tr>
-              </table>
-              <ul class="pts green" style="margin-top:8px">
-                <li>조직된 노동의 참여와 감시를 통해 작업장 안전의 <b>1차적 보장</b></li>
-                <li><b>집단적 발언효과</b> (Freeman & Medoff, 1984)</li>
-                <li>전체 노동시민의 안전을 위한 <b>연대성</b>으로 발전</li>
-              </ul>
-              <div class="sub">여성노동의 보호</div>
-              <ul class="pts purple">
-                <li>남성중심적 노동 개념은 사회적 영역에서 수행되는 활동만을 노동으로 규정</li>
-                <li>작업장 내 불평등한 권력관계가 <b>젠더 불평등</b>으로 확장</li>
-                <li>여성 노동자는 가사노동과 작업장 노동 모두에서 불평등의 대상화</li>
-                <li>전환 방향: 일·가정 양립 제도, 돌봄의 사회화, 확장된 노동 연대와 조직화</li>
-              </ul>
-            `
-          },
-          {
-            icon: '🏁', title: '산업복지의 과제 총정리 ★ [기출]',
-            html: `
-              <span class="tag tag-red">15강 총정리</span>
-              <div class="hbox hbox-red">
-                산업복지의 최종 목표는 작업장의 문제를<br>
-                <b>노동보호·사회적 안전·사회적 연대</b>로 전환하는 것
-              </div>
-              <table class="comp-table">
-                <tr><th>작업장의 문제</th><th>산업복지의 전환 방향</th></tr>
-                <tr><td><b>노동소외</b></td><td><b>노동보호</b>로 전환</td></tr>
-                <tr><td><b>작업장 위험</b></td><td><b>사회적 안전</b>으로 확대</td></tr>
-                <tr><td><b>작업장 차별</b></td><td><b>사회적 연대</b>로 바꾸어 감</td></tr>
-              </table>
-              <div class="flow" style="margin-top:8px">
-                <span class="flow-item">작업장 민주주의</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-item">불평등한 계약관계 개선</span>
-                <span class="flow-arrow">→</span>
-                <span class="flow-item green">복지국가 완성</span>
-              </div>
-              <div class="hbox hbox-green" style="margin-top:8px">
-                <b>"노동이 곧 복지"</b>라는 복지국가의 기본 가치를 지켜나가는 것이<br>
-                산업복지의 중심 내용
-              </div>
-              <div class="sub">기출 체크리스트</div>
-              <ul class="pts">
-                <li><b>노동 = 직업 = 공동체의 복리후생 달성</b></li>
-                <li><b>노동권 보장 = 사회권 보장</b></li>
-                <li>노동의 탈상품화: 고용 보장 + 사회안전망</li>
-                <li>1차적 해결: 노·사, 시장임금 / 2차적 해결: 노·사·정, 사회임금</li>
-                <li><b>갈등의 제도화</b>: 노·사·정 3자 간 교섭과 타협의 규칙 형성</li>
-                <li>위험의 사회적 확장: 작업장 → 가족 → 사회</li>
-                <li><b>참여권</b>: 작업장 안전에 대한 시민권적 접근</li>
-                <li><b>작업장 민주주의 실현 = 복지국가의 시초</b></li>
-              </ul>
-            `
-          }
-        ]
-      }
+{ num: "9강", name: "산업복지의 분류 2 / 구조체계적 관점", icon: "🏗️",
+  cards: [
+
+    // ── 01. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "01. 구조체계적 관점의 기본 인식",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">핵심 전제</span>
+          <span class="badge badge-green">작업장의 의미</span>
+          <span class="badge badge-purple">산업복지의 주체 — 노사정 3자</span>
+        </div>
+      `
+    },
+    { icon: "🔭", title: "구조체계적 관점의 핵심 전제",
+      html: `
+        <div class="hbox hbox-blue"><b>대상체계적</b>은 하나의 작업장(A)에만 초점, <b>구조체계적</b>은 모든 작업장(A·B·C·D…) 전체를 바라본다 — 이윤의 많고 적음·업종에 상관없이 <b>모든 작업장에서 노동하는 시민이 일하고 있기 때문</b>이다.</div>
+        <div class="sub">작업장의 의미</div>
+        <ul class="pts blue">
+          <li>상품과 서비스의 생산과 그 과정을 통해 <b>개인·가족·공동체의 행복을 달성</b>하는 핵심 현장</li>
+          <li>예: 우리가 쓰는 옷·펜·종이 모두 작업장에서 생산 → 공동체 삶의 모든 것을 유지시키는 현장</li>
+          <li>작업장 사고의 파급: 공사 현장 사고 → 주변 지역사회 집 붕괴, 행인 피해 → 하나의 작업장만 볼 것이 아니라 전체 주변까지 봐야 함</li>
+          <li>★ <b>복지국가 발전의 현장</b>으로 인식 — 작업장의 사고·문제는 노동자·가족·지역사회 전체 행복에 귀결됨</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 비유: 개인 점심을 거르는 것 → 개인 문제 / 집단적으로 많은 사람이 점심을 거를 때 → 물가 상승 등 공통된 구조적 원인 → 이처럼 현상을 개인이 아닌 <b>전체 집단으로 보는 것</b>이 구조체계적 관점</div>
+      `
+    },
+    { icon: "🤝", title: "산업복지의 주체 — 노사정(勞使政) 3자",
+      html: `
+        <div class="hbox hbox-blue">구조체계적 관점에서 산업복지의 주체는 <b>노동자(노동조합) · 고용주(사용자 단체) · 정부(국가)</b> 3자이며, 이들이 함께 사회정책의 의제를 논의한다.</div>
+        <table class="comp-table">
+          <tr><th>주체</th><th>구성</th><th>역할</th></tr>
+          <tr><td><b>노동자</b></td><td>노동조합 (예: 민주노총, 한국노총)</td><td>노동하는 시민들의 입장 대변</td></tr>
+          <tr><td><b>고용주</b></td><td>사용자 단체 (예: 전경련)</td><td>자본가 집단의 입장 대변</td></tr>
+          <tr><td><b>정부(국가)</b></td><td>행정부</td><td>노동·자본 조정 및 사회정책 역할</td></tr>
+        </table>
+        <div class="hbox hbox-yellow">💡 예: 최저임금 결정 시 → 전경련(고용주) + 민주노총·한국노총(노동자) + 정부(조정) = 구조체계적 관점에 기반한 임금 결정 / <b>사회정책의 목표</b>: 모든 국민의 삶의 행복 (불행을 목표로 하는 정책은 단 한 가지도 없음)</div>
+      `
+    },
+    { icon: "🌐", title: "ILO (국제노동기구) — 노사정 체계의 국제적 근거",
+      html: `
+        <div class="hbox hbox-blue"><b>1919년 베르사유 조약</b>에 의거하여 설립된 ILO는 시장자본주의 발전 과정에서 발생하는 불평등 문제의 당사자가 노사정 3자이기 때문에 설립되었다.</div>
+        <div class="sub">ILO의 핵심 약속 및 의제</div>
+        <ul class="pts blue">
+          <li>★ 약속: <b>"노동의 탈상품화에 대한 가치는 지켜져야 한다"</b></li>
+          <li>의제: 노동과 자본의 불평등 관계 해소</li>
+        </ul>
+        <div class="sub">ILO의 내용</div>
+        <ul class="pts green">
+          <li>노동 3권 보장</li>
+          <li>임금 및 노동조건 개선</li>
+          <li>기술발전에 따른 직업교육 (예: 독일 — 모든 노동자에게 평생교육 보편화)</li>
+          <li>사회통합을 위한 노자(勞資) 상호협력</li>
+        </ul>
+        <div class="sub">해결 방식</div>
+        <div class="flow">
+          <span class="flow-item">1차: 작업장에서의 단체협상</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">2차: 사회적 대화를 통한 사회적 타협</span>
+        </div>
+        <div class="hbox hbox-yellow">💡 "노동의 가치를 지켜 나가는 것은 복지국가의 근본 목적, 효율성과 노동의 가치를 인간의 가치로 유지·발전"</div>
+      `
+    },
+
+    // ── 02. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "02. 산업복지의 기조 — 갈등의 제도화",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">목표와 배경</span>
+          <span class="badge badge-green">즉자적 존재 vs 대자적 존재</span>
+          <span class="badge badge-purple">갈등의 제도화 과정</span>
+        </div>
+      `
+    },
+    { icon: "🎯", title: "산업복지의 기조와 배경",
+      html: `
+        <div class="hbox hbox-blue">구조체계적 관점의 산업복지 기조는 <b>갈등의 제도화</b>이며, 목표는 작업장에서의 불평등 해소·사회경제적 지위 향상·사회통합 추진이다.</div>
+        <div class="sub">목표</div>
+        <div class="badge-row">
+          <span class="badge badge-blue">작업장 불평등 해소</span>
+          <span class="badge badge-green">노동계층 사회경제적 지위 향상</span>
+          <span class="badge badge-purple">사회통합 추진</span>
+        </div>
+        <div class="sub">배경 1: 기본적·공적 욕구의 급증</div>
+        <ul class="pts blue">
+          <li>경제성장 → 국민들의 경제·의식 수준 향상 → 기본적 생활욕구(의료, 주택 등)와 공적 욕구(교육, 문화) 기하급수적 증가</li>
+          <li>예: 연탄 → 현대 난방 (생활욕구 향상) / 의무교육 중학교→고등학교→사실상 대학까지 (공적 욕구 향상)</li>
+          <li>예: 한국방송통신대학교 = 시민들의 교육에 대한 공적 욕구를 공적으로 인정한 상징</li>
+        </ul>
+        <div class="sub">배경 2: 사회적 불균형 확대</div>
+        <ul class="pts red">
+          <li>대응되는 생활수단·공공서비스는 <b>점진적으로</b> 제공 → 욕구 증가 속도를 따라가지 못함</li>
+          <li>→ <b>사회적 불균형</b> → <b>사회적 긴장 고조</b></li>
+        </ul>
+      `
+    },
+    { icon: "🧠", title: "즉자적 존재 vs 대자적 존재 — 갈등의 본질",
+      html: `
+        <div class="hbox hbox-blue">갈등은 인간 사회에서 <b>당연히 존재</b>한다. 인간은 <b>대자적 존재</b>로서 갈등을 대화와 토론으로 해결해야 한다.</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th>내용</th></tr>
+          <tr><td><b>즉자적 존재</b></td><td>현상에 즉시 반응, 원인을 모르고 물리적으로 표출 (폭력 등) — 동물의 방식 (약육강식)</td></tr>
+          <tr><td><b>대자적 존재 ★</b></td><td>근본 문제의 원인과 구조를 파악하고 이성적·대화적으로 해결 → 인간은 대자적 존재로서 말로 갈등을 풀어야 함</td></tr>
+        </table>
+        <div class="sub">자본주의 사회에서의 갈등 원인</div>
+        <div class="badge-row">
+          <span class="badge badge-red">계급</span>
+          <span class="badge badge-red">계층</span>
+          <span class="badge badge-red">인종</span>
+          <span class="badge badge-red">성별</span>
+          <span class="badge badge-red">민족</span>
+          <span class="badge badge-red">종교</span>
+          <span class="badge badge-red">지역</span>
+          <span class="badge badge-red">세대</span>
+        </div>
+        <div class="hbox hbox-yellow">💡 생각의 자유 → 표현의 자유 → 결사의 자유(단결권) → 언론·출판의 자유 — 이 모든 것이 갈등의 제도화와 연결됨</div>
+      `
+    },
+    { icon: "⚙️", title: "갈등의 제도화 과정",
+      html: `
+        <div class="hbox hbox-blue">구조적 관점은 사회적 불균형과 긴장에 대해 <b>노·사·정이 함께 사회적 논의 테이블을 확보하여 해결</b>한다 — "서로 싸우되 말로 싸운다. 결과에 대해서는 합의한다."</div>
+        <div class="sub">갈등의 제도화 5단계</div>
+        <div class="flow">
+          <span class="flow-item">① 갈등 인정 ("네가 왜 그렇게 생각하는지 일단 알겠어")</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">② 물리적 표출(폭력) 금지</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">③ 대화·토론 → 협상</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">④ 합의 도출 → 사회적 합의</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">⑤ 사회통합 달성</span>
+        </div>
+        <div class="sub">노사정 3자 갈등의 제도화</div>
+        <ul class="pts green">
+          <li>물리적 충돌이 아닌 <b>대화와 토론으로 합의</b></li>
+          <li>노사 간 갈등·교섭·타협의 규칙과 제도가 만들어지는 과정</li>
+          <li>노동자 조직(노동자 입장) + 사용자 단체(자본가 입장) + 정부(조정)</li>
+        </ul>
+      `
+    },
+
+    // ── 03. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "03. 산업복지의 해결 구조 — 1차·2차",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">1차: 노-사 (시장임금)</span>
+          <span class="badge badge-green">2차: 노-사-정 (사회임금)</span>
+          <span class="badge badge-purple">사회임금의 구체적 내용</span>
+        </div>
+      `
+    },
+    { icon: "🔧", title: "1차적 해결 — 작업장 영역 (노-사)",
+      html: `
+        <div class="hbox hbox-blue">1차적 해결은 <b>작업장 영역에서 노사 간 단체협상</b>을 통해 시장임금·노동환경·근로조건을 협상하는 것이다.</div>
+        <ul class="pts blue">
+          <li><b>시장임금의 균형</b></li>
+          <li>노사 간 단체협상을 통해 임금·노동환경·근로조건 협상</li>
+          <li>최저임금 등 기준은 노사정 협의에서 제공되기도 함</li>
+          <li><b>단결권</b> → 노동조합 결성 → <b>단체교섭권</b> 요구 → 협상</li>
+          <li>헌법적으로 보장된 결사의 자유에 기반</li>
+        </ul>
+      `
+    },
+    { icon: "🏗️", title: "2차적 해결 — 사회적 영역 (노-사-정)과 사회임금",
+      html: `
+        <div class="hbox hbox-blue">2차적 해결은 <b>노-사-정이 함께 사회임금을 확대</b>하는 것이다. 사회임금 = 세금(조세)이 투입되는 공적 서비스이며, 근로기준법이 법적 근거가 된다.</div>
+        <div class="sub">사회임금의 구체적 내용</div>
+        <ul class="pts green">
+          <li>전 국민 고용보험·실업보험 제도</li>
+          <li>의료보험 (기업별 → 전 국민으로 확대) — 지역가입자 제도로 확대 = 사회임금 확보</li>
+          <li>공공부문 일자리 창출</li>
+          <li>임금 보조금 지원, 직업훈련</li>
+          <li><b>최저임금제 ★</b></li>
+          <li>사회적 약자의 고용 촉진</li>
+          <li>산업재해 근절을 위한 징벌 제도</li>
+        </ul>
+        <div class="sub">신사회위험 대응</div>
+        <ul class="pts purple">
+          <li>양육(육아): 신사회 위험에서 이제는 모두가 공감하는 사회적 위험</li>
+          <li>일·가정 양립 제도 / 아버지 출산휴가 (어머니 출산휴가에서 확대)</li>
+          <li>직장 내 고용 차별 (정규직/비정규직)</li>
+          <li>장애인의 노동 참여 보장</li>
+          <li><b>비정형 노동</b> (파트타임, 건건이 노동 등)에 대한 법적 보호</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 ★ <b>근로기준법</b>: 노동 3권을 법률로 보장하는 헌법의 하위법률 → 2차적 해결의 근거</div>
+      `
+    },
+
+    // ── 04. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "04. 대상체계적 vs 구조체계적 관점 비교",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">분배구조의 이중화</span>
+          <span class="badge badge-green">복지수혜의 형평성</span>
+          <span class="badge badge-purple">복지정책의 안정성</span>
+          <span class="badge badge-red">한국의 구조체계적 산업복지 미비</span>
+        </div>
+      `
+    },
+    { icon: "⚖️", title: "분배구조의 이중화 및 양극화",
+      html: `
+        <div class="hbox hbox-blue">핵심 논쟁: <b>"기업이 축적한 이윤을 기업에 귀속시킬 것인가 vs 사회적으로 분배할 것인가"</b> — 이윤의 원천은 공동체(시민들이 상품을 구매하기 때문)이므로 사회적 분배 필요성이 제기된다.</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th class="th-blue">대상체계적 관점</th><th class="th-green">구조체계적 관점</th></tr>
+          <tr><td><b>분배 기준</b></td><td>시장임금 (임금 차이에 의한 분배)</td><td>사회임금 (사회적 재분배)</td></tr>
+          <tr><td><b>이윤의 귀속</b></td><td>기업에 귀속</td><td>사회적 분배로 재분배</td></tr>
+          <tr><td><b>가치 기반</b></td><td>경쟁력 (능력에 따른 차이)</td><td>연대성 (사회적 재분배)</td></tr>
+          <tr><td><b>강조점</b></td><td>생산성·이윤 향상</td><td>조세제도·사회서비스·인프라 구축</td></tr>
+          <tr><td><b>결과</b></td><td>분배구조 이중성·양극화 심화 가능</td><td>불균형 최소화</td></tr>
+        </table>
+      `
+    },
+    { icon: "📊", title: "복지수혜의 형평성 · 고용기회 상실 대응 · 복지정책 안정성",
+      html: `
+        <div class="hbox hbox-blue">구조체계적 관점은 공동체 구성원 여부를 기준으로 <b>수혜 불균등을 최소화</b>하고, 고용 여부와 무관하게 사회적 보호를 제공하며, <b>사회 정책의 안정성</b>을 확보한다.</div>
+        <div class="sub">복지수혜의 형평성</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th class="th-blue">대상체계적</th><th class="th-green">구조체계적</th></tr>
+          <tr><td><b>기준</b></td><td>고용관계·직종·사업장 규모·정규직 여부</td><td>공동체 구성원 여부</td></tr>
+          <tr><td><b>특성</b></td><td>수혜 불균등성 심각</td><td>불균등성 최소화</td></tr>
+        </table>
+        <div class="hbox hbox-yellow">💡 사례: 미국 — 구글·메타 등 대기업에 다니면 최고의 복지 but 극소수만 입사 가능. 보편적 건강보장제도 없음 → 코로나 확진자 치료비 4천만원, 실업자는 보장 못받음</div>
+        <div class="sub">고용기회 상실 위험에 대한 대응</div>
+        <table class="comp-table">
+          <tr><th></th><th class="th-blue">대상체계적</th><th class="th-green">구조체계적</th></tr>
+          <tr><td><b>방식</b></td><td>고용관계 전제 복지 → 실업 시 제외</td><td>전 국민 고용보험·연금 → 고용 여부 무관 보장</td></tr>
+        </table>
+        <div class="sub">복지정책의 안정성</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th class="th-blue">대상체계적</th><th class="th-green">구조체계적</th></tr>
+          <tr><td><b>복지의 성격</b></td><td>경쟁적 권리 (능력에 따른 차이)</td><td>시민적 권리 (제도로 정착)</td></tr>
+          <tr><td><b>결정권</b></td><td>사용자(기업)의 자의성 작용</td><td>사회 정책의 안정성</td></tr>
+          <tr><td><b>경기 후퇴 시</b></td><td>노조 약화 → 많은 사람이 복지에서 제외</td><td>노사정 사회적 협의 → 추경·예산 조정으로 대응</td></tr>
+        </table>
+      `
+    },
+    { icon: "🇰🇷", title: "한국의 구조체계적 산업복지 미비",
+      html: `
+        <div class="hbox hbox-blue">한국은 기업별 노사관계 구조·낮은 노동조합 조직률·사내하청 중층 고용관계·노동 3권 약화로 인해 <b>구조체계적 산업복지가 미비</b>한 상황이다.</div>
+        <ul class="pts red">
+          <li><b>지배적 기업별 노사관계 구조</b>: 단체협상 내용이 임금과 근로조건에만 한정 / 사회임금 등 정치적 제안은 불법으로 간주</li>
+          <li><b>낮은 노동조합 조직률</b>: 중앙의 대표성이 인정되지 못하는 환경</li>
+          <li><b>사내하청의 중층적 고용관계</b>: 동일 작업장 내 동일 노동이지만 사내하도급은 고용 안정 장치에서 제외</li>
+          <li><b>노동 3권의 약화</b>: → 산별노조와 산별교섭 어려움 → 노동시민 전체를 대표하는 노동조합 불가 (정규직 이기주의 지배담론 강제) → 사회임금 정책의 압력 어려움 → 복지국가의 견인세력 성장 어려움</li>
+        </ul>
+      `
+    },
+
+    // ── 05. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "05. 사회복지와 산업복지의 위치 규정",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">위계적 구조 vs 수평적 구조</span>
+          <span class="badge badge-green">칼 폴라니의 이론적 토대</span>
+        </div>
+      `
+    },
+    { icon: "📐", title: "사회복지와 산업복지의 위치 규정",
+      html: `
+        <div class="hbox hbox-blue">대상체계적 관점은 <b>위계적 구조(수직)</b>, 구조체계적 관점은 <b>수평적 구조(협력)</b>를 지향하며, 국가의 역할에서 근본적 차이가 발생한다.</div>
+        <table class="comp-table">
+          <tr><th>구조</th><th>개념</th><th>국가 역할</th></tr>
+          <tr><td><b>위계적 구조</b></td><td>책임 소재 중심의 상하 개념정의 (정부 산하 부처 체계)</td><td>정부의 복지 역할 축소 모형</td></tr>
+          <tr><td><b>수평적 구조</b></td><td>기능 협력 중심의 독립적·상호 중첩·연계 구조</td><td>강화(확대) 모형</td></tr>
+        </table>
+        <div class="hbox hbox-yellow">💡 칼 폴라니: <b>"사회 속에 묻어 있는 시장"</b> — 시장은 사회와 분리된 것이 아니라 사회 안에 있으므로 이윤의 분배도 사회적으로 이루어져야 함 (구조체계적 관점의 이론적 토대)</div>
+      `
+    },
+
+    // ── 핵심 요약 ──────────────────────────────────────────
+    { icon: "📝", title: "9강 핵심 요약",
+      html: `
+        <table class="comp-table">
+          <tr><th>개념</th><th>핵심 내용</th></tr>
+          <tr><td><b>구조체계적 관점의 핵심</b></td><td>모든 작업장 전체를 바라봄 / 이윤·업종에 상관없이 모든 작업장 노동자가 대상 / 복지국가 발전의 현장으로 인식</td></tr>
+          <tr><td><b>노사정 3자</b></td><td>노동자(노동조합) + 고용주(사용자 단체) + 정부(국가) = 구조체계적 관점의 핵심 주체</td></tr>
+          <tr><td><b>ILO</b></td><td>1919년 베르사유 조약으로 설립 / "노동의 탈상품화 가치는 지켜져야 한다" / 노동 3권·임금·직업교육·노자 협력</td></tr>
+          <tr><td><b>갈등의 기조</b></td><td>목표: 불평등 해소 + 지위 향상 + 사회통합 / 배경: 공적 욕구 급증 + 사회적 불균형 확대</td></tr>
+          <tr><td><b>즉자적 존재 vs 대자적 존재</b></td><td>즉자적 = 물리적 표출 (동물) / <b>대자적</b> = 원인과 구조 파악 후 이성적·대화적 해결 (인간)</td></tr>
+          <tr><td><b>갈등의 제도화 5단계</b></td><td>갈등 인정 → 폭력 금지 → 대화·토론 → 합의 도출 → 사회통합</td></tr>
+          <tr><td><b>1차적 해결 (노-사)</b></td><td>작업장 영역 / 단체협상 → 시장임금 균형 / 단결권→노동조합→단체교섭권</td></tr>
+          <tr><td><b>2차적 해결 (노-사-정)</b></td><td>사회적 영역 / 사회임금 확대 / 최저임금제·전국민 고용보험·신사회위험 대응 등 / 근로기준법이 법적 근거</td></tr>
+          <tr><td><b>이윤의 사회화 논쟁</b></td><td>이윤의 원천 = 공동체(시민의 구매) → 사회적 분배 필요성 논거</td></tr>
+          <tr><td><b>한국의 미비 원인</b></td><td>기업별 노사관계 + 낮은 조직률 + 사내하청 중층 고용 + 노동 3권 약화 → 복지국가 견인세력 성장 어려움</td></tr>
+          <tr><td><b>칼 폴라니</b></td><td>"사회 속에 묻어 있는 시장" → 이윤 분배도 사회적으로 이루어져야 함 = 구조체계적 관점의 이론적 토대</td></tr>
+          <tr><td><b>종합 비교</b></td><td>대상체계적: 경쟁력·잔여주의·미국식 / 구조체계적: 연대성·제도주의·유럽식</td></tr>
+        </table>
+      `
+    },
+  ]
+},
+{ num: "10강", name: "노사정의 갈등과 협력 / 복지국가의 근간", icon: "🤝",
+  cards: [
+
+    // ── 01. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "01. 복지국가 체제에서 조직된 노동의 역할",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">조직된 노동의 중요성</span>
+          <span class="badge badge-red">빈곤 개념의 전환</span>
+          <span class="badge badge-purple">노동의 도구화 4가지</span>
+          <span class="badge badge-green">노동 지위 회복</span>
+        </div>
+      `
+    },
+    { icon: "🔗", title: "조직된 노동의 중요성",
+      html: `
+        <div class="hbox hbox-blue">자본(고용주 집단)은 이미 오래전부터 계급화·조직화되어 있으나, 노동은 처음부터 조직화되어 있지 않다. 복지국가에서 <b>노동이 얼마나 조직화되느냐</b>가 삶의 질 수준을 결정하는 핵심 요인이다.</div>
+        <div class="flow">
+          <span class="flow-item">자본: 이미 계급화·조직화</span>
+          <span class="flow-arrow">vs</span>
+          <span class="flow-item">노동: 개인별 계약관계 → 처음부터 조직화 안 됨</span>
+        </div>
+        <div class="hbox hbox-yellow">💡 복지국가 체제에서 <b>노동의 조직화 수준 = 복지국가 삶의 질 수준</b>을 결정하는 핵심 요인</div>
+      `
+    },
+    { icon: "🔄", title: "빈곤 개념의 전환",
+      html: `
+        <div class="hbox hbox-blue">빈곤은 <b>개인의 책임</b>이 아닌 <b>사회적 대응이 필요한 구조적 문제</b>라는 인식 전환이 복지국가 체제의 토대를 이루었다.</div>
+        <div class="sub">전환의 배경</div>
+        <div class="flow">
+          <span class="flow-item">자본주의 노동소외</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">임금 약화</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">모든 노동자의 빈곤</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">"개인 책임이 아니구나" → 사회적 대응 인식</span>
+        </div>
+        <div class="sub">빈곤의 구조적 해결 방안</div>
+        <ul class="pts green">
+          <li><b>산업민주주의</b>: 노동의 조직화를 통한 노동 시민의 민주적 참여</li>
+          <li>작업장 내 민주적 참여를 통한 성장 → 작업장 밖 사회 문제까지 해결</li>
+        </ul>
+        <div class="sub">핵심 학자: 베아트리스 웹 (Beatrice Webb)</div>
+        <ul class="pts purple">
+          <li>"가난은 개인의 책임이 아니다" → 빈곤의 사회구조적 원인을 <b>사회과학적으로 발견·증명</b></li>
+          <li>복지국가 체제로 싹틔운 이론적 토대 마련 → <b>베버리지 보고서</b>의 시초</li>
+          <li>복지국가 체제의 기본 틀 지지 / 노동권(생존권·사회권·기본권)의 보호</li>
+        </ul>
+      `
+    },
+    { icon: "⚙️", title: "복지국가 체제에서 노동의 도구화 4가지",
+      html: `
+        <div class="hbox hbox-blue">민주주의와 자본주의가 공동 운영되는 복지국가에서도 자본주의 경제 이데올로기가 강력하게 작동하여 노동의 <b>4가지 도구화</b>가 나타난다.</div>
+        <table class="comp-table">
+          <tr><th>유형</th><th>내용</th><th>사례</th></tr>
+          <tr><td><b>상품화</b></td><td>노동을 사고파는 상품으로만 취급</td><td>임금만으로 노동 평가</td></tr>
+          <tr><td><b>기계화</b></td><td>노동자를 기계의 부속품으로 취급</td><td>"시키는 것만 해"</td></tr>
+          <tr><td><b>유연화</b></td><td>정규직·비정규직 차별, 고용 불안</td><td>명절 수당 정규직에게만 지급</td></tr>
+          <tr><td><b>대상화</b></td><td>노동자를 관리·통제의 대상으로만 봄</td><td>이윤에 따라 수당 결정</td></tr>
+        </table>
+        <div class="sub">사회적 위험의 발생 경로</div>
+        <div class="flow">
+          <span class="flow-item">작업장 위험 묵인 ("조심하면 되지") = 위험 승인</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">사고 발생</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">노동자 사망 + 가족 불행 + 지역사회 피해</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">사회적 위험으로 확대</span>
+        </div>
+        <div class="hbox hbox-red">❌ 근본 원인: 노동소외 — "이거 위험합니다" → "시키는 대로 해요" = 노동소외 → <b>민주주의와 시민권 모두 위협</b></div>
+      `
+    },
+    { icon: "📈", title: "복지국가 체제에서 노동 지위의 회복",
+      html: `
+        <div class="hbox hbox-blue">경제 발전에도 삶의 질이 이중화·양극화되자 노동 지위 회복 운동이 등장하며, 노동은 <b>민주주의 지지 세력이자 시민권·사회권 확대 세력</b>으로 성장했다.</div>
+        <ul class="pts green">
+          <li>한국의 경우 <b>군사독재 시절</b> 노동지위 회복 운동이 강하게 나타남</li>
+          <li>작업장 민주주의 + 사회 민주주의가 자연스럽게 만남</li>
+          <li>→ 노동운동 = <b>민주주의 지지 세력</b>으로 자리매김</li>
+          <li>→ 시민권과 사회권의 <b>확대 세력으로 성장</b></li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 <b>복지국가 체제에서 노동은 특별한 지위를 지니고 있음</b></div>
+      `
+    },
+
+    // ── 02. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "02. 한국 사회에서 노동의 지위 및 인식",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-red">노동에 대한 문제적 현실</span>
+          <span class="badge badge-red">대표 사례 — "노동자풍의 마른 체형"</span>
+          <span class="badge badge-purple">본질적 문제들</span>
+        </div>
+      `
+    },
+    { icon: "🚨", title: "한국 사회에서 노동의 지위 — 문제적 현실",
+      html: `
+        <div class="hbox hbox-blue">한국 사회는 노동을 <b>사회 안전을 교란하는 갈등적 요소</b>로 격하하여 취급해온 역사를 가지고 있다.</div>
+        <table class="comp-table">
+          <tr><th>차원</th><th>인식</th></tr>
+          <tr><td><b>정부 차원</b></td><td>정부와 갈등을 빚는 집단</td></tr>
+          <tr><td><b>사회 차원</b></td><td>치안을 위협하는 집단</td></tr>
+        </table>
+        <div class="sub">대표 사례: "노동자풍의 마른 체형" (2010년)</div>
+        <ul class="pts red">
+          <li>부산 강도사건 수배 전단에서 인상착의 중 <b>"노동자풍의 마른 체형"</b>이라는 표현 사용</li>
+          <li>노동자 = 범죄자 이미지로 연결하는 사회적 인식의 단면</li>
+          <li>2010년 이후 이 표현 방식 자체가 사라짐</li>
+          <li>→ 군사독재 시절부터 교육을 통해 "노동 = 부정적 집단"으로 시민들에게 인식시켜온 결과</li>
+        </ul>
+        <div class="sub">결과적으로 나타나는 본질적 문제들</div>
+        <ul class="pts purple">
+          <li><b>임금 격차의 심화</b></li>
+          <li><b>작업장의 위험</b> (노출·묵인)</li>
+          <li><b>노동시장 왜곡 및 공동체 불안정</b></li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 "나도 노동자임에도 불구하고 내가 노동자인가" 라는 <b>이중적 인식 체계</b>가 형성됨</div>
+      `
+    },
+
+    // ── 03. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "03. 노사정 체계 — 출현 배경과 개념",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">노사정 체계의 출현 배경</span>
+          <span class="badge badge-green">노사정 체계의 개념</span>
+          <span class="badge badge-purple">사회적 합의주의</span>
+        </div>
+      `
+    },
+    { icon: "🌐", title: "노사정 체계의 출현 배경",
+      html: `
+        <div class="hbox hbox-blue">글로벌 시장의 충격에 사전 대응하기 위해 노동·자본·국가 3주체 간 <b>이익교환체계를 통한 3자 타협</b>의 필요성이 증가하면서 노사정 체계가 출현했다.</div>
+        <div class="sub">출현 배경</div>
+        <div class="flow">
+          <span class="flow-item">글로벌 시장 충격 (예: 한국 IMF, 2008년 금융위기)</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">시장 낙오·실패 → 사회적 양극화·갈등 분출</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">사전 대응 논의 체계 마련 필요</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">노사정 체계 출현</span>
+        </div>
+        <div class="hbox hbox-yellow">💡 한국의 노사정 체계도 출범한 지 얼마 되지 않음 (역사가 짧음)</div>
+      `
+    },
+    { icon: "📋", title: "노사정 체계의 개념과 의제",
+      html: `
+        <div class="hbox hbox-blue"><b>노동조합·사용자·정부 간의 협의·협상·정책 등에 대해 사회적 대화를 진행하고 결정하는 체계(system)</b>이다.</div>
+        <div class="sub">의제로 다루는 내용</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th>구체적 내용</th></tr>
+          <tr><td><b>작업장 단위</b></td><td>노동임금, 노동시간</td></tr>
+          <tr><td><b>사회정책 단위</b></td><td>정년, 정규직·비정규직 등 노동시장 구조</td></tr>
+          <tr><td><b>사회보장</b></td><td>사회보장의 수준 및 사각지대 해소, 사회임금</td></tr>
+        </table>
+      `
+    },
+    { icon: "🏛️", title: "사회적 합의주의 (Social Corporatism)",
+      html: `
+        <div class="hbox hbox-blue"><b>사용자 단체와 노동조합이 각각의 소속 집단 구성원들의 이해를 대변하고 공공정책 결정 과정에 참여하는 것</b>이며, 사용자 측과 노동자 측 모두 중앙집권적 대표성을 지닌다.</div>
+        <div class="sub">구성 주체</div>
+        <div class="badge-row">
+          <span class="badge badge-blue">사용자 측: 전경련 등</span>
+          <span class="badge badge-green">노동자 측: 민주노총·한국노총 (양대 노조)</span>
+          <span class="badge badge-purple">정부: 대표성 보유</span>
+        </div>
+        <div class="sub">사회적 합의주의의 구성 특징</div>
+        <table class="comp-table">
+          <tr><th>특징</th><th>내용</th></tr>
+          <tr><td><b>1차적 특징: 대립 완화</b></td><td>다원주의(이익집단)에 기반한 노동과 자본의 대립은 사회경제적 발전을 위해 완화될 필요성이 있음</td></tr>
+          <tr><td><b>2차적 특징: 조정</b></td><td>국가의 복잡성 증가와 일국경제에서 세계경제체제로의 확대에 따른 권력관계의 3주체 간 조정의 필요성</td></tr>
+        </table>
+      `
+    },
+
+    // ── 04. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "04. 노사정 체계의 유형",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-red">다원주의 노사정 체계</span>
+          <span class="badge badge-green">정책협의 노사정 체계</span>
+        </div>
+      `
+    },
+    { icon: "⚖️", title: "노사정 체계의 두 유형 비교",
+      html: `
+        <div class="hbox hbox-blue">노사정 체계는 <b>다원주의(복지국가 축소)</b>와 <b>정책협의(복지국가 강화)</b> 두 유형으로 나뉘며, 국가의 역할과 복지국가 체제에 정반대 영향을 미친다.</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th class="th-blue">다원주의 노사정 체계</th><th class="th-green">정책협의 노사정 체계</th></tr>
+          <tr><td><b>국가 역할</b></td><td>국가 역할 축소 / 노조와 사용자 간 자유경쟁 견지</td><td>노사 간 네트워크와 파트너십 견지</td></tr>
+          <tr><td><b>협상 방식</b></td><td>경쟁적 이익 표출 / 분산적 그룹 협상 / 집단 간 이익 대립</td><td>정부와 이해관계자 간 공개적 협상 (더 시끄럽지만 수평적)</td></tr>
+          <tr><td><b>정책 결정</b></td><td>정부 결정 (힘 있는 이익집단 목소리에 무게)</td><td>사회협약의 산물</td></tr>
+          <tr><td><b>복지국가 영향</b></td><td><b>복지국가 체제의 축소</b></td><td><b>복지국가 체제의 강화</b></td></tr>
+          <tr><td><b>대표 국가</b></td><td>미국 등 자유주의 복지국가</td><td>유럽(스웨덴 등) 사회민주주의 복지국가</td></tr>
+        </table>
+        <div class="hbox hbox-yellow">💡 다원주의에서 힘 있는 이익집단이 정책 결정에 영향을 미치는 이유: 힘 있는 이익집단이 정부를 지지해주기 때문</div>
+      `
+    },
+
+    // ── 05. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "05. 노사정 체계 발전의 영향 요인 (4가지)",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">① 시민사회의 인식 지형</span>
+          <span class="badge badge-green">② 노동의 조직화 형태</span>
+          <span class="badge badge-purple">③ 노동과 정치의 연계</span>
+          <span class="badge badge-yellow">④ 정부의 관점</span>
+        </div>
+      `
+    },
+    { icon: "🧭", title: "노사정 체계 발전의 4가지 영향 요인",
+      html: `
+        <div class="hbox hbox-blue">노사정 체계의 발전 방향은 <b>시민사회 인식 / 노동 조직화 형태 / 노동·정치 연계 / 정부 관점</b> 4가지 요인에 의해 결정된다.</div>
+        <div class="sub">① 시민사회의 인식 지형</div>
+        <table class="comp-table">
+          <tr><th>사회문화 분위기</th><th>방향</th></tr>
+          <tr><td>국가개입 축소·경쟁 강조</td><td>→ <b>다원주의</b> 노사정 시스템 강화</td></tr>
+          <tr><td>평등·연대·관용·타협 강조</td><td>→ <b>정책협의</b> 노사정 시스템 강화</td></tr>
+        </table>
+        <div class="sub">② 상이한 노동의 조직화 형태</div>
+        <table class="comp-table">
+          <tr><th>노동 조직 형태</th><th>방향</th></tr>
+          <tr><td>개별·단위 노조 중심의 독자적 단체교섭 (기업별 노조)</td><td>→ <b>다원주의</b> 노사정 시스템 강화</td></tr>
+          <tr><td>대표성에 기반한 포괄적·중앙집중적 단체교섭 (민주노총·한국노총)</td><td>→ <b>정책협의</b> 노사정 시스템 강화</td></tr>
+        </table>
+        <div class="sub">③ 노동과 정치의 연계 여부</div>
+        <table class="comp-table">
+          <tr><th>노동·정치 관계</th><th>방향</th></tr>
+          <tr><td>정당과 노조 간의 <b>연계 부재</b> → 개별 노동조합의 이익집단화</td><td>→ <b>복지국가 축소</b> 경향</td></tr>
+          <tr><td>정당과 노조 간의 <b>강력한 연계</b> → 중앙집권화된 대표성으로 의회 협력·견제</td><td>→ <b>복지국가 강화</b> 경향</td></tr>
+        </table>
+        <div class="sub">④ 정책 결정 과정에 대한 정부의 관점</div>
+        <table class="comp-table">
+          <tr><th>정부 관점</th><th>방향</th></tr>
+          <tr><td><b>다원주의 시스템</b>: 기업 투자 성장·경쟁력 제고 강화 (규제 완화)</td><td>→ <b>복지국가 축소</b></td></tr>
+          <tr><td><b>정책협의 시스템</b>: 노사 간 타협 유도, 보장자·보상자로서의 정부 역할 (사회보장 강화)</td><td>→ <b>복지국가 강화</b></td></tr>
+        </table>
+      `
+    },
+
+    // ── 06. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "06. 복지국가의 근간으로서 노사정 체계",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">ILO 열쇠 3개의 상징</span>
+          <span class="badge badge-green">사회협력의 의미</span>
+        </div>
+      `
+    },
+    { icon: "🗝️", title: "복지국가의 근간 — ILO 열쇠 3개와 사회협력",
+      html: `
+        <div class="hbox hbox-blue">ILO 본부 정문의 열쇠 3개는 <b>노동·자본·국가 3주체가 함께</b> 사회정책의 문을 열 수 있음을 상징하며, 어느 한 주체만으로는 사회를 열 수 없음을 의미한다.</div>
+        <div class="sub">ILO 열쇠 3개의 상징</div>
+        <div class="badge-row">
+          <span class="badge badge-blue">🗝️ 노동</span>
+          <span class="badge badge-green">🗝️ 자본</span>
+          <span class="badge badge-purple">🗝️ 국가</span>
+        </div>
+        <ul class="pts blue">
+          <li>열쇠가 3개 = 노동·자본·국가 3주체가 <b>함께</b> 사회정책의 문을 열 수 있음</li>
+          <li>하나만 있는 것이 아님 = 어느 한 주체만으로는 사회를 열 수 없음</li>
+        </ul>
+        <div class="sub">사회협력의 의미</div>
+        <div class="hbox hbox-yellow">💡 <b>사회협력</b>: 공정하게 부와 권력, 권리 등 사회적 가치를 민주적 방식에 의거하여 공정하게 분배하는 <b>사회정의의 실현</b></div>
+        <ul class="pts green">
+          <li>사회를 지탱하는 공동 주체로서의 역할 수행</li>
+          <li>사회적 문제(빈곤, 양극화, 불평등)에 대한 공동의 참여</li>
+        </ul>
+      `
+    },
+
+    // ── 핵심 요약 ──────────────────────────────────────────
+    { icon: "📝", title: "10강 핵심 요약",
+      html: `
+        <table class="comp-table">
+          <tr><th>개념</th><th>핵심 내용</th></tr>
+          <tr><td><b>조직된 노동의 역할</b></td><td>노동의 조직화 수준 = 복지국가 삶의 질 수준 결정 / 자본은 이미 조직화, 노동은 처음부터 비조직화</td></tr>
+          <tr><td><b>빈곤 개념 전환</b></td><td>개인 책임 → 사회구조적 문제 / 베아트리스 웹 이론 → 베버리지 보고서의 시초</td></tr>
+          <tr><td><b>노동의 도구화 4가지</b></td><td>상품화 · 기계화 · 유연화 · 대상화 — 자본주의 이데올로기 강화 결과</td></tr>
+          <tr><td><b>사회적 위험 발생 경로</b></td><td>작업장 위험 묵인(승인) → 사고 → 노동자·가족·지역사회 피해 → 사회적 위험 확대</td></tr>
+          <tr><td><b>노동 지위 회복</b></td><td>군사독재 시절 노동운동 = 민주주의 지지 세력 → 시민권·사회권 확대 세력으로 성장</td></tr>
+          <tr><td><b>"노동자풍의 마른 체형"</b></td><td>2010년 부산 수배 전단 사례 / 군사독재 이후 교육을 통해 형성된 부정적 노동자 인식의 단면</td></tr>
+          <tr><td><b>노사정 체계 출현 배경</b></td><td>글로벌 시장 충격(IMF·금융위기) → 사회적 양극화 → 3주체 3자 타협 필요성 증가</td></tr>
+          <tr><td><b>노사정 체계 개념</b></td><td>노동조합·사용자·정부 간 협의·협상·정책에 대해 사회적 대화를 진행·결정하는 체계</td></tr>
+          <tr><td><b>사회적 합의주의</b></td><td>사용자 단체와 노동조합이 중앙집권적 대표성을 지니고 공공정책 결정 과정에 참여하는 것</td></tr>
+          <tr><td><b>다원주의 노사정</b></td><td>자유경쟁·분산적 협상 / 힘 있는 이익집단 영향력 / <b>복지국가 축소</b> / 미국 대표</td></tr>
+          <tr><td><b>정책협의 노사정</b></td><td>네트워크·파트너십 / 공개적 협상 / 사회협약의 산물 / <b>복지국가 강화</b> / 유럽 대표</td></tr>
+          <tr><td><b>4가지 영향 요인</b></td><td>①시민사회 인식 ②노동 조직화 형태 ③노동·정치 연계 ④정부 관점</td></tr>
+          <tr><td><b>ILO 열쇠 3개</b></td><td>노동·자본·국가 3주체가 함께 사회정책의 문을 열 수 있음 — 단독 불가</td></tr>
+          <tr><td><b>사회협력</b></td><td>부·권력·권리 등 사회적 가치를 민주적 방식으로 공정하게 분배 = <b>사회정의의 실현</b></td></tr>
+        </table>
+      `
+    },
+  ]
+},
+{ num: "11강", name: "작업장 위험과 기업의 책임 / 복지국가의 목표", icon: "⚠️",
+  cards: [
+
+    // ── 01. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "01. 복지국가 체제의 배경 — 왜 작업장 안전이 복지국가의 목표인가",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">복지국가 탄생 배경</span>
+          <span class="badge badge-green">복지국가의 목표</span>
+          <span class="badge badge-red">기술 발전과 작업장 위험</span>
+        </div>
+      `
+    },
+    { icon: "🌍", title: "복지국가 탄생 배경과 목표",
+      html: `
+        <div class="hbox hbox-blue">자본주의의 이윤 축적 과정에서 발생한 빈곤과 제2차 세계대전을 거쳐, <b>"자본주의를 어떻게 조정할 것인가?"</b>에 대한 답으로 복지국가(Welfare State)가 탄생했다.</div>
+        <div class="sub">탄생 배경</div>
+        <div class="flow">
+          <span class="flow-item">자본주의 이윤 축적</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">인간과 노동의 분리 → 빈곤 발생</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">시장 확대 → 식민지 쟁탈 → 제2차 세계대전</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">복지국가(Welfare State) 탄생</span>
+        </div>
+        <ul class="pts blue">
+          <li>경제: 시장자본주의 / 정치: 민주주의</li>
+          <li>국가가 시장에 개입하여 이윤 축적을 <b>견제·규제</b></li>
+        </ul>
+        <div class="sub">복지국가의 목표</div>
+        <ul class="pts green">
+          <li>노동의 <b>상품화·도구화를 막자</b></li>
+          <li>인간의 본질적 모습을 지켜나갈 수 있도록</li>
+          <li>개인과 공동체 모두가 <b>행복을 달성</b>할 수 있도록</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 기술 발전과 작업장 위험의 연관: 시장자본주의 → <b>기술 발전은 필연적</b> / 기술 발전 → 상품의 질 향상 + <b>위험의 수준·양도 상승</b> / 한번 사고 시 대규모 인재 → 개인·가족·공동체 모두의 불행</div>
+      `
+    },
+
+    // ── 02. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "02. 작업장 위험",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">작업장의 두 가지 효과</span>
+          <span class="badge badge-red">위험의 계급적 성격</span>
+          <span class="badge badge-purple">작업장 위험에 대한 접근</span>
+        </div>
+      `
+    },
+    { icon: "🏭", title: "작업장의 두 가지 효과와 핵심 질문",
+      html: `
+        <div class="hbox hbox-blue">작업장은 긍정 효과(임금+사회적 가치)와 부정 효과(위험의 필연적 수반)를 동시에 가지며, <b>작업장의 위험은 사회적이다</b>.</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th>내용</th></tr>
+          <tr><td><b>긍정 효과</b></td><td>상품과 서비스 생산으로 임금(노동자) + 사회적 가치 / 공동체 모두에게 이익 제공</td></tr>
+          <tr><td><b>부정 효과</b></td><td>상품과 서비스의 생산에는 <b>위험이 필연적으로 수반됨</b> / 위험은 계급적 성격 → 저임금 영역에 집중 (3D: Dirty, Difficult, Dangerous)</td></tr>
+        </table>
+        <div class="sub">핵심 질문과 응답</div>
+        <ul class="pts blue">
+          <li>Q1. 작업장의 위험은 개인적인가? 사회적인가?</li>
+          <li>Q2. 작업장에서의 생산활동은 누구를 위한 것인가?</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 응답: 작업장에서 생산되는 상품과 서비스는 <b>공동체 구성원이 행복 달성을 위해 필요한 것</b> / 생산에 투입되는 노동은 결국 <b>공동체를 위한 것</b> → <b>★ 작업장의 위험은 사회적이다</b></div>
+      `
+    },
+    { icon: "📊", title: "위험의 계급적 성격",
+      html: `
+        <div class="hbox hbox-blue">위험 분배의 역사는 부의 분배와 마찬가지로 계급 유형에 밀착된다 — <b>부는 상층에 축적, 위험은 하층에 축적</b>된다.</div>
+        <ul class="pts red">
+          <li><b>부유한 계급</b>: 위험으로부터의 안전과 자유를 <b>구매</b>하는 것이 용이 → 덜 위험한 작업장에서 일할 수 있음</li>
+          <li><b>저임금 노동계급</b>: 안전 구매 불가 → 위험한 작업장에 배치될 가능성 높음</li>
+          <li><b>노동 = 위험이 축적되는 계급으로서의 가장 큰 영향 요인</b></li>
+        </ul>
+        <div class="sub">빈곤·사회적 양극화로 인해 위험이 집중되는 집단</div>
+        <div class="badge-row">
+          <span class="badge badge-red">비숙련노동자</span>
+          <span class="badge badge-red">이주노동자</span>
+          <span class="badge badge-red">여성노동자</span>
+          <span class="badge badge-red">청년노동자</span>
+          <span class="badge badge-red">비정규직 노동자</span>
+        </div>
+        <div class="hbox hbox-red">❌ <b>고위험 작업장 = 고임금 노동자가 아닌 저임금 노동자가 배치될 가능성이 높음</b></div>
+      `
+    },
+    { icon: "⚖️", title: "작업장 위험에 대한 접근 방식",
+      html: `
+        <div class="hbox hbox-blue">어떠한 작업장도 위험이 완벽하게 제거된 안전한 작업장은 없으며, 노동자가 위험을 감수하는 이유는 <b>임금(생존의 기본 조건)</b>이다.</div>
+        <div class="sub">접근 방식의 대립</div>
+        <table class="comp-table">
+          <tr><th>개인적 접근 (계약관계)</th><th>사회적 접근 (공동체 구조)</th></tr>
+          <tr><td>작업장 안전을 <b>노동자 개인의 판단</b>에 맡김</td><td>조직된 노동과 <b>자본의 협상</b>에 맡김</td></tr>
+          <tr><td>위험을 <b>승인</b> (비용 절감)</td><td>위험을 <b>제거(예방)</b> (비용 지불)</td></tr>
+        </table>
+        <div class="hbox hbox-red">❌ 문제: 노동자 스스로 위험을 선택했다는 이유로 <b>고용주·경영자들이 산업재해를 노동자의 부주의 탓으로 여기는 경향</b> 매우 강함 (국회 청문회에서도 나타난 사례)</div>
+        <div class="sub">구의역 사고 사례</div>
+        <ul class="pts red">
+          <li>젊은 청년이 지하철을 멈추지 않도록 하기 위해 들어갔다가 사망</li>
+          <li>화력발전소 탄 컨베이어 벨트 작업 중 사망</li>
+          <li>개인이 판단하지 못했거나, 작업 라인이 멈추면 책임이 자신에게 올까봐 들어갈 수밖에 없었던 것</li>
+          <li>→ <b>구조적 접근</b>이 문제의 본질에 더 맞음</li>
+        </ul>
+      `
+    },
+
+    // ── 03. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "03. 작업장 위험의 사회적 확장",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-red">확장 경로</span>
+          <span class="badge badge-purple">대표 사례</span>
+          <span class="badge badge-blue">시민권적 측면</span>
+        </div>
+      `
+    },
+    { icon: "🌊", title: "작업장 위험의 사회적 확장",
+      html: `
+        <div class="hbox hbox-blue">작업장에서 위험을 승인하면 <b>안전불감증</b>으로 나타나고, 작업장의 부정 효과가 <b>사회적 부정 효과</b>로 확대된다.</div>
+        <div class="sub">확장 경로</div>
+        <div class="flow">
+          <span class="flow-item">작업장의 위험 (노동자)</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">가족의 위험</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">사회적 위험</span>
+        </div>
+        <div class="sub">대표 사례</div>
+        <ul class="pts red">
+          <li><b>지하철 붕괴</b>: 안전장치 미비로 붕괴</li>
+          <li><b>아파트 공사 현장</b>: 시간에 쫓겨 철근 부족 콘크리트 사용 → 아파트 층 붕괴</li>
+          <li><b>냉동창고 화재</b>: 위험 승인 → 화재 발생 → 지역사회 농사·주거에 영향</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 시민권적 측면: <b>작업장의 위험은 사회적 문제이기에 시민권적 측면에서 생산과정의 안전보장이 형성되어야 함</b></div>
+      `
+    },
+
+    // ── 04. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "04. 작업장 안전에 대한 시민권적·사회권적 접근",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">시민권적 측면</span>
+          <span class="badge badge-green">사회권적 측면</span>
+          <span class="badge badge-red">작업장 안전의 정의</span>
+        </div>
+      `
+    },
+    { icon: "🛡️", title: "작업장 안전에 대한 시민권적·사회권적 접근",
+      html: `
+        <div class="hbox hbox-blue">작업장 안전은 <b>자유롭게(시민권) + 안전하게(사회권)</b> 행복을 추구할 권리 양 측면에서 생산과정의 안전보장이 형성되어야 한다.</div>
+        <table class="comp-table">
+          <tr><th>측면</th><th>내용</th></tr>
+          <tr><td><b>시민권적 측면</b></td><td>행복을 자유롭게 추구할 조건 (자유권)</td></tr>
+          <tr><td><b>사회권적 측면</b></td><td>행복을 안전하게 추구할 조건 (사회권)</td></tr>
+        </table>
+        <div class="sub">작업장 안전의 정의</div>
+        <div class="hbox hbox-yellow">💡 <b>작업장 안전</b> = 권리적 측면(참여권): 작업장의 안전 문제에 관해 영향력을 행사하고 <b>의사결정에 참여</b>할 권리. 자격 및 권리적 측면에서 논의되었던 <b>시민권이 작업장 안전 영역으로 재확립</b>되어야 함.</div>
+        <div class="hbox hbox-red">❌ 작업에 조금이라도 의심이 들면 <b>"멈추는 것"이 최우선</b> — 아침에 출근한 가족이 저녁에 돌아올 수 있도록 하는 가장 기본적인 전제 조건</div>
+      `
+    },
+
+    // ── 05. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "05. 작업장 책임의 주체",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">생애주기와 작업장</span>
+          <span class="badge badge-green">작업장 안전의 책임 구조</span>
+          <span class="badge badge-purple">칼 폴라니 — 사회 속에 묻어 있는 시장</span>
+        </div>
+      `
+    },
+    { icon: "👔", title: "작업장 책임의 주체와 칼 폴라니",
+      html: `
+        <div class="hbox hbox-blue">작업장은 생애주기에서 <b>가장 오랜 기간을 보내는 삶의 현장</b>이며, 안전 책임은 사업주 선한 책임성을 넘어 <b>공동의 균등 책임성</b>으로 전환되어야 한다.</div>
+        <div class="sub">생애주기와 작업장</div>
+        <div class="flow">
+          <span class="flow-item">학교 (학생) → 안전 책임: 학교</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">작업장 (노동자) → 안전 책임: <b>기업</b></span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">은퇴 → 안전 책임: <b>공동체가 함께</b> (그동안 공동체를 위해 일했으므로)</span>
+        </div>
+        <div class="sub">작업장 안전의 책임 구조</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th>내용</th></tr>
+          <tr><td><b>사업주의 선한 책임성</b></td><td>기업가 개인의 선한 마음에 의존 (한계: 자발성에만 기댐)</td></tr>
+          <tr><td><b>공동의 균등 책임성 ★</b></td><td>고용주·노동자 모두가 공동의 균등한 책임을 짐</td></tr>
+        </table>
+        <div class="sub">칼 폴라니 — "사회 속에 묻어 있는 시장"</div>
+        <div class="hbox hbox-yellow">💡 시장은 사회를 <b>지배하는 것이 아니라</b>, 사회를 유지하기 위해 <b>봉사</b>해야 함 / 작업장에 참여하는 모든 주체가 <b>이익의 분배 과정 및 안전에 대한 논의에 함께 참여</b>해야 함 / 이윤 창출에 참여한 주체들이 이익의 분배과정 참여 및 민주적 운영 참여 → <b>강한 사회</b></div>
+      `
+    },
+
+    // ── 06. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "06. 기업의 책임성과 산업민주주의",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">기업의 책임성 핵심 내용</span>
+          <span class="badge badge-green">구체적 참여 방식</span>
+          <span class="badge badge-purple">산업민주주의로의 확장</span>
+        </div>
+      `
+    },
+    { icon: "🏗️", title: "기업의 책임성과 산업민주주의",
+      html: `
+        <div class="hbox hbox-blue"><b>노동의 조직화 보장·참여성 보장·민주성 보장·투명성 보장</b>을 통해, 작업장에 출근한 그 어떠한 노동자도 결코 퇴근하지 못하는 상황이 발생하지 않도록 해야 한다.</div>
+        <div class="sub">핵심 원칙</div>
+        <ul class="pts blue">
+          <li>작업장의 안전을 마련하는 시스템에 <b>노동이 주체적으로 참여하고 감시하며 함께 관리</b></li>
+          <li>이유: 작업장 위험 요소를 <b>가장 잘 아는 사람 = 거기서 일하는 노동자</b></li>
+        </ul>
+        <div class="sub">구체적 참여 방식</div>
+        <table class="comp-table">
+          <tr><th>방식</th><th>내용</th></tr>
+          <tr><td><b>단체협상</b></td><td>이윤 분배 + 안전 확보에 대한 협상</td></tr>
+          <tr><td><b>노동이사제 ★</b></td><td>노동자 대표가 이사회에 참여하여 안전·경영 논의</td></tr>
+        </table>
+        <div class="hbox hbox-yellow">💡 산업민주주의로의 확장: 노동조합의 단체협상을 통한 이윤의 배분과 안전의 확보 → 기업 운영의 공동 책임을 위한 경영 참여(노동이사제) / <b>기업의 성장부터 수익 창출, 이윤 분배, 작업장 안전 등에 노동조합이 참여 = 산업민주주의 확장</b></div>
+      `
+    },
+
+    // ── 07. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "07. 노동정치 → 복지정치 — 현대 복지국가의 확장된 기본틀",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">작업장 노동정치</span>
+          <span class="badge badge-green">시민사회 복지정치</span>
+        </div>
+      `
+    },
+    { icon: "🌐", title: "노동정치에서 복지정치로 — 복지국가의 목표",
+      html: `
+        <div class="hbox hbox-blue">작업장에서의 노동정치(조직된 노동+고용주)가 시민사회의 복지정치(노+사+정+시민사회)로 확장되고, 이것이 <b>복지국가의 목표</b>로 귀결된다.</div>
+        <div class="sub">관계 구조</div>
+        <div class="flow">
+          <span class="flow-item">작업장의 노동정치 (조직된 노동 + 고용주)</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">시민사회 복지정치 (노 + 사 + 정 + 시민사회)</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">현대 복지국가의 확장된 기본틀</span>
+        </div>
+        <ul class="pts purple">
+          <li><b>작업장 노동정치</b>: 조직된 노동과 고용주가 함께 논의·토론·합의</li>
+          <li><b>시민사회 복지정치</b>: 노사정 + 시민사회가 복지국가를 어떻게 유지·발전시킬 것인지</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 작업장에서의 안전을 책임지기 위한 <b>노동정치</b>가 결국 시민사회의 <b>복지정치</b>로 연결되고, 이것이 <b>복지국가의 목표</b>로 귀결됨</div>
+      `
+    },
+
+    // ── 핵심 요약 ──────────────────────────────────────────
+    { icon: "📝", title: "11강 핵심 요약",
+      html: `
+        <table class="comp-table">
+          <tr><th>개념</th><th>핵심 내용</th></tr>
+          <tr><td><b>복지국가 탄생 배경</b></td><td>자본주의 한계 + 제2차 세계대전 → "자본주의를 어떻게 조정할 것인가?" → 복지국가</td></tr>
+          <tr><td><b>복지국가의 목표</b></td><td>노동의 상품화·도구화를 막고 개인·공동체 모두의 행복 달성</td></tr>
+          <tr><td><b>작업장 위험의 성격</b></td><td><b>사회적 위험</b> — 공동체를 위한 생산에 수반되는 위험은 개인이 아닌 사회가 책임</td></tr>
+          <tr><td><b>위험의 계급성</b></td><td>부는 상층 축적 / 위험은 하층(저임금·비정규직·이주·여성·청년 노동자) 축적</td></tr>
+          <tr><td><b>3D 업종</b></td><td>Dirty · Difficult · Dangerous — 저임금인데도 더 위험한 작업장에 배치</td></tr>
+          <tr><td><b>접근 방식 대립</b></td><td>위험 승인(개인 부주의 책임) vs <b>위험 예방(사회적 투자·구조적 접근)</b></td></tr>
+          <tr><td><b>구의역 사고</b></td><td>작업 라인 멈추면 책임이 자신에게 온다는 구조적 압박 → 개인 탓이 아닌 <b>구조적 문제</b></td></tr>
+          <tr><td><b>시민권·사회권적 접근</b></td><td>자유롭게(시민권) + 안전하게(사회권) 행복 추구 / 작업장 안전 = <b>의사결정 참여권</b></td></tr>
+          <tr><td><b>책임 구조</b></td><td>사업주 선한 책임성 → <b>공동의 균등 책임성</b>으로 전환 필요</td></tr>
+          <tr><td><b>칼 폴라니</b></td><td>"사회 속에 묻어 있는 시장" — 시장은 사회를 지배하는 것이 아니라 <b>사회를 위해 봉사</b>해야 함</td></tr>
+          <tr><td><b>노동이사제</b></td><td>노동자 대표가 이사회에 참여하여 안전·경영 논의 = 산업민주주의 확장의 구체적 실현</td></tr>
+          <tr><td><b>노동정치→복지정치</b></td><td>작업장(노동+고용주) → 시민사회(노+사+정+시민사회) 확장 = <b>현대 복지국가의 기본틀</b></td></tr>
+        </table>
+      `
+    },
+  ]
+},
+{ num: "12강", name: "노동권의 약화 / 복지국가의 위기", icon: "📉",
+  cards: [
+
+    // ── 01. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "01. 노동시장의 분화",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-red">신자유주의와 노동시장 분화</span>
+          <span class="badge badge-purple">비정규직 노동의 증가</span>
+          <span class="badge badge-blue">파견·특수고용직 문제</span>
+        </div>
+      `
+    },
+    { icon: "✂️", title: "노동시장의 분화 — 신자유주의 이념",
+      html: `
+        <div class="hbox hbox-blue">노동권의 약화는 <b>노동시장을 변화시키는 것</b>에서 발생한다. 임금을 낮추고 이윤을 축적시키는 핵심 수단이 <b>노동시장 분화</b>이다.</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th>내용</th></tr>
+          <tr><td><b>이념</b></td><td>신자유주의</td></tr>
+          <tr><td><b>형식</b></td><td>내부 노동시장(정규직) + 유연화된 외부 노동시장(비정규직)</td></tr>
+          <tr><td><b>내용</b></td><td>정규직과 비정규직(기간제, 파견제 등 간접고용 형태) 양분</td></tr>
+          <tr><td><b>결과</b></td><td>전체 노동인구의 30% 이상이 비정규 고용 형태로 외부노동시장에 존재</td></tr>
+          <tr><td><b>목적</b></td><td>노동의 유연화 (고용과 해고의 용이성)</td></tr>
+          <tr><td><b>사회적 효과</b></td><td>★ <b>노동의 조직화를 약화시킴</b></td></tr>
+        </table>
+        <div class="sub">신자유주의 이념의 배경</div>
+        <ul class="pts red">
+          <li><b>자유주의 이념</b> → 개인의 능력에 기반</li>
+          <li>개인의 능력을 결정짓는 핵심 요인 = <b>출신(가족)</b> → "금수저 vs 흙수저"</li>
+          <li>출발선의 차이 → 교육 수준 차이 → 노동시장 진입 차이 → 임금의 양극화 + 위험의 계급화</li>
+        </ul>
+        <div class="sub">자유방임주의 vs 신자유주의</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th>내용</th></tr>
+          <tr><td><b>자유방임주의</b></td><td>시장에서의 경쟁에 국가가 개입하지 말 것</td></tr>
+          <tr><td><b>신자유주의</b></td><td>국가가 나서서 시장 경쟁을 더 활성화 → 규제 제거, 사교육 시장화, <b>정규직·비정규직 차별을 법·제도로 보장</b></td></tr>
+        </table>
+      `
+    },
+    { icon: "📋", title: "비정규직 노동의 증가",
+      html: `
+        <div class="hbox hbox-blue">비정규직이란 고용 계약기간·근로시간·고용계약 주체와 사용자의 일치 여부 등 여러 기준 가운데 <b>어느 한 가지라도 전형적 형태에서 벗어나는 경우</b>이다.</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th>내용</th></tr>
+          <tr><td><b>집중 대상</b></td><td>저학력, 미숙련, 여성, 청년 및 노년 노동자</td></tr>
+          <tr><td><b>집중 직군</b></td><td>서비스업 종사자, 단순노무 종사자, 건설 노동자 (3D 업종)</td></tr>
+          <tr><td><b>증가 시점</b></td><td>★ <b>IMF 이후</b> 정리해고와 근로자 파견제의 합법화 → 노동시장 유연화</td></tr>
+          <tr><td><b>특징</b></td><td>고용관계 외부화 (아웃소싱, 특수고용직 등)</td></tr>
+          <tr><td><b>결과</b></td><td>노동시장을 통한 이윤 분배의 <b>양극화</b></td></tr>
+        </table>
+        <div class="hbox hbox-yellow">💡 경계의 특성: 정규직군의 내부노동시장으로 이동에 제약이 높거나 사실상 폐쇄 — 예) 청년 세대의 스펙 쌓기 → 비정규직 진입 → 정규직으로 이동 불가능 → 비정규직 시장에서 반복</div>
+      `
+    },
+    { icon: "⛓️", title: "파견·특수고용직 문제",
+      html: `
+        <div class="hbox hbox-blue">파견노동과 특수고용직은 노동자성을 부정하여 <b>사고 발생 시 책임을 떠넘기고 노동자 사이에 갈등·대립 관계를 만들어버린다.</b></div>
+        <div class="sub">파견·특수고용직 구조</div>
+        <ul class="pts red">
+          <li><b>파견노동</b>: 작업장에서 일해도 고용주가 외부에 있음 → 사고 발생 시 책임 떠넘김</li>
+          <li><b>특수고용직</b>: 화물노동자, 배달 노동자, 학습지 교사 → 1인 사업자로 분류</li>
+          <li>이 구조가 <b>갈등·대립 관계를 노동자 사이에 만들어버림</b></li>
+        </ul>
+      `
+    },
+
+    // ── 02. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "02. 플랫폼 노동의 등장",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">등장 배경과 구조</span>
+          <span class="badge badge-red">플랫폼 노동의 특성</span>
+          <span class="badge badge-purple">지대추구와 탈상품화 위협</span>
+        </div>
+      `
+    },
+    { icon: "📱", title: "플랫폼 노동의 등장 배경과 구조",
+      html: `
+        <div class="hbox hbox-blue">정보통신과학기술의 발전으로 온라인 플랫폼을 활용한 노동력 거래가 등장하면서 <b>기존 노동관계의 근본적 변화</b>가 발생하고 있다.</div>
+        <div class="sub">플랫폼 노동의 구조 흐름</div>
+        <div class="flow">
+          <span class="flow-item">자본축적 효과성 모색</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">아웃소싱 (외주화: 노동시장 유연화)</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">플랫폼 기업 모델 개발 (인터넷 기술 활용, 노동관리비용 최소화, 규제 회피, 빅데이터 추출)</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">플랫폼(중개) 시장 (상품·서비스·노동의 거래)</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">노동비용 절감, 거래 이윤 축적</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">전통적 노동기반 복지국가의 위기</span>
+        </div>
+        <div class="hbox hbox-yellow">💡 노동력의 평가: 콜별, 건별, 프로젝트별 노동력 추출과 평가 / 대표적 방식: 음식배달업, 가사서비스업, 대리운전, 택배 등</div>
+      `
+    },
+    { icon: "⚠️", title: "플랫폼 노동의 특성과 문제점",
+      html: `
+        <div class="hbox hbox-blue">플랫폼 노동은 작업장의 외형만 변형할 뿐, 이윤은 계속 창출하면서 <b>위험을 개인화</b>하고 노동자성을 부정하여 <b>사회보험 적용을 배제</b>한다.</div>
+        <div class="sub">플랫폼 노동의 특성</div>
+        <ul class="pts red">
+          <li>고용관계의 비정규직화, 비용과 위험의 외부화</li>
+          <li>노동의 탈공간화, 노동자의 탈노동자화, <b>위험의 개인화</b></li>
+          <li>독립계약자로 노동관련 계약 → 노동자 지위 불인정 → <b>개인사업자로 분류</b></li>
+          <li>★ 근로기준법, 노동조합법 미적용 → <b>사회보험 법적용 배제</b></li>
+          <li>작업장의 외형만 변형, 운영과 내용은 그대로 유지 (이윤은 계속 창출)</li>
+        </ul>
+        <div class="sub">불평등한 계약관계</div>
+        <ul class="pts purple">
+          <li>플랫폼 = 공급자와 수요자의 쌍방향 정보 획득</li>
+          <li>공급자와 수요자 = 제한된 정보만 접속</li>
+          <li>→ <b>데이터의 불균형이 시장에서의 권력 불균형으로</b></li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 사회보장 측면: 노동권과 사회권 보장에 쟁점 촉발 (노동자성 문제)</div>
+      `
+    },
+    { icon: "💰", title: "지대추구와 탈상품화 위협",
+      html: `
+        <div class="hbox hbox-blue">플랫폼 노동은 <b>경제적 이익의 비대칭적 분배</b>를 초래하며, 복지국가의 핵심 지표인 <b>탈상품화 수준을 낮추고 상품화를 강화</b>한다.</div>
+        <div class="sub">지대추구의 확대</div>
+        <div class="flow">
+          <span class="flow-item">토지 (지대)</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">자본 (이자)</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">플랫폼 (데이터·수수료)</span>
+        </div>
+        <div class="hbox hbox-yellow">💡 <b>지대추구</b>: 데이터를 소유하는 것만으로 수수료를 취할 수 있는 구조 — 수수료(자본가의 지대추구 형태)</div>
+        <div class="sub">복지국가 지표에 미치는 영향</div>
+        <ul class="pts red">
+          <li>노동의 불안정성 증폭, 노동시민의 파편화, '전달(link, connect)'의 상품화</li>
+          <li>★ 복지국가의 지표인 <b>탈상품화 수준</b>이 점점 더 낮아지고, 반대지표인 <b>상품화의 지표</b>가 더욱 강하게 됨</li>
+        </ul>
+      `
+    },
+
+    // ── 03. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "03. 플랫폼 노동과 복지국가",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">전통적 복지국가 구조</span>
+          <span class="badge badge-red">플랫폼 시장 모형</span>
+        </div>
+      `
+    },
+    { icon: "🏛️", title: "전통적 복지국가 구조",
+      html: `
+        <div class="hbox hbox-blue">전통적 복지국가는 <b>임금노동자 & 단일 사용주 간 고용계약관계</b>를 기반으로 단체협상·사회협약·사회임금 강화를 통해 운영된다.</div>
+        <ul class="pts blue">
+          <li><b>불평등한 고용관계</b> → 조직된 노동운동과 작업장 민주주의로 개선: <b>단체협상</b></li>
+          <li><b>노동·자본·국가 간 사회협약</b>을 통한 복지제도의 구축: <b>사회협약과 사회통합</b></li>
+          <li>사회임금의 강화 → <b>사회서비스</b> (의료, 보육, 교육, 요양 등)의 확대</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 전통적 복지국가에서 저학력·저숙련 노동자도 노동시장 진입이 가능했던 이유: <b>조직된 노동을 보호했기 때문</b></div>
+      `
+    },
+    { icon: "📲", title: "플랫폼 시장 모형",
+      html: `
+        <div class="hbox hbox-blue">플랫폼 시장 모형은 원하는 시간만큼 노동 투입이 가능하나, <b>노동의 디지털 분업화와 건별 계약</b>으로 전통적 고용관계를 해체한다.</div>
+        <div class="sub">특징</div>
+        <ul class="pts green">
+          <li>원하는 시간만큼 노동 투입 가능</li>
+          <li>기존 노동시장에 진입 어려운 저숙련·저학력층에게 일자리 제공 (인터넷 환경 구비)</li>
+          <li>일자리 종류 선택의 폭 확장</li>
+        </ul>
+        <div class="sub">노동시장의 근본적 변화</div>
+        <ul class="pts red">
+          <li>외주, 파견, 용역 등 비전형 근로, 프리랜서, 독립계약자(특수고용)로 전환</li>
+        </ul>
+        <table class="comp-table">
+          <tr><th>구분</th><th>내용</th></tr>
+          <tr><td><b>운영방식</b></td><td>디지털 노동분업 (단편적 노동 제공, 노동관련 비용의 본인 부담)</td></tr>
+          <tr><td><b>노동비용(임금)</b></td><td>일감(건별) 단위 혹은 업무단위로 쪼개져 다수에게 분배</td></tr>
+        </table>
+      `
+    },
+
+    // ── 04. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "04. 노동시장 분화와 사회복지",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-red">사회복지 정책의 사각지대</span>
+          <span class="badge badge-purple">사회서비스의 시장화</span>
+          <span class="badge badge-green">사회적 대책</span>
+        </div>
+      `
+    },
+    { icon: "🕳️", title: "사회복지 정책의 사각지대",
+      html: `
+        <div class="hbox hbox-blue">노동시장 분화는 사회보험 배제·파편화된 노동력·부의 양극화 등을 통해 <b>복지국가의 위기와 복지정책 강화에 대한 회의론</b>을 등장시킨다.</div>
+        <div class="sub">4가지 사각지대</div>
+        <ul class="pts red">
+          <li><b>사회보험 배제</b>: 산재보험, 고용보험 등의 적용대상 제외 — 원인: 근로기준법상의 근로자 개념 기초</li>
+          <li><b>파편화된 노동력</b>: 조직된 노동운동으로 발전 어려움</li>
+          <li><b>부의 양극화 심화</b>: 경제적 빈곤 → 복지제도와 정책의 지지기반 약화</li>
+          <li><b>자발적 사회보험 예외 및 기여회피</b>: 위험분산의 기회 상실, <b>노후소득 불안정</b></li>
+        </ul>
+        <div class="hbox hbox-red">❌ 이 모든 것이 <b>복지국가의 위기</b>, 복지정책 강화에 대한 <b>회의론을 등장</b>시킴</div>
+      `
+    },
+    { icon: "🏪", title: "사회서비스의 시장화",
+      html: `
+        <div class="hbox hbox-blue">플랫폼 노동의 형태와 사회복지서비스가 접목될 경우 <b>사회복지서비스의 시장화가 가속</b>되어, 복지국가가 정의했던 사회적 위험이 개인적 위험으로 전락할 우려가 있다.</div>
+        <ul class="pts red">
+          <li>복지국가가 사회적 위험으로 정의했던 생애주기의 위기들(출생, 양육, 입학, 취업, 실직, 퇴직 등)이 <b>개인적 위험과 대응</b>이라는 위치로 옮겨짐</li>
+          <li>→ <b>시장의 서비스</b>로 대응하도록 하며</li>
+          <li>→ 서비스에 투여되는 노동은 <b>전통적 고용관계가 아닌 개별 사업주화된 건별 계약관계</b>로 전환될 우려</li>
+          <li>공공성과 시장화의 한복판에 <b>사회복지 실천</b>이 놓이게 됨</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 핵심 쟁점: 확대되는 사회서비스를 <b>시장화·상품화</b>로 해결할 것인가? vs <b>공공의 사회서비스 확대</b>로 해결할 것인가?</div>
+      `
+    },
+    { icon: "🌱", title: "사회적 대책 — 노동이 지닌 고유한 가치",
+      html: `
+        <div class="hbox hbox-blue">새로운 사회보호시스템으로의 전환과 함께, <b>"노동이 지닌 고유한 가치"의 변하지 않는 의미를 지키자</b>는 사회적 가치를 확립해야 한다.</div>
+        <div class="sub">사회보장 제도의 전환 필요성</div>
+        <ul class="pts green">
+          <li>상품과 서비스의 생산방식 변화에 대응할 새로운 사회적 보호시스템으로 전환 논의</li>
+          <li>자본과 노동의 계약관계에 대한 <b>새로운 패러다임 적용</b></li>
+        </ul>
+        <div class="sub">노동이 지닌 고유한 가치</div>
+        <ul class="pts blue">
+          <li>노동은 인간과 결코 분리될 수 없음</li>
+          <li>인간은 기계가 아니고, 노동은 상품이 아님 → <b>탈상품화의 가치</b></li>
+          <li>어떠한 노동도 가치가 낮거나 높다고 할 수 없음</li>
+          <li>모든 노동은 공동체에서 각자의 역할을 하는 <b>사회적 가치</b>가 있음</li>
+          <li>이것이 나의 노동이 공동체를 유지시켜준다는 <b>인간의 정체성이자 조건</b></li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 시민적 토론: '노동의 가치'를 지킨다는 것은 과연 무엇인가? / 어느 한 사람이 주도하는 것이 아니라 <b>각 개인이 참여하여 민주적 방식으로 도출</b> = 복지국가에서 지향하는 근본적인 기조이자 목표</div>
+      `
+    },
+
+    // ── 핵심 요약 ──────────────────────────────────────────
+    { icon: "📝", title: "12강 핵심 요약",
+      html: `
+        <table class="comp-table">
+          <tr><th>개념</th><th>핵심 내용</th></tr>
+          <tr><td><b>노동시장 분화</b></td><td>신자유주의 이념 → 정규직(내부)·비정규직(외부) 이중구조 → <b>노동 조직화 약화</b></td></tr>
+          <tr><td><b>자유방임주의 vs 신자유주의</b></td><td>자유방임 = 국가 불개입 / 신자유주의 = 국가가 나서서 <b>시장 경쟁을 더 활성화</b> (규제 제거, 차별 법제화)</td></tr>
+          <tr><td><b>IMF의 의미</b></td><td>비정규직 합법화·파견제 도입의 결정적 계기 → <b>복지국가 약화 사건</b></td></tr>
+          <tr><td><b>비정규직</b></td><td>저학력·미숙련·여성·청년·노년 집중 / IMF 이후 급증 / 정규직 이동 사실상 폐쇄</td></tr>
+          <tr><td><b>파견·특수고용직</b></td><td>1인 사업자 분류 → 노동자성 부정 → 사고 책임 떠넘김 → 노동자 간 갈등 구조 형성</td></tr>
+          <tr><td><b>플랫폼 노동 특성</b></td><td>위험의 개인화 / 개인사업자 분류 / 근로기준법·사회보험 미적용 / 외형만 변형, 이윤은 계속 창출</td></tr>
+          <tr><td><b>지대추구</b></td><td>토지→자본→<b>플랫폼(데이터·수수료)</b> / 갖고 있는 것만으로 수수료 수취</td></tr>
+          <tr><td><b>데이터 불균형</b></td><td>플랫폼만 쌍방향 정보 획득 → 데이터의 불균형 = <b>시장에서의 권력 불균형</b></td></tr>
+          <tr><td><b>탈상품화 위협</b></td><td>플랫폼 노동 확대 → 탈상품화 수준 저하 + 상품화 지표 강화 → <b>복지국가 수준 하락</b></td></tr>
+          <tr><td><b>사각지대 4가지</b></td><td>사회보험 배제 / 파편화된 노동력 / 부의 양극화 / 자발적 기여회피(노후소득 불안정)</td></tr>
+          <tr><td><b>사회서비스 시장화</b></td><td>플랫폼+복지서비스 접목 → 사회적 위험이 <b>개인적 위험</b>으로 전락 → 건별 계약관계로 전환 우려</td></tr>
+          <tr><td><b>사회적 대책</b></td><td>새로운 사회보호시스템 전환 + <b>노동의 고유한 가치 확립</b> + 민주적 시민적 토론</td></tr>
+          <tr><td><b>노동의 고유한 가치</b></td><td>노동 = 탈상품화의 가치 / 모든 노동은 사회적 가치 / 인간의 정체성이자 조건</td></tr>
+        </table>
+      `
+    },
+  ]
+},
+{ num: "13강", name: "취약 노동계층 / 청년·이주·노인 노동", icon: "👥",
+  cards: [
+
+    // ── 01. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "01. 노동 취약의 개념",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">ILO 괜찮은 일자리</span>
+          <span class="badge badge-yellow">한국 사회의 현실</span>
+          <span class="badge badge-red">노동빈곤층의 특징</span>
+        </div>
+      `
+    },
+    { icon: "🌐", title: "ILO 괜찮은 일자리 (Decent Job)",
+      html: `
+        <div class="hbox hbox-blue"><b>1999년 ILO</b>가 정의한 '괜찮은 일자리(decent job)' = <b>"일할 보람이 있는 인간다운 일"</b> — 노동 시간·임금·휴가·노동 내용 등이 인간의 존엄과 건강을 해치지 않는 것이다.</div>
+        <div class="sub">개념의 의미</div>
+        <ul class="pts blue">
+          <li>인간다운 생활을 지속적으로 영위할 수 있는 <b>인간다운 노동 조건</b></li>
+          <li>노동은 내가 이 공동체에서 역할을 하고 있다는 것을 확인하는 행위</li>
+          <li>일할 보람 = 인간만이 할 수 있는 권리이자 공동체에 대한 의미</li>
+        </ul>
+        <div class="sub">8시간 노동의 의미</div>
+        <div class="flow">
+          <span class="flow-item">8시간 노동</span>
+          <span class="flow-arrow">+</span>
+          <span class="flow-item">8시간 휴식</span>
+          <span class="flow-arrow">+</span>
+          <span class="flow-item">8시간 여가/문화활동</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">하루의 구성</span>
+        </div>
+        <div class="hbox hbox-yellow">💡 8시간 노동 쟁취의 역사: 산업혁명 후 16시간 → 10시간 → 8시간으로 단축하기 위한 <b>긴 투쟁의 결과</b></div>
+      `
+    },
+    { icon: "🇰🇷", title: "한국 사회 '괜찮은 일자리'의 현실",
+      html: `
+        <div class="hbox hbox-blue">한국에서의 <b>수용할 만한 일자리(acceptable job)</b>는 최소한 법정최저임금 이상 + 4대 보험 가입이지만, 이 하한선도 지켜지지 않는 작업장이 여전히 존재한다.</div>
+        <div class="sub">한국의 하향된 기준</div>
+        <ul class="pts red">
+          <li>ILO 기준의 '괜찮은 일자리'보다 <b>하향된</b> 한국의 기준</li>
+          <li>법정 최저임금은 물론 <b>4대 사회보험에 가입되어 있지 않은 노동자</b>가 존재함을 의미</li>
+          <li>이 하한선도 지켜지지 않는 작업장이 여전히 존재</li>
+        </ul>
+        <div class="sub">노동 소득 및 노동 조건 향상의 의미</div>
+        <ul class="pts blue">
+          <li>노동 능력이 있는 시민이 빈곤에 떨어지지 않으며 삶의 질을 유지하는 <b>가장 핵심의 요인 = 노동 소득의 변화와 노동 조건</b></li>
+          <li>고용 형태(정규직 vs 비정규직) → 임금률·노동시간에 영향 → 노동 소득 변화에 영향</li>
+          <li>★ <b>괜찮은 일자리에 내재된 강력한 본질적 의미 = 고용 형태</b></li>
+        </ul>
+      `
+    },
+    { icon: "🔴", title: "대규모 노동 빈곤층의 존재",
+      html: `
+        <div class="hbox hbox-blue">노동시장 진입 시 불평등한 계약관계의 중요 요인으로 작용하며, 특정 계층에서 집중적으로 발생하는 <b>집단적 문제</b>로서 빈곤의 악순환 구조를 고착화한다.</div>
+        <div class="sub">노동빈곤층의 특징</div>
+        <table class="comp-table">
+          <tr><th>특징</th><th>내용</th></tr>
+          <tr><td><b>저숙련</b></td><td>기술 부족 (청년이 가장 대표적인 집단)</td></tr>
+          <tr><td><b>노동시간 부족</b></td><td>파트타임·건별로 분절화된 노동 → 저임금으로 귀결</td></tr>
+          <tr><td><b>임금률 감소</b></td><td>노동 강도·내용·시간 대비 매우 낮은 임금</td></tr>
+          <tr><td><b>낮은 임금</b></td><td>최저임금 수준 또는 그 미만</td></tr>
+          <tr><td><b>실업과 취업의 반복</b></td><td>불안정한 노동 지위의 고착화</td></tr>
+        </table>
+        <div class="hbox hbox-red">❌ 노동시장에서의 불안정한 지위가 특정 계층에서 집중적으로 발생 → 빈곤의 덫 또는 낮은 삶의 질에 머물러 있는 <b>인구 집단 발생: 집단적 문제</b></div>
+      `
+    },
+
+    // ── 02. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "02. 청년 노동",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">출생의 차이 → 노동시장 차별</span>
+          <span class="badge badge-red">노동시장 차별 및 양극화</span>
+          <span class="badge badge-purple">삶의 질 양극화 · 5포 세대</span>
+        </div>
+      `
+    },
+    { icon: "🎓", title: "청년의 노동시장 진입 — 출생의 차이가 차별로",
+      html: `
+        <div class="hbox hbox-blue">★ <b>"출생의 차이(차이)가 노동시장에서의 차별로 연동된다"</b> — 부모의 소득·자산이 교육비 격차를 만들고, 이것이 노동시장 진입 불평등으로 이어진다.</div>
+        <div class="sub">출생의 차이 → 노동시장 차별 구조</div>
+        <div class="flow">
+          <span class="flow-item">소득과 자산의 세습</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">소득·자산 불평등</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">(사)교육비 지출의 격차</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">교육(출발선)의 불평등</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">노동시장 진입 불평등</span>
+        </div>
+        <div class="hbox hbox-yellow">💡 사교육 시장 강화 = 개인의 능력에 대한 <b>신자유주의적 관점</b>의 산물</div>
+      `
+    },
+    { icon: "⚖️", title: "노동시장에서의 차별 및 양극화",
+      html: `
+        <div class="hbox hbox-blue">청년 노동시장에서는 취업/미취업, 직종, 기업 규모, 고용 형태 등 다양한 차원에서 <b>차별과 양극화</b>가 발생한다.</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th>내용</th></tr>
+          <tr><td><b>취업 vs 미취업</b></td><td>미취업 기간의 장기화 (5포 세대)</td></tr>
+          <tr><td><b>전문직 vs 비전문직</b></td><td>직종의 차별</td></tr>
+          <tr><td><b>대기업 vs 중소기업</b></td><td>노동 조건, 복리후생 차별 (임금, 상여금, 휴가일수 등)</td></tr>
+          <tr><td><b>정규직 vs 비정규직</b></td><td>노동 지위의 차별</td></tr>
+        </table>
+        <div class="hbox hbox-yellow">💡 예: 같은 작업장에서 일해도 비정규직은 명절 선물 없음 → <b>같은 공간에서의 차별</b></div>
+      `
+    },
+    { icon: "💔", title: "삶의 질 양극화 — 5포 세대",
+      html: `
+        <div class="hbox hbox-blue">청년 노동의 불안정성은 결혼·출산·주거 등 삶의 전반적 영역으로 확산되어 <b>5포 세대</b>와 <b>가족형성 기회의 불평등</b>을 낳는다.</div>
+        <div class="sub">5포 세대의 내용</div>
+        <div class="badge-row">
+          <span class="badge badge-red">연애 포기</span>
+          <span class="badge badge-red">결혼 포기</span>
+          <span class="badge badge-red">출산 포기</span>
+          <span class="badge badge-red">내집 포기</span>
+          <span class="badge badge-red">인간관계 포기</span>
+        </div>
+        <ul class="pts red">
+          <li><b>결혼과 출산의 부정적 요인</b>: 고학력·고소득 인구 집단의 가족화 vs 5포 세대</li>
+          <li><b>주거의 불평등</b>: 부동산 시장에 대한 대응력 약화</li>
+        </ul>
+        <div class="hbox hbox-red">❌ → 가족형성 기회의 불평등, <b>기성세대에 대한 저항감</b>으로 나타남</div>
+      `
+    },
+
+    // ── 03. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "03. 이주 노동",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">현황과 배경</span>
+          <span class="badge badge-red">이주 노동의 현실과 한계</span>
+          <span class="badge badge-green">역사와 수치</span>
+          <span class="badge badge-purple">산업복지적 접근</span>
+        </div>
+      `
+    },
+    { icon: "🌏", title: "이주 노동의 현황과 배경",
+      html: `
+        <div class="hbox hbox-blue">한국 노동시장에서 이주노동은 <b>특정 산업분야의 노동력 수요 대응</b>을 위한 정책의 일환으로 활용되며, 5인 이상 사업장 10곳 중 1곳은 외국인 노동자를 고용하고 전체 고용의 <b>10% 가량</b>을 담당한다.</div>
+        <div class="sub">배경</div>
+        <ul class="pts blue">
+          <li>인구의 빠른 감소 및 고령화 → 높은 학력 수준의 청년세대와 질낮은 일자리 증가 = <b>이중 노동시장 구조</b></li>
+          <li>특히 <b>제조업, 중소기업, 농수산업</b>의 일자리는 국내 노동력에 인기가 낮아 이주노동자로 충당</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 교수 강조: "도시는 이주노동자들이 생산한 농산물 때문에 먹고 살 수 있다. 이들의 일손이 그치면 도시는 당장 먹을 것이 없어진다."</div>
+      `
+    },
+    { icon: "📊", title: "이주 노동의 역사와 현황 수치",
+      html: `
+        <div class="hbox hbox-blue">이주노동의 역사는 1980년대 후반 인력 부족에서 시작하여 고용허가제(2007년)로 전환되었으며, 현재 이주노동자의 <b>95%는 비전문직 저숙련</b> 노동자이다.</div>
+        <div class="sub">역사</div>
+        <table class="comp-table">
+          <tr><th>시기</th><th>내용</th></tr>
+          <tr><td><b>1980년대 후반</b></td><td>국내 노동시장에서 3D 업종 취업 기피 → 인력 부족 현상 발생</td></tr>
+          <tr><td><b>1994년</b></td><td>산업연수생 제도 실시 → 외국인 노동자 공식 유입</td></tr>
+          <tr><td><b>2007년</b></td><td><b>고용허가제</b>로 전환 (MOU 체결 국가의 노동자, 정부 허가로 고용)</td></tr>
+        </table>
+        <div class="sub">현황 수치</div>
+        <ul class="pts purple">
+          <li>2020년 기준 취업자격 체류 외국인: <b>574,379명</b> (전체 체류 외국인의 23.7%)</li>
+          <li>이주노동자의 <b>95%는 비전문직 저숙련</b> 노동자 (중소 제조업체, 건설현장, 농장, 양식장, 어선 등)</li>
+          <li><b>5%</b>는 전문직 종사자 (교수, 연구, 기술지도, 예술흥행 등)</li>
+          <li>안전교육 및 안전장치 미충족 작업장: <b>66.5%</b></li>
+        </ul>
+      `
+    },
+    { icon: "⚠️", title: "이주 노동의 현실과 한계",
+      html: `
+        <div class="hbox hbox-blue">이주노동자는 고용허가제의 허점·열악한 주거·작업장 안전 미보장·임금 체불 등 노동권과 기본권의 <b>사각지대</b>에 놓여 있다.</div>
+        <div class="sub">강제노동의 취약성 (고용허가제의 허점)</div>
+        <ul class="pts red">
+          <li>고용주에게 <b>근로계약 갱신과 해지 권한</b> 집중</li>
+          <li>임금협상의 어려움 / 노동 환경 개선 요구 불가</li>
+        </ul>
+        <div class="sub">주거·안전·임금 문제</div>
+        <ul class="pts red">
+          <li><b>주거 환경의 열악성</b>: 최저임금에서 기준 없는 숙식비 공제, 열악한 주거환경</li>
+          <li><b>작업장 안전의 미보장</b>: 안전교육 및 안전장치 미충족 작업장</li>
+          <li><b>임금격차 및 임금 체불</b>: 3D 업종 노동을 위해 입국함에도 이주노동자 신분으로 모든 과정에서 차별 발생</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 심리적 거리감 → 차이를 <b>차별</b>로 전환 / 한국도 1960~70년대 해외 노동자를 파견했던 역사가 있음</div>
+      `
+    },
+    { icon: "🤝", title: "이주 노동에 대한 사회적 개입과 산업복지적 접근",
+      html: `
+        <div class="hbox hbox-blue">★ <b>이주노동자의 인권은 그 사회의 인권 수준과 직접 연관</b>된다. 이민과 노동은 불가분의 관계이며, 차별의 문제로 존재하는 이주노동에 대한 인식의 전환이 필요하다.</div>
+        <div class="sub">산업복지적 접근 4가지</div>
+        <ul class="pts green">
+          <li><b>포괄적 차별금지</b>: 이주노동자도 공동체의 구성원 → 공동체 통합을 위해 <b>차별금지법</b> 제정·시행</li>
+          <li><b>국제법의 국내 적용</b>: 국제인권규약, 이주노동자권리협약, ILO 협약 등을 국내 적용 → 자국·이주 노동자 <b>균등한 대우</b></li>
+          <li><b>이주노동의 사회정책적 상징성</b>: 이주노동자와 그들의 문화를 인정·수용 → <b>사회통합 + 인구 증가</b></li>
+          <li><b>작업장 민주주의</b>: 내국인이든 외국인이든 불평등한 고용관계를 맺으면 안 됨 → 모두 <b>사회적 가치를 보장받아야 함</b></li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 과거를 잊지 말자: 100년 전 멕시코 애니깽, 1960년대 파독 간호사와 광부, 1980년대 중동 건설현장에서 일했던 우리나라 선배 시민들도 그 나라에서 외국인 노동자였다.</div>
+      `
+    },
+
+    // ── 04. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "04. 노인 노동",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">법적 은퇴 후 재진입 배경</span>
+          <span class="badge badge-red">사회적 현실 · 임계장</span>
+          <span class="badge badge-green">세대 갈등론 — 대체 관계인가?</span>
+        </div>
+      `
+    },
+    { icon: "👴", title: "노인의 노동시장 재진입 배경",
+      html: `
+        <div class="hbox hbox-blue">노인의 노동시장 재진입은 <b>공적 연금의 낮은 소득대체율</b>과 <b>노후소득 보장제도의 미성숙</b>이 주된 배경이며, 대부분 생존을 위한 선택이다.</div>
+        <div class="sub">주요 수치</div>
+        <table class="comp-table">
+          <tr><th>지표</th><th>수치</th></tr>
+          <tr><td><b>2024년 노인 빈곤율</b></td><td><b>35.9%</b></td></tr>
+          <tr><td><b>2025년 65세 이상 고용율</b></td><td><b>40.8%</b></td></tr>
+        </table>
+        <div class="hbox hbox-yellow">💡 분석: 65세 이상 노인 41명이 노동시장에 진입할 때, <b>36명(35.9%)은 빈곤 때문에</b> 진입, 나머지 5명만 <b>일할 보람</b>으로 진입</div>
+        <div class="sub">주요 배경</div>
+        <ul class="pts red">
+          <li>공적 연금을 비롯한 노후소득 보장제도의 미성숙: <b>낮은 소득대체율</b></li>
+          <li>소득 대체 자원 (노인을 위한 사회적 인프라 및 공적 서비스)의 부족</li>
+          <li>조기 퇴직, 자영업 중심의 노동시장 구조</li>
+        </ul>
+      `
+    },
+    { icon: "🔴", title: "노인 노동의 사회적 현실 — 임계장",
+      html: `
+        <div class="hbox hbox-blue">높은 진입 장벽으로 인해 <b>임계장(임시 계약직 노인장)</b> 형태로만 노동시장에 재진입하며, 열악한 노동조건을 감수해야 하는 현실에 처해 있다.</div>
+        <ul class="pts red">
+          <li>높은 진입 장벽 → ★ <b>임계장(임시 계약직 노인장)</b>: 은퇴 후 임시계약직으로만 노동시장 재진입</li>
+          <li>부족한 소득 보충을 위해 <b>열악한 노동조건을 감수</b></li>
+          <li>생활비 보탬이 사유: <b>55.8%</b></li>
+          <li>청소, 경비 등 <b>단순노무직</b> 및 연령 상승에 따라 <b>임금이 하락</b></li>
+          <li>70세 이후까지 노동시장 잔존 희망</li>
+        </ul>
+      `
+    },
+    { icon: "🔄", title: "노동시장 내 세대 갈등 — 고령자와 청년의 일자리는 대체 관계인가?",
+      html: `
+        <div class="hbox hbox-blue">★ <b>고령자와 청년의 일자리는 대체 관계가 아니다</b> — 세대 갈등론은 임금과 노동조건 경쟁을 심화시켜 낮은 노동조건 수용을 강제하는 <b>이윤 축적에 용이한 메커니즘</b>으로 작용한다.</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th>내용</th></tr>
+          <tr><td><b>해외 선진국 사례</b></td><td>1970~80년대 조기퇴직 촉진으로 청년 실업 완화 노력 → <b>실패</b></td></tr>
+          <tr><td><b>한국에 대한 분석</b></td><td>중고령층 고용률이 높을수록 <b>청년층 고용율 상승</b></td></tr>
+        </table>
+        <div class="sub">세대 갈등이 만들어지는 이유 (구조적 분석)</div>
+        <ul class="pts red">
+          <li>중고령층의 사회적 안전망이 확보되지 않은 현 상황에서</li>
+          <li>청년실업의 책임을 고령자의 노동시장 진입으로 <b>전가하는 경향성</b></li>
+          <li>실제로는 서로 경합하지 않음에도 불구하고 경합하고 있다고 만들어짐</li>
+          <li>임금과 노동조건 경쟁을 심화시켜 <b>낮은 노동조건 수용을 강제</b>하는 mechanism으로 작용</li>
+          <li>★ 결국 <b>이윤 축적에 용이한 요인으로 작동</b></li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 대책: ★ <b>고령자의 작업장 경험을 청년세대와 적극적으로 공유하는 세대 간 연대가 필요</b></div>
+      `
+    },
+
+    // ── 핵심 요약 ──────────────────────────────────────────
+    { icon: "📝", title: "13강 핵심 요약",
+      html: `
+        <table class="comp-table">
+          <tr><th>개념</th><th>핵심 내용</th></tr>
+          <tr><td><b>ILO 괜찮은 일자리</b></td><td>1999년 정의 / "일할 보람이 있는 인간다운 일" / 노동 시간·임금·휴가 등이 인간의 존엄을 해치지 않는 것</td></tr>
+          <tr><td><b>8시간 노동</b></td><td>8시간 노동+8시간 휴식+8시간 여가 / 산업혁명 후 16시간→10시간→8시간 투쟁의 결과</td></tr>
+          <tr><td><b>수용할 만한 일자리</b></td><td>한국의 하향된 기준 = 법정최저임금 이상 + 4대 보험 가입 / 이 기준도 미충족 작업장 존재</td></tr>
+          <tr><td><b>괜찮은 일자리의 본질</b></td><td>★ <b>고용 형태</b> — 정규직 vs 비정규직이 임금률·노동시간 → 노동 소득을 결정</td></tr>
+          <tr><td><b>청년 노동</b></td><td>출생의 차이 → 교육 격차 → 노동시장 진입 불평등 / 5포 세대 / 가족형성 기회의 불평등</td></tr>
+          <tr><td><b>이주 노동 현황</b></td><td>전체 고용의 10% / 95%는 비전문직 저숙련 / 안전장치 미충족 작업장 66.5%</td></tr>
+          <tr><td><b>고용허가제</b></td><td>2007년 전환 / 고용주에게 계약 갱신·해지 권한 집중 → 강제노동 취약성</td></tr>
+          <tr><td><b>이주노동 인권</b></td><td>★ 이주노동자의 인권 수준 = 그 사회의 인권 수준과 직접 연관</td></tr>
+          <tr><td><b>산업복지적 접근</b></td><td>차별금지법 + 국제법 국내 적용 + 사회통합 + 작업장 민주주의</td></tr>
+          <tr><td><b>노인 빈곤율</b></td><td>2024년 35.9% / 65세 이상 고용율 40.8% / 노동시장 재진입의 36명은 빈곤 때문</td></tr>
+          <tr><td><b>임계장</b></td><td>임시 계약직 노인장 / 은퇴 후 임시계약직으로만 재진입 / 생활비 보탬 사유 55.8%</td></tr>
+          <tr><td><b>세대 갈등론</b></td><td>고령자와 청년의 일자리는 <b>대체 관계가 아님</b> / 세대 갈등 = 이윤 축적에 용이한 메커니즘 / 세대 간 연대가 대책</td></tr>
+          <tr><td><b>공통 해결 방향</b></td><td>사회적 대화와 민주적 토론 / 갈등이 아닌 이해와 연대 / 구조적 문제의 근본 원인 파악 → 공동 해결</td></tr>
+        </table>
+      `
+    },
+  ]
+},
+{ num: "14강", name: "공적 노동과 사회서비스 / 복지국가의 운영", icon: "🏥",
+  cards: [
+
+    // ── 01. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "01. 사회서비스의 개념",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">광의 · 협의 개념</span>
+          <span class="badge badge-green">제공 주체와 재원</span>
+          <span class="badge badge-purple">복지국가 체제 3요소</span>
+        </div>
+      `
+    },
+    { icon: "🏛️", title: "사회서비스의 개념 — 광의와 협의",
+      html: `
+        <div class="hbox hbox-blue">공적 노동과 사회서비스의 핵심: 시장에서 삶의 질 차이가 생기더라도, <b>공적 상품과 서비스를 통해 기본선은 누구나 동등하게 영위</b>할 수 있도록 하는 것이다.</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th>내용</th></tr>
+          <tr><td><b>광의적 개념</b></td><td>보편적이고 기본적인 인간의 욕구를 해결해 주기 위한 소득보장, 의료, 교육, 주거, 문화, 관광 등의 <b>모든 분야</b></td></tr>
+          <tr><td><b>협의적 개념</b></td><td>건강, 교육, 고용, 사회적 보호 등 공동체 구성원을 대상으로 한 <b>대인사회 서비스</b> (personal social services)</td></tr>
+        </table>
+        <div class="hbox hbox-yellow">💡 ★ <b>사회서비스 = 사회적 돌봄 = 사회적 보호 = 휴먼서비스</b> (협의적 의미에서 동일 개념)</div>
+        <div class="sub">사회서비스 예시</div>
+        <ul class="pts blue">
+          <li><b>광의</b>: 의료, 교육(의무교육+고등교육), 주거, 문화, 관광, 대중교통</li>
+          <li><b>협의</b>: 의무교육, 돌봄, 보육, 요양, 장애인 서비스 등</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 부가적 목적: 보호를 담당했던 <b>가족구성원이 사회적 활동에 참여</b>하게 하는 효과 (예: 돌봄의 사회화 → 여성의 노동시장 진출) / 코로나 경험 → 문화·관광이 소득과 상관없이 <b>인간의 기본적 조건</b>임을 재확인</div>
+      `
+    },
+    { icon: "💰", title: "사회서비스의 제공 주체와 재원",
+      html: `
+        <div class="hbox hbox-blue">사회서비스의 제공 주체는 <b>국가(중앙·지방정부)</b>와 <b>시장</b>이며, 재원과 특징에서 근본적인 차이를 가진다.</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th class="th-blue">국가가 제공하는 사회서비스</th><th class="th-green">시장이 제공하는 사회서비스</th></tr>
+          <tr><td><b>재원</b></td><td>세금 (간접 납부)</td><td>비용 (직접 지출)</td></tr>
+          <tr><td><b>예시</b></td><td>버스·전철, 공립학교, 공공의료</td><td>택시, 사립학교, 민간 의료</td></tr>
+          <tr><td><b>특징</b></td><td>보편적, 공공성</td><td>가격에 따른 서비스 질 차이</td></tr>
+        </table>
+        <div class="sub">복지국가 체제 3요소 — 개인에게 제공하는 방식</div>
+        <table class="comp-table">
+          <tr><th>주체</th><th>개인에게 제공</th><th>개인이 제공</th><th>방식</th></tr>
+          <tr><td><b>가족</b></td><td>양육·부양</td><td>상호 호혜성</td><td>상호 호혜</td></tr>
+          <tr><td><b>국가</b></td><td>공적 서비스 (정책)</td><td>권력 위임 (세금, 복종)</td><td>민주주의·사회계약</td></tr>
+          <tr><td><b>시장</b></td><td>상품과 서비스 (사적 서비스)</td><td>이윤</td><td>거래·계약</td></tr>
+        </table>
+      `
+    },
+
+    // ── 02. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "02. 사회서비스의 등장 배경과 흐름",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">베버리지 보고서와 사회서비스</span>
+          <span class="badge badge-green">탈산업화와 신사회위험</span>
+          <span class="badge badge-red">사회서비스 영역의 시장화</span>
+        </div>
+      `
+    },
+    { icon: "📄", title: "베버리지 보고서와 사회서비스 노동자",
+      html: `
+        <div class="hbox hbox-blue">베버리지 보고서(원제: Social Insurance and Allied Services)는 <b>빈곤으로부터 개인을 보호</b>한다는 원칙 아래 공공이 제공하는 <b>대인사회서비스(personal social services)</b> 개념을 확립했다.</div>
+        <div class="sub">베버리지 보고서의 구조</div>
+        <table class="comp-table">
+          <tr><th>영역</th><th>내용</th><th>현재</th></tr>
+          <tr><td><b>Social Insurance (사회보험)</b></td><td>노동시장 안정화 → 세금 납부 → 4대(5대) 보험</td><td>국민연금, 건강보험, 산재, 고용, 장기요양</td></tr>
+          <tr><td><b>Allied Services (사회서비스)</b></td><td>공적 공급 영역</td><td>학교, 치안, 소방, 상수도, 취약계층 보장</td></tr>
+        </table>
+        <div class="sub">운영 구조</div>
+        <ul class="pts blue">
+          <li>중앙정부에서 사회서비스 정책을 마련하고 <b>지방정부를 중심으로 사회서비스를 제공</b></li>
+          <li>지방정부의 사회서비스 예산은 전체 예산의 <b>30% 수준</b> → 공공 사회서비스 영역의 노동(력)에 대한 비용</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 대표적 서비스: ★ <b>NHS(National Health Care System)</b> — 영국이 가장 자랑스러워하는 공공의료 시스템, 의사·간호사 모두 공무원 / 한국 사회는 아직 복지예산이 30% 수준에 미치지 못함 → 공공서비스 영역이 선진 복지국가 대비 약화</div>
+      `
+    },
+    { icon: "🆕", title: "탈산업화와 신사회위험(New Social Risk)의 등장",
+      html: `
+        <div class="hbox hbox-blue">산업사회에서 서비스사회로의 이행과 함께 <b>여성의 노동시장 참여 확대</b>로 돌봄·저출산·고령화 등 <b>신사회위험(New Social Risks)</b>이 등장했다.</div>
+        <div class="sub">노동시장 모델의 전환</div>
+        <div class="flow">
+          <span class="flow-item">남성 가장 중심의 가부장 모델 (여성의 무급 가사노동)</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">2인 부양자 모델 (dual-breadwinner)</span>
+        </div>
+        <ul class="pts green">
+          <li>여성의 노동시장 참여 확대 및 증가</li>
+          <li>→ <b>가족 내 돌봄 문제</b> 및 <b>일-가정 양립의 문제</b> 대두</li>
+        </ul>
+        <div class="sub">신사회위험과 사회서비스 확대</div>
+        <ul class="pts blue">
+          <li>돌봄, 저출산·고령화 등의 신사회위험 등장</li>
+          <li>돌봄 영역의 노동시장 확대 정책: <b>공공과 시장 영역으로 사회서비스 확대</b></li>
+          <li>대표적 서비스: <b>돌봄(인구고령화), 보육(일가정 양립)</b></li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 전통적으로 가족 내에서 여성이 무급으로 담당하던 가사·돌봄 노동이 <b>사회서비스(유급 노동)로 전환</b></div>
+      `
+    },
+    { icon: "📉", title: "사회서비스 영역의 시장화 — 공적 서비스 약화 경향성",
+      html: `
+        <div class="hbox hbox-blue">신자유주의 등장으로 복지예산이 감소하고 공공성이 약화되면서, <b>사회서비스 시장화 + 가사(돌봄·요양) 노동의 상품화 가속 = 사회서비스의 공공성 약화</b>라는 귀결을 낳았다.</div>
+        <div class="sub">시장화의 흐름</div>
+        <div class="flow">
+          <span class="flow-item">신자유주의 등장 (노동유연성·임금하락)</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">복지예산 감소·공공서비스 축소</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">공공성 약화 → 개인화 강화 → 시장 거래 활성화</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">이윤 축적 용이</span>
+        </div>
+        <div class="sub">시장화의 귀결</div>
+        <ul class="pts red">
+          <li>여성의 사회서비스 노동 진출 가속화 → <b>대표적인 비숙련 저임금 노동 집단</b></li>
+          <li>이윤 추구가 목표인 시장 → 사회서비스 영역도 <b>3D 업종</b>으로 자리 잡음</li>
+          <li>전문성·신뢰성·돌봄 연대성의 하락</li>
+        </ul>
+      `
+    },
+
+    // ── 03. 섹션 헤더 ──────────────────────────────────────
+    { icon: "📂", title: "03. 한국의 사회서비스 노동과 발전",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-red">시장화된 사회서비스의 문제</span>
+          <span class="badge badge-green">사회적 대책 — 공공성 강화</span>
+          <span class="badge badge-blue">협의의 산업복지 측면 변화</span>
+        </div>
+      `
+    },
+    { icon: "⚠️", title: "시장화된 사회서비스와 신뢰성 문제",
+      html: `
+        <div class="hbox hbox-blue">민간과 시장 영역이 사회서비스에 진출하면서 <b>이중 노동시장 기제가 강하게 작동</b>하고, 전문성·신뢰성·돌봄 연대성에 대한 사회적 논란이 발생하고 있다.</div>
+        <ul class="pts red">
+          <li>고용환경의 수준이 상대적으로 높지 않은 <b>저임금의 노동환경</b></li>
+          <li>핵심 사회서비스 영역은 대표적으로 <b>열악한 노동환경</b> (보육, 요양, 장기요양 등)</li>
+          <li>비정규직 비중이 높을수록 평균 급여 역시 낮아짐 → <b>사회서비스 노동에 이중 노동시장 기제가 강하게 작동</b></li>
+          <li>시장화된 교육으로 <b>전문성과 사회적 신뢰성, 돌봄 연대성(책임성) 수준에 대한 사회적 논란</b></li>
+          <li>→ 어린이집·유치원·요양원·장기요양시설에서의 인권 문제 사건 발생</li>
+        </ul>
+        <div class="hbox hbox-red">❌ 이 구조적 문제의 배후: 이윤 축적이 목표인 <b>사회서비스의 시장화</b></div>
+      `
+    },
+    { icon: "🌱", title: "사회적 대책 — 사회서비스의 공공성 강화",
+      html: `
+        <div class="hbox hbox-blue">★ 핵심 질문: <b>"확대되는 사회서비스를 시장화(상품화)로 해결할 것인가? 공공의 사회서비스 확대로 해결할 것인가?"</b></div>
+        <div class="sub">전 생애주기에 걸친 사회서비스 공적 노동화 필요성</div>
+        <table class="comp-table">
+          <tr><th>주체</th><th>목표</th><th>역할</th></tr>
+          <tr><td><b>시장</b></td><td>이윤 추구</td><td>생애주기 전반에 서비스 제공하되 경쟁 중심</td></tr>
+          <tr><td><b>국가</b></td><td>공공성·연대성</td><td>출생~노령까지 공공서비스 제공</td></tr>
+        </table>
+        <div class="flow">
+          <span class="flow-item">출생</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">보육</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">장애/질병</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">노령</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">전 생애: 국가의 공공서비스 필요</span>
+        </div>
+        <div class="sub">복지국가에서의 사회서비스 방향</div>
+        <ul class="pts green">
+          <li>복지국가에서의 사회서비스는 <b>시민이 사회서비스 노동자이면서 이용자</b></li>
+          <li>신사회위험은 복지국가의 다양한 정책적 대응을 요구: <b>사회서비스의 확대</b></li>
+          <li>휴먼서비스로서의 <b>전문성과 신뢰성, 연대성</b> 필요</li>
+          <li>안정적 노동환경에 기반한 <b>신뢰성 있는 휴먼서비스 노동으로의 전환</b> 필요</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 ★ <b>사회서비스 노동(자)의 조직화 필요</b> → <b>복지국가 지지세력으로 성장</b> (시민성과 연대성의 필요조건)</div>
+      `
+    },
+    { icon: "🔧", title: "협의의 산업복지 측면 변화",
+      html: `
+        <div class="hbox hbox-blue">사회서비스 노동의 확대는 산업복지 영역에 <b>작업장·노동운동 조직화·사용자 구조</b>의 근본적 변화를 가져온다.</div>
+        <table class="comp-table">
+          <tr><th>영역</th><th>전통적 형태</th><th>변화된 형태</th></tr>
+          <tr><td><b>작업장의 물리적 환경</b></td><td>전통적 작업장 (생산 현장)</td><td><b>지역사회 서비스</b>로 현장 이행</td></tr>
+          <tr><td><b>노동운동 조직화</b></td><td>남성 중심</td><td><b>여성으로 확대</b> (사회서비스 노동의 여성 집중)</td></tr>
+          <tr><td><b>사용자의 범위</b></td><td>기업 (민간 고용주)</td><td><b>정부와 시장</b> 모두가 사용자로 등장</td></tr>
+        </table>
+        <div class="hbox hbox-yellow">💡 핵심 과제: 무급가사노동을 <b>안정적 노동환경에 기반한 신뢰성 있는 휴먼서비스 노동으로의 전환</b></div>
+      `
+    },
+
+    // ── 핵심 요약 ──────────────────────────────────────────
+    { icon: "📝", title: "14강 핵심 요약",
+      html: `
+        <table class="comp-table">
+          <tr><th>개념</th><th>핵심 내용</th></tr>
+          <tr><td><b>사회서비스 핵심</b></td><td>시장에서 삶의 질 차이가 생겨도 <b>공적 상품·서비스로 기본선은 누구나 동등하게 영위</b>할 수 있도록</td></tr>
+          <tr><td><b>광의 사회서비스</b></td><td>소득보장·의료·교육·주거·문화·관광 등 모든 분야</td></tr>
+          <tr><td><b>협의 사회서비스</b></td><td>대인사회서비스 = <b>사회적 돌봄 = 사회적 보호 = 휴먼서비스</b> (동일 개념)</td></tr>
+          <tr><td><b>베버리지 보고서</b></td><td>Social Insurance + Allied Services / 대인사회서비스 개념 확립 / 지방정부 예산 30% 수준이 기준</td></tr>
+          <tr><td><b>NHS</b></td><td>영국 국가 의료 시스템 / 의사·간호사 모두 공무원 / 공적 사회서비스의 대표 사례</td></tr>
+          <tr><td><b>신사회위험</b></td><td>탈산업화 + 여성 노동시장 참여 확대 → 돌봄·저출산·고령화 등 새로운 위험 등장</td></tr>
+          <tr><td><b>2인 부양자 모델</b></td><td>남성 가장 중심 → dual-breadwinner 전환 → 가족 내 돌봄 문제 + 일-가정 양립 문제 대두</td></tr>
+          <tr><td><b>사회서비스 시장화</b></td><td>신자유주의 → 복지예산 삭감 → 공공성 약화 → 시장화 → <b>3D 업종화 + 신뢰성 하락</b></td></tr>
+          <tr><td><b>사회서비스 이중 노동시장</b></td><td>비정규직 비중↑ → 평균 급여↓ / 보육·요양 등 핵심 영역이 열악한 노동환경</td></tr>
+          <tr><td><b>핵심 쟁점</b></td><td>확대되는 사회서비스를 <b>시장화</b>로 해결? vs <b>공공의 사회서비스 확대</b>로 해결?</td></tr>
+          <tr><td><b>사회서비스 노동자 조직화</b></td><td>사회서비스 노동자의 조직화 → <b>복지국가 지지세력으로 성장</b> (시민성·연대성의 필요조건)</td></tr>
+          <tr><td><b>산업복지 측면 변화</b></td><td>작업장(생산→지역사회) / 조직화(남성→여성) / 사용자(기업→정부+시장)</td></tr>
+          <tr><td><b>공적 노동의 의미</b></td><td>"같은 밥상에서 서로 동일한 밥을 먹도록 하자는 것이 바로 복지국가이고, 공적 노동과 사회서비스이다."</td></tr>
+        </table>
+      `
+    },
+  ]
+}
     ]
   },
 
