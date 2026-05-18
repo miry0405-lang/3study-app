@@ -136,12 +136,12 @@ body {
   display:inline-flex; align-items:center; gap:6px;
   background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.25);
   border-radius:20px; padding:4px 12px;
-  font-size:.72em; font-weight:700; margin-top:10px; color:rgba(255,255,255,.9);
+  font-size:.90em; font-weight:700; margin-top:10px; color:rgba(255,255,255,.9);
 }
 .idx-main { max-width:720px; margin:0 auto; padding:16px 14px 60px; }
 .section-label {
   display:flex; align-items:center; gap:8px;
-  font-size:.84em; font-weight:800; color:var(--muted);
+  font-size:.90em; font-weight:800; color:var(--muted);
   letter-spacing:1px; text-transform:uppercase; margin:24px 0 12px;
 }
 .section-label::after { content:''; flex:1; height:1px; background:var(--border); }
@@ -155,7 +155,7 @@ body {
 .subject-filter-buttons { display:flex; gap:8px; flex-wrap:wrap; }
 .subject-filter-btn {
   border:1.5px solid var(--border); border-radius:20px; background:#f8fafc;
-  color:var(--muted); cursor:pointer; font-family:inherit; font-size:.84em;
+  color:var(--muted); cursor:pointer; font-family:inherit; font-size:.90em;
   font-weight:800; padding:9px 16px; transition:background .15s,color .15s,border-color .15s,transform .15s;
 }
 .subject-filter-btn:hover { transform:translateY(-1px); border-color:#93c5fd; color:var(--accent-dark); }
@@ -248,7 +248,7 @@ body {
 .how-title { font-size:.9em; font-weight:800; color:var(--accent); margin-bottom:10px; }
 .how-list { list-style:none; display:flex; flex-direction:column; gap:8px; }
 .how-list li { display:flex; align-items:flex-start; gap:9px; font-size:.88em; line-height:1.6; color:var(--muted); }
-.idx-footer { text-align:center; padding:20px; font-size:.82em; color:var(--muted); border-top:1px solid var(--border); margin-top:10px; line-height:1.75; }
+.idx-footer { text-align:center; padding:20px; font-size:.90em; color:var(--muted); border-top:1px solid var(--border); margin-top:10px; line-height:1.75; }
 
 /* 메인 글자 크기 조절 바 */
 .idx-fs-bar {
@@ -260,7 +260,7 @@ body {
   box-shadow:0 2px 8px rgba(0,0,0,.06);
 }
 .idx-fs-label {
-  font-size:.84em; font-weight:800; color:var(--muted);
+  font-size:.90em; font-weight:800; color:var(--muted);
   letter-spacing:.5px; white-space:nowrap; display:flex; align-items:center; gap:5px;
 }
 .idx-fs-btns { display:flex; gap:5px; }
@@ -324,7 +324,7 @@ body {
   align-items:flex-start; margin-bottom:8px;
 }
 #view-summary .sum-header-titles h1 { font-size:1.1em; font-weight:900; letter-spacing:-.5px; }
-#view-summary .sum-header-titles p { font-size:.82em; color:#94a3b8; margin-top:2px; }
+#view-summary .sum-header-titles p { font-size:.90em; color:#94a3b8; margin-top:2px; }
 #view-summary .sum-back-btn {
   background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.25);
   color:rgba(255,255,255,.9); border-radius:8px; padding:8px 14px;
@@ -352,7 +352,7 @@ body {
 }
 #view-summary .sum-search-box input {
   flex:1; border:none; outline:none; font-family:inherit;
-  font-size:.85em; color:#1a1a2e; padding:9px 0; background:transparent;
+  font-size:.90em; color:#1a1a2e; padding:9px 0; background:transparent;
 }
 #view-summary .sum-search-box input::placeholder { color:#b0b8c4; }
 #view-summary .sum-srch-clear {
@@ -380,7 +380,7 @@ body {
 #view-summary .sum-ch-btn {
   flex-shrink:0; padding:7px 14px; border-radius:20px;
   border:1.5px solid #e5e0d8; background:#fff; color:#374151;
-  font-family:inherit; font-size:.86em; font-weight:700;
+  font-family:inherit; font-size:.9em; font-weight:700;
   cursor:pointer; transition:all .15s;
 }
 #view-summary .sum-ch-btn.active,
@@ -397,7 +397,7 @@ body {
   margin-bottom:14px; padding-bottom:10px; border-bottom:2px solid #1a1a2e;
 }
 #view-summary .ch-num {
-  background:#1a1a2e; color:#fff; font-size:.82em;
+  background:#1a1a2e; color:#fff; font-size:.90em;
   font-weight:900; padding:4px 12px; border-radius:4px;
 }
 #view-summary .ch-name { font-size:1.05em; font-weight:900; }
@@ -462,7 +462,7 @@ body {
   text-align:center; font-weight:700;
 }
 #view-summary .comp-table td {
-  padding:9px 10px; border-bottom:1px solid #e5e0d8; vertical-align:top;
+  padding:9px 10px; border-bottom:1px solid #e5e0d8; vertical-align:middle;
 }
 #view-summary .comp-table tr:last-child td { border-bottom:none; }
 #view-summary .comp-table td:first-child { font-weight:700; color:#374151; font-size:.92em; white-space:nowrap; }
@@ -479,6 +479,7 @@ body {
 #view-summary .hbox-blue { background:var(--c1l); border-left:3px solid var(--c1); }
 #view-summary .hbox-green { background:var(--c2l); border-left:3px solid var(--c2); }
 #view-summary .hbox-yellow { background:var(--c4l); border-left:3px solid var(--c4); }
+#view-summary .hbox-white { background:var(--c11); border-left:3px solid var(--c1); }
 #view-summary .hbox-red { background:var(--c3l); border-left:3px solid var(--c3); }
 #view-summary .hbox-purple { background:var(--c5l); border-left:3px solid var(--c5); }
 #view-summary .hbox b { font-weight:800; }
@@ -498,7 +499,7 @@ body {
 #view-summary .badge-row { display:flex; flex-wrap:wrap; gap:6px; margin-top:6px; }
 #view-summary .badge {
   padding:5px 13px; border-radius:20px;
-  font-size:.86em; font-weight:700; border:1.5px solid;
+  font-size:.9em; font-weight:700; border:1.5px solid;
 }
 #view-summary .badge-blue { background:var(--c1l); color:var(--c1); border-color:#93c5fd; }
 #view-summary .badge-green { background:var(--c2l); color:var(--c2); border-color:#6ee7b7; }
@@ -581,13 +582,13 @@ body {
 }
 #sumSearchResults .sr-search-box input {
   flex:1; border:none; outline:none; font-family:inherit;
-  font-size:.85em; color:#1a1a2e; padding:8px 0; background:transparent;
+  font-size:.90em; color:#1a1a2e; padding:8px 0; background:transparent;
 }
 #sumSearchResults .sr-search-box input::placeholder { color:#b0b8c4; }
 #sumSearchResults .sr-back-btn {
   background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.25);
   color:#fff; border-radius:8px; padding:5px 10px;
-  cursor:pointer; font-family:inherit; font-size:.82em; font-weight:700;
+  cursor:pointer; font-family:inherit; font-size:.90em; font-weight:700;
 }
 #sumSearchResults .sr-title { color:#fff; font-size:.88em; font-weight:700; }
 #sumSearchResults .sr-count { color:#94a3b8; font-size:.76em; margin-left:auto; }
@@ -624,7 +625,7 @@ body {
 .msr-close-btn {
   background:rgba(255,255,255,.18); border:1.5px solid rgba(255,255,255,.3);
   color:#fff; border-radius:10px; padding:7px 13px;
-  font-family:inherit; font-size:.82em; font-weight:700;
+  font-family:inherit; font-size:.90em; font-weight:700;
   cursor:pointer; transition:all .15s; flex-shrink:0;
 }
 .msr-close-btn:hover { background:rgba(255,255,255,.32); }
@@ -674,7 +675,7 @@ body {
   display:flex; align-items:center; justify-content:space-between;
   margin-bottom:14px; padding-bottom:10px; border-bottom:1px solid var(--border);
 }
-.msr-result-count { font-size:.82em; font-weight:800; color:var(--accent); }
+.msr-result-count { font-size:.90em; font-weight:800; color:var(--accent); }
 .msr-result-sub { font-size:.76em; color:var(--muted); }
 
 /* 과목 그룹 */
@@ -785,7 +786,7 @@ body {
 #qz-quiz { padding-top:12px; }
 .qz-prog-area { margin:12px 0 16px; }
 .qz-prog-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
-.qz-prog-label { font-size:.85em; color:var(--muted); }
+.qz-prog-label { font-size:.90em; color:var(--muted); }
 .qz-prog-count { font-weight:700; color:var(--accent); }
 .qz-prog-bar { height:6px; background:#e2e8f0; border-radius:3px; overflow:hidden; }
 .qz-prog-fill {
@@ -796,14 +797,14 @@ body {
 .chapter-badge {
   display:inline-block; background:#eff6ff; border:1px solid #bfdbfe;
   border-radius:20px; padding:5px 14px;
-  font-size:.86em; color:var(--accent); font-weight:600; margin-bottom:10px;
+  font-size:.9em; color:var(--accent); font-weight:600; margin-bottom:10px;
 }
 .q-card {
   background:var(--qcard); border:1px solid var(--border);
   border-radius:16px; padding:22px; margin-bottom:12px;
   box-shadow:0 2px 8px rgba(0,0,0,.05);
 }
-.q-number { font-size:.86em; color:var(--accent); font-weight:700; margin-bottom:8px; }
+.q-number { font-size:.9em; color:var(--accent); font-weight:700; margin-bottom:8px; }
 .q-text { font-weight:700; line-height:1.8; white-space:pre-line; }
 .options { display:flex; flex-direction:column; gap:10px; margin-bottom:14px; }
 .opt {
@@ -825,7 +826,7 @@ body {
 .exp-title { font-weight:700; color:var(--accent2); margin-bottom:6px; font-size:.9em; }
 .occurrence-tag {
   display:inline-block; background:#fef3c7; border:1px solid #fcd34d;
-  color:#92400e; border-radius:6px; padding:3px 10px; font-size:.82em; margin-bottom:8px;
+  color:#92400e; border-radius:6px; padding:3px 10px; font-size:.90em; margin-bottom:8px;
 }
 .qz-nav-row { display:flex; gap:8px; margin-top:10px; }
 .btn-nav {
@@ -843,7 +844,7 @@ body {
 .num-btn {
   aspect-ratio:1; border-radius:8px; border:1px solid var(--border);
   background:#fff; color:var(--muted); font-family:inherit;
-  font-size:.85em; font-weight:600; cursor:pointer; transition:all .15s;
+  font-size:.90em; font-weight:600; cursor:pointer; transition:all .15s;
   display:flex; align-items:center; justify-content:center;
   box-shadow:0 1px 3px rgba(0,0,0,.05);
 }
@@ -899,8 +900,8 @@ body {
 .rl-badge.c { background:#dcfce7; color:var(--correct); border:1px solid #86efac; }
 .rl-badge.w { background:#fee2e2; color:var(--wrong); border:1px solid #fca5a5; }
 .rl-q { font-weight:600; font-size:.9em; line-height:1.5; white-space:pre-line; }
-.rl-answers { font-size:.82em; color:var(--muted); margin-bottom:6px; }
-.rl-exp { font-size:.82em; color:#475569; line-height:1.6; border-top:1px solid var(--border); padding-top:8px; }
+.rl-answers { font-size:.90em; color:var(--muted); margin-bottom:6px; }
+.rl-exp { font-size:.90em; color:#475569; line-height:1.6; border-top:1px solid var(--border); padding-top:8px; }
 .btn-retry {
   width:100%; padding:15px;
   background:linear-gradient(135deg,#059669,#047857);
@@ -931,7 +932,7 @@ body {
 .ssp-chip-purple { background:#f5f3ff; color:#7c3aed; }
 .ssp-chip-gray { background:#f1f5f9; color:#94a3b8; }
 .ssp-arrow {
-  font-size:.85em; color:#94a3b8; flex-shrink:0;
+  font-size:.90em; color:#94a3b8; flex-shrink:0;
   transition:transform .22s; display:inline-block;
 }
 .ssp-arrow.open { transform:rotate(90deg); }
@@ -988,7 +989,7 @@ body {
 .fav-ov-close {
   background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.25);
   color:#fff; border-radius:8px; padding:5px 10px;
-  font-family:inherit; font-size:.82em; font-weight:700; cursor:pointer;
+  font-family:inherit; font-size:.90em; font-weight:700; cursor:pointer;
 }
 .fav-ov-title { font-size:.95em; font-weight:800; flex:1; }
 .fav-ov-body { flex:1; overflow-y:auto; padding:14px 14px 60px; max-width:720px; margin:0 auto; width:100%; }
@@ -1046,7 +1047,7 @@ body {
 #fav-overlay .th-purple { background:var(--c5)!important; }
 #fav-overlay .th-red { background:var(--c3)!important; }
 #fav-overlay .badge-row { display:flex; flex-wrap:wrap; gap:6px; margin-top:6px; }
-#fav-overlay .badge { padding:5px 13px; border-radius:20px; font-size:.86em; font-weight:700; border:1.5px solid; }
+#fav-overlay .badge { padding:5px 13px; border-radius:20px; font-size:.9em; font-weight:700; border:1.5px solid; }
 #fav-overlay .badge-blue { background:var(--c1l); color:var(--c1); border-color:#93c5fd; }
 #fav-overlay .badge-green { background:var(--c2l); color:var(--c2); border-color:#6ee7b7; }
 #fav-overlay .badge-red { background:var(--c3l); color:var(--c3); border-color:#fca5a5; }
@@ -1073,7 +1074,7 @@ body {
   width:100%; padding:10px 14px; margin:6px 0 18px;
   background:#fff;
   border:1.5px solid #e2e8f0; border-radius:12px;
-  color:#475569; font-family:inherit; font-size:.84em; font-weight:700;
+  color:#475569; font-family:inherit; font-size:.90em; font-weight:700;
   cursor:pointer; transition:all .18s; text-align:left;
 }
 .ch-quiz-btn:hover { border-color:#93c5fd; color:#2563eb; box-shadow:0 2px 8px rgba(37,99,235,.08); }
@@ -1111,7 +1112,7 @@ body {
 .rq-sheet-count { font-size:.78em; color:#6b7280; }
 .rq-close-btn {
   background:#f1f5f9; border:none; border-radius:8px;
-  padding:6px 12px; font-family:inherit; font-size:.82em;
+  padding:6px 12px; font-family:inherit; font-size:.90em;
   font-weight:700; color:#475569; cursor:pointer;
 }
 .rq-sheet-body { flex:1; overflow-y:auto; padding:14px 16px 30px; }
@@ -1127,7 +1128,7 @@ body {
 }
 .rq-q-num {
   background:#1a1a2e; color:#fff; border-radius:6px;
-  font-size:.72em; font-weight:800; padding:2px 8px; flex-shrink:0;
+  font-size:.90em; font-weight:800; padding:2px 8px; flex-shrink:0;
 }
 .rq-occ-tag {
   background:#fef3c7; border:1px solid #fcd34d;
@@ -1142,7 +1143,7 @@ body {
 .rq-opt {
   background:#fff; border:1.5px solid #e5e0d8;
   border-radius:9px; padding:9px 13px;
-  font-size:.85em; color:#374151; line-height:1.5;
+  font-size:.90em; color:#374151; line-height:1.5;
   transition:border-color .15s;
 }
 .rq-opt.rq-correct { border-color:#059669; background:#f0fdf4; color:#065f46; font-weight:700; }
@@ -1157,7 +1158,7 @@ body {
 .rq-exp {
   background:#f0fdf4; border:1px solid #bbf7d0;
   border-left:3px solid #059669; border-radius:8px;
-  padding:10px 12px; font-size:.82em; line-height:1.65;
+  padding:10px 12px; font-size:.90em; line-height:1.65;
   color:#374151; display:none;
 }
 .rq-exp.show { display:block; animation:fadeIn .2s; }
@@ -1188,7 +1189,7 @@ body {
   white-space:nowrap;
 }
 .fav-card-chapter {
-  font-size:.82em; color:#374151; font-weight:600;
+  font-size:.90em; color:#374151; font-weight:600;
 }
 .fav-card-title {
   font-size:.9em; font-weight:800; color:#1a1a2e; margin-bottom:10px;
@@ -1243,7 +1244,7 @@ body {
   padding:20px; text-align:center; margin-bottom:14px;
 }
 .wn-header h2 { font-size:1.1em; font-weight:900; color:#5b21b6; margin-bottom:4px; }
-.wn-header p { font-size:.82em; color:#7c3aed; }
+.wn-header p { font-size:.90em; color:#7c3aed; }
 .wn-stat { display:inline-block; background:#7c3aed; color:#fff; border-radius:20px; padding:4px 14px; font-size:.78em; font-weight:700; margin-top:8px; }
 .wn-card {
   background:#fff; border:1.5px solid #e5e0d8; border-radius:14px;
@@ -1253,7 +1254,7 @@ body {
 .wn-q-badge {
   display:inline-block; background:#fee2e2; color:#b91c1c;
   border:1px solid #fca5a5; border-radius:20px;
-  font-size:.82em; font-weight:700; padding:4px 12px; margin-bottom:8px;
+  font-size:.90em; font-weight:700; padding:4px 12px; margin-bottom:8px;
 }
 .wn-q-text { font-weight:700; line-height:1.8; margin-bottom:10px; white-space:pre-line; }
 .wn-ans-row { font-size:.90em; margin-bottom:6px; }
@@ -1262,7 +1263,7 @@ body {
 .wn-exp { font-size:.88em; color:#374151; line-height:1.7; border-top:1px solid #e5e0d8; padding-top:8px; margin-top:6px; }
 .wn-subj-badge {
   display:inline-block; border-radius:4px; padding:2px 8px;
-  font-size:.72em; font-weight:700; color:#fff; margin-bottom:10px;
+  font-size:.90em; font-weight:700; color:#fff; margin-bottom:10px;
 }
 .wn-retry-btn {
   width:100%; padding:14px;
@@ -1292,7 +1293,7 @@ body {
 .wnm-info { flex:1; }
 .wnm-label { font-size:.80em; font-weight:800; color:#7c3aed; letter-spacing:.5px; margin-bottom:2px; }
 .wnm-title { font-size:.97em; font-weight:800; color:#4c1d95; }
-.wnm-sub { font-size:.82em; color:#374151; margin-top:2px; }
+.wnm-sub { font-size:.90em; color:#374151; margin-top:2px; }
 /* 오답노트 빈 상태 */
 .wn-empty-state {
   background:#fff; border:1.5px solid #e2e8f0;
@@ -1317,7 +1318,7 @@ body {
 .wn-subj-cnt {
   background:#7c3aed; color:#fff;
   border-radius:20px; padding:3px 12px;
-  font-size:.82em; font-weight:800; flex-shrink:0;
+  font-size:.90em; font-weight:800; flex-shrink:0;
 }
 .wn-total-row {
   background:linear-gradient(135deg,#f5f3ff,#ede9fe);
@@ -1993,7 +1994,7 @@ function renderMsrResults(results, q) {
       <div class="msr-subject-label">
         <span class="subj-badge" style="background:${color}">${grp[0].subjectIcon}</span>
         ${grp[0].subjectTitle}
-        <span style="margin-left:auto;font-size:.85em;font-weight:700;color:${color}">${grp.length}건</span>
+        <span style="margin-left:auto;font-size:.90em;font-weight:700;color:${color}">${grp.length}건</span>
     </div>`;
     grp.forEach(r => {
       const hl = highlightKw(r.snippet, q);
@@ -2838,7 +2839,7 @@ const SUMMARY_DATA = {
           </tbody></table>
           <div class="hbox hbox-green" style="margin-top:8px">
           <b>암기법</b>: <b>"빈 병이 무지 나불거린다"</b><br>
-          <span style="font-size:.85em;line-height:2">
+          <span style="font-size:.90em;line-height:2">
           <b>빈</b> = 빈곤(Want) · 소득 결핍&nbsp;&nbsp;
                 <b>병</b> = 질병(Disease)&nbsp;&nbsp;
                 <b>무지</b> = 무지(Ignorance)&nbsp;&nbsp;
@@ -3318,27 +3319,27 @@ const SUMMARY_DATA = {
         <td style="font-weight:700;color:var(--c3)">🏰 봉건시대</td>
         <td><span style="color:var(--c3);font-weight:800">운명론</span><br><span style="font-size:.8em;color:var(--muted)">가난 = 신의 뜻</span></td>
         <td><b>구빈법</b><br><span style="font-size:.78em;color:var(--muted)">엘리자베스 구빈법</span></td>
-        <td style="font-size:.82em">최초 국가 개입<br>낙인·징벌 성격</td>
+        <td style="font-size:.90em">최초 국가 개입<br>낙인·징벌 성격</td>
         </tr>
         <tr style="background:#fffbeb">
         <td rowspan="2" style="font-weight:700;color:var(--c4)">🏭 초기<br>자본주의</td>
         <td rowspan="2"><span style="color:var(--c4);font-weight:800">개인책임론</span><br><span style="font-size:.8em;color:var(--muted)">가난 = 게으름</span></td>
         <td><b>스핀햄랜드</b><br><span style="font-size:.78em;color:var(--c3)">▶ 실패</span></td>
-        <td style="font-size:.82em">기본소득의 원형<br>(칼 폴라니) → 실패</td>
+        <td style="font-size:.90em">기본소득의 원형<br>(칼 폴라니) → 실패</td>
         </tr>
         <tr style="background:#fff8e1">
         <td><b>신빈민법</b></td>
-        <td style="font-size:.82em">구빈법 강화<br>열등처우 원칙</td>
+        <td style="font-size:.90em">구빈법 강화<br>열등처우 원칙</td>
         </tr>
         <tr style="background:#f0fff4">
         <td rowspan="2" style="font-weight:700;color:var(--c2)">🏛️ 복지국가</td>
         <td rowspan="2"><span style="color:var(--c2);font-weight:800">사회책임론</span><br><span style="font-size:.8em;color:var(--muted)">가난 = 구조 문제</span></td>
         <td><b>사회조사·소수파 보고서</b><br><span style="font-size:.78em;color:var(--muted)">부스·라운트리</span></td>
-        <td style="font-size:.82em">빈곤 = 사회구조적 문제<br><b>과학적 실증</b></td>
+        <td style="font-size:.90em">빈곤 = 사회구조적 문제<br><b>과학적 실증</b></td>
         </tr>
         <tr style="background:#e8faf0">
         <td><b>보편적 복지국가</b><br><span style="font-size:.78em;color:var(--muted)">베버리지 리포트(1942)</span></td>
-        <td style="font-size:.82em">권리로서의 복지<br>보편적 급여 실현</td>
+        <td style="font-size:.90em">권리로서의 복지<br>보편적 급여 실현</td>
         </tr>
         </tbody></table>
         <div class="hbox hbox-blue" style="margin-top:10px">
@@ -5782,60 +5783,1643 @@ const SUMMARY_DATA = {
     subtitle: '1강 ~ 15강 전범위 카드',
     icon: '⚖️',
     chapters: [
-      { num: "1강", name: "사회복지와 법",
+
+{ num: "1강", name: "사회복지와 법", icon: "⚖️",
+  cards: [
+    /* ───────────── 01. 사회복지와 법의 만남 ───────────── */
+    { icon: '📂', title: '01. 사회복지와 법의 만남',
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">사회복지의 정의</span>
+          <span class="badge badge-green">사회복지-정책-법의 관계</span>
+          <span class="badge badge-purple">법과 사회복지 비교</span>
+        </div>
+      `
+    },
+
+    { icon: "🔍", title: "사회복지법이란?", 
+      html: `
+      <div class="hbox hbox-blue"><b>사회정책</b>: 다양한 사회적 위험에 대응하는 <b>공적인 관리체계</b><br/><b>사회복지법</b>: 사회정책의 <b>제도화 과정</b></div>
+      <div class="sub">사회복지 개념도 (추상 → 구체)</div>
+      <div style="margin:6px auto 10px;border-radius:14px; width:80%; overflow:hidden;border:1px solid #e2e8f0;">
+        <!-- 추상적 영역 헤더 -->
+        <div style="background:#475569;color:#fff;font-size:.90em;font-weight:700;letter-spacing:1px;text-align:center;padding:5px 0;">추상적 영역</div>
+        <!-- 가치 -->
+        <div style="display:flex;align-items:center;justify-content:center;padding:10px 16px;background:#f8fafc;border-bottom:1px solid #e2e8f0;gap:8px;">
+          <span style="font-size:1.1em;">💎</span><span style="font-weight:700;font-size:.88em;color:#334155;">사회복지 가치</span>
+        </div>
+        <div style="text-align:center;color:#94a3b8;font-size:.9em;padding:2px 0;background:#f8fafc;">▼</div>
+        <!-- 이념 -->
+        <div style="display:flex;align-items:center;justify-content:center;padding:10px 16px;background:#f8fafc;border-bottom:1px dashed #cbd5e1;gap:8px;">
+          <span style="font-size:1.1em;">💡</span><span style="font-weight:700;font-size:.88em;color:#334155;">사회복지 이념</span></div>
+          <!-- 구체적 영역 헤더 -->
+          <div style="background:#2563eb;color:#fff;font-size:.90em;font-weight:700;letter-spacing:1px;text-align:center;padding:5px 0;">구체적 영역</div>
+          <!-- 법·정책 (강조) -->
+          <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:11px 16px;background:#dbeafe;border-bottom:1px solid #93c5fd;gap:2px;">
+            <div style="display:flex;align-items:center;gap:6px;">
+              <span style="font-size:1.1em;">⚖️</span>
+              <span style="font-weight:900;font-size:.9em;color:#1d4ed8;">사회복지법 · 정책</span>
+            </div>
+            <div style="font-size:.90em;color:#3b82f6;">← 사회복지법은 구체적 영역의 첫 단계</div>
+          </div>
+          <div style="text-align:center;color:#93c5fd;font-size:.9em;padding:2px 0;background:#eff6ff;">▼</div>
+          <!-- 행정 -->
+          <div style="display:flex;align-items:center;justify-content:center;padding:10px 16px;background:#eff6ff;border-bottom:1px solid #bfdbfe;gap:8px;">
+            <span style="font-size:1.1em;">🏛️</span><span style="font-weight:700;font-size:.88em;color:#1e40af;">사회복지행정</span>
+          </div>
+          <div style="text-align:center;color:#93c5fd;font-size:.9em;padding:2px 0;background:#eff6ff;">▼</div>
+          <!-- 실천 -->
+          <div style="display:flex;align-items:center;justify-content:center;padding:10px 16px;background:#eff6ff;border-bottom:1px solid #bfdbfe;gap:8px;">
+            <span style="font-size:1.1em;">🤝</span><span style="font-weight:700;font-size:.88em;color:#1e40af;">사회복지실천</span>
+          </div>
+          <div style="text-align:center;color:#93c5fd;font-size:.9em;padding:2px 0;background:#eff6ff;">▼</div>
+          <!-- 시민 -->
+          <div style="display:flex;align-items:center;justify-content:center;padding:10px 16px;background:#1d4ed8;gap:8px;">
+            <span style="font-size:1.1em;">👥</span><span style="font-weight:900;font-size:.9em;color:#fff;">시민</span></div>
+          </div>
+          <div class="sub">법 vs 사회복지 — 공통점과 차이점</div><div style="background:#f0fdf4;border-left:3px solid #059669;border-radius:8px;padding:10px 14px;font-size:.90em;margin-bottom:8px;"><b>공통점</b>: 사회문제 해결을 위해 어떤 방법·수단을 채택해야 하는가에 대한 <b>사회적 논의의 산출물</b></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;"><div style="background:#eff6ff;border-radius:8px;padding:10px 12px;font-size:.90em;">
+          <div style="font-weight:900;color:#1d4ed8;margin-bottom:5px;">⚖️ 법</div>
+          <div style="line-height:1.6;">사실적 근거와 증거 기반<br/><b>법의 규범·합목적성 강조</b></div></div>
+          <div style="background:#fdf4ff;border-radius:8px;padding:10px 12px;font-size:.90em;"><div style="font-weight:900;color:#7c3aed;margin-bottom:5px;">🤝 사회복지</div>
+          <div style="line-height:1.6;">상황적 맥락 중시<br/><b>환경 속의 인간 강조</b></div></div></div><div class="sub">사회복지법의 의미</div>
+          <div style="display:flex;flex-direction:column;gap:7px;margin-top:4px;"><div style="display:flex;align-items:flex-start;gap:10px;background:#eff6ff;border-radius:10px;padding:11px 14px;"><span style="font-size:1.2em;flex-shrink:0;margin-top:1px;">✍️</span><div style="font-size:.9em;line-height:1.65;color:#1e3a5f;">          사회복지가 <b style="color:#1d4ed8;">법으로 명문화</b>되었다는 것          = 국민이 국가·사회의 지원을 받을 <b style="color:#1d4ed8;">권리가 생성</b>되었음을 의미        </div></div>
+          <div style="display:flex;align-items:flex-start;gap:10px;background:#eff6ff;border-radius:10px;padding:11px 14px;"><span style="font-size:1.2em;flex-shrink:0;margin-top:1px;">⭐</span><div style="font-size:.9em;line-height:1.65;color:#1e3a5f;">          법의 <b>존재 여부</b>도 중요하지만,          사회복지법이 모든 국민의 권리를 <b style="color:#1d4ed8;">실질적으로 지켜주고 있는지</b>가 더 중요        </div></div>
+          <div style="display:flex;align-items:flex-start;gap:10px;background:#eff6ff;border-radius:10px;padding:11px 14px;"><span style="font-size:1.2em;flex-shrink:0;margin-top:1px;">📜</span><div style="font-size:.9em;line-height:1.65;color:#1e3a5f;">          사회복지 가치·이념이 사회복지실천 현장에서 이루어지고          <b style="color:#1d4ed8;">국가와 사회를 강제</b>할 수 있는 권리를 가지게 된 제반 법규        </div></div>
+          <div style="display:flex;align-items:flex-start;gap:10px;background:#fef3c7;border-radius:10px;padding:11px 14px;"><span style="font-size:1.2em;flex-shrink:0;margin-top:1px;">⚠️</span><div style="font-size:.9em;line-height:1.65;color:#78350f;">          사회복지실천은 반드시 <b style="color:#d97706;">법의 테두리 안</b>에서 이루어져야 함        </div></div></div>
+    `},
+
+
+    { icon: '🔍', title: '법과 사회복지의 공통점·차이점',
+      html: `
+        <div class="hbox hbox-blue">법과 사회복지는 모두 <b>사회문제 해결을 위한 사회적 논의의 산출물</b>이지만, 접근 방식이 다름</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th class="th-blue">법</th><th class="th-green">사회복지</th></tr>
+          <tr><td>공통점</td><td colspan="2" style="text-align:center">사회문제 해결을 위해 어떤 방법·수단을 채택해야 하는가에 대한 사회적 논의의 산출물</td></tr>
+          <tr><td>특징</td><td><b>사실적 근거</b>와 증거에 기반</td><td>상황적 맥락 중시 — <b>'환경 속의 인간'</b> 강조</td></tr>
+        </table>
+        <div class="hbox hbox-yellow">💡 장발장 예시 — 법적 시각: 빵 훔친 행위에 형량 부과 / 사회복지 시각: 왜 훔칠 수밖에 없었는지 <b>구조적 원인</b> 파악</div>
+      `
+    },
+
+    /* ───────────── 02. 사회복지법 등장 ───────────── */
+    { icon: '📂', title: '02. 사회복지법 등장',
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">시민법 3대 원칙</span>
+          <span class="badge badge-green">사회법 3대 원칙</span>
+          <span class="badge badge-purple">사회복지법의 기원</span>
+          <span class="badge badge-red">새로운 영역 확장</span>
+        </div>
+      `
+    },
+
+    { icon: '📜', title: '시민법 → 사회법 전환과 사회복지법 탄생',
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue"><b>시민법(프랑스 혁명 이후)</b>의 한계를 극복하기 위해 <b>사회법</b>이 등장하는 과정에서 <b>사회복지법</b> 탄생</div>
+        <div class="sub">시민법의 3대 원칙과 한계</div>
+        <table class="comp-table">
+          <tr><th>원칙</th><th>내용</th></tr>
+          <tr><td><b>사유재산 존중의 원칙</b></td><td>개인이 취득한 재산은 개인 소유</td></tr>
+          <tr><td><b>계약 자유의 원칙</b></td><td>시민 간 1:1 평등한 자유 계약</td></tr>
+          <tr><td><b>과실 책임의 원칙</b></td><td>명확한 과실이 있을 때만 법적 책임</td></tr>
+        </table>
+        <ul class="pts red">
+          <li style="color:red">한계: 부르주아 계급 중심 / 불평등 심화 / 실질적 평등한 계약 불가</li>
+        </ul>
+        <div class="sub">사회법의 3대 원칙 (시민법 한계 보완)</div>
+        <table class="comp-table">
+          <tr><th>원칙</th><th>내용</th><th>관련 법</th></tr>
+          <tr><td><b>계약의 공정성</b></td><td>노동자가 집단적으로 계약 주체가 되는 합법성 부여</td><td>노동법, 사회보험법, 소비자보호법</td></tr>
+          <tr><td><b>소유권의 사회성</b></td><td>자본의 무제한적 소유에 제동장치로 작용</td><td>경제활동 규제 관련 법</td></tr>
+          <tr><td><b>집합적 책임</b></td><td>재해·질병·빈곤의 본질적 원인은 사회구조<br>→ 사회가 공동 책임</td><td>사회복지법 전반</td></tr>
+        </table>
+        <div class="sub">사회법 등장배경</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;margin-top:4px;">
+          <div style="background:#fef9c3;border-radius:10px;padding:10px 10px;text-align:center;font-size:.90em;">
+            <div style="font-size:1.4em;margin-bottom:4px;">📈</div>
+            <div style="font-weight:800;color:#92400e;margin-bottom:3px;">자본주의 발달</div>
+            <div style="color:#a16207;line-height:1.5;">시민법 원리의<br/>한계 노출</div>
+          </div>
+          <div style="background:#fef9c3;border-radius:10px;padding:10px 10px;text-align:center;font-size:.90em;">
+            <div style="font-size:1.4em;margin-bottom:4px;">🤝</div>
+            <div style="font-weight:800;color:#92400e;margin-bottom:3px;">단체주의적 법원리</div>
+            <div style="color:#a16207;line-height:1.5;">공동체 생존·안녕<br/>고려 필요</div>
+          </div>
+          <div style="background:#fef9c3;border-radius:10px;padding:10px 10px;text-align:center;font-size:.90em;">
+            <div style="font-size:1.4em;margin-bottom:4px;">🛡️</div>
+            <div style="font-weight:800;color:#92400e;margin-bottom:3px;">약자 보호</div>
+            <div style="color:#a16207;line-height:1.5;">경제적·사회적<br/>약자 보호 위해 등장</div>
+          </div>
+        </div>
+      `},
+
+    { icon: '🌱', title: '사회복지법의 기원 — 주요 입법 역사',
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">사회복지법의 역사적 기원 — <b>영국 빈민법(1601)</b>이 시초, 이후 독일·미국으로 확장</div>
+        <table class="comp-table">
+          <tr><th>국가</th><th>법률</th><th>연도</th><th>의의</th></tr>
+          <tr><td>🇬🇧 영국</td><td><b>빈민법</b><br>(엘리자베스 빈민법)</td><td><b>1601</b></td><td>사회복지법의 기원 — 최초의 국가적 빈민 구제 법률</td></tr>
+          <tr><td>🇬🇧 영국</td><td><b>공장법</b></td><td><b>1802</b></td><td>노동법의 기원 — 아동노동 제한</td></tr>
+          <tr><td>🇩🇪 독일</td><td><b>사회보험법</b><br>(질병보험법 등)</td><td><b>1883</b></td><td>비스마르크 — 세계 최초 사회보험 입법</td></tr>
+          <tr><td>🇺🇸 미국</td><td><b>사회보장법</b></td><td><b>1935</b></td><td>뉴딜정책 — 사회보장(Social Security) 개념 최초 사용</td></tr>
+        </table>
+      `
+    },
+
+    { icon: '🔗', title: '사회복지법의 새로운 영역 확장',
+      html: `
+        <div class="hbox hbox-blue">사회 변화에 따라 사회복지법은 전통적 복지 영역을 넘어 <b>경제·사회 융합 영역</b>으로 계속 확장 중</div>
+        <div class="sub">새로운 영역의 예시</div>
+        <ul class="pts green">
+          <li><b>마이크로크레딧 & 그라민 은행</b>: 무담보 소액 대출 — 경제와 사회복지의 융합 (제3의 영역)</li>
+          <li><b>사회적 기업</b>: 「사회적기업 육성법」 — 전통적 사회복지와 경제 영역의 결합</li>
+          <li><b>다문화 가족 지원법</b> 등 사회 변화에 따른 신규 법률 지속 등장</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 법은 계속 <b>제정·개정</b> 중 → 실시간으로 변화하는 내용 확인 필요. 사회복지사는 법 변화에 민감해야 함</div>
+      `
+    },
+
+    /* ───────────── 03. 사회복지법 개념과 의미 ───────────── */
+    { icon: '📂', title: '03. 사회복지법 개념과 의미',
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">협의 vs 광의</span>
+          <span class="badge badge-green">사회복지법의 의미(권리성)</span>
+          <span class="badge badge-red">임의 조항 문제</span>
+        </div>
+      `
+    },
+
+    { icon: '📖', title: '사회복지법의 개념 — 협의와 광의',
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue"><b>협의(보충적 개념)</b>는 취약계층 소수 대상, <b>광의(제도적 개념)</b>는 모든 국민 대상<br>— 현재 추세는 협의 → 광의로 변화 중</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th class="th-blue">협의의 사회복지법</th><th class="th-green">광의의 사회복지법</th></tr>
+          <tr><td>개념</td><td>사회복지의 <b>보충적</b> 개념</td><td>사회복지의 <b>제도적</b> 개념</td></tr>
+          <tr><td>대상</td><td>취약계층 등 <b>소수</b> 대상</td><td><b>모든 국민</b> (보편적)</td></tr>
+          <tr><td>특징</td><td>잔여적 시각 (선별적)</td><td>보편적 시각 (모두 포함)</td></tr>
+        </table>
+        <div class="hbox hbox-yellow">💡 우리나라: 여전히 잔여적(보충적) 시각이 남아 있음 → 광의로의 전환이 필요한 과제</div>
+      `
+    },
+
+    { icon: '⚡', title: '사회복지법의 의미 — 권리성',
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue"><b>사회복지법의 핵심 의미</b><br><b>권리성</b> — 사회복지는 시혜·자선이 아닌 <b>권리</b>이며, 법은 그 권리를 실현하는 수단</div>
+        <div class="sub">권리성의 의미</div>
+        <ul class="pts">
+          <li>사회복지가 <b>법으로 명문화</b>됨 = 규정된 내용이 <b>권리성</b>을 가지게 됨</li>
+          <li>사회복지 권리는 반드시 <b>'사회복지법'에 근거</b>해야 함</li>
+          <li>사회복지법의 <b>존재 유무</b>보다 모든 국민의 권리를 <b>실질적으로</b> 지켜주는 기능을 하는지가 더 중요</li>
+        </ul>
+        <div class="sub">임의 조항 문제</div>
+        <ul class="pts red">
+          <li>법에 <b>'할 수 있다'(임의 조항)</b>가 많아 권리 보장 미흡</li>
+          <li>→ 사회복지사와 시민이 목소리를 내야 할 과제</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 <b>'할 수 있다'(임의) vs '하여야 한다'(강행)</b> — 강행규정이 많을수록 권리성이 강화됨</div>
+      `
+    },
+
+    /* ───────────── 04. 사회복지법과 타법과의 관계 ───────────── */
+    { icon: '📂', title: '04. 사회복지법과 타법과의 관계',
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">헌법</span>
+          <span class="badge badge-green">노동법</span>
+          <span class="badge badge-purple">행정법</span>
+          <span class="badge badge-red">조세법</span>
+          <span class="badge badge-gray">민법</span>
+        </div>
+      `
+    },
+
+    { icon: '🏛️', title: '헌법과 사회복지법',
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">헌법은 모든 법의 <b>상위법</b> — 헌법의 생존권 조항이 사회복지 정책 → 사회복지법으로 구체화됨</div>
+        <div class="sub">관계 흐름</div>
+        <div class="flow">
+          <span class="flow-item">헌법<br>(생존권 규정)</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">사회복지<br>정책</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">사회복지법<br>(구체화)</span>
+        </div>
+        <div class="sub">꼭 읽어야 할 헌법 조항</div>
+        <ul class="pts purple">
+          <li><b>제10조</b>: 모든 국민은 행복을 추구할 권리를 가진다</li>
+          <li><b>제34조</b>: 모든 국민은 인간다운 생활을 할 권리를 가진다 → 국가의 의무 명시</li>
+        </ul>
+      `
+    },
+
+    { icon: '👷', title: '사회복지법 vs 노동법',
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <table class="comp-table">
+          <tr><th>구분</th><th>사회복지법</th><th>노동법</th></tr>
+          <tr><td>공통점</td><td colspan="2" style="text-align:center">넓은 의미의 사회법 / 생존권적 기본권 기초 / 빈민법이 기원</td></tr>
+          <tr><td><b>대상</b></td><td><b>모든 국민(국민 전체 대상)</b></td><td>노동자·노동조합</td></tr>
+          <tr><td><b>원리</b></td><td>집합적 책임 원리</td><td>계약자유 원칙 토대로 국가가 개입·조정</td></tr>
+          <tr><td><b>목적</b></td><td>모든 국민의 생존권 실현</td><td>노동자 생존권 실현</td></tr>
+        </table>
+      `
+    },
+
+    { icon: '🏢', title: '사회복지법 vs 행정법',
+      html: `
+        <table class="comp-table">
+          <tr><th>구분</th><th>사회복지법</th><th>행정법</th></tr>
+          <tr><td>공통점</td><td colspan="2" style="text-align:center">사회복지 급여는 <b>행정 통해 국민에게 전달</b> / 사회복지법은 행정법적 속성 보유</td></tr>
+          <tr><td><b>목적</b></td><td>국민의 <b>사회복지권(생존권) 확보</b>가 국가 책임</td><td><b>국가의 행정권 확보</b> / 국가조직·급여·서비스 전달 절차 관련</td></tr>
+        </table>
+      `
+    },
+
+    { icon: '💰', title: '사회복지법 vs 조세법',
+      html: `
+        <div class="hbox hbox-blue">사회복지법과 조세법은 모두 <b>소득 재분배 기능</b>을 가지지만, 징수 방식과 <b>반대급부 청구 가능 여부</b>에서 결정적 차이</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th>사회복지법</th><th>조세법</th></tr>
+          <tr><td>공통점</td><td colspan="2" style="text-align:center"><b>소득 재분배 기능</b>(소득공제·조세감면·부의 소득세 등)</td></tr>
+          <tr><td><b>재원</b></td><td>특정 목적을 위해 <b>사회보험료 징수</b><br>→ 보험가입자는 급여에 대한 <b>권리 보유</b></td><td>일방적 세금 징수<br>→ 개인은 납부 조세에 대해 <b>반대급부 청구 불가</b></td></tr>
+        </table>
+        <div class="hbox hbox-red">❌ 핵심 차이 — 사회보험료: <b>반대급부 청구 가능</b> / 세금: <b>반대급부 청구 불가</b></div>
+      `
+    },
+
+    { icon: '📄', title: '사회복지법 vs 민법',
+      html: `
+        <table class="comp-table">
+          <tr><th>구분</th><th>사회복지법</th><th>민법</th></tr>
+          <tr><td>공통점</td><td colspan="2" style="text-align:center">사회복지법에 민법 준용 규정 多 / 친족·상속(부양의무자 제도 등)이 밀접</td></tr>
+          <tr><td><b>법률관계</b></td><td>국가와 개인 간 법률관계<br><b>공법적 요소</b> 강함</td><td>개인 당사자 간 법률관계<br><b>사법적 요소</b> 강함</td></tr>
+        </table>
+      `
+    },
+
+    /* ───────────── 핵심 요약 ───────────── */
+    { icon: '📝', title: '1강 핵심 요약',
+      html: `
+        <table class="comp-table">
+          <tr><th>개념</th><th>핵심 내용</th></tr>
+          <tr><td><b>사회복지</b></td><td><b>사회적 위험</b>에 대한 공적인 대응 — 사회복지법은 정책의 <b>제도화</b></td></tr>
+          <tr><td><b>정치의 삼각형</b></td><td>철학(이념) + 세력 → 정책·법 = 정치 — 중립적인 법은 없음</td></tr>
+          <tr><td><b>시민법 3원칙</b></td><td>사유재산 존중 / 계약 자유 / 과실 책임 — 부르주아 중심, 불평등 심화</td></tr>
+          <tr><td><b>사회법 3원칙</b></td><td>계약의 공정성 / 소유권의 사회성 / 집합적 책임</td></tr>
+          <tr><td><b>사회복지법 기원</b></td><td>영국 빈민법(<b>1601</b>) → 공장법(1802) → 독일 질병보험법(<b>1883</b>) → 미국 사회보장법(<b>1935</b>)</td></tr>
+          <tr><td><b>협의 vs 광의</b></td><td>협의=보충적(소수 대상) / 광의=제도적(모든 국민) — 협의→광의로 변화 중</td></tr>
+          <tr><td><b>권리성</b></td><td>사회복지 = 시혜·자선이 아닌 <b>권리</b> / 임의 조항('할 수 있다') 문제 존재</td></tr>
+          <tr><td><b>vs 헌법</b></td><td>헌법이 상위법 — 헌법 제10조(행복추구권), 제34조(인간다운 생활권)</td></tr>
+          <tr><td><b>vs 노동법</b></td><td>공통: 사회법·생존권 기초 / 차이: 사회복지법=모든 국민, 노동법=노동자·조합</td></tr>
+          <tr><td><b>vs 행정법</b></td><td>공통: 행정 통해 급여 전달 / 차이: 사회복지법=국민권리, 행정법=행정권 확보</td></tr>
+          <tr><td><b>vs 조세법</b></td><td>공통: 소득재분배 / 차이: 사회보험료=<b>반대급부 청구 가능</b>, 세금=<b>청구 불가</b></td></tr>
+          <tr><td><b>vs 민법</b></td><td>공통: 민법 준용 규정 多 / 차이: 사회복지법=<b>공법적</b>, 민법=<b>사법적</b></td></tr>
+        </table>
+      `
+    },
+  ]
+},
+{ num: "2강", name: "법의 기초이론", icon: "📚",
+  cards: [
+    /* ───────────── 01. 법 개념과 특성 ───────────── */
+    { icon: '📂', title: '01. 법 개념과 특성',
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">법의 개념</span>
+          <span class="badge badge-green">법의 5가지 성격</span>
+        </div>
+      `
+    },
+
+    { icon: '⚖️', title: '법의 개념과 5가지 성격',
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">
+          <b>법</b>: 사회구성원이 공동생활을 하는 데 필요한 행위를 규정하는 규칙·법칙<br>
+          → 국가에 의하여 강행되는 사회규범 (<b>사회규범 중 가장 강력한 실현 방법</b>을 가진 것이 법)
+        </div>
+        <div class="sub">법의 5가지 성격</div>
+        <table class="comp-table">
+          <tr><th>성격</th><th>내용</th></tr>
+          <tr><td><b>사회규범</b></td><td>사회 구성원 모두에게 적용되는 규범</td></tr>
+          <tr><td><b>행위규범</b></td><td>사람의 행위를 규정하는 규범</td></tr>
+          <tr><td><b>강제규범</b></td><td>지키지 않으면 벌칙이 따르는 강제적 규범</td></tr>
+          <tr><td><b>재판규범</b></td><td>위반 시 재판을 통해 판정·벌칙이 주어지는 규범</td></tr>
+          <tr><td><b>조직규범</b></td><td>입법(국회)·행정(행정부)·사법(법원) 조직에 의해 운영되는 규범</td></tr>
+        </table>
+        <div class="hbox hbox-yellow">💡 사회규범의 종류: 도덕, 관습, 종교상 계율, 법 — 그 중 법만이 <b>국가 강제력</b>을 가짐</div>
+      `
+    },
+
+    /* ───────────── 02. 법의 이념 ───────────── */
+    { icon: '📂', title: '02. 법의 이념',
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">정의</span>
+          <span class="badge badge-green">합목적성</span>
+          <span class="badge badge-purple">법적 안정성</span>
+          <span class="badge badge-red">세 이념의 상호관계</span>
+        </div>
+      `
+    },
+
+    { icon: '🏛️', title: '라드브루흐의 법의 3대 이념',
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue"><b>구스타프 라드브루흐</b> (독일 법학자, 1878~1949)<br>
+          법의 이념: 법이 무엇을 위하여 존재하는가 <b>(법의 존재가치)</b><br/><br/>
+          <span class="badge badge-blue">정의</span><span class="badge badge-green">합목적성</span><span class="badge badge-purple">법적 안정성</span><span class="kichul">⭐ 기출</span>
+        </div>
+        <div class="sub">정의/합목적성/법적 안정성</div>
+        <table class="comp-table">
+        <tr><th>이념</th><th>내용</th><th>핵심</th></tr>
+        <tr><td><b>① 정의</b></td><td><b>아리스토텔레스</b><br><b>일반적 정의</b>(법률적),<br><b>평균적 정의</b>(절대적 평등),<br><b>배분적 정의</b>(비례적 평등)</td>
+          <td><b>"같은 것은 같게, 다른 것은 다르게"</b><br/>기준·취급방식은 법의 목적에 비추어서만 대답 가능</td></tr>
+        <tr><td><b>② 합목적성</b></td><td>국가의 법질서가 어떠한 표준·가치관에 의하여 구체적으로 제정되고 실시되는 원리<br/>정의를 <b>어떻게 실현</b>할 것인가에 대한 가치관</td><td><b>법의 목적:</b><br>개인주의·단체주의·문화주의 등 <b>세계관 차이</b>에 따라 달라짐</td></tr>
+        <tr><td><b>③ 법적 안정성</b></td><td>법에 의하여 보호되는 사회생활의 질서와 안정</td><td>법 내용이 <b>명확</b>하고, <b>쉽게 변경</b>되어서는 안 되며, 실제로 실행 가능하고, 사람들의 의식에 맞아야 함</td></tr></table>
+          <ul class="pts">
+          <li>라드브루흐: <b>배분적 정의(비례적 평등)</b>가 법의 이념으로 가장 적합</li>
+          <li>원칙: <b>같은 것은 같게, 다른 것은 다르게</b></li>
+          <li>단, 기준·취급 방식은 법의 목적에 비추어서만 대답 가능 → <b>합목적성 필요</b></li>
+        </ul>
+      `},
+
+    { icon: '🔄', title: '법이념의 상호관계 — 대립과 보완',
+      html: `
+        <div class="sub">세 이념의 관계 구조</div>
+        <div style="display:flex;align-items:center;justify-content:center;gap:6px;margin-top:6px;flex-wrap:wrap;">
+          <span style="background:#dbeafe;color:#1d4ed8;font-weight:800;font-size:.84em;padding:6px 14px;border-radius:8px;">정의</span>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;gap:6px;margin-top:6px;flex-wrap:wrap;">
+          <span style="color:#94a3b8;font-size:.8em;text-align:center;">↙↗</span><span style="color:#94a3b8;font-size:.8em;text-align:center;">↖↘</span>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-top:4px;">
+          <span style="background:#d1fae5;color:#065f46;font-weight:800;font-size:.84em;padding:6px 14px;border-radius:8px;">합목적성</span>
+          <span style="color:#94a3b8;font-size:.85em;">↔</span>
+          <span style="background:#fef3c7;color:#92400e;font-weight:800;font-size:.84em;padding:6px 14px;border-radius:8px;">법적 안정성</span>
+        </div>
+        <div class="hbox hbox-yellow" style="margin-top:8px;font-size:.83em;">세 이념은 <b>대립적 긴장관계</b>에 있으면서도 <b>상호보완적</b>인 관계</div>
+        <div class="hbox hbox-yellow">💡 예시: <b>정의</b>(수급 필요자에게 계속 지원) vs <b>법적 안정성</b>(소멸시효 규정) → 충돌 가능 → 지속적 조정 필요</div>
+      `
+    },
+
+    /* ───────────── 03. 법의 분류와 법률관계 ───────────── */
+    { icon: '📂', title: '03. 법의 분류와 법률관계',
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">자연법·실정법</span>
+          <span class="badge badge-green">공법·사법·사회법</span>
+          <span class="badge badge-purple">일반법·특별법</span>
+          <span class="badge badge-red">강행법·임의법</span>
+          <span class="badge badge-gray">실체법·절차법</span>
+          <span class="badge badge-blue">권리</span>
+          <span class="badge badge-green">의무</span>
+        </div>
+      `
+    },
+
+    { icon: '📗', title: '자연법과 실정법',
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <table class="comp-table">
+          <tr><th>구분</th><th class="th-blue">자연법</th><th class="th-green">실정법</th></tr>
+          <tr><td>적용 범위</td><td>시대·민족·국가·사회를 초월하여 <b>보편 타당</b>하게 적용</td><td><b>특정 시대와 장소</b>에서 효력 발생</td></tr>
+          <tr><td>예시</td><td>인권, 자연적 정의</td><td>헌법, 법률, 명령, 규칙 등</td></tr>
+        </table>
+        <div class="hbox hbox-blue"><b>자연법</b>은 보편 타당하게 적용되는 객관적 질서, <br><b>실정법</b>은 특정 시대·장소에서 효력을 가지는 법규범 — 우리가 배우는 법은 실정법</div>
+
+      `
+    },
+
+    { icon: '🗂️', title: '공법·사법·사회법',
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <table class="comp-table">
+          <tr><th>구분</th><th>내용</th><th>예시</th></tr>
+          <tr><td><b>공법</b></td><td>국가 조직·국가 간·국가와 개인 간 관계 규정</td><td>헌법, 형법</td></tr>
+          <tr><td><b>사법</b></td><td>개인 사이의 권리·의무관계 규율</td><td>민법, 상법</td></tr>
+          <tr><td><b>사회법</b></td><td>실질적 평등·사회적 조화 달성 (<b>제3의 법 영역</b>)</td><td>노동법, 사회보장법, <b>사회복지법</b></td></tr>
+        </table>
+        <div class="hbox hbox-blue"><b>사회법 </b>: 공법·사법의 한계를 넘어 실질적 평등과 사회적 조화를 달성하기 위한<b>제3의 법 영역</b> — 사회복지법이 포함됨</div>
+      `
+    },
+
+    { icon: '📊', title: '일반법과 특별법 — 특별법 우선의 원칙',
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <table class="comp-table">
+          <tr><th>구분</th><th>내용</th></tr>
+          <tr><td><b>일반법</b></td><td>특별한 제한 없이 <b>일반적으로</b> 적용되는 법</td></tr>
+          <tr><td><b>특별법</b></td><td>특정 장소·사항·사람에만 적용 → <b>특별법 우선의 원칙</b> (관계는 상대적)</td></tr>
+        </table>
+        <div class="sub">적용 순서 예시 (사회복지)</div>
+        <div class="flow">
+          <span class="flow-item">헌법<br>(일반법)</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">장애인 고용촉진법<br>(특별법)</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">장애인<br>복지법</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">사회보장<br>기본법</span>
+        </div>
+        <div class="hbox hbox-yellow">💡 일반법·특별법 관계는 <b>상대적</b> — 비교 대상에 따라 달라짐. 헌법도 더 상위 기준에서 보면 특별법의 상위 일반법</div>
+      `
+    },
+
+    { icon: '📌', title: '강행법과 임의법 / 실체법과 절차법',
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="sub">강행법 vs 임의법</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th class="th-blue">강행법</th><th class="th-green">임의법</th></tr>
+          <tr><td>적용 방식</td><td>당사자 의사를 묻지 않고 <b>절대적으로</b> 적용</td><td>당사자 <b>의사에 따라</b> 적용</td></tr>
+          <tr><td>법 문구</td><td><b>"하여야 한다"</b></td><td><b>"할 수 있다"</b></td></tr>
+        </table>
+        <div class="sub">실체법 vs 절차법</div>
+        <table class="comp-table">
+          <tr><th style="width:12%">구분</th><th class="th-blue">실체법</th><th class="th-green">절차법</th></tr>
+          <tr><td>내용</td><td>권리·의무의 성질·내용·범위·발생·<br>변경·소멸을 정함</td><td>실체법상 권리·의무를 <b>실현하는 절차</b>를 정함</td></tr>
+          <tr><td>예시</td><td>민법, 형법</td><td>민사소송법, 형사소송법</td></tr>
+        </table>
+      `
+    },
+
+    { icon: '⚡', title: '법률관계 — 권리와 의무', 
+      html: `
+      <div class="hbox hbox-blue" style="margin-bottom:10px"><b>법률관계</b>: 사람과 사람 사이의 <b>권리와 의무의 관계</b></div>
+      <div class="sub">권리 — 법률이 인정하는 힘</div>
+      <table class="comp-table">
+        <tr><th>분류 기준</th><th>종류</th></tr>
+        <tr><td>공·사법</td><td>공권(국민의 권리) / 사권(개인 간 권리)</td></tr>
+        <tr><td>법률상 효력</td><td><b>지배권</b>(물권 등) / <b>청구권</b>(채권) / <b>형성권</b>(취소·해제권) / <b>항변권</b>(이행 거절권)</td></tr>
+        <tr><td>권리 주체와의 긴밀성</td><td><b>일신전속권</b>(본인만 행사, 양도 불가) / 비전속권(양도 가능) / 반사적 이익(국가에 청구 불가)</td></tr>
+      </table>
+      <div class="sub">의무 — 법으로 강요된 법률상의 구속</div>
+      <ul class="pts"><li>법으로 부과된 일정한 <b>작위·부작위 행위</b>를 자신의 의사와 상관없이 강요당하는 구속</li>
+        <li><b>공법상 의무</b>: 국방·납세·교육 의무 등</li>
+        <li><b>사법상 의무</b>: 신의성실, 권리남용 금지, 친권상 의무 등</li>
+        <li><b>적극적 의무</b>(작위 의무) vs <b>소극적 의무</b>(부작위 의무)</li></ul>
+        <div class="hbox hbox-yellow" style="margin-top:8px"><b>권리 행사는 의무를 전제로 함</b></div>
+      `},
+
+    /* ───────────── 04. 법의 효력 ───────────── */
+    { icon: '📂', title: '04. 법의 효력',
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">실질적 효력 (타당성·실효성)</span>
+          <span class="badge badge-green">형식적 효력</span>
+        </div>
+      `
+    },
+    { icon: '🕐', title: '법의 효력', 
+      html: `
+		    <div class="sub">① 실질적 효력 — 타당성과 실효성을 동시에 갖추어야 함</div><div class="badge-row"><span class="badge badge-blue">법적 타당성 — 법 규범의 객관적 당위성</span><span class="badge badge-green">법적 실효성 — 내용대로 실현되고 있는 것</span></div><div class="sub">② 형식적 효력</div><table class="comp-table"><tr><th>구분</th><th>내용</th></tr><tr><td><b>시간적 효력</b><br/>(법의 유효기간)</td>
+          <td>· 성문법: 시행일 ~ 폐지일<br/>· 효력 상실: 명시적 폐지 / 묵시적 폐지(구법·신법 저촉 시 구법 효력 상실)<br/>· <b>법률불소급의 원칙</b>: 법은 과거의 사실에 소급하여 적용될 수 없다 </td></tr><tr><td><b>인적 효력</b></td><td>· <b>속인주의</b>(국적 기준) — 사회복지법 대부분 채택<br/>· <b>속지주의</b>(영토 기준) </td></tr><tr><td><b>장소적 효력</b></td>
+          <td>· 원칙) 국가의 전 영역(영토·영해·영공)에 걸쳐 적용<br/>· 예외) 자치법규: 해당 지방자치단체 내에서만 효력</td></tr></table>
+        <div class="hbox hbox-yellow">💡 <b>사회복지법: 대부분 속인주의 채택</b> — 최근 이주민 증가로 속지주의 방향으로 변화 논의 중 (미등록 이주 아동 건강보험 문제 등)</div>
+        ` },
+
+    /* ───────────── 05. 법의 해석 ───────────── */
+    { icon: '📂', title: '05. 법의 해석',
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">유권해석 (강제해석)</span>
+          <span class="badge badge-green">학리해석 — 문리해석</span>
+          <span class="badge badge-purple">학리해석 — 논리해석</span>
+        </div>
+      `
+    },
+
+    { icon: '🔎', title: '법의 해석 — 유권해석과 학리해석',
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="sub">① 유권해석 (강제해석) — 국가의 권위 있는 기관에 의한 해석</div>
+        <table class="comp-table">
+          <tr><th>종류</th><th>주체</th><th>내용</th></tr>
+          <tr><td><b>입법해석</b></td><td>국회</td><td>'용어의 정의' 등 법률 자체에서 해석</td></tr>
+          <tr><td><b>사법해석</b></td><td>법원</td><td>판결을 통한 해석</td></tr>
+          <tr><td><b>행정해석</b></td><td>행정기관</td><td>행정기관 회답·회신 등</td></tr>
+        </table>
+         <div class="sub">② 학리해석 — 법학자·학문적 해석 (강제력 없음)</div><table class="comp-table"><tr><th>종류</th><th>내용</th></tr><tr><td><b>문리해석</b></td><td>법문에 나타난 <b>자구(字句)의 의미를 확정</b>하는 것<br>※한계: 글자 그대로만 해석하면 입법 취지와 다른 결론 도출 가능</td></tr>
+        <tr><td><b>논리해석</b></td><td>법문의 문구에 구애받지 않고 논리적으로 해석<br/><div class="badge-row" style="margin-top:5px;flex-wrap:wrap;">
+        <span class="badge badge-gray">확장해석</span><span class="badge badge-gray">축소해석</span><span class="badge badge-gray">반대해석</span><span class="badge badge-gray">보충해석</span><span class="badge badge-gray">물론해석</span><span class="badge badge-gray">연혁해석</span><span class="badge badge-gray">목적해석</span><span class="badge badge-gray">비교해석</span><span class="badge badge-gray">유추해석</span></div></td></tr></table>
+      `
+    },
+
+    /* ───────────── 핵심 요약 ───────────── */
+    { icon: '📝', title: '2강 핵심 요약',
+      html: `
+        <table class="comp-table">
+          <tr><th>개념</th><th>핵심 내용</th></tr>
+          <tr><td><b>법의 5가지 성격</b></td><td>사회·행위·강제·재판·조직 규범</td></tr>
+          <tr><td><b>법의 3대 이념</b><br>(라드브루흐)</td><td><b>정의</b>(배분적 정의: 같은 것은 같게·다른 것은 다르게) / <b>합목적성</b>(개인이익+공익) / <b>법적 안정성</b>(명확·불변·실행가능·의식부합) — 대립적 긴장 + 상호보완</td></tr>
+          <tr><td><b>법의 분류</b></td><td>자연법·실정법 / 공법·사법·<b>사회법</b>(제3의 영역) / 일반법·특별법(특별법 우선) / 강행법('하여야')·임의법('할 수 있다') / 실체법·절차법</td></tr>
+          <tr><td><b>수급권의 성격</b></td><td>사회복지 수급권 = <b>일신전속권</b> (양도·상속 불가)</td></tr>
+          <tr><td><b>반사적 이익</b></td><td>법률상 권리는 아니지만 법의 효과로 우연히 얻는 이익 → 국가에 청구 <b>불가</b></td></tr>
+          <tr><td><b>법의 실질적 효력</b></td><td>타당성(당위성) + 실효성(실현) <b>동시</b> 충족 필요</td></tr>
+          <tr><td><b>불소급 원칙</b></td><td>법은 시행 이후에만 적용, 과거 소급 불가</td></tr>
+          <tr><td><b>사회복지법 효력</b></td><td>대부분 <b>속인주의</b> 채택 — 최근 속지주의 방향 논의 중</td></tr>
+          <tr><td><b>유권해석</b></td><td>입법(국회) / 사법(법원) / 행정(행정기관)</td></tr>
+          <tr><td><b>논리해석</b></td><td>확장·축소·반대·보충·물론·연혁·목적·비교·유추해석 (9가지)</td></tr>
+        </table>
+      `
+    },
+  ]
+},
+{ num: "3강", name: "사회복지법 체계",
+  cards: [
+
+    /* ───────────── 📂 01 섹션 헤더 ───────────── */
+    { icon: "📂", title: "01. 사회복지법 체계의 관점",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">법체계의 의미</span>
+          <span class="badge badge-green">체계화의 조건</span>
+          <span class="badge badge-purple">수직적·내용적 체계</span>
+        </div>
+      `
+    },
+
+    /* 법체계의 의미 */
+    { icon: "🔍", title: "법체계의 의미와 사회복지법 체계화",
+      html: `
+        <div class="hbox hbox-blue">법체계란 법이 다른 사회규범과 구별되는 방식, 그리고 법규범 내 다양한 법들의 배열·상호관계를 뜻한다</div>
+        <div class="sub">법체계의 두 가지 의미</div>
+        <ul class="pts">
+          <li><b>①</b> 법이 다른 사회적 규범(도덕 등)과 구별되는 <b>법의 구분</b></li>
+          <li><b>②</b> 법규범 내에서 다양한 법들의 <b>배열 및 상호관계</b><br/>예) 1조=목적, 2조=용어의 정의 등 조항 간 관계</li>
+        </ul>
+        <div class="sub">사회복지법 체계화의 의미</div>
+        <ul class="pts green">
+          <li>사회복지 내용을 <b>법 형식</b>에 포함하고, 사회복지 <b>법적 원리</b>를 동시에 담아내는 것</li>
+          <li>모든 사회복지법을 <b>포괄</b>할 것</li>
+          <li>각 법들이 분류체계의 하위영역에 <b>겹치지 않게</b> 분류될 것</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 각 법들은 일관된 공통적 규범을 공유하면서도, 각 단계·위치에 따른 특성을 반영하도록 체계화되어야 함</div>
+      `
+    },
+
+    /* 두 관점 비교 */
+    { icon: "⚖️", title: "수직적 체계 vs 내용적 체계",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <ul class="pts">
+          <li>사회복지법 체계는 <b>형식적 측면(수직적)</b>과 <b>내용적 측면(내용적)</b> 두 관점으로 나뉜다</li>
+        </ul>
+        <table class="comp-table">
+          <tr><th>구분</th><th class="th-blue">수직적 체계</th><th class="th-green">내용적 체계</th></tr>
+          <tr><td><b>측면</b></td><td>형식적 측면</td><td>내용 측면</td></tr>
+          <tr><td><b>의미</b></td><td>법들의 위계·배열</td><td>법 안에 담겨야 할 내용과 구조</td></tr>
+          <tr><td><b>구성</b></td><td>성문법 + 불문법</td><td>규범적 타당성 체계 + 실효성 체계</td></tr>
+        </table>
+      `
+    },
+
+    /* ───────────── 📂 02 섹션 헤더 ───────────── */
+    { icon: "📂", title: "02. 사회복지법의 수직적 체계",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">헌법(기본권·경제)</span>
+          <span class="badge badge-green">법률 체계</span>
+          <span class="badge badge-purple">시행령·시행규칙</span>
+          <span class="badge badge-yellow">조례와 규칙</span>
+          <span class="badge badge-gray">행정규칙·정관</span>
+          <span class="badge badge-blue">국제법</span>
+          <span class="badge badge-gray">불문법 3가지</span>
+        </div>
+      `
+    },
+
+    /* 수직적 체계 전체 구조 */
+    { icon: "🏛️", title: "수직적 법체계 전체 구조",
+      html: `
+      <div class="flow"><span class="flow-item">헌법</span><span class="flow-arrow">▶</span><span class="flow-item">법률</span><span class="flow-arrow">▶</span><span class="flow-item">시행령 (대통령령)</span><span class="flow-arrow">▶</span><span class="flow-item">시행규칙 (부령)</span><span class="flow-arrow">▶</span><span class="flow-item">조례·규칙</span><span class="flow-arrow">▶</span><span class="flow-item">행정규칙·정관·국제법</span></div>
+      <div class="sub">성문법</div>
+      <table class="comp-table" style="margin-top:10px"><tr><th>형식</th><th>제정 주체</th><th>특징</th></tr><tr><td><b>헌법</b></td><td>헌법제정권력</td><td>최고 규범, 모든 법률의 기초</td></tr><tr><td><b>법률</b></td><td>국회 의결 (국회의원 10인↑ 또는 정부 제출)</td><td>사회보장기본법, 사회복지사업법 등</td></tr><tr><td><b>시행령</b></td><td>대통령령</td><td>법률 구체화 ex) 장애인복지법 시행령</td></tr><tr><td><b>시행규칙</b></td><td>총리령 또는 부령(각 부의 장)</td><td>시행령 구체화 ex) 장애 15가지 규정</td></tr><tr><td><b>조례</b></td><td>지방의회</td><td>· 새로운 규범 창조 (지역주민 의사 반영)<br/>· 법률 제정 선도 및 보완<br/>· 법률과 사회적 현실 간 괴리 조정<br/>· <b>자치법규 행정부의 승인 불필요</b><br/>· 자치법규정보시스템: www.elis.go.kr</td></tr><tr><td><b>규칙</b></td><td>지방자치단체장</td><td>조례의 시행에 관하여 필요한 사항을 정함</td></tr><tr><td><b>행정규칙</b></td><td>행정부서</td><td>법 집행 세부사항을 지침·내규·고시 등으로 자체 규정<br/>예) 「장기요양 급여 제공 기준 및 급여비용 산정방법 등에 관한 고시」(보건복지부)</td></tr><tr><td><b>정관</b></td><td>공법인·특수법인</td><td>사회보장사업 운영 시 작성<br/>예) 국민건강보험공단, 국민연금공단, 사회복지협의회</td></tr></table>
+      <div class="sub">불문법</div>
+      <div class="badge-row"><span class="badge badge-gray">관습법</span><span class="badge badge-gray">판례법</span><span class="badge badge-gray">조리</span></div>
+      <div class="hbox hbox-green" style="margin-top:8px;background:#d1fae5;border-left:3px solid #059669;"><b>ILO 8대 핵심협약</b>: 처음 4개 비준 → 2021년 3개 추가 비준 → 미비준 1개 (총 8개 중 7개 비준)<br/>협약 분야: 결사의 자유, 강제노동 금지, 차별금지, 아동노동 금지</div><div class="hbox hbox-yellow" style="margin-top:10px"><b>법률안 제출</b>: 10인 이상 국회의원 또는 정부(행정부)<br/>→ 소관 상임위 → <b>법제사법위원회(체계·자구 심사)</b> → 본회의 의결 → 서명 → 공포</div>
+    ` },
+
+    /* 헌법 — 기본권 조항 */
+    { icon: "📜", title: "헌법 — 기본권 조항 (제10조·제34조)",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <ul class="pts">
+          <li>헌법은 최상위 법(총 130조)으로, 사회복지법은 헌법의 기본권을 보장·실현하기 위한 <b>국가의 책임과 의무</b>를 규정한다</li>
+        </ul>
+        <div class="sub">헌법 구성</div>
+        <div class="badge-row">
+          <span class="badge badge-gray">전문·총강</span>
+          <span class="badge badge-blue">기본권 조항</span>
+          <span class="badge badge-gray">정부기구 조항</span>
+          <span class="badge badge-yellow">경제에 관한 조항</span>
+        </div>
+        <div class="sub">기본권 조항 — 사회복지 관련</div>
+        <table class="comp-table">
+          <tr><th>조항</th><th>내용</th></tr>
+          <tr><td><b>제10조</b></td><td>모든 국민은 인간으로서의 존엄과 가치를 가지며, 행복을 추구할 권리를 가진다. 국가는 개인이 가지는 불가침의 기본적 인권을 확인하고 이를 보장할 의무를 진다.</td></tr>
+          <tr><td><b>제34조</b></td><td>①모든 국민은 <b>인간다운 생활을 할 권리</b>를 가진다.<br>②국가는 <b>사회보장·사회복지의 증진에 노력할 의무</b>를 진다.</td></tr>
+        </table>
+      `
+    },
+
+    /* 헌법 — 경제 조항 */
+    { icon: "💰", title: "헌법 — 경제에 관한 조항 (제23조·제119조)",
+      html: `
+        <ul class="pts">
+          <li>경제 조항은 재산권 보장·경제 자유를 인정하면서도, 공공복리와 균형 발전을 위한 <b>국가 개입의 헌법적 근거</b>를 제공한다</li>
+        </ul>
+        <table class="comp-table">
+          <tr><th>조항</th><th>내용</th></tr>
+          <tr><td><b>제23조 </b></td><td>①모든 국민의 재산권은 보장된다.<br>②재산권의 행사는 <b>공공복리</b>에 적합하도록 하여야 한다.</td></tr>
+          <tr><td><b>제119조 </b></td><td>①대한민국의 경제질서는 개인과 기업의 경제상의 자유와 창의를 존중함을 기본으로 한다.<br>②국가는 균형 있는 국민 경제의 성장 및 안정과 적정한 소득의 분배를 유지하고 ~ (경제적 조화)</td></tr>
+        </table>
+        <div class="hbox hbox-yellow">💡 제23조 ②·제119조 ②는 재산권·경제 자유를 인정하면서도 국가가 사회복지를 위해 개입할 수 있는 헌법적 근거가 됨</div>
+      `
+    },
+
+    /* 법률 */
+    { icon: "⚖️", title: "법률 — 사회복지법 체계",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <ul class="pts">
+          <li>법률은 <b>국회가 의결·제정</b>하며, 사회보장기본법을 최상위로 하는 3대 분류 체계를 갖는다</li>
+        </ul>
+        <div class="sub">법률안 제출 및 제정 절차</div>
+        <div class="flow">
+          <span class="flow-item">법률안 제출<br/>(국회의원·행정부)</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">소관 상임위</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">법제사법위원회<br/>(체계·자구 심사)</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">본회의 의결</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">서명·공포</span>
+        </div>
+        <div class="sub">사회복지법의 법률 체계</div>
+        <table class="comp-table">
+          <tr><th colspan="2" style="text-align:center;background:#fef3c7">사회보장기본법 (최상위 기본법)</th></tr>
+          <tr><th class="th-blue">사회보험법</th><th>국민연금법, 국민건강보험법 등</th></tr>
+          <tr><th class="th-green">공공부조법</th><th>국민기초생활보장법 등</th></tr>
+          <tr><th class="th-purple" style="background:#ede9fe">사회서비스법</th><th>장애인복지법, 아동복지법 등</th></tr>
+        </table>
+      `
+    },
+
+    /* 명령 */
+    { icon: "📋", title: "명령 — 시행령과 시행규칙",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">법의 실효성 확보를 위해 <b>시행령(대통령령)</b>과 <b>시행규칙(총리령·부령)</b>이 세부 내용을 규정한다</div>
+        <table class="comp-table">
+          <tr><th>종류</th><th>발령 주체</th><th>내용</th></tr>
+          <tr><td><b>시행령</b></td><td><b>대통령</b></td><td>법에서 위임한 내용을 규정<br/>예) 장애인복지법 시행령 → 장애 종류 규정</td></tr>
+          <tr><td><b>시행규칙</b></td><td><b>총리령</b> 또는 <b>부령</b>(각 부의 장)</td><td>시행령보다 더 세부적 내용 규정<br/>예) 장애 정도 기준 규정 (장애 15가지)</td></tr>
+        </table>
+        <div class="hbox hbox-yellow">💡 법제처 등에서 <b>3단 비교</b>(법률·시행령·시행규칙 동시 조회) 가능 — 법의 실효성 확보를 위해 시행령·시행규칙은 매우 중요함</div>
+      `
+    },
+
+    /* 조례와 규칙 */
+    { icon: "🏘️", title: "조례와 규칙 (지방자치법규)",
+      html: `
+        <ul class="pts">
+          <li><b>조례</b>는 지방의회가 제정하며, 새 규범 창조·법률 선도·현실 괴리 조정의 역할을 한다. <b>규칙</b>은 조례 시행을 위한 세부사항을 정한다</li>
+        </ul>
+        <table class="comp-table">
+          <tr><th>종류</th><th>내용</th></tr>
+          <tr><td><b>조례</b></td><td>
+            · 새로운 규범 창조 (지역주민 의사 반영)<br/>
+            · 법률 제정 선도 및 보완<br/>
+            · 법률과 사회적 현실 간 괴리 조정<br/>
+            · 참고: 자치법규정보시스템 (www.elis.go.kr)
+          </td></tr>
+          <tr><td><b>규칙</b></td><td>지방자치단체장 제정. 조례의 시행에 관하여 필요한 사항을 정함</td></tr>
+        </table>
+        <div class="sub">📌 사례 — 선배시민 조례</div>
+        <ul class="pts green">
+          <li><b>2023년 경기도에서 최초 제정</b></li>
+          <li>"선배시민": 65세 이상의 지역주민으로서 공동체 활동에 참여하며 후배시민과 소통하는 노인</li>
+          <li>이후 진천군, 강원도, 부산, 제주 등으로 확산 → 향후 전국 단위 법률 제정 논의</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 조례는 전국 법률이 없을 때 지역에서 먼저 만들어 법률 제정을 선도하는 '입법의 시험 무대' 역할을 함</div>
+      `
+    },
+
+    /* 행정규칙 + 정관 */
+    { icon: "📄", title: "행정규칙과 정관",
+      html: `
+        <div class="hbox hbox-blue"><b>행정규칙</b>은 행정부서 내부 규범(지침·고시 등), <b>정관</b>은 공법인·특수법인의 운영 규범이다 — 둘 다 준법규(※)에 해당</div>
+        <div class="sub">행정규칙</div>
+        <ul class="pts">
+          <li>행정부서가 법을 집행하기 위하여 세부사항을 <b>지침·내규·고시</b> 등을 통해 규정하는 내부 규범</li>
+          <li>예) 노인장기요양보험제도 → 「장기요양급여 제공 기준 및 급여비용 산정방법 등에 관한 고시」(보건복지부)</li>
+        </ul>
+        <div class="sub">정관</div>
+        <ul class="pts purple">
+          <li><b>공법인 또는 특수법인</b>이 사회보장사업 등 운영 시 작성 필요</li>
+          <li>예) 사회복지협의회 정관, 국민연금공단 정관, 국민건강보험공단 정관</li>
+        </ul>
+      `
+    },
+
+    /* 국제법 */
+    { icon: "🌐", title: "국제법",
+      html: `
+        <ul class="pts">
+          <li>국제법은 국가 간 <b>명시적 또는 묵시적 합의</b>를 바탕으로 형성된 법</li>
+        </ul>
+        <div class="sub">헌법 제6조 제1항</div>
+        <div class="hbox hbox-blue">헌법에 의하여 체결·공포된 조약과 일반적으로 승인된 국제법규는 <b>국내법과 같은 효력</b>을 가진다.</div>
+        <div class="sub">사회보장 관련 주요 국제법</div>
+        <table class="comp-table">
+          <tr><th>종류</th><th>내용</th></tr>
+          <tr><td><b>사회보장의 최저기준에 관한 조약</b><br/>(ILO, 1952년)</td><td>보편주의·공평성·적절성 원칙</td></tr>
+          <tr><td><b>사회보장협정</b><br/>(사회보장 상호주의)</td><td>정부가 입법부의 동의 없이 단독으로 외국 정부와 맺은 약정 또는 정부간의 협정<br/>→ 2025년 2월 기준: 캐나다, 영국 등 <b>총 42개국</b>과 체결</td></tr>
+        </table>
+      `
+    },
+
+    /* 불문법 */
+    { icon: "📖", title: "불문법 3가지 — 관습법·판례법·조리",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <ul class="pts">
+          <li>불문법은 문서로 기록되지 않은 법으로, <b>관습법·판례법·조리</b> 세 종류가 있으며 성문법을 보충하는 역할을 한다</li>
+        </ul>
+        <table class="comp-table">
+          <tr><th>종류</th><th>정의</th><th>특징</th></tr>
+          <tr><td><b>관습법</b></td><td>장기간 사회적 관행이 된 규범이 사회구성원의 법적 확신을 얻어 국가가 승인·강행하는 불문법</td><td><b>보충법으로서의 효력</b> — 성문법 조항이 불명확할 때 보충적으로 적용</td></tr>
+          <tr><td><b>판례법</b></td><td><b>사회복지법 판례 연구 의의</b><br>재판을 통하여 결정되는 개별적 사례가 판결이며, 판결을 통해 이루어지는 이론·법리·규범</td><td>· 기존 법제의 문제점 및 적용상 구체적 문제점 발견<br/>· 사회복지법학의 이론 개발에 기여<br/>예) 장애인 이동권 판례 → 강제조항 부재 발견 → 법 개정 논의</td></tr>
+          <tr><td><b>조리<br/>(條理)</b></td><td>사물의 본성 또는 이치. 당연히 그래야 할 것이라고 인정되는 <b>법 해석의 기본 원리</b></td><td>민법 제1조: 법률 → 관습법 → <b>조리</b> 순서로 적용 (최후의 보충적 법원)</td></tr>
+        </table>
+      `
+    },
+
+    /* ───────────── 📂 03 섹션 헤더 ───────────── */
+    { icon: "📂", title: "03. 사회복지법의 내용적 체계",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">내용적 체계의 의미</span>
+          <span class="badge badge-green">규범적 타당성 체계</span>
+          <span class="badge badge-purple">실효성 체계</span>
+        </div>
+      `
+    },
+
+    /* 규범적 타당성 체계 */
+    { icon: "✅", title: "사회복지법 내용적 체계",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">규범적 타당성 체계는 <b>법의 당위성</b>에 관한 것으로, 권리성·대상자 요건·급여수급 요건·재정부담 원칙 4가지로 구성된다</div>
+        <div class="sub">① 규범적 타당성 체계 — 법의 당위성</div>
+        <table class="comp-table">
+        <tr><th>항목</th><th>내용</th></tr><tr><td><b>권리성</b></td><td>사회복지에 대한 <b>국가 책임의 명문화</b>, 받는 자의 권리를 법적으로 승인</td></tr>
+        <tr><td><b>대상자 요건과 범위</b></td><td>급여나 서비스에 대한 권리에 의한 수급을 인정하느냐의 문제 (처음에는 한정적 → 점차 확대)</td></tr>
+        <tr><td><b>급여수급 요건·종류·수준</b></td><td>구성 요건이 까다롭지 않아야 함 / 급여·서비스의 종류와 수준의 <b>적절성</b> 유지</td></tr>
+        <tr><td><b>재정부담의 원칙</b></td><td>  · <b>강행규정</b>: "~하여야 한다" — 재정지출 강제<br/>  · <b>임의규정</b>: "~할 수 있다" — 정부의 재량적 결정에 따른 지출<br/>  · ⚠️ 우리나라 사회복지법은 <b>임의규정이 많아</b> 법적 실효성이 약함</td></tr>
+        </table>
+        <div class="sub">② 실효성 체계 — 법의 실현가능성</div>
+        <table class="comp-table"><tr><th>항목</th><th>내용</th></tr>
+        <tr><td><b>주체·관련 조직</b></td><td>급여·서비스 공급 주체의 명확한 규정<br>전달체계 확보·운영<br>전체적 관리체계</td></tr>
+        <tr><td><b>인력</b></td><td>사회복지사 등 법적 지위·권한·책임 규정 (자원봉사자에 대한 규정도 필요)</td></tr>
+        <tr><td><b>재원조달 방법</b></td><td>사회복지법 관련 필요 재원의 국가 조세수입 마련 규정</td></tr>
+        <tr><td><b>권리구제</b></td><td>권리 침해 시 회복 및 보상 절차 마련</td></tr>
+        <tr><td><b>벌칙</b></td><td>사회복지 관련 법익 보호 / 수급자의 인권 및 수급권 보호</td></tr>
+        </table>
+        <div class="hbox hbox-red" style="margin-top:8px">우리나라 국민은 사회복지에 대한 <b>헌법적·법적 권리는 가지고 있으나</b> 그에 대한 <b>국가의 책임은 미약</b>한 편이다</div>
+        <div class="hbox hbox-red">❌ 장애인 이동권처럼 '할 수 있다'로 규정되면 기획재정부가 예산을 반영하지 않아도 법적 문제 없음 → 사회복지사 관점에서 반드시 <b>강제 조항</b>으로 개정 필요</div>
+      `
+    },
+
+    /* 📝 핵심 요약 */
+    { icon: "📝", title: "3강 핵심 요약",
+      html: `
+        <table class="comp-table">
+          <tr><th>개념</th><th>핵심 내용</th></tr>
+          <tr><td><b>법체계의 의미</b></td><td>① 다른 사회규범과의 구분 ② 법규범 내 배열·상호관계</td></tr>
+          <tr><td><b>체계화 두 관점</b></td><td><b>수직적 체계</b>(형식·위계) vs <b>내용적 체계</b>(내용·구조)</td></tr>
+          <tr><td><b>헌법 제34조</b></td><td>① 인간다운 생활을 할 권리 ② 국가의 사회보장·사회복지 증진 의무</td></tr>
+          <tr><td><b>사회복지법 법률 체계</b></td><td>사회보장기본법 → <b>사회보험법 / 공공부조법 / 사회서비스법</b></td></tr>
+          <tr><td><b>시행령 vs 시행규칙</b></td><td>시행령 = <b>대통령령</b> / 시행규칙 = <b>총리령·부령</b></td></tr>
+          <tr><td><b>조례의 역할</b></td><td>새 규범 창조 / 법률 제정 선도 / 현실 괴리 조정 (예: 선배시민 조례 — 2023년 경기도 최초)</td></tr>
+          <tr><td><b>불문법 3가지</b></td><td>관습법(보충법) / 판례법(이론 개발) / <b>조리</b>(최후 법원 — 민법 제1조)</td></tr>
+          <tr><td><b>국제법</b></td><td>ILO 사회보장 최저기준 조약(1952, 보편주의·공평성·적절성) / 사회보장협정 2025.2 기준 <b>42개국</b></td></tr>
+          <tr><td><b>규범적 타당성 체계</b></td><td>권리성 / 대상자 요건·범위 / 급여수급 요건·수준 / <b>재정부담 원칙</b></td></tr>
+          <tr><td><b>재정부담 원칙</b></td><td><b>강제조항</b>("하여야 한다") = 예산 의무 vs <b>임의조항</b>("할 수 있다") = 실효성 없음</td></tr>
+          <tr><td><b>실효성 체계</b></td><td>주체·관련조직 / 인력(자원봉사 규정 포함 필요) / 재원조달 / 권리구제 / 벌칙</td></tr>
+        </table>
+      `
+    }
+
+  ]
+},
+{ num: "4강", name: "사회복지법 권리성 (Ⅰ) — 인권과 시민권", icon: "⚖️",
+  cards: [
+    /* ───────────── 01. 인권 ───────────── */
+    { icon: '📂', title: '01. 인권 (Human Rights)',
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">인권의 개념</span>
+          <span class="badge badge-green">인권의 역사</span>
+          <span class="badge badge-purple">국제인권법</span>
+          <span class="badge badge-red">국가인권위원회법</span>
+        </div>
+      `
+    },
+
+    { icon: "💬", title: "인권의 개념과 인권법학", html: `
+            <div class="hbox hbox-blue">
+            <b>인권</b>: 사람이라면 누구나 가져야 하는 <b>보편적 권리</b><br/>
+                  → 인권의 실현을 위해서는 구체적인 근거 및 실천이 필요
+                </div>
+            <div class="sub">인권법학</div>
+            <ul class="pts">
+            <li>추상적 원리로서의 인권 → 구체적 맥락에서 <b>법적인 권리 형태로 전환</b>시키는 실천적 활동</li>
+            <li>인권의 실현: <b>법 규범</b> + <b>법 외적 실천</b></li>
+            </ul>
+            <div class="hbox hbox-yellow" style="margin-top:8px">
+                  예) "사람은 태어날 때부터 타고난 인권이 있다"<br/>
+                  → 아동이 학대로부터 보호받을 권리를 <b>저절로</b> 보장하는가? → <b>No</b> → 구체적인 번역(법·제도·실천)이 필요
+                </div>
+            ` },
+
+    { icon: '📜', title: '인권의 역사 — 근대 시민혁명과 전개',
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">인권은 <b>프랑스 혁명「인간과 시민의 권리 선언」</b>을 계기로 시작 → 자유권에서 사회권·연대권으로 확장</div>
+        <div class="sub">1) 근대 시민혁명과 인권</div>
+        <ul class="pts">
+          <li>계기: <b>프랑스 혁명「인간과 시민의 권리 선언」</b> (프랑스 인권선언)</li>
+          <li>내용: 국가로부터의 자유(자유권적 인권), 국가가 보장해야 할 자유, 모든 사람의 자유와 평등 선언</li>
+          <li>한계: <b>남성 부르주아 계급 중심</b> — 참정권·재산권이 이들에게만 집중 (실제 자유와 평등 누린 비율 약 5%)</li>
+        </ul>
+        <div class="sub">2) 인권의 전개와 변화</div>
+        <ul class="pts green">
+          <li>근대 자유권적 인권의 제한성·불평등함 → <b>국가의 역할 변화 요구</b></li>
+          <li>모든 사람의 <b>생존권 보장을 위한 적극적 조치</b> 필요</li>
+          <li><b>제3세대 인권(연대권)등장</b> : 자유권 → 사회권 → 연대권(제3세대)으로 확장</li>
+          <li>난민 문제, 전쟁 지역 인권 등 현재도 진행 중인 과제</li>
+        </ul>
+        <div class="flow">
+          <span class="flow-item">자유권<br>(1세대)</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">사회권<br>(2세대)</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">연대권<br>(3세대)</span>
+        </div>
+        <div class="hbox hbox-yellow">💡 인권은 고정된 개념이 아니라 <b>시대·국가에 따라 계속 변화</b>하고 있음</div>
+      `
+    },
+    { icon: "🌏", title: "국제인권법 흐름", html: "<table class=\"comp-table\">\n<tr><th>연도</th><th>법·선언</th><th>특징</th></tr>\n<tr><td>1948</td><td><b>세계인권선언</b> (UN)</td><td>30개 조항 / 자유권적 인권에 기반 / <b>강제성 없음</b> — 큰 의미이나 실질적 법적 강제 X</td></tr>\n<tr><td>1966</td><td><b>국제인권규약 A·B</b></td><td><b>법적 효력 有</b> (선언→규약으로 발전)<br/>A: 경제·사회·문화적 권리에 관한 국제규약 (<b>사회권 규약</b>)<br/>B: 시민적·정치적 권리에 관한 국제규약 (<b>자유권 규약</b>)</td></tr>\n<tr><td>1989</td><td><b>UN 아동권리협약</b></td><td>54개 조항 / 우리나라 1991.2 비준<br/>아동의 생존·발달·보호에 관한 기본 권리 명시</td></tr>\n<tr><td>2006</td><td><b>UN 장애인권리협약</b></td><td>50개 조항 / 우리나라 2008년 비준<br/>2019년 2·3차 통합보고서 제출<br/>장애가 있는 사람들의 <b>존엄성과 권리</b>를 보장하기 위한 최초의 21세기 국제인권조약</td></tr>\n</table>" },
+    { icon: '🌐', title: '세계인권선언 (1948)',
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">UN총회에서 채택 (30개 조항) — 모든 인간은 보편적 평등을 공유하며, 이는 <b>인간의 존엄성</b>에 근거함</div>
+        <div class="sub">의의</div>
+        <ul class="pts">
+          <li>프랑스 시민혁명 이후 흩어진 인권 논의를 <b>국제적으로 정리한 첫 선언</b></li>
+          <li>이후 규약(1966)으로 구체화되는 기반</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 선언(1948) → 규약(1966): 선언은 법적 구속력 없음, 규약은 비준 시 국내법과 동일한 효력</div>
+      `
+    },
+
+    { icon: '📋', title: '국제인권규약 A·B (1966)',
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">세계인권선언을 <b>법적 구속력 있는 조약으로 구체화</b>.<br>냉전 이념 대립으로 <b>A·B 두 개로 분리</b> 채택</div>
+        <div class="sub">A·B 규약 비교</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th class="th-blue">A규약</th><th class="th-green">B규약</th></tr>
+          <tr><td>정식 명칭</td><td>경제적·사회적 및<br>문화적 권리에 관한<br>국제규약</td><td>시민적 및 정치적<br>권리에 관한<br>국제규약</td></tr>
+          <tr><td>권리 유형</td><td><b>사회권</b></td><td><b>자유권</b></td></tr>
+        </table>
+      `
+    },
+
+    { icon: '🧒', title: 'UN아동권리협약 (1989)',
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">UN총회 채택 (54개 조항) — <b>우리나라 1991년 2월 비준</b>. 아동을 '되어가는 존재'가 아닌 <b>현존하는 시민</b>으로 보장</div>
+        <div class="sub">아동 4대 권리 (UN 아동권리협약)</div>
+        <table class="comp-table">
+          <tr><td><b>① 생존권</b></td><td>아동이 생명을 유지하고 건강하게 자랄 수 있도록 기본적인 생활을 누릴 권리</td></tr>
+          <tr><td><b>② 발달권</b></td><td>아동이 재능과 능력을 펼칠 수 있도록 교육을 받고 놀이와 여가를 즐길 권리</td></tr>
+          <tr><td><b>③ 보호권</b></td><td>아동의 몸과 마음을 아프게 하는 모든 해로운 것으로부터 보호받을 권리</td></tr>
+          <tr><td><b>④ 참여권</b></td><td>아동이 자신과 관련된 문제에 관하여 의견을 말하고 참여할 권리</td></tr>
+        </table>
+        <div class="hbox hbox-yellow">💡 아동 = <b>후배 시민</b>: 미래의 존재가 아닌 <b>현재 권리를 가진 시민</b>으로 인정</div>
+      `
+    },
+
+    { icon: '♿', title: 'UN장애인권리협약 (2006)',
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">UN총회 채택 (50개 조항) — <b>우리나라 2008년 비준</b>. 장애가 있는 사람들의 <b>존엄성과 권리</b>를 보장하기 위한 인권 협약</div>
+        <div class="sub">우리나라 이행 현황</div>
+        <ul class="pts green">
+          <li><b>2008년</b>: 비준</li>
+          <li><b>2019년</b>: 2·3차 통합보고서 제출</li>
+          <li><b>2022년</b>: 추가보고서 제출 (탈시설 정책 방향 등 포함)</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 국제 조약·협약을 <b>비준</b>하면 국내법과 동일한 효력 발생 → 반드시 이행 의무</div>
+      `
+    },
+
+{ icon: '🏛️', title: '국가인권위원회법 — 인권 정의와 인권 침해',
+  html: `
+    <span class="kichul">⭐ 기출</span>
+    <div class="sub">① 인권의 정의</div>
+    <div class="hbox hbox-blue">헌법 및 법률에서 보장하거나, 대한민국이 가입·비준한 국제인권조약 및 국제관습법에서 인정하는 인간으로서의 존엄과 가치 및 자유와 권리</div>
+    <div class="sub">② 인권침해</div>
+    <div class="hbox hbox-blue">국가기관, 지방자치단체, 각급학교, 공직유관단체, 구금, 보호시설 업무수행과 관련하여
+      <details style="margin-top:8px">
+        <summary style="cursor:pointer; font-weight:700;">헌법 제10조 및 제12조~제22조에서 보장된 인권의 침해</summary>
+        <table class="comp-table" style="margin-top:6px">
+          <tr><th>조항</th><th>권리</th></tr>
+          <tr><td>제10조</td><td>인간으로서의 존엄과 가치, 행복추구권</td></tr>
+          <tr><td>제12조</td><td>신체의 자유</td></tr>
+          <tr><td>제13조</td><td>행위시 법률에 의해 범죄를 구성하지 않는 행위로 소추되지 않을 권리 / 동일한 범죄에 대해 거듭 처벌받지 않을 권리</td></tr>
+          <tr><td>제14조</td><td>거주·이전의 자유</td></tr>
+          <tr><td>제15조</td><td>직업선택의 자유</td></tr>
+          <tr><td>제16조</td><td>주거의 자유</td></tr>
+          <tr><td>제17조</td><td>사생활의 비밀과 자유</td></tr>
+          <tr><td>제18조</td><td>통신의 비밀</td></tr>
+          <tr><td>제19조</td><td>양심의 자유</td></tr>
+          <tr><td>제20조</td><td>종교의 자유</td></tr>
+          <tr><td>제21조</td><td>언론·출판의 자유와 집회·결사의 자유</td></tr>
+          <tr><td>제22조</td><td>학문과 예술의 자유</td></tr>
+        </table>
+      </details>
+    </div>
+  `
+},
+
+    { icon: '⚖️', title: '평등권 침해의 차별행위 (제2조 제3호)',
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue"><b>합리적인 이유 없이</b> 특정 사유를 이유로 한 차별 행위(고용·재화·용역·교육시설·성희롱 행위)</div>
+        <div class="sub">차별 금지 사유 (전체 목록)</div>
+        <ul class="pts purple">
+          <li>성별, 종교, 장애, 나이, 사회적 신분</li>
+          <li>출신지역, 출신국가, 출신민족</li>
+          <li>용모 등 신체조건</li>
+          <li>기혼·미혼·별거·이혼·사별·재혼·사실혼 등 혼인 여부</li>
+          <li>임신 또는 출산, 가족형태 또는 가족상황</li>
+          <li>인종, 피부색, 사상 또는 정치적 의견</li>
+          <li>형의 효력이 실효된 전과</li>
+          <li>성적(性的) 지향, 학력, 병력(病歷) 등</li>
+        </ul>
+       <div class="sub">차별행위 예시</div>
+        <ul class="pts red"><li>성별을 이유로 <b>승진에서 배제</b></li>
+        <li>장애를 이유로 <b>교육과정에서 배제</b></li>
+        <li>직위를 이용한 <b>성희롱</b></li></ul>
+        <div class="hbox hbox-yellow" style="margin-top:8px"><b>차별행위 아닌 것 (예시)</b>: 대학교에서 <b>성적에 따른 장학금 지급</b> → ❌ 합리적 이유 있는 차등이므로 차별행위 아님  </div>
+        <div class="hbox hbox-yellow">💡 장애차별 결정례 (2025.2): 발달장애인이 경찰 조사 시 <b>조력자(지원인) 동행 권리</b> 미보장 → 차별 결정</div>
+      `
+    },
+
+    /* ───────────── 02. 시민권 ───────────── */
+    { icon: '📂', title: '02. 시민권 (Citizenship)',
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">시민권의 배경</span>
+          <span class="badge badge-green">마샬의 시민권 3요소</span>
+          <span class="badge badge-purple">사회권의 눈으로 본 인권</span>
+          <span class="badge badge-red">마샬 시민권 비판</span>
+        </div>
+      `
+    },
+
+    { icon: '🏙️', title: '시민권의 배경과 개념',
+      html: `
+        <div class="hbox hbox-blue">시민권(Citizenship)은 인권보다 구체적인 개념<br>인권의 정당성 근거는 <b>근대 시민혁명</b>이며, 시민혁명을 통해 인권이 <b>국가 단위에서 승인</b>됨</div>
+        <div class="sub">인권 → 시민권 흐름</div>
+        <div class="flow">
+          <span class="flow-item">근대<br>시민혁명</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">시민 자격자의<br>권리 인정</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">인권이 국가<br>단위에서 승인</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">시민권<br>(구체화)</span>
+        </div>
+      `
+    },
+
+    { icon: '👑', title: '마샬(Marshall)의 시민권',
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue"><b>마샬 「시민권과 사회계급」</b><br>시민권은 <b>공민적·정치적·사회적 요소</b>로 구성되며, 각 권리는 순차적으로 형성됨 (18C→19C→20C)</div>
+        <div class="sub">마샬의 시민권 세부 내용</div>
+          <table class="comp-table">
+          <tr><th>세기</th><th>권리 (영역)</th><th>내용</th></tr>
+          <tr><td>18세기</td><td><b>공민권</b><br/><span style="font-size:.8em;color:#6b7280">(경제)</span></td><td>국가 권력으로부터 개인의 자유 방어 (자유권)<br/>신체·언론 및 사상·신앙·계약의 자유 등</td></tr>
+          <tr><td>19세기</td><td><b>정치권</b><br/><span style="font-size:.8em;color:#6b7280">(민주주의)</span></td><td>정치 영역에서의 시민권 (참정권) — <b>보통 선거권</b></td></tr>
+          <tr><td>20세기</td><td><b>사회권</b><br/><span style="font-size:.8em;color:#6b7280">(복지)</span></td><td>적정 수준의 경제적 복지 및 보장<br/>사회 보편적 기준에 따라 <b>문명화된 삶을 영위</b>할 권리</td></tr>
+          </table>
+        <div class="hbox hbox-yellow">💡 사회권이 공민권·정치권의 실질적 실현을 위한 기반 <br>  → 예: 투표소에 접근 못하면 투표권(정치권)도 무의미</div>
+      `
+    },
+    { icon: '🔍', title: '마샬 시민권 비판',
+      html: `
+      <ul class="pts red">
+      <li><b>앤서니 기든스:</b> 영국에만 적용된 사례 / 시민권은 자연적 발전이 아닌 투쟁을 통해 획득됨</li>
+      <li><b>브라이언 터너:</b> 시민권 발전을 민족 집단의 동일성을 가정하며 분석 (다양한 인종 고려 미흡)</li>
+      <li><b>마르크스주의:</b> 자본주의 모순을 은폐함</li>
+      <li><b>페미니즘:</b> 여성의 사회적 권리를 소홀히 다룸 (19C 정치권 확립이라 했으나 실제 여성 참정권은 1900년대 초에야 투쟁으로 쟁취)</li>
+      </ul>
+      `
+    },
+
+    { icon: '🍞', title: '사회권의 눈으로 본 인권',
+      html: `
+        <div class="sub">🌹 빵과 장미</div>
+        <ul class="pts green">
+          <li>누구에게나 기본적인 빵을 <b>공적으로</b> 보장하는 것</li>
+          <li><b>조건의 평등</b> 실현</li>
+          <li>공동체 구성원 모두에게 적용</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 <b>빵과 장미</b>: 빵(생존)만이 아닌 장미(존엄·품위)까지 보장되어야 진정한 인권 — 생존 + 품위를 함께 보장</div>
+      `
+    },
+
+    /* ───────────── 핵심 요약 ───────────── */
+    { icon: '📝', title: '4강 핵심 요약',
+      html: `
+        <table class="comp-table">
+          <tr><th>개념</th><th>핵심 내용</th></tr>
+          <tr><td><b>인권</b></td><td>사람의 보편적 권리 — <b>자유권적 인권</b>과 <b>사회권적 인권</b>으로 구분</td></tr>
+          <tr><td><b>인권의 시작</b></td><td>프랑스 혁명 「인간과 시민의 권리 선언」 → 남성 부르주아 중심(약 5%)</td></tr>
+          <tr><td><b>인권 세대</b></td><td>자유권(1세대) → 사회권(2세대) → 연대권/제3세대</td></tr>
+          <tr><td><b>세계인권선언</b></td><td><b>1948년</b> UN총회, <b>30개 조항</b>, 인간의 존엄성 근거</td></tr>
+          <tr><td><b>국제인권규약 A</b></td><td><b>1966년</b> — 경제적·사회적·문화적 권리(<b>사회권</b>)</td></tr>
+          <tr><td><b>국제인권규약 B</b></td><td><b>1966년</b> — 시민적·정치적 권리(<b>자유권</b>)</td></tr>
+          <tr><td><b>UN아동권리협약</b></td><td><b>1989년</b> UN총회, <b>54개 조항</b>, 우리나라 <b>1991년 2월</b> 비준 — 생존·발달·보호·참여권</td></tr>
+          <tr><td><b>UN장애인권리협약</b></td><td><b>2006년</b> UN총회, <b>50개 조항</b>, 우리나라 <b>2008년</b> 비준</td></tr>
+          <tr><td><b>국가인권위원회법<br>인권 침해</b></td><td>국가기관 등 업무수행 관련 헌법 <b>제10조 및 제12~22조</b> 위반</td></tr>
+          <tr><td><b>평등권 침해 차별행위</b></td><td>합리적 이유 없이 성별·종교·장애·나이·<b>성적 지향</b>·<b>병력</b> 등을 이유로 고용·재화·교육·성희롱 행위</td></tr>
+          <tr><td><b>마샬의 시민권</b></td><td>공민권(18C·경제) + 정치권(19C·민주주의) + 사회권(20C·복지) — 세 요소가 모두 시민권</td></tr>
+          <tr><td><b>사회권의 의미</b></td><td>공민권·정치권의 실질적 실현 기반 — <b>빵(생존)과 장미(존엄)</b> 모두 보장</td></tr>
+          <tr><td><b>마샬 비판</b></td><td>기든스(투쟁으로 획득), 터너(민족 동일성 가정), 마르크스주의(자본주의 모순 은폐), 페미니즘(여성 권리 소홀)</td></tr>
+        </table>
+      `
+    },
+  ]
+},
+{ num: "5강", name: "사회복지법의 권리성 Ⅱ", icon: "⚖️",
+  cards: [
+
+    /* ───────────────────────────────
+       📂 01. 헌법상 기본권
+    ─────────────────────────────── */
+    { icon: "📂", title: "01. 헌법상 기본권",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">인권·시민권·기본권 관계</span>
+          <span class="badge badge-green">헌법규정 기본권 유형</span>
+          <span class="badge badge-purple">기본권의 효력</span>
+        </div>
+      `
+    },
+
+    { icon: "🔍", title: "인권 · 시민권 · 기본권 관계",
+      html: `
+        <table class="comp-table">
+          <tr><th>개념</th><th>내용</th><th>특성</th></tr>
+          <tr><td><b>인권</b></td><td>인간이라면 누구나 가지는 보편적 권리</td><td>천부적·자연적</td></tr>
+          <tr><td><b>시민권</b></td><td>시민으로서의 권리 (마샬의 시민권)</td><td>사회 구성원으로서 획득</td></tr>
+          <tr><td><b>기본권</b></td><td>국가가 국민에게 부여하는 권리,<br><b>헌법이 인정하는 인간의 기본적 권리</b></td><td><b>헌법적 차원</b>을 가짐</td></tr>
+        </table>
+      `
+    },
+
+    { icon: "📊", title: "헌법규정 기본권 유형 ★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <table class="comp-table">
+          <tr><th>유형</th><th>주요 내용</th></tr>
+          <tr><td><b>포괄적 기본권</b></td><td>인간의 존엄성과 가치, 행복추구권</td></tr>
+          <tr><td><b>평등권</b></td><td>법 앞에서의 평등</td></tr>
+          <tr><td><b>자유권적 기본권</b></td><td>· 인신의 자유권: 생명권, 신체의 자유<br/>· 사생활 자유권: 사생활의 비밀·거주이전·통신의 자유<br/>· 정신적 자유권: 양심의 자유,종교의 자유,언론·출판·집회·결사의 자유, 학문과 예술의 자유</td></tr>
+          <tr><td><b>경제적 기본권</b></td><td>재산권, 직업선택의 자유, 소비자의 권리</td></tr>
+          <tr><td><b>정치적 기본권</b></td><td>정치적 자유, 참정권</td></tr>
+          <tr><td><b>청구권적 기본권</b></td><td>청원권, 재판청구권, 국가배상청구권, 국가보상청구권, 범죄피해자구조청구권</td></tr>
+          <tr><td><b>사회권적 기본권</b></td><td>인간다운 생활권, 근로권, 근로3권, 교육받을 권리, 환경권, 건강권</td></tr>
+        </table>
+        <div class="hbox hbox-yellow">💡 사회권이 보장되지 않으면 자유권도 온전히 누릴 수 없다 → 자유권과 사회권은 함께 중요</div>
+      `
+    },
+
+    { icon: "🏛️", title: "기본권의 효력",
+      html: `
+        <div class="sub">기본권의 효력</div>
+        <ul class="pts">
+          <li><b>모든 국가권력 구속</b>(입법권, 사법권, 행정권 등)</li>
+          <li>비국가적 권력 개인 상호간 원칙적으로 직접 적용 안 됨</li>
+        </ul>
+        <ul class="pts">
+          <li>헌법은 <b>사법상의 일반원칙을 통하여 간접적으로</b> 사법 질서에 적용</li>
+          <li>개별법(민법, 아동복지법 등) 해석 시 <b>헌법의 내용을 근거로 판단</b></li>
+        </ul>
+        <div class="sub">간접적용설 (민간·개인 상호간)</div>
+        <div class="hbox hbox-blue"><b>헌법은 직접 적용이 아니라 사법상의 일반원칙 통하여 간접적으로 사법 질서에 적용</b></div>
+        <div class="hbox hbox-yellow">💡 결론: 헌법상 기본권은 모든 것에 영향을 미침 — 민간 영역도 간접적으로 구속됨</div>
+      `
+    },
+
+    /* ───────────────────────────────
+       📂 02. 사회권적 기본권
+    ─────────────────────────────── */
+    { icon: "📂", title: "02. 사회권적 기본권",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">사회권적 기본권 개념</span>
+          <span class="badge badge-green">역사적 배경 (바이마르헌법)</span>
+          <span class="badge badge-purple">법적 성격 학설</span>
+        </div>
+        <div class="badge-row">
+          <span class="badge badge-red">관련 판례</span>
+          <span class="badge badge-yellow">UN 사회권 규약</span>
+          <span class="badge badge-gray">권리의 대응 의무</span>
+        </div>
+      `
+    },
+
+    { icon: "⚡", title: "사회권적 기본권(생존권적 기본권) ★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">
+          <ul class="pts">
+            <li>사회정의의 실현을 국가적 목적으로 하는 복지국가에서 국민이 인간다운 생활을 할 수 있도록 <b>국가에 일정한 급여나 서비스를 요구할 수 있는 헌법상 권리</b></li>
+            <li>국민 개인의 일상생활에 필요한 <b>제반 조건을 국가권력이 적극적으로 개입하여 확보해줄 것을 요청할 수 있는 권리</b></li>
+            </div>
+        <ul class="pts">
+          <li>단순한 시혜가 아닌 <b>법적 권리</b> → 당당하게 요청 가능</li>
+        </ul>
+        <div class="sub">자유권 vs 사회권 침해 구제</div>
+          <table class="comp-table">
+          <tr><th></th><th>자유권</th><th>사회권</th></tr>
+          <tr><td>침해 구제</td><td><b>명확함</b> — 사법적 심사를 통해 가능</td><td><b>불분명</b> — 국가들마다 상이한 재정 수준과 사회권 기준</td></tr>
+          </table>
+                `
+    },
+
+    { icon: "🕰️", title: "역사적 배경 — 바이마르헌법 ★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+       </li></ul>
+        <div class="sub">독일 바이마르헌법 제151조 (1919)</b> — 사회권적 기본권이 <b>최초로 헌법에 명문화</b>된 헌법</div>
+        <div class="hbox hbox-purple" style="background:#ede9fe;border-left:3px solid #7c3aed;">
+          "경제생활의 질서는 모든 사람에게 <b>인간다운 생활을 보장</b>해주기 위하여 <b>정의의 원칙</b>에 합치하지 않으면 아니 된다"
+        </div>
+        <div class="hbox hbox-yellow">💡 우리나라 제헌헌법 제정 시 바이마르헌법을 많이 참조</div>
+      `
+    },
+
+    { icon: "⚖️", title: "사회권적 기본권의 법적 성격 학설 ★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <table class="comp-table">
+          <tr><th>학설</th><th>권리 강도</th><th>핵심 내용</th></tr>
+          <tr><td><b>프로그램 규정설</b></td><td>🔴 가장 약함</td><td>헌법 사회권 조항 = 국가목표 및 입법방침만 규정<br/>→ 입법에 의해서만 개인 권리 발생, 청구 불가</td></tr>
+          <tr><td><b>법적 권리설</b></td><td>🟡 중간</td><td>생존권 규정 = 국가에 대한 국민의 권리<br/>ⓐ <b>추상적 권리설</b><br/>ⓑ <b>구체적 권리설</b><br/>ⓒ <b>불완전 구체적 권리설</b></td></tr>
+          <tr><td><b>제도 보장설</b></td><td>🟢 가장 강함</td><td>사회복지 권리 = <b>헌법상 보장된 제도</b><br/>→ 국가권력 직접 구속, 적극적 입법 청구 가능<br/>(헌법 제34조 근거)</td></tr>
+        </table>
+        <div class="hbox hbox-yellow">💡 <b>세 학설이 존재한다 = 정답이 없다는 의미</b><br/>프로그램 규정설(약) → 법적 권리설 → 제도 보장설(강) 순으로 사회권을 강하게 인정</div>
+      `
+    },
+
+    { icon: "📋", title: "관련 판례 — 최저생계비 위헌확인(2002년)",
+      html: `
+        <div class="sub">2002년도 국민기초생활보장최저생계비 위헌확인 결정요지</div>
+        <ul class="pts">
+          <li>인간다운 생활은 <b>추상적·상대적 개념</b> → 나라의 문화·역사·사회·경제 여건에 따라 다름</li>
+          <li>생계급여의 구체적 수준 결정은 <b>입법부 또는 행정부 등의 광범위한 재량</b>에 맡겨짐</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 이 판결은 <b>프로그램 규정설·법적 권리설에 가까운</b> 입장 → 제도 보장설과 거리가 있음</div>
+      `
+    },
+
+    { icon: "🌐", title: "UN 경제적·사회적 및 문화적 권리에 관한 국제규약(사회권 규약) ★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-yellow">1966년 UN총회 채택 / 우리나라 <b>1990년 비준</b> (비준 → 국내법과 동일한 효력)</div>
+        <div class="hbox hbox-blue"" style="margin-top:8px">
+          <b>경제적·사회적 및 문화적 권리에 관한 국제규약 (사회권 규약)</b><br/>
+          일할 권리, 좋은 환경에서 일할 권리, 노동조합을 만들고 가입할 권리, 사회보장을 받을 권리, 가정이 보호받을 권리, 적절한 생활수준을 향유할 권리, 육체적, 정신적 건강을 위해서 이용가능한 최대한의 보호를 받을 권리, 모든 사람이 교육받을 권리, 문화생활에 참여할 수 있는 권리 등(31개)
+        </div>
+          <div class="hbox hbox-purple" style="background:#ede9fe;border-left:3px solid #7c3aed;margin-top:6px">
+          <b>우리나라 사회권 논의</b>: 2007년 국가인권위원회 사회권 포럼<br/>
+                · 자유권 침해 → 사법적 심사를 통해 구제 가능 (명확)<br/>
+                · 사회권 침해 → 법률적 구제 불분명 (국가별 재정수준·기준 상이)
+        </div>
+      `
+    },
+
+    { icon: "🤝", title: "권리를 위한 적극적 의무 권리의 대응 의무",
+      html: `
+        <table class="comp-table">
+          <tr><th>의무 유형</th><th>내용</th></tr>
+          <tr><td><b>존중할 의무</b></td><td>국가는 개인의 자유를 <b>존중</b>하고 <b>간섭하지 말아야</b> 할 의무</td></tr>
+          <tr><td><b>보호할 의무</b></td><td>제3자가 개인의 권리를 침해하지 못하도록 <b>국가가 조치를 취할</b> 의무</td></tr>
+          <tr><td><b>충족시킬 의무</b></td><td>국가가 그 권리에 대해 직접 <b>재화나 서비스를 제공</b>해야 할 의무</td></tr>
+        </table>
+      `
+    },
+
+    /* ───────────────────────────────
+       📂 03. 사회복지수급권
+    ─────────────────────────────── */
+    { icon: "📂", title: "03. 사회복지수급권",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">수급권 개념 및 성격</span>
+          <span class="badge badge-green">규범적 구조</span>
+          <span class="badge badge-red">수급권의 취약성</span>
+          <span class="badge badge-purple">보호·제한·소멸</span>
+        </div>
+      `
+    },
+
+    { icon: "🗂️", title: "사회복지수급권 개념 및 성격 ★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue" style="margin-bottom:10px">
+            <b>사회복지수급권</b>: 사회복지법상 사회복지급여를 받을 권리<br>
+                  사회보장기본법 제9조: "모든 국민은 사회보장 관계 법령에서 정하는 바에 따라 사회보장급여를 받을 권리를 가진다"
+        </div>
+        <div class="sub">성격 및 특성</div>
+        <ul class="pts">
+          <li>헌법상 <b>생존권적 기본권(사회권적 기본권)의 구체적 실현</b>을 위하여 <b>하위법</b>을 통해 실현</li>
+          <li>관련 하위법 예시: 국민기초생활보장법, 국민연금법, 노인장기요양법, 장애인복지법, 아동복지법 등</li>
+          <li>헌법상 생존권적 기본권의 법적 성격을 <b>어떻게 보느냐에 따라 보장의 정도가 달라짐</b></li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 사회보장기본법 제9조가 수급권의 근거 — 대상은 <b>모든 국민</b></div>
+      `
+    },
+
+    { icon: "🔗", title: "수급권의 규범적 구조 ★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">사회복지수급권은 <b>실체적 권리 / 수속적 권리 / 절차적 권리</b> 세 가지로 구성</div>
+        <div class="sub">① 실체적 권리 — 급여를 청구할 수 있는 구체적 권리</div>
+        <div class="badge-row">
+          <span class="badge badge-blue">사회보험 청구권</span>
+          <span class="badge badge-green">공공부조 청구권</span>
+          <span class="badge badge-purple">사회서비스 청구권</span>
+        </div>
+        <div class="sub">② 수속적 권리 — 적절한 절차에 참가하는 권리</div>
+        <table class="comp-table">
+          <tr><th>단계</th><th>내용</th></tr>
+          <tr><td><b>수속 전 단계</b></td><td>· 홍보 및 정보제공 요구 권리<br/>· 상담 및 조언 제공 요구 권리<br/>· 사회복지기관 이용 권리</td></tr>
+          <tr><td><b>수속 단계</b></td><td>신청 → 조사 → 결정 → 실시 각 단계에서<br/>권리가 침해되지 않도록 적절한 진행을 요구할 수 있는 권리</td></tr>
+        </table>
+        <div class="sub">③ 절차적 권리 — 실체적 권리 실현이 안 될 때 이의보전·이행강제 관련 권리</div>
+        <div class="badge-row">
+          <span class="badge badge-red">사회복지급여쟁송권</span>
+          <span class="badge badge-yellow">사회복지행정참여권</span>
+          <span class="badge badge-gray">사회복지입법청구권</span>
+        </div>
+        <div class="hbox hbox-yellow">💡 사회보장 3대 영역: <b>사회보험</b>(국민연금·건강보험 등) / <b>공공부조</b>(기초생활보장) / <b>사회서비스</b>(장애인·아동·노인복지)</div>
+      `
+    },
+
+    { icon: "⚠️", title: "수급권의 취약성",
+      html: `
+        <ul class="pts red">
+          <li>국민의 권리가 국가의 의무관계로 수급되지 않음 → <b>시혜·자선으로 보는 인식</b> 잔존</li>
+          <li>수급권 내용에 비금전적·전문기술적 급여 多 → 범위 불명확, 법규범으로 규정하기 곤란</li>
+          <li><b>사적 측면의 존재</b>(가족이 먼저 해결해야 한다는 인식) → 권리성을 어렵게 함</li>
+          <li><b>행정기관의 행정행위</b>에 의하여 실현되는 특성 → 재량 개입 가능</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 사적 측면: 민간 기관을 통해 전달되는 경우가 많아 순수한 공법적 권리로만 보기 어려운 측면이 있음</div>
+      `
+    },
+
+    { icon: "🛡️", title: "수급권의 보호·제한·소멸 ★",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">수급권에는 <b>3가지 보호 원칙</b>이 있으며, 일정 사유로 <b>제한 또는 소멸</b>될 수 있음</div>
+        <div class="sub">사회복지수급권의 보호 원칙 (3가지)</div>
+        <table class="comp-table">
+          <tr><th>보호 내용</th><th>설명</th></tr>
+          <tr><td><b>수급권의 처분·압류의 금지</b></td><td>· 일신전속성<br>· 공법상 권리로서 양도·담보제공,압류 및 상계 금지</td></tr>
+          <tr><td><b>조세, 기타 공과의 금지</b></td><td>· 인간으로서 최소한의 삶 영위 목적 → 사회복지급여에 세금 부과 불가</td></tr>
+          <tr><td><b>불이익 변경의 금지</b></td><td>· 결정된 급여는 정당한 이유 없이 변경 금지 (기득권 침해 행위로 인정)</td></tr>
+        </table>
+        <div class="sub">수급권 제한</div>
+        <ul class="pts">
+          <li>형식적으로 급여 수급조건 충족되었으나 여러 실질적 사유로 사회복지급여를 행하지 않는 것</li>
+          <li> - 과잉·중복된 사회복지급여의 제한 및 조정</li>
+          <li> - 사회복지급여의 <b>남용 및 악용</b> 금지</li>
+        </ul>
+        <div class="sub">수급권 소멸</div>
+        <ul class="pts">
+          <li><b>사망 :</b> 일신전속성 → 사망 시 수급권 소멸, <b>상속 불가</b></li>
+          <li><b>포기 :</b> 수급권자 본인의 의사에 의한 포기</li>
+          <li><b>소멸시효 :</b> 일정 기간 급여를 받지 않을 경우 소멸 (기간은 법마다 상이)</li>
+        </ul>
+        <div class="hbox hbox-red">❌ 수급권은 일신전속적 권리 → 사망 시 <b>상속되지 않음</b> / 양도·담보 제공도 불가</div>
+      `
+    },
+
+    /* ───────────────────────────────
+       📝 5강 핵심 요약
+    ─────────────────────────────── */
+    { icon: "📝", title: "5강 핵심 요약",
+      html: `
+        <table class="comp-table">
+          <tr><th>개념</th><th>핵심 내용</th></tr>
+          <tr><td><b>기본권</b></td><td>국가가 국민에게 부여하는 권리 — 헌법에 명시된 인권 = 기본권</td></tr>
+          <tr><td><b>간접적용설</b></td><td>헌법은 사법상 일반원칙을 통해 민간·개인 간에 <b>간접적</b>으로 적용</td></tr>
+          <tr><td><b>사회권적 기본권</b></td><td>국민이 인간다운 생활을 위해 국가에 <b>급여·서비스를 요구</b>할 수 있는 헌법상 권리 (= 생존권적 기본권)</td></tr>
+          <tr><td><b>바이마르헌법(1919)</b></td><td>사회권 <b>최초 헌법 명문화</b> — 제151조 / 우리나라 제헌헌법 참조</td></tr>
+          <tr><td><b>프로그램 규정설</b></td><td>사회권 효력 <b>가장 약함</b> — 입법 없이 청구 불가</td></tr>
+          <tr><td><b>법적 권리설</b></td><td>추상적 권리설 / 구체적 권리설 / <b>불완전 구체적 권리설</b> 세 갈래</td></tr>
+          <tr><td><b>제도 보장설</b></td><td>사회권 효력 <b>가장 강함</b> — 헌법상 보장된 제도, 적극적 입법 청구 가능</td></tr>
+          <tr><td><b>UN 사회권 규약</b></td><td><b>1966년</b> 채택 / 우리나라 <b>1990년 비준</b> / 31개 권리</td></tr>
+          <tr><td><b>국가의 3가지 의무</b></td><td><b>존중</b>(간섭 금지) / <b>보호</b>(제3자 침해 방지) / <b>충족</b>(직접 제공)</td></tr>
+          <tr><td><b>사회복지수급권</b></td><td>사회보장기본법 제9조 — <b>모든 국민</b>이 사회복지급여를 받을 권리</td></tr>
+          <tr><td><b>규범적 구조</b></td><td><b>실체적</b>(청구권) / <b>수속적</b>(절차 참가) / <b>절차적</b>(이의·쟁송) 권리</td></tr>
+          <tr><td><b>수급권 보호</b></td><td>처분·압류 금지 / 조세·공과 금지 / 불이익 변경 금지</td></tr>
+          <tr><td><b>수급권 소멸</b></td><td><b>사망</b>(상속 불가) / <b>포기</b> / <b>소멸시효</b></td></tr>
+        </table>
+      `
+    },
+
+  ]
+},
+{ num: "6강", name: "권리구제와 사회복지법 소송", icon: "⚖️",
         cards: [
-          { icon: "🔍", title: "사회복지법이란?", html: "<div class=\"hbox hbox-blue\">\n<b>사회정책</b>: 다양한 사회적 위험에 대응하는 <b>공적인 관리체계</b><br/>\n<b>사회복지법</b>: 사회정책의 <b>제도화 과정</b>\n</div>\n<div class=\"sub\">사회복지 개념도 (추상 → 구체)</div>\n<div style=\"margin:6px 0 10px;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;\">\n<!-- 추상적 영역 헤더 -->\n<div style=\"background:#475569;color:#fff;font-size:.72em;font-weight:700;letter-spacing:1px;text-align:center;padding:5px 0;\">추상적 영역</div>\n<!-- 가치 -->\n<div style=\"display:flex;align-items:center;justify-content:center;padding:10px 16px;background:#f8fafc;border-bottom:1px solid #e2e8f0;gap:8px;\">\n<span style=\"font-size:1.1em;\">💎</span>\n<span style=\"font-weight:700;font-size:.88em;color:#334155;\">사회복지 가치</span>\n</div>\n<div style=\"text-align:center;color:#94a3b8;font-size:.9em;padding:2px 0;background:#f8fafc;\">▼</div>\n<!-- 이념 -->\n<div style=\"display:flex;align-items:center;justify-content:center;padding:10px 16px;background:#f8fafc;border-bottom:1px dashed #cbd5e1;gap:8px;\">\n<span style=\"font-size:1.1em;\">💡</span>\n<span style=\"font-weight:700;font-size:.88em;color:#334155;\">사회복지 이념</span>\n</div>\n<!-- 구체적 영역 헤더 -->\n<div style=\"background:#2563eb;color:#fff;font-size:.72em;font-weight:700;letter-spacing:1px;text-align:center;padding:5px 0;\">구체적 영역</div>\n<!-- 법·정책 (강조) -->\n<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:center;padding:11px 16px;background:#dbeafe;border-bottom:1px solid #93c5fd;gap:2px;\">\n<div style=\"display:flex;align-items:center;gap:6px;\">\n<span style=\"font-size:1.1em;\">⚖️</span>\n<span style=\"font-weight:900;font-size:.9em;color:#1d4ed8;\">사회복지법 · 정책</span>\n</div>\n<div style=\"font-size:.72em;color:#3b82f6;\">← 사회복지법은 구체적 영역의 첫 단계</div>\n</div>\n<div style=\"text-align:center;color:#93c5fd;font-size:.9em;padding:2px 0;background:#eff6ff;\">▼</div>\n<!-- 행정 -->\n<div style=\"display:flex;align-items:center;justify-content:center;padding:10px 16px;background:#eff6ff;border-bottom:1px solid #bfdbfe;gap:8px;\">\n<span style=\"font-size:1.1em;\">🏛️</span>\n<span style=\"font-weight:700;font-size:.88em;color:#1e40af;\">사회복지행정</span>\n</div>\n<div style=\"text-align:center;color:#93c5fd;font-size:.9em;padding:2px 0;background:#eff6ff;\">▼</div>\n<!-- 실천 -->\n<div style=\"display:flex;align-items:center;justify-content:center;padding:10px 16px;background:#eff6ff;border-bottom:1px solid #bfdbfe;gap:8px;\">\n<span style=\"font-size:1.1em;\">🤝</span>\n<span style=\"font-weight:700;font-size:.88em;color:#1e40af;\">사회복지실천</span>\n</div>\n<div style=\"text-align:center;color:#93c5fd;font-size:.9em;padding:2px 0;background:#eff6ff;\">▼</div>\n<!-- 시민 -->\n<div style=\"display:flex;align-items:center;justify-content:center;padding:10px 16px;background:#1d4ed8;gap:8px;\">\n<span style=\"font-size:1.1em;\">👥</span>\n<span style=\"font-weight:900;font-size:.9em;color:#fff;\">시민</span>\n</div>\n</div>\n<div class=\"sub\">법 vs 사회복지 — 공통점과 차이점</div>\n<div style=\"background:#f0fdf4;border-left:3px solid #059669;border-radius:8px;padding:10px 14px;font-size:.85em;margin-bottom:8px;\">\n<b>공통점</b>: 사회문제 해결을 위해 어떤 방법·수단을 채택해야 하는가에 대한 <b>사회적 논의의 산출물</b>\n</div>\n<div style=\"display:grid;grid-template-columns:1fr 1fr;gap:8px;\">\n<div style=\"background:#eff6ff;border-radius:8px;padding:10px 12px;font-size:.84em;\">\n<div style=\"font-weight:900;color:#1d4ed8;margin-bottom:5px;\">⚖️ 법</div>\n<div style=\"color:#1e40af;line-height:1.6;\">사실적 근거와 증거 기반<br/><span style=\"color:#3b82f6;\">법의 규범·합목적성 강조</span></div>\n</div>\n<div style=\"background:#fdf4ff;border-radius:8px;padding:10px 12px;font-size:.84em;\">\n<div style=\"font-weight:900;color:#7c3aed;margin-bottom:5px;\">🤝 사회복지</div>\n<div style=\"color:#6d28d9;line-height:1.6;\">상황적 맥락 중시<br/><span style=\"color:#8b5cf6;\">환경 속의 인간 강조</span></div>\n</div>\n</div>\n<div class=\"sub\">사회복지법의 의미</div>\n<div style=\"display:flex;flex-direction:column;gap:7px;margin-top:4px;\">\n<div style=\"display:flex;align-items:flex-start;gap:10px;background:#eff6ff;border-radius:10px;padding:11px 14px;\">\n<span style=\"font-size:1.2em;flex-shrink:0;margin-top:1px;\">✍️</span>\n<div style=\"font-size:.86em;line-height:1.65;color:#1e3a5f;\">\n          사회복지가 <b style=\"color:#1d4ed8;\">법으로 명문화</b>되었다는 것\n          = 국민이 국가·사회의 지원을 받을 <b style=\"color:#1d4ed8;\">권리가 생성</b>되었음을 의미\n        </div>\n</div>\n<div style=\"display:flex;align-items:flex-start;gap:10px;background:#eff6ff;border-radius:10px;padding:11px 14px;\">\n<span style=\"font-size:1.2em;flex-shrink:0;margin-top:1px;\">⭐</span>\n<div style=\"font-size:.86em;line-height:1.65;color:#1e3a5f;\">\n          법의 <b>존재 여부</b>도 중요하지만,\n          사회복지법이 모든 국민의 권리를 <b style=\"color:#1d4ed8;\">실질적으로 지켜주고 있는지</b>가 더 중요\n        </div>\n</div>\n<div style=\"display:flex;align-items:flex-start;gap:10px;background:#eff6ff;border-radius:10px;padding:11px 14px;\">\n<span style=\"font-size:1.2em;flex-shrink:0;margin-top:1px;\">📜</span>\n<div style=\"font-size:.86em;line-height:1.65;color:#1e3a5f;\">\n          사회복지 가치·이념이 사회복지실천 현장에서 이루어지고\n          <b style=\"color:#1d4ed8;\">국가와 사회를 강제</b>할 수 있는 권리를 가지게 된 제반 법규\n        </div>\n</div>\n<div style=\"display:flex;align-items:flex-start;gap:10px;background:#fef3c7;border-radius:10px;padding:11px 14px;\">\n<span style=\"font-size:1.2em;flex-shrink:0;margin-top:1px;\">⚠️</span>\n<div style=\"font-size:.86em;line-height:1.65;color:#78350f;\">\n          사회복지실천은 반드시 <b style=\"color:#d97706;\">법의 테두리 안</b>에서 이루어져야 함\n        </div>\n</div>\n</div>\n<div class=\"sub\">협의 vs 광의의 사회복지법</div>\n<table class=\"comp-table\">\n<tr><th></th><th>협의의 사회복지법</th><th>광의의 사회복지법</th></tr>\n<tr><td>개념</td><td>사회복지의 <b>보충적</b> 개념</td><td>사회복지의 <b>제도적</b> 개념</td></tr>\n<tr><td>성격</td><td>시혜·낙인</td><td>권리</td></tr>\n</table>" },
-          { icon: "⚖️", title: "시민법 vs 사회법", html: "<div class=\"sub\">시민법</div>\n<ul class=\"pts\">\n<li>시민사회 전제 (자유·평등), <b>시민혁명</b> 이후 시민사회를 규율하는 새로운 법이 필요</li>\n<li>원칙: <b>사유재산 존중</b> / <b>계약자유</b> / <b>과실책임</b></li>\n</ul>\n<table class=\"comp-table\" style=\"margin-top:8px\">\n<tr><th style=\"width:25%\">원칙</th><th class=\"th-blue\">시민법</th><th class=\"th-green\">사회법 (수정)</th></tr>\n<tr><td>재산</td><td>사유재산 존중의 원칙</td><td><b>소유권의 사회성</b> — 자본의 무제한 소유에 제동 (세법상 조세를 통한 통제 등)</td></tr>\n<tr><td>계약</td><td>계약자유의 원칙</td><td><b>계약의 공정성</b> — 노동자가 집단적으로 계약의 주체가 되는 합법성 부여 (노동법·사회보험법·소비자보호 입법 등)</td></tr>\n<tr><td>책임</td><td>과실책임의 원칙</td><td><b>집합적 책임(무과실책임)</b> — 재해·질병·빈곤의 원인은 사회구조에 있다는 인식, 사회가 공동 책임</td></tr>\n</table>\n<div class=\"sub\">사회법 등장배경</div>\n<div style=\"display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;margin-top:4px;\">\n<div style=\"background:#fef9c3;border-radius:10px;padding:10px 10px;text-align:center;font-size:.82em;\">\n<div style=\"font-size:1.4em;margin-bottom:4px;\">📈</div>\n<div style=\"font-weight:800;color:#92400e;margin-bottom:3px;\">자본주의 발달</div>\n<div style=\"color:#a16207;line-height:1.5;\">시민법 원리의<br/>한계 노출</div>\n</div>\n<div style=\"background:#fef9c3;border-radius:10px;padding:10px 10px;text-align:center;font-size:.82em;\">\n<div style=\"font-size:1.4em;margin-bottom:4px;\">🤝</div>\n<div style=\"font-weight:800;color:#92400e;margin-bottom:3px;\">단체주의적 법원리</div>\n<div style=\"color:#a16207;line-height:1.5;\">공동체 생존·안녕<br/>고려 필요</div>\n</div>\n<div style=\"background:#fef9c3;border-radius:10px;padding:10px 10px;text-align:center;font-size:.82em;\">\n<div style=\"font-size:1.4em;margin-bottom:4px;\">🛡️</div>\n<div style=\"font-weight:800;color:#92400e;margin-bottom:3px;\">약자 보호</div>\n<div style=\"color:#a16207;line-height:1.5;\">경제적·사회적<br/>약자 보호 위해 등장</div>\n</div>\n</div>" },
-          { icon: "🌍", title: "사회복지법의 기원", html: "<table class=\"comp-table\">\n<tr><th>국가</th><th>법</th><th>연도</th><th>의의</th></tr>\n<tr><td>🇬🇧 영국</td><td><b>빈민법</b><span class=\"kichul\">⭐ 기출</span> (엘리자베스 구빈법)</td><td>1601년</td><td>사회복지법의 기원 — 최초의 국가적 빈민 구제 법률</td></tr>\n<tr><td>🇬🇧 영국</td><td><b>공장법</b></td><td>1802년<br/><span class=\"small\">(※1803년으로도 표기)</span></td><td>노동법의 기원 — 아동노동 제한</td></tr>\n<tr><td>🇩🇪 독일</td><td><b>사회보험법</b> (질병보험법)</td><td>1883년</td><td>비스마르크 — 세계 최초 사회보험 입법</td></tr>\n<tr><td>🇺🇸 미국</td><td><b>사회보장법</b></td><td>1935년</td><td>뉴딜정책 — 사회보장(Social Security) 개념 최초 사용</td></tr>\n</table>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:8px\">\n<b>노동법 기원</b> — 영국 공장법이 출발점 (<span class=\"no\">×</span> 사회복지법과 출발점이 같다고 보면 안 됨)\n    </div>" },
-          { icon: "📋", title: "사회복지법의 실천이념", html: "<div class=\"badge-row\">\n<span class=\"badge badge-blue\">자립·자활</span>\n<span class=\"badge badge-green\">소득재분배 <span class=\"kichul\">⭐ 기출</span><br/><small>수직적 재분배 &amp; 수평적 재분배</small></span>\n<span class=\"badge badge-purple\">사회통합</span>\n<span class=\"badge badge-yellow\">인간다운 생활 보장</span>\n<span class=\"badge badge-cyan\" style=\"background:#cffafe;color:#0891b2;border-color:#67e8f9;\">사회복지 증진</span>\n</div>\n<div class=\"hbox hbox-red\" style=\"margin-top:10px\">\n<span class=\"no\">✗ 아닌 것:</span> 능력에 따른 소득분배(시장경제 원리), 사회배제(극복 대상)\n    </div>\n<div class=\"sub\">법을 공부해야 하는 이유 (기출 오답 주의)</div>\n<ul class=\"pts red\">\n<li><span class=\"no\">✗ 법적 심판자의 역할 준비</span> — 사회복지사는 심판자가 아님 <span class=\"kichul\">⭐ 기출</span></li>\n<li><span class=\"no\">✗ 법을 위반한 사람의 재판 진행</span> — 사회복지사의 역할이 아님 <span class=\"kichul\">⭐ 기출</span></li>\n<li>✓ 장기적으로 <b>사회복지기관 경영자</b>로서의 역량을 갖추기 위해 <span class=\"kichul\">⭐ 기출</span></li>\n</ul>" },
-          { icon: "🔗", title: "사회복지법과 타법 관계", html: "<div class=\"sub\">① 헌법과 사회복지법</div>\n<div class=\"hbox hbox-blue\">\n      생존권을 구체화하는 정책 규정<br/>\n      헌법 → 사회복지정책 → 사회복지법 (사회복지법은 헌법의 <b>하위법</b>)\n    </div>\n<div class=\"sub\">② 사회복지법 vs 노동법</div>\n<table class=\"comp-table\">\n<tr><th></th><th>사회복지법</th><th>노동법</th></tr>\n<tr><td>공통점</td><td colspan=\"2\">넓은 의미의 <b>사회법</b> / <b>생존권적 기본권</b>에 기초</td></tr>\n<tr><td>대상</td><td><b>모든 국민</b> (국민 전체 대상)</td><td><b>노동자·노동조합</b></td></tr>\n<tr><td>원리</td><td>집합적 책임 원리</td><td>계약자유 원칙을 토대로 국가가 개입하여 조정</td></tr>\n</table>\n<div class=\"hbox hbox-red\" style=\"margin-top:4px\">\n<span class=\"no\">✗ 출발점이 영국 공장법 (X)</span> — 노동법의 기원이 공장법, 사회복지법과 동일 출발점이 아님\n    </div>\n<div class=\"sub\">③ 사회복지법 vs 행정법</div>\n<table class=\"comp-table\">\n<tr><th></th><th>사회복지법</th><th>행정법</th></tr>\n<tr><td>공통점</td><td colspan=\"2\">사회복지급여는 <b>행정을 통해</b> 국민에게 전달 (행정법적 속성)</td></tr>\n<tr><td>목적</td><td>국민의 <b>사회복지권(생존권) 확보</b>가 국가 책임</td><td><b>국가의 행정권 확보</b> / 국가 조직·급여·서비스 전달과 절차에 관련된 법</td></tr>\n</table>\n<div class=\"sub\">④ 사회복지법 vs 조세법</div>\n<table class=\"comp-table\">\n<tr><th></th><th>사회복지법</th><th>조세법</th></tr>\n<tr><td>공통점</td><td colspan=\"2\">소득의 <b>재분배</b> 기능 (조세법상 조세감면·부의 소득세 제도 등)</td></tr>\n<tr><td>재원</td><td>특정 목적을 위해 <b>사회보험료 징수</b> → 보험가입자는 급여에 대한 <b>권리 보유</b></td><td>일방적 세금 징수 → 개인은 납부 조세에 대해 <b>반대급부 청구 불가</b></td></tr>\n</table>\n<div class=\"sub\">⑤ 사회복지법 vs 민법</div>\n<table class=\"comp-table\">\n<tr><th></th><th>사회복지법</th><th>민법</th></tr>\n<tr><td>공통점</td><td colspan=\"2\">사회복지법에 민법 해당 조항 <b>준용 규정</b> 많음 / 친족·상속 부분이 밀접</td></tr>\n<tr><td>관계</td><td>국가와 개인 간 법률관계 — <b>공법적 요소</b> 강함</td><td>개인 당사자 간 법률관계 — <b>사법적 요소</b> 강함</td></tr>\n</table>" }
-        ] },
-      { num: "2강", name: "법의 기초이론",
-        cards: [
-          { icon: "📖", title: "법의 개념과 성격", html: "<div class=\"hbox hbox-blue\">\n<b>법</b>: 사회구성원이 공동생활을 하는 데 필요한 행위를 규정하는 규칙·법칙<br/>\n      → 국가에 의하여 강행되는 사회규범 (<b>사회규범 중 가장 강력한 실현 방법</b>을 가진 것이 법)\n    </div>\n<div class=\"sub\">법의 성격 (5가지)</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">사회규범</span>\n<span class=\"badge badge-green\">행위규범</span>\n<span class=\"badge badge-yellow\">강제규범</span>\n<span class=\"badge badge-purple\">재판규범</span>\n<span class=\"badge badge-gray\">조직규범</span>\n</div>" },
-          { icon: "💡", title: "법의 3대 이념 (라드브루흐)", html: "<div class=\"hbox hbox-blue\" style=\"margin-bottom:10px\">\n      법의 이념: 법이 무엇을 위하여 존재하는가 하는 <b>법의 존재가치</b><br/>\n      구스타프 라드브루흐: <b>정의</b> / <b>합목적성</b> / <b>법적 안정성</b> <span class=\"kichul\">⭐ 기출</span>\n</div>\n<div class=\"hbox hbox-red\" style=\"margin-bottom:10px\">\n<span class=\"no\">✗ 법의 이념이 아닌 것:</span> 자유, 경쟁, 공공복지 <span class=\"kichul\">⭐ 기출</span>\n</div>\n<table class=\"comp-table\">\n<tr><th>이념</th><th>내용</th><th>핵심</th></tr>\n<tr>\n<td><b>① 정의</b></td>\n<td>아리스토텔레스 — 일반적 정의(법률적), 평균적 정의(절대적 평등), 배분적 정의(비례적 평등)</td>\n<td><b>\"같은 것은 같게, 다른 것은 다르게\"</b><br/>기준·취급방식은 법의 목적에 비추어서만 대답 가능</td>\n</tr>\n<tr>\n<td><b>② 합목적성</b></td>\n<td>국가의 법질서가 어떠한 표준·가치관에 의하여 구체적으로 제정되고 실시되는 원리<br/>정의를 <b>어떻게 실현</b>할 것인가에 대한 가치관</td>\n<td>법의 목적: 개인주의·단체주의·문화주의 등 <b>세계관 차이</b>에 따라 달라짐</td>\n</tr>\n<tr>\n<td><b>③ 법적 안정성</b></td>\n<td>법에 의하여 보호되는 사회생활의 질서와 안정</td>\n<td>법 내용이 <b>명확</b>하고, <b>쉽게 변경</b>되어서는 안 되며, 실제로 실행 가능하고, 사람들의 의식에 맞아야 함</td>\n</tr>\n</table>\n<div class=\"sub\">법 이념의 상호관계</div>\n<div style=\"display:flex;align-items:center;justify-content:center;gap:6px;margin-top:6px;flex-wrap:wrap;\">\n<span style=\"background:#dbeafe;color:#1d4ed8;font-weight:800;font-size:.84em;padding:6px 14px;border-radius:8px;\">정의</span>\n<span style=\"color:#94a3b8;font-size:.8em;text-align:center;\">↙↗</span>\n<span style=\"color:#94a3b8;font-size:.8em;text-align:center;\">↖↘</span>\n</div>\n<div style=\"display:flex;align-items:center;justify-content:center;gap:12px;margin-top:4px;\">\n<span style=\"background:#d1fae5;color:#065f46;font-weight:800;font-size:.84em;padding:6px 14px;border-radius:8px;\">합목적성</span>\n<span style=\"color:#94a3b8;font-size:.85em;\">↔</span>\n<span style=\"background:#fef3c7;color:#92400e;font-weight:800;font-size:.84em;padding:6px 14px;border-radius:8px;\">법적 안정성</span>\n</div>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:8px;font-size:.83em;\">\n      세 이념은 <b>대립적 긴장관계</b>에 있으면서도 <b>상호보완적</b>인 관계\n    </div>" },
-          { icon: "📂", title: "법의 분류", html: "<table class=\"comp-table\">\n<tr><th>구분</th><th>A</th><th>B</th></tr>\n<tr><td><b>자연법 vs 실정법</b></td><td>시대·민족·국가 초월, 보편타당하게 적용</td><td>특정 시대·장소에서 효력을 가지는 법 규범</td></tr>\n<tr><td><b>공법 vs 사법</b></td><td>국가조직·국가 간·국가↔개인 관계<br/><span style=\"font-size:.8em\">(헌법·형법·<b>사회복지법</b>)</span></td><td>개인 사이의 권리·의무 관계<br/><span style=\"font-size:.8em\">(민법·상법)</span></td></tr>\n<tr><td><b>강행법 vs 임의법</b></td><td>당사자 의사 불문, 절대적 적용<br/><span style=\"font-size:.8em\">\"~하여야 한다\"</span></td><td>당사자 의사에 따라 적용<br/><span style=\"font-size:.8em\">\"~할 수 있다\"</span></td></tr>\n<tr><td><b>실체법 vs 절차법</b></td><td>권리·의무의 성질·내용·범위 규정<br/><span style=\"font-size:.8em\">예) 민법</span></td><td>권리·의무를 실현하는 절차 규정<br/><span style=\"font-size:.8em\">예) 민사소송법</span></td></tr>\n<tr><td><b>일반법 vs 특별법</b></td><td>효력 제한 없이 일반적 적용</td><td>특정 장소·사항·사람에만 적용<br/>→ <b>특별법 우선의 원칙</b> (관계는 상대적)</td></tr>\n</table>\n<div class=\"hbox hbox-blue\" style=\"margin-top:8px\">\n<b>사회법</b>: 실질적 평등·사회적 조화를 달성하기 위한 제3의 법 영역 (노동법, 사회보장법)\n    </div>" },
-          { icon: "⚡", title: "법률관계 — 권리와 의무", html: "<div class=\"hbox hbox-blue\" style=\"margin-bottom:10px\">\n<b>법률관계</b>: 사람과 사람 사이의 <b>권리와 의무의 관계</b>\n</div>\n<div class=\"sub\">권리 — 법률이 인정하는 힘</div>\n<table class=\"comp-table\">\n<tr><th>분류 기준</th><th>종류</th></tr>\n<tr><td>공·사법</td><td>공권(국민의 권리) / 사권(개인 간 권리)</td></tr>\n<tr><td>법률상 효력</td><td><b>지배권</b>(물권 등) / <b>청구권</b>(채권) / <b>형성권</b>(취소·해제권) / <b>항변권</b>(이행 거절권)</td></tr>\n<tr><td>권리 주체와의 긴밀성</td><td><b>일신전속권</b>(본인만 행사, 양도 불가) / 비전속권(양도 가능) / 반사적 이익(국가에 청구 불가)</td></tr>\n</table>\n<div class=\"sub\">의무 — 법으로 강요된 법률상의 구속</div>\n<ul class=\"pts\">\n<li>법으로 부과된 일정한 <b>작위·부작위 행위</b>를 자신의 의사와 상관없이 강요당하는 구속</li>\n<li><b>공법상 의무</b>: 국방·납세·교육 의무 등</li>\n<li><b>사법상 의무</b>: 신의성실, 권리남용 금지, 친권상 의무 등</li>\n<li><b>적극적 의무</b>(작위 의무) vs <b>소극적 의무</b>(부작위 의무)</li>\n</ul>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:8px\">\n<b>권리 행사는 의무를 전제로 함</b>\n</div>" },
-          { icon: "🕐", title: "법의 효력", html: "<div class=\"sub\">① 실질적 효력 — 타당성과 실효성을 동시에 갖추어야 함</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">법적 타당성 — 법 규범의 객관적 당위성</span>\n<span class=\"badge badge-green\">법적 실효성 — 내용대로 실현되고 있는 것</span>\n</div>\n<div class=\"sub\">② 형식적 효력</div>\n<table class=\"comp-table\">\n<tr><th>구분</th><th>내용</th></tr>\n<tr><td><b>시간적 효력</b><br/>(법의 유효기간)</td><td>\n        · 성문법: 시행일 ~ 폐지일<br/>\n        · 효력 상실: 명시적 폐지 / 묵시적 폐지(구법·신법 저촉 시 구법 효력 상실)<br/>\n        · <b>법률불소급의 원칙</b>: 법은 과거의 사실에 소급하여 적용될 수 없다\n      </td></tr>\n<tr><td><b>인적 효력</b></td><td>\n        · <b>속인주의</b>(국적 기준) — 사회복지법 대부분 채택<br/>\n        · <b>속지주의</b>(영토 기준)\n      </td></tr>\n<tr><td><b>장소적 효력</b></td><td>\n        · 국가의 전 영역(영토·영해·영공)에 걸쳐 적용<br/>\n        · 자치법규: 해당 지방자치단체 내에서만 효력\n      </td></tr>\n</table>" },
-          { icon: "🔎", title: "법의 해석", html: "<div class=\"sub\">① 유권해석 (강제해석) — 국가의 권위 있는 기관에 의한 해석</div>\n<table class=\"comp-table\">\n<tr><th>종류</th><th>내용</th></tr>\n<tr><td><b>입법해석</b></td><td>법령 내 '용어의 정의' 등 입법기관이 직접 규정</td></tr>\n<tr><td><b>사법해석</b></td><td>법원의 판결을 통한 해석</td></tr>\n<tr><td><b>행정해석</b></td><td>행정기관이 회답·지침 등으로 해석</td></tr>\n</table>\n<div class=\"sub\">② 학리해석 — 법학자·학문적 해석 (강제력 없음)</div>\n<table class=\"comp-table\">\n<tr><th>종류</th><th>내용</th></tr>\n<tr><td><b>문리해석</b></td><td>법문에 나타난 <b>자구(字句)의 의미를 확정</b>하는 것</td></tr>\n<tr><td><b>논리해석</b></td><td>법문의 문구에 구애받지 않고 논리적으로 해석<br/>\n<div class=\"badge-row\" style=\"margin-top:5px;flex-wrap:wrap;\">\n<span class=\"badge badge-gray\">확장해석</span>\n<span class=\"badge badge-gray\">축소해석</span>\n<span class=\"badge badge-gray\">반대해석</span>\n<span class=\"badge badge-gray\">보충해석</span>\n<span class=\"badge badge-gray\">물론해석</span>\n<span class=\"badge badge-gray\">연혁해석</span>\n<span class=\"badge badge-gray\">목적해석</span>\n<span class=\"badge badge-gray\">비교해석</span>\n<span class=\"badge badge-gray\">유추해석</span>\n</div>\n</td></tr>\n</table>" }
-        ] },
-      { num: "3강", name: "사회복지법 체계",
-        cards: [
-          { icon: "🔍", title: "사회복지법 체계의 의미", html: "<div class=\"sub\">법체계의 의미</div>\n<ul class=\"pts\">\n<li>법이 다른 사회적 규범과 구별되는 <b>법의 구분</b></li>\n<li>법규범 내에서 다양한 법들의 <b>배열 및 상호관계</b></li>\n</ul>\n<div class=\"sub\">사회복지법 체계화</div>\n<div class=\"hbox hbox-blue\">\n      사회복지 내용을 어떻게 법 형식에 포함하고, <b>사회복지 법적인 원리</b>를 동시에 담아낼 것인가<br/>\n      → 모든 사회복지법 포괄 / 각 법들이 분류체계의 하위영역에 <b>겹치지 않게</b> 분류되는 체계\n    </div>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:6px\">\n      각 법들은 <b>일관된 공통적 규범</b>을 공유하면서도 각 단계·위치에 따른 특성을 반영하도록 체계화<br/>\n      → 수직적 체계 (성문법·불문법) + 내용적 체계 (타당성·실효성)\n    </div>" },
-          { icon: "🏛️", title: "법의 위계 (성문법)", html: "<div class=\"flow\">\n<span class=\"flow-item\">헌법</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">법률</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">시행령 (대통령령)</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">시행규칙 (부령)</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">조례·규칙</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">행정규칙·정관·국제법</span>\n</div>\n<table class=\"comp-table\" style=\"margin-top:10px\">\n<tr><th>형식</th><th>제정 주체</th><th>특징</th></tr>\n<tr><td><b>헌법</b></td><td>헌법제정권력</td><td>최고 규범, 모든 법률의 기초</td></tr>\n<tr><td><b>법률</b></td><td>국회 의결 (국회의원 10인↑ 또는 정부 제출)</td><td>사회보장기본법, 사회복지사업법 등</td></tr>\n<tr><td><b>시행령</b></td><td>대통령령</td><td>법률 구체화 ex) 장애인복지법 시행령</td></tr>\n<tr><td><b>시행규칙</b></td><td>총리령 또는 부령(각 부의 장)</td><td>시행령 구체화 ex) 장애 15가지 규정</td></tr>\n<tr><td><b>조례</b></td><td>지방의회</td><td>\n        · 새로운 규범 창조 (지역주민 의사 반영)<br/>\n        · 법률 제정 선도 및 보완<br/>\n        · 법률과 사회적 현실 간 괴리 조정<br/>\n        · <b>자치법규 행정부의 승인 불필요</b><br/>\n        · 자치법규정보시스템: www.elis.go.kr\n      </td></tr>\n<tr><td><b>규칙</b></td><td>지방자치단체장</td><td>조례의 시행에 관하여 필요한 사항을 정함</td></tr>\n<tr><td><b>행정규칙</b></td><td>행정부서</td><td>법 집행 세부사항을 지침·내규·고시 등으로 자체 규정<br/>예) 「장기요양 급여 제공 기준 및 급여비용 산정방법 등에 관한 고시」(보건복지부)</td></tr>\n<tr><td><b>정관</b></td><td>공법인·특수법인</td><td>사회보장사업 운영 시 작성<br/>예) 국민건강보험공단, 국민연금공단, 사회복지협의회</td></tr>\n</table>\n<div class=\"sub\">불문법</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-gray\">관습법</span>\n<span class=\"badge badge-gray\">판례법</span>\n<span class=\"badge badge-gray\">조리</span>\n</div>\n<div class=\"hbox hbox-green\" style=\"margin-top:8px;background:#d1fae5;border-left:3px solid #059669;\">\n<b>ILO 8대 핵심협약</b>: 처음 4개 비준 → 2021년 3개 추가 비준 → 미비준 1개 (총 8개 중 7개 비준)<br/>\n      협약 분야: 결사의 자유, 강제노동 금지, 차별금지, 아동노동 금지\n    </div>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:10px\">\n<b>법률안 제출</b>: 10인 이상 국회의원 또는 정부(행정부)<br/>\n      → 소관 상임위 → <b>법제사법위원회(체계·자구 심사)</b> → 본회의 의결 → 서명 → 공포\n    </div>" },
-          { icon: "📜", title: "헌법 주요 조항", html: "<ul class=\"pts\">\n<li><b>제10조</b>: 인간으로서의 존엄과 가치, 행복추구권</li>\n<li><b>제34조 ①</b>: 모든 국민은 인간다운 생활을 할 권리를 가진다</li>\n<li><b>제34조 ②</b>: 국가는 사회보장·사회복지의 증진에 노력할 의무를 진다</li>\n<li><b>제23조</b>: 재산권 보장 / 재산권 행사는 공공복리에 적합하게</li>\n</ul>" },
-          { icon: "📐", title: "사회복지법 내용적 체계", html: "<div class=\"hbox hbox-blue\" style=\"margin-bottom:10px\">\n      하나의 법률이 사회복지법으로 존재하고 기능하기 위해 어떤 내용을 담고, 어떤 구조를 갖추어야 하는지<br/>\n      → 법이 효력을 가지려면 <b>규범적 타당성</b>과 <b>실효성</b>이 모두 필요\n    </div>\n<div class=\"sub\">① 규범적 타당성 체계 — 법의 당위성</div>\n<table class=\"comp-table\">\n<tr><th>항목</th><th>내용</th></tr>\n<tr><td><b>권리성</b></td><td>사회복지에 대한 <b>국가 책임의 명문화</b>, 받는 자의 권리를 법적으로 승인</td></tr>\n<tr><td><b>대상자 요건과 범위</b></td><td>급여나 서비스에 대한 권리에 의한 수급을 인정하느냐의 문제 (처음에는 한정적 → 점차 확대)</td></tr>\n<tr><td><b>급여수급 요건·종류·수준</b></td><td>구성 요건이 까다롭지 않아야 함 / 급여·서비스의 종류와 수준의 <b>적절성</b> 유지</td></tr>\n<tr><td><b>재정부담의 원칙</b></td><td>\n        · <b>강행규정</b>: \"~하여야 한다\" — 재정지출 강제<br/>\n        · <b>임의규정</b>: \"~할 수 있다\" — 정부의 재량적 결정에 따른 지출<br/>\n        · ⚠️ 우리나라 사회복지법은 <b>임의규정이 많아</b> 법적 실효성이 약함\n      </td></tr>\n</table>\n<div class=\"sub\">② 실효성 체계 — 법의 실현가능성</div>\n<table class=\"comp-table\">\n<tr><th>항목</th><th>내용</th></tr>\n<tr><td><b>주체·관련 조직</b></td><td>급여·서비스 공급 주체의 명확한 규정 / 전달체계 확보·운영 / 전체적 관리체계</td></tr>\n<tr><td><b>인력</b></td><td>사회복지사 등 법적 지위·권한·책임 규정 (자원봉사자에 대한 규정도 필요)</td></tr>\n<tr><td><b>재원조달 방법</b></td><td>사회복지법 관련 필요 재원의 국가 조세수입 마련 규정</td></tr>\n<tr><td><b>권리구제</b></td><td>권리 침해 시 회복 및 보상 절차 마련</td></tr>\n<tr><td><b>벌칙</b></td><td>사회복지 관련 법익 보호 / 수급자의 인권 및 수급권 보호</td></tr>\n</table>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n      우리나라 국민은 사회복지에 대한 <b>헌법적·법적 권리는 가지고 있으나</b> 그에 대한 <b>국가의 책임은 미약</b>한 편이다\n    </div>" },
-          { icon: "📖", title: "불문법 3가지", html: "<table class=\"comp-table\">\n<tr><th>종류</th><th>내용</th><th>특징</th></tr>\n<tr><td><b>관습법</b></td><td>장기간 사회적 관행이 법적 확신을 얻어 국가가 승인·강행</td><td><b>보충법으로서의 효력</b> (법률·관습법 없으면 조리 적용)</td></tr>\n<tr><td><b>판례법</b></td><td>\n        재판을 통하여 결정되는 개별 사례가 <b>판결</b>이며,<br/>\n        판결을 통하여 이루어지는 이론·법리 또는 규범\n      </td><td>\n<b>사회복지법 판례 연구 의의</b><br/>\n        · 기존 법제의 문제점 및 적용상 구체적 <b>문제점 발견</b><br/>\n        · 사회복지학 또는 사회복지법학의 <b>이론 개발에 기여</b>\n</td></tr>\n<tr><td><b>조리</b></td><td>사물의 본성·이치, 당연히 그래야 할 것으로 인정되는 법 해석의 기본원리</td><td>민법 제1조: 법률→관습법→조리 순서로 적용</td></tr>\n</table>" },
-          { icon: "🌐", title: "국제법 관련", html: "<ul class=\"pts purple\">\n<li><b>헌법 제6조 1항</b>: 체결·공포된 조약과 일반적으로 승인된 국제법규는 국내법과 같은 효력</li>\n<li><b>ILO 사회보장 최저기준 조약(1952)</b>: 보편주의·공평성·적절성 원칙</li>\n<li><b>사회보장협정</b>: 정부가 입법부 동의 없이 외국 정부와 맺은 협정 (2025.2 기준 42개국)</li>\n</ul>" }
-        ] },
-      { num: "4강", name: "사회복지법의 권리성 Ⅰ",
-        cards: [
-          { icon: "💬", title: "인권의 개념과 인권법학", html: "<div class=\"hbox hbox-blue\">\n<b>인권</b>: 사람이라면 누구나 가져야 하는 <b>보편적 권리</b><br/>\n      → 인권의 실현을 위해서는 구체적인 근거 및 실천이 필요\n    </div>\n<div class=\"sub\">인권법학</div>\n<ul class=\"pts\">\n<li>추상적 원리로서의 인권 → 구체적 맥락에서 <b>법적인 권리 형태로 전환</b>시키는 실천적 활동</li>\n<li>인권의 실현: <b>법 규범</b> + <b>법 외적 실천</b></li>\n</ul>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:8px\">\n      예) \"사람은 태어날 때부터 타고난 인권이 있다\"<br/>\n      → 아동이 학대로부터 보호받을 권리를 <b>저절로</b> 보장하는가? → <b>No</b> → 구체적인 번역(법·제도·실천)이 필요\n    </div>" },
-          { icon: "📜", title: "인권의 역사 (3세대)", html: "<table class=\"comp-table\">\n<tr><th>세대</th><th>권리</th><th>배경</th></tr>\n<tr><td><b>1세대</b></td><td>자유권 (국가로부터의 자유)</td><td>근대 시민혁명 (프랑스 인권선언)</td></tr>\n<tr><td><b>2세대</b></td><td>생존권·사회권 (국가에 적극적 요구)</td><td>자본주의 문제 / 1·2차 세계대전, 대공황</td></tr>\n<tr><td><b>3세대</b></td><td>연대권 (평화·환경·발전의 권리)</td><td>국제사회 연대 필요성</td></tr>\n</table>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:8px\">\n<b>인권법학</b>: 추상적 권리로서 인권 → 구체적 맥락에서 <b>법적 권리 형태로 전환</b>시키는 실천적 활동\n    </div>" },
-          { icon: "🌏", title: "국제인권법 흐름", html: "<table class=\"comp-table\">\n<tr><th>연도</th><th>법·선언</th><th>특징</th></tr>\n<tr><td>1948</td><td><b>세계인권선언</b> (UN)</td><td>30개 조항 / 자유권적 인권에 기반 / <b>강제성 없음</b> — 큰 의미이나 실질적 법적 강제 X</td></tr>\n<tr><td>1966</td><td><b>국제인권규약 A·B</b></td><td><b>법적 효력 有</b> (선언→규약으로 발전)<br/>A: 경제·사회·문화적 권리에 관한 국제규약 (<b>사회권 규약</b>)<br/>B: 시민적·정치적 권리에 관한 국제규약 (<b>자유권 규약</b>)</td></tr>\n<tr><td>1989</td><td><b>UN 아동권리협약</b></td><td>54개 조항 / 우리나라 1991.2 비준<br/>아동의 생존·발달·보호에 관한 기본 권리 명시</td></tr>\n<tr><td>2006</td><td><b>UN 장애인권리협약</b></td><td>50개 조항 / 우리나라 2008년 비준<br/>2019년 2·3차 통합보고서 제출<br/>장애가 있는 사람들의 <b>존엄성과 권리</b>를 보장하기 위한 최초의 21세기 국제인권조약</td></tr>\n</table>\n<div class=\"sub\">아동 4대 권리 (UN 아동권리협약)</div>\n<div style=\"display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:4px;\">\n<div style=\"background:#dbeafe;border-radius:8px;padding:9px 11px;font-size:.83em;\">\n<div style=\"font-weight:800;color:#1d4ed8;margin-bottom:3px;\">① 생존권</div>\n<div style=\"color:#1e40af;\">아동이 생명을 유지하고 건강하게 자랄 수 있도록 기본적인 생활을 누릴 권리</div>\n</div>\n<div style=\"background:#d1fae5;border-radius:8px;padding:9px 11px;font-size:.83em;\">\n<div style=\"font-weight:800;color:#065f46;margin-bottom:3px;\">② 발달권</div>\n<div style=\"color:#047857;\">아동이 재능과 능력을 펼칠 수 있도록 교육을 받고 놀이와 여가를 즐길 권리</div>\n</div>\n<div style=\"background:#fef3c7;border-radius:8px;padding:9px 11px;font-size:.83em;\">\n<div style=\"font-weight:800;color:#92400e;margin-bottom:3px;\">③ 보호권</div>\n<div style=\"color:#b45309;\">아동의 몸과 마음을 아프게 하는 모든 해로운 것으로부터 보호받을 권리</div>\n</div>\n<div style=\"background:#ede9fe;border-radius:8px;padding:9px 11px;font-size:.83em;\">\n<div style=\"font-weight:800;color:#5b21b6;margin-bottom:3px;\">④ 참여권</div>\n<div style=\"color:#6d28d9;\">아동이 자신과 관련된 문제에 관하여 의견을 말하고 참여할 권리</div>\n</div>\n</div>" },
-          { icon: "🏛️", title: "마샬의 시민권 (3단계)", html: "<table class=\"comp-table\">\n<tr><th>세기</th><th>권리 (영역)</th><th>내용</th></tr>\n<tr><td>18세기</td><td><b>공민권</b><br/><span style=\"font-size:.8em;color:#6b7280\">공민권 (경제)</span></td><td>국가 권력으로부터 개인의 자유 방어 (자유권)<br/>신체·언론 및 사상·신앙·계약의 자유 등</td></tr>\n<tr><td>19세기</td><td><b>정치권</b><br/><span style=\"font-size:.8em;color:#6b7280\">정치권 (민주주의)</span></td><td>정치 영역에서의 시민권 — <b>보통 선거권</b> (참정권)</td></tr>\n<tr><td>20세기</td><td><b>사회권</b><br/><span style=\"font-size:.8em;color:#6b7280\">사회권 (복지)</span></td><td>적정 수준의 경제적 복지 및 보장<br/>사회 보편적 기준에 따라 <b>문명화된 삶을 영위</b>할 권리</td></tr>\n</table>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:8px\">\n<b>사회권의 눈으로 본 인권</b>: 공동체 구성원으로서 어떤 상황에서도 최소한의 빵을 품위 있게 얻을 수 있는 권리 (빵과 장미, 제임스 오펜하임 1911)\n    </div>" },
-          { icon: "🔍", title: "마샬 시민권 비판", html: "<ul class=\"pts red\">\n<li><b>앤서니 기든스</b>: 시민권은 투쟁을 통해 획득 (진화과정 X)</li>\n<li><b>브라이언 터너</b>: 민족 집단의 동일성 가정 비판, 경제성장과 사회권의 모순</li>\n<li><b>마르크스주의</b>: 자본주의의 진정한 모순을 은폐</li>\n<li><b>페미니즘</b>: 여성의 사회적 권리를 소홀히 다룸</li>\n</ul>" },
-          { icon: "🌹", title: "사회권의 눈으로 본 인권", html: "<div class=\"hbox hbox-green\">\n<b>빵과 장미</b> (제임스 오펜하임, 1911)<br/>\n      공동체 구성원으로서 <b>어떤 상황에서도 최소한의 빵을 품위 있게 얻을 수 있는 권리</b><br/>\n      → 누구에게나 기본적인 '빵'을 공적으로 보장하는 것 = <b>조건의 평등 실현</b>\n</div>\n<div class=\"sub\">국가의 적극적 의무 3가지</div>\n<ul class=\"star-list\">\n<li><b>존중할 의무</b>: 국가는 개인의 자유를 존중, 간섭하지 말아야 할 의무</li>\n<li><b>보호할 의무</b>: 제3자가 개인의 권리를 침해하지 못하도록 국가가 조치할 의무</li>\n<li><b>충족시킬 의무</b>: 국가가 그 권리에 대해 직접 재화나 서비스를 제공해야 할 의무</li>\n</ul>" },
-          { icon: "⚖️", title: "국가인권위원회법 — 인권 및 평등권 침해", html: "<div class=\"sub\">① 인권의 정의</div>\n<div class=\"hbox hbox-blue\">\n      헌법 및 법률에서 보장하거나, 대한민국이 가입·비준한 <b>국제인권조약 및 국제관습법</b>에서 인정하는 인간으로서의 <b>존엄과 가치 및 자유와 권리</b>\n</div>\n<div class=\"sub\">② 인권침해</div>\n<ul class=\"pts\">\n<li><b>침해 주체</b>: 국가기관·지방자치단체·각급학교·공직유관단체·구금·보호시설 (업무수행과 관련하여)</li>\n<li><b>침해 범위</b>: 헌법 <b>제10조 및 제12조~제22조</b>에서 보장된 인권</li>\n</ul>\n<table class=\"comp-table\" style=\"margin-top:6px\">\n<tr><th>조항</th><th>권리</th></tr>\n<tr><td>제10조</td><td>인간으로서의 존엄과 가치, 행복추구권</td></tr>\n<tr><td>제12조</td><td>신체의 자유</td></tr>\n<tr><td>제13조</td><td>행위시 법률에 의해 범죄를 구성하지 않는 행위로 소추되지 않을 권리 / 동일한 범죄에 대해 거듭 처벌받지 않을 권리</td></tr>\n<tr><td>제14조</td><td>거주·이전의 자유</td></tr>\n<tr><td>제15조</td><td>직업선택의 자유</td></tr>\n<tr><td>제16조</td><td>주거의 자유</td></tr>\n<tr><td>제17조</td><td>사생활의 비밀과 자유</td></tr>\n<tr><td>제18조</td><td>통신의 비밀</td></tr>\n<tr><td>제19조</td><td>양심의 자유</td></tr>\n<tr><td>제20조</td><td>종교의 자유</td></tr>\n<tr><td>제21조</td><td>언론·출판의 자유와 집회·결사의 자유</td></tr>\n<tr><td>제22조</td><td>학문과 예술의 자유</td></tr>\n</table>\n<div class=\"sub\">③ 평등권 침해의 차별행위</div>\n<p class=\"small\" style=\"margin-bottom:6px\">합리적 이유 없이 다음을 이유로 <b>고용·서비스 제공·교육</b> 등에서 차별하는 행위</p>\n<div class=\"badge-row\">\n<span class=\"badge badge-gray\">성별</span><span class=\"badge badge-gray\">종교</span><span class=\"badge badge-gray\">장애</span>\n<span class=\"badge badge-gray\">나이</span><span class=\"badge badge-gray\">사회적 신분</span>\n<span class=\"badge badge-gray\">출신지역 (출생지·등록기준지 등)</span>\n<span class=\"badge badge-gray\">출신국가·민족</span>\n<span class=\"badge badge-gray\">용모 등 신체조건</span>\n<span class=\"badge badge-gray\">혼인여부 (기혼·미혼·이혼·사실혼 등)</span>\n<span class=\"badge badge-gray\">임신·출산</span>\n<span class=\"badge badge-gray\">가족형태·상황</span>\n<span class=\"badge badge-gray\">인종·피부색</span>\n<span class=\"badge badge-gray\">사상·정치적 의견</span>\n<span class=\"badge badge-gray\">형의 효력이 실효된 전과</span>\n<span class=\"badge badge-gray\">성적 지향</span>\n<span class=\"badge badge-gray\">학력</span>\n<span class=\"badge badge-gray\">병력</span>\n</div>\n<div class=\"sub\">차별행위 예시</div>\n<ul class=\"pts red\">\n<li>성별을 이유로 <b>승진에서 배제</b></li>\n<li>장애를 이유로 <b>교육과정에서 배제</b></li>\n<li>직위를 이용한 <b>성희롱</b></li>\n</ul>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:8px\">\n<b>차별행위 아닌 것 (예시)</b>: 대학교에서 <b>성적에 따른 장학금 지급</b> → 합리적 이유 있는 차등이므로 차별행위 아님\n    </div>" }
-        ] },
-      { num: "5강", name: "사회복지법의 권리성 Ⅱ",
-        cards: [
-          { icon: "🔍", title: "인권 vs 기본권", html: "<table class=\"comp-table\">\n<tr><th>구분</th><th>인권</th><th>기본권</th></tr>\n<tr><td>의미</td><td>인간이라면 누구나 가지는 권리, 천부적으로 누려야 하는 권리</td><td>국가가 국민에게 부여하는 권리, 헌법이 인정하는 인간의 기본적 권리</td></tr>\n<tr><td>특성</td><td>보편적·자연적</td><td><b>헌법적 차원</b>을 가짐 (기본권만의 특성)</td></tr>\n</table>\n<div class=\"sub\">기본권의 효력</div>\n<ul class=\"pts\">\n<li><b>모든 국가권력 구속</b>: 입법권·사법권·행정권 등</li>\n<li>비국가적 권력·개인 상호간 효력은 <b>원칙적으로 적용 안 됨</b></li>\n<li><b>간접적용설</b>: 헌법은 직접 적용이 아니라 사법상의 일반원칙을 통하여 <b>간접적으로</b> 사법질서에 적용</li>\n</ul>" },
-          { icon: "🏛️", title: "사회권적 기본권 (생존권적 기본권)", html: "<div class=\"hbox hbox-blue\">\n      국민이 인간다운 생활을 할 수 있도록 <b>국가에 일정한 급여나 서비스를 요구할 수 있는 헌법상 권리</b><br/>\n<span style=\"font-size:.85em\">→ 국민의 일상생활 제반조건을 국가권력이 <b>적극적으로 개입</b>하여 확보해줄 것을 요청할 수 있는 권리</span>\n</div>\n<ul class=\"pts\" style=\"margin-top:8px\">\n<li><b>독일 바이마르헌법(1919)</b>: 최초로 헌법에 사회권 명시 (제151조)<br/>\n        \"경제생활의 질서는 모든 사람에게 인간다운 생활을 보장해 주기 위하여 정의의 원칙에 합치하지 않으면 아니된다\"</li>\n</ul>\n<div class=\"sub\">자유권 vs 사회권 침해 구제</div>\n<table class=\"comp-table\">\n<tr><th></th><th>자유권</th><th>사회권</th></tr>\n<tr><td>침해 구제</td><td><b>명확함</b> — 사법적 심사를 통해 가능</td><td><b>불분명</b> — 국가들마다 상이한 재정 수준과 사회권 기준</td></tr>\n</table>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:8px\">\n<b>경제적·사회적 및 문화적 권리에 관한 국제규약 (사회권 규약)</b><br/>\n      1966년 UN 채택, 우리나라 1990년 비준, 총 <b>31개 조문</b><br/>\n      내용: 노동권·사회보장권·교육권·문화생활 참여권 등<br/>\n      ※ 자유권과 사회권이 완전히 다르다는 <b>전통적 이분법을 극복</b>할 필요가 있음\n    </div>\n<div class=\"hbox hbox-purple\" style=\"background:#ede9fe;border-left:3px solid #7c3aed;margin-top:6px\">\n<b>우리나라 사회권 논의</b>: 2007년 국가인권위원회 사회권 포럼<br/>\n      · 자유권 침해 → 사법적 심사를 통해 구제 가능 (명확)<br/>\n      · 사회권 침해 → 법률적 구제 불분명 (국가별 재정수준·기준 상이)\n    </div>" },
-          { icon: "📊", title: "헌법상 기본권 유형", html: "<table class=\"comp-table\">\n<tr><th>유형</th><th>내용</th></tr>\n<tr><td>포괄적 기본권</td><td>인간의 존엄성과 가치, 행복추구권</td></tr>\n<tr><td>평등권</td><td>법 앞에서의 평등</td></tr>\n<tr><td>자유권적 기본권</td><td>신체·사생활·정신적 자유권</td></tr>\n<tr><td>경제적 기본권</td><td>재산권, 직업선택의 자유</td></tr>\n<tr><td><b>정치적 기본권</b></td><td>정치적 자유, 참정권</td></tr>\n<tr><td>청구권적 기본권</td><td>청원권, 재판청구권, 국가배상청구권</td></tr>\n<tr><td>사회권적 기본권</td><td>인간다운 생활권, 근로권, 교육권, 환경권, 건강권</td></tr>\n</table>" },
-          { icon: "🔑", title: "사회권적 기본권의 법적 성격", html: "<table class=\"comp-table\">\n<tr><th>학설</th><th>권리성</th><th>내용</th></tr>\n<tr><td>프로그램 규정설</td><td><span class=\"no\">가장 약함</span></td><td>국가가 정책 시행 안 하면 청구 불가</td></tr>\n<tr><td>추상적 권리설</td><td>중간</td><td>입법 시 권리 구체화 (입법청구 X)</td></tr>\n<tr><td>구체적 권리설</td><td><span class=\"ok\">가장 강함</span></td><td>입법 없이도 직접 국가에 청구 가능</td></tr>\n<tr><td>제도 보장설</td><td>—</td><td>헌법상 보장된 제도, 적극적 입법 청구 가능</td></tr>\n</table>" },
-          { icon: "🗂️", title: "수급권의 규범적 구조", html: "<div class=\"hbox hbox-blue\" style=\"margin-bottom:10px\">\n<b>사회복지수급권</b>: 사회복지법상 사회복지급여를 받을 권리<br/>\n      사회보장기본법 제9조: \"모든 국민은 사회보장 관계 법령에서 정하는 바에 따라 사회보장급여를 받을 권리를 가진다\"\n    </div>\n<div class=\"sub\">① 실체적 권리 — 급여를 청구할 수 있는 구체적 권리</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">사회보험 청구권</span>\n<span class=\"badge badge-green\">공공부조 청구권</span>\n<span class=\"badge badge-purple\">사회서비스 청구권</span>\n</div>\n<div class=\"sub\">② 수속적 권리 — 적절한 절차에 참가하는 권리</div>\n<table class=\"comp-table\">\n<tr><th>단계</th><th>내용</th></tr>\n<tr><td><b>수속 전 단계</b></td><td>\n        · 홍보 및 정보제공 요구 권리<br/>\n        · 상담 및 조언 제공 요구 권리<br/>\n        · 사회복지기관 이용 권리\n      </td></tr>\n<tr><td><b>수속 단계</b></td><td>\n        신청 → 조사 → 결정 → 실시 각 단계에서<br/>권리가 침해되지 않도록 적절한 진행을 요구할 수 있는 권리\n      </td></tr>\n</table>\n<div class=\"sub\">③ 절차적 권리 — 실체적 권리 실현이 안 될 때 이의보전·이행강제 관련 권리</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-red\">사회복지급여쟁송권 (행정심판·행정소송)</span>\n<span class=\"badge badge-yellow\">사회복지행정참여권</span>\n<span class=\"badge badge-gray\">사회복지입법청구권</span>\n</div>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:8px\">\n<b>권리성 강도 순서</b>: 구체적 권리 ＞ 추상적 권리 ＞ 프로그램 규정적 권리 <span class=\"kichul\">⭐ 기출</span>\n</div>" },
-          { icon: "⚠️", title: "수급권의 취약성", html: "<ul class=\"pts red\">\n<li>국민의 권리가 국가의 의무관계로 수급되지 않음 → <b>반사적 이익</b>으로 파악</li>\n<li>수급권의 내용 자체가 비금전적·전문기술적 급여 포함 → 법규범으로 규정하기 곤란</li>\n<li><b>사적 측면의 존재</b> → 권리성을 어렵게 함</li>\n<li>행정기관의 <b>행정행위</b>에 의하여 실현되는 특성 (입법기관의 입법행위 X)</li>\n</ul>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:8px\">\n      ※ 사적 측면: 사회복지급여는 민간 기관을 통해 전달되는 경우도 많아 순수한 공법적 권리로만 보기 어려운 측면이 있음\n    </div>" },
-          { icon: "🛡️", title: "수급권의 보호·제한·소멸", html: "<div class=\"sub\">보호 (3가지)</div>\n<ul class=\"star-list\">\n<li><b>수급권 소멸 3가지</b> <span class=\"kichul\">⭐ 기출</span>: <b>사망</b> / <b>포기</b> / <b>소멸시효</b></li>\n<li>처분·압류의 금지 — 일신전속성, 공법상 권리로 양도·담보·상계 금지 <span class=\"kichul\">⭐ 기출</span></li>\n<li>조세·기타 공과의 금지 — 최소한의 삶 영위 보장</li>\n<li>불이익 변경의 금지 — 정당한 이유 없이 결정된 급여 변경 금지</li>\n</ul>\n<div class=\"divider\"></div>\n<div class=\"sub\">제한 사유</div>\n<ul class=\"pts red\">\n<li><b>과잉·중복된</b> 사회복지급여의 제한 및 조정</li>\n<li>사회복지급여의 <b>남용 및 악용</b> 금지</li>\n<li><b>고의 행위</b>: 형식적으로 수급요건이 충족되었더라도 고의로 인한 경우 제한</li>\n</ul>\n<div class=\"sub\">소멸 사유</div>\n<table class=\"comp-table\">\n<tr><th>사유</th><th>내용</th></tr>\n<tr><td><b>사망</b></td><td>수급권은 일신전속적 권리이므로 사망 시 소멸 — 상속 불가</td></tr>\n<tr><td><b>포기</b></td><td>수급권자 본인의 의사에 의한 포기</td></tr>\n<tr><td><b>소멸시효</b></td><td>일정 기간 수급권을 행사하지 아니하면 시효에 의하여 권리가 소멸</td></tr>\n</table>" }
-        ] },
-      { num: "6강", name: "권리구제와 사회복지법 소송",
-        cards: [
-          { icon: "🏢", title: "행정기관 권리구제 (행정심판)", html: "<div class=\"hbox hbox-blue\" style=\"margin-bottom:10px\">\n<b>권리구제의 목적</b>: 사법상·공법상의 구제절차에 앞서 <b>수급권자의 권익을 신속하게 보호</b>하기 위함<br/>\n<b>전심절차</b>: 법적 쟁송이 이루어지기 전 거치는 절차 (개별법에 따라 상이하게 구성)<br/>\n      심사청구 과정을 거쳐도 해결 안 되면 → <b>행정소송 등 법적 쟁송 단계</b>로 넘어감\n    </div>\n<table class=\"comp-table\">\n<tr><th>법률</th><th>절차</th><th>절차기관</th></tr>\n<tr><td>국민연금법</td><td rowspan=\"4\" style=\"text-align:center\"><b>심사청구 → 재심사청구</b></td><td>국민연금공단</td></tr>\n<tr><td>고용보험법</td><td>근로복지공단</td></tr>\n<tr><td>산재보험법</td><td>근로복지공단 → 산업재해보상보험심사위원회</td></tr>\n<tr><td>노인장기요양보험법</td><td>국민건강보험공단 → 장기요양심판위원회</td></tr>\n<tr><td>국민건강보험법</td><td style=\"text-align:center\"><b>이의신청 → 심판청구</b> <span class=\"kichul\">⭐ 기출</span></td><td>국민건강보험공단 → 건강보험분쟁조정위원회</td></tr>\n<tr><td>국민기초생활보장법</td><td style=\"text-align:center\"><b>이의신청 → 이의신청 (두 번)</b></td><td>1차: 시장·군수·구청장 통해 <b>시·도지사</b> 처리<br/>2차: 시·도지사 거쳐 <b>보건복지부장관</b> 처리</td></tr>\n</table>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n<span class=\"no\">✗</span> 사회복지법 관련 <b>특별법원은 없음</b> <span class=\"kichul\">⭐ 기출</span> — 행정기관을 통한 권리구제 절차는 법률에 규정\n    </div>" },
-          { icon: "⚖️", title: "사법기관 권리구제 (법적쟁송)", html: "<ul class=\"pts\">\n<li><b>행정소송</b>: 공법상 권리관계 또는 법 적용에 관한 다툼 해결 / 분쟁해결 기관·절차가 법원</li>\n<li><b>민사소송</b>: 손해배상청구소송, 급여 발생원인 제3자 관련 소송</li>\n<li><b>헌법소원</b>: 국가 공권력의 남용·오용으로부터 헌법상 보장된 국민의 자유와 권리를 보호하는 헌법재판제도 — <b>실정법상 권리구제 절차를 모두 거친 후</b> 청구</li>\n</ul>\n<div class=\"divider\"></div>\n<div class=\"sub\">헌법재판 종류 (5가지)</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">위헌법률심판</span>\n<span class=\"badge badge-red\">탄핵심판</span>\n<span class=\"badge badge-yellow\">정당해산심판</span>\n<span class=\"badge badge-purple\">권한쟁의심판</span>\n<span class=\"badge badge-green\">헌법소원심판</span>\n</div>\n<div class=\"hbox hbox-blue\" style=\"margin-top:8px\">\n<b>사회복지 관련</b>: <b>위헌법률심판</b> + <b>헌법소원심판</b>\n</div>\n<div class=\"sub\">위헌법률심판 vs 헌법소원심판</div>\n<table class=\"comp-table\">\n<tr><th>구분</th><th>내용</th></tr>\n<tr><td><b>위헌법률심판</b></td><td>법원에서 진행 중인 재판의 전제가 되는 법률의 위헌 여부 확인을 위하여 <b>법원이</b> 헌법재판소에 위헌 제청 (헌법이 마련한 기본권 보장 제도적 장치 중 핵심)</td></tr>\n<tr><td><b>헌법소원심판 ①</b></td><td>공권력의 행사·불행사로 기본권 침해 → 당사자 직접 청구 (헌재법 제68조 1항)</td></tr>\n<tr><td><b>헌법소원심판 ②</b></td><td>위헌심판 제청 신청이 법원에서 받아들여지지 않은 경우 청구 (헌재법 제68조 2항)</td></tr>\n</table>\n<div class=\"sub\">헌법소원 청구 요건</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">보충성</span>\n<span class=\"badge badge-green\">자기관련성</span>\n<span class=\"badge badge-yellow\">침해의 현재성</span>\n<span class=\"badge badge-purple\">침해의 직접성</span>\n</div>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:8px\">\n      헌법재판으로 청구되는 사례 축적 → 사회복지 관련 <b>입법과 정책이 형성되는 계기</b><br/>\n      실제적 기본권 침해 여부는 사법적 판결 이후 확인되며, 기본권 보장·침해 범위도 <b>헌법 판례 이후 점증적으로 구성</b>됨\n    </div>" },
-          { icon: "⚡", title: "사법적극주의와 공익소송", html: "<div class=\"hbox hbox-blue\" style=\"margin-bottom:8px\">\n<b>사회복지공익법센터</b>: 사회복지현장에서 법적 권리 침해 당사자에게 <b>무료 법률 지원</b>을 제공하는 기관 — 사회복지 공익소송과 법·실천 연계 역할 수행\n    </div>\n<div class=\"sub\">사법적극주의</div>\n<div class=\"hbox hbox-blue\">\n      법의 해석과 판결에서 <b>문언적 의미에 얽매이지 않고</b>, 사법부가 창조적인 헌법·법률 해석을 통하여 <b>정책형성에 개입</b>하는 사법부의 태도\n    </div>\n<div class=\"sub\">사법적 판단의 정책형성 기능</div>\n<ul class=\"pts\">\n<li><b>정책지향적 소송 증가</b></li>\n<li>사법부의 판결 → 사회구성원에게 향후 행동지침을 설정하는 <b>일종의 정책으로서의 역할</b> 수행</li>\n<li>법정이 공공정책의 변화를 이끌고 정책의 <b>정당성·합법성</b>을 제시 → 사회복지와 사법적 판단의 관련성 뒷받침</li>\n<li>사법적 판단이 사회복지정책 변화에 미치는 영향: <b>사후적</b>, <b>해당 법률 한정</b></li>\n</ul>\n<div class=\"sub\">공익소송</div>\n<div class=\"hbox hbox-green\">\n      소송 당사자가 집단 또는 개인이더라도 <b>다중에게 그대로 적용될 수 있는 공공의 이익을 위하여 수행되는 소송</b><br/>\n<span style=\"font-size:.82em;color:#065f46\">\n      \"공익소송은 보통 사람이 정부에 책무성을 물을 수 있도록 해준다. 즉, 정부를 법원에 출석시켜 자기들의 행동 또는 무행동을 설명하고 정당화하도록 만드는 것이다. 또한 모든 이해 당사자들에게 열려 있는 공간이므로 진정한 의미에서의 사회적 대화를 촉진할 수 있다.\"<br/>\n      — 샌드라 프레드먼, 「인권의 대전환」\n      </span>\n</div>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:6px\">\n      사회복지법 소송 ≈ 대부분 <b>공익소송</b>에 해당<br/>\n      공익인권법재단 <b>공감</b> (www.kpil.org): \"소수자의 입장에 서서, 구체적 삶의 현장의 목소리에 응답하며, 법으로 사회 변화를 일구고자 합니다\"\n    </div>" },
-          { icon: "🏛️", title: "국가인권위원회 권리구제", html: "<table class=\"comp-table\">\n<tr><th>구분</th><th>내용</th></tr>\n<tr><td><b>진정 주체</b></td><td>인권침해나 차별행위를 당한 사람 또는 그 사실을 알고 있는 사람이나 단체</td></tr>\n<tr><td><b>조사 대상</b></td><td>국가기관 / 지방자치단체 / 각급학교 / 사인(私人)</td></tr>\n<tr><td><b>조사 내용</b></td><td>헌법에 보장된 <b>기본권 침해행위</b> / 평등권 침해의 <b>차별행위</b></td></tr>\n</table>\n<div class=\"sub\">구제 방법</div>\n<ul class=\"pts green\">\n<li>긴급구제조치의 권고</li>\n<li>조정·합의의 권고</li>\n<li>구제조치 및 제도개선의 권고</li>\n<li>고발 및 징계 권고</li>\n<li>수사의뢰</li>\n<li>피해자를 위한 법률구조 요청</li>\n</ul>" },
-          { icon: "📜", title: "주요 판례 (공익소송 사례)", html: "<table class=\"comp-table\">\n<tr><th>연도</th><th>사건</th><th>결과 및 의의</th></tr>\n<tr><td><b>1996</b></td><td>국민연금기금 관련 손해배상 청구소송</td><td>기각 — 연금기금 운용부실·정부 자의적 사용 → 국민이 국민연금에 관심을 갖는 계기</td></tr>\n<tr><td><b>1997</b></td><td>1994년 생계보호기준 위헌확인</td><td>기각 — 급여 금액이 낮다는 것만으로 행복추구권 위배라 볼 수 없다 → 경각심 제고</td></tr>\n<tr><td><b>2002</b></td><td>저상버스 도입의무 불이행 위헌확인</td><td>기각 — 헌법 제34조의 국가 의무는 일반적 의무이지 저상버스 도입이라는 구체적 의무 아님</td></tr>\n</table>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:8px\">\n<b>세 판례 모두 기각</b>되었으나, 사회복지 관련 <b>입법과 정책 형성의 계기</b>가 되었다는 점에서 의의가 있음\n    </div>" }
-        ] },
+
+          /* ───── 01. 권리구제 ───── */
+          { icon: "📂", title: "01. 권리구제",
+            html: `
+              <div class="badge-row">
+                <span class="badge badge-blue">권리구제 정의</span>
+                <span class="badge badge-green">행정기관 권리구제 (행정심판)</span>
+                <span class="badge badge-purple">사법기관 권리구제 (법적쟁송)</span>
+              </div>
+            `
+          },
+
+          { icon: "🔑", title: "사회복지법상 권리구제 정의",
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <div class="hbox hbox-blue">
+                <b>사회복지 급여수급자</b>가 신청자격·서비스 급여 등의 결정에 <b>이의가 있거나 불복</b>하는 경우,
+                개별 사회복지법들이 규정하는 각종 <b>심사위원회, 심판청구, 행정소송</b> 등 법적 절차를 통하여
+                그 처분에 대한 <b>시정이나 취소</b>를 구하여 구제받는 것
+              </div>
+              <div class="sub">핵심 포인트</div>
+              <ul class="star-list">
+                <li>권리구제의 목적: 수급권자의 <b>권익을 신속하게 보호</b>하기 위함 (기관 보호 ✗)</li>
+                <li>우리나라에는 <b>사회복지법 관련 특별법원이 없음</b> → 일반 법원(사법기관) 이용</li>
+                <li>권리구제 절차는 <b>개별 사회복지법 각 조문(끝부분)</b>에 명시</li>
+                <li>4강·5강의 <b>수급권</b>이 제대로 실현되지 않을 때 이의를 제기하는 절차</li>
+              </ul>
+            `
+          },
+
+          { icon: "🏢", title: "행정기관 권리구제 : 행정심판",
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <div class="hbox hbox-blue">
+                <b>법적 쟁송이 이루어지기 전 거치는 전심절차</b> — 국민연금공단·국민건강보험공단 등
+                행정기관에 먼저 이의를 신청하는 절차. 보통 <b>2회에 걸친 이의 제기 절차</b>를 갖춤
+              </div>
+              <div class="sub">법률별 절차 유형</div>
+              <table class="comp-table">
+                <tr><th>법률</th><th>절차</th><th>절차기관</th></tr>
+                <tr><td>국민연금법</td><td rowspan="4" style="text-align:center;"><b>심사청구 → 재심사청구</b></td><td>국민연금공단</td></tr>
+                <tr><td>고용보험법</td><td>근로복지공단</td></tr>
+                <tr><td>산보험법</td><td>근로복지공단<br/>→ 산업재해보상보험심사위원회</td></tr>
+                <tr><td>노인장기요양보험법</td><td>국민건강보험공단<br/>→ 장기요양심판위원회</td></tr>
+                <tr><td>국민건강보험법</td><td style="text-align:center"><b>이의신청 → 심판청구</b> <span class="kichul">⭐ 기출</span></td><td>국민건강보험공단<br/>→ 건강보험분쟁조정위원회</td></tr>
+                <tr><td>국민기초생활보장법</td><td style="text-align:center"><b>이의신청 → 이의신청 (두 번)</b></td><td>1차: 시장·군수·구청장 통해 <b>시·도지사</b> 처리<br/>2차: 시·도지사 거쳐 <b>보건복지부장관</b> 처리</td></tr>
+              </table>
+              <div class="hbox hbox-yellow">💡 개별법마다 용어가 다르지만 공통점은 <b>2단계 이의 제기 절차</b><br>
+                · 1차: 해당 기관 (국민연금공단, 근로복지공단 등)<br>
+                · 2차: 상위 부처 (고용노동부, 보건복지부 등)</div>
+              <div class="hbox hbox-red">❌ 사회복지법 관련 <b>특별법원은 없음</b> — 행정기관 권리구제 절차는 법률에 규정된 전심절차</div>
+            `
+          },
+
+          { icon: "⚖️", title: "사법기관 권리구제 : 법적쟁송",
+            html: `
+              <span class="kichul">⭐ 기출</span>
+              <div class="hbox hbox-blue">
+                <b>행정심판 결정에도 불복</b>하여 관련 처분이나 조치를 해결하는 <b>마지막 방법</b>
+                <br> — 분쟁 해결 기관·절차: <b>법원(사법기관)</b>
+              </div>
+              <div class="sub">법적쟁송의 세 가지 유형</div>
+              <table class="comp-table">
+                <tr><th>종류</th><th>내용</th></tr>
+                <tr><td><b>가. 행정소송</b></td><td>· 공법상 권리관계 또는 법 적용에 관한 다툼 해결 목적.<br>
+                  · 행정심판과 내용은 유사하나 <b>법원</b>에서 진행</td></tr>
+                <tr><td><b>나. 민사소송</b></td><td>사회복지법에서는 주로 <b>손해배상청구소송</b>.<br>· 피보험자 급여 발생 원인이 <b>제3자</b>인 경우 해당 기관이 급여 우선 지급 후 제3자에게 청구</td></tr>
+                <tr><td><b>다. 헌법소원</b></td><td>· 국가 공권력의 남용·오용으로부터 헌법상 보장된 국민의 자유와 권리를 보호하는 헌법재판제도. (기본권 침해 당사자가 제기)<br><b>※실정법에 규정된 권리구제 절차를 모두 거친 후</b> 청구</td></tr>
+              </table>
+              <div class="hbox hbox-red">❌ 행정소송 ≠ 행정심판 — 내용은 유사하지만 행정소송은 <b>법원</b>에서 진행한다는 점이 핵심 차이</div>
+            `
+          },
+
+          /* ───── 02. 기본권 구제와 헌법재판 ───── */
+          { icon: "📂", title: "02. 기본권 구제와 헌법재판",
+            html: `
+              <div class="badge-row">
+                <span class="badge badge-blue">헌법재판 개요</span>
+                <span class="badge badge-green">위헌법률심판</span>
+                <span class="badge badge-purple">헌법소원심판</span>
+                <span class="badge badge-yellow">헌법재판과 사회복지의 관계</span>
+              </div>
+            `
+          },
+
+          { icon: "🏛️", title: "헌법재판 개요와 종류",
+            html: `
+              <ul class="pts">
+                <li>법률 관계의 근거가 되는 해당 법률의 헌법 위반을 판단하는 것</li>
+                <li>'헌법재판소'에서 담당(헌법재판소법)</li>
+              </ul>
+              <div class="sub">헌법재판의 종류</div>
+              <div class="badge-row">
+                <span class="badge badge-red">위헌법률심판</span>
+                <span class="badge badge-blue">탄핵심판</span>
+                <span class="badge badge-blue">정당해산심판</span>
+                <span class="badge badge-blue">권한쟁의심판</span>
+                <span class="badge badge-red">헌법소원심판</span>
+              </div>
+              <div class="hbox hbox-yellow" style="margin-top:8px">
+                ★ 사회복지 기본권 구제와 관련된 헌법재판: <b style="color:#dc2626;">위헌법률심판 + 헌법소원심판</b>
+              </div>
+            `
+          },
+
+          { icon: "📋", title: "위헌법률심판",
+            html: `
+              <div class="hbox hbox-blue">
+                국회에서 제정한 법률이 헌법에 위반되는지 여부를 헌법재판소가 심사
+                <b>(법원이 위헌제청)</b><br>
+              </div>
+              <div class="sub">[사례] 아동학대범죄처벌특례법 제35조 제2항 위헌제청</div>
+              <table class="comp-table">
+                <tr><th>구분</th><th>내용</th></tr>
+                <tr><td><b>쟁점</b></td><td>부모에 의한 아동학대 가해자의 신상을 <b>비공개</b>하도록 한 조항이 위헌인지 여부</td></tr>
+                <tr><td><b>법원 판단</b></td><td>가해자 신상 공개가 타당하다고 보아 위헌 제청</td></tr>
+                <tr><td><b>헌재 결정</b></td><td><b>합헌</b> — 조항 유지</td></tr>
+                <tr><td><b>이유</b></td><td>부모의 신상 공개는 해당 아동이 성장하면서 지속적으로 <b>부정적 영향</b>을 받을 수 있기 때문</td></tr>
+              </table>
+            `
+          },
+
+          { icon: "📋", title: "헌법소원심판",
+            html: `
+              <div class="hbox hbox-blue">
+                <b>공권력에 의하여 헌법상 보장된 국민의 기본권이 침해된 경우</b>, 헌법재판소에 그 침해된 기본권의 구제를 청구하는 제도
+              </div>
+              <div class="sub">헌법소원의 두 가지 유형 (헌법재판소법 제68조)</div>
+              <table class="comp-table">
+                <tr><th>구분</th><th>내용</th><th>근거</th></tr>
+                <tr><td><b>1항 헌법소원</b></td><td>공권력의 행사 또는 불행사로 인하여 기본권이 침해된 경우 청구</td><td>헌법재판소법<br>제68조 1항</td></tr>
+                <tr><td><b>2항 헌법소원</b></td><td>법률의 위헌심판제청 신청이 법원에서 받아들여지지 않은 경우 청구</td><td>헌법재판소법<br>제68조 2항</td></tr>
+              </table>
+              <div class="sub">[사례] 공직선거법 헌법소원 (기각)</div>
+              <table class="comp-table">
+                <tr><th>구분</th><th>내용</th></tr>
+                <tr><td><b>사건</b></td><td>뇌병변 장애인이 활동보조인 1명과 투표하러 갔으나, 공직선거법상 가족 외 2인 동반 규정으로 투표사무원 동행 요구 → 비밀투표권 침해 우려로 투표 포기</td></tr>
+                <tr><td><b>쟁점</b></td><td>투표권 행사하는 장애인 당사자의 <b>자기결정권</b> 침해 여부</td></tr>
+                <tr><td><b>결정</b></td><td><b>기각</b> (6대 3) — 현행 공직선거법 조항 유지</td></tr>
+                <tr><td><b>소수의견</b></td><td>두 명씩 낯선 사람을 배치하는 것은 <b>자기결정권·참정권</b> 침해 가능성 있음 (3명)</td></tr>
+              </table>
+              <div class="hbox hbox-yellow">💡 <b>헌법재판과 사회복지의 관계</b> 
+                <ul class="pts">
+                  <li>헌법재판으로 청구되는 <b>사례 축적</b>은 사회복지 관련 <b>입법과 정책이 형성되는 계기</b>가 될 수 있음</li>
+                  <li><b>실제적 기본권 침해 여부</b>는 특정 개별 사례에 대한 사법적 판결 이후 확인됨</li>
+                  <li>기본권 보장 및 침해 범위 또한 <b>헌법 판례 이후 점진적으로 구성</b>됨</li>
+                  <li>사례가 쌓일수록 기본권 보장의 범위가 명확해지고 관련 <b>입법·정책 변화의 계기</b>가 됨</li>
+               </ul>
+              </div>
+            `
+          },
+
+          /* ───── 03. 사법적 판단과 사회복지 ───── */
+          { icon: "📂", title: "03. 사법적 판단과 사회복지",
+            html: `
+              <div class="badge-row">
+                <span class="badge badge-blue">사법적극주의</span>
+                <span class="badge badge-green">사법적 판단의 정책형성 기능</span>
+              </div>
+            `
+          },
+
+          { icon: "⚡", title: "사법적극주의",
+            html: `
+              <ul class="pts">
+                <li>법 해석과 판결에서 <b>문언적 의미에 얽매이지 않고</b> 사법부가 창조적인 헌법·법률 해석을 통하여
+                <b>정책 형성에 개입</b>하는 사법부의 태도</li>
+               <li>법정이 공공정책의 변화를 이끌어내고, 정책의 <b>정당성과 합법성</b>을 제시한다는 점에서<b>사회복지와 사법적 판단의 관련성</b>을 뒷받침하는 중요한 시각</li>
+               </ul>
+            `
+          },
+
+          { icon: "📊", title: "사법적 판단의 정책형성 기능",
+            html: `
+              <ul class="pts">
+                <li>정책지향형 소송</b> 증가 추세</li>
+                 <li>사법부의 판결은 사회구성원에게 향후 <b>행동지침을 설정</b>하게 하는 <b>일종의 정책</b>으로서의 역할 수행</li>
+                 <li>사법적 판단이 사회복지정책 변화에 미치는 영향: 사후적, 해당 법률 한정</li>
+              </ul>
+              <div class="sub">사법적 판단이 사회복지정책 변화에 미치는 영향의 한계</div>
+                <ul class="pts">  
+                  <li>사법적 판단이 사회복지정책 변화에 미치는 영향: <b>사후적, 해당 법률 한정</b></li>
+                </ul>
+            `
+          },
+
+          /* ───── 04. 사회복지법 관련 소송 사례 ───── */
+          { icon: "📂", title: "04. 사회복지법 관련 소송 사례",
+            html: `
+              <div class="badge-row">
+                <span class="badge badge-blue">공익소송</span>
+                <span class="badge badge-green">국민연금기금 손해배상 (1996)</span>
+                <span class="badge badge-yellow">생계보호기준 위헌확인 (1997)</span>
+                <span class="badge badge-purple">저상버스 위헌확인 (2002)</span>
+                <span class="badge badge-gray">공익인권법재단 공감</span>
+              </div>
+            `
+          },
+
+          { icon: "🌍", title: "공익소송 (Public Interest Litigation)",
+            html: `
+              <div class="hbox hbox-blue">
+                소송의 당사자가 집단 또는 개인이더라도 그것이 <b>다중에게 그대로 적용될 수 있는 공공의 이익</b>을
+                위하여 수행되는 소송
+              </div>
+              <div class="sub">공익소송의 특성</div>
+              <ul class="pts">
+                <li>보통 사람이 <b>정부에 책무성</b>을 물을 수 있도록 해줌</li>
+                <li>정부를 법원에 출석시켜 자기들의 행동 또는 <b>무행동을 설명하고 정당화</b>하도록 만드는 것</li>
+                <li>모든 이해당사자들에게 열려 있는 공간이므로 <b>진정한 의미에서의 사회적 대화</b>를 촉진</li>
+              </ul>
+              <div class="hbox hbox-yellow">💡 출처: 샌드라 프레드먼 《인권의 대전환》 — 사회복지법 소송은 대부분 공익소송에 해당</div>
+            `
+          },
+
+          { icon: "📜", title: "주요 판례 (공익소송 사례)", html: `
+            <table class="comp-table">
+            <tr><th>연도</th><th>사건</th><th>결과 및 의의</th></tr>
+            <tr><td><b>1996</b></td><td>국민연금기금 관련 손해배상 청구소송</td><td><b>[기각] </b>연금기금 운용부실·정부 자의적 사용 → 국민이 국민연금에 관심을 갖는 계기</td></tr>
+            <tr><td><b>1997</b></td><td>1994년 생계보호기준 위헌확인</td><td><b>[기각] </b>급여 금액이 낮다는 것만으로 행복추구권 위배라 볼 수 없다 → 경각심 제고</td></tr>
+            <tr><td><b>2002</b></td><td>저상버스 도입의무 불이행 위헌확인</td><td><b>[기각] </b>헌법 제34조의 국가 의무는 일반적 의무이지 저상버스 도입이라는 구체적 의무 아님</td></tr>
+            </table>
+            <div class="hbox hbox-yellow" style="margin-top:8px">
+            <b>세 판례 모두 기각</b>되었으나, 사회복지 관련 <b>입법과 정책 형성의 계기</b>가 되었다는 점에서 의의가 있음
+            </div>
+         ` },
+
+          { icon: "🤝", title: "공익인권법재단 공감 (www.kpil.org)",
+            html: `
+              <div class="hbox hbox-blue">
+                공익 소송을 전담하는 대표적 기관 — 소수자의 권리를 위해 <b>법으로 사회 변화를 일구는</b> 공익 전담 법률 기관
+              </div>
+              <div class="sub">슬로건</div>
+              <ul class="star-list">
+                <li>소수자의 입장에 서서</li>
+                <li>구체적 삶의 현장의 목소리에 응답하며</li>
+                <li>법으로 사회 변화를 일구고자 합니다</li>
+              </ul>
+              <div class="hbox hbox-yellow">💡 서울시 사회복지공익센터: <b>변호사 + 사회복지사</b>가 함께 활동 — 법적 권리 침해 당사자에게 무료 법률 지원 제공</div>
+            `
+          },
+
+          /* ───── 핵심 요약 ───── */
+          { icon: "📝", title: "6강 핵심 요약",
+            html: `
+              <table class="comp-table">
+                <tr><th>개념</th><th>핵심 내용</th></tr>
+                <tr><td><b>권리구제</b></td><td>수급권자 권익의 <b>신속한 보호</b> 목적 — <b>특별법원 없음</b>, 일반 법원 이용, 개별법 각 조문 말미에 명시</td></tr>
+                <tr><td><b>행정심판 (전심절차)</b></td><td>심사청구→재심사청구(국민연금·고용·산재·노인장기요양), 이의신청→심판청구(건강보험), 이의신청→이의신청 두 번(기초생활보장)</td></tr>
+                <tr><td><b>법적쟁송</b></td><td><b>행정소송</b>(법원) / <b>민사소송</b>(손해배상·제3자) / <b>헌법소원</b>(모든 절차 소진 후)</td></tr>
+                <tr><td><b>헌법재판 종류 (5)</b></td><td>위헌법률심판·탄핵·정당해산·권한쟁의·헌법소원 — 사회복지 관련: <b>위헌법률심판 + 헌법소원심판</b></td></tr>
+                <tr><td><b>위헌법률심판</b></td><td>국회 제정 법률의 헌법 위반 여부 심사 — <b>법원이 위헌 제청</b></td></tr>
+                <tr><td><b>헌법소원심판</b></td><td>①공권력 행사·불행사로 기본권 침해(68조1항) ②위헌제청 신청 법원 기각 시(68조2항) — <b>헌법이 마련한 기본권 보장 핵심 장치</b></td></tr>
+                <tr><td><b>사법적극주의</b></td><td>문언에 얽매이지 않고 사법부가 <b>정책 형성에 개입</b>하는 태도 — 영향은 <b>사후적·해당 법률 한정</b></td></tr>
+                <tr><td><b>공익소송</b></td><td>다중에게 적용되는 <b>공공의 이익</b>을 위해 수행되는 소송 — 정부에 책무성을 물음</td></tr>
+                <tr><td><b>3대 판례 (모두 기각)</b></td><td>국민연금기금 손해배상(1996) / 생계보호기준 위헌확인(1997) / 저상버스 도입의무(2002) — 기각되었으나 사회적 의미 있음</td></tr>
+              </table>
+            `
+          },
+
+        ]
+      },
       { num: "7강", name: "사회복지법과 사회복지실천",
         cards: [
           { icon: "🔗", title: "법과 사회복지실천의 관계", html: "<div class=\"hbox hbox-yellow\" style=\"margin-bottom:8px\">\n      사회복지에 대한 인식: <b>잔여적(residual)</b> 관점 → <b>제도적(institutional)</b> 관점으로 변화<br/>\n      → 사회복지법도 협의의 개념 → <b>광의의 개념</b>으로 확장됨\n    </div>\n<table class=\"comp-table\">\n<tr><th>법이 사회복지실천에 제공</th><th>사회복지실천이 법에 제공</th></tr>\n<tr><td>문제 처리하는 <b>방향·구조·적법성</b></td><td>인간관계 해결기법 등 <b>실질적 내용지식</b></td></tr>\n<tr><td>문구 해석, 개별 사례에 집중</td><td>환경 속의 인간 강조, 원인의 원인까지 탐색</td></tr>\n</table>\n<div class=\"sub\">법 기반 사회복지실천의 한계</div>\n<ul class=\"pts red\">\n<li>법이 항상 정확한 행동의 <b>방향과 해답을 제공하지 않음</b></li>\n<li>특정 조항들은 <b>다양한 해석 여지</b> 존재 및 모호함</li>\n<li>법은 선제적이기보다 상황 발생에 따라 <b>사후 대응적</b></li>\n<li><b>법과 현실의 괴리</b> → 법 기반 사회복지실천의 한계도 존재</li>\n<li>서로 다른 전문직이 갖는 특성으로 인한 <b>법 운영의 문제</b> 발생</li>\n</ul>" },
@@ -5854,7 +7438,7 @@ const SUMMARY_DATA = {
       { num: "9강", name: "기본법 Ⅰ · 사회보장기본법",
         cards: [
           { icon: "📋", title: "사회보장기본법 의의·입법배경·연혁", html: "<div class=\"sub\">의의</div>\n<ul class=\"pts\">\n<li>헌법과 개별 사회복지법 사이의 <b>중개자</b> 역할 — 개별 사회복지법에 <b>입법 지침 제공</b></li>\n<li>제4조(다른 법률과의 관계): \"사회보장에 관한 다른 법률을 제정하거나 개정하는 경우에는 <b>이 법에 부합되도록</b> 하여야 한다\"</li>\n<li>1963년 「사회보장에 관한 법률」: 선언적 의미 / 형식적 입법 — 헌법 기본권 실현을 위한 최초의 입법적 조치</li>\n</ul>\n<div class=\"sub\">입법배경 (1963 → 1995 개정 이유)</div>\n<ul class=\"pts red\">\n<li>각종 사회보장제도의 <b>연계성 부족</b></li>\n<li>사회보장에 관한 국가의 책임·국민 권리 <b>불명확</b></li>\n<li>중앙정부와 지방자치단체 간 역할·재정·업무 부담의 <b>불명확</b></li>\n</ul>\n<div class=\"sub\">사회보장기본법 개정 연혁</div>\n<table class=\"comp-table\">\n<tr><th>개정일</th><th>주요 내용</th></tr>\n<tr><td><b>2012. 1. 26</b></td><td>· 사회보장의 개념 확대: 출산·양육을 사회적 위험으로 포함<br/>· 사회복지서비스와 관련 복지제도를 <b>사회서비스</b>로 포괄<br/>· 맞춤형 사회보장제도인 <b>평생사회안전망</b> 개념 도입</td></tr>\n<tr><td><b>2015. 12. 29</b></td><td>최저생계비 대신 <b>최저보장수준 및 기준 중위소득</b> 제도 도입한 국민기초생활보장법 개정 내용 반영</td></tr>\n<tr><td><b>2018. 12. 11</b></td><td>사회보장제도의 신설·변경 시 타당성·기존 제도와의 관계·영향 및 운영방안 등에 대하여 <b>보건복지부장관과 협의</b></td></tr>\n<tr><td><b>2021. 6. 28</b></td><td>사회보장위원회가 사회보장관련 <b>행정데이터를 제공받아</b> 주요 시책의 심의·조정에 활용할 수 있도록 함</td></tr>\n<tr><td><b>2024. 12. 20</b></td><td>사회보장제도 평가 시범사업 실시, <b>중복수급 방지</b>, 재정추계 근거 마련</td></tr>\n</table>" },
-          { icon: "📖", title: "사회보장기본법 주요 개념 정의", html: "<div class=\"hbox hbox-purple\" style=\"background:#ede9fe;border-left:3px solid #7c3aed;margin-bottom:10px;font-size:.85em;\">\n<b>기본이념 (제2조)</b>: 모든 국민이 다양한 사회적 위험으로부터 벗어나 행복하고 인간다운 생활을 향유할 수 있도록 자립을 지원하며, 사회참여·자아실현에 필요한 제도와 여건을 조성하여 <b>사회통합과 행복한 복지사회</b>를 실현\n    </div>\n<table class=\"comp-table\">\n<tr><th>용어</th><th>정의</th></tr>\n<tr><td><b>사회보장</b></td><td>출산·양육·실업·노령·장애·질병·빈곤·사망 등의 사회적 위험으로부터 모든 국민을 보호하고 국민 삶의 질을 향상시키는 데 필요한 소득·서비스를 보장하는 사회보험·공공부조·사회서비스</td></tr>\n<tr><td><b>사회보험</b></td><td>국민에게 발생하는 사회적 위험을 <b>보험의 방식</b>으로 대처 → 국민의 건강과 소득 보장</td></tr>\n<tr><td><b>공공부조</b></td><td>국가·지자체 책임 하에 생활 유지 능력이 없거나 어려운 국민의 <b>최저생활 보장</b> + 자립 지원</td></tr>\n<tr><td><b>사회서비스</b></td><td>복지·보건의료·교육·고용·주거·문화·환경 등에서 상담·재활·돌봄·역량개발·사회참여 지원으로 국민의 <b>삶의 질 향상</b></td></tr>\n<tr><td><b>평생사회안전망</b></td><td>생애주기에 걸쳐 <b>기본 욕구</b>와 <b>특수 욕구</b>를 동시에 고려하여 소득·서비스를 보장하는 맞춤형 사회보장제도 (2012년 도입)</td></tr>\n<tr><td><b>사회보장 행정데이터</b></td><td>국가·지자체·공공기관 및 법인이 법령에 따라 생성 또는 취득하여 관리하고 있는 자료 또는 정보로서 <b>사회보장 정책 수행에 필요한 자료 또는 정보</b></td></tr>\n</table>" },
+          { icon: "📖", title: "사회보장기본법 주요 개념 정의", html: "<div class=\"hbox hbox-purple\" style=\"background:#ede9fe;border-left:3px solid #7c3aed;margin-bottom:10px;font-size:.90em;\">\n<b>기본이념 (제2조)</b>: 모든 국민이 다양한 사회적 위험으로부터 벗어나 행복하고 인간다운 생활을 향유할 수 있도록 자립을 지원하며, 사회참여·자아실현에 필요한 제도와 여건을 조성하여 <b>사회통합과 행복한 복지사회</b>를 실현\n    </div>\n<table class=\"comp-table\">\n<tr><th>용어</th><th>정의</th></tr>\n<tr><td><b>사회보장</b></td><td>출산·양육·실업·노령·장애·질병·빈곤·사망 등의 사회적 위험으로부터 모든 국민을 보호하고 국민 삶의 질을 향상시키는 데 필요한 소득·서비스를 보장하는 사회보험·공공부조·사회서비스</td></tr>\n<tr><td><b>사회보험</b></td><td>국민에게 발생하는 사회적 위험을 <b>보험의 방식</b>으로 대처 → 국민의 건강과 소득 보장</td></tr>\n<tr><td><b>공공부조</b></td><td>국가·지자체 책임 하에 생활 유지 능력이 없거나 어려운 국민의 <b>최저생활 보장</b> + 자립 지원</td></tr>\n<tr><td><b>사회서비스</b></td><td>복지·보건의료·교육·고용·주거·문화·환경 등에서 상담·재활·돌봄·역량개발·사회참여 지원으로 국민의 <b>삶의 질 향상</b></td></tr>\n<tr><td><b>평생사회안전망</b></td><td>생애주기에 걸쳐 <b>기본 욕구</b>와 <b>특수 욕구</b>를 동시에 고려하여 소득·서비스를 보장하는 맞춤형 사회보장제도 (2012년 도입)</td></tr>\n<tr><td><b>사회보장 행정데이터</b></td><td>국가·지자체·공공기관 및 법인이 법령에 따라 생성 또는 취득하여 관리하고 있는 자료 또는 정보로서 <b>사회보장 정책 수행에 필요한 자료 또는 정보</b></td></tr>\n</table>" },
           { icon: "🔄", title: "공공부조 vs 사회보험 비교", html: "<table class=\"comp-table\">\n<tr><th>구분</th><th class=\"th-blue\">공공부조</th><th class=\"th-green\">사회보험</th></tr>\n<tr><td>목적</td><td>구빈, 사후적 대응</td><td>방빈, 사전적 대응</td></tr>\n<tr><td>이념</td><td>선별주의</td><td>보편주의</td></tr>\n<tr><td>대상</td><td>소수의 빈곤계층</td><td>국민 전체</td></tr>\n<tr><td>자격</td><td>자산조사</td><td>기여금 등</td></tr>\n<tr><td>재원</td><td>일반 조세</td><td>보험료</td></tr>\n<tr><td>수급권</td><td>약한 권리성</td><td>강한 권리성</td></tr>\n</table>" },
           { icon: "👥", title: "사회보장 주체와 책임 + 국민의 권리", html: "<div class=\"sub\">사회보장의 주체</div>\n<ul class=\"pts\">\n<li><b>국가·지자체</b> (제5조): 모든 국민의 인간다운 생활 유지·증진 / 지속가능한 사회보장제도 확립 및 재원 조달</li>\n<li><b>민간부문·가정·지역공동체 등</b> — 복지다원주의 지향</li>\n<li>사회보험: <b>국가</b> / 공공부조·사회서비스: <b>국가 + 지자체</b></li>\n</ul>\n<div class=\"sub\">국민의 책임 — 사회보장의 보충성 원리 적용</div>\n<ul class=\"pts yellow\">\n<li>모든 국민은 자신의 능력을 최대한 발휘하여 <b>자립·자활</b>할 수 있도록 노력</li>\n<li>보호가 필요한 사람에게 지속적 관심을 가지고 사회환경 조성에 서로 협력</li>\n</ul>\n<div class=\"sub\">국민의 권리 (제9조~12조)</div>\n<table class=\"comp-table\">\n<tr><th>조항</th><th>내용</th></tr>\n<tr><td>제9조<br/><b>수급권</b></td><td>모든 국민은 사회보장급여를 받을 권리가 있음<br/>→ 수급권은 <b>양도·담보 제공 불가</b> <span class=\"kichul\">⭐ 기출</span></td></tr>\n<tr><td>제10조<br/><b>급여 수준</b></td><td>국가·지자체는 최저임금뿐 아니라 <b>최저보장수준</b> 등을 고려하여 사회보장급여 수준 결정</td></tr>\n<tr><td>제11조<br/><b>급여 신청</b></td><td>관계 법령에서 정하는 경우 국가·지자체가 <b>대신 신청</b> 가능</td></tr>\n<tr><td>제12조<br/><b>수급권 보호</b></td><td>수급권의 보호·제한 및 포기</td></tr>\n</table>" },
           { icon: "🏗️", title: "사회보장위원회 · 기본계획 · 운영", html: "<div class=\"sub\">사회보장위원회</div>\n<ul class=\"pts\">\n<li><b>국무총리 소속</b> 기구 — 사회보장에 관한 주요 시책을 심의·조정</li>\n<li>심의 내용: 사회보장증진계획 / 제도 평가 및 개선 / 급여 및 비용 부담 / 재정 추계 및 재원 조달방안 / <b>사회보장 통계</b> 등</li>\n</ul>\n<div class=\"sub\">사회보장기본계획 — 보건복지부장관이 <b>5년마다</b> 수립</div>\n<ul class=\"pts yellow\">\n<li>국내외 사회보장환경의 변화와 전망</li>\n<li>사회보장의 기본 목표 및 중장기 추진방향</li>\n<li>필요한 재원의 규모와 조달방안 (사회보장 관련 기금의 운용방안)</li>\n<li>사회보장 전달체계 등</li>\n</ul>\n<div class=\"sub\">사회보장제도 운영원칙 (6가지)</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">보편성</span>\n<span class=\"badge badge-green\">형평성</span>\n<span class=\"badge badge-yellow\">민주성</span>\n<span class=\"badge badge-purple\">연계성·전문성</span>\n<span class=\"badge badge-gray\">책임성</span>\n</div>\n<div class=\"sub\">비용의 부담</div>\n<table class=\"comp-table\">\n<tr><th>구분</th><th>부담 주체</th></tr>\n<tr><td>사회보험</td><td>사용자 / 피용자 / 자영업자</td></tr>\n<tr><td>공공부조·사회서비스</td><td>국가와 지방자치단체<br/>(단, <b>부담능력 있는 국민</b>은 수익자 부담 원칙)</td></tr>\n</table>\n<div class=\"sub\">사회보장 통계 흐름</div>\n<div class=\"flow\">\n<span class=\"flow-item\">중앙행정기관·지자체장</span>\n<span class=\"flow-arrow\">→</span>\n<span class=\"flow-item\">보건복지부장관</span>\n<span class=\"flow-arrow\">→</span>\n<span class=\"flow-item\">사회보장위원회</span>\n</div>" },
@@ -5862,7 +7446,7 @@ const SUMMARY_DATA = {
         ] },
       { num: "10강", name: "기본법 Ⅱ · 사회복지사업법",
         cards: [
-          { icon: "📖", title: "사회복지사업법 의의·기본이념·용어정의", html: "<div class=\"hbox hbox-blue\" style=\"margin-bottom:8px;font-size:.85em;\">\n      사회복지를 필요로 하는 사람에 대하여 인간의 존엄성과 인간다운 생활을 할 권리를 보장하고, 사회복지의 전문성을 높이며, 사회복지서비스의 질을 높여 <b>사회복지의 증진</b>에 이바지함을 목적 (제1조)\n    </div>\n<div class=\"sub\">법 위계</div>\n<div class=\"flow\">\n<span class=\"flow-item\">사회보장기본법</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\" style=\"background:#dbeafe;color:#1d4ed8;font-weight:900;\">사회복지사업법</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">사회복지사업 관련 개별 법률</span>\n</div>\n<div class=\"sub\">기본이념 (4가지)</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">서비스 신청·제공의 보편성</span>\n<span class=\"badge badge-green\">법인·시설의 공공성 확보</span>\n<span class=\"badge badge-yellow\">인권 보장</span>\n<span class=\"badge badge-purple\">선택권 보장</span>\n</div>\n<div class=\"sub\">용어 정의</div>\n<table class=\"comp-table\">\n<tr><th>용어</th><th>내용</th></tr>\n<tr><td><b>사회복지사업</b></td><td>국민기초생활보장법·아동복지법·노인복지법·장애인복지법 등의 법률에 따른 보호·선도 또는 복지에 관한 사업과 사회복지 상담·직업지원·무료숙박·지역사회복지·의료복지·재가복지·사회복지관 운영·정신질환자 및 한센병력자의 사회복귀에 관한 사업 등<br/><span class=\"no\">✗ 근로기준법</span>은 해당 안 됨</td></tr>\n<tr><td><b>사회복지서비스</b></td><td>국가·지자체 및 민간부문의 도움을 필요로 하는 모든 국민에게 사회보장기본법에 따른 사회서비스 중 <b>사회복지사업을 통한 서비스</b>를 제공하여 삶의 질 향상</td></tr>\n</table>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n<span class=\"no\">✗ 사회복지사업법 내용 아닌 것:</span> 사회복지공동모금 / 기초생활보장 수급자 선정 기준\n    </div>" },
+          { icon: "📖", title: "사회복지사업법 의의·기본이념·용어정의", html: "<div class=\"hbox hbox-blue\" style=\"margin-bottom:8px;font-size:.90em;\">\n      사회복지를 필요로 하는 사람에 대하여 인간의 존엄성과 인간다운 생활을 할 권리를 보장하고, 사회복지의 전문성을 높이며, 사회복지서비스의 질을 높여 <b>사회복지의 증진</b>에 이바지함을 목적 (제1조)\n    </div>\n<div class=\"sub\">법 위계</div>\n<div class=\"flow\">\n<span class=\"flow-item\">사회보장기본법</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\" style=\"background:#dbeafe;color:#1d4ed8;font-weight:900;\">사회복지사업법</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">사회복지사업 관련 개별 법률</span>\n</div>\n<div class=\"sub\">기본이념 (4가지)</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">서비스 신청·제공의 보편성</span>\n<span class=\"badge badge-green\">법인·시설의 공공성 확보</span>\n<span class=\"badge badge-yellow\">인권 보장</span>\n<span class=\"badge badge-purple\">선택권 보장</span>\n</div>\n<div class=\"sub\">용어 정의</div>\n<table class=\"comp-table\">\n<tr><th>용어</th><th>내용</th></tr>\n<tr><td><b>사회복지사업</b></td><td>국민기초생활보장법·아동복지법·노인복지법·장애인복지법 등의 법률에 따른 보호·선도 또는 복지에 관한 사업과 사회복지 상담·직업지원·무료숙박·지역사회복지·의료복지·재가복지·사회복지관 운영·정신질환자 및 한센병력자의 사회복귀에 관한 사업 등<br/><span class=\"no\">✗ 근로기준법</span>은 해당 안 됨</td></tr>\n<tr><td><b>사회복지서비스</b></td><td>국가·지자체 및 민간부문의 도움을 필요로 하는 모든 국민에게 사회보장기본법에 따른 사회서비스 중 <b>사회복지사업을 통한 서비스</b>를 제공하여 삶의 질 향상</td></tr>\n</table>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n<span class=\"no\">✗ 사회복지사업법 내용 아닌 것:</span> 사회복지공동모금 / 기초생활보장 수급자 선정 기준\n    </div>" },
           { icon: "📋", title: "사회복지사업법 주요 연혁", html: "<table class=\"comp-table\">\n<tr><th>연도</th><th>내용</th></tr>\n<tr><td>1970</td><td>사회복지사업법 제정</td></tr>\n<tr><td>1992</td><td>사회복지전담공무원 법적 근거 마련</td></tr>\n<tr><td>1997</td><td>사회복지사 1급 = 국가시험 합격자 / 시설 허가제 → <b>신고제</b></td></tr>\n<tr><td>2012</td><td>인권보호 강화 / 법인 임원 자격 요건 강화</td></tr>\n<tr><td><b>2018</b></td><td>전문사회복지사 제도 도입 (정신건강·의료·학교)<br/><span style=\"font-size:.8em;color:#6b7280\">※ \"2018년에 3급 자격증이 신설되었다\" → <b>틀린 설명</b> (3급은 없음, 1·2급만 존재)</span></td></tr>\n<tr><td>2021</td><td>사회복지시설장·종사자 결격사유 보완 (자격관리 엄격화)</td></tr>\n</table>" },
           { icon: "👥", title: "사회복지사", html: "<ul class=\"pts\">\n<li>등급: <b>1급</b>(국가시험 합격) / <b>2급</b> — 3급은 없음</li>\n<li>사회복지의 날: <b>9월 7일</b></li>\n<li>의무: 인권존중 및 최대봉사 / 비밀누설 금지</li>\n</ul>\n<div class=\"sub\">사회복지서비스 제공의 원칙</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">① 현물 제공</span>\n<span class=\"badge badge-green\">② 이용권(바우처) 지급</span>\n<span class=\"badge badge-yellow\">③ 서비스 품질관리 위한 평가</span>\n</div>\n<div class=\"sub\">사회복지협의회 vs 한국사회복지사협회</div>\n<table class=\"comp-table\">\n<tr><th>기관</th><th>역할</th></tr>\n<tr><td>사회복지협의회</td><td>조사·연구 및 정책 건의 / 관련 기관·단체 간 연계·협력·조정 / 사회복지 소외계층 발굴 등</td></tr>\n<tr><td>한국사회복지사협회</td><td>사회복지사 자질 향상 위한 교육훈련 실시 / 사회복지사 복지증진 도모 등</td></tr>\n</table>\n<div class=\"sub\">사회복지법인</div>\n<ul class=\"pts purple\">\n<li><b>법인 설립 허가</b>: 정관·임원·법인의 재산과 운영 필요</li>\n<li><b>법인 해산</b>: 설립허가 취소 시 남은 재산 처리 → <b>국가 귀속</b></li>\n</ul>\n<div class=\"sub\">사회복지시설 주요 규정</div>\n<ul class=\"pts\">\n<li>수용 인원 <b>300명</b> 초과 불가</li>\n<li>정기·수시 <b>안전점검</b> 실시 / <b>후원금 수입·지출 공개</b></li>\n<li>서비스 최저기준 준수 / 평가 / 보험가입 의무</li>\n<li>국가나 지자체는 사회복지시설을 설치·운영할 수 있다</li>\n</ul>\n<div class=\"sub\">재가복지</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-gray\">가정봉사서비스</span>\n<span class=\"badge badge-gray\">주간·단기보호서비스</span>\n</div>" },
           { icon: "🔍", title: "사회보장급여법 (2014년 제정)", html: "<div class=\"hbox hbox-yellow\">\n<b>2014년 송파 세 모녀 사건</b> 계기로 제정 — 복지 사각지대 발굴 강화\n    </div>\n<div class=\"sub\">주요 내용</div>\n<ul class=\"pts green\">\n<li>사회보장급여 신청·수급자격 조사·급여 결정</li>\n<li>위기가구 발굴 및 실태점검 / 신고의무</li>\n<li>이의신청 / 사회보장급여의 변경·중지·환수</li>\n<li>한국사회보장정보원 &amp; 사회보장정보시스템</li>\n<li>지역사회보장에 관한 계획 (4년)</li>\n<li><b>비밀유지와 압류금지</b>: 직무상 알게 된 비밀 누설 금지</li>\n</ul>" }
@@ -5912,7 +7496,7 @@ const SUMMARY_DATA = {
         ] },
       { num: "14강①", name: "사회서비스법 · 아동·영유아·청소년",
         cards: [
-          { icon: "🌟", title: "사회서비스 개념과 특징", html: "<div class=\"hbox hbox-blue\" style=\"margin-bottom:8px;font-size:.85em;\">\n      국가·지자체 및 민간단체의 도움이 필요한 모든 국민에게 복지·보건의료·교육·고용·주거·문화·환경 등에서 인간다운 생활을 보장하고 상담·재활·돌봄·정보제공·시설이용·역량개발·사회참여 지원 등을 통해 <b>삶의 질 향상</b>을 지원하는 제도 (사회보장기본법 제3조)\n    </div>\n<div class=\"sub\">사회서비스 특징</div>\n<ul class=\"pts\">\n<li><b>비물질적·심리사회적</b> 서비스 형태로 주로 제공 (사회보험·공공부조: 현금 또는 현물)</li>\n<li>대상별·유형별·시간에 따른 구체적이고 <b>개별적 처우</b>를 제공하도록 구성</li>\n<li>서비스를 전달하는 사람의 <b>전문적 개입과 기술·태도·실천적 윤리의식</b> 등이 중요하게 작용</li>\n</ul>" },
+          { icon: "🌟", title: "사회서비스 개념과 특징", html: "<div class=\"hbox hbox-blue\" style=\"margin-bottom:8px;font-size:.90em;\">\n      국가·지자체 및 민간단체의 도움이 필요한 모든 국민에게 복지·보건의료·교육·고용·주거·문화·환경 등에서 인간다운 생활을 보장하고 상담·재활·돌봄·정보제공·시설이용·역량개발·사회참여 지원 등을 통해 <b>삶의 질 향상</b>을 지원하는 제도 (사회보장기본법 제3조)\n    </div>\n<div class=\"sub\">사회서비스 특징</div>\n<ul class=\"pts\">\n<li><b>비물질적·심리사회적</b> 서비스 형태로 주로 제공 (사회보험·공공부조: 현금 또는 현물)</li>\n<li>대상별·유형별·시간에 따른 구체적이고 <b>개별적 처우</b>를 제공하도록 구성</li>\n<li>서비스를 전달하는 사람의 <b>전문적 개입과 기술·태도·실천적 윤리의식</b> 등이 중요하게 작용</li>\n</ul>" },
           { icon: "👶", title: "아동복지법", html: "<div class=\"hbox hbox-blue\">\n<b>아동</b>: <b>18세 미만</b>인 사람<span class=\"kichul\">⭐ 기출</span> (아동정책기본계획: 5년마다 수립)<br/>\n<b>연혁</b>: 1961년 아동복리법 → 1981. 4 아동복지법으로 전부 개정\n    </div>\n<div class=\"sub\">기본이념 (4가지)</div>\n<ul class=\"pts yellow\">\n<li>아동은 어떠한 <b>차별도 받지 않고</b> 자라야 함</li>\n<li>안정된 가정환경에서 <b>행복하게</b> 자라야 함</li>\n<li>아동에 관한 모든 활동에서 <b>아동의 이익이 최우선적으로</b> 고려되어야 함</li>\n<li>아동은 이 법에 따른 <b>보호와 지원을 받을 권리</b>를 가짐</li>\n</ul>\n<div class=\"sub\">보호자 정의</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">친권자</span><span class=\"badge badge-green\">후견인</span>\n<span class=\"badge badge-yellow\">보호·양육 의무가 있는 자</span>\n<span class=\"badge badge-gray\">업무·고용 등으로 사실상 보호·감독하는 자</span>\n</div>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n<span class=\"no\">✗ 이웃주민</span><span class=\"kichul\">⭐ 기출</span>은 보호자에 해당하지 않음\n    </div>\n<div class=\"sub\">방과 후 돌봄서비스</div>\n<ul class=\"pts\">\n<li><b>다함께돌봄센터</b> 설치·운영 시행 (2019. 4) — 방과 후 아동 돌봄 서비스 거점</li>\n</ul>\n<div class=\"sub\">아동학대 예방·방지</div>\n<ul class=\"pts\">\n<li>아동학대 신고 체제 구축·운영</li>\n<li><b>아동학대전담공무원</b>: <b>사회복지사 자격</b> 소지 — 아동학대 조사 업무 수행</li>\n<li>아동보호전문기관: 시·도 및 시·군·구에 1개소 이상</li>\n</ul>\n<div class=\"sub\">아동복지시설 종류</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">아동양육시설</span><span class=\"badge badge-green\">아동상담소</span>\n<span class=\"badge badge-yellow\">지역아동센터</span><span class=\"badge badge-purple\">아동보호전문기관</span>\n<span class=\"badge badge-gray\">가정위탁지원센터</span>\n<span class=\"badge badge-gray\">아동권리보장원</span>\n</div>" },
           { icon: "🏫", title: "영유아보육법", html: "<div class=\"hbox hbox-blue\">\n<b>영유아</b>: <b>7세 이하</b> 취학 전 아동 (유보통합 2025 반영 기준)\n    </div>\n<div class=\"sub\">어린이집 종류</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">국공립</span><span class=\"badge badge-green\">사회복지법인</span>\n<span class=\"badge badge-yellow\">법인·단체 등</span><span class=\"badge badge-purple\">직장</span>\n<span class=\"badge badge-gray\">가정</span><span class=\"badge badge-gray\">협동</span><span class=\"badge badge-gray\">민간</span>\n</div>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n<span class=\"no\">✗ 지역아동센터</span><span class=\"kichul\">⭐ 기출</span>는 어린이집이 아님 (아동복지법상 아동복지시설)\n    </div>\n<ul class=\"pts\" style=\"margin-top:10px\">\n<li>상시 여성근로자 300명 이상 또는 상시 근로자 500명 이상 사업장: <b>직장어린이집 설치 의무</b></li>\n<li>2025년 <b>유보통합</b>: 이용 기관과 관계없이 양질의 교육·돌봄 서비스 제공</li>\n<li>어린이집 원장은 필요한 경우 만 <b>12세</b>까지 연장 보육 가능</li>\n</ul>" },
           { icon: "🧑", title: "청소년복지지원법", html: "<div class=\"hbox hbox-blue\">\n<b>청소년</b>: <b>9세 이상 24세 이하</b><span class=\"kichul\">⭐ 기출</span>인 사람<br/>\n<b>청소년증 발급</b>: <b>9세 이상 18세 이하</b> (연령 기준 다름!)\n    </div>\n<ul class=\"pts\" style=\"margin-top:10px\">\n<li>2004년 제정 → 2021년 가출청소년 → <b>가정 밖 청소년</b>, 청소년부모 지원 신설</li>\n<li>청소년복지시설: 청소년쉼터, 청소년자립기관, 청소년치료재활센터 등</li>\n<li>예방적·회복적 보호지원 기간: <b>6개월</b></li>\n<li><b>자립지원</b>: 2023년 신설 (단순 적응 강요 아닌 구조를 바꾸는 사회복지 지향)</li>\n<li>위기청소년: 가정 문제·학업 수행·사회 적응 어려움 등 건강한 성장에 필요한 여건을 갖추지 못한 청소년</li>\n</ul>" }
@@ -5929,7 +7513,7 @@ const SUMMARY_DATA = {
           { icon: "📋", title: "사회복지공동모금회 기본원칙", html: "<ul class=\"pts\">\n<li>기부하는 자의 의사에 반하여 <b>기부금품을 모집하여서는 안 됨</b></li>\n<li>조성된 재원은 지역·단체·대상자 및 사업별로 <b>복지수요가 공정하게 충족</b>되도록 배분</li>\n<li>재원의 배분은 <b>객관적인 기준</b>에 따라 효율적으로 이루어지도록 하고 그 결과를 <b>공개</b></li>\n</ul>\n<div class=\"sub\">재원 (3가지)</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-red\">사회복지공동모금에 의한 기부금품</span>\n<span class=\"badge badge-yellow\">복권수익금</span>\n<span class=\"badge badge-blue\">국가·지자체의 보조금</span>\n</div>" },
           { icon: "❤️", title: "사회복지공동모금회법", html: "<div class=\"flow\">\n<span class=\"flow-item\">사회복지공동모금회 설립(1971)</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">사회복지공동모금법(1997)</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">사회복지공동모금회법(1999)</span>\n</div>\n<div class=\"sub\">사회복지공동모금회(사랑의 열매) 기능</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">공동모금사업</span>\n<span class=\"badge badge-green\">공동모금 재원 배분</span>\n<span class=\"badge badge-yellow\">재원 운용·관리</span>\n<span class=\"badge badge-purple\">조사·연구·홍보·교육훈련</span>\n<span class=\"badge badge-gray\">사회복지공동모금지회 운영</span>\n<span class=\"badge badge-gray\">국제교류·협력증진사업</span>\n</div>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n<span class=\"no\">✗ 공동모금회 기능 아님:</span> 사회복지사 보수교육 (→ 한국사회복지사협회)\n    </div>" },
           { icon: "📢", title: "모금·배분 주요 규정", html: "<ul class=\"star-list\">\n<li>모금 창구: <b>언론기관</b></li>\n<li>배분기준 공고: 매년 <b>8월 31일</b>까지 다음 회계연도 배분기준 공고</li>\n<li>공동모금 재원은 <b>당해 회계연도에 지출</b>하는 것이 원칙</li>\n<li>사용 용도 미지정 기부금품의 <b>10/100 범위</b>에서 외국 및 이북지역 사업 배분 가능</li>\n<li>재난·긴급구호 시 <b>별도의 배분기준</b>에 따라 지원 가능</li>\n</ul>" },
-          { icon: "👩‍💻", title: "사회복지사 등의 처우 및 지위향상을 위한 법률", html: "<div class=\"hbox hbox-blue\" style=\"margin-bottom:8px;font-size:.85em;\">\n      사회복지사의 열악한 근로환경·낮은 임금·과중한 업무량 문제 대처<br/>\n      → 사회복지사 등의 <b>처우·지위 향상</b>을 통해 생활안정과 복지 증진 도모\n    </div>\n<div class=\"sub\">적용대상 기관 (사회복지사업 종사자)</div>\n<ul class=\"pts\">\n<li>사회복지법인·사회복지시설</li>\n<li>한국사회복지공제회 / 한국사회복지사협회</li>\n<li>사회복지사업을 목적으로 설립된 법인 등</li>\n</ul>\n<div class=\"sub\">연혁</div>\n<div class=\"flow\">\n<span class=\"flow-item\">2011 제정</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">2018 적정인건비지침 마련</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">2024 사회복지종사자 권익지원센터 설립</span>\n</div>\n<div class=\"sub\">처우법 주요 내용</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">한국사회복지공제회 운영</span>\n<span class=\"badge badge-green\">사회복지사 등의 처우개선</span>\n<span class=\"badge badge-yellow\">용어정의</span>\n<span class=\"badge badge-purple\">사회복지종사자 권익지원센터 설립 (2024)</span>\n</div>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n<span class=\"no\">✗ 처우법 내용 아님:</span> 사회복지사 자격증 발급 (→ 사회복지사업법)\n    </div>" },
+          { icon: "👩‍💻", title: "사회복지사 등의 처우 및 지위향상을 위한 법률", html: "<div class=\"hbox hbox-blue\" style=\"margin-bottom:8px;font-size:.90em;\">\n      사회복지사의 열악한 근로환경·낮은 임금·과중한 업무량 문제 대처<br/>\n      → 사회복지사 등의 <b>처우·지위 향상</b>을 통해 생활안정과 복지 증진 도모\n    </div>\n<div class=\"sub\">적용대상 기관 (사회복지사업 종사자)</div>\n<ul class=\"pts\">\n<li>사회복지법인·사회복지시설</li>\n<li>한국사회복지공제회 / 한국사회복지사협회</li>\n<li>사회복지사업을 목적으로 설립된 법인 등</li>\n</ul>\n<div class=\"sub\">연혁</div>\n<div class=\"flow\">\n<span class=\"flow-item\">2011 제정</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">2018 적정인건비지침 마련</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">2024 사회복지종사자 권익지원센터 설립</span>\n</div>\n<div class=\"sub\">처우법 주요 내용</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">한국사회복지공제회 운영</span>\n<span class=\"badge badge-green\">사회복지사 등의 처우개선</span>\n<span class=\"badge badge-yellow\">용어정의</span>\n<span class=\"badge badge-purple\">사회복지종사자 권익지원센터 설립 (2024)</span>\n</div>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n<span class=\"no\">✗ 처우법 내용 아님:</span> 사회복지사 자격증 발급 (→ 사회복지사업법)\n    </div>" },
           { icon: "🏛️", title: "한국사회복지공제회 & 사회복지공무원", html: "<div class=\"sub\">한국사회복지공제회</div>\n<ul class=\"pts green\">\n<li>목적: 사회복지사의 <b>복지·후생을 위한 사업 및 공제급여 지급</b></li>\n<li>사업: 공제급여 지급 / 사회복지시설 안전·화재 공제사업 / 복지·후생 사업</li>\n</ul>\n<div class=\"divider\"></div>\n<div class=\"sub\">사회복지공무원 법적 보장 권한</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">직무수행권</span>\n<span class=\"badge badge-green\">연금청구권</span>\n<span class=\"badge badge-yellow\">보수청구권</span>\n</div>\n<div class=\"sub\">사회복지전담공무원 권리 제한 사유</div>\n<ul class=\"pts yellow\">\n<li>국가 안전보장을 위해 권리를 제한할 수 있다</li>\n<li>사회질서 유지를 위해 권리를 제한할 수 있다</li>\n<li>공공복지를 위해 권리를 제한할 수 있다</li>\n</ul>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n      공무원은 현행법상 <b>근로3권이 제한</b>됨<br/>\n      법적으로 보장된 권한: <b>직무수행권 / 연금청구권 / 보수청구권</b><br/>\n<span class=\"no\">✗ 단체행동권</span><span class=\"kichul\">⭐ 기출</span>은 해당 안 됨<br/>\n<span class=\"no\">✗ \"근로3권은 헌법에 보장되므로 침해될 수 없다\"</span> → 틀린 설명\n    </div>\n<div class=\"sub\">사회복지사 의무 채용 예외 시설</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-gray\">점자도서관</span>\n<span class=\"badge badge-gray\">어린이집</span>\n<span class=\"badge badge-gray\">성폭력피해상담소</span>\n</div>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:6px\">\n<span class=\"ok\">✓ 의무 채용 시설:</span> <b>노인복지관</b>\n</div>" },
           { icon: "🧠", title: "정신건강증진법 기본 이념", html: "<ul class=\"star-list\">\n<li>모든 국민은 정신질환으로부터 보호받을 권리를 가진다</li>\n<li>모든 정신질환자는 인간으로서의 존엄과 가치를 보장받아야 한다</li>\n<li>정신질환자에 대해서는 입원 또는 입소를 최소화한다</li>\n</ul>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n<span class=\"no\">✗ 기본 이념 아님:</span> 입원 시 본인의 의지보다 <b>가족의 의견을 우선</b>한다 → 본인의 의지 존중이 원칙\n    </div>\n<div class=\"sub\">입원 방법</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">자의입원</span>\n<span class=\"badge badge-green\">보호의무자에 의한 입원</span>\n<span class=\"badge badge-yellow\">응급입원</span>\n</div>\n<div class=\"hbox hbox-red\" style=\"margin-top:6px\">\n<span class=\"no\">✗ 의료기관장에 의한 입원</span>은 해당하지 않음\n    </div>" },
           { icon: "🎤", title: "현장활동가 대담 — 법과 사회복지실천 현장", html: "<ul class=\"star-list\">\n<li>빈곤문제는 <b>개인의 책임이 아닌 사회의 구조적인 문제</b></li>\n<li><b>법이 누구의 입장에서 어떻게 사용되느냐</b>가 중요</li>\n<li>\"이 법의 목적은 무엇인지?\" — <b>의문을 던지는 것</b>이 중요</li>\n<li>법의 목적을 달성하는 방향으로 <b>지침들이 설계</b>되어야 함</li>\n<li>사회복지실천을 위해 사회복지법을 <b>정확히 이해하고 적용</b>하는 것이 중요</li>\n<li><b>하위법령</b>이 상위 법령의 목적을 달성할 수 있도록 설계되어야 한다</li>\n</ul>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:8px\">\n      ※ 핵심 메시지: 법 자체보다 <b>\"법이 어떻게 쓰이는가\"</b>가 사회복지 실천에서 더 중요한 문제\n    </div>" }
@@ -7747,15 +9331,15 @@ const SUMMARY_DATA = {
               </div>
               <div class="sub">도미니움 레룸(Dominium Rerum) — 소유권</div>
               <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:4px">
-                <div style="background:#dbeafe;border-radius:8px;padding:8px;font-size:.82em;text-align:center">
+                <div style="background:#dbeafe;border-radius:8px;padding:8px;font-size:.90em;text-align:center">
                   <div style="font-weight:800;color:#1d4ed8">몸에 대한 소유권</div>
                   <div style="color:#1e40af;margin-top:2px">→ <b>생명권</b></div>
                 </div>
-                <div style="background:#d1fae5;border-radius:8px;padding:8px;font-size:.82em;text-align:center">
+                <div style="background:#d1fae5;border-radius:8px;padding:8px;font-size:.90em;text-align:center">
                   <div style="font-weight:800;color:#065f46">행위에 대한 소유권</div>
                   <div style="color:#047857;margin-top:2px">→ <b>자유권</b></div>
                 </div>
-                <div style="background:#fef3c7;border-radius:8px;padding:8px;font-size:.82em;text-align:center">
+                <div style="background:#fef3c7;border-radius:8px;padding:8px;font-size:.90em;text-align:center">
                   <div style="font-weight:800;color:#92400e">사물에 대한 소유권</div>
                   <div style="color:#b45309;margin-top:2px">→ <b>재산권</b></div>
                 </div>
@@ -7858,15 +9442,15 @@ const SUMMARY_DATA = {
               </div>
               <div class="sub">도미니움 레룸(Dominium Rerum)</div>
               <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:4px">
-                <div style="background:#dbeafe;border-radius:8px;padding:8px;font-size:.82em;text-align:center">
+                <div style="background:#dbeafe;border-radius:8px;padding:8px;font-size:.90em;text-align:center">
                   <div style="font-weight:800;color:#1d4ed8">몸에 대한 소유권</div>
                   <div style="color:#1e40af;margin-top:2px">→ <b>생명권</b></div>
                 </div>
-                <div style="background:#d1fae5;border-radius:8px;padding:8px;font-size:.82em;text-align:center">
+                <div style="background:#d1fae5;border-radius:8px;padding:8px;font-size:.90em;text-align:center">
                   <div style="font-weight:800;color:#065f46">행위에 대한 소유권</div>
                   <div style="color:#047857;margin-top:2px">→ <b>자유권</b></div>
                 </div>
-                <div style="background:#fef3c7;border-radius:8px;padding:8px;font-size:.82em;text-align:center">
+                <div style="background:#fef3c7;border-radius:8px;padding:8px;font-size:.90em;text-align:center">
                   <div style="font-weight:800;color:#92400e">사물에 대한 소유권</div>
                   <div style="color:#b45309;margin-top:2px">→ <b>재산권</b></div>
                 </div>
@@ -8206,7 +9790,7 @@ const SUMMARY_DATA = {
             icon: '🌏', title: '인권의 3세대 발전과 국가의 의무',
             html: `
               <span class="kichul">⭐ 기출</span>
-              <table class="comp-table" style="margin-top:6px;font-size:.82em">
+              <table class="comp-table" style="margin-top:6px;font-size:.90em">
                 <tr><th>구분</th><th>1세대 (자유권)</th><th>2세대 (사회권)</th><th>3세대 (연대권)</th></tr>
                 <tr><td><b>기원</b></td><td>자유주의</td><td>사회주의·사회민주주의</td><td>녹색이념·개발학</td></tr>
                 <tr><td><b>권리 예시</b></td><td>투표, 언론의 자유, 고문 금지, 공정한 재판</td><td>교육권, 주거권, 건강권, 직업권, 사회보장권</td><td>건강한 환경, 깨끗한 공기, 경제개발권</td></tr>
@@ -17982,8 +19566,8 @@ const SUMMARY_DATA = {
       html: `
         <span class="kichul">⭐ 연습문제</span>
         <div style="display:flex;flex-direction:column;gap:7px;">
-         <div style="background:#eff6ff;border-radius:10px;padding:11px 14px;font-size:.86em;line-height:1.65;color:#1e3a8a;"><b>1. 깊게 생각하기</b><br/>나 자신, 타인과의 관계, 내가 속한 세계에 대해 깊이 사유</div>
-         <div style="background:#f0fdf4;border-radius:10px;padding:11px 14px;font-size:.86em;line-height:1.65;color:#166534;"><b>2. 들여다보기</b><br/>겉으로 쳐다보는 것이 아니라, 이면과 원인의 원인을 보는 것<br>        <div class="hbox hbox-yellow" style="margin:8px 0;">
+         <div style="background:#eff6ff;border-radius:10px;padding:11px 14px;font-size:.9em;line-height:1.65;color:#1e3a8a;"><b>1. 깊게 생각하기</b><br/>나 자신, 타인과의 관계, 내가 속한 세계에 대해 깊이 사유</div>
+         <div style="background:#f0fdf4;border-radius:10px;padding:11px 14px;font-size:.9em;line-height:1.65;color:#166534;"><b>2. 들여다보기</b><br/>겉으로 쳐다보는 것이 아니라, 이면과 원인의 원인을 보는 것<br>        <div class="hbox hbox-yellow" style="margin:8px 0;">
           📌 참치캔 사례<br>
           <span style="color:var(--muted);font-size:0.92em;">쳐다보기: "부주의했네, 반창고 붙여줘"</span><br>
           <b>들여다보기: "이렇게 날카롭게 만든 구조가 문제 아닌가?"</b><br>
@@ -17993,7 +19577,7 @@ const SUMMARY_DATA = {
           <li><b>테리아(Θεωρία)</b>: 그리스어 '학문', 어원은 '보다' → 본다는 것이 곧 학문하기</li>
         </ul>
 </div>
-         <div style="background:#fef3c7;border-radius:10px;padding:11px 14px;font-size:.86em;line-height:1.65;color:#92400e;"><b>3. 근본적으로 질문하기</b><br/>들여다본 뒤 근본적인 질문을 던지는 것</div><div style="background:#fdf4ff;border-radius:10px;padding:11px 14px;font-size:.86em;line-height:1.65;color:#7c2d12;\"><b>4. 대화하기</b><br/>나의 생각·보기·질문의 한계를 인정하고 타인의 관점을 받아들이는 것</div></div><div class="hbox hbox-blue" style="margin-top:8px"><b>대화하기</b>가 철학하기의 최종 완성</div><div class="sub"></div>
+         <div style="background:#fef3c7;border-radius:10px;padding:11px 14px;font-size:.9em;line-height:1.65;color:#92400e;"><b>3. 근본적으로 질문하기</b><br/>들여다본 뒤 근본적인 질문을 던지는 것</div><div style="background:#fdf4ff;border-radius:10px;padding:11px 14px;font-size:.9em;line-height:1.65;color:#7c2d12;\"><b>4. 대화하기</b><br/>나의 생각·보기·질문의 한계를 인정하고 타인의 관점을 받아들이는 것</div></div><div class="hbox hbox-blue" style="margin-top:8px"><b>대화하기</b>가 철학하기의 최종 완성</div><div class="sub"></div>
         <div class="flow" style="margin-top:8px;">
           <span class="flow-item">깊게 생각하기</span>
           <span class="flow-arrow">▶</span>
@@ -18533,7 +20117,7 @@ const SUMMARY_DATA = {
       <span class="flow-arrow">▶</span>
       <div style="width:22%; aspect-ratio:1; border-radius:50%; background:var(--c2l); border:2px solid var(--c2); display:flex; align-items:center; justify-content:center; text-align:center; font-weight:700; color:var(--c2); font-size:0.9em; flex-shrink:0;">공동체</div>
       <span class="flow-arrow">▶</span>
-      <div style="width:22%; aspect-ratio:1; border-radius:50%; background:var(--c5l); border:2px solid var(--c5); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; font-weight:700; color:var(--c5); font-size:0.85em; flex-shrink:0;">
+      <div style="width:22%; aspect-ratio:1; border-radius:50%; background:var(--c5l); border:2px solid var(--c5); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; font-weight:700; color:var(--c5); font-size:0.90em; flex-shrink:0;">
         <div>조직된 시민</div>
         <div style="font-size:0.80em; color:var(--muted); font-weight:500; margin-top:2px;">권리·권력</div>
       </div>
@@ -18608,7 +20192,7 @@ const SUMMARY_DATA = {
 
       <div style="background:var(--c1l);border-left:4px solid var(--c1);border-radius:10px;padding:12px 14px">
         <div style="font-size:.78em;color:var(--c1);font-weight:700;margin-bottom:4px">① 동사 (어원)</div>
-        <div style="font-weight:900;font-size:1em">코이노네인 <span style="font-weight:400;font-size:.85em;color:var(--muted)">(koinonein)</span></div>
+        <div style="font-weight:900;font-size:1em">코이노네인 <span style="font-weight:400;font-size:.90em;color:var(--muted)">(koinonein)</span></div>
         <div style="font-size:.88em;margin-top:4px;color:var(--text)">공동의 사물·관심사를 공유하거나, 공동의 일에 함께 참여한다</div>
       </div>
 
@@ -18616,7 +20200,7 @@ const SUMMARY_DATA = {
 
       <div style="background:var(--c5l);border-left:4px solid var(--c5);border-radius:10px;padding:12px 14px">
         <div style="font-size:.78em;color:var(--c5);font-weight:700;margin-bottom:4px">② 명사 (공동체)</div>
-        <div style="font-weight:900;font-size:1em">코이노니아 <span style="font-weight:400;font-size:.85em;color:var(--muted)">(koinonia)</span></div>
+        <div style="font-weight:900;font-size:1em">코이노니아 <span style="font-weight:400;font-size:.90em;color:var(--muted)">(koinonia)</span></div>
         <div style="font-size:.88em;margin-top:4px;color:var(--text)">하나의 목적을 향한 동기들이 모여 상호작용·집단적 활동이 이루어지는 터전</div>
       </div>
 
@@ -19742,15 +21326,15 @@ const SUMMARY_DATA = {
           <line x1="55" y1="170" x2="265" y2="170" stroke="#1a1a2e" stroke-width="2.5"/>
         </svg>
         <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);text-align:center">
-          <div style="width:4.8em;height:4.8em;border-radius:50%;background:#1a1a2e;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.85em;line-height:1.3;margin:0 auto">순수<br>이성</div>
+          <div style="width:4.8em;height:4.8em;border-radius:50%;background:#1a1a2e;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.90em;line-height:1.3;margin:0 auto">순수<br>이성</div>
           <div style="position:absolute;left:5.2em;top:0.6em;font-size:0.78em;font-weight:700;white-space:nowrap;color:var(--text)">인간은 무엇을<br>알 수 있는가?</div>
         </div>
         <div style="position:absolute;bottom:0;left:0;text-align:center">
-          <div style="width:4.8em;height:4.8em;border-radius:50%;background:#1a1a2e;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.85em;line-height:1.3;margin:0 auto">실천<br>이성</div>
+          <div style="width:4.8em;height:4.8em;border-radius:50%;background:#1a1a2e;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.90em;line-height:1.3;margin:0 auto">실천<br>이성</div>
           <div style="font-size:0.78em;font-weight:700;margin-top:0.4em;color:var(--text)">인간은 무엇을<br>해야 하는가?</div>
         </div>
         <div style="position:absolute;bottom:0;right:0;text-align:center">
-          <div style="width:4.8em;height:4.8em;border-radius:50%;background:#fff;border:3px solid #1a1a2e;color:var(--text);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.85em;line-height:1.3;margin:0 auto">판단력</div>
+          <div style="width:4.8em;height:4.8em;border-radius:50%;background:#fff;border:3px solid #1a1a2e;color:var(--text);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.90em;line-height:1.3;margin:0 auto">판단력</div>
           <div style="font-size:0.78em;font-weight:700;margin-top:0.4em;color:var(--text)">인간은 무엇을<br>바랄 수 있는가?</div>
         </div>
       </div>
@@ -20011,7 +21595,7 @@ const SUMMARY_DATA = {
     <div style="display:flex;flex-direction:column;align-items:center;gap:4px;margin:12px 0">
       <div style="width:20%;background:#1d4ed8;border-radius:6px;padding:8px 0;text-align:center;font-weight:900;color:#fff;position:relative">
         物神
-        <span style="position:absolute;left:105%;top:50%;transform:translateY(-50%);white-space:nowrap;color:#1d4ed8;font-weight:700;font-size:0.85em">- - 돈</span>
+        <span style="position:absolute;left:105%;top:50%;transform:translateY(-50%);white-space:nowrap;color:#1d4ed8;font-weight:700;font-size:0.90em">- - 돈</span>
       </div>
       <div style="width:30%;background:#93c5fd;border-radius:6px;padding:10px 0;text-align:center;font-weight:700;color:#1e40af">자본가</div>
       <div style="width:50%;background:#bfdbfe;border-radius:6px;padding:10px 0;text-align:center;font-weight:700;color:#1e40af">정치가</div>
@@ -20280,9 +21864,9 @@ const SUMMARY_DATA = {
   <div style="display:grid;grid-template-columns:1fr 1fr auto;margin:10px 0 4px;gap:0">
 
       <div style="grid-area:1/1/4/2;background:var(--c1l);border:2.5px solid var(--c1);border-radius:20px;padding:14px 10px;display:flex;flex-direction:column;align-items:center;gap:5px">
-        <div style="background:#fff;border-radius:30px;padding:8px 8px;font-weight:700;color:var(--c1);font-size:.86em;width:100%;text-align:center">시장에 따른 분배</div>
+        <div style="background:#fff;border-radius:30px;padding:8px 8px;font-weight:700;color:var(--c1);font-size:.9em;width:100%;text-align:center">시장에 따른 분배</div>
         <div style="width:28px;height:28px;background:var(--c1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1em;flex-shrink:0">▼</div>
-        <div style="background:#fff;border-radius:30px;padding:8px 8px;font-weight:700;color:var(--c1);font-size:.86em;width:100%;text-align:center">불평등한 분배</div>
+        <div style="background:#fff;border-radius:30px;padding:8px 8px;font-weight:700;color:var(--c1);font-size:.9em;width:100%;text-align:center">불평등한 분배</div>
       </div>
 
       <div style="grid-area:1/2/2/3;min-height:38px"></div>
@@ -21771,8 +23355,8 @@ const SUMMARY_DATA = {
         <span class="flow-item">세상에 던져진 노인</span>
         <span class="flow-arrow">     ▼ (선택)</span>
         <div style="display:flex;gap:8px">
-          <span class="flow-item" style="flex:1;background:var(--c3l);color:var(--c3);font-size:0.85em">순응<br>No·Know<br> 틀 속에서<br>체념·숙명론</span>
-          <span class="flow-item" style="flex:1;background:var(--c2l);color:var(--c2);font-size:0.85em">돌파<br>나이 든<br>보통 사람의<br>삶을 살아감</span>
+          <span class="flow-item" style="flex:1;background:var(--c3l);color:var(--c3);font-size:0.90em">순응<br>No·Know<br> 틀 속에서<br>체념·숙명론</span>
+          <span class="flow-item" style="flex:1;background:var(--c2l);color:var(--c2);font-size:0.90em">돌파<br>나이 든<br>보통 사람의<br>삶을 살아감</span>
         </div>
       </div>
     `},
@@ -36490,7 +38074,7 @@ function updateWrongNoteMainBtn() {
   section.innerHTML = `
     <div class="wn-total-row" onclick="openWrongNoteFromMain(0)">
       <span style="font-size:1.1em">📝</span>
-      <span style="font-size:.85em;font-weight:800;color:#4c1d95;flex:1">전체 오답노트 — 총 ${total}문제</span>
+      <span style="font-size:.90em;font-weight:800;color:#4c1d95;flex:1">전체 오답노트 — 총 ${total}문제</span>
       <span style="color:#7c3aed;font-size:.9em">›</span>
     </div>
     ${rows}`;
