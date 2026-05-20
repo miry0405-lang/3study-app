@@ -281,6 +281,11 @@ body {
    요점정리 뷰 스타일
    (원본 summary.html 스타일 기반)
 ══════════════════════════════════════════ */
+hr {
+  border: none;              /* 기본 테두리 제거 */
+  border-top: 1px solid #ccc; /* 위쪽에 얇은 회색 선 */
+  margin: 20px 0;            /* 위아래 여백 */
+}
 #view-summary { background:#f7f4ef; }
 #view-summary .sum-sticky { position:sticky; top:var(--gbar-h); z-index:200; }
 #view-summary .sum-site-header {
@@ -438,7 +443,7 @@ body {
 }
 #view-summary .pts li {
   display:block; position:relative; padding-left:16px;
-  font-size:.94em; line-height:1.75;
+  font-size:.94em; line-height:1.6; margin:2px 0;
 }
 #view-summary .pts li::before { content:'▸'; color:var(--c1); position:absolute; left:0; top:0; }
 #view-summary .pts.green li::before { color:var(--c2); }
@@ -8510,36 +8515,737 @@ const SUMMARY_DATA = {
     },
   ]
 },
-            { num: "11강①", name: "사회보험법 · 국민연금법",
-        cards: [
-          { icon: "🔄", title: "사회보험 vs 사보험(민간보험) 비교", html: "<table class=\"comp-table\">\n<tr><th>구분</th><th class=\"th-blue\">사회보험</th><th class=\"th-green\">사보험</th></tr>\n<tr><td>가입</td><td><b>강제적</b></td><td>자발적</td></tr>\n<tr><td>보험료 기준</td><td>소득수준</td><td>위험정도, 급여수준</td></tr>\n<tr><td><b>급여 근거</b> <span class=\"kichul\">⭐ 기출</span></td><td><b>법</b></td><td><b>계약</b></td></tr>\n<tr><td>운영 형태</td><td><b>정부 독점</b></td><td>경쟁</td></tr>\n<tr><td>완전한 재정 준비</td><td><b>필요하지 않음</b> (수정적립방식)</td><td>필요함</td></tr>\n<tr><td>운영 관리</td><td>국가 또는 공법인(공단)</td><td>사기업(회사)</td></tr>\n</table>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n<span class=\"no\">✗</span> 사회보험은 '증명된 욕구(자산조사)'에 근거하지 않음 → 이는 <b>공공부조</b>의 방식\n    </div>" },
-          { icon: "👴", title: "국민연금법 개요", html: "<div class=\"flow\">\n<span class=\"flow-item\">1973.12<br/><small>국민복지연금법 제정<br/>(시행 연기)</small></span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">1986.12 제정</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">1988.1 시행</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">1999.1 전국민</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">2025 개혁안</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">2026.1 시행</span>\n</div>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:8px\">\n      2025초 개혁안: 보험료율 상승, 소득대체율 43%, 기금소진 시점 2056년\n    </div>" },
-          { icon: "📋", title: "국민연금 가입자 종류", html: "<table class=\"comp-table\">\n<tr><th>종류</th><th>대상</th></tr>\n<tr><td><b>사업장가입자</b></td><td><b>1명 이상</b>의 근로자를 사용하는 사업장의 근로자·사용자</td></tr>\n<tr><td><b>지역가입자</b></td><td>사업장가입자가 아닌 18세 이상 60세 미만 국민</td></tr>\n<tr><td><b>임의가입자</b></td><td>사업장·지역가입자가 아닌 18세 이상 60세 미만인 자가 국민연금공단에 가입 신청</td></tr>\n<tr><td><b>임의계속가입자</b></td><td>가입자 또는 가입자였던 자로서 60세가 된 자가 <b>65세</b>가 될 때까지 공단에 가입 신청</td></tr>\n</table>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n<span class=\"no\">✗ '기본가입자'</span><span class=\"kichul\">⭐ 기출</span>는 국민연금법에 존재하지 않음\n    </div>\n<div class=\"sub\">가입기간 계산</div>\n<ul class=\"pts yellow\">\n<li><b>월 단위</b>로 계산</li>\n<li>자격 취득일이 속하는 달의 <b>다음 달</b>부터 자격 상실일의 전날이 속하는 달까지</li>\n<li>가입기간 추가 산입 — <b>크레딧</b> 규정: 군복무 크레딧 / 출산 크레딧 / 실업 크레딧</li>\n</ul>" },
-          { icon: "💰", title: "국민연금 급여 종류 (5가지)", html: "<table class=\"comp-table\">\n<tr><th>급여</th><th>지급 요건</th></tr>\n<tr><td>노령연금 <span class=\"kichul\">⭐ 기출</span></td><td>가입기간 <b>10년 이상</b>, <b>60세</b>부터 (→2033년까지 65세로 상향)</td></tr>\n<tr><td>조기노령연금</td><td>10년 이상, 55세 이상, 소득 있는 업무 종사 X, 본인 희망</td></tr>\n<tr><td>장애연금</td><td>질병·부상으로 장애 발생 (장애인연금과 다름 ✗)</td></tr>\n<tr><td>유족연금</td><td>가입자 사망 시 유족에게 지급 (가입기간 20년 이상: 기본연금액의 60%)</td></tr>\n<tr><td>반환일시금</td><td>가입기간 10년 미만 60세, 사망, 국적 상실</td></tr>\n<tr><td>사망일시금</td><td>유족연금 받을 유족이 없는 경우 배우자·자녀·부모·손자녀·형제자매·4촌 이내 방계혈족에게 지급</td></tr>\n<tr><td>분할연금</td><td>혼인기간 중 가입기간을 배우자와 분할 (이혼 후 수급 가능)</td></tr>\n</table>\n<div class=\"sub\">급여 구성</div>\n<table class=\"comp-table\">\n<tr><th>구성</th><th>내용</th></tr>\n<tr><td><b>기본연금액</b></td><td>연금 수급 전 3년간 평균소득월액의 평균액과 가입자 개인의 가입기간 중 기준소득월액의 평균액을 합한 금액에 1,200분의 1을 곱한 금액 (<b>소득대체율</b>)</td></tr>\n<tr><td><b>부양가족연금액</b></td><td>수급권자에 의하여 생계를 유지하는 자에 대한 <b>가족수당 성격의 부가급여</b><br/>(배우자: 연 263,060원 기준, 2021년)</td></tr>\n</table>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:6px\">\n<b>2개 이상 수급권 발생 시</b> → <b>중복급여 조정</b> (모두 받는 것이 아님)\n    </div>" },
-          { icon: "🏦", title: "국민연금 운영기관", html: "<table class=\"comp-table\">\n<tr><th>기관</th><th>역할</th></tr>\n<tr><td><b>국민연금공단</b></td><td>가입자 기록 관리, 보험료 부과, 급여 결정·지급 (전반적 관리운영)</td></tr>\n<tr><td><b>국민건강보험공단</b></td><td>연금보험료 <b>징수</b> (4대 보험 통합 징수)</td></tr>\n<tr><td>국민연금심의위원회</td><td>제도·재정 계산, 급여·보험료 관련 사항</td></tr>\n<tr><td>국민연금기금운용위원회</td><td>기금 운용계획 심의·의결 (보건복지부 소속)</td></tr>\n</table>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:8px\">\n      현행 보험료율: <b>9%</b> (사업장: 본인·사용자 각 4.5% / 지역: 본인 9%)<br/>\n      2025년 개혁안: 보험료율 단계적 인상, 소득대체율 <b>43%</b> 유지, 기금소진 시점 <b>2056년</b>으로 연장\n    </div>\n<div class=\"sub\">국민연금기금</div>\n<ul class=\"pts green\">\n<li>보건복지부장관 산하 <b>국민연금공단</b>에서 관리·운용</li>\n<li>기금 조성: 연금보험료 + 기금 운용 수익금 + 적립금 + <b>공단의 수입지출 결산상 잉여금</b></li>\n<li>기금 운영 심의·의결: 보건복지부에 <b>국민연금기금운용위원회</b> 설치</li>\n<li>보건복지부장관은 매년 기금 운용계획을 세워 기금운용위원회·국무회의 심의 거쳐 <b>대통령 승인</b></li>\n</ul>" }
-        ] },
-      { num: "11강②", name: "국민건강보험법",
-        cards: [
-          { icon: "🏥", title: "국민건강보험법 개요 및 연혁", html: "<ul class=\"pts\">\n<li>개인의 위험을 보험가입자 전원에게 분산 → 경제적 부담 해소, <b>소득 재분배</b> 기능</li>\n<li>국민의 의료비용을 <b>사회연대성의 원리</b>에 따라 공동체적으로 해결</li>\n<li>진료비 보장 + 질병 치료 + 건강진단 + <b>재활 및 예방</b>까지 포함하는 적극적·포괄적 의미</li>\n</ul>\n<div class=\"hbox hbox-red\" style=\"margin-top:6px\">\n<span class=\"no\">✗ 조합주의 방식</span> → 통합주의 방식으로 전환 (조합주의 문제: 계층 간 갈등·재정낭비·적자)\n    </div>\n<div class=\"sub\">연혁</div>\n<table class=\"comp-table\">\n<tr><th>연도</th><th>내용</th></tr>\n<tr><td>1963. 12</td><td>의료보험법 제정</td></tr>\n<tr><td>1976. 12</td><td><b>500인 이상</b> 사업장 근로자 의료보험 실시</td></tr>\n<tr><td>1989</td><td>전국민 의료보험제도 실시</td></tr>\n<tr><td>1999. 2</td><td>국민건강보험법 제정·공포 (조합주의 문제점 보완, 건강진단·재활·예방 포괄)</td></tr>\n<tr><td>2000. 7</td><td>국민건강보험제도 실시</td></tr>\n</table>" },
-          { icon: "👤", title: "가입자 구분", html: "<table class=\"comp-table\">\n<tr><th>종류</th><th>대상</th></tr>\n<tr><td><b>직장가입자</b></td><td>사업장 근로자·사용자, 공무원, 교직원</td></tr>\n<tr><td><b>지역가입자</b></td><td>직장가입자와 그 피부양자를 <b>제외한</b> 나머지 가입자</td></tr>\n</table>\n<div class=\"sub\">자격 취득·상실</div>\n<ul class=\"pts yellow\">\n<li>자격취득: <b>국내에 거주하게 된 날</b><span class=\"kichul\">⭐ 기출</span> (30일 후 X)</li>\n<li>자격상실: <b>사망 다음날</b> (사망한 해 다음해 X)</li>\n</ul>" },
-          { icon: "💊", title: "건강보험 급여 종류", html: "<table class=\"comp-table\">\n<tr><th>급여</th><th>내용</th></tr>\n<tr><td><b>요양급여</b></td><td>가입자·피부양자의 질병·부상·출산 등에 대한 진찰·검사·약제·처치·수술·예방·재활·간호·이송<br/><b>요양기관</b>: 의료법에 따라 개설된 의료기관 / 약사법에 따른 약국 / 한국희귀의약품센터 / 지역보건법에 따른 보건소 등</td></tr>\n<tr><td><b>요양비</b></td><td>요양기관이 아닌 장소에서 질병·부상·치료·출산 시 요양급여에 상당하는 금액 지급</td></tr>\n<tr><td><b>건강검진</b></td><td>일반건강검진·암 검진·영유아 건강검진 / 2년마다 1회 이상 (사무직 미종사 직장가입자: 1년 1회)</td></tr>\n<tr><td><b>부가급여</b></td><td>임신·출산 진료비</td></tr>\n<tr><td><b>장애인 특례</b></td><td>보조기기에 대한 보험급여</td></tr>\n</table>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n<span class=\"no\">✗ 해당 안 됨:</span> 간병급여<span class=\"kichul\">⭐ 기출</span>, 연금급여<span class=\"kichul\">⭐ 기출</span>\n</div>\n<div class=\"sub\">급여의 제한 및 정지</div>\n<table class=\"comp-table\">\n<tr><th>구분</th><th>사유</th></tr>\n<tr><td><b>급여 제한</b></td><td>고의 또는 <b>중대한 과실</b>로 인한 사고 등</td></tr>\n<tr><td><b>급여 정지</b></td><td><b>국외 체류</b> / 현역병 / 교도소 수용기간</td></tr>\n</table>" },
-          { icon: "🏗️", title: "관리·운영기구", html: "<table class=\"comp-table\">\n<tr><th>기관</th><th>역할</th></tr>\n<tr><td><b>국민건강보험공단</b></td><td>자격관리, 급여관리, 비용지급 등</td></tr>\n<tr><td><b>건강보험정책심의위원회</b></td><td>요양급여 기준, 보험료율 등 주요 사항 심의·의결 (보건복지부장관 소속)</td></tr>\n<tr><td><b>건강보험심사평가원</b></td><td>요양급여 비용 심사, 적정성 평가</td></tr>\n</table>\n<div class=\"sub\">재원 — 보험료</div>\n<table class=\"comp-table\">\n<tr><th>구분</th><th>직장가입자</th><th>지역가입자</th></tr>\n<tr><td><b>부과기준</b></td><td>보수월액</td><td>보험료 부과점수</td></tr>\n<tr><td><b>산정방법</b></td><td>보수월액 × 보험료율 (<b>6.86%</b>, 2021 기준)</td><td>부과점수 × 점수당 금액 (201.5원)</td></tr>\n<tr><td><b>부담</b></td><td>가입자 <b>50%</b> + 사용자 <b>50%</b></td><td>가입자 <b>100%</b></td></tr>\n</table>\n<div class=\"hbox hbox-blue\" style=\"margin-top:8px\">\n<b>국가의 지원</b>: 해당 연도 보험료 예상 수입액의 <b>100분의 14</b>를 국고에서 공단에 지원<br/>\n      공단은 보험료 예상 수입액의 <b>100분의 6</b>을 국민건강증진기금에서 지원받을 수 있음\n    </div>" }
-        ] },
-      { num: "12강①", name: "산업재해보상보험법 · 고용보험법",
-        cards: [
-          { icon: "🏭", title: "산재보험법 특성", html: "<div class=\"badge-row\">\n<span class=\"badge badge-red\">사업주 책임보험</span>\n<span class=\"badge badge-yellow\">사업장 단위 가입</span>\n<span class=\"badge badge-purple\">업무담당자 높은 재량권</span>\n<span class=\"badge badge-green\">현금+현물 급여 제공 <span class=\"kichul\">⭐ 기출</span></span>\n</div>\n<div class=\"hbox hbox-blue\" style=\"margin-top:10px\">\n<b>연혁</b>: 1963.11 제정 — 우리나라 사회보험 중 <b>가장 먼저 도입</b><br/>\n      2017년: 출퇴근 중 발생 사고도 <b>업무재해로 인정</b><br/>\n      2024년: 매년 <b>4월 28일</b> 법정기념일\n    </div>" },
-          { icon: "💰", title: "산재보험 급여 종류", html: "<div class=\"badge-row\">\n<span class=\"badge badge-blue\">요양급여 (4일 이상)</span>\n<span class=\"badge badge-green\">휴업급여</span>\n<span class=\"badge badge-yellow\">장해급여</span>\n<span class=\"badge badge-purple\">간병급여</span>\n<span class=\"badge badge-red\">유족급여</span>\n<span class=\"badge badge-gray\">상병보상연금</span>\n<span class=\"badge badge-gray\">장례비</span>\n<span class=\"badge badge-gray\">직업재활급여</span>\n</div>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n<span class=\"no\">✗ 연금급여</span>는 산재보험 급여에 해당하지 않음\n    </div>\n<div class=\"sub\">급여 정의</div>\n<ul class=\"pts\">\n<li><b>휴업급여</b>: 재해로 일하지 못하는 기간 — 임금 대신 지급 (월급의 약 85%)</li>\n<li><b>상병보상연금</b>: 요양 시작 후 2년이 지나도 미치유 시 → 휴업급여 대신 지급</li>\n</ul>\n<div class=\"sub\">보험료율</div>\n<ul class=\"pts yellow\">\n<li>매년 <b>6월 30일</b> 현재 과거 <b>3년</b> 동안의 보수총액에 대한 산재보험급여총액의 비율을 기초로 산정</li>\n<li>재해발생의 위험성에 따라 분류된 <b>업종별 보험료율</b>을 세분화하여 적용</li>\n</ul>" },
-          { icon: "🔍", title: "업무상 재해 인정사례", html: "<div class=\"hbox hbox-blue\" style=\"margin-bottom:8px\">\n      업무상 재해: 업무상 사고 / 업무상 질병 / <b>출퇴근 재해</b> (2017. 10부터 통상적 경로·방법 출퇴근 중 사고 인정)\n    </div>\n<div class=\"sub\">✅ 인정 사례</div>\n<ul class=\"pts green\">\n<li>회사가 건강관리 차원에서 마련해 준 <b>체력단련실</b>에서 역기를 들다 다쳐 병원으로 후송 중 사망</li>\n<li>회사 차원의 마라톤 대회 참여를 위해 <b>마라톤 동호회 자율적 정기 연습</b>을 하다 쓰러짐</li>\n<li>사장 허락 후 집에서 점심식사 후 사업장 <b>복귀하다 사고</b>로 다침</li>\n</ul>\n<div class=\"sub\">✗ 인정되기 어려운 사례</div>\n<ul class=\"pts red\">\n<li>회사와 관련 없이 친한 동료 몇 사람과 함께한 <b>개인적 술자리</b>에서 다친 경우</li>\n</ul>" },
-          { icon: "💼", title: "고용보험법", html: "<div class=\"flow\">\n<span class=\"flow-item\">1993.12 제정</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">1995.7 시행</span>\n</div>\n<div class=\"sub\">피보험자격</div>\n<ul class=\"pts yellow\">\n<li>취득: <b>고용된 날</b></li>\n<li>상실: <b>이직한 날 다음날</b></li>\n</ul>\n<div class=\"sub\">급여 종류</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">고용안정·직업능력개발사업</span>\n<span class=\"badge badge-green\">구직급여</span>\n<span class=\"badge badge-yellow\">취업촉진수당</span>\n<span class=\"badge badge-purple\">육아휴직급여 (최대 1년 6개월)</span>\n<span class=\"badge badge-gray\">출산전후휴가급여 (90일, 출산 후 45일 이상)</span>\n</div>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n<span class=\"no\">✗ 해당 안 됨:</span> 특례요양비, 해산급여<span class=\"kichul\">⭐ 기출</span>\n</div>\n<div class=\"hbox hbox-blue\" style=\"margin-top:6px\">\n<b>육아휴직급여 지급률</b>: 시작일부터 3개월 → 통상임금의 <b>80%</b> / 4개월부터 → <b>50%</b>\n</div>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:6px\">\n<b>구직급여<span class=\"kichul\">⭐ 기출</span> 수급 조건</b>: ①18개월 내 피보험 단위기간 합산 180일 이상 ②<b>근로의 의사와 능력이 있음에도</b> 취업 못한 상태 ③이직 사유가 수급 제한 사유 아닐 것\n    </div>\n<div class=\"sub\">재원</div>\n<ul class=\"pts\">\n<li>실업급여: 사업주·근로자 각각 <b>50%</b></li>\n<li>고용안정·직업능력개발사업: <b>사업주 전액</b></li>\n</ul>\n<div class=\"sub\">육아휴직 급여 지급률</div>\n<table class=\"comp-table\">\n<tr><th>기간</th><th>지급액</th></tr>\n<tr><td>시작일 ~ <b>3개월</b></td><td>월 통상임금의 <b>100분의 80</b></td></tr>\n<tr><td><b>4개월</b>부터 종료 시까지</td><td>월 통상임금의 <b>100분의 50</b></td></tr>\n</table>\n<div class=\"sub\">고용보험기금</div>\n<ul class=\"pts green\">\n<li>고용노동부장관이 보험 사업 재원 충당 위해 <b>고용보험기금</b> 설치</li>\n<li>조성: 보험료·징수금 + 적립금 + 기금운용 수익금 + 그 밖의 수입</li>\n</ul>" }
-        ] },
-      { num: "12강②", name: "노인장기요양보험법",
-        cards: [
-          { icon: "👵", title: "노인장기요양보험법 개요", html: "<div class=\"hbox hbox-blue\">\n      노년기 요양문제를 개인·가족 문제가 아닌 <b>국가·사회공동체가 연대하여 책임져야 할 사회적 위험</b>으로 인정<br/>\n<b>노인</b> 정의 <span class=\"kichul\">⭐ 기출</span>: <b>65세 이상</b>인 자 OR 65세 미만이라도 치매·뇌혈관질환 등 <b>노인성 질병</b>을 가진 자\n    </div>\n<div class=\"flow\" style=\"margin-top:10px\">\n<span class=\"flow-item\">노인수발보험제도</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">2007.4 제정</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">2008.7 시행</span>\n</div>\n<ul class=\"pts\" style=\"margin-top:10px\">\n<li>관리운영기관: <b>국민건강보험공단</b><span class=\"kichul\">⭐ 기출</span></li>\n<li>장기요양위원회: 보험료율, 재가·시설 급여비용 등 심의</li>\n<li>장기요양기관: 노인복지시설 중 노인의료복지시설·재가노인복지시설</li>\n<li><b>장기요양기본계획</b>: <b>5년마다</b> 수립</li>\n<li>장기요양기관 지정 유효기간: <b>6년</b></li>\n</ul>\n<div class=\"sub\">국가 지원</div>\n<div class=\"hbox hbox-blue\">\n      국가는 매년 해당 연도 장기요양보험료 예상수입액의 <b>100분의 20</b>에 상당하는 금액을 공단에 지원\n    </div>\n<div class=\"sub\">장기요양보험료율 변화</div>\n<div class=\"flow\">\n<span class=\"flow-item\">6.55%<br/><span style=\"font-size:.78em\">2017년</span></span>\n<span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">12.27%<br/><span style=\"font-size:.78em\">2022년</span></span>\n</div>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:6px\">\n      세대 간 형평성 문제 / 경증 노인의 요양시설 이용 증가 등 → 지속가능성 과제\n    </div>" },
-          { icon: "🔢", title: "등급 판정 & 인정", html: "<div class=\"badge-row\">\n<span class=\"badge badge-red\">1등급</span>\n<span class=\"badge badge-yellow\">2등급</span>\n<span class=\"badge badge-green\">3등급</span>\n<span class=\"badge badge-blue\">4등급</span>\n<span class=\"badge badge-purple\">5등급</span>\n<span class=\"badge badge-gray\">인지지원등급 (치매)</span>\n</div>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:8px\">\n      장기요양인정 유효기간: <b>최소 1년</b> (6개월 아님)\n    </div>" },
-          { icon: "🏠", title: "급여 종류", html: "<table class=\"comp-table\">\n<tr><th>종류</th><th>내용</th></tr>\n<tr><td><b>재가급여</b></td><td>자신의 집에 거주하면서 요양급여 (방문요양, 방문목욕, 주야간보호, 단기보호 등)</td></tr>\n<tr><td><b>시설급여</b></td><td>장기요양기관에 장기간 <b>입소</b>한 수급자에게 제공</td></tr>\n<tr><td><b>특별현금급여</b></td><td>가족요양비 / 특례요양비 / <b>요양병원 간병비</b><span class=\"kichul\">⭐ 기출</span> (노인전문병원·요양병원 입원 시)</td></tr>\n</table>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n<span class=\"no\">✗</span> 자신의 집에서 급여 받는 것 = <b>재가급여</b><span class=\"kichul\">⭐ 기출</span> (시설급여 아님)\n    </div>" },
-          { icon: "💵", title: "재원 구성", html: "<div class=\"badge-row\">\n<span class=\"badge badge-blue\">노인장기요양보험료 (건강보험료와 통합 징수·독립 회계)</span>\n</div>\n<div class=\"badge-row\" style=\"margin-top:6px\">\n<span class=\"badge badge-green\">본인부담금</span>\n<span class=\"badge badge-yellow\">국가지원 (예상수입액의 20/100)</span>\n</div>" }
-        ] },
-      { num: "13강①", name: "공공부조법 · 국민기초생활보장 · 의료급여",
+
+{ num: "11강①", name: "사회보험법 · 국민연금법", icon: "⚖️",
+  cards: [
+    { icon: "📂", title: "01. 사회보험법 — 개념·기본원리·특성",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">사회보험법 개념·기본원리·특성</span>
+          <span class="badge badge-green">사회보험 vs 사보험 비교</span>
+        </div>
+      `
+    },
+    { icon: "📌", title: "사회보험법 개념·기본원리·특성",
+      html: `
+        <div class="hbox hbox-blue">사회보험법 = 사회보험제도의 운영과 실시에 관한 법률 총칭 / 국민의 <b>생존권적 기본권</b>을 구체적으로 확보하기 위한 <b>생존권 법체계</b> 중 하나</div>
+        <div class="sub">사회보험 정의 (사회보장기본법 제3조)</div>
+        <ul class="pts">
+          <li>국민에게 발생하는 <b>사회적 위험</b>을 <b>보험방식</b>에 의하여 대처함으로써 <b>국민건강과 소득을 보장</b>하는 제도</li>
+        </ul>
+        <div class="sub">기본원리</div>
+        <ul class="pts green">
+          <li><b>소득재분배</b> : 수직적 재분배(소득에 따른 보험료 차등) & 수평적 재분배(위험에 처한 자에게 더 많은 혜택)</li>
+          <li><b>보편주의</b> : 전국민 대상, <b>법적 강제성</b></li>
+          <li><b>보험료 분담</b> : 사용자·국가·피용자가 분담하여 재원 조달</li>
+          <li><b>최저생활 보장</b> : '국민 최저선(내셔널 미니멈)'과는 다소 차이</li>
+        </ul>
+        <div class="sub">사회보험의 특성</div>
+        <ul class="pts">
+          <li><b>강제가입</b></li>
+          <li><b>예방적 소득보장</b></li>
+          <li><b>권리성이 강함</b> — 매달 보험료를 납부하므로 공공부조보다 권리성 강함</li>
+          <li>가입·수급자격·수급시기 등 관련 사항이 <b>법적으로 규정</b></li>
+          <li><b>소득재분배</b>와 <b>국민통합</b>이라는 정책적 목표</li>
+        </ul>
+      `
+    },
+    { icon: "🔄", title: "사회보험 vs 사보험(민간보험) 비교",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">사회보험 vs 사보험: 가입 방식·보험료 기준·급여 근거·운영 형태 등 여러 측면에서 근본적으로 다름</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th class="th-blue">사회보험</th><th class="th-green">사보험</th></tr>
+          <tr><td>가입</td><td><b>강제적</b></td><td>자발적</td></tr>
+          <tr><td>보험료 부과기준</td><td>소득수준</td><td>위험정도, 급여수준</td></tr>
+          <tr><td>보호의 양</td><td>최저소득 보호</td><td>더 많은 보호 가능</td></tr>
+          <tr><td>원리</td><td>사회적 적절성</td><td>개인적 공평성</td></tr>
+          <tr><td><b>급여 근거</b> <span class="kichul">⭐ 기출</span></td><td><b>법</b></td><td><b>계약</b></td></tr>
+          <tr><td>운영 형태</td><td><b>정부 독점</b></td><td>경쟁</td></tr>
+          <tr><td>비용 예측</td><td>어려움</td><td>비교적 쉬움</td></tr>
+          <tr><td>완전한 재정 준비</td><td><b>필요하지 않음</b> (수정적립방식)</td><td>필요함</td></tr>
+          <tr><td>운영 관리</td><td>국가 또는 공법인(공단)</td><td>사기업(회사)</td></tr>
+        </table>
+      `
+    },
+    { icon: "📂", title: "02. 국민연금법 — 개요·가입자",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">국민연금 개요 및 연혁</span>
+          <span class="badge badge-green">국민연금 가입자 종류</span>
+        </div>
+      `
+    },
+    { icon: "👴", title: "국민연금 개요 및 연혁",
+      html: `
+        <div class="hbox hbox-blue">국민연금 = 증가하는 고령인구·가족 부양체계 약화에 대응하는 <b>노후소득보장제도</b> / 목적: 노령·장애·사망에 대한 연금급여로 <b>생활 안정과 복지 증진</b>(제1조)</div>
+        <div class="sub">연혁</div>
+        <div class="flow">
+          <span class="flow-item">1973.12<br/><small>국민복지연금법 제정(시행 연기)</small></span><span class="flow-arrow">▶</span>
+          <span class="flow-item">1986.12<br/><small>국민연금법 제정</small></span><span class="flow-arrow">▶</span>
+          <span class="flow-item">1988.1<br/><small>시행</small></span><span class="flow-arrow">▶</span>
+          <span class="flow-item">1999.1<br/><small>전국민 연금시대</small></span><span class="flow-arrow">▶</span>
+          <span class="flow-item">2007.7<br/><small>전부개정(재정안정화·군복무·출산 크레딧 도입)</small></span><span class="flow-arrow">▶</span>
+          <span class="flow-item">2008<br/><small>노령연금 수급 원년</small></span><span class="flow-arrow">▶</span>
+          <span class="flow-item">2015.1<br/><small>실업 크레딧 도입</small></span><span class="flow-arrow">▶</span>
+          <span class="flow-item">2026.1<br/><small>개혁안 시행</small></span>
+        </div>
+        <div class="sub">국민연금 개혁안 (2026.1 시행)</div>
+        <table class="comp-table">
+          <tr><th>항목</th><th>현행</th><th class="th-blue">개혁안</th></tr>
+          <tr><td>보험료율</td><td>9%</td><td>2033년까지 <b>13%</b>로 단계적 인상 (연 0.5%p)</td></tr>
+          <tr><td>소득대체율</td><td>40%로 하향 예정</td><td><b>43%</b>로 조정 (2026년 신규가입자부터)</td></tr>
+          <tr><td>기금 소진 시점</td><td><b>2056년</b></td><td><b>2071년</b></td></tr>
+        </table>
+        <div class="sub">국가의 책무 개정 핵심 (제3조의2)</div>
+        <ul class="pts yellow">
+          <li>기존: 연금급여가 안정적·지속적으로 지급되도록 필요한 <b>시책을 수립·시행</b>하여야 한다</li>
+          <li>개정: 연금급여의 안정적이고 지속적인 지급을 <b>보장</b>하여야 하며, 이에 필요한 시책을 수립·시행하여야 한다 → <b>'보장'</b> 강제 조항 신설</li>
+        </ul>
+      `
+    },
+    { icon: "📋", title: "국민연금 가입자 종류",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">가입 대상: 국내에 거주하는 <b>18세 이상 60세 미만</b> 국민 / 4가지 가입자 종류 — 사업장·지역·임의·임의계속</div>
+        <table class="comp-table">
+          <tr><th>종류</th><th>대상</th></tr>
+          <tr><td><b>사업장가입자</b></td><td><b>1명 이상</b>의 근로자를 사용하는 사업장의 근로자·사용자</td></tr>
+          <tr><td><b>지역가입자</b></td><td>사업장가입자가 아닌 18세 이상 60세 미만 국민</td></tr>
+          <tr><td><b>임의가입자</b></td><td>사업장·지역가입자가 아닌 18세 이상 60세 미만인 자가 국민연금공단에 가입 신청</td></tr>
+          <tr><td><b>임의계속가입자</b></td><td>가입자 또는 가입자였던 자로서 60세가 된 자가 <b>65세</b>가 될 때까지 공단에 가입 신청</td></tr>
+        </table>
+        <div class="sub">가입기간 계산</div>
+        <ul class="pts yellow">
+          <li><b>월 단위</b>로 계산</li>
+          <li>자격 취득일이 속하는 달의 <b>다음 달</b>부터 자격 상실일의 전날이 속하는 달까지</li>
+          <li>가입기간 추가 산입 — <b>크레딧</b>: 군복무 크레딧 / 출산 크레딧 / 실업 크레딧</li>
+        </ul>
+      `
+    },
+    { icon: "📂", title: "03. 국민연금법 — 급여·재원·운영",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">국민연금 급여 종류</span>
+          <span class="badge badge-green">국민연금 재원 및 운영기관</span>
+        </div>
+      `
+    },
+    { icon: "💰", title: "국민연금 급여 종류",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">국민연금 급여 = <b>기본연금액</b> + <b>부양가족연금액</b>으로 산정 / 주요 5종: 노령연금·장애연금·유족연금·반환일시금·사망일시금</div>
+        <div class="sub">급여의 종류</div>
+        <table class="comp-table">
+          <tr><th>급여</th><th>지급 요건</th></tr>
+          <tr><td><b>노령연금</b> <span class="kichul">⭐ 기출</span></td><td>가입기간 <b>10년 이상</b>, <b>60세</b>부터 (→2033년까지 65세로 상향)<br/><small>완전노령연금(20년↑) / 감액노령연금(10~20년) / 조기노령연금 / 재직자노령연금 / 분할연금</small></td></tr>
+          <tr><td><b>장애연금</b></td><td>질병·부상으로 신체상·정신상 장애 발생, 장애가 계속되는 동안 장애정도에 따라 지급 (장애인연금과 다름)</td></tr>
+          <tr><td><b>유족연금</b></td><td>가입자 사망 시 생계를 유지하던 가족에게 지급 (배우자→자녀→부모→손자녀→조부모 순)<br/>가입기간 20년 이상: 기본연금액의 <b>60%</b> + 부양가족연금액</td></tr>
+          <tr><td><b>반환일시금</b></td><td>가입기간 10년 미만 60세 / 사망 / 국적 상실·국외 이주 시 일시 지급</td></tr>
+          <tr><td><b>사망일시금</b></td><td>유족연금 받을 유족이 없는 경우 배우자·자녀·부모·손자녀·형제자매 또는 4촌 이내 방계혈족에게 지급</td></tr>
+        </table>
+        <div class="sub">급여 구성</div>
+        <table class="comp-table">
+          <tr><th>구성</th><th>내용</th></tr>
+          <tr><td><b>기본연금액</b></td><td>연금 수급 전 3년간 평균소득월액의 평균액과 가입자 개인의 가입기간 중 기준소득월액의 평균액을 합한 금액에 <b>1,000분의 1,290</b>을 곱한 금액 (<b>소득대체율</b> 반영)</td></tr>
+          <tr><td><b>부양가족연금액</b></td><td>수급권자에 의하여 생계를 유지하는 자에 대한 <b>가족수당 성격의 부가급여</b><br/>(배우자: 연 300,330원 / 자녀·부모: 연 200,160원, 2025년 기준)</td></tr>
+        </table>
+        <div class="hbox hbox-yellow" style="margin-top:6px">💡 <b>2개 이상 수급권 발생 시</b> → <b>중복급여 조정</b> (모두 받는 것이 아님)</div>
+      `
+    },
+    { icon: "🏦", title: "국민연금 재원 및 운영기관",
+      html: `
+        <div class="hbox hbox-blue">연금보험료를 기금으로 확보하여 운용 (<b>국민연금기금</b>, <b>수정적립방식</b>) / 국민연금공단이 전반적 관리운영</div>
+        <div class="sub">연금보험료율</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th>현행</th><th class="th-blue">개혁안 (2033년)</th></tr>
+          <tr><td><b>사업장가입자</b></td><td>기준소득월액의 <b>9%</b> (본인·사용자 각 4.5%)</td><td><b>13%</b>로 단계적 인상</td></tr>
+          <tr><td><b>지역가입자</b></td><td>기준소득월액의 <b>9%</b> (본인 전액)</td><td><b>13%</b>로 단계적 인상</td></tr>
+        </table>
+        <div class="sub">관리·운영기구</div>
+        <table class="comp-table">
+          <tr><th>기관</th><th>역할</th></tr>
+          <tr><td><b>국민연금공단</b></td><td>가입자 기록 관리·유지, 연금보험료 부과, 급여 결정·지급</td></tr>
+          <tr><td><b>국민연금심의위원회</b></td><td>국민연금 제도·재정 계산, 급여 및 보험료 관련 사항 심의 (<b>보건복지부 소속</b>)</td></tr>
+        </table>
+      `
+    },
+    { icon: "📝", title: "11강① 핵심 요약",
+      html: `
+        <table class="comp-table">
+          <tr><th>개념</th><th>핵심 내용</th></tr>
+          <tr><td><b>사회보험법</b></td><td>5대 보험 운영·실시 법률 총칭 — <b>강제가입, 급여 근거=법, 정부 독점 운영</b></td></tr>
+          <tr><td><b>사회보험 원리</b></td><td>소득재분배(수직·수평) / 보편주의 / 보험료 분담 / 최저생활 보장</td></tr>
+          <tr><td><b>급여 근거</b></td><td>사회보험 = <b>법</b> / 사보험 = <b>계약</b></td></tr>
+          <tr><td><b>국민연금 목적</b></td><td>노령·장애·사망에 대한 연금급여로 <b>생활 안정·복지 증진</b></td></tr>
+          <tr><td><b>가입자 종류</b></td><td>사업장·지역·임의·임의계속 (18세↑ 60세↓)</td></tr>
+          <tr><td><b>크레딧 제도</b></td><td>군복무·출산·실업 기간 → 가입기간 추가 산입</td></tr>
+          <tr><td><b>노령연금</b></td><td>가입기간 <b>10년↑</b>, <b>60세</b>부터 (→2033년까지 65세 상향)</td></tr>
+          <tr><td><b>유족연금</b></td><td>가입기간 20년↑ 시 기본연금액의 <b>60%</b> + 부양가족연금액</td></tr>
+          <tr><td><b>2026 개혁안</b></td><td>보험료율 9%→<b>13%</b>(2033년) / 소득대체율 <b>43%</b> / 기금소진 2056→<b>2071년</b></td></tr>
+          <tr><td><b>국민연금공단</b></td><td>가입자 기록 관리, 보험료 부과, 급여 결정·지급</td></tr>
+        </table>
+      `
+    },
+  ]
+},
+{ num: "11강②", name: "국민건강보험법", icon: "🏥",
+  cards: [
+    { icon: "📂", title: "01. 국민건강보험법 — 개요·가입자",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">국민건강보험법 개요 및 연혁</span>
+          <span class="badge badge-green">가입자 구분 및 피부양자</span>
+        </div>
+      `
+    },
+    { icon: "🏥", title: "국민건강보험법 개요 및 연혁",
+      html: `
+        <div class="hbox hbox-blue">국민보건 향상·사회보장 증진 목적 / <b>사회연대성 원리</b>에 따라 의료비를 공동체적으로 해결 / 진료비 보장 + 건강진단 + <b>재활 및 예방</b>까지 포함하는 적극적·포괄적 제도</div>
+        <ul class="pts">
+          <li>개인의 위험을 보험가입자 전원에게 분산 → 경제적 부담 해소, <b>소득 재분배</b> 기능</li>
+          <li>국민의 의료비용을 <b>사회연대성의 원리</b>에 따라 공동체적으로 해결</li>
+        </ul>
+        <div class="hbox hbox-red">✗ <b>조합주의 방식</b> → <b>통합주의 방식</b>으로 전환 (조합주의 문제: 계층 간 갈등·행정 재정낭비·재정 적자)</div>
+        <div class="sub">연혁</div>
+        <table class="comp-table">
+          <tr><th>연도</th><th>내용</th></tr>
+          <tr><td>1963. 12</td><td>의료보험법 제정</td></tr>
+          <tr><td>1976. 12</td><td><b>500인 이상</b> 사업장 근로자 의료보험 실시</td></tr>
+          <tr><td>1989</td><td>전국민 의료보험제도 실시</td></tr>
+          <tr><td>1999. 2</td><td>국민건강보험법 제정·공포 (조합주의 문제점 보완, 건강진단·재활·예방 포괄)</td></tr>
+          <tr><td>2000. 7</td><td>국민건강보험제도 실시</td></tr>
+        </table>
+      `
+    },
+    { icon: "👤", title: "가입자 구분 및 피부양자",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">국내 거주 국민은 건강보험 가입자 또는 피부양자 (의료보호대상자 제외) / 직장가입자·지역가입자 두 종류</div>
+        <div class="sub">가입자 종류</div>
+        <table class="comp-table">
+          <tr><th>종류</th><th>대상</th></tr>
+          <tr><td><b>직장가입자</b></td><td>사업장 근로자·사용자, 공무원, 교직원</td></tr>
+          <tr><td><b>지역가입자</b></td><td>직장가입자와 그 피부양자를 <b>제외한</b> 나머지 가입자</td></tr>
+        </table>
+        <div class="sub">피부양자 (직장가입자 기준)</div>
+        <ul class="pts green">
+          <li>직장가입자의 <b>배우자</b></li>
+          <li>직장가입자의 <b>직계존속</b></li>
+          <li>직장가입자의 <b>직계비속</b>과 그 배우자</li>
+          <li>직장가입자의 <b>형제자매</b> (소득·재산 요건 충족하는 경우)</li>
+        </ul>
+        <div class="sub">자격 취득·변동·상실</div>
+        <ul class="pts yellow">
+          <li>자격취득: <b>국내에 거주하게 된 날</b> <span class="kichul">⭐ 기출</span></li>
+          <li>자격변동: 지역가입자가 직장가입자가 된 날 등</li>
+          <li>자격상실: <b>사망 다음날</b>, 국적을 잃은 다음날 등</li>
+        </ul>
+      `
+    },
+    { icon: "📂", title: "02. 국민건강보험법 — 급여·재원·운영",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">건강보험 급여 종류</span>
+          <span class="badge badge-green">건강보험 재원 및 국가지원</span>
+          <span class="badge badge-purple">관리·운영기구</span>
+        </div>
+      `
+    },
+    { icon: "💊", title: "건강보험 급여 종류",
+      html: `
+        <div class="hbox hbox-blue">보험급여 5종: <b>요양급여·요양비·건강검진·부가급여·장애인 특례</b> / 요양기관을 통한 현물급여 방식</div>
+        <table class="comp-table">
+          <tr><th>급여</th><th>내용</th></tr>
+          <tr><td><b>요양급여</b></td><td>가입자·피부양자의 질병·부상·출산 등에 대한 진찰·검사·약제·처치·수술·예방·재활·입원·간호·이송<br/><b>요양기관</b>: 의료법상 의료기관 / 약사법상 약국 / 한국희귀의약품센터 / 지역보건법상 보건소 등</td></tr>
+          <tr><td><b>요양비</b></td><td>요양기관이 아닌 장소에서 질병·부상·출산 시 요양급여에 상당하는 금액 지급</td></tr>
+          <tr><td><b>건강검진</b></td><td>일반건강검진·암 검진·영유아 건강검진 / <b>2년마다 1회</b> 이상 (사무직 미종사 직장가입자: <b>1년 1회</b>)</td></tr>
+          <tr><td><b>부가급여</b></td><td>임신·출산 진료비</td></tr>
+          <tr><td><b>장애인 특례</b></td><td>보조기기에 대한 보험급여</td></tr>
+        </table>
+        <div class="sub">급여의 제한 및 정지</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th>사유</th></tr>
+          <tr><td><b>급여 제한</b></td><td>고의 또는 <b>중대한 과실</b>로 인한 사고 등</td></tr>
+          <tr><td><b>급여 정지</b></td><td><b>국외 체류</b> / 현역병 / 교도소 수용기간</td></tr>
+        </table>
+      `
+    },
+    { icon: "💳", title: "건강보험 재원 및 국가지원",
+      html: `
+        <div class="hbox hbox-blue">보험료를 재원으로 운영 / 국가는 보험료 예상수입액의 <b>100분의 14</b>를 국고에서 공단에 지원</div>
+        <div class="sub">보험료 산정 기준</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th>부과 기준</th><th>부담 비율</th></tr>
+          <tr><td><b>직장가입자</b></td><td>보수월액보험료 + 보수 외 소득월액보험료</td><td>가입자 <b>50%</b> + 사용자 <b>50%</b></td></tr>
+          <tr><td><b>지역가입자</b></td><td>소득·재산 기준 (세대단위 산정)</td><td>가입자 <b>100%</b></td></tr>
+        </table>
+        <div class="sub">국가 지원</div>
+        <ul class="pts yellow">
+          <li>국가는 매년 해당 연도 보험료 예상수입액의 <b>100분의 14</b>에 상당하는 금액을 국고에서 공단에 지원</li>
+          <li>공단은 <b>국민건강증진기금</b>에서 자금을 지원받을 수 있음</li>
+        </ul>
+        <div class="hbox hbox-yellow" style="margin-top:8px">💡 국가의 <b>책무성</b>과 건강보험 <b>국고지원 확대</b>의 의미를 가지는 조항</div>
+      `
+    },
+    { icon: "🏗️", title: "관리·운영기구",
+      html: `
+        <div class="hbox hbox-blue">국민건강보험공단(주관) + 건강보험정책심의위원회(보건복지부 소속, 주요 사항 심의·의결) + 건강보험심사평가원(심사·평가)</div>
+        <table class="comp-table">
+          <tr><th>기관</th><th>역할</th></tr>
+          <tr><td><b>국민건강보험공단</b></td><td>가입자·피부양자 자격관리, 보험급여 관리, 비용지급, 홍보, 조사연구, 국제협력 등</td></tr>
+          <tr><td><b>건강보험정책심의위원회</b></td><td>요양급여 기준, 직장가입자 보험료율, 지역가입자 보험료 부과점수당 금액 등 주요 사항 심의·의결 (<b>보건복지부장관 소속</b>)</td></tr>
+          <tr><td><b>건강보험심사평가원</b></td><td>요양급여 비용 심사, 요양급여의 적정성 평가</td></tr>
+        </table>
+      `
+    },
+    { icon: "📝", title: "11강② 핵심 요약",
+      html: `
+        <table class="comp-table">
+          <tr><th>개념</th><th>핵심 내용</th></tr>
+          <tr><td><b>국민건강보험 목적</b></td><td>국민보건 향상, 사회보장 증진 / <b>사회연대성 원리</b> / 예방·재활까지 포괄</td></tr>
+          <tr><td><b>가입자 구분</b></td><td>직장가입자(근로자·사용자·공무원·교직원) / 지역가입자(그 외 나머지)</td></tr>
+          <tr><td><b>자격 취득·상실</b></td><td>취득 = <b>국내에 거주하게 된 날</b> / 상실 = <b>사망 다음날</b>, 국적 잃은 다음날</td></tr>
+          <tr><td><b>요양급여</b></td><td>진찰·검사·약제·처치·수술·예방·재활·입원·간호·이송</td></tr>
+          <tr><td><b>건강검진</b></td><td>2년마다 1회↑ / 사무직 미종사 직장가입자: <b>1년 1회</b></td></tr>
+          <tr><td><b>급여 제한/정지</b></td><td>제한: 고의·중대한 과실 / 정지: 국외체류·현역병·교도소 수용</td></tr>
+          <tr><td><b>국가 지원</b></td><td>보험료 예상수입액의 <b>100분의 14</b>를 국고에서 공단에 지원</td></tr>
+          <tr><td><b>건강보험정책심의위원회</b></td><td>보건복지부장관 소속 / 요양급여 기준·보험료율 심의·의결</td></tr>
+          <tr><td><b>건강보험심사평가원</b></td><td>요양급여 비용 심사, 적정성 평가</td></tr>
+        </table>
+      `
+    },
+  ]
+},
+
+{ num: "12강①", name: "산업재해보상보험법 · 고용보험법",
+  cards: [
+    { icon: "📂", title: "01. 산업재해보상보험법",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-red">산재보험법 개요·특성</span>
+          <span class="badge badge-blue">산재보험법 목적 & 가입대상자</span>
+          <span class="badge badge-green">산재보험 급여 종류</span>
+          <span class="badge badge-yellow">업무상 재해 인정사례</span>
+        </div>
+      `
+    },
+{ icon: "🏭", title: "산재보험법 개요·특성",
+  html: `
+    <span class="kichul">⭐ 기출</span>
+    <div class="hbox hbox-blue">
+      산업 현장 근로자에게 발생하는 제반 재해에 대해 <b>보험방식</b>으로
+      근로자·가족을 보호하고 사업주 위험부담을 경감하는 사회복지법
+    </div>
+    <div class="sub">연혁</div>
+    <ul class="pts">
+      <li><b>1963.11</b> 제정 — 5대 사회보험 중 <b>가장 먼저 도입</b></li>
+      <li><b>1994.12</b>: 5인 이상 사업장 적용 / <b>2000.7</b>: 1인 이상 사업장 전면 적용</li>
+      <li><b>2017.10</b>: 통상적 경로·방법 출퇴근 중 사고도 <b>업무상 재해로 인정</b></li>
+      <li><b>2024.10</b>: 매년 <b>4월 28일</b> 산업재해근로자를 위한 법정기념일 지정</li>
+    </ul>
+    <div class="sub">4대 특성</div>
+    ...
+        <ul class="pts">
+          <li><b>사업주 책임보험</b>: 보험료 100% 사업주 부담 (근로자 미납)</li>
+          <li><b>사업장 단위 가입</b>: 개별 근로자가 아닌 사업장 단위로 가입</li>
+          <li><b>업무담당자 높은 재량권</b>: 근로복지공단의 산재 인정 여부 판단에 재량 폭이 큼 — 결정까지 수개월~1년 소요되기도 함</li>
+          <li><b>현금+현물 급여 제공</b>: 요양비(현물)와 휴업급여·장해급여(현금) 동시 제공</li>
+        </ul>
+        <div class="sub">관리·운영기구</div>
+        <div class="flow">
+          <span class="flow-item">고용노동부 장관<br/><span style="font-size:.8em">총괄 관리</span></span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">근로복지공단<br/><span style="font-size:.8em">급여 집행</span></span>
+        </div>
+      `
+    },
+    { icon: "🎯", title: "산재보험법 목적 & 가입대상자",
+      html: `
+        <div class="hbox hbox-blue">
+          근로자 업무상 재해 <b>신속·공정 보상</b> / 재해근로자의 <b>재활·사회복귀 촉진</b> / 근로자 <b>복지증진</b>에 기여
+        </div>
+        <div class="sub">보험자 & 보험가입자</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th>해당 주체</th></tr>
+          <tr><td><b>보험자</b></td><td>근로복지공단</td></tr>
+          <tr><td><b>보험가입자</b></td><td>사업자 (사업주)</td></tr>
+          <tr><td><b>피보험자</b></td><td>별도 규정 없음 — 실질 수급자는 업무상 재해를 당한 근로자</td></tr>
+        </table>
+        <div class="sub">적용 범위</div>
+        <ul class="pts green">
+          <li>근로자를 사용하는 <b>모든 사업장</b>에 적용</li>
+        </ul>
+        <ul class="pts red">
+          <li>적용 제외: 공무원·군인·사립학교 교직원 연금법 적용자 (대통령령으로 정하는 사업)</li>
+        </ul>
+        <div class="sub">수급자 — 업무상 재해의 3가지 유형</div>
+        <div class="badge-row">
+          <span class="badge badge-blue">업무상 사고</span>
+          <span class="badge badge-green">업무상 질병</span>
+          <span class="badge badge-yellow">출퇴근 재해 (2017.10~)</span>
+        </div>
+      `
+    },
+    { icon: "💰", title: "산재보험 급여 종류",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">
+          총 8종 급여 제공 — 현금급여(휴업·장해·유족·상병보상연금·장례비)와 현물급여(요양) 병행
+        </div>
+        <div class="sub">급여 목록</div>
+        <div class="badge-row">
+          <span class="badge badge-blue">요양급여 (4일 이상)</span>
+          <span class="badge badge-green">휴업급여</span>
+          <span class="badge badge-yellow">장해급여</span>
+          <span class="badge badge-purple">간병급여</span>
+          <span class="badge badge-red">유족급여</span>
+          <span class="badge badge-gray">상병보상연금</span>
+          <span class="badge badge-gray">장례비</span>
+          <span class="badge badge-gray">직업재활급여</span>
+        </div>
+        <div class="sub">주요 급여 정의</div>
+        <ul class="pts">
+          <li><b>요양급여</b>: 업무상 부상·질병으로 <b>4일 이상</b> 요양 필요 시 치료 비용 지급</li>
+          <li><b>휴업급여</b>: 재해로 일하지 못하는 기간 — 1일당 평균임금의 <b>70%</b> 지급</li>
+          <li><b>장해급여</b>: 재해 치유 후 신체 장해 시 — 장해보상연금 또는 일시금 (1~14급)</li>
+          <li><b>간병급여</b>: 요양급여 후 상시·수시 간병 필요 시 실제 간병받는 자에게 지급</li>
+          <li><b>유족급여</b>: 업무상 사유 사망 시 유족에게 — 유족보상연금·일시금</li>
+          <li><b>상병보상연금</b>: 요양 시작 후 <b>2년</b> 지나도 미치유 시 → 휴업급여 대신 지급</li>
+          <li><b>장례비</b>: 업무상 사망 시 평균임금의 <b>120일분</b>을 장례 유족에게 지급</li>
+          <li><b>직업재활급여</b>: 직업훈련 비용·수당, 직장복귀지원금, 직장적응훈련비, 재활운동비</li>
+        </ul>
+        <div class="sub">보험료율</div>
+        <ul class="pts yellow">
+          <li>매년 <b>6월 30일</b> 기준 — 과거 <b>3년</b> 보수총액 대비 산재보험급여총액 비율을 기초로 산정</li>
+          <li>재해 위험성에 따라 분류된 <b>업종별 보험료율</b>을 세분화하여 적용</li>
+        </ul>
+        <div class="hbox hbox-red">❌ 연금급여는 산재보험 급여에 해당하지 않음</div>
+      `
+    },
+    { icon: "🔍", title: "업무상 재해 인정사례",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">
+          업무상 재해: 업무상 사고 / 업무상 질병 / <b>출퇴근 재해</b> (2017.10부터 통상적 경로·방법 출퇴근 중 사고 인정)
+        </div>
+        <div class="sub">✅ 인정 사례</div>
+        <ul class="pts green">
+          <li>회사가 건강관리 차원에서 마련해 준 <b>체력단련실</b>에서 역기를 들다 다쳐 병원 후송 중 사망</li>
+          <li>회사 차원의 마라톤 대회 참여를 위해 <b>마라톤 동호회 자율적 정기 연습</b>을 하다 쓰러짐</li>
+          <li>사장 허락 후 집에서 점심식사 후 사업장 <b>복귀하다 사고</b>로 다침</li>
+        </ul>
+        <div class="sub">✗ 인정되기 어려운 사례</div>
+        <ul class="pts red">
+          <li>회사와 관련 없이 친한 동료 몇 사람과 함께한 <b>개인적 술자리</b>에서 다친 경우</li>
+        </ul>
+      `
+    },
+    { icon: "📂", title: "02. 고용보험법",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">고용보험법 개요·연혁</span>
+          <span class="badge badge-green">가입자 & 피보험자</span>
+          <span class="badge badge-yellow">급여 종류</span>
+          <span class="badge badge-purple">육아휴직 급여</span>
+          <span class="badge badge-red">재원 & 운영</span>
+        </div>
+      `
+    },
+    { icon: "💼", title: "고용보험법 개요·연혁",
+      html: `
+        <div class="hbox hbox-blue">
+          실업 예방, 고용촉진 및 직업능력개발, 실업 시 급여 지급으로 <b>근로자 생활안정과 구직활동 촉진</b><br/>
+          두 축: <b>① 실직자 실업급여 지급</b> + <b>② 고용안정·직업능력개발사업</b>
+        </div>
+        <div class="sub">연혁</div>
+        <ul class="pts">
+          <li><b>1993.12</b> 제정 / <b>1995.7</b> 시행</li>
+          <li><b>1998.9</b>: 전 사업장으로 고용보험 적용 확대 근거 마련</li>
+          <li><b>2002.12</b>: 일용근로자 고용보험 적용 대상 포함</li>
+          <li><b>2011.7</b>: 자영업자 실업급여 적용 근거 마련</li>
+          <li><b>2021.1</b>: 특수형태근로종사자(특고) 등 피보험자격·구직급여 규정 적용</li>
+          <li><b>2024.10</b>: 배우자 출산휴가 급여 지급기간 — 최초 5일에서 <b>휴가 전체 기간</b>으로 확대</li>
+        </ul>
+      `
+    },
+    { icon: "👥", title: "고용보험 가입자 & 피보험자",
+      html: `
+        <div class="hbox hbox-blue">
+          근로자를 사용하는 모든 사업·사업장에 적용 — 피보험 자격은 <b>고용된 날 취득</b>, <b>이직한 날 다음날 상실</b>
+        </div>
+        <div class="sub">적용 제외 근로자</div>
+        <ul class="pts red">
+          <li>65세 이후 고용되거나 자영업을 개시한 자</li>
+          <li>1개월 소정 근로시간이 <b>60시간 미만</b>인 자</li>
+          <li>공무원 및 사립학교 교직원 연금법 적용자</li>
+        </ul>
+        <div class="sub">피보험 자격 취득·상실</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th>시점</th></tr>
+          <tr><td><b>취득</b></td><td>이 법이 적용되는 사업에 <b>고용된 날</b></td></tr>
+          <tr><td><b>상실</b></td><td><b>이직한 날 다음날</b> / 적용제외 대상자가 된 날</td></tr>
+        </table>
+      `
+    },
+    { icon: "📋", title: "고용보험 급여 종류",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">
+          고용안정·직업능력개발사업 + 실업급여(구직급여·취업촉진수당) + 육아휴직 급여 등
+        </div>
+        <div class="sub">급여 체계</div>
+        <div class="badge-row">
+          <span class="badge badge-blue">고용안정·직업능력개발사업</span>
+          <span class="badge badge-green">구직급여</span>
+          <span class="badge badge-yellow">취업촉진수당</span>
+          <span class="badge badge-purple">육아휴직급여 (최대 1년 6개월)</span>
+          <span class="badge badge-gray">출산전후휴가급여 (90일)</span>
+        </div>
+        <div class="sub">고용안정·직업능력개발사업 내용</div>
+        <ul class="pts">
+          <li>고용창출 지원 / 고용조정 지원 / 고용촉진 지원(지역 이전 등)</li>
+          <li>건설근로자 고용안정 지원 / 직업능력개발 지원</li>
+        </ul>
+        <div class="sub">구직급여 수급 조건</div>
+        <ul class="pts yellow">
+          <li>이직일 이전 <b>18개월</b> 내 피보험 단위기간 합산 <b>180일 이상</b></li>
+          <li><b>근로의 의사와 능력이 있음에도</b> 취업하지 못한 상태</li>
+          <li>이직 사유가 수급 자격 제한 사유에 해당하지 않을 것</li>
+          <li>재취업을 위한 노력을 적극적으로 할 것</li>
+        </ul>
+        <div class="sub">취업촉진수당 종류</div>
+        <ul class="pts">
+          <li>조기재취업 수당 / 직업능력개발 수당 / 광역 구직활동비 / 이주비</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 자영업자 피보험자 실업급여 적용 특례: <b>구직급여 + 취업촉진수당</b>만 적용</div>
+        <div class="hbox hbox-red">❌ 해당 안 됨: 특례요양비, 해산급여</div>
+      `
+    },
+    { icon: "🍼", title: "육아휴직 급여 등",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">
+          육아휴직 <b>30일 이상</b> 부여받은 피보험자 대상 — 최대 <b>1년 6개월</b>, <b>4번</b>에 나눠 사용 가능
+        </div>
+        <div class="sub">육아휴직 급여 지급률</div>
+        <table class="comp-table">
+          <tr><th>기간</th><th>지급률</th><th>월 상한</th></tr>
+          <tr><td><b>1~3개월</b></td><td>통상임금의 <b>100%</b></td><td>250만원</td></tr>
+          <tr><td><b>4~6개월</b></td><td>통상임금의 <b>100%</b></td><td>200만원</td></tr>
+          <tr><td><b>7개월~종료</b></td><td>통상임금의 <b>80%</b></td><td>160만원</td></tr>
+        </table>
+        <div class="sub">육아기 근로시간 단축급여 & 출산전후휴가급여</div>
+        <ul class="pts">
+          <li><b>육아기 근로시간 단축급여</b>: 육아 중 근로시간 단축 신청 시 지급</li>
+          <li><b>출산전후휴가급여</b>: 90일 — 출산 후 <b>45일 이상</b> 필수 포함 (출산 전에 60일 모두 사용 불가)</li>
+        </ul>
+      `
+    },
+    { icon: "💵", title: "고용보험 재원 & 운영",
+      html: `
+        <div class="hbox hbox-blue">
+          실업급여: 사업주·근로자 각 <b>50%</b> 부담 / 고용안정·직업능력개발사업: <b>사업주 전액</b> 부담
+        </div>
+        <div class="sub">보험료 분담</div>
+        <table class="comp-table">
+          <tr><th>항목</th><th>부담자</th></tr>
+          <tr><td>실업급여</td><td>사업주·근로자 각 <b>50%</b></td></tr>
+          <tr><td>고용안정·직업능력개발 사업</td><td><b>사업주 전액</b></td></tr>
+        </table>
+        <div class="sub">고용보험기금</div>
+        <ul class="pts green">
+          <li>고용노동부장관이 보험 사업 재원 충당 위해 <b>고용보험기금</b> 설치</li>
+          <li>조성: 보험료·징수금 + 적립금 + 기금운용 수익금 + 그 밖의 수입</li>
+        </ul>
+        <div class="sub">관리 운영</div>
+        <table class="comp-table">
+          <tr><th>역할</th><th>기관</th></tr>
+          <tr><td>관리주체</td><td>고용노동부 장관</td></tr>
+          <tr><td>주요사항 결정·기획</td><td>고용노동부 본부</td></tr>
+          <tr><td>집행</td><td>지방노동관서 및 근로복지공단</td></tr>
+        </table>
+      `
+    },
+    { icon: "📝", title: "12강① 핵심 요약",
+      html: `
+        <table class="comp-table">
+          <tr><th>개념</th><th>핵심 내용</th></tr>
+          <tr><td><b>산재보험 특성</b></td><td>사업주 책임보험 / 사업장 단위 가입 / 업무담당자 높은 재량권 / <b>현금+현물</b> 급여</td></tr>
+          <tr><td><b>산재보험 도입</b></td><td>1963.11 제정 — 5대 사회보험 중 <b>가장 먼저</b> 도입</td></tr>
+          <tr><td><b>휴업급여</b></td><td>평균임금 <b>70%</b> 지급 / 상병보상연금: 요양 <b>2년</b> 후에도 미치유 시 대체 지급</td></tr>
+          <tr><td><b>장례비</b></td><td>업무상 사망 시 평균임금 <b>120일분</b> 지급</td></tr>
+          <tr><td><b>고용보험 제정</b></td><td>1993.12 제정 / 1995.7 시행</td></tr>
+          <tr><td><b>피보험자격</b></td><td>취득: <b>고용된 날</b> / 상실: <b>이직한 날 다음날</b></td></tr>
+          <tr><td><b>구직급여 조건</b></td><td>18개월 내 피보험 단위기간 <b>180일 이상</b> + 근로의사 있음에도 취업 못함</td></tr>
+          <tr><td><b>육아휴직 급여</b></td><td>최대 1년 6개월 / 1~6개월 통상임금 <b>100%</b> / 7개월~ <b>80%</b></td></tr>
+          <tr><td><b>재원 분담</b></td><td>실업급여: 사업주·근로자 <b>각 50%</b> / 고용안정사업: <b>사업주 전액</b></td></tr>
+        </table>
+      `
+    }
+  ]
+},
+{ num: "12강②", name: "노인장기요양보험법",
+  cards: [
+    { icon: "📂", title: "01. 노인장기요양보험법 개요",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">개요·의의·특성</span>
+          <span class="badge badge-green">장기요양기본계획 & 대상자</span>
+          <span class="badge badge-yellow">장기요양인정 신청절차</span>
+          <span class="badge badge-red">등급 판정</span>
+        </div>
+      `
+    },
+    { icon: "👵", title: "노인장기요양보험법 개요·의의·특성",
+      html: `
+        <div class="hbox hbox-blue">
+          노년기 요양문제를 개인·가족의 문제가 아닌 <b>국가·사회공동체가 연대하여 책임져야 할 사회적 위험</b>으로 인정<br/>
+          <b>노인</b> 정의 <span class="kichul">⭐ 기출</span>: <b>65세 이상</b>인 자 OR 65세 미만이라도 치매·뇌혈관질환 등 <b>노인성 질병</b>을 가진 자
+        </div>
+        <div class="sub">연혁</div>
+        <div class="flow">
+          <span class="flow-item">2001 도입 제시<br/><span style="font-size:.78em">대통령 경축사</span></span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">2007.4 제정</span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">2008.7 시행<br/><span style="font-size:.78em">최중증 노인부터</span></span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">2024.12<br/><span style="font-size:.78em">국가책임 강화·국공립 확충</span></span>
+        </div>
+        <div class="sub">3대 특성</div>
+        <ul class="pts">
+          <li><b>장기성과 복합성</b>: 장기간에 걸쳐 복합적으로 제공되는 급여</li>
+          <li><b>제공 과정의 합리성</b>: 방문조사·인정점수 산정 등 체계적 절차 운영</li>
+          <li><b>사회보험제도로서의 장기요양보호서비스</b>: 사회서비스가 아닌 보험 형식</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 5대 사회보험 중 <b>가장 마지막</b>으로 도입 / 관리운영기관: <b>국민건강보험공단</b></div>
+      `
+    },
+    { icon: "📋", title: "장기요양기본계획 & 대상자",
+      html: `
+        <div class="hbox hbox-blue">
+          장기요양기본계획: <b>5년마다</b> 수립 / 가입자: 국민건강보험법에 따른 <b>건강보험 가입자 = 장기요양보험 가입자</b>
+        </div>
+        <div class="sub">기본계획 수립 내용</div>
+        <ul class="pts">
+          <li>연도별 장기요양급여 대상인원 및 재원조달 계획</li>
+          <li>연도별 장기요양기관 및 장기요양전문인력 관리 방안</li>
+          <li>장기요양요원의 처우에 관한 사항 등</li>
+        </ul>
+        <div class="sub">장기요양인정 신청자격</div>
+        <ul class="pts green">
+          <li>노인 등으로서 장기요양보험가입자 또는 그 피부양자</li>
+          <li>의료급여법에 따른 수급권자</li>
+        </ul>
+        <div class="sub">주요 행정 사항</div>
+        <ul class="pts yellow">
+          <li>장기요양위원회: 보험료율, 재가·시설 급여비용 등 심의</li>
+          <li>장기요양기관: 노인복지시설 중 노인의료복지시설·재가노인복지시설</li>
+          <li>장기요양기관 지정 유효기간: <b>6년</b></li>
+          <li>국가 지원: 매년 예상수입액의 <b>100분의 20</b>에 상당하는 금액을 공단에 지원</li>
+        </ul>
+      `
+    },
+    { icon: "🔄", title: "장기요양인정 신청절차",
+      html: `
+        <div class="hbox hbox-blue">
+          인정 신청 → 방문 조사 → 등급 판정 → 인정서·계획서 송부 → 급여 제공 순으로 진행
+        </div>
+        <div class="flow">
+          <span class="flow-item">인정 신청<br/><span style="font-size:.78em">의사소견서 제출</span></span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">방문 조사<br/><span style="font-size:.78em">장기요양인정 조사표</span></span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">등급 판정<br/><span style="font-size:.78em">인정점수 산정</span></span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">인정서·계획서 송부<br/><span style="font-size:.78em">급여 제공</span></span>
+        </div>
+        <div class="hbox hbox-yellow">💡 등급 판정 기준: 신청 자격 충족 + <b>6개월 이상</b> 혼자서 일상생활 수행이 어렵다고 인정되는 경우</div>
+      `
+    },
+    { icon: "🔢", title: "등급 판정",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">
+          1등급~5등급 + 인지지원등급 총 6개 등급 / 5등급·인지지원등급은 <b>치매 환자</b> 대상
+        </div>
+        <div class="badge-row">
+          <span class="badge badge-red">1등급</span>
+          <span class="badge badge-yellow">2등급</span>
+          <span class="badge badge-green">3등급</span>
+          <span class="badge badge-blue">4등급</span>
+          <span class="badge badge-purple">5등급 (치매)</span>
+          <span class="badge badge-gray">인지지원등급 (치매)</span>
+        </div>
+        <div class="hbox hbox-yellow">💡 장기요양인정 유효기간: <b>최소 1년</b> (6개월 아님)</div>
+        <div class="hbox hbox-red">❌ 유효기간을 6개월로 혼동 주의</div>
+      `
+    },
+    { icon: "📂", title: "02. 장기요양급여 & 재원",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">급여 종류</span>
+          <span class="badge badge-green">재원 구성</span>
+          <span class="badge badge-yellow">장기요양기관 & 관리운영기관</span>
+        </div>
+      `
+    },
+    { icon: "🏠", title: "급여 종류",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">
+          재가급여(집에서) / 시설급여(입소) / 특별현금급여 3종
+        </div>
+        <table class="comp-table">
+          <tr><th>종류</th><th>내용</th></tr>
+          <tr><td><b>재가급여</b></td><td>자신의 집에 거주하면서 요양급여 수급 — 방문요양, 방문목욕, 방문간호, 주야간보호, 단기보호 등</td></tr>
+          <tr><td><b>시설급여</b></td><td>장기요양기관에 <b>장기간 입소</b>한 수급자에게 제공하는 급여</td></tr>
+          <tr><td><b>특별현금급여</b></td><td>가족요양비 / 특례요양비 / <b>요양병원 간병비</b> <span class="kichul">⭐ 기출</span> (노인전문병원·요양병원 입원 시)</td></tr>
+        </table>
+        <div class="hbox hbox-red">❌ 자신의 집에서 급여 받는 것 = <b>재가급여</b> (시설급여 아님)</div>
+      `
+    },
+    { icon: "💵", title: "재원 구성 & 관리운영기관",
+      html: `
+        <div class="hbox hbox-blue">
+          건강보험료와 <b>통합 징수</b>하되 <b>독립 회계</b>로 관리 / 관리운영기관: <b>국민건강보험공단</b> <span class="kichul">⭐ 기출</span>
+        </div>
+        <div class="sub">재원 구성</div>
+        <div class="badge-row">
+          <span class="badge badge-blue">노인장기요양보험료 (건강보험료와 통합 징수·독립 회계)</span>
+        </div>
+        <div class="badge-row" style="margin-top:6px">
+          <span class="badge badge-green">본인부담금 (급여비용 일부)</span>
+          <span class="badge badge-yellow">국가지원 (예상수입액의 20/100)</span>
+        </div>
+        <div class="sub">장기요양보험료율 변화</div>
+        <div class="flow">
+          <span class="flow-item">6.55%<br/><span style="font-size:.78em">2017년</span></span>
+          <span class="flow-arrow">▶</span>
+          <span class="flow-item">12.27%<br/><span style="font-size:.78em">2022년</span></span>
+        </div>
+        <div class="hbox hbox-yellow">💡 세대 간 형평성 문제 / 경증 노인의 요양시설 이용 증가 등 → 지속가능성 과제</div>
+      `
+    },
+    { icon: "📝", title: "12강② 핵심 요약",
+      html: `
+        <table class="comp-table">
+          <tr><th>개념</th><th>핵심 내용</th></tr>
+          <tr><td><b>도입 순서</b></td><td>5대 사회보험 중 <b>가장 마지막</b> 도입 / 2007.4 제정, 2008.7 시행</td></tr>
+          <tr><td><b>관리운영기관</b></td><td><b>국민건강보험공단</b> (건강보험료와 통합 징수, 독립 회계)</td></tr>
+          <tr><td><b>대상자 노인 정의</b></td><td><b>65세 이상</b> OR 65세 미만이라도 치매·뇌혈관질환 등 노인성 질병자</td></tr>
+          <tr><td><b>등급</b></td><td>1~5등급 + 인지지원등급 / 5등급·인지지원등급 = <b>치매 환자</b></td></tr>
+          <tr><td><b>장기요양기본계획</b></td><td><b>5년마다</b> 수립</td></tr>
+          <tr><td><b>유효기간</b></td><td>장기요양인정: <b>최소 1년</b> / 기관 지정: <b>6년</b></td></tr>
+          <tr><td><b>급여 3종</b></td><td>재가급여(집에서) / 시설급여(입소) / 특별현금급여(가족요양비·요양병원 간병비 등)</td></tr>
+          <tr><td><b>국가 지원</b></td><td>예상수입액의 <b>100분의 20</b> 공단에 지원</td></tr>
+        </table>
+      `
+    }
+  ]
+},
+        { num: "13강①", name: "공공부조법 · 국민기초생활보장 · 의료급여",
         cards: [
           { icon: "🏛️", title: "공공부조 기본원칙", html: "<div class=\"badge-row\">\n<span class=\"badge badge-blue\">최저생활보장</span>\n<span class=\"badge badge-green\">무갹출보호 (국가 부담)</span>\n<span class=\"badge badge-yellow\">열등처우 (영국 빈민법)</span>\n<span class=\"badge badge-gray\">세대단위 급여 적용</span>\n</div>" },
           { icon: "📊", title: "국민기초생활보장법 주요 개념", html: "<ul class=\"pts\">\n<li><b>수급권자</b>: 급여를 받을 자격을 가진 사람</li>\n<li><b>수급자</b>: 급여를 받는 사람</li>\n<li><b>소득인정액</b> = <b>소득평가액</b> + <b>재산의 소득환산액</b> (보장기관이 급여 결정·실시를 위해 산출한 개별가구 금액, 제2조)</li>\n<li><b>차상위계층</b>: 수급권자에 해당하지 않는 계층으로서 소득인정액이 기준 중위소득의 <b>100분의 50</b> 이하인 사람 <span class=\"kichul\">⭐ 기출</span></li>\n<li><b>부양의무자</b>: 수급권자의 <b>1촌의 직계혈통(혈족) 및 그 배우자</b> → 2022년 기준 <b>의료급여에만</b> 적용</li>\n</ul>\n<div class=\"flow\" style=\"margin-top:10px\">\n<span class=\"flow-item\">1999.9 제정</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">2000.10 시행</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">2014 맞춤형 급여체계 개편</span>\n</div>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:8px\">\n      2014 개편: 최저생계비 → <b>기준 중위소득</b> (상대적 빈곤 개념 도입)\n    </div>" },
