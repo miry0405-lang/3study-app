@@ -450,6 +450,20 @@ hr {
 #view-summary .pts.red li::before { color:var(--c3); }
 #view-summary .pts.purple li::before { color:var(--c5); }
 #view-summary .pts.yellow li::before { color:var(--c4); }
+
+#view-summary .ptsFC {
+  list-style:none; display:flex; flex-direction:column;
+  gap:6px; word-break:keep-all; word-wrap:break-word;
+}
+#view-summary .ptsFC li {
+  display:block; position:relative; padding-left:16px;
+  font-size:.94em; line-height:1.6; margin:2px 0;
+}
+#view-summary .ptsFC li:first-child::before { content:'▸'; color:var(--c1); position:absolute; left:0; top:0; }
+#view-summary .ptsFC li:not(:first-child) { position: relative; padding-left:25px; }
+#view-summary .ptsFC li:not(:first-child)::before { content: '-'; color: var(--c1); position: absolute; left: 15px; top: 0; }
+
+
 /* 시험 포인트 */
 #view-summary .star-list {
   list-style:none; display:flex; flex-direction:column;
@@ -7200,14 +7214,14 @@ const SUMMARY_DATA = {
                 <b>법적 쟁송이 이루어지기 전 거치는 전심절차</b> — 국민연금공단·국민건강보험공단 등
                 행정기관에 먼저 이의를 신청하는 절차. 보통 <b>2회에 걸친 이의 제기 절차</b>를 갖춤
               </div>
-              <div class="sub">법률별 절차 유형</div>
+              <div class="sub">법률별 절차 유형 <span class="kichul">⭐ 기출</span></div>
               <table class="comp-table">
                 <tr><th>법률</th><th>절차</th><th>절차기관</th></tr>
                 <tr><td>국민연금법</td><td rowspan="4" style="text-align:center;"><b>심사청구 → 재심사청구</b></td><td>국민연금공단</td></tr>
                 <tr><td>고용보험법</td><td>근로복지공단</td></tr>
                 <tr><td>산보험법</td><td>근로복지공단<br/>→ 산업재해보상보험심사위원회</td></tr>
                 <tr><td>노인장기요양보험법</td><td>국민건강보험공단<br/>→ 장기요양심판위원회</td></tr>
-                <tr><td>국민건강보험법</td><td style="text-align:center"><b>이의신청 → 심판청구</b> <span class="kichul">⭐ 기출</span></td><td>국민건강보험공단<br/>→ 건강보험분쟁조정위원회</td></tr>
+                <tr><td>국민건강보험법</td><td style="text-align:center"><b>이의신청 → 심판청구</b></td><td>국민건강보험공단<br/>→ 건강보험분쟁조정위원회</td></tr>
                 <tr><td>국민기초생활보장법</td><td style="text-align:center"><b>이의신청 → 이의신청 (두 번)</b></td><td>1차: 시장·군수·구청장 통해 <b>시·도지사</b> 처리<br/>2차: 시·도지사 거쳐 <b>보건복지부장관</b> 처리</td></tr>
               </table>
               <div class="hbox hbox-yellow">💡 개별법마다 용어가 다르지만 공통점은 <b>2단계 이의 제기 절차</b><br>
@@ -8516,7 +8530,7 @@ const SUMMARY_DATA = {
   ]
 },
 
-{ num: "11강①", name: "사회보험법 · 국민연금법", icon: "⚖️",
+{ num: "11강①", name: "사회보험법Ⅰ · 국민연금법", icon: "⚖️",
   cards: [
     { icon: "📂", title: "01. 사회보험법 — 개념·기본원리·특성",
       html: `
@@ -8528,7 +8542,7 @@ const SUMMARY_DATA = {
     },
     { icon: "📌", title: "사회보험법 개념·기본원리·특성",
       html: `
-        <div class="hbox hbox-blue">사회보험법 = 사회보험제도의 운영과 실시에 관한 법률 총칭 / 국민의 <b>생존권적 기본권</b>을 구체적으로 확보하기 위한 <b>생존권 법체계</b> 중 하나</div>
+        <div class="hbox hbox-blue"><b>사회보험법</b> = 사회보험제도의 운영과 실시에 관한 법률 총칭 / 국민의 생존권적 기본권</b>을 구체적으로 확보하기 위한 생존권 법체계 중 하나</div>
         <div class="sub">사회보험 정의 (사회보장기본법 제3조)</div>
         <ul class="pts">
           <li>국민에게 발생하는 <b>사회적 위험</b>을 <b>보험방식</b>에 의하여 대처함으로써 <b>국민건강과 소득을 보장</b>하는 제도</li>
@@ -8536,7 +8550,7 @@ const SUMMARY_DATA = {
         <div class="sub">기본원리</div>
         <ul class="pts green">
           <li><b>소득재분배</b> : 수직적 재분배(소득에 따른 보험료 차등) & 수평적 재분배(위험에 처한 자에게 더 많은 혜택)</li>
-          <li><b>보편주의</b> : 전국민 대상, <b>법적 강제성</b></li>
+          <li><b>보편주의</b> : 전국민 대상, 법적 강제성</li>
           <li><b>보험료 분담</b> : 사용자·국가·피용자가 분담하여 재원 조달</li>
           <li><b>최저생활 보장</b> : '국민 최저선(내셔널 미니멈)'과는 다소 차이</li>
         </ul>
@@ -8552,7 +8566,6 @@ const SUMMARY_DATA = {
     },
     { icon: "🔄", title: "사회보험 vs 사보험(민간보험) 비교",
       html: `
-        <span class="kichul">⭐ 기출</span>
         <div class="hbox hbox-blue">사회보험 vs 사보험: 가입 방식·보험료 기준·급여 근거·운영 형태 등 여러 측면에서 근본적으로 다름</div>
         <table class="comp-table">
           <tr><th>구분</th><th class="th-blue">사회보험</th><th class="th-green">사보험</th></tr>
@@ -8560,7 +8573,7 @@ const SUMMARY_DATA = {
           <tr><td>보험료 부과기준</td><td>소득수준</td><td>위험정도, 급여수준</td></tr>
           <tr><td>보호의 양</td><td>최저소득 보호</td><td>더 많은 보호 가능</td></tr>
           <tr><td>원리</td><td>사회적 적절성</td><td>개인적 공평성</td></tr>
-          <tr><td><b>급여 근거</b> <span class="kichul">⭐ 기출</span></td><td><b>법</b></td><td><b>계약</b></td></tr>
+          <tr><td><b>급여 근거</b></td><td><b>법</b></td><td><b>계약</b></td></tr>
           <tr><td>운영 형태</td><td><b>정부 독점</b></td><td>경쟁</td></tr>
           <tr><td>비용 예측</td><td>어려움</td><td>비교적 쉬움</td></tr>
           <tr><td>완전한 재정 준비</td><td><b>필요하지 않음</b> (수정적립방식)</td><td>필요함</td></tr>
@@ -8578,18 +8591,18 @@ const SUMMARY_DATA = {
     },
     { icon: "👴", title: "국민연금 개요 및 연혁",
       html: `
-        <div class="hbox hbox-blue">국민연금 = 증가하는 고령인구·가족 부양체계 약화에 대응하는 <b>노후소득보장제도</b> / 목적: 노령·장애·사망에 대한 연금급여로 <b>생활 안정과 복지 증진</b>(제1조)</div>
+        <div class="hbox hbox-blue"><b>국민연금 :</b> 증가하는 고령인구·가족 부양체계 약화에 대응하는 <b>노후소득보장제도</b><br><b>목적:</b> 노령·장애·사망에 대한 연금급여로 <b>생활 안정과 복지 증진</b>(제1조)</div>
         <div class="sub">연혁</div>
-        <div class="flow">
-          <span class="flow-item">1973.12<br/><small>국민복지연금법 제정(시행 연기)</small></span><span class="flow-arrow">▶</span>
-          <span class="flow-item">1986.12<br/><small>국민연금법 제정</small></span><span class="flow-arrow">▶</span>
-          <span class="flow-item">1988.1<br/><small>시행</small></span><span class="flow-arrow">▶</span>
-          <span class="flow-item">1999.1<br/><small>전국민 연금시대</small></span><span class="flow-arrow">▶</span>
-          <span class="flow-item">2007.7<br/><small>전부개정(재정안정화·군복무·출산 크레딧 도입)</small></span><span class="flow-arrow">▶</span>
-          <span class="flow-item">2008<br/><small>노령연금 수급 원년</small></span><span class="flow-arrow">▶</span>
-          <span class="flow-item">2015.1<br/><small>실업 크레딧 도입</small></span><span class="flow-arrow">▶</span>
-          <span class="flow-item">2026.1<br/><small>개혁안 시행</small></span>
-        </div>
+        <table class="comp-table">
+          <tr><th>연도</th><th>주요 내용</th></tr>
+          <tr><td><b>1973.12</b></td><td>국민복지연금법 제정 (*시행 연기)</td></tr>
+          <tr><td><b>1986.12</b></td><td>국민연금법 제정 (1988.1 시행)</td></tr>
+          <tr><td><b>1999.1</b></td><td>전국민 연금시대</td></tr>
+          <tr><td><b>2007.7</b></td><td>'국민연금법' 전부개정<br>- 장기적 재저안정화 방안 마련<br>- 군복무, 출산 크레딧 도입</td></tr>
+          <tr><td><b>2008</b></td><td><b style="color:red;">제도시행 20년, 노령연금 수급자가 급여를 받는 원년</b></td></tr>
+          <tr><td><b>2015.1</b></td><td>실업 크레딧 도입</td></tr>
+          <tr><td><b>2026.1</b></td><td>개혁안 시행</td></tr>
+        </table>
         <div class="sub">국민연금 개혁안 (2026.1 시행)</div>
         <table class="comp-table">
           <tr><th>항목</th><th>현행</th><th class="th-blue">개혁안</th></tr>
@@ -8600,14 +8613,14 @@ const SUMMARY_DATA = {
         <div class="sub">국가의 책무 개정 핵심 (제3조의2)</div>
         <ul class="pts yellow">
           <li>기존: 연금급여가 안정적·지속적으로 지급되도록 필요한 <b>시책을 수립·시행</b>하여야 한다</li>
-          <li>개정: 연금급여의 안정적이고 지속적인 지급을 <b>보장</b>하여야 하며, 이에 필요한 시책을 수립·시행하여야 한다 → <b>'보장'</b> 강제 조항 신설</li>
+          <li>개정: 연금급여의 안정적이고 지속적인 지급을 <b style="color:red;">보장</b>하여야 하며, 이에 필요한 <b>시책을 수립·시행</b>하여야 한다 → <b>'보장' 강제 조항 신설</b></li>
         </ul>
       `
     },
     { icon: "📋", title: "국민연금 가입자 종류",
       html: `
         <span class="kichul">⭐ 기출</span>
-        <div class="hbox hbox-blue">가입 대상: 국내에 거주하는 <b>18세 이상 60세 미만</b> 국민 / 4가지 가입자 종류 — 사업장·지역·임의·임의계속</div>
+        <div class="hbox hbox-blue">가입 대상: 국내에 거주하는 <b>18세 이상 60세 미만 국민</b><br>4가지 가입자 종류 : 사업장·지역·임의·임의계속</div>
         <table class="comp-table">
           <tr><th>종류</th><th>대상</th></tr>
           <tr><td><b>사업장가입자</b></td><td><b>1명 이상</b>의 근로자를 사용하는 사업장의 근로자·사용자</td></tr>
@@ -8615,11 +8628,11 @@ const SUMMARY_DATA = {
           <tr><td><b>임의가입자</b></td><td>사업장·지역가입자가 아닌 18세 이상 60세 미만인 자가 국민연금공단에 가입 신청</td></tr>
           <tr><td><b>임의계속가입자</b></td><td>가입자 또는 가입자였던 자로서 60세가 된 자가 <b>65세</b>가 될 때까지 공단에 가입 신청</td></tr>
         </table>
-        <div class="sub">가입기간 계산</div>
+        <div class="sub">가입기간</div>
         <ul class="pts yellow">
-          <li><b>월 단위</b>로 계산</li>
-          <li>자격 취득일이 속하는 달의 <b>다음 달</b>부터 자격 상실일의 전날이 속하는 달까지</li>
-          <li>가입기간 추가 산입 — <b>크레딧</b>: 군복무 크레딧 / 출산 크레딧 / 실업 크레딧</li>
+          <li>월 단위로 계산</li>
+          <li>자격 취득일이 속하는 달의 다음 달 부터 자격 상실일의 전날이 속하는 달까지</li>
+          <li>가입기간 추가 산입 규정 (크레딧 : 군복무 크레딧 / 출산 크레딧 / 실업 크레딧)</li>
         </ul>
       `
     },
@@ -8634,29 +8647,40 @@ const SUMMARY_DATA = {
     { icon: "💰", title: "국민연금 급여 종류",
       html: `
         <span class="kichul">⭐ 기출</span>
-        <div class="hbox hbox-blue">국민연금 급여 = <b>기본연금액</b> + <b>부양가족연금액</b>으로 산정 / 주요 5종: 노령연금·장애연금·유족연금·반환일시금·사망일시금</div>
+        <div class="hbox hbox-blue">국민연금 급여 : <b>기본연금액</b> + <b>부양가족연금액</b>으로 산정<br>주요 5종: 노령연금·장애연금·유족연금·반환일시금·사망일시금</div>
+        <div class="sub">급여 구성</div>
+        <table class="comp-table">
+          <tr><th>구성</th><th>내용</th></tr>
+          <tr><td><b>기본연금액</b></td><td>연금 수급 전 3년간 평균소득월액의 평균액과 가입자 개인의 가입기간 중 기준소득월액의 평균액을 합한 금액에 <b>1,000분의 1,290</b>을 곱한 금액 (소득대체율 반영)</td></tr>
+          <tr><td><b>부양가족연금액</b></td><td>수급권자에 의하여 생계를 유지하는 자에 대한 <b>가족수당 성격의 부가급여</b><br/>(배우자: 연 300,330원 / 자녀·부모: 연 200,160원, 2025년 기준)</td></tr>
+        </table>
         <div class="sub">급여의 종류</div>
         <table class="comp-table">
           <tr><th>급여</th><th>지급 요건</th></tr>
           <tr><td><b>노령연금</b> <span class="kichul">⭐ 기출</span></td><td>가입기간 <b>10년 이상</b>, <b>60세</b>부터 (→2033년까지 65세로 상향)<br/><small>완전노령연금(20년↑) / 감액노령연금(10~20년) / 조기노령연금 / 재직자노령연금 / 분할연금</small></td></tr>
-          <tr><td><b>장애연금</b></td><td>질병·부상으로 신체상·정신상 장애 발생, 장애가 계속되는 동안 장애정도에 따라 지급 (장애인연금과 다름)</td></tr>
-          <tr><td><b>유족연금</b></td><td>가입자 사망 시 생계를 유지하던 가족에게 지급 (배우자→자녀→부모→손자녀→조부모 순)<br/>가입기간 20년 이상: 기본연금액의 <b>60%</b> + 부양가족연금액</td></tr>
+          <tr><td><b>장애연금</b></td><td>질병·부상으로 신체상·정신상 장애 발생, 장애가 계속되는 동안 장애정도에 따라 지급 <b>(장애인연금과 다름)</b></td></tr>
+          <tr><td><b>유족연금</b></td><td>가입자 사망 시 생계를 유지하던 가족에게 지급 <br>(배우자→자녀→부모→손자녀→조부모 순)<br/>가입기간 20년 이상, 기본연금액의 60% + 부양가족연금액</td></tr>
           <tr><td><b>반환일시금</b></td><td>가입기간 10년 미만 60세 / 사망 / 국적 상실·국외 이주 시 일시 지급</td></tr>
           <tr><td><b>사망일시금</b></td><td>유족연금 받을 유족이 없는 경우 배우자·자녀·부모·손자녀·형제자매 또는 4촌 이내 방계혈족에게 지급</td></tr>
         </table>
-        <div class="sub">급여 구성</div>
-        <table class="comp-table">
-          <tr><th>구성</th><th>내용</th></tr>
-          <tr><td><b>기본연금액</b></td><td>연금 수급 전 3년간 평균소득월액의 평균액과 가입자 개인의 가입기간 중 기준소득월액의 평균액을 합한 금액에 <b>1,000분의 1,290</b>을 곱한 금액 (<b>소득대체율</b> 반영)</td></tr>
-          <tr><td><b>부양가족연금액</b></td><td>수급권자에 의하여 생계를 유지하는 자에 대한 <b>가족수당 성격의 부가급여</b><br/>(배우자: 연 300,330원 / 자녀·부모: 연 200,160원, 2025년 기준)</td></tr>
-        </table>
+        <div class="sub">급여의 조정, 제한 및 보호</div>
+        <ul class="pts yellow">
+          <li>중복급여의 조정</li>
+          <li>급여의 제한 및 정지</li>
+          <li>수급권 보호</li>
+        </ul>
         <div class="hbox hbox-yellow" style="margin-top:6px">💡 <b>2개 이상 수급권 발생 시</b> → <b>중복급여 조정</b> (모두 받는 것이 아님)</div>
       `
     },
     { icon: "🏦", title: "국민연금 재원 및 운영기관",
       html: `
         <div class="hbox hbox-blue">연금보험료를 기금으로 확보하여 운용 (<b>국민연금기금</b>, <b>수정적립방식</b>) / 국민연금공단이 전반적 관리운영</div>
-        <div class="sub">연금보험료율</div>
+         <div class="sub">재원 조달 및 운용</div>
+        <ul class="pts yellow">
+          <li>가입자 및 사용자로부터 징수하는 연금보험료를 기금으로 확보하여 사용</li>
+          <li>※국민연금기금 설치</li>
+        </ul> 
+        <div class="sub">연금보험료율 및 연금보험료 징수</div>
         <table class="comp-table">
           <tr><th>구분</th><th>현행</th><th class="th-blue">개혁안 (2033년)</th></tr>
           <tr><td><b>사업장가입자</b></td><td>기준소득월액의 <b>9%</b> (본인·사용자 각 4.5%)</td><td><b>13%</b>로 단계적 인상</td></tr>
@@ -8674,22 +8698,23 @@ const SUMMARY_DATA = {
       html: `
         <table class="comp-table">
           <tr><th>개념</th><th>핵심 내용</th></tr>
-          <tr><td><b>사회보험법</b></td><td>5대 보험 운영·실시 법률 총칭 — <b>강제가입, 급여 근거=법, 정부 독점 운영</b></td></tr>
-          <tr><td><b>사회보험 원리</b></td><td>소득재분배(수직·수평) / 보편주의 / 보험료 분담 / 최저생활 보장</td></tr>
-          <tr><td><b>급여 근거</b></td><td>사회보험 = <b>법</b> / 사보험 = <b>계약</b></td></tr>
-          <tr><td><b>국민연금 목적</b></td><td>노령·장애·사망에 대한 연금급여로 <b>생활 안정·복지 증진</b></td></tr>
-          <tr><td><b>가입자 종류</b></td><td>사업장·지역·임의·임의계속 (18세↑ 60세↓)</td></tr>
-          <tr><td><b>크레딧 제도</b></td><td>군복무·출산·실업 기간 → 가입기간 추가 산입</td></tr>
-          <tr><td><b>노령연금</b></td><td>가입기간 <b>10년↑</b>, <b>60세</b>부터 (→2033년까지 65세 상향)</td></tr>
-          <tr><td><b>유족연금</b></td><td>가입기간 20년↑ 시 기본연금액의 <b>60%</b> + 부양가족연금액</td></tr>
-          <tr><td><b>2026 개혁안</b></td><td>보험료율 9%→<b>13%</b>(2033년) / 소득대체율 <b>43%</b> / 기금소진 2056→<b>2071년</b></td></tr>
-          <tr><td><b>국민연금공단</b></td><td>가입자 기록 관리, 보험료 부과, 급여 결정·지급</td></tr>
+          <tr><td>사회보험법</td><td>5대 보험 운영·실시 법률 총칭 — 강제가입, 급여 근거=법, 정부 독점 운영</td></tr>
+          <tr><td>국민연금법</td><td>노후소득보장제도의 한 형태</td></tr>
+          <tr><td>국민연금공단</td><td>가입자 기록 관리, 보험료 부과, 급여 결정·지급</td></tr>
+          <tr><td>사회보험 원리</td><td>소득재분배(수직·수평) / 보편주의 / 보험료 분담 / 최저생활 보장</td></tr>
+          <tr><td>급여 근거</td><td>사회보험 = 법 / 사보험 = 계약</td></tr>
+          <tr><td>국민연금 목적</td><td>노령·장애·사망에 대한 연금급여로 생활 안정·복지 증진</td></tr>
+          <tr><td>가입자 종류</td><td>사업장·지역·임의·임의계속 (18세↑ 60세↓)</td></tr>
+          <tr><td>크레딧 제도</td><td>군복무·출산·실업 기간 → 가입기간 추가 산입</td></tr>
+          <tr><td>노령연금</td><td>가입기간 10년↑, 60세부터 (→2033년까지 65세 상향)</td></tr>
+          <tr><td>유족연금</td><td>가입기간 20년↑ 시 기본연금액의 60% + 부양가족연금액</td></tr>
+          <tr><td>2026 개혁안</td><td>보험료율 9%→13%(2033년) / 소득대체율 43% / 기금소진 2056→2071년</td></tr>
         </table>
       `
     },
   ]
 },
-{ num: "11강②", name: "국민건강보험법", icon: "🏥",
+{ num: "11강②", name: "사회보험법Ⅰ · 국민건강보험법", icon: "🏥",
   cards: [
     { icon: "📂", title: "01. 국민건강보험법 — 개요·가입자",
       html: `
@@ -8701,7 +8726,7 @@ const SUMMARY_DATA = {
     },
     { icon: "🏥", title: "국민건강보험법 개요 및 연혁",
       html: `
-        <div class="hbox hbox-blue">국민보건 향상·사회보장 증진 목적 / <b>사회연대성 원리</b>에 따라 의료비를 공동체적으로 해결 / 진료비 보장 + 건강진단 + <b>재활 및 예방</b>까지 포함하는 적극적·포괄적 제도</div>
+        <div class="hbox hbox-blue">국민보건 향상·사회보장 증진 목적 / 사회연대성 원리에 따라 의료비를 공동체적으로 해결 / 진료비 보장 + 건강진단 + 재활 및 예방까지 포함하는 적극적·포괄적 제도</div>
         <ul class="pts">
           <li>개인의 위험을 보험가입자 전원에게 분산 → 경제적 부담 해소, <b>소득 재분배</b> 기능</li>
           <li>국민의 의료비용을 <b>사회연대성의 원리</b>에 따라 공동체적으로 해결</li>
@@ -8711,9 +8736,9 @@ const SUMMARY_DATA = {
         <table class="comp-table">
           <tr><th>연도</th><th>내용</th></tr>
           <tr><td>1963. 12</td><td>의료보험법 제정</td></tr>
-          <tr><td>1976. 12</td><td><b>500인 이상</b> 사업장 근로자 의료보험 실시</td></tr>
+          <tr><td>1976. 12</td><td>500인 이상 사업장 근로자 의료보험 실시</td></tr>
           <tr><td>1989</td><td>전국민 의료보험제도 실시</td></tr>
-          <tr><td>1999. 2</td><td>국민건강보험법 제정·공포 (조합주의 문제점 보완, 건강진단·재활·예방 포괄)</td></tr>
+          <tr><td>1999. 2</td><td><b>국민건강보험법</b> 제정·공포 (조합주의 문제점 보완, 건강진단·재활·예방 포괄)</td></tr>
           <tr><td>2000. 7</td><td>국민건강보험제도 실시</td></tr>
         </table>
       `
@@ -8726,20 +8751,20 @@ const SUMMARY_DATA = {
         <table class="comp-table">
           <tr><th>종류</th><th>대상</th></tr>
           <tr><td><b>직장가입자</b></td><td>사업장 근로자·사용자, 공무원, 교직원</td></tr>
-          <tr><td><b>지역가입자</b></td><td>직장가입자와 그 피부양자를 <b>제외한</b> 나머지 가입자</td></tr>
+          <tr><td><b>지역가입자</b></td><td>직장가입자와 그 피부양자를 제외한 나머지 가입자</td></tr>
         </table>
         <div class="sub">피부양자 (직장가입자 기준)</div>
         <ul class="pts green">
           <li>직장가입자의 <b>배우자</b></li>
           <li>직장가입자의 <b>직계존속</b></li>
-          <li>직장가입자의 <b>직계비속</b>과 그 배우자</li>
+          <li>직장가입자의 <b>직계비속과 그 배우자</b></li>
           <li>직장가입자의 <b>형제자매</b> (소득·재산 요건 충족하는 경우)</li>
         </ul>
         <div class="sub">자격 취득·변동·상실</div>
         <ul class="pts yellow">
           <li>자격취득: <b>국내에 거주하게 된 날</b> <span class="kichul">⭐ 기출</span></li>
           <li>자격변동: 지역가입자가 직장가입자가 된 날 등</li>
-          <li>자격상실: <b>사망 다음날</b>, 국적을 잃은 다음날 등</li>
+          <li>자격상실: 사망 다음날, 국적을 잃은 다음날 등</li>
         </ul>
       `
     },
@@ -8757,27 +8782,27 @@ const SUMMARY_DATA = {
         <div class="hbox hbox-blue">보험급여 5종: <b>요양급여·요양비·건강검진·부가급여·장애인 특례</b> / 요양기관을 통한 현물급여 방식</div>
         <table class="comp-table">
           <tr><th>급여</th><th>내용</th></tr>
-          <tr><td><b>요양급여</b></td><td>가입자·피부양자의 질병·부상·출산 등에 대한 진찰·검사·약제·처치·수술·예방·재활·입원·간호·이송<br/><b>요양기관</b>: 의료법상 의료기관 / 약사법상 약국 / 한국희귀의약품센터 / 지역보건법상 보건소 등</td></tr>
+          <tr><td><b>요양급여</b></td><td>가입자·피부양자의 질병·부상·출산 등에 대한 다음의 요양급여 실시(진찰·검사·약제·처치·수술·예방·재활·입원·간호·이송)<br/><b>요양기관</b>: 의료법상 의료기관 / 약사법상 약국 / 한국희귀의약품센터 / 지역보건법상 보건소 등</td></tr>
           <tr><td><b>요양비</b></td><td>요양기관이 아닌 장소에서 질병·부상·출산 시 요양급여에 상당하는 금액 지급</td></tr>
-          <tr><td><b>건강검진</b></td><td>일반건강검진·암 검진·영유아 건강검진 / <b>2년마다 1회</b> 이상 (사무직 미종사 직장가입자: <b>1년 1회</b>)</td></tr>
+          <tr><td><b>건강검진</b></td><td>가입자 및 피부양자에 건강검진 실시(일반건강검진·암 검진·영유아 건강검진)<br><b>2년마다 1회</b> 이상 (사무직 미종사 직장가입자: <b>1년 1회</b>)</td></tr>
           <tr><td><b>부가급여</b></td><td>임신·출산 진료비</td></tr>
-          <tr><td><b>장애인 특례</b></td><td>보조기기에 대한 보험급여</td></tr>
+          <tr><td><b>장애인에 대한 특례</b></td><td>보조기기에 대한 보험급여</td></tr>
         </table>
         <div class="sub">급여의 제한 및 정지</div>
         <table class="comp-table">
           <tr><th>구분</th><th>사유</th></tr>
-          <tr><td><b>급여 제한</b></td><td>고의 또는 <b>중대한 과실</b>로 인한 사고 등</td></tr>
-          <tr><td><b>급여 정지</b></td><td><b>국외 체류</b> / 현역병 / 교도소 수용기간</td></tr>
+          <tr><td><b>급여 제한</b></td><td>고의 또는 중대한 과실로 인한 사고 등</td></tr>
+          <tr><td><b>급여 정지</b></td><td>국외 체류 / 현역병 / 교도소 수용기간</td></tr>
         </table>
       `
     },
     { icon: "💳", title: "건강보험 재원 및 국가지원",
       html: `
-        <div class="hbox hbox-blue">보험료를 재원으로 운영 / 국가는 보험료 예상수입액의 <b>100분의 14</b>를 국고에서 공단에 지원</div>
+        <div class="hbox hbox-blue">그 해 보험료 납부의무자에게 부과한 보험료를 그 해 사업 소요경비로 지출</div>
         <div class="sub">보험료 산정 기준</div>
         <table class="comp-table">
           <tr><th>구분</th><th>부과 기준</th><th>부담 비율</th></tr>
-          <tr><td><b>직장가입자</b></td><td>보수월액보험료 + 보수 외 소득월액보험료</td><td>가입자 <b>50%</b> + 사용자 <b>50%</b></td></tr>
+          <tr><td><b>직장가입자</b></td><td>보수월액보험료, 보수 외 소득월액보험료</td><td>가입자 <b>50%</b> + 사용자 <b>50%</b></td></tr>
           <tr><td><b>지역가입자</b></td><td>소득·재산 기준 (세대단위 산정)</td><td>가입자 <b>100%</b></td></tr>
         </table>
         <div class="sub">국가 지원</div>
@@ -8790,7 +8815,6 @@ const SUMMARY_DATA = {
     },
     { icon: "🏗️", title: "관리·운영기구",
       html: `
-        <div class="hbox hbox-blue">국민건강보험공단(주관) + 건강보험정책심의위원회(보건복지부 소속, 주요 사항 심의·의결) + 건강보험심사평가원(심사·평가)</div>
         <table class="comp-table">
           <tr><th>기관</th><th>역할</th></tr>
           <tr><td><b>국민건강보험공단</b></td><td>가입자·피부양자 자격관리, 보험급여 관리, 비용지급, 홍보, 조사연구, 국제협력 등</td></tr>
@@ -8803,13 +8827,13 @@ const SUMMARY_DATA = {
       html: `
         <table class="comp-table">
           <tr><th>개념</th><th>핵심 내용</th></tr>
-          <tr><td><b>국민건강보험 목적</b></td><td>국민보건 향상, 사회보장 증진 / <b>사회연대성 원리</b> / 예방·재활까지 포괄</td></tr>
+          <tr><td><b>국민건강보험</b></td><td>국민보건 향상, 사회보장 증진 / 사회연대성 원리 / 예방·재활까지 포괄</td></tr>
           <tr><td><b>가입자 구분</b></td><td>직장가입자(근로자·사용자·공무원·교직원) / 지역가입자(그 외 나머지)</td></tr>
           <tr><td><b>자격 취득·상실</b></td><td>취득 = <b>국내에 거주하게 된 날</b> / 상실 = <b>사망 다음날</b>, 국적 잃은 다음날</td></tr>
           <tr><td><b>요양급여</b></td><td>진찰·검사·약제·처치·수술·예방·재활·입원·간호·이송</td></tr>
-          <tr><td><b>건강검진</b></td><td>2년마다 1회↑ / 사무직 미종사 직장가입자: <b>1년 1회</b></td></tr>
+          <tr><td><b>건강검진</b></td><td>2년마다 1회↑ / 사무직 미종사 직장가입자: 1년 1회</td></tr>
           <tr><td><b>급여 제한/정지</b></td><td>제한: 고의·중대한 과실 / 정지: 국외체류·현역병·교도소 수용</td></tr>
-          <tr><td><b>국가 지원</b></td><td>보험료 예상수입액의 <b>100분의 14</b>를 국고에서 공단에 지원</td></tr>
+          <tr><td><b>국가 지원</b></td><td>보험료 예상수입액의 100분의 14를 국고에서 공단에 지원</td></tr>
           <tr><td><b>건강보험정책심의위원회</b></td><td>보건복지부장관 소속 / 요양급여 기준·보험료율 심의·의결</td></tr>
           <tr><td><b>건강보험심사평가원</b></td><td>요양급여 비용 심사, 적정성 평가</td></tr>
         </table>
@@ -8818,7 +8842,7 @@ const SUMMARY_DATA = {
   ]
 },
 
-{ num: "12강①", name: "산업재해보상보험법 · 고용보험법",
+{ num: "12강①", name: "사회보험법Ⅱ · 산업재해보상보험법 · 고용보험법",
   cards: [
     { icon: "📂", title: "01. 산업재해보상보험법",
       html: `
@@ -8830,70 +8854,71 @@ const SUMMARY_DATA = {
         </div>
       `
     },
-{ icon: "🏭", title: "산재보험법 개요·특성",
+{ icon: "🏭", title: "산업재해보상보험의 개요·특성",
   html: `
     <span class="kichul">⭐ 기출</span>
     <div class="hbox hbox-blue">
       산업 현장 근로자에게 발생하는 제반 재해에 대해 <b>보험방식</b>으로
       근로자·가족을 보호하고 사업주 위험부담을 경감하는 사회복지법
     </div>
-    <div class="sub">연혁</div>
+    <div class="sub">산업재해보상보험의 특성</div>
     <ul class="pts">
-      <li><b>1963.11</b> 제정 — 5대 사회보험 중 <b>가장 먼저 도입</b></li>
-      <li><b>1994.12</b>: 5인 이상 사업장 적용 / <b>2000.7</b>: 1인 이상 사업장 전면 적용</li>
-      <li><b>2017.10</b>: 통상적 경로·방법 출퇴근 중 사고도 <b>업무상 재해로 인정</b></li>
-      <li><b>2024.10</b>: 매년 <b>4월 28일</b> 산업재해근로자를 위한 법정기념일 지정</li>
+      <li><b>사업주 책임보험</b>: 보험료 100% 사업주 부담 (근로자 미납)</li>
+      <li><b>사업장 단위 가입</b>: 개별 근로자가 아닌 사업장 단위로 가입</li>
+      <li><b>업무담당자 높은 재량권</b>: 근로복지공단의 산재 인정 여부 판단에 재량 폭이 큼 — 결정까지 수개월~1년 소요되기도 함</li>
+      <li><b>현금+현물 급여 제공</b>: 요양비(현물)와 휴업급여·장해급여(현금) 동시 제공</li>
     </ul>
-    <div class="sub">4대 특성</div>
-    ...
-        <ul class="pts">
-          <li><b>사업주 책임보험</b>: 보험료 100% 사업주 부담 (근로자 미납)</li>
-          <li><b>사업장 단위 가입</b>: 개별 근로자가 아닌 사업장 단위로 가입</li>
-          <li><b>업무담당자 높은 재량권</b>: 근로복지공단의 산재 인정 여부 판단에 재량 폭이 큼 — 결정까지 수개월~1년 소요되기도 함</li>
-          <li><b>현금+현물 급여 제공</b>: 요양비(현물)와 휴업급여·장해급여(현금) 동시 제공</li>
-        </ul>
-        <div class="sub">관리·운영기구</div>
-        <div class="flow">
-          <span class="flow-item">고용노동부 장관<br/><span style="font-size:.8em">총괄 관리</span></span>
-          <span class="flow-arrow">▶</span>
-          <span class="flow-item">근로복지공단<br/><span style="font-size:.8em">급여 집행</span></span>
-        </div>
+    <div class="sub">산업재해보상보험의 목적</div>
+    <ul class="pts">
+      <li>근로자 업무상 재해 <b>신속·공정 보상</b></li>
+      <li>재해근로자의 <b>재활·사회복귀 촉진에 필요한 보험 시설 설치 운영, 재해예방</b></li>
+      <li>근로자 <b>복지증진</b> 사업 시행으로 근로자 보호에 기여</li>
+    </ul>
+    <div class="sub">연혁</div>
+    <table class="comp-table">
+      <tr><th>연도</th><th>내용</th></tr>
+      <tr><td>1963.11</td><td>산업재해보상보험법 제정 — 5대 사회보험 중 <b>가장 먼저 도입</b></td></tr>
+      <tr><td>1994.12</td><td>5인 이상 사업장 적용</td></tr>
+      <tr><td>2000.7</td><td>1인 이상 사업장 적용</td></tr>
+      <tr><td>2017.10</td><td>통상적 경로·방법 출퇴근 중 사고도 <b>업무상 재해로 인정</b></td></tr>
+      <tr><td>2024.10</td><td>매년 <b>4월 28일</b> 산업재해근로자를 위한 법정기념일 지정, 관련 행사, 교육, 지원 등 사업 실시</td></tr>
+      </table>
       `
     },
-    { icon: "🎯", title: "산재보험법 목적 & 가입대상자",
+    { icon: "🎯", title: "산업재해보상보험의 가입대상자",
       html: `
-        <div class="hbox hbox-blue">
-          근로자 업무상 재해 <b>신속·공정 보상</b> / 재해근로자의 <b>재활·사회복귀 촉진</b> / 근로자 <b>복지증진</b>에 기여
+        <div class="sub">보험가입자</div>
+          <div class="badge-row">
+          <span class="badge badge-blue">보험자 - 근로복지공단</span>
+          <span class="badge badge-green">보험가입자 - 사업자</span>
         </div>
-        <div class="sub">보험자 & 보험가입자</div>
-        <table class="comp-table">
-          <tr><th>구분</th><th>해당 주체</th></tr>
-          <tr><td><b>보험자</b></td><td>근로복지공단</td></tr>
-          <tr><td><b>보험가입자</b></td><td>사업자 (사업주)</td></tr>
-          <tr><td><b>피보험자</b></td><td>별도 규정 없음 — 실질 수급자는 업무상 재해를 당한 근로자</td></tr>
-        </table>
-        <div class="sub">적용 범위</div>
-        <ul class="pts green">
-          <li>근로자를 사용하는 <b>모든 사업장</b>에 적용</li>
-        </ul>
         <ul class="pts red">
+          <li>피보험자 개념을 별도로 규정하고 있지 않음.</li>
           <li>적용 제외: 공무원·군인·사립학교 교직원 연금법 적용자 (대통령령으로 정하는 사업)</li>
         </ul>
-        <div class="sub">수급자 — 업무상 재해의 3가지 유형</div>
+        <div class="sub">수급자 — 업무상 재해를 당한 근로자</div>
         <div class="badge-row">
           <span class="badge badge-blue">업무상 사고</span>
           <span class="badge badge-green">업무상 질병</span>
           <span class="badge badge-yellow">출퇴근 재해 (2017.10~)</span>
+        </div><br>
+        <div class="sub">✅ 업무상 재해 인정사례  <span class="kichul">⭐ 기출</span></div>
+        <ul class="pts green">
+          <li>회사가 건강관리 차원에서 마련해 준 <b>체력단련실</b>에서 역기를 들다 다쳐 병원 후송 중 사망</li>
+          <li>회사 차원의 마라톤 대회 참여를 위해 <b>마라톤 동호회 자율적 정기 연습</b>을 하다 쓰러짐</li>
+          <li>사장 허락 후 집에서 점심식사 후 사업장 <b>복귀하다 사고</b>로 다침</li>
+        </ul>
+        <div class="hbox hbox-blue">
+          <div class="sub">✗ 인정되기 어려운 사례</div>
+          <ul class="pts red">
+            <li>회사와 관련 없이 친한 동료 몇 사람과 함께한 <b>개인적 술자리</b>에서 다친 경우</li>
+          </ul>
         </div>
       `
     },
-    { icon: "💰", title: "산재보험 급여 종류",
+    { icon: "💰", title: "산업재해보상보험의  급여 종류",
       html: `
-        <span class="kichul">⭐ 기출</span>
-        <div class="hbox hbox-blue">
-          총 8종 급여 제공 — 현금급여(휴업·장해·유족·상병보상연금·장례비)와 현물급여(요양) 병행
-        </div>
-        <div class="sub">급여 목록</div>
+        <div class="sub">급여 목록  <span class="kichul">⭐ 기출</span></div>
         <div class="badge-row">
           <span class="badge badge-blue">요양급여 (4일 이상)</span>
           <span class="badge badge-green">휴업급여</span>
@@ -8908,7 +8933,7 @@ const SUMMARY_DATA = {
         <ul class="pts">
           <li><b>요양급여</b>: 업무상 부상·질병으로 <b>4일 이상</b> 요양 필요 시 치료 비용 지급</li>
           <li><b>휴업급여</b>: 재해로 일하지 못하는 기간 — 1일당 평균임금의 <b>70%</b> 지급</li>
-          <li><b>장해급여</b>: 재해 치유 후 신체 장해 시 — 장해보상연금 또는 일시금 (1~14급)</li>
+          <li><b>장해급여</b>: 재해 치유 후 신체 장해 시 — 장해보상연금 또는 일시금 (<b>업무상 신체손상은 장해등급</b>, 장애등급(✗)은 폐지.)</li>
           <li><b>간병급여</b>: 요양급여 후 상시·수시 간병 필요 시 실제 간병받는 자에게 지급</li>
           <li><b>유족급여</b>: 업무상 사유 사망 시 유족에게 — 유족보상연금·일시금</li>
           <li><b>상병보상연금</b>: 요양 시작 후 <b>2년</b> 지나도 미치유 시 → 휴업급여 대신 지급</li>
@@ -8920,25 +8945,11 @@ const SUMMARY_DATA = {
           <li>매년 <b>6월 30일</b> 기준 — 과거 <b>3년</b> 보수총액 대비 산재보험급여총액 비율을 기초로 산정</li>
           <li>재해 위험성에 따라 분류된 <b>업종별 보험료율</b>을 세분화하여 적용</li>
         </ul>
-        <div class="hbox hbox-red">❌ 연금급여는 산재보험 급여에 해당하지 않음</div>
-      `
-    },
-    { icon: "🔍", title: "업무상 재해 인정사례",
-      html: `
-        <span class="kichul">⭐ 기출</span>
-        <div class="hbox hbox-blue">
-          업무상 재해: 업무상 사고 / 업무상 질병 / <b>출퇴근 재해</b> (2017.10부터 통상적 경로·방법 출퇴근 중 사고 인정)
+        <div class="sub">관리·운영기구</div>
+        <div class="flow">
+          <span class="badge badge-blue">고용노동부 장관 (총괄 관리)</span>
+          <span class="badge badge-blue">근로복지공단 (급여 집행)</span>
         </div>
-        <div class="sub">✅ 인정 사례</div>
-        <ul class="pts green">
-          <li>회사가 건강관리 차원에서 마련해 준 <b>체력단련실</b>에서 역기를 들다 다쳐 병원 후송 중 사망</li>
-          <li>회사 차원의 마라톤 대회 참여를 위해 <b>마라톤 동호회 자율적 정기 연습</b>을 하다 쓰러짐</li>
-          <li>사장 허락 후 집에서 점심식사 후 사업장 <b>복귀하다 사고</b>로 다침</li>
-        </ul>
-        <div class="sub">✗ 인정되기 어려운 사례</div>
-        <ul class="pts red">
-          <li>회사와 관련 없이 친한 동료 몇 사람과 함께한 <b>개인적 술자리</b>에서 다친 경우</li>
-        </ul>
       `
     },
     { icon: "📂", title: "02. 고용보험법",
@@ -8954,38 +8965,40 @@ const SUMMARY_DATA = {
     },
     { icon: "💼", title: "고용보험법 개요·연혁",
       html: `
-        <div class="hbox hbox-blue">
-          실업 예방, 고용촉진 및 직업능력개발, 실업 시 급여 지급으로 <b>근로자 생활안정과 구직활동 촉진</b><br/>
-          두 축: <b>① 실직자 실업급여 지급</b> + <b>② 고용안정·직업능력개발사업</b>
-        </div>
+        <div class="sub">개요</div>
+          <ul class="pts">
+            <li>실업 예방, 고용촉진 및 직업능력개발, 실업 시 급여 지급으로 <b>근로자 생활안정과 구직활동 촉진</b></li>
+            <li>두 축: <b>① 실직자 실업급여 지급</b> + <b>② 고용안정·직업능력개발사업</b></li>
+          </ul>
         <div class="sub">연혁</div>
-        <ul class="pts">
-          <li><b>1993.12</b> 제정 / <b>1995.7</b> 시행</li>
-          <li><b>1998.9</b>: 전 사업장으로 고용보험 적용 확대 근거 마련</li>
-          <li><b>2002.12</b>: 일용근로자 고용보험 적용 대상 포함</li>
-          <li><b>2011.7</b>: 자영업자 실업급여 적용 근거 마련</li>
-          <li><b>2021.1</b>: 특수형태근로종사자(특고) 등 피보험자격·구직급여 규정 적용</li>
-          <li><b>2024.10</b>: 배우자 출산휴가 급여 지급기간 — 최초 5일에서 <b>휴가 전체 기간</b>으로 확대</li>
-        </ul>
+        <table class="comp-table">
+          <tr><th>연도</th><th>내용</th></tr>
+          <tr><td><b>1993.12</b></td><td> 고용보험 제정</td></tr>
+          <tr><td><b>1995.7</b></td><td> 고용보험 시행</td></tr>
+          <tr><td><b>1998.9</b></td><td> 전 사업장으로 고용보험 적용 확대 근거 마련</td></tr>
+          <tr><td><b>2002.12</b></td><td> 일용근로자 고용보험 적용 대상 포함</td></tr>
+          <tr><td><b>2011.7</b></td><td> 자영업자 실업급여 적용 근거 마련</td></tr>
+          <tr><td><b>2021.1</b></td><td> 특수형태근로종사자(특고) 등 피보험자격·구직급여 규정 적용</td></tr>
+          <tr><td><b>2024.10</b></td><td> 배우자 출산휴가 급여 지급기간 — 최초 5일에서 <b>휴가 전체 기간</b>으로 확대</td></tr>
+        </table>
       `
     },
     { icon: "👥", title: "고용보험 가입자 & 피보험자",
       html: `
-        <div class="hbox hbox-blue">
-          근로자를 사용하는 모든 사업·사업장에 적용 — 피보험 자격은 <b>고용된 날 취득</b>, <b>이직한 날 다음날 상실</b>
-        </div>
-        <div class="sub">적용 제외 근로자</div>
+        <div class="sub">적용 범위</div>
         <ul class="pts red">
-          <li>65세 이후 고용되거나 자영업을 개시한 자</li>
-          <li>1개월 소정 근로시간이 <b>60시간 미만</b>인 자</li>
-          <li>공무원 및 사립학교 교직원 연금법 적용자</li>
+        <li>근로자를 사용하는 모든 사업·사업장에 적용</li>
+        <li>적용 제외 근로자<br>
+         - 65세 이후 고용되거나 자영업을 개시한 자<br>
+         - 1개월 소정 근로시간이 60시간 미만인 자<br>
+         - 공무원 및 사립학교 교직원 연금법 적용자<br>
+         </li>  
         </ul>
         <div class="sub">피보험 자격 취득·상실</div>
-        <table class="comp-table">
-          <tr><th>구분</th><th>시점</th></tr>
-          <tr><td><b>취득</b></td><td>이 법이 적용되는 사업에 <b>고용된 날</b></td></tr>
-          <tr><td><b>상실</b></td><td><b>이직한 날 다음날</b> / 적용제외 대상자가 된 날</td></tr>
-        </table>
+        <ul class="pts">
+		      <li><b>취득</b> : 이 법이 적용되는 사업에 <b>고용된 날</b> </li> 
+          <li><b>상실</b> : <b>이직한 날 다음날</b> / 적용제외 대상자가 된 날 </li> 
+        </ul>
       `
     },
     { icon: "📋", title: "고용보험 급여 종류",
@@ -8998,73 +9011,67 @@ const SUMMARY_DATA = {
         <div class="badge-row">
           <span class="badge badge-blue">고용안정·직업능력개발사업</span>
           <span class="badge badge-green">구직급여</span>
-          <span class="badge badge-yellow">취업촉진수당</span>
+          <span class="badge badge-green">취업촉진수당</span>
+          <span class="badge badge-green">자영업자 피보험자 실업급여 적용 특례</span>
           <span class="badge badge-purple">육아휴직급여 (최대 1년 6개월)</span>
-          <span class="badge badge-gray">출산전후휴가급여 (90일)</span>
+          <span class="badge badge-purple">육아기 근로시간 단축급여</span>
+          <span class="badge badge-purple">출산전후휴가급여 (90일)</span>
         </div>
-        <div class="sub">고용안정·직업능력개발사업 내용</div>
+        <div class="sub">✔ 고용안정·직업능력개발사업 내용</div>
         <ul class="pts">
           <li>고용창출 지원 / 고용조정 지원 / 고용촉진 지원(지역 이전 등)</li>
           <li>건설근로자 고용안정 지원 / 직업능력개발 지원</li>
         </ul>
-        <div class="sub">구직급여 수급 조건</div>
-        <ul class="pts yellow">
-          <li>이직일 이전 <b>18개월</b> 내 피보험 단위기간 합산 <b>180일 이상</b></li>
-          <li><b>근로의 의사와 능력이 있음에도</b> 취업하지 못한 상태</li>
+        <div class="sub">✔ 구직급여</div>
+        <ul class="ptsFC">
+         <li>피보험자가 이직한 경우로서 다음의 요건을 모두 갖춘 경우 지급</li>
+          <li>이직일 이전 18개월 내 피보험 단위기간 합산 180일 이상</li>
+          <li>근로의 의사와 능력이 있음에도 취업하지 못한 상태</li>
           <li>이직 사유가 수급 자격 제한 사유에 해당하지 않을 것</li>
           <li>재취업을 위한 노력을 적극적으로 할 것</li>
         </ul>
-        <div class="sub">취업촉진수당 종류</div>
+        <div class="sub">✔ 취업촉진수당</div>
         <ul class="pts">
           <li>조기재취업 수당 / 직업능력개발 수당 / 광역 구직활동비 / 이주비</li>
         </ul>
-        <div class="hbox hbox-yellow">💡 자영업자 피보험자 실업급여 적용 특례: <b>구직급여 + 취업촉진수당</b>만 적용</div>
-        <div class="hbox hbox-red">❌ 해당 안 됨: 특례요양비, 해산급여</div>
-      `
-    },
-    { icon: "🍼", title: "육아휴직 급여 등",
-      html: `
-        <span class="kichul">⭐ 기출</span>
-        <div class="hbox hbox-blue">
-          육아휴직 <b>30일 이상</b> 부여받은 피보험자 대상 — 최대 <b>1년 6개월</b>, <b>4번</b>에 나눠 사용 가능
-        </div>
-        <div class="sub">육아휴직 급여 지급률</div>
-        <table class="comp-table">
+        <div class="sub">✔ 자영업자 피보험자 실업급여 적용 특례</div>
+          <ul class="pts">
+            <li>구직급여, 취업촉진수당만 적용</li>
+          </ul>
+        <div class="sub">✔ 육아휴직 급여</div>
+          <ul class="ptsFC">
+            <li>육아휴직 30일 이상 부여받은 피보험자 대상</li>
+          </ul>
+          <table class="comp-table" style="margin:15px 0;">
           <tr><th>기간</th><th>지급률</th><th>월 상한</th></tr>
           <tr><td><b>1~3개월</b></td><td>통상임금의 <b>100%</b></td><td>250만원</td></tr>
           <tr><td><b>4~6개월</b></td><td>통상임금의 <b>100%</b></td><td>200만원</td></tr>
           <tr><td><b>7개월~종료</b></td><td>통상임금의 <b>80%</b></td><td>160만원</td></tr>
+          <tr><td colspan="3" style="text-align: center; font-weight: normal;">※ 기간 : 최대 1년 6개월, 4번에 나눠 사용</td></tr>
         </table>
-        <div class="sub">육아기 근로시간 단축급여 & 출산전후휴가급여</div>
-        <ul class="pts">
-          <li><b>육아기 근로시간 단축급여</b>: 육아 중 근로시간 단축 신청 시 지급</li>
-          <li><b>출산전후휴가급여</b>: 90일 — 출산 후 <b>45일 이상</b> 필수 포함 (출산 전에 60일 모두 사용 불가)</li>
-        </ul>
+        <div class="sub">✔ 육아기 근로시간 단축급여</div>
+        <div class="sub">✔ 출산전후휴가 급여</div>
+        <ul class="pts"><li>90일, 출산 후에 45일 이상 되어야 함</li></ul>
       `
     },
     { icon: "💵", title: "고용보험 재원 & 운영",
       html: `
-        <div class="hbox hbox-blue">
-          실업급여: 사업주·근로자 각 <b>50%</b> 부담 / 고용안정·직업능력개발사업: <b>사업주 전액</b> 부담
-        </div>
-        <div class="sub">보험료 분담</div>
-        <table class="comp-table">
-          <tr><th>항목</th><th>부담자</th></tr>
-          <tr><td>실업급여</td><td>사업주·근로자 각 <b>50%</b></td></tr>
-          <tr><td>고용안정·직업능력개발 사업</td><td><b>사업주 전액</b></td></tr>
-        </table>
-        <div class="sub">고용보험기금</div>
+        <div class="sub">✔ 보험료 분담</div>
+        <ul class="pts">
+          <li>실업급여 : 사업주·근로자 각 <b>50%</b></li>
+          <li>고용안정·직업능력개발 사업 : <b>사업주 전액 부담</b></li>
+        </ul>
+        <div class="sub">✔ 고용보험기금</div>
         <ul class="pts green">
           <li>고용노동부장관이 보험 사업 재원 충당 위해 <b>고용보험기금</b> 설치</li>
           <li>조성: 보험료·징수금 + 적립금 + 기금운용 수익금 + 그 밖의 수입</li>
         </ul>
-        <div class="sub">관리 운영</div>
-        <table class="comp-table">
-          <tr><th>역할</th><th>기관</th></tr>
-          <tr><td>관리주체</td><td>고용노동부 장관</td></tr>
-          <tr><td>주요사항 결정·기획</td><td>고용노동부 본부</td></tr>
-          <tr><td>집행</td><td>지방노동관서 및 근로복지공단</td></tr>
-        </table>
+        <div class="sub">✔ 운영</div>
+        <ul class="pts">
+          <li>관리주체 : 고용노동부 장관</li>
+          <li>주요사항 결정·기획업무 : 고용노동부 본부</li>
+          <li>집행 : 지방노동관서 및 근로복지공단</li>
+        </ul>
       `
     },
     { icon: "📝", title: "12강① 핵심 요약",
@@ -9087,7 +9094,7 @@ const SUMMARY_DATA = {
 },
 { num: "12강②", name: "노인장기요양보험법",
   cards: [
-    { icon: "📂", title: "01. 노인장기요양보험법 개요",
+    { icon: "📂", title: "03. 노인장기요양보험법",
       html: `
         <div class="badge-row">
           <span class="badge badge-blue">개요·의의·특성</span>
@@ -9099,87 +9106,71 @@ const SUMMARY_DATA = {
     },
     { icon: "👵", title: "노인장기요양보험법 개요·의의·특성",
       html: `
+        <div class="sub">목적</div>
         <div class="hbox hbox-blue">
-          노년기 요양문제를 개인·가족의 문제가 아닌 <b>국가·사회공동체가 연대하여 책임져야 할 사회적 위험</b>으로 인정<br/>
-          <b>노인</b> 정의 <span class="kichul">⭐ 기출</span>: <b>65세 이상</b>인 자 OR 65세 미만이라도 치매·뇌혈관질환 등 <b>노인성 질병</b>을 가진 자
+          고령, 노인성 질병 등의 사유로 일상생활을 혼자서 수행하기 어려운 노인 등에게 제공하는 신체활동 또는 가사활동 지원 등 장기요양급여에 관한 사항을 규정하여 노후의 건강증진 및 생활안정을 도모하고 그 가족의 부담을 덜어줌으로써 국민의 삶의 질 향상 (제 1조)
         </div>
-        <div class="sub">연혁</div>
-        <div class="flow">
-          <span class="flow-item">2001 도입 제시<br/><span style="font-size:.78em">대통령 경축사</span></span>
-          <span class="flow-arrow">▶</span>
-          <span class="flow-item">2007.4 제정</span>
-          <span class="flow-arrow">▶</span>
-          <span class="flow-item">2008.7 시행<br/><span style="font-size:.78em">최중증 노인부터</span></span>
-          <span class="flow-arrow">▶</span>
-          <span class="flow-item">2024.12<br/><span style="font-size:.78em">국가책임 강화·국공립 확충</span></span>
-        </div>
-        <div class="sub">3대 특성</div>
+        <div class="sub">의의</div>
         <ul class="pts">
-          <li><b>장기성과 복합성</b>: 장기간에 걸쳐 복합적으로 제공되는 급여</li>
-          <li><b>제공 과정의 합리성</b>: 방문조사·인정점수 산정 등 체계적 절차 운영</li>
-          <li><b>사회보험제도로서의 장기요양보호서비스</b>: 사회서비스가 아닌 보험 형식</li>
+          <li>노년기 요양문제를 개인·가족의 문제가 아닌 <b>국가·사회공동체가 연대하여 책임져야 할 사회적 위험</b>으로 인정<br/>
         </ul>
-        <div class="hbox hbox-yellow">💡 5대 사회보험 중 <b>가장 마지막</b>으로 도입 / 관리운영기관: <b>국민건강보험공단</b></div>
+        <div class="sub">특성</div>
+        <ul class="pts">
+          <li><b>장기요양급영의 장기성과 복합성</b> : 장기간에 걸쳐 복합적으로 제공되는 급여</li>
+          <li><b>장기요양급영의 제공 과정의 합리성</b> : 방문조사·인정점수 산정 등 체계적 절차 운영</li>
+          <li><b>사회보험제도로서의 장기요양보호서비스</b> : 사회서비스가 아닌 보험 형식</li>
+        </ul>
+        <div class="sub">입법배경</div>
+        
+        <ul class="pts">
+         <li>급속한 고령화, 장기 요양이 필요한 노인의 가정 돌봄 어려움, 가정의 비용부담 증가 등</li>
+        </ul>
+        <div class="sub">연혁</div>
+        </ul>
+        <table class="comp-table">
+          <tr><th>연도</th><th>주요 내용</th></tr>
+          <tr><td><b>2001.8</b></td><td>대통령 경축사에서 노인수발보험제도 도입 제시</td></tr>
+          <tr><td><b>2004.11 ~ 2006.6</b></td><td>노인수발보험제도 도입에 대한 대국민 여론조사, 시범사업 실시(2회)</td></tr>
+          <tr><td><b>2007.4</b></td><td>'노인장기요양보험법' 제정</td></tr>
+          <tr><td><b>2008.7</b></td><td>최중증 노인부터 제도 시행 후, 단계적으로 적용 범위 확대</td></tr>
+          <tr><td><b>2024.12</b></td><td>요양서비스에 대한 국가 책임 강화(국·공립 장기 요양기관 확충 등)</td></tr>
+        </table>
       `
     },
     { icon: "📋", title: "장기요양기본계획 & 대상자",
       html: `
-        <div class="hbox hbox-blue">
-          장기요양기본계획: <b>5년마다</b> 수립 / 가입자: 국민건강보험법에 따른 <b>건강보험 가입자 = 장기요양보험 가입자</b>
-        </div>
-        <div class="sub">기본계획 수립 내용</div>
+        <div class="sub">장기요양 기본계획</div>
         <ul class="pts">
           <li>연도별 장기요양급여 대상인원 및 재원조달 계획</li>
           <li>연도별 장기요양기관 및 장기요양전문인력 관리 방안</li>
           <li>장기요양요원의 처우에 관한 사항 등</li>
+        </ul>
+        <div class="sub">장기요양보험 가입자</div>
+        <ul class="pts green">
+          <li>'국민건강보험법'에 따른 건강보험 가입자</li>
         </ul>
         <div class="sub">장기요양인정 신청자격</div>
         <ul class="pts green">
           <li>노인 등으로서 장기요양보험가입자 또는 그 피부양자</li>
           <li>의료급여법에 따른 수급권자</li>
         </ul>
-        <div class="sub">주요 행정 사항</div>
-        <ul class="pts yellow">
-          <li>장기요양위원회: 보험료율, 재가·시설 급여비용 등 심의</li>
-          <li>장기요양기관: 노인복지시설 중 노인의료복지시설·재가노인복지시설</li>
-          <li>장기요양기관 지정 유효기간: <b>6년</b></li>
-          <li>국가 지원: 매년 예상수입액의 <b>100분의 20</b>에 상당하는 금액을 공단에 지원</li>
-        </ul>
       `
     },
-    { icon: "🔄", title: "장기요양인정 신청절차",
+    { icon: "🔄", title: "장기요양인정 신청절차 및 등급판정",
       html: `
-        <div class="hbox hbox-blue">
-          인정 신청 → 방문 조사 → 등급 판정 → 인정서·계획서 송부 → 급여 제공 순으로 진행
-        </div>
-        <div class="flow">
-          <span class="flow-item">인정 신청<br/><span style="font-size:.78em">의사소견서 제출</span></span>
-          <span class="flow-arrow">▶</span>
-          <span class="flow-item">방문 조사<br/><span style="font-size:.78em">장기요양인정 조사표</span></span>
-          <span class="flow-arrow">▶</span>
-          <span class="flow-item">등급 판정<br/><span style="font-size:.78em">인정점수 산정</span></span>
-          <span class="flow-arrow">▶</span>
-          <span class="flow-item">인정서·계획서 송부<br/><span style="font-size:.78em">급여 제공</span></span>
-        </div>
-        <div class="hbox hbox-yellow">💡 등급 판정 기준: 신청 자격 충족 + <b>6개월 이상</b> 혼자서 일상생활 수행이 어렵다고 인정되는 경우</div>
-      `
-    },
-    { icon: "🔢", title: "등급 판정",
-      html: `
-        <span class="kichul">⭐ 기출</span>
-        <div class="hbox hbox-blue">
-          1등급~5등급 + 인지지원등급 총 6개 등급 / 5등급·인지지원등급은 <b>치매 환자</b> 대상
-        </div>
-        <div class="badge-row">
-          <span class="badge badge-red">1등급</span>
-          <span class="badge badge-yellow">2등급</span>
-          <span class="badge badge-green">3등급</span>
-          <span class="badge badge-blue">4등급</span>
-          <span class="badge badge-purple">5등급 (치매)</span>
-          <span class="badge badge-gray">인지지원등급 (치매)</span>
-        </div>
-        <div class="hbox hbox-yellow">💡 장기요양인정 유효기간: <b>최소 1년</b> (6개월 아님)</div>
-        <div class="hbox hbox-red">❌ 유효기간을 6개월로 혼동 주의</div>
+        <div class="sub">장기요양인정 신청 절차</div>
+        <table class="comp-table">
+          <tr><th>절차</th><th>내용</th></tr>
+          <tr><td>1) 인정신청</td><td>의사소견서 제출</td></tr>
+          <tr><td>2) 방문 조사</td><td>장기요양인정 조사표에 의한 조사</td></tr>
+          <tr><td>3) 등급 판정</td><td>인정점수 산정, 등급판정</td></tr>
+          <tr><td>4) 인정서·계획서 송부, 급여 제공</td></tr>
+        </table>
+        <div class="sub">장기요양 등급판정</div>
+          <ul class="pts">
+            <li>신청인이 신청 자격 충족하고 <b>6개월 이상</b> 혼자서 일상생활 수행이 어렵다고 인정하는 경우 등급판정 기준에 따라 수급자로 판정</li>
+            <li>1등급~5등급, 인지지원등급 / 5등급·인지지원등급 : <b>치매 환자</b> <span class="kichul">⭐ 기출</span></li>
+          </ul>
       `
     },
     { icon: "📂", title: "02. 장기요양급여 & 재원",
@@ -9191,19 +9182,15 @@ const SUMMARY_DATA = {
         </div>
       `
     },
-    { icon: "🏠", title: "급여 종류",
+    { icon: "🏠", title: "장기요양보험 급여 종류",
       html: `
         <span class="kichul">⭐ 기출</span>
-        <div class="hbox hbox-blue">
-          재가급여(집에서) / 시설급여(입소) / 특별현금급여 3종
-        </div>
         <table class="comp-table">
           <tr><th>종류</th><th>내용</th></tr>
           <tr><td><b>재가급여</b></td><td>자신의 집에 거주하면서 요양급여 수급 — 방문요양, 방문목욕, 방문간호, 주야간보호, 단기보호 등</td></tr>
           <tr><td><b>시설급여</b></td><td>장기요양기관에 <b>장기간 입소</b>한 수급자에게 제공하는 급여</td></tr>
           <tr><td><b>특별현금급여</b></td><td>가족요양비 / 특례요양비 / <b>요양병원 간병비</b> <span class="kichul">⭐ 기출</span> (노인전문병원·요양병원 입원 시)</td></tr>
         </table>
-        <div class="hbox hbox-red">❌ 자신의 집에서 급여 받는 것 = <b>재가급여</b> (시설급여 아님)</div>
       `
     },
     { icon: "💵", title: "재원 구성 & 관리운영기관",
@@ -9212,20 +9199,23 @@ const SUMMARY_DATA = {
           건강보험료와 <b>통합 징수</b>하되 <b>독립 회계</b>로 관리 / 관리운영기관: <b>국민건강보험공단</b> <span class="kichul">⭐ 기출</span>
         </div>
         <div class="sub">재원 구성</div>
-        <div class="badge-row">
-          <span class="badge badge-blue">노인장기요양보험료 (건강보험료와 통합 징수·독립 회계)</span>
-        </div>
-        <div class="badge-row" style="margin-top:6px">
-          <span class="badge badge-green">본인부담금 (급여비용 일부)</span>
-          <span class="badge badge-yellow">국가지원 (예상수입액의 20/100)</span>
-        </div>
+        <table class="comp-table">
+          <tr><th>종류</th><th>내용</th></tr>
+          <tr><td><b>건강보험료와 통합 징수</b></td><td>건강보험료와 통합하여 징수<br>(※구분고지하며 각각 독립 회계로 관리)</td></tr>
+          <tr><td><b>본인부담금</b></td><td>수급자 본인이 장기요양급여비용의 일부 부담</td></tr>
+          <tr><td><b>국가지원</b></td><td>구가는 매년 해당 연도 장기요양보험료 예상수입액의 100분의 20에 해당하는 금액을 공단에 지원</td></tr>
+        </table>        
         <div class="sub">장기요양보험료율 변화</div>
-        <div class="flow">
-          <span class="flow-item">6.55%<br/><span style="font-size:.78em">2017년</span></span>
-          <span class="flow-arrow">▶</span>
-          <span class="flow-item">12.27%<br/><span style="font-size:.78em">2022년</span></span>
-        </div>
-        <div class="hbox hbox-yellow">💡 세대 간 형평성 문제 / 경증 노인의 요양시설 이용 증가 등 → 지속가능성 과제</div>
+        <table class="comp-table">
+          <tr><th>2017년</th><th>2022년</th></tr>
+          <tr><td style="text-align:center; font-weight:normal;">6.55%</td><td style="text-align:center;">12.27%</td></tr>
+        </table>  
+        <div class="sub">관리운영기관</div>
+        <ul class="pts yellow">
+          <li>장기요양기관 : 노인복지시설 중 노인의료복지시설, 재가노인복지시설 (※ 지정 유효기간: <b>6년</b>)</li>
+          <li>관리운영기관 : 국민건강보험공단</li>
+          <li>장기요양위원회 : 보험료율, 재가 및 시설 급여비용 등 심의</li>
+        </ul>
       `
     },
     { icon: "📝", title: "12강② 핵심 요약",
@@ -9245,44 +9235,1211 @@ const SUMMARY_DATA = {
     }
   ]
 },
-        { num: "13강①", name: "공공부조법 · 국민기초생활보장 · 의료급여",
-        cards: [
-          { icon: "🏛️", title: "공공부조 기본원칙", html: "<div class=\"badge-row\">\n<span class=\"badge badge-blue\">최저생활보장</span>\n<span class=\"badge badge-green\">무갹출보호 (국가 부담)</span>\n<span class=\"badge badge-yellow\">열등처우 (영국 빈민법)</span>\n<span class=\"badge badge-gray\">세대단위 급여 적용</span>\n</div>" },
-          { icon: "📊", title: "국민기초생활보장법 주요 개념", html: "<ul class=\"pts\">\n<li><b>수급권자</b>: 급여를 받을 자격을 가진 사람</li>\n<li><b>수급자</b>: 급여를 받는 사람</li>\n<li><b>소득인정액</b> = <b>소득평가액</b> + <b>재산의 소득환산액</b> (보장기관이 급여 결정·실시를 위해 산출한 개별가구 금액, 제2조)</li>\n<li><b>차상위계층</b>: 수급권자에 해당하지 않는 계층으로서 소득인정액이 기준 중위소득의 <b>100분의 50</b> 이하인 사람 <span class=\"kichul\">⭐ 기출</span></li>\n<li><b>부양의무자</b>: 수급권자의 <b>1촌의 직계혈통(혈족) 및 그 배우자</b> → 2022년 기준 <b>의료급여에만</b> 적용</li>\n</ul>\n<div class=\"flow\" style=\"margin-top:10px\">\n<span class=\"flow-item\">1999.9 제정</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">2000.10 시행</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">2014 맞춤형 급여체계 개편</span>\n</div>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:8px\">\n      2014 개편: 최저생계비 → <b>기준 중위소득</b> (상대적 빈곤 개념 도입)\n    </div>" },
-          { icon: "💳", title: "급여 종류 & 선정 기준", html: "<table class=\"comp-table\">\n<tr><th>급여</th><th>선정 기준</th><th>내용</th></tr>\n<tr><td><b>생계급여</b></td><td>중위소득 <b>100분의 30</b> 이하 <span class=\"kichul\">⭐ 기출</span></td><td>의복·음식물·연료비 등 금품 지급</td></tr>\n<tr><td><b>의료급여</b></td><td>중위소득 <b>100분의 40</b> 이하</td><td>의료급여법에서 규정</td></tr>\n<tr><td><b>주거급여</b></td><td>중위소득 <b>48/100</b> 이하</td><td>임차료·수선유지비 지급</td></tr>\n<tr><td><b>교육급여</b></td><td>중위소득 <b>100분의 50</b> 이하 (교육부 장관 소관)</td><td>입학금·수업료·학용품비 등</td></tr>\n<tr><td>해산급여</td><td>수급자</td><td>출산 시</td></tr>\n<tr><td>장제급여</td><td>수급자</td><td>사망 시 장례비</td></tr>\n<tr><td>자활급여</td><td>수급자</td><td>자립 지원</td></tr>\n</table>\n<div class=\"hbox hbox-blue\" style=\"margin-top:8px\">\n      급여 원칙: 보충성 / 타법 우선 / 최저생활 유지 가능 수준 / <b>개별 가구 단위</b> 실시\n    </div>" },
-          { icon: "🏥", title: "의료급여법", html: "<div class=\"flow\">\n<span class=\"flow-item\">생활보호법(1961)</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">의료보호법(1977)</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">의료급여법(2001)</span>\n</div>\n<div class=\"sub\">의료급여기관 구분</div>\n<div class=\"badge-row\" style=\"margin-top:4px\">\n<span class=\"badge badge-blue\">1차: 통원서비스 주로 제공 (동네 의원)</span>\n<span class=\"badge badge-green\">2차: 병원·종합병원</span>\n<span class=\"badge badge-yellow\">3차: 상급종합병원</span>\n</div>\n<ul class=\"pts\" style=\"margin-top:10px\">\n<li>수급권자가 의료기금 부담으로 의료급여 받을 수 있는 일수: <b>연간 365일</b></li>\n<li>재정: 의료급여 기금에서 전부 또는 일부 부담 / 나머지 본인 부담</li>\n<li>본인부담 방식: 정액제 → <b>2025년 정률제</b> 전환</li>\n<li>수급권 양도: <span class=\"no\">금지</span></li>\n</ul>" }
-        ] },
-      { num: "13강②", name: "긴급복지지원법 · 기초연금법",
-        cards: [
-          { icon: "🆘", title: "긴급복지지원법", html: "<div class=\"flow\">\n<span class=\"flow-item\">2005 제정 (5년 한시법)</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">2009 영속법 변경</span>\n</div>\n<div class=\"sub\">기본 원칙</div>\n<ul class=\"pts\">\n<li>위기상황에 <b>신속하게</b> 지원 (선지원·후처리)</li>\n<li>기존 관련 법률로 지원할 수 있는 사람이나 문제는 <b>제외</b> (보충성 원칙)</li>\n<li>단기 지원 / 현물지원 우선 / 가구단위 지원</li>\n</ul>" },
-          { icon: "⚡", title: "위기상황 유형", html: "<ul class=\"pts red\">\n<li>주소득자가 <b>사망·가출·행방불명·구금시설에 수용</b>되는 등의 사유로 소득 상실</li>\n<li>중한 <b>질병 또는 부상</b>을 당한 경우</li>\n<li>가구 구성원으로부터 <b>방임 또는 유기</b>되거나 <b>학대</b> 등을 당한 경우</li>\n<li><b>화재</b>로 거주하는 주택에서 생활하기 곤란하게 된 경우</li>\n</ul>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n<span class=\"no\">✗ 위기상황 아님:</span> 이혼 (긴급복지지원법에 명시적으로 포함되지 않음)\n    </div>\n<div class=\"sub\">급여요청 및 발굴</div>\n<ul class=\"pts\">\n<li>긴급지원대상자와 친족 그 밖의 관계인은 구술 또는 서면으로 관할 <b>시장·군수·구청장</b>에게 지원 요청</li>\n<li>누구든지 긴급지원대상자를 발견한 경우 <b>관할 시장·군수·구청장에게 신고</b> 의무</li>\n<li>국가와 지자체는 대상자 발굴 조사를 <b>연 1회 이상</b> 정기적으로 실시</li>\n</ul>\n<div class=\"sub\">기본원칙</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">선지원·후처리</span>\n<span class=\"badge badge-green\">단기 지원</span>\n<span class=\"badge badge-yellow\">현물지원 우선</span>\n<span class=\"badge badge-purple\">가구단위 지원</span>\n</div>" },
-          { icon: "📅", title: "긴급지원 기간", html: "<table class=\"comp-table\">\n<tr><th>구분</th><th>기간</th></tr>\n<tr><td>기본 지원 기간</td><td><b>1개월</b></td></tr>\n<tr><td>연장 (1개월씩 두 번)</td><td>최대 3개월</td></tr>\n<tr><td>생계지원 최대</td><td><b>6개월</b> 초과 불가</td></tr>\n<tr><td>주거지원 최대</td><td><b>12개월</b> 초과 불가</td></tr>\n</table>\n<div class=\"sub\">급여 종류 (금전지원만이 아님!)</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">생계지원</span><span class=\"badge badge-green\">의료지원</span>\n<span class=\"badge badge-yellow\">주거지원</span><span class=\"badge badge-purple\">교육지원</span>\n<span class=\"badge badge-gray\">사회복지시설이용지원</span><span class=\"badge badge-gray\">연료비·해산비·장제비</span>\n</div>\n<div class=\"hbox hbox-blue\" style=\"margin-top:8px\">\n      누구든지 긴급지원대상자를 발견하면 관할 <b>시장·군수·구청장</b>에게 신고 의무\n    </div>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:6px\">\n<b>연혁</b>: <b>2005년</b> 제정 — 제정 당시 5년간 효력의 <b>한시법</b> / <b>2009년</b> 개정으로 <b>영속법</b>으로 변경\n    </div>\n<div class=\"hbox hbox-purple\" style=\"margin-top:6px;background:#ede9fe;border-left:3px solid #7c3aed;\">\n<b>공영장례</b>: 모든 시민이 존엄하게 삶을 마무리할 권리를 위한 기본권 운동 (공영장례조례)\n    </div>" },
-          { icon: "🎖️", title: "기초연금법", html: "<div class=\"flow\">\n<span class=\"flow-item\">기초노령연금법(2007)</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">기초연금법 제정(2014.5)</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">시행(2014.7)</span>\n</div>\n<ul class=\"pts\" style=\"margin-top:10px\">\n<li><b>대상</b>: 65세 이상, 소득하위 <b>70%</b></li>\n<li>65세 이상 사람 중 기초연금 수급자가 <b>100분의 70</b> 수준이 되도록 선정기준액 설정 <span class=\"kichul\">⭐ 기출</span></li>\n<li>기초연금액: 기준연금액과 국민연금 급여액 등 고려하여 산정 (2022년 최대 307,500원)</li>\n<li><b>기초연금액 감액</b>: 본인과 배우자가 모두 수급자인 경우, 각각의 기초연금액에서 <b>100분의 20</b> 감액</li>\n<li>신청: 시장·군수·구청장에게 신청 → 매월 정기 지급</li>\n<li>재원: 국가가 지자체 노인인구 비율·재정 여건 고려하여 <b>이상~이하</b> 범위 부담</li>\n</ul>" }
-        ] },
-      { num: "14강①", name: "사회서비스법 · 아동·영유아·청소년",
-        cards: [
-          { icon: "🌟", title: "사회서비스 개념과 특징", html: "<div class=\"hbox hbox-blue\" style=\"margin-bottom:8px;font-size:.90em;\">\n      국가·지자체 및 민간단체의 도움이 필요한 모든 국민에게 복지·보건의료·교육·고용·주거·문화·환경 등에서 인간다운 생활을 보장하고 상담·재활·돌봄·정보제공·시설이용·역량개발·사회참여 지원 등을 통해 <b>삶의 질 향상</b>을 지원하는 제도 (사회보장기본법 제3조)\n    </div>\n<div class=\"sub\">사회서비스 특징</div>\n<ul class=\"pts\">\n<li><b>비물질적·심리사회적</b> 서비스 형태로 주로 제공 (사회보험·공공부조: 현금 또는 현물)</li>\n<li>대상별·유형별·시간에 따른 구체적이고 <b>개별적 처우</b>를 제공하도록 구성</li>\n<li>서비스를 전달하는 사람의 <b>전문적 개입과 기술·태도·실천적 윤리의식</b> 등이 중요하게 작용</li>\n</ul>" },
-          { icon: "👶", title: "아동복지법", html: "<div class=\"hbox hbox-blue\">\n<b>아동</b>: <b>18세 미만</b>인 사람<span class=\"kichul\">⭐ 기출</span> (아동정책기본계획: 5년마다 수립)<br/>\n<b>연혁</b>: 1961년 아동복리법 → 1981. 4 아동복지법으로 전부 개정\n    </div>\n<div class=\"sub\">기본이념 (4가지)</div>\n<ul class=\"pts yellow\">\n<li>아동은 어떠한 <b>차별도 받지 않고</b> 자라야 함</li>\n<li>안정된 가정환경에서 <b>행복하게</b> 자라야 함</li>\n<li>아동에 관한 모든 활동에서 <b>아동의 이익이 최우선적으로</b> 고려되어야 함</li>\n<li>아동은 이 법에 따른 <b>보호와 지원을 받을 권리</b>를 가짐</li>\n</ul>\n<div class=\"sub\">보호자 정의</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">친권자</span><span class=\"badge badge-green\">후견인</span>\n<span class=\"badge badge-yellow\">보호·양육 의무가 있는 자</span>\n<span class=\"badge badge-gray\">업무·고용 등으로 사실상 보호·감독하는 자</span>\n</div>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n<span class=\"no\">✗ 이웃주민</span><span class=\"kichul\">⭐ 기출</span>은 보호자에 해당하지 않음\n    </div>\n<div class=\"sub\">방과 후 돌봄서비스</div>\n<ul class=\"pts\">\n<li><b>다함께돌봄센터</b> 설치·운영 시행 (2019. 4) — 방과 후 아동 돌봄 서비스 거점</li>\n</ul>\n<div class=\"sub\">아동학대 예방·방지</div>\n<ul class=\"pts\">\n<li>아동학대 신고 체제 구축·운영</li>\n<li><b>아동학대전담공무원</b>: <b>사회복지사 자격</b> 소지 — 아동학대 조사 업무 수행</li>\n<li>아동보호전문기관: 시·도 및 시·군·구에 1개소 이상</li>\n</ul>\n<div class=\"sub\">아동복지시설 종류</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">아동양육시설</span><span class=\"badge badge-green\">아동상담소</span>\n<span class=\"badge badge-yellow\">지역아동센터</span><span class=\"badge badge-purple\">아동보호전문기관</span>\n<span class=\"badge badge-gray\">가정위탁지원센터</span>\n<span class=\"badge badge-gray\">아동권리보장원</span>\n</div>" },
-          { icon: "🏫", title: "영유아보육법", html: "<div class=\"hbox hbox-blue\">\n<b>영유아</b>: <b>7세 이하</b> 취학 전 아동 (유보통합 2025 반영 기준)\n    </div>\n<div class=\"sub\">어린이집 종류</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">국공립</span><span class=\"badge badge-green\">사회복지법인</span>\n<span class=\"badge badge-yellow\">법인·단체 등</span><span class=\"badge badge-purple\">직장</span>\n<span class=\"badge badge-gray\">가정</span><span class=\"badge badge-gray\">협동</span><span class=\"badge badge-gray\">민간</span>\n</div>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n<span class=\"no\">✗ 지역아동센터</span><span class=\"kichul\">⭐ 기출</span>는 어린이집이 아님 (아동복지법상 아동복지시설)\n    </div>\n<ul class=\"pts\" style=\"margin-top:10px\">\n<li>상시 여성근로자 300명 이상 또는 상시 근로자 500명 이상 사업장: <b>직장어린이집 설치 의무</b></li>\n<li>2025년 <b>유보통합</b>: 이용 기관과 관계없이 양질의 교육·돌봄 서비스 제공</li>\n<li>어린이집 원장은 필요한 경우 만 <b>12세</b>까지 연장 보육 가능</li>\n</ul>" },
-          { icon: "🧑", title: "청소년복지지원법", html: "<div class=\"hbox hbox-blue\">\n<b>청소년</b>: <b>9세 이상 24세 이하</b><span class=\"kichul\">⭐ 기출</span>인 사람<br/>\n<b>청소년증 발급</b>: <b>9세 이상 18세 이하</b> (연령 기준 다름!)\n    </div>\n<ul class=\"pts\" style=\"margin-top:10px\">\n<li>2004년 제정 → 2021년 가출청소년 → <b>가정 밖 청소년</b>, 청소년부모 지원 신설</li>\n<li>청소년복지시설: 청소년쉼터, 청소년자립기관, 청소년치료재활센터 등</li>\n<li>예방적·회복적 보호지원 기간: <b>6개월</b></li>\n<li><b>자립지원</b>: 2023년 신설 (단순 적응 강요 아닌 구조를 바꾸는 사회복지 지향)</li>\n<li>위기청소년: 가정 문제·학업 수행·사회 적응 어려움 등 건강한 성장에 필요한 여건을 갖추지 못한 청소년</li>\n</ul>" }
-        ] },
-      { num: "14강②", name: "사회서비스법 · 한부모·다문화·가정폭력",
-        cards: [
-          { icon: "👨‍👧", title: "한부모가족지원법", html: "<div class=\"flow\">\n<span class=\"flow-item\">모자복지법(1989)</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">모·부자복지법(2002)</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">한부모가족지원법(2007)</span>\n</div>\n<div class=\"sub\">지원 대상</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">모 또는 부</span>\n<span class=\"badge badge-green\">청소년 한부모 (24세 이하)</span>\n<span class=\"badge badge-yellow\">아동 (18세 미만)</span>\n</div>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n<span class=\"no\">✗ 지원 대상 아님:</span> 조부모 / 사실혼 관계의 부모를 가진 아동\n    </div>\n<div class=\"sub\">한부모가족복지시설 (5종)</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">모자가족복지시설</span>\n<span class=\"badge badge-green\">부자가족복지시설</span>\n<span class=\"badge badge-yellow\">미혼모가족복지시설</span>\n<span class=\"badge badge-purple\">일시지원복지시설</span><span class=\"kichul\">⭐ 기출</span>\n<span class=\"badge badge-gray\">한부모가족복지상담소</span>\n</div>\n<div class=\"sub\">급여 종류</div>\n<ul class=\"pts\">\n<li><b>복지급여</b>: 생계비·아동교육지원비·아동양육비 등 (다른 지원 받는 경우에도 아동양육비는 지급 가능)</li>\n<li><b>복지자금 대여</b>: 사업자금·아동교육비·의료비·주택자금 등</li>\n<li><b>복지조치</b>: 공공시설 매점 운영 우선 허가 / 국민주택 분양·임대 일정비율</li>\n<li><b>상담전화</b>: 종합정보 제공, 지원기관 연계 등</li>\n</ul>" },
-          { icon: "🌍", title: "다문화가족지원법", html: "<div class=\"sub\">다문화가족지원센터 주요 업무</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">다문화가족 교육·상담</span>\n<span class=\"badge badge-green\">결혼이민자 한국어교육</span>\n<span class=\"badge badge-yellow\">일자리 알선</span>\n</div>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n<span class=\"no\">✗ 해당 안 됨:</span> 후원가족 연계 / 다문화가족의 해외이민 지원\n    </div>\n<div class=\"sub\">국가·지자체 복지 지원</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">생활정보 제공·교육지원</span>\n<span class=\"badge badge-green\">의료·건강관리 지원</span>\n<span class=\"badge badge-yellow\">다국어에 의한 서비스 제공</span>\n</div>" },
-          { icon: "🚫", title: "가정폭력방지 및 피해자보호법 — 금지조항", html: "<div class=\"badge-row\">\n<span class=\"badge badge-red\">영리목적 운영 금지</span>\n<span class=\"badge badge-red\">비밀누설 금지</span>\n<span class=\"badge badge-red\">유사명칭 사용 금지</span>\n</div>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:8px\">\n<span class=\"no\">✗ 금지조항 아님:</span> 가정폭력 실태조사 금지 — 실태조사는 오히려 <b>의무사항</b>\n</div>" },
-          { icon: "♿", title: "노인복지법 / 장애인복지법", html: "<div class=\"sub\">노인복지시설 종류</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">재가노인복지시설</span>\n<span class=\"badge badge-green\">노인주거복지시설</span>\n<span class=\"badge badge-yellow\">노인보호전문기관</span>\n<span class=\"badge badge-purple\">노인요양시설</span>\n<span class=\"badge badge-gray\">노인복지관</span>\n<span class=\"badge badge-gray\">학대피해노인 전용쉼터</span>\n</div>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n<span class=\"no\">✗ 노인복지시설 아님:</span> 주민센터, 건강가정지원센터\n    </div>\n<div class=\"sub\">장애인복지법</div>\n<ul class=\"pts purple\">\n<li><b>장애인의 날</b>: 매년 <b>4월 20일</b> (5월 20일 아님)</li>\n<li>장애인 실태조사: <b>3년마다</b> 실시</li>\n<li>장애인 자립생활센터 운영 / 사회적 인식개선 사업</li>\n</ul>" }
-        ] },
-      { num: "15강", name: "사회복지공동모금회법 · 처우 및 지위향상법",
-        cards: [
-          { icon: "📋", title: "사회복지공동모금회 기본원칙", html: "<ul class=\"pts\">\n<li>기부하는 자의 의사에 반하여 <b>기부금품을 모집하여서는 안 됨</b></li>\n<li>조성된 재원은 지역·단체·대상자 및 사업별로 <b>복지수요가 공정하게 충족</b>되도록 배분</li>\n<li>재원의 배분은 <b>객관적인 기준</b>에 따라 효율적으로 이루어지도록 하고 그 결과를 <b>공개</b></li>\n</ul>\n<div class=\"sub\">재원 (3가지)</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-red\">사회복지공동모금에 의한 기부금품</span>\n<span class=\"badge badge-yellow\">복권수익금</span>\n<span class=\"badge badge-blue\">국가·지자체의 보조금</span>\n</div>" },
-          { icon: "❤️", title: "사회복지공동모금회법", html: "<div class=\"flow\">\n<span class=\"flow-item\">사회복지공동모금회 설립(1971)</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">사회복지공동모금법(1997)</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">사회복지공동모금회법(1999)</span>\n</div>\n<div class=\"sub\">사회복지공동모금회(사랑의 열매) 기능</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">공동모금사업</span>\n<span class=\"badge badge-green\">공동모금 재원 배분</span>\n<span class=\"badge badge-yellow\">재원 운용·관리</span>\n<span class=\"badge badge-purple\">조사·연구·홍보·교육훈련</span>\n<span class=\"badge badge-gray\">사회복지공동모금지회 운영</span>\n<span class=\"badge badge-gray\">국제교류·협력증진사업</span>\n</div>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n<span class=\"no\">✗ 공동모금회 기능 아님:</span> 사회복지사 보수교육 (→ 한국사회복지사협회)\n    </div>" },
-          { icon: "📢", title: "모금·배분 주요 규정", html: "<ul class=\"star-list\">\n<li>모금 창구: <b>언론기관</b></li>\n<li>배분기준 공고: 매년 <b>8월 31일</b>까지 다음 회계연도 배분기준 공고</li>\n<li>공동모금 재원은 <b>당해 회계연도에 지출</b>하는 것이 원칙</li>\n<li>사용 용도 미지정 기부금품의 <b>10/100 범위</b>에서 외국 및 이북지역 사업 배분 가능</li>\n<li>재난·긴급구호 시 <b>별도의 배분기준</b>에 따라 지원 가능</li>\n</ul>" },
-          { icon: "👩‍💻", title: "사회복지사 등의 처우 및 지위향상을 위한 법률", html: "<div class=\"hbox hbox-blue\" style=\"margin-bottom:8px;font-size:.90em;\">\n      사회복지사의 열악한 근로환경·낮은 임금·과중한 업무량 문제 대처<br/>\n      → 사회복지사 등의 <b>처우·지위 향상</b>을 통해 생활안정과 복지 증진 도모\n    </div>\n<div class=\"sub\">적용대상 기관 (사회복지사업 종사자)</div>\n<ul class=\"pts\">\n<li>사회복지법인·사회복지시설</li>\n<li>한국사회복지공제회 / 한국사회복지사협회</li>\n<li>사회복지사업을 목적으로 설립된 법인 등</li>\n</ul>\n<div class=\"sub\">연혁</div>\n<div class=\"flow\">\n<span class=\"flow-item\">2011 제정</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">2018 적정인건비지침 마련</span><span class=\"flow-arrow\">▶</span>\n<span class=\"flow-item\">2024 사회복지종사자 권익지원센터 설립</span>\n</div>\n<div class=\"sub\">처우법 주요 내용</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">한국사회복지공제회 운영</span>\n<span class=\"badge badge-green\">사회복지사 등의 처우개선</span>\n<span class=\"badge badge-yellow\">용어정의</span>\n<span class=\"badge badge-purple\">사회복지종사자 권익지원센터 설립 (2024)</span>\n</div>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n<span class=\"no\">✗ 처우법 내용 아님:</span> 사회복지사 자격증 발급 (→ 사회복지사업법)\n    </div>" },
-          { icon: "🏛️", title: "한국사회복지공제회 & 사회복지공무원", html: "<div class=\"sub\">한국사회복지공제회</div>\n<ul class=\"pts green\">\n<li>목적: 사회복지사의 <b>복지·후생을 위한 사업 및 공제급여 지급</b></li>\n<li>사업: 공제급여 지급 / 사회복지시설 안전·화재 공제사업 / 복지·후생 사업</li>\n</ul>\n<div class=\"divider\"></div>\n<div class=\"sub\">사회복지공무원 법적 보장 권한</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">직무수행권</span>\n<span class=\"badge badge-green\">연금청구권</span>\n<span class=\"badge badge-yellow\">보수청구권</span>\n</div>\n<div class=\"sub\">사회복지전담공무원 권리 제한 사유</div>\n<ul class=\"pts yellow\">\n<li>국가 안전보장을 위해 권리를 제한할 수 있다</li>\n<li>사회질서 유지를 위해 권리를 제한할 수 있다</li>\n<li>공공복지를 위해 권리를 제한할 수 있다</li>\n</ul>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n      공무원은 현행법상 <b>근로3권이 제한</b>됨<br/>\n      법적으로 보장된 권한: <b>직무수행권 / 연금청구권 / 보수청구권</b><br/>\n<span class=\"no\">✗ 단체행동권</span><span class=\"kichul\">⭐ 기출</span>은 해당 안 됨<br/>\n<span class=\"no\">✗ \"근로3권은 헌법에 보장되므로 침해될 수 없다\"</span> → 틀린 설명\n    </div>\n<div class=\"sub\">사회복지사 의무 채용 예외 시설</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-gray\">점자도서관</span>\n<span class=\"badge badge-gray\">어린이집</span>\n<span class=\"badge badge-gray\">성폭력피해상담소</span>\n</div>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:6px\">\n<span class=\"ok\">✓ 의무 채용 시설:</span> <b>노인복지관</b>\n</div>" },
-          { icon: "🧠", title: "정신건강증진법 기본 이념", html: "<ul class=\"star-list\">\n<li>모든 국민은 정신질환으로부터 보호받을 권리를 가진다</li>\n<li>모든 정신질환자는 인간으로서의 존엄과 가치를 보장받아야 한다</li>\n<li>정신질환자에 대해서는 입원 또는 입소를 최소화한다</li>\n</ul>\n<div class=\"hbox hbox-red\" style=\"margin-top:8px\">\n<span class=\"no\">✗ 기본 이념 아님:</span> 입원 시 본인의 의지보다 <b>가족의 의견을 우선</b>한다 → 본인의 의지 존중이 원칙\n    </div>\n<div class=\"sub\">입원 방법</div>\n<div class=\"badge-row\">\n<span class=\"badge badge-blue\">자의입원</span>\n<span class=\"badge badge-green\">보호의무자에 의한 입원</span>\n<span class=\"badge badge-yellow\">응급입원</span>\n</div>\n<div class=\"hbox hbox-red\" style=\"margin-top:6px\">\n<span class=\"no\">✗ 의료기관장에 의한 입원</span>은 해당하지 않음\n    </div>" },
-          { icon: "🎤", title: "현장활동가 대담 — 법과 사회복지실천 현장", html: "<ul class=\"star-list\">\n<li>빈곤문제는 <b>개인의 책임이 아닌 사회의 구조적인 문제</b></li>\n<li><b>법이 누구의 입장에서 어떻게 사용되느냐</b>가 중요</li>\n<li>\"이 법의 목적은 무엇인지?\" — <b>의문을 던지는 것</b>이 중요</li>\n<li>법의 목적을 달성하는 방향으로 <b>지침들이 설계</b>되어야 함</li>\n<li>사회복지실천을 위해 사회복지법을 <b>정확히 이해하고 적용</b>하는 것이 중요</li>\n<li><b>하위법령</b>이 상위 법령의 목적을 달성할 수 있도록 설계되어야 한다</li>\n</ul>\n<div class=\"hbox hbox-yellow\" style=\"margin-top:8px\">\n      ※ 핵심 메시지: 법 자체보다 <b>\"법이 어떻게 쓰이는가\"</b>가 사회복지 실천에서 더 중요한 문제\n    </div>" }
-        ] }
+{ num: "13강①", name: "공공부조법 · 국민기초생활보장 · 의료급여",
+  cards: [
+    { icon: "📂", title: "01. 공공부조법 개요",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">공공부조 정의 & 기본원칙</span>
+          <span class="badge badge-green">공공부조 vs 사회보험 비교</span>
+        </div>
+      `
+    },
+    { icon: "🏛️", title: "공공부조 정의 & 기본원칙",
+      html: `
+        <div class="hbox hbox-blue">국가·지방자치단체의 책임 하에 생활 유지 능력이 없거나 어려운 국민의 <b>최저생활 보장</b>과 <b>자립 지원</b> 제도 (사회보장기본법 제3조)</div>
+        <div class="sub">기본원칙 4가지</div>
+        <ul class="pts">
+          <li><b>최저생활 보장의 원칙</b>: 최소한도만 지원 — 나머지는 자활로 해결</li>
+          <li><b>무각출보호의 원칙</b>: 기여금 납부 없이 100% 국가(일반 조세·세금)로 운영</li>
+          <li><b>열등처우의 원칙</b>: 영국 빈민법에서 탄생 — 급여 수준은 근로 노동자 소득보다 낮아야 함</li>
+          <li><b>세대단위 급여 적용의 원칙</b>: 가구(세대) 단위로 급여 지급 (특수한 경우 개인 단위 예외)</li>
+        </ul>
+      `
+    },
+    { icon: "⚖️", title: "공공부조 vs 사회보험 비교",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">공공부조(선별·사후·세금)와 사회보험(보편·사전·보험료)의 핵심 차이를 구분한다</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th class="th-blue">공공부조</th><th class="th-green">사회보험</th></tr>
+          <tr><td>목적</td><td>사후적 대응</td><td>사전적 대응</td></tr>
+          <tr><td>이념</td><td>선별주의</td><td>보편주의</td></tr>
+          <tr><td>원리</td><td>무차별 평등(평등주의)</td><td>비례원리(형평주의)</td></tr>
+          <tr><td>대상</td><td>소수의 빈곤계층</td><td>국민 전체</td></tr>
+          <tr><td>자격요건</td><td>자산 조사</td><td>기여금 등</td></tr>
+          <tr><td>재원</td><td>일반 조세</td><td>보험료</td></tr>
+          <tr><td>급여수준</td><td>최저생활 보장</td><td>적정선</td></tr>
+          <tr><td>수급권 성격</td><td>약한 권리성</td><td>강한 권리성</td></tr>
+        </table>
+      `
+    },
+    { icon: "📂", title: "02. 국민기초생활보장법",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">의의 & 연혁</span>
+          <span class="badge badge-green">주요 개념</span>
+          <span class="badge badge-yellow">급여 종류 & 선정기준</span>
+          <span class="badge badge-purple">급여 원칙 & 실시절차</span>
+          <span class="badge badge-gray">재원(보장비용)</span>
+        </div>
+      `
+    },
+    { icon: "📋", title: "국민기초생활보장법 의의 & 연혁",
+      html: `
+        <div class="hbox hbox-blue">생활보호법(시혜·온정 중심) → <b>수급권자의 법적 권리 강조</b> + 최저생계 보장 국가 책임 + 종합적 빈곤대책으로 전환</div>
+        <div class="sub">의의 3가지</div>
+        <ul class="pts">
+          <li><b>공공부조 수급권의 법적 명확화</b>: 수급권자의 법적 권리 강조 (시혜·자선 개념 탈피)</li>
+          <li><b>최저생계 보장에 대한 국가 책임의 강조</b></li>
+          <li><b>종합적 빈곤대책</b>: 수급요건을 '빈곤'으로 단순화 / 근로조건부 급여(적극적 자활정책)</li>
+        </ul>
+        <div class="sub">연혁</div>
+        <div class="flow">
+          <span class="flow-item">1999.9 제정</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">2000.10 시행</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">2014.12 맞춤형 급여체계 개편</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">2019.1 자활지원사업 개편·자활기금 설치 의무화</span>
+        </div>
+        <div class="hbox hbox-yellow">💡 2014 개편: 최저생계비 → <b>기준 중위소득</b>으로 변경 (상대적 빈곤 개념 도입) — 송파 세 모녀 사건 계기</div>
+      `
+    },
+    { icon: "🔍", title: "주요 개념 (수급권자·소득인정액·차상위계층·부양의무자)",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">국민기초생활보장법 제2조의 핵심 용어 정의를 숙지한다</div>
+        <ul class="pts">
+          <li><b>수급권자</b>: 급여를 받을 자격을 가진 사람</li>
+          <li><b>수급자</b>: 급여를 받는 사람</li>
+          <li><b>소득인정액</b> = <b>소득평가액</b> + <b>재산의 소득환산액</b> — 보장기관이 급여 결정·실시를 위해 산출한 개별가구 금액 (제2조)</li>
+          <li><b>차상위계층</b>: 수급권자에 해당하지 않는 계층으로서 소득인정액이 기준 중위소득의 <b>100분의 50</b> 이하인 사람 (제2조)</li>
+          <li><b>부양의무자</b>: 수급권자의 <b>1촌의 직계혈족 및 그 배우자</b> (제2조)</li>
+        </ul>
+        <div class="sub">부양의무자 기준 완화·폐지 연혁</div>
+        <ul class="pts yellow">
+          <li><b>2015년</b> 교육급여 — 부양의무자 기준 폐지</li>
+          <li><b>2018년</b> 주거급여 — 부양의무자 기준 폐지</li>
+          <li><b>2021년</b> 생계급여 — 부양의무자 기준 폐지 선언</li>
+        </ul>
+        <div class="hbox hbox-red">❌ 완전 폐지 아님: 부양의무자가 <b>고소득(연 1억 원 초과)</b> 또는 <b>고재산(부동산 9억 원 초과)</b>인 경우 부양의무자 기준 여전히 적용 → 사각지대 논란 지속</div>
+      `
+    },
+    { icon: "💳", title: "급여 종류 & 선정기준",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">7가지 급여는 각각 <b>기준 중위소득 비율</b>로 선정기준이 다르며, 2014년 개편으로 맞춤형 급여 개별 선정 가능</div>
+        <table class="comp-table">
+          <tr><th>급여</th><th>선정기준 (기준 중위소득)</th><th>내용</th></tr>
+          <tr><td><b>생계급여</b></td><td><b>100분의 30</b> 이하</td><td>의복·음식물·연료비 등 금품 지급</td></tr>
+          <tr><td><b>의료급여</b></td><td><b>100분의 40</b> 이하 (부양의무자 기준 충족)</td><td>의료급여법에서 별도 규정</td></tr>
+          <tr><td><b>주거급여</b></td><td><b>100분의 48</b> 이하</td><td>임차료·수선유지비 지급</td></tr>
+          <tr><td><b>교육급여</b></td><td><b>100분의 50</b> 이하 (교육부 장관 소관)</td><td>입학금·수업료·학용품비 등</td></tr>
+          <tr><td>해산급여</td><td>수급자</td><td>출산 시</td></tr>
+          <tr><td>장제급여</td><td>수급자</td><td>사망 시 장례비</td></tr>
+          <tr><td>자활급여</td><td>수급자</td><td>자립 지원</td></tr>
+        </table>
+        <div class="hbox hbox-yellow">💡 의료급여에 필요한 사항은 <b>의료급여법</b>에서 별도 규정 (국민기초생활보장법 제12조의 3)</div>
+      `
+    },
+    { icon: "📋", title: "급여의 기본원칙 & 실시절차",
+      html: `
+        <div class="hbox hbox-blue">급여는 <b>보충성·타법 우선·최저생활·개별가구 단위</b> 4원칙으로 실시하며, 신청부터 실시까지 5단계를 거친다</div>
+        <div class="sub">급여의 기본원칙</div>
+        <ul class="pts">
+          <li><b>보충성의 원칙</b>: 다른 수단으로 최저 생활이 불가한 경우에 보충적으로 지원</li>
+          <li><b>타법 우선의 원칙</b>: 다른 법률에서 받을 수 있는 급여가 있으면 먼저 받을 것</li>
+          <li>최저생활을 <b>유지할 수 있는 수준</b>의 급여</li>
+          <li><b>개별 가구 단위</b>로 실시 (특수한 경우 개인 단위 가능)</li>
+        </ul>
+        <div class="sub">급여 실시 5단계</div>
+        <div class="flow">
+          <span class="flow-item">①수급권자·친족 등 → 관할 시장·군수·구청장에게 신청</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">②신청에 의한 조사</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">③확인조사 및 차상위계층 조사</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">④급여 결정</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">⑤급여 실시 (신청일부터 개시)</span>
+        </div>
+        <div class="hbox hbox-yellow">💡 급여 확인조사: <b>매년 1회 이상</b> 정기적으로 실시</div>
+      `
+    },
+    { icon: "💰", title: "재원 (보장비용)",
+      html: `
+        <div class="hbox hbox-blue">보장비용 = 인건비·사무비 + 생활보장위원회 운영비 + 급여 실시 비용 등 — <b>국가, 시·도, 시·군·구가 차등 분담</b></div>
+        <ul class="pts">
+          <li>100% 일반 조세(세금)로 운영 — 기여금 없음 (무각출)</li>
+          <li>보장비용의 부담: 국가와 시·도 및 시·군·구가 <b>차등 분담</b></li>
+        </ul>
+      `
+    },
+    { icon: "📂", title: "03. 의료급여법",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">의료급여법 개요 & 연혁</span>
+          <span class="badge badge-green">수급권자 (1종/2종)</span>
+          <span class="badge badge-yellow">급여 종류 & 재정</span>
+          <span class="badge badge-purple">전달체계</span>
+        </div>
+      `
+    },
+    { icon: "🏥", title: "의료급여법 개요 & 연혁",
+      html: `
+        <div class="hbox hbox-blue">생활이 어려운 사람에게 의료급여를 함으로써 <b>국민보건 향상과 사회복지 증진</b>에 이바지함 (제1조)</div>
+        <div class="sub">연혁</div>
+        <div class="flow">
+          <span class="flow-item">생활보호법(1961) — 국공립의료기관 무료진료에 그침</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">의료보호법(1977.12) — 공공부조제도로 정착</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">의료급여법(2001) — 국민기초생활보장법 제정과 함께 전면 개정·시행</span>
+        </div>
+        <div class="hbox hbox-yellow">💡 국민기초생활보장법(← 생활보호법) 제정과 함께 의료보호법 → 의료급여법으로 명칭·내용 전면 개정</div>
+      `
+    },
+    { icon: "👥", title: "의료급여법 수급권자 (1종/2종)",
+      html: `
+        <div class="hbox hbox-blue">의료급여 수급권자는 <b>1종</b>(비근로·취약계층 중심)과 <b>2종</b>(나머지 수급자)으로 구분</div>
+        <div class="sub">1종 수급권자</div>
+        <ul class="pts blue">
+          <li>국민기초생활보장법에 따른 수급자 중 <b>18세 미만, 65세 이상, 중증장애인</b> 등</li>
+          <li>타법에 따른 의료급여 수급권자 — 국내입양에 관한 특별법상 입양된 <b>18세 미만 아동</b>, <b>북한이탈주민</b>과 그 가족 등</li>
+          <li>일정한 거소가 없는 사람으로서 경찰관서 <b>무연고자</b>로 확인된 사람</li>
+          <li>보건복지부장관이 <b>1종 의료급여가 필요하다고 인정하는 자</b></li>
+        </ul>
+        <div class="sub">2종 수급권자</div>
+        <ul class="pts green">
+          <li>국민기초생활보장법에 따른 수급자 중 <b>1종 수급권자 기준에 해당하지 않는 자</b></li>
+          <li>보건복지부장관이 <b>2종 의료급여가 필요하다고 인정하는 자</b></li>
+        </ul>
+      `
+    },
+    { icon: "💊", title: "의료급여법 급여 종류 & 재정",
+      html: `
+        <div class="hbox hbox-blue">의료급여법의 급여는 <b>의료급여·요양비·장애인 보조기기·임산부 추가급여·건강검진</b>으로 구성; 재정은 의료급여기금</div>
+        <div class="sub">급여 종류</div>
+        <ul class="pts">
+          <li><b>의료급여</b>: 진찰·검사, 약제·치료재료 지급, 처치·수술, 예방·재활, 입원, 간호, 이송 등</li>
+          <li><b>요양비</b>: 의료기관 이용 불가 시 준하는 시설에서 치료·출산한 경우 지급</li>
+          <li><b>장애인 보조기기 급여</b></li>
+          <li><b>임산부 추가급여</b></li>
+          <li><b>건강검진</b></li>
+        </ul>
+        <div class="sub">재정</div>
+        <ul class="pts yellow">
+          <li>급여비용: <b>의료급여기금</b>에서 전부 또는 일부 부담 / 나머지는 <b>본인 부담</b></li>
+          <li>수급권자도 본인 부담 있음</li>
+          <li>본인부담 방식: 정액제 → <b>2025년부터 정률제</b>로 전환</li>
+          <li>급여비용 청구: 의료급여기관이 <b>시장·군수·구청장</b>에게 청구</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 수급권자가 의료급여기금 부담으로 의료급여를 받을 수 있는 일수: <b>연간 365일</b></div>
+        <div class="hbox hbox-red">❌ 수급권 양도 금지</div>
+      `
+    },
+    { icon: "🏗️", title: "의료급여법 전달체계",
+      html: `
+        <div class="hbox hbox-blue">의료급여기관은 1·2·3차로 구분; 보장기관은 <b>지자체(시장·군수·구청장)</b>로, 건강보험(보건복지부장관·국민건강보험공단)과 차이</div>
+        <div class="sub">의료급여기관 구분</div>
+        <div class="badge-row">
+          <span class="badge badge-blue">1차: 의원·보건소 (통원서비스 주로 제공)</span>
+          <span class="badge badge-green">2차: 병원·종합병원</span>
+          <span class="badge badge-yellow">3차: 상급종합병원</span>
+        </div>
+        <div class="sub">보장기관 & 사례관리</div>
+        <ul class="pts">
+          <li><b>보장기관</b>: 수급권자의 거주지를 관할하는 <b>특별시장·광역시장·도지사, 시장·군수·구청장</b> (지자체)</li>
+          <li><b>사례관리</b>: <b>의료급여 관리사</b>가 담당 (지자체 배치)</li>
+          <li><b>의료급여심의위원회</b>: 급여 관련 심의·의결 기구</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 건강보험 보장기관(보건복지부장관·국민건강보험공단)과 달리, 의료급여 보장기관은 <b>지자체</b></div>
+      `
+    },
+    { icon: "📝", title: "13강① 핵심 요약",
+      html: `
+        <table class="comp-table">
+          <tr><th>개념</th><th>핵심 내용</th></tr>
+          <tr><td><b>공공부조 4원칙</b></td><td>최저생활 보장 / 무각출 보호 / 열등처우 / 세대단위 급여</td></tr>
+          <tr><td><b>공공부조 vs 사회보험</b></td><td>선별·사후·조세 vs 보편·사전·보험료 — 수급권 약함 vs 강함</td></tr>
+          <tr><td><b>국민기초생활보장법</b></td><td>1999 제정, 2000 시행 / 2014 맞춤형 급여·<b>중위소득</b> 도입</td></tr>
+          <tr><td><b>차상위계층</b></td><td>소득인정액이 기준 중위소득의 <b>100분의 50</b> 이하</td></tr>
+          <tr><td><b>생계급여</b></td><td>기준 중위소득 <b>30%</b> 이하 (고소득·고재산 부양의무자 있으면 제외)</td></tr>
+          <tr><td><b>의료급여</b></td><td>기준 중위소득 <b>40%</b> 이하 + 부양의무자 기준 충족</td></tr>
+          <tr><td><b>교육급여</b></td><td>기준 중위소득 <b>50%</b> 이하 — 부양의무자 기준 최초 폐지(2015)</td></tr>
+          <tr><td><b>의료급여법 연혁</b></td><td>생활보호법(1961) → 의료보호법(1977) → 의료급여법(2001)</td></tr>
+          <tr><td><b>의료급여 본인부담</b></td><td>정액제 → <b>2025년 정률제</b>로 전환</td></tr>
+          <tr><td><b>의료급여 보장기관</b></td><td><b>지자체(시장·군수·구청장)</b> — 건강보험(보건복지부장관·국민건강보험공단)과 차이</td></tr>
+        </table>
+      `
+    },
+  ]
+},
+{ num: "13강②", name: "긴급복지지원법 · 기초연금법",
+  cards: [
+    { icon: "📂", title: "01. 긴급복지지원법",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">개요 & 기본원칙</span>
+          <span class="badge badge-green">위기상황 유형 & 급여 종류</span>
+          <span class="badge badge-yellow">급여요청 · 발굴 · 지원절차</span>
+          <span class="badge badge-purple">긴급지원 기간 & 재정 & 전달체계</span>
+        </div>
+      `
+    },
+    { icon: "🆘", title: "긴급복지지원법 개요 & 기본원칙",
+      html: `
+        <div class="hbox hbox-blue">위기상황 발생 시 지역사회 복지지원을 활용하여 <b>조기 발굴·신속 지원</b>하는 근거 마련 — <b>선지원·후처리</b> 원칙</div>
+        <div class="sub">연혁</div>
+        <div class="flow">
+          <span class="flow-item">2005년 제정 (5년 한시법)</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">2009년 개정 → 영속법으로 변경</span>
+        </div>
+        <div class="sub">기본원칙</div>
+        <ul class="pts">
+          <li>위기상황에 <b>신속하게</b> 지원 (선지원·후처리)</li>
+          <li>기존 관련 법률로 지원할 수 있는 사람이나 문제는 <b>제외</b> (보충성 원칙)</li>
+          <li><b>단기 지원</b> — 일시적으로 위급 상황을 벗어날 수 있도록만 지원</li>
+          <li><b>현물지원 우선</b></li>
+          <li><b>가구단위 지원</b> 원칙</li>
+        </ul>
+      `
+    },
+    { icon: "⚡", title: "위기상황 유형 & 급여 종류",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">위기상황 = 소득 상실·질병·학대·화재 등으로 법에 따른 지원이 긴급히 필요한 경우</div>
+        <div class="sub">위기상황 유형</div>
+        <ul class="pts red">
+          <li>주소득자가 <b>사망·가출·행방불명·구금시설 수용</b> 등의 사유로 소득 상실</li>
+          <li>중한 <b>질병 또는 부상</b>을 당한 경우</li>
+          <li>가구 구성원으로부터 <b>방임·유기·학대</b> 등을 당한 경우</li>
+          <li><b>화재</b>로 거주하는 주택에서 생활하기 곤란하게 된 경우</li>
+        </ul>
+        <div class="hbox hbox-red">❌ 이혼은 긴급복지지원법에 명시적으로 포함되지 않음</div>
+        <div class="sub">급여 종류</div>
+        <div class="badge-row">
+          <span class="badge badge-blue">생계지원</span>
+          <span class="badge badge-green">의료지원</span>
+          <span class="badge badge-yellow">주거지원</span>
+          <span class="badge badge-purple">교육지원</span>
+          <span class="badge badge-gray">사회복지시설이용지원</span>
+          <span class="badge badge-gray">연료비·해산비·장제비</span>
+        </div>
+        <div class="hbox hbox-yellow">💡 생계지원 2025년 기준: 1인 730,500원/월, 4인 1,872,700원/월 (최대 6회)</div>
+      `
+    },
+    { icon: "📞", title: "급여요청 · 발굴 · 지원절차",
+      html: `
+        <div class="hbox hbox-blue">긴급지원대상자·친족·관계인이 <b>시장·군수·구청장</b>에게 요청; 누구든지 발견 시 <b>신고 의무</b></div>
+        <div class="sub">지원요청 및 신고</div>
+        <ul class="pts">
+          <li>긴급지원대상자와 친족, 그 밖의 관계인은 구술 또는 서면으로 관할 <b>시장·군수·구청장</b>에게 지원 요청 가능</li>
+          <li>누구든지 긴급지원대상자를 발견한 경우 관할 <b>시장·군수·구청장에게 신고하여야 함</b> (의무)</li>
+        </ul>
+        <div class="sub">위기상황 발굴 & 지원</div>
+        <ul class="pts">
+          <li>국가와 지자체는 대상자 발굴 조사를 <b>연 1회 이상</b> 정기적으로 실시</li>
+          <li>지원요청·신고 또는 발견 시 <b>지체 없이</b> 거주지 방문 → 위기상황 확인 → 지원 종류·내용 결정 → 지원</li>
+        </ul>
+      `
+    },
+    { icon: "📅", title: "긴급지원 기간 & 재정 & 전달체계",
+      html: `
+        <div class="hbox hbox-blue">생계지원 기본 <b>1개월 + 연장</b>(최대 6회) / 주거·그 밖의 지원 기본 <b>1개월</b>; 재정은 국가·지자체 분담</div>
+        <div class="sub">지원 기간</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th>기간</th></tr>
+          <tr><td>기본 지원 기간</td><td><b>1개월</b></td></tr>
+          <tr><td>연장 (1개월씩 두 번)</td><td>최대 3개월</td></tr>
+          <tr><td>생계지원 최대</td><td><b>6회</b>(6개월) 이내</td></tr>
+          <tr><td>주거지원·사회복지시설·그 밖의 지원</td><td><b>1개월</b></td></tr>
+        </table>
+        <div class="sub">재정 & 전달체계</div>
+        <ul class="pts">
+          <li><b>재정</b>: 국가 및 지방자치단체 분담 (100% 공적 재원)</li>
+          <li><b>긴급지원기관</b>: 국가·지방자치단체 + 민간기관·단체 연계 (사회복지공동모금회 등)</li>
+          <li><b>긴급지원심의위원회</b>: 긴급지원 연장 결정, 적정성 심사, 중단 또는 지원비용 환수 결정 등 심의·의결</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 선지원 후처리이므로 나중에 적격성 확인 후 환수 가능 — 긴급지원심의위원회가 결정</div>
+      `
+    },
+    { icon: "📂", title: "02. 기초연금법",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">기초연금법 개요 & 연혁</span>
+          <span class="badge badge-green">기초연금 대상 & 급여</span>
+          <span class="badge badge-yellow">기초연금 vs 국민연금 이슈</span>
+        </div>
+      `
+    },
+    { icon: "🎖️", title: "기초연금법 개요 & 연혁",
+      html: `
+        <div class="hbox hbox-blue">자녀 양육하고 국가·사회발전에 기여한 <b>노인계층에 대한 예우</b> — 안정적 소득기반 제공으로 노인 생활안정 지원 및 복지 증진 (제1조)</div>
+        <ul class="pts">
+          <li>공적 노후소득보장 제도인 국민연금에서 배제된 노인계층 대책으로 탄생</li>
+        </ul>
+        <div class="sub">연혁</div>
+        <div class="flow">
+          <span class="flow-item">기초노령연금법(2007 제정)</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">기초연금법 전면개정(2014.5)</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">시행(2014.7)</span>
+        </div>
+        <div class="hbox hbox-yellow">💡 현재 정확한 법 명칭은 '기초노령연금법'이 아닌 <b>'기초연금법'</b> (2014년 전면 개정)</div>
+      `
+    },
+    { icon: "👴", title: "기초연금 대상 & 급여",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">65세 이상 + 소득인정액이 선정기준액 이하 → <b>65세 이상 중 하위 70%</b>가 수급하도록 선정기준액 설정 (상위 30% 제외)</div>
+        <div class="sub">대상 & 신청</div>
+        <ul class="pts">
+          <li><b>대상</b>: 65세 이상인 사람으로서 소득인정액이 보건복지부장관이 고시하는 금액 이하인 사람</li>
+          <li>65세 이상 사람 중 기초연금 수급자가 <b>100분의 70</b> 수준이 되도록 선정기준액 설정</li>
+          <li>신청: 특별자치시장·특별자치도지사·시장·군수·구청장에게 신청 → <b>매월 정기 지급</b></li>
+          <li>기초연금 수급자 사후관리 실시</li>
+        </ul>
+        <div class="sub">기초연금액 산정 & 감액</div>
+        <ul class="pts yellow">
+          <li><b>기초연금액</b>: 기준연금액과 국민연금 급여액 등 고려하여 산정</li>
+          <li><b>2025년 기준</b>: 월 최대 342,510원(단독가구), 548,000원(부부가구)</li>
+          <li><b>기초연금액 감액</b>: 본인과 배우자 모두 수급권자인 경우 각각의 기초연금액에서 <b>100분의 20</b> 감액</li>
+        </ul>
+        <div class="sub">재원</div>
+        <ul class="pts">
+          <li>국가가 지자체의 노인인구 비율·재정 여건 고려 → <b>100분의 40 이상 ~ 100분의 90 이하</b> 범위에서 비용 부담</li>
+        </ul>
+      `
+    },
+    { icon: "🔄", title: "기초연금 vs 국민연금 이슈",
+      html: `
+        <div class="hbox hbox-blue">기초연금(공공부조·무각출)과 국민연금(사회보험·각출)은 성격이 다르며, <b>가입기간 연계 감액</b> 및 선별 기준 사각지대 이슈 있음</div>
+        <table class="comp-table">
+          <tr><th>구분</th><th class="th-blue">기초연금</th><th class="th-green">국민연금</th></tr>
+          <tr><td>성격</td><td>공공부조 (무각출)</td><td>사회보험 (각출)</td></tr>
+          <tr><td>재원</td><td>국가·지자체 분담</td><td>보험료(가입자·사용자)</td></tr>
+          <tr><td>대상</td><td>65세 이상 하위 70%</td><td>의무가입 국민</td></tr>
+          <tr><td>수급조건</td><td>소득인정액 기준</td><td>가입기간·기여금 기준</td></tr>
+        </table>
+        <div class="sub">현재 이슈</div>
+        <ul class="pts yellow">
+          <li><b>기초연금액 인상</b> vs. <b>수급 대상 축소</b> 논쟁 (70% → 50%로 줄이고 금액 인상 주장)</li>
+          <li><b>가입기간 연계 감액</b>: 국민연금을 받는 경우 기초연금 일부 감액 → 국민연금 가입 11년 이상 시 감액 적용</li>
+          <li>선별 기준으로 인한 사각지대 문제 지속 (69%·71% 경계 근처 불합리)</li>
+        </ul>
+      `
+    },
+    { icon: "📝", title: "13강② 핵심 요약",
+      html: `
+        <table class="comp-table">
+          <tr><th>개념</th><th>핵심 내용</th></tr>
+          <tr><td><b>긴급복지지원법</b></td><td>2005년 제정(한시법) → 2009년 영속법 전환; <b>선지원·후처리</b></td></tr>
+          <tr><td><b>위기상황</b></td><td>주소득자 사망·가출·행방불명·구금 / 질병·부상 / 방임·학대 / 화재 등</td></tr>
+          <tr><td><b>긴급지원 기간</b></td><td>기본 1개월, 생계지원 최대 <b>6회</b>; 주거·그 밖의 지원 기본 1개월</td></tr>
+          <tr><td><b>신고의무</b></td><td>누구든지 긴급지원대상자 발견 시 <b>시장·군수·구청장</b>에게 신고 의무</td></tr>
+          <tr><td><b>발굴조사</b></td><td>국가·지자체가 <b>연 1회 이상</b> 정기적으로 실시</td></tr>
+          <tr><td><b>긴급지원심의위원회</b></td><td>연장 결정, 적정성 심사, 환수 결정 등 심의·의결</td></tr>
+          <tr><td><b>기초연금법</b></td><td>기초노령연금법(2007) → 기초연금법(2014.5 제정, 2014.7 시행)</td></tr>
+          <tr><td><b>기초연금 대상</b></td><td>65세 이상 중 소득 하위 <b>70%</b> — 100분의 70 수준이 되도록 선정기준액 설정</td></tr>
+          <tr><td><b>기초연금액 감액</b></td><td>부부 모두 수급 시 각각 <b>100분의 20</b> 감액</td></tr>
+          <tr><td><b>기초연금 재원</b></td><td>국가가 지자체 노인인구비율·재정여건 고려 → <b>40/100 이상 ~ 90/100 이하</b> 범위 부담</td></tr>
+        </table>
+      `
+    },
+  ]
+},
+{ num: "14강①", name: "사회서비스법 · 아동·영유아·청소년",
+  cards: [
+    { icon: "📂", title: "01. 사회서비스 개요",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">사회서비스 개념</span>
+          <span class="badge badge-green">사회서비스 특징 3가지</span>
+        </div>
+      `
+    },
+    { icon: "🌟", title: "사회서비스 개념과 특징",
+      html: `
+        <div class="hbox hbox-blue">
+          국가·지자체 및 민간부문의 도움이 필요한 모든 국민에게 복지·보건의료·교육·고용·주거·문화·환경 등에서 인간다운 생활을 보장하고 상담·재활·돌봄·정보제공·시설이용·역량개발·사회참여 지원 등을 통해 <b>삶의 질 향상</b>을 지원하는 제도 (사회보장기본법 제3조)
+        </div>
+        <div class="sub">사회서비스 특징 3가지</div>
+        <ul class="pts">
+          <li><b>비물질적·심리사회적</b> 서비스 형태로 주로 제공 (사회보험·공공부조: 현금 또는 현물)</li>
+          <li>대상별·유형별·시간에 따른 구체적이고 <b>개별적 처우</b>를 제공하도록 구성</li>
+          <li>서비스를 전달하는 사람의 <b>전문적 개입과 기술·태도·실천적 윤리의식</b> 등이 중요하게 작용</li>
+        </ul>
+      `
+    },
+    { icon: "📂", title: "02. 아동복지법",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">의의·목적·연혁</span>
+          <span class="badge badge-green">적용대상·기본이념·국가책무</span>
+          <span class="badge badge-yellow">지원과 보호</span>
+          <span class="badge badge-purple">전달체계</span>
+        </div>
+      `
+    },
+    { icon: "📋", title: "아동복지법 의의·목적·연혁",
+      html: `
+        <div class="hbox hbox-blue">요보호 아동뿐 아니라 <b>모든 아동의 건전한 육성</b>을 위한 적극적 복지정책 실시 + <b>공공의 책임성 강화</b></div>
+        <div class="sub">목적</div>
+        <ul class="pts">
+          <li>아동이 <b>건강하게 출생하여 행복하고 안전하게 자랄 수 있도록</b> 아동의 복지를 보장하는 것</li>
+        </ul>
+        <div class="sub">연혁</div>
+        <div class="flow">
+          <span class="flow-item">아동복리법(1961) — 요보호 아동 중심</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">아동복지법(1981.4) — 모든 아동으로 대상 확대</span>
+        </div>
+        <div class="sub">아동복지정책</div>
+        <ul class="pts">
+          <li><b>아동정책기본계획</b>: 5년마다 수립</li>
+          <li>아동종합실태조사 / 아동정책영향평가 실시</li>
+        </ul>
+      `
+    },
+    { icon: "👶", title: "아동복지법 적용대상·기본이념·국가책무",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue"><b>아동</b>: <b>18세 미만</b>인 사람 / 기본이념 4가지 / 책무 주체: 국가·지자체·보호자·모든 국민</div>
+        <div class="sub">기본이념 (4가지)</div>
+        <ul class="pts yellow">
+          <li>아동은 어떠한 <b>차별도 받지 않고</b> 자라야 함</li>
+          <li><b>안전한</b> 가정환경에서 행복하게 자라야 함 (2025.4 개정: 안정된 → 안전한)</li>
+          <li>아동에 관한 모든 활동에서 <b>아동의 이익이 최우선적으로</b> 고려되어야 함</li>
+          <li>아동은 이 법에 따른 <b>보호와 지원을 받을 권리</b>를 가짐</li>
+        </ul>
+        <div class="sub">보호자 정의</div>
+        <div class="badge-row">
+          <span class="badge badge-blue">친권자</span>
+          <span class="badge badge-green">후견인</span>
+          <span class="badge badge-yellow">보호·양육 의무가 있는 자</span>
+          <span class="badge badge-gray">업무·고용 등으로 사실상 보호·감독하는 자</span>
+        </div>
+        <div class="hbox hbox-red">❌ <b>이웃주민</b>은 보호자에 해당하지 않음</div>
+      `
+    },
+    { icon: "🏠", title: "아동복지법 지원과 보호",
+      html: `
+        <div class="hbox hbox-blue">아동보호서비스·아동학대 예방·지원서비스·방과 후 돌봄서비스로 구성</div>
+        <div class="sub">① 아동보호서비스</div>
+        <ul class="pts">
+          <li>보호대상 아동에 대해 보호조치 하여야 함 — 상담·지도, 친족 가정, 적합한 유형의 가정에서 보호·양육 조치, 아동복지시설 입소 등</li>
+        </ul>
+        <div class="sub">② 아동학대 예방 및 방지</div>
+        <ul class="pts red">
+          <li>아동학대 예방과 방지를 위한 각종 정책 수립 및 시행, 실태조사, 학대 신고 체제 구축·운영</li>
+          <li><b>아동학대전담공무원</b>: <b>사회복지사 자격</b> 소지 — 아동학대 조사 업무 수행</li>
+          <li>아동학대사례 전문가자문단 운영 가능 (2024.1)</li>
+        </ul>
+        <div class="sub">③ 아동에 대한 지원서비스</div>
+        <ul class="pts">
+          <li>아동 안전 및 건강 지원</li>
+          <li>취약계층 아동 통합서비스 지원, 자립지원</li>
+          <li><b>자산형성 및 자산관리 지원사업</b></li>
+        </ul>
+        <div class="sub">④ 방과 후 돌봄서비스</div>
+        <ul class="pts">
+          <li><b>다함께돌봄센터</b> 설치·운영 (2019.4 시행) — 방과 후 아동 돌봄 서비스 거점</li>
+        </ul>
+        <div class="sub">재원</div>
+        <ul class="pts">
+          <li>국가·지자체: 아동학대 예방 등 사업에 필요한 비용 전부 또는 일부 보조</li>
+          <li>시·도지사, 시장·군수·구청장 또는 아동복지시설의 장: 보호조치에 필요한 비용의 전부 또는 일부를 아동의 <b>부양의무자로부터 징수</b> 가능</li>
+        </ul>
+      `
+    },
+    { icon: "🏗️", title: "아동복지법 전달체계",
+      html: `
+        <div class="hbox hbox-blue">아동보호전문기관(시·도 및 시·군·구에 1개소 이상), 가정위탁지원센터, 아동복지시설로 구성</div>
+        <div class="sub">① 아동보호전문기관</div>
+        <ul class="pts">
+          <li>시·도 및 시·군·구에 <b>1개소 이상</b> 두어야 함</li>
+          <li>학대 아동 보호·지원 주로 담당</li>
+        </ul>
+        <div class="sub">② 가정위탁지원센터</div>
+        <ul class="pts">
+          <li>보호대상아동에 대한 가정위탁사업 활성화</li>
+          <li>가정 발굴·가정 조사, 위탁가정 부모 교육 등 업무 수행</li>
+        </ul>
+        <div class="sub">③ 아동복지시설 종류</div>
+        <div class="badge-row">
+          <span class="badge badge-blue">아동양육시설</span>
+          <span class="badge badge-blue">아동일시보호시설</span>
+          <span class="badge badge-green">아동보호치료시설</span>
+          <span class="badge badge-green">공동생활가정</span>
+          <span class="badge badge-yellow">자립지원시설</span>
+          <span class="badge badge-yellow">아동상담소</span>
+          <span class="badge badge-purple">지역아동센터</span>
+          <span class="badge badge-purple">협동돌봄센터 (2025년 신규 추가)</span>
+          <span class="badge badge-gray">아동보호전문기관</span>
+          <span class="badge badge-gray">가정위탁지원센터</span>
+          <span class="badge badge-gray">아동권리보장원</span>
+          <span class="badge badge-gray">자립지원전담기관</span>
+          <span class="badge badge-gray">학대피해아동쉼터</span>
+        </div>
+      `
+    },
+    { icon: "📂", title: "03. 영유아보육법",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">개요 & 연혁</span>
+          <span class="badge badge-green">급여: 무상보육·양육수당·이용권</span>
+          <span class="badge badge-yellow">어린이집 종류 & 설치</span>
+          <span class="badge badge-purple">전달체계</span>
+        </div>
+      `
+    },
+    { icon: "🏫", title: "영유아보육법 개요 & 연혁",
+      html: `
+        <div class="hbox hbox-blue"><b>보육의 사회화</b> — 보육을 개인이 아닌 사회적 공동 책임으로 규정; 아동복지적·가족복지적·여성의 사회참여 촉진 성격</div>
+        <div class="sub">연혁</div>
+        <div class="flow">
+          <span class="flow-item">유아교육진흥법(1982)</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">영유아보육법(1991.1 제정)</span>
+        </div>
+        <div class="sub">적용대상</div>
+        <ul class="pts">
+          <li><b>영유아</b>: <b>7세 이하</b> 취학 전 아동 (어린이집: 영유아의 보육을 위해 설립·운영되는 기관)</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 <b>유보통합</b>: 유아교육(유치원)과 보육(어린이집)의 관리체계를 일원화 — 0~5세 영유아가 이용 기관에 관계없이 양질의 교육·돌봄 서비스를 받도록 하는 정책 (2025년 추진 중)</div>
+      `
+    },
+    { icon: "👼", title: "영유아보육법 급여: 무상보육·양육수당·이용권",
+      html: `
+        <div class="hbox hbox-blue">국가·지자체는 영유아 보육을 <b>무상</b>으로 하고 비용 부담; 미이용 영유아에게는 <b>양육수당</b> 지원</div>
+        <ul class="pts">
+          <li><b>무상보육</b>: 국가·지방자치단체는 영유아에 대한 보육을 무상으로 하고, 비용은 국가나 지방자치단체가 부담하거나 보조</li>
+          <li><b>양육수당</b>: 국가·지자체는 어린이집이나 유치원을 이용하지 않는 영유아에 대하여 양육에 필요한 비용 지원 (연령 고려)</li>
+          <li><b>보육서비스 이용권</b>(바우처): 무상보육·양육수당에 따른 비용 지원을 위해 영유아의 보호자에게 지급</li>
+          <li><b>시간제보육서비스</b>: 국가·지자체는 무상보육·무상교육 지원 받지 않는 영유아에 대하여 시간제보육서비스를 지원할 수 있음</li>
+        </ul>
+      `
+    },
+    { icon: "🏗️", title: "영유아보육법 어린이집 & 전달체계",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">어린이집은 7가지 유형으로 구분; 어린이집 설치기준·평가 규정; 보육정책위원회·육아종합지원센터·한국보육진흥원 운영</div>
+        <div class="sub">어린이집 종류 (7가지)</div>
+        <div class="badge-row">
+          <span class="badge badge-blue">국공립</span>
+          <span class="badge badge-green">사회복지법인</span>
+          <span class="badge badge-yellow">법인·단체 등</span>
+          <span class="badge badge-purple">직장</span>
+          <span class="badge badge-gray">가정</span>
+          <span class="badge badge-gray">협동</span>
+          <span class="badge badge-gray">민간</span>
+        </div>
+        <div class="hbox hbox-red">❌ <b>지역아동센터</b>는 어린이집이 아님 (아동복지법상 아동복지시설)</div>
+        <div class="sub">어린이집 설치</div>
+        <ul class="pts">
+          <li>대통령령(교육부령)으로 정하는 설치기준 갖추어야 함</li>
+          <li>놀이터, 비상재해대비시설 및 <b>폐쇄회로 텔레비전(CCTV)</b>의 설치는 별도규정으로 정함 (어린이집 CCTV 의무 설치: 2015년~)</li>
+          <li>어린이집 평가 실시 (정기)</li>
+        </ul>
+        <div class="sub">전달체계</div>
+        <ul class="pts">
+          <li>보육정책위원회 (중앙·지방)</li>
+          <li>육아종합지원센터 (중앙·지방)</li>
+          <li>한국보육진흥원</li>
+        </ul>
+      `
+    },
+    { icon: "📂", title: "04. 청소년복지지원법",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">개요 & 연혁</span>
+          <span class="badge badge-green">주요내용 (우대·청소년증·위기청소년)</span>
+          <span class="badge badge-yellow">가정밖·청소년부모·보호·자립지원</span>
+          <span class="badge badge-purple">전달체계</span>
+        </div>
+      `
+    },
+    { icon: "🧑", title: "청소년복지지원법 개요 & 연혁",
+      html: `
+        <div class="hbox hbox-blue">모든 청소년의 인권보장·건강·안전 보장 및 경제적 자립지원에 대한 가정·사회·국가의 책임·의무 규정 — 특히 취약 청소년의 자립·자활을 위한 복지서비스 제도화</div>
+        <div class="sub">청소년복지 정의</div>
+        <ul class="pts">
+          <li>청소년이 정상적인 삶을 누릴 수 있는 기본적인 여건을 조성하고 조화롭게 성장·발달할 수 있도록 제공되는 <b>사회적·경제적 지원</b></li>
+        </ul>
+        <div class="sub">연혁</div>
+        <div class="flow">
+          <span class="flow-item">2004 제정</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">2021 가출청소년 → <b>가정 밖 청소년</b></span><span class="flow-arrow">▶</span>
+          <span class="flow-item">2021 청소년부모지원 신설</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">2022 위기청소년 실태조사 실시(3년마다)</span>
+        </div>
+      `
+    },
+    { icon: "📋", title: "청소년복지지원법 주요내용",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue"><b>청소년</b>: <b>9세 이상 24세 이하</b>인 사람; <b>청소년증</b>: <b>9세 이상 18세 이하</b>에게 발급</div>
+        <div class="sub">지원 종류</div>
+        <ul class="pts">
+          <li><b>청소년 우대</b>: 국가·지자체 운영 수송·문화·여가시설 등 이용료 면제, 할인</li>
+          <li><b>청소년증</b>: <b>9세 이상 18세 이하</b> 청소년에게 발급</li>
+          <li><b>건강한 성장지원</b>: 체력검사와 건강진단 실시</li>
+          <li><b>위기청소년 지원</b></li>
+          <li><b>이주배경청소년 지원</b></li>
+        </ul>
+        <div class="sub">위기청소년 정의</div>
+        <ul class="pts red">
+          <li>가정 문제가 있거나 학업 수행 또는 사회 적응에 어려움을 겪는 등 조화롭고 건강한 성장과 생활에 필요한 여건을 갖추지 못한 청소년</li>
+        </ul>
+      `
+    },
+    { icon: "🌱", title: "가정밖청소년·청소년부모·예방적보호·자립지원",
+      html: `
+        <div class="hbox hbox-blue">청소년부모 지원(2021 신설), 예방적·회복적 보호지원(6개월), 자립지원(2023.10.24 신설)</div>
+        <div class="sub">청소년부모 지원 (2021 신설)</div>
+        <ul class="pts">
+          <li>가족지원서비스, 복지지원, 교육지원, 직업체험 및 취업지원</li>
+        </ul>
+        <div class="sub">예방적·회복적 보호지원</div>
+        <ul class="pts">
+          <li>비행·일탈을 저지른 청소년, 일상생활 적응 못하여 가정 또는 학교 외부의 교육적 도움이 필요한 청소년</li>
+          <li>상담·교육·자원봉사·수련·체육·단체활동 등 지원 — 기간: <b>6개월</b> (1회 연장 가능)</li>
+        </ul>
+        <div class="sub">자립지원 (2023.10.24 신설 — 제32조의 3)</div>
+        <ul class="pts">
+          <li>가정 밖 청소년이 청소년복지시설 퇴소 이후 자립할 수 있도록 조치</li>
+          <li>자립에 필요한 주거·생활·교육·취업 등 지원, 자립정착금 및 자립수당 지급, 자산의 형성 및 관리 지원, 사후관리체계 구축·운영</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 단지 개인의 적응을 강요하는 것이 아니라 <b>구조를 바꾸는 사회복지</b> 지향 — '통을 넓히는' 접근</div>
+      `
+    },
+    { icon: "🏗️", title: "청소년복지지원법 전달체계",
+      html: `
+        <div class="hbox hbox-blue">지역사회 청소년통합지원체계 구축·운영 + 청소년복지지원기관 + 청소년복지시설</div>
+        <div class="sub">청소년복지지원기관</div>
+        <div class="badge-row">
+          <span class="badge badge-blue">한국청소년상담복지개발원</span>
+          <span class="badge badge-green">청소년상담복지센터</span>
+          <span class="badge badge-yellow">이주배경청소년지원센터</span>
+        </div>
+        <div class="sub">청소년복지시설</div>
+        <div class="badge-row">
+          <span class="badge badge-blue">청소년쉼터</span>
+          <span class="badge badge-green">청소년자립지원관</span>
+          <span class="badge badge-yellow">청소년치료재활센터</span>
+          <span class="badge badge-purple">청소년회복지원시설</span>
+        </div>
+        <div class="sub">재원</div>
+        <ul class="pts">
+          <li>국가·지방자치단체는 청소년복지지원기관 및 청소년복지시설, 관련단체의 운영에 필요한 예산의 전부 또는 일부 보조</li>
+        </ul>
+      `
+    },
+    { icon: "📝", title: "14강① 핵심 요약",
+      html: `
+        <table class="comp-table">
+          <tr><th>개념</th><th>핵심 내용</th></tr>
+          <tr><td><b>사회서비스</b></td><td>비물질적·심리사회적 서비스 / 개별적 처우 / 전달자의 전문성 중요</td></tr>
+          <tr><td><b>아동 정의</b></td><td><b>18세 미만</b>인 사람 (아동복지법)</td></tr>
+          <tr><td><b>아동복지법 연혁</b></td><td>아동복리법(1961) → 아동복지법(1981.4 전부 개정)</td></tr>
+          <tr><td><b>아동 기본이념</b></td><td>차별금지 / 안전한 가정환경 / 아동이익 최우선 / 보호·지원 권리</td></tr>
+          <tr><td><b>보호자 범위</b></td><td>친권자·후견인·보호양육의무자·사실상 감독자 — <b>이웃주민 ✗</b></td></tr>
+          <tr><td><b>아동학대전담공무원</b></td><td><b>사회복지사 자격</b> 소지 필수</td></tr>
+          <tr><td><b>영유아 정의</b></td><td><b>7세 이하</b> 취학 전 아동 (영유아보육법)</td></tr>
+          <tr><td><b>어린이집 종류</b></td><td>국공립·사회복지법인·법인단체·직장·가정·협동·민간 (7가지) — <b>지역아동센터 ✗</b></td></tr>
+          <tr><td><b>유보통합</b></td><td>유아교육(유치원)+보육(어린이집) 관리체계 일원화 — 이용기관 관계없이 양질의 서비스</td></tr>
+          <tr><td><b>청소년 정의</b></td><td><b>9세 이상 24세 이하</b> (청소년복지지원법)</td></tr>
+          <tr><td><b>청소년증 발급</b></td><td><b>9세 이상 18세 이하</b> (청소년 연령 기준과 다름!)</td></tr>
+          <tr><td><b>예방적·회복적 보호지원</b></td><td>비행·일탈 청소년 지원 기간 <b>6개월</b></td></tr>
+          <tr><td><b>자립지원</b></td><td>2023.10.24 신설 (제32조의 3) — 가정밖청소년 퇴소 후 자립</td></tr>
+        </table>
+      `
+    },
+  ]
+},
+{ num: "14강②", name: "사회서비스법 · 한부모·다문화·가정폭력·노인·장애인",
+  cards: [
+    { icon: "📂", title: "01. 한부모가족지원법",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">연혁 & 지원 대상</span>
+          <span class="badge badge-green">복지시설 5종</span>
+          <span class="badge badge-yellow">급여 종류</span>
+        </div>
+      `
+    },
+    { icon: "👨‍👧", title: "한부모가족지원법",
+      html: `
+        <div class="hbox hbox-blue">모자복지법(1989) → 모·부자복지법(2002) → 한부모가족지원법(2007) — 한부모 가족의 생활 안정과 복지 증진</div>
+        <div class="sub">연혁</div>
+        <div class="flow">
+          <span class="flow-item">모자복지법(1989)</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">모·부자복지법(2002)</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">한부모가족지원법(2007)</span>
+        </div>
+        <div class="sub">지원 대상</div>
+        <div class="badge-row">
+          <span class="badge badge-blue">모 또는 부</span>
+          <span class="badge badge-green">청소년 한부모 (24세 이하)</span>
+          <span class="badge badge-yellow">아동 (18세 미만)</span>
+        </div>
+        <div class="hbox hbox-red">❌ 지원 대상 아님: 조부모 / 사실혼 관계의 부모를 가진 아동</div>
+        <div class="sub">한부모가족복지시설 (5종)</div>
+        <div class="badge-row">
+          <span class="badge badge-blue">모자가족복지시설</span>
+          <span class="badge badge-green">부자가족복지시설</span>
+          <span class="badge badge-yellow">미혼모가족복지시설</span>
+          <span class="badge badge-purple">일시지원복지시설</span>
+          <span class="badge badge-gray">한부모가족복지상담소</span>
+        </div>
+        <div class="sub">급여 종류</div>
+        <ul class="pts">
+          <li><b>복지급여</b>: 생계비·아동교육지원비·아동양육비 등 (다른 지원을 받는 경우에도 아동양육비는 지급 가능)</li>
+          <li><b>복지자금 대여</b>: 사업자금·아동교육비·의료비·주택자금 등</li>
+          <li><b>복지조치</b>: 공공시설 매점 운영 우선 허가 / 국민주택 분양·임대 일정 비율</li>
+          <li><b>상담전화</b>: 종합정보 제공, 지원기관 연계 등</li>
+        </ul>
+      `
+    },
+    { icon: "📂", title: "02. 다문화가족지원법",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">다문화가족지원센터 주요 업무</span>
+          <span class="badge badge-green">국가·지자체 복지 지원</span>
+        </div>
+      `
+    },
+    { icon: "🌍", title: "다문화가족지원법",
+      html: `
+        <div class="hbox hbox-blue">다문화가족의 안정적인 가족생활과 사회 통합을 지원 — 다문화가족지원센터를 통해 교육·상담·일자리 등 서비스 제공</div>
+        <div class="sub">다문화가족지원센터 주요 업무</div>
+        <div class="badge-row">
+          <span class="badge badge-blue">다문화가족 교육·상담</span>
+          <span class="badge badge-green">결혼이민자 한국어교육</span>
+          <span class="badge badge-yellow">일자리 알선</span>
+        </div>
+        <div class="hbox hbox-red">❌ 해당 안 됨: 후원가족 연계 / 다문화가족의 해외이민 지원</div>
+        <div class="sub">국가·지자체 복지 지원</div>
+        <div class="badge-row">
+          <span class="badge badge-blue">생활정보 제공·교육지원</span>
+          <span class="badge badge-green">의료·건강관리 지원</span>
+          <span class="badge badge-yellow">다국어에 의한 서비스 제공</span>
+        </div>
+      `
+    },
+    { icon: "📂", title: "03. 가정폭력방지 및 피해자보호법",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-red">금지조항 3가지</span>
+          <span class="badge badge-yellow">실태조사 (의무사항)</span>
+        </div>
+      `
+    },
+    { icon: "🚫", title: "가정폭력방지 및 피해자보호법 — 금지조항",
+      html: `
+        <div class="hbox hbox-blue">가정폭력을 예방하고 피해자를 보호하기 위한 법 — 금지조항과 의무사항을 명확히 구분한다</div>
+        <div class="sub">금지조항 (3가지)</div>
+        <div class="badge-row">
+          <span class="badge badge-red">영리목적 운영 금지</span>
+          <span class="badge badge-red">비밀누설 금지</span>
+          <span class="badge badge-red">유사명칭 사용 금지</span>
+        </div>
+        <div class="hbox hbox-red">❌ 가정폭력 실태조사 금지 → 금지조항이 아님! 실태조사는 오히려 <b>의무사항</b></div>
+      `
+    },
+    { icon: "📂", title: "04. 노인복지법 / 장애인복지법",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">노인복지시설 종류</span>
+          <span class="badge badge-green">장애인 관련 주요 규정</span>
+        </div>
+      `
+    },
+    { icon: "♿", title: "노인복지법 / 장애인복지법",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">노인복지시설 종류와 장애인복지법 주요 규정(장애인의 날·실태조사 주기)을 구분하여 암기한다</div>
+        <div class="sub">노인복지시설 종류</div>
+        <div class="badge-row">
+          <span class="badge badge-blue">재가노인복지시설</span>
+          <span class="badge badge-green">노인주거복지시설</span>
+          <span class="badge badge-yellow">노인보호전문기관</span>
+          <span class="badge badge-purple">노인요양시설</span>
+          <span class="badge badge-gray">노인복지관</span>
+          <span class="badge badge-gray">학대피해노인 전용쉼터</span>
+        </div>
+        <div class="hbox hbox-red">❌ 노인복지시설 아님: 주민센터, 건강가정지원센터</div>
+        <div class="sub">장애인복지법 주요 규정</div>
+        <ul class="pts purple">
+          <li><b>장애인의 날</b>: 매년 <b>4월 20일</b> (5월 20일 아님)</li>
+          <li>장애인 실태조사: <b>3년마다</b> 실시</li>
+          <li>장애인 자립생활센터 운영 / 사회적 인식개선 사업</li>
+        </ul>
+      `
+    },
+    { icon: "📝", title: "14강② 핵심 요약",
+      html: `
+        <table class="comp-table">
+          <tr><th>개념</th><th>핵심 내용</th></tr>
+          <tr><td><b>한부모가족지원법</b></td><td>모자복지법(1989) → 모·부자복지법(2002) → 한부모가족지원법(2007)</td></tr>
+          <tr><td><b>청소년 한부모</b></td><td><b>24세 이하</b> — 지원 대상에 포함</td></tr>
+          <tr><td><b>한부모 복지시설</b></td><td>모자·부자·미혼모가족복지시설 / 일시지원복지시설 / 한부모가족복지상담소 (5종)</td></tr>
+          <tr><td><b>한부모 지원 제외</b></td><td>조부모 / 사실혼 관계의 부모를 가진 아동</td></tr>
+          <tr><td><b>다문화지원센터</b></td><td>교육·상담 / 한국어교육 / 일자리 알선 — 해외이민 지원·후원가족 연계 ✗</td></tr>
+          <tr><td><b>가정폭력방지법</b></td><td>금지조항: 영리목적 운영·비밀누설·유사명칭 사용 / 실태조사는 의무사항</td></tr>
+          <tr><td><b>장애인의 날</b></td><td>매년 <b>4월 20일</b></td></tr>
+          <tr><td><b>장애인 실태조사</b></td><td><b>3년마다</b> 실시</td></tr>
+          <tr><td><b>노인복지시설 아님</b></td><td>주민센터, 건강가정지원센터</td></tr>
+        </table>
+      `
+    },
+  ]
+},
+     { num: "15강", name: "한부모가족지원법 · 사회복지공동모금회법 · 처우 및 지위향상법",
+  cards: [
+
+    /* ─────────────── 01. 한부모가족지원법 ─────────────── */
+
+    { icon: "📂", title: "01. 한부모가족지원법",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">한부모가족지원법 의의·연혁</span>
+          <span class="badge badge-green">적용대상</span>
+          <span class="badge badge-yellow">급여 5유형</span>
+          <span class="badge badge-purple">복지조치·상담전화</span>
+          <span class="badge badge-gray">재원 및 전달체계</span>
+        </div>
+      `
+    },
+
+    { icon: "👨‍👩‍👧", title: "한부모가족지원법 의의·연혁",
+      html: `
+        <div class="hbox hbox-blue">한부모가족에게 소득보장·취업알선·주거보장·보건의료·보육 지원을 통해 <b>생활안정과 복지증진</b>을 이루어 건강한 가정을 형성하도록 지원하는 법</div>
+        <div class="sub">연혁</div>
+        <div class="flow">
+          <span class="flow-item">모자복지법 제정 (1989)</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">모·부자복지법 개정 (2002)</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">한부모가족지원법으로 법명 변경 (2007)</span>
+        </div>
+        <div class="sub">기본원칙</div>
+        <ul class="pts">
+          <li><b>국가·지방자치단체·국민의 책임</b> — 한부모가족 지원에 대한 사회적 책임</li>
+          <li><b>한부모가족의 권리와 책임</b> — 자립을 위한 노력 병행</li>
+        </ul>
+      `
+    },
+
+    { icon: "🧑‍🤝‍🧑", title: "한부모가족지원법 적용대상",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">지원대상자는 <b>모 또는 부, 청소년 한부모, 한부모가족(모자·부자가족), 아동(18세 미만의 자)</b> — 소득 수준 및 재산 정도 등을 고려하여 지원</div>
+        <div class="sub">지원대상자 구성</div>
+        <ul class="pts">
+          <li>모 또는 부 (한부모)</li>
+          <li>청소년 한부모</li>
+          <li>한부모가족 — 모자가족, 부자가족</li>
+          <li>아동 — <b>18세 미만의 자</b></li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 지원 여부 결정 시 <b>소득 수준 및 재산 정도</b> 등을 반드시 고려한다</div>
+      `
+    },
+
+    { icon: "💰", title: "한부모가족지원법 급여 5유형",
+      html: `
+        <div class="hbox hbox-blue">급여는 <b>복지급여 · 복지자금대여 · 가족지원서비스 · 고용지원 · 청소년한부모 교육·자립지원</b> 5가지 유형으로 제공</div>
+        <div class="sub">① 복지급여</div>
+        <ul class="pts">
+          <li>생계비, 아동교육지원비, <b>아동양육비</b> 등</li>
+        </ul>
+        <div class="hbox hbox-yellow" style="margin-bottom:8px">💡 국민기초생활보장법 등 다른 법령에 따라 지원받는 경우 이 법에 따른 급여를 하지 않지만, <b>아동양육비는 지급할 수 있음</b></div>
+        <div class="sub">② 복지자금 대여</div>
+        <ul class="pts green">
+          <li>사업에 필요한 자금, 아동교육비, 의료비, 주택자금 등 필요한 자금 중 어느 하나를 대여할 수 있음</li>
+        </ul>
+        <div class="sub">③ 가족지원서비스</div>
+        <ul class="pts yellow">
+          <li>아동의 양육 및 교육서비스, 법률구조서비스, 상담·심리치료 등</li>
+        </ul>
+        <div class="sub">④ 고용지원</div>
+        <div class="sub">⑤ 청소년 한부모 교육지원·자립지원</div>
+        <ul class="pts purple">
+          <li>청소년 한부모가 <b>학업을 할 수 있도록</b> 지원</li>
+          <li>청소년 한부모의 주거 마련 등 자립에 필요한 <b>자산 형성</b>을 위한 재정적 지원</li>
+          <li>청소년한부모 <b>건강진단</b> 실시</li>
+        </ul>
+      `
+    },
+
+    { icon: "🏠", title: "한부모가족 복지조치·상담전화·재원·전달체계",
+      html: `
+        <div class="hbox hbox-blue">복지조치·상담전화로 자립과 정보 접근을 지원하며, 재원은 <b>국가와 지방자치단체</b>가 부담, 전달체계는 지원기관과 한부모가족복지시설로 구성</div>
+        <div class="sub">복지조치</div>
+        <ul class="pts">
+          <li>공공시설 매점 등 운영을 한부모가족 또는 한부모가족복지단체에 <b>우선적 허가</b></li>
+          <li>국민주택 분양 및 임대 시 <b>일정비율 분양</b></li>
+        </ul>
+        <div class="sub">상담전화</div>
+        <ul class="pts green">
+          <li>종합정보 제공, 지원기관 및 시설 연계 등 <b>전문적·체계적 상담 서비스</b> 제공을 위한 상담전화 설치·운영</li>
+        </ul>
+        <div class="sub">재원</div>
+        <ul class="pts yellow">
+          <li><b>국가와 지방자치단체</b>가 부담</li>
+        </ul>
+        <div class="sub">전달체계 — 한부모가족복지시설</div>
+        <div class="badge-row">
+          <span class="badge badge-blue">출산지원시설</span>
+          <span class="badge badge-green">양육지원시설</span>
+          <span class="badge badge-yellow">생활지원시설</span>
+          <span class="badge badge-purple">일시지원시설</span>
+          <span class="badge badge-gray">한부모가족복지상담소</span>
+        </div>
+      `
+    },
+
+    /* ─────────────── 02. 사회복지공동모금회법 ─────────────── */
+
+    { icon: "📂", title: "02. 사회복지공동모금회법",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">기본원칙 및 재원</span>
+          <span class="badge badge-green">사회복지공동모금회법 의의·연혁·기능</span>
+          <span class="badge badge-yellow">모금·배분 주요 규정</span>
+        </div>
+      `
+    },
+
+    { icon: "📋", title: "사회복지공동모금회 기본원칙 및 재원",
+      html: `
+        <div class="hbox hbox-blue">기부자 의사 존중 · 공정한 배분 · 객관적 기준에 따른 효율적 집행 및 결과 공개 — 사회복지공동모금의 <b>3대 기본원칙</b></div>
+        <ul class="pts">
+          <li>기부하는 자의 의사에 반하여 <b>기부금품을 모집하여서는 안 됨</b></li>
+          <li>조성된 재원은 지역·단체·대상자 및 사업별로 <b>복지수요가 공정하게 충족</b>되도록 배분</li>
+          <li>재원의 배분은 <b>객관적인 기준</b>에 따라 효율적으로 이루어지도록 하고 그 결과를 <b>공개</b></li>
+        </ul>
+        <div class="sub">재원 (3가지)</div>
+        <div class="badge-row">
+          <span class="badge badge-red">사회복지공동모금에 의한 기부금품</span>
+          <span class="badge badge-yellow">복권수익금</span>
+          <span class="badge badge-blue">국가·지자체의 보조금</span>
+        </div>
+      `
+    },
+
+    { icon: "❤️", title: "사회복지공동모금회법 의의·연혁·기능",
+      html: `
+        <div class="hbox hbox-blue">과거 관 주도의 성금모금을 지양하고, <b>시민이 자발적으로 참여</b>하여 기금을 조성·관리·배분하는 것이 핵심 의의 — 사회복지사업이나 활동 지원에 필요한 재원을 조성하기 위해 기부금품을 모집하는 것</div>
+        <div class="sub">연혁</div>
+        <div class="flow">
+          <span class="flow-item">사회복지사업법에 공동모금회 규정 (1970)</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">사회복지공동모금회 설립 (1971)</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">이웃돕기운동추진협의회 결성 (1992)</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">사회복지공동모금법 제정 (1997)</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">사회복지공동모금회법 개정 (1999)</span>
+        </div>
+        <div class="sub">사회복지공동모금회(사랑의 열매) 기능</div>
+        <div class="badge-row">
+          <span class="badge badge-blue">공동모금사업</span>
+          <span class="badge badge-green">공동모금 재원 배분</span>
+          <span class="badge badge-yellow">재원 운용·관리</span>
+          <span class="badge badge-purple">조사·연구·홍보·교육훈련</span>
+          <span class="badge badge-gray">사회복지공동모금지회 운영</span>
+          <span class="badge badge-gray">국제교류·협력증진사업</span>
+          <span class="badge badge-gray">다른 기부금품 모집자와의 협력사업</span>
+        </div>
+        <div class="hbox hbox-red">❌ 공동모금회 기능 아님: 사회복지사 보수교육 (→ 한국사회복지사협회)</div>
+      `
+    },
+
+    { icon: "📢", title: "모금·배분 주요 규정",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">모금창구는 <b>언론기관</b>, 배분기준은 매년 <b>8월 31일</b>까지 공고하며, 배분결과는 종료 후 <b>3개월 이내 1개 이상 일간신문</b>에 공고</div>
+        <div class="sub">모금</div>
+        <div class="badge-row">
+          <span class="badge badge-blue">연중 모금</span>
+          <span class="badge badge-green">집중 모금</span>
+        </div>
+        <ul class="star-list">
+          <li>모금 창구 지정: <b>언론기관</b></li>
+          <li>기부금 영수증 교부</li>
+        </ul>
+        <div class="sub">배분</div>
+        <ul class="star-list">
+          <li>배분기준 공고: 매년 <b>8월 31일</b>까지 다음 회계연도 배분기준 공고</li>
+          <li>배분신청서 제출 → <b>배분분과실행위원회</b> 심의</li>
+          <li>공동모금 재원은 <b>당해 회계연도에 지출</b>하는 것이 원칙</li>
+          <li>사용 용도 미지정 기부금품의 <b>10/100 범위</b>에서 외국 및 이북지역 사업 배분 가능</li>
+          <li>재난·긴급구호 시 <b>별도의 배분기준</b>에 따라 지원 가능</li>
+          <li>배분결과 공고: 배분 종료한 날부터 <b>3개월 이내</b>에 <b>1개 이상의 일간신문</b>에 공고</li>
+        </ul>
+      `
+    },
+
+    /* ─────────────── 03. 처우 및 지위향상법 ─────────────── */
+
+    { icon: "📂", title: "03. 사회복지사 등의 처우 및 지위향상을 위한 법률",
+      html: `
+        <div class="badge-row">
+          <span class="badge badge-blue">처우법 의의·연혁·적용대상</span>
+          <span class="badge badge-green">처우개선·신분보장·권익지원센터</span>
+          <span class="badge badge-yellow">한국사회복지공제회</span>
+          <span class="badge badge-purple">사회복지공무원 법적 권한</span>
+          <span class="badge badge-red">정신건강증진법 기본이념</span>
+          <span class="badge badge-gray">현장활동가 대담</span>
+        </div>
+      `
+    },
+
+    { icon: "👩‍💻", title: "처우법 의의·연혁·적용대상",
+      html: `
+        <div class="hbox hbox-blue">사회복지사의 열악한 근로환경·낮은 임금·과중한 업무량 문제 대처 → 사회복지사 등의 <b>처우·지위 향상</b>을 통해 생활안정과 복지 증진 도모</div>
+        <div class="sub">연혁</div>
+        <div class="flow">
+          <span class="flow-item">2011 제정</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">2018 적정인건비지침 마련</span><span class="flow-arrow">▶</span>
+          <span class="flow-item">2024 사회복지종사자 권익지원센터 설립</span>
+        </div>
+        <div class="sub">적용대상 기관 (사회복지사업 종사자)</div>
+        <ul class="pts">
+          <li>사회복지법인·사회복지시설</li>
+          <li>한국사회복지공제회 / 한국사회복지사협회</li>
+          <li>사회복지사업을 목적으로 설립된 법인 등</li>
+        </ul>
+        <div class="sub">처우법 주요 내용</div>
+        <div class="badge-row">
+          <span class="badge badge-blue">한국사회복지공제회 운영</span>
+          <span class="badge badge-green">사회복지사 등의 처우개선</span>
+          <span class="badge badge-yellow">용어정의</span>
+          <span class="badge badge-purple">사회복지종사자 권익지원센터 설립 (2024)</span>
+        </div>
+        <div class="hbox hbox-red">❌ 처우법 내용 아님: 사회복지사 자격증 발급 (→ 사회복지사업법)</div>
+      `
+    },
+
+    { icon: "🛡️", title: "처우개선·신분보장 및 사회복지종사자 권익지원센터",
+      html: `
+        <div class="hbox hbox-blue">처우개선은 <b>사회복지전담공무원 보수 수준</b>에 도달하도록 노력하며, 2024년 권익지원센터를 설립하여 종사자 권익 보호를 강화</div>
+        <div class="sub">처우 개선과 신분 보장</div>
+        <ul class="pts">
+          <li>국가와 지방자치단체는 사회복지사 등의 보수가 <b>사회복지전담공무원의 보수 수준에 도달</b>하도록 노력하여야 함</li>
+        </ul>
+        <div class="sub">사회복지종사자 권익지원센터</div>
+        <ul class="pts green">
+          <li>신설조항: 2024. 1. 2 / 설립: <b>2024. 9. 24</b></li>
+        </ul>
+        <div class="sub">권익지원센터 주요 업무</div>
+        <ul class="star-list">
+          <li>사회복지사 등의 <b>권익 침해에 대한 상담과 지원</b></li>
+          <li>사회복지사 등의 권익 보호를 위한 <b>교육 및 홍보</b></li>
+          <li>사회복지사 등의 권익 침해 실태와 권익보호에 관한 <b>조사 및 연구</b></li>
+        </ul>
+      `
+    },
+
+    { icon: "🏦", title: "한국사회복지공제회",
+      html: `
+        <div class="hbox hbox-blue">사회복지사 등의 <b>복지·후생을 위한 사업 및 공제급여 지급</b>을 목적으로 하는 기관 — <b>보건복지부장관의 인가</b>를 받아 설립</div>
+        <div class="sub">설립</div>
+        <ul class="pts">
+          <li>사회복지사 등은 생활안정과 복지증진을 도모하기 위하여 <b>보건복지부장관의 인가</b>를 받아 한국사회복지공제회를 설립할 수 있음</li>
+        </ul>
+        <div class="sub">회원자격</div>
+        <ul class="pts green">
+          <li>사회복지사, 사회복지법인 및 사회복지시설에 종사하는 사람 등</li>
+        </ul>
+        <div class="sub">주요 사업</div>
+        <ul class="pts yellow">
+          <li>회원에 대한 <b>공제급여 지급</b></li>
+          <li>사회복지시설의 <b>안전·화재 등에 대한 공제사업</b></li>
+          <li>회원의 복지·후생을 위한 사업</li>
+        </ul>
+        <div class="sub">재원</div>
+        <ul class="pts purple">
+          <li>회원의 <b>부담금</b></li>
+          <li>정부 또는 지방자치단체 외의 자의 <b>출연금</b></li>
+          <li>공제사업의 운영으로 발생하는 <b>수익금</b> 등</li>
+          <li>공제회 주된 사무소 설치·운영에 필요한 비용의 일부 지원 (<b>보건복지부장관</b>)</li>
+        </ul>
+      `
+    },
+
+    { icon: "🏛️", title: "사회복지공무원 법적 보장 권한",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">사회복지전담공무원에게 법적으로 보장된 권한은 <b>직무수행권·연금청구권·보수청구권</b> — 공무원은 현행법상 근로3권이 제한되어 단체행동권은 해당 안 됨</div>
+        <div class="sub">사회복지공무원 법적 보장 권한</div>
+        <div class="badge-row">
+          <span class="badge badge-blue">직무수행권</span>
+          <span class="badge badge-green">연금청구권</span>
+          <span class="badge badge-yellow">보수청구권</span>
+        </div>
+        <div class="sub">사회복지전담공무원 권리 제한 사유</div>
+        <ul class="pts yellow">
+          <li>국가 안전보장을 위해 권리를 제한할 수 있다</li>
+          <li>사회질서 유지를 위해 권리를 제한할 수 있다</li>
+          <li>공공복지를 위해 권리를 제한할 수 있다</li>
+        </ul>
+        <div class="sub">사회복지사 의무 채용 예외 시설</div>
+        <div class="badge-row">
+          <span class="badge badge-gray">점자도서관</span>
+          <span class="badge badge-gray">어린이집</span>
+          <span class="badge badge-gray">성폭력피해상담소</span>
+        </div>
+        <div class="hbox hbox-yellow">💡 의무 채용 시설: <b>노인복지관</b></div>
+        <div class="hbox hbox-red">❌ 단체행동권은 해당 안 됨 — 공무원은 현행법상 <b>근로3권이 제한</b>됨<br>❌ "근로3권은 헌법에 보장되므로 침해될 수 없다" → 틀린 설명</div>
+      `
+    },
+
+    { icon: "🧠", title: "정신건강증진법 기본 이념",
+      html: `
+        <span class="kichul">⭐ 기출</span>
+        <div class="hbox hbox-blue">정신건강증진법의 기본이념은 <b>보호받을 권리, 존엄과 가치 보장, 입원·입소 최소화</b> — <b>본인의 의지 존중</b>이 원칙, 가족 의견 우선은 아님</div>
+        <ul class="star-list">
+          <li>모든 국민은 정신질환으로부터 보호받을 권리를 가진다</li>
+          <li>모든 정신질환자는 인간으로서의 존엄과 가치를 보장받아야 한다</li>
+          <li>정신질환자에 대해서는 입원 또는 입소를 <b>최소화</b>한다</li>
+        </ul>
+        <div class="sub">입원 방법</div>
+        <div class="badge-row">
+          <span class="badge badge-blue">자의입원</span>
+          <span class="badge badge-green">보호의무자에 의한 입원</span>
+          <span class="badge badge-yellow">응급입원</span>
+        </div>
+        <div class="hbox hbox-red">❌ 기본 이념 아님: 입원 시 본인의 의지보다 <b>가족의 의견을 우선</b>한다 → 본인의 의지 존중이 원칙<br>❌ 의료기관장에 의한 입원은 입원 방법에 해당하지 않음</div>
+      `
+    },
+
+    { icon: "🎤", title: "현장활동가 대담 — 법과 사회복지실천 현장",
+      html: `
+        <div class="hbox hbox-blue">법 자체보다 <b>"법이 누구의 입장에서 어떻게 쓰이는가"</b>가 사회복지 실천에서 더 중요 — 빈곤은 개인이 아닌 사회구조적 문제</div>
+        <ul class="star-list">
+          <li>빈곤문제는 <b>개인의 책임이 아닌 사회의 구조적인 문제</b></li>
+          <li><b>법이 누구의 입장에서 어떻게 사용되느냐</b>가 중요</li>
+          <li>"이 법의 목적은 무엇인지?" — <b>의문을 던지는 것</b>이 중요</li>
+          <li>법의 목적을 달성하는 방향으로 <b>지침들이 설계</b>되어야 함</li>
+          <li>사회복지실천을 위해 사회복지법을 <b>정확히 이해하고 적용</b>하는 것이 중요</li>
+          <li><b>하위법령</b>이 상위 법령의 목적을 달성할 수 있도록 설계되어야 한다</li>
+        </ul>
+        <div class="hbox hbox-yellow">💡 핵심 메시지: 법 자체보다 <b>"법이 어떻게 쓰이는가"</b>가 사회복지 실천에서 더 중요한 문제</div>
+      `
+    },
+
+    /* ─────────────── 핵심 요약 ─────────────── */
+
+    { icon: "📝", title: "15강 핵심 요약",
+      html: `
+        <table class="comp-table">
+          <tr><th>개념</th><th>핵심 내용</th></tr>
+          <tr><td><b>한부모가족지원법</b></td><td>한부모가족의 생활안정·복지증진 — 아동 <b>18세 미만</b>, 재원은 <b>국가·지방자치단체</b> 부담</td></tr>
+          <tr><td><b>급여 유형</b></td><td>복지급여·복지자금대여·가족지원서비스·고용지원·청소년한부모 지원 5가지 — 타법 지원 시 급여 제외하나 <b>아동양육비는 지급 가능</b></td></tr>
+          <tr><td><b>한부모가족복지시설</b></td><td>출산지원 · 양육지원 · 생활지원 · 일시지원 · <b>한부모가족복지상담소</b></td></tr>
+          <tr><td><b>공동모금회 기본원칙</b></td><td>기부자 의사 존중 / 공정 배분 / 객관적 기준·<b>결과 공개</b></td></tr>
+          <tr><td><b>배분기준 공고</b></td><td>매년 <b>8월 31일</b>까지 다음 회계연도 배분기준 공고</td></tr>
+          <tr><td><b>배분결과 공고</b></td><td>배분 종료 후 <b>3개월 이내</b>에 <b>1개 이상 일간신문</b>에 공고</td></tr>
+          <tr><td><b>모금창구·재원</b></td><td>모금창구: <b>언론기관</b> / 재원: 기부금품·복권수익금·국가·지자체 보조금</td></tr>
+          <tr><td><b>처우법 목적</b></td><td>사회복지사 등의 처우·지위 향상 — 보수는 <b>사회복지전담공무원 수준 도달 노력</b></td></tr>
+          <tr><td><b>권익지원센터</b></td><td>2024년 설립 — 상담·지원 / 교육·홍보 / 조사·연구</td></tr>
+          <tr><td><b>공무원 법적 권한</b></td><td><b>직무수행권·연금청구권·보수청구권</b> — 단체행동권은 <b>제한</b></td></tr>
+          <tr><td><b>정신건강증진법</b></td><td>입원 최소화·본인 의지 존중 — 입원 방법: 자의·보호의무자에 의한·응급입원</td></tr>
+        </table>
+      `
+    },
+
+  ]
+},
     ]
   },
 
@@ -11671,13 +12828,13 @@ const SUMMARY_DATA = {
             html: `
               <ul class="star-list">
                 <li>인권 3세대 : 자유권(1세대) → 사회권(2세대) → 연대권(3세대)</li>
-                <li><b>비엔나 선언(1993)</b> : 모든 인권 보호는 <b>국가의 의무</b></li>
-                <li><b>국가의 삼중의무</b> : 존중(불간섭) · 보호(제3자로부터) · 실현(조건 조성)</li>
+                <li>비엔나 선언(1993) : 모든 인권 보호는 국가의 의무</li>
+                <li>국가의 삼중의무 : 존중(불간섭) · 보호(제3자로부터) · 실현(조건 조성)</li>
                 <li>잔여주의(개인 문제·개별 개입) vs 제도주의(구조 문제·사회적 개입)</li>
-                <li><b>빵과 장미</b> : 빵=생존권 / 장미=인간의 품위·인권</li>
-                <li>사회권으로서 '빵'을 권리로 최초 제시 = <b>베버리지 보고서</b></li>
+                <li>빵과 장미 : 빵=생존권 / 장미=인간의 품위·인권</li>
+                <li>사회권으로서 '빵'을 권리로 최초 제시 = 베버리지 보고서</li>
                 <li>윤리강령 역할 : 방향 제공 · 클라이언트 보호 · 자율성 제고</li>
-                <li>윤리강령 핵심 가치 : <b>인간의 존엄성 · 사회정의 · 품위</b></li>
+                <li>윤리강령 핵심 가치 : 인간의 존엄성 · 사회정의 · 품위</li>
               </ul>
             `
           }
