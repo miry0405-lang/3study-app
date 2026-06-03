@@ -834,6 +834,12 @@ hr {
 }
 .q-number { font-size:.9em; color:var(--accent); font-weight:700; margin-bottom:8px; }
 .q-text { font-weight:700; line-height:1.8; white-space:pre-line; }
+.q-image-wrap { display:none; margin-top:16px; text-align:center; }
+.q-image-wrap.show { display:block; }
+.q-image {
+  max-width:100%; height:auto; border-radius:10px;
+  border:1px solid var(--border); background:#fff;
+}
 .options { display:flex; flex-direction:column; gap:10px; margin-bottom:14px; }
 .opt {
   background:#fff; border:2px solid var(--border); border-radius:12px;
@@ -1797,6 +1803,9 @@ hr {
       <div class="q-card">
         <div class="q-number" id="qz-q-number">문제 1</div>
         <div class="q-text" id="qz-q-text"></div>
+        <div class="q-image-wrap" id="qz-image-wrap">
+          <img class="q-image" id="qz-image" src="" alt="문제 그림">
+        </div>
       </div>
       <div class="options" id="qz-options"></div>
       <div class="explanation" id="qz-explanation">
@@ -27183,7 +27192,8 @@ const QUIZ_BANK = {
   {
     "id": "ch3_001",
     "chapter": 3,
-    "question": "아래에 있는 이념의 지형도에 대한 설명으로 옳은 것은? [그림 설명: 종 모양의 이념 스펙트럼 그래프. 좌파←①②③④→우파 순으로 배치. ①=혁명적 사회주의(극좌), ②=점진적 사회주의(민주사회주의), ③=복지국가 지향 자본주의(사회민주주의적 자유주의), ④=신자유주의(극우 자유주의).]",
+    "question": "아래에 있는 이념의 지형도에 대한 설명으로 옳은 것은?",
+    "image": "/images/q1_ch3_001.png",    
     "options": [
       "①번과 ②번은 사회주의가 문제라고 본다.",
       "③, ④번의 차이는 시장에 정부의 개입을 어느 정도 찬성하는가에 따라 나뉜다.",
@@ -27949,7 +27959,8 @@ const QUIZ_BANK = {
   {
     "id": "ch5_007",
     "chapter": 5,
-    "question": "아래 역사적 제도주의 그림에 대한 설명으로 옳은 것은?<svg width='100%' viewBox='0 0 680 365' style='font-family:Noto Sans KR,sans-serif;'><defs><marker id='arrow' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M2 1L8 5L2 9' fill='none' stroke='context-stroke' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></marker></defs><text x='340' y='42' text-anchor='middle' font-size='18' font-weight='600' fill='#1a1a2e'>역사적 사건</text><line x1='340' y1='62' x2='340' y2='345' stroke='#1a1a2e' stroke-width='1.5'/><line x1='28' y1='158' x2='336' y2='158' stroke='#1a1a2e' stroke-width='1' stroke-dasharray='6,4' marker-end='url(#arrow)'/><line x1='28' y1='308' x2='336' y2='308' stroke='#1a1a2e' stroke-width='1' stroke-dasharray='6,4' marker-end='url(#arrow)'/><line x1='62' y1='308' x2='155' y2='158' stroke='#1a1a2e' stroke-width='1.8' marker-end='url(#arrow)'/><line x1='155' y1='158' x2='232' y2='308' stroke='#1a1a2e' stroke-width='1.8' marker-end='url(#arrow)'/><line x1='232' y1='308' x2='313' y2='158' stroke='#1a1a2e' stroke-width='1.8' marker-end='url(#arrow)'/><line x1='313' y1='158' x2='338' y2='308' stroke='#1a1a2e' stroke-width='1.8' marker-end='url(#arrow)'/><text x='155' y='140' text-anchor='middle' font-size='13' fill='#1a1a2e'>제도''</text><text x='313' y='140' text-anchor='middle' font-size='13' fill='#1a1a2e'>제도'''</text><text x='62' y='328' text-anchor='middle' font-size='13' fill='#1a1a2e'>정치'</text><text x='232' y='328' text-anchor='middle' font-size='13' fill='#1a1a2e'>정치''</text><text x='323' y='328' text-anchor='middle' font-size='13' fill='#1a1a2e'>정치'''</text><line x1='344' y1='103' x2='656' y2='103' stroke='#1a1a2e' stroke-width='1' stroke-dasharray='6,4' marker-end='url(#arrow)'/><line x1='344' y1='253' x2='656' y2='253' stroke='#1a1a2e' stroke-width='1' stroke-dasharray='6,4' marker-end='url(#arrow)'/><line x1='358' y1='253' x2='418' y2='103' stroke='#1a1a2e' stroke-width='1.8' marker-end='url(#arrow)'/><line x1='418' y1='103' x2='478' y2='253' stroke='#1a1a2e' stroke-width='1.8' marker-end='url(#arrow)'/><line x1='478' y1='253' x2='538' y2='103' stroke='#1a1a2e' stroke-width='1.8' marker-end='url(#arrow)'/><line x1='538' y1='103' x2='598' y2='253' stroke='#1a1a2e' stroke-width='1.8' marker-end='url(#arrow)'/><text x='418' y='85' text-anchor='middle' font-size='13' fill='#1a1a2e'>제도'</text><text x='538' y='85' text-anchor='middle' font-size='13' fill='#1a1a2e'>제도''</text><text x='358' y='273' text-anchor='middle' font-size='13' fill='#1a1a2e'>정치'</text><text x='478' y='273' text-anchor='middle' font-size='13' fill='#1a1a2e'>정치''</text><text x='598' y='273' text-anchor='middle' font-size='13' fill='#1a1a2e'>정치'''</text></svg>",
+    "question": "아래 역사적 제도주의 그림에 대한 설명으로 옳은 것은?",
+     "image": "/images/q1_ch5_007.png",
     "options": [
       "탈상품화를 설명하고 있다.",
       "한번 만들어진 제도는 영원히 반복된다.",
@@ -27968,7 +27979,7 @@ const QUIZ_BANK = {
   {
     "id": "ch5_008",
     "chapter": 5,
-    "question": "아래 역사적 제도주의 그림에 대한 설명으로 틀린 것은? <svg width='100%' viewBox='0 0 680 365' style='font-family:Noto Sans KR,sans-serif;'><defs><marker id='arrow01' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M2 1L8 5L2 9' fill='none' stroke='context-stroke' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></marker></defs><text x='340' y='42' text-anchor='middle' font-size='18' font-weight='600' fill='#1a1a2e'>역사적 사건</text><line x1='340' y1='62' x2='340' y2='345' stroke='#1a1a2e' stroke-width='1.5'/><line x1='28' y1='158' x2='336' y2='158' stroke='#1a1a2e' stroke-width='1' stroke-dasharray='6,4' marker-end='url(#arrow01)'/><line x1='28' y1='308' x2='336' y2='308' stroke='#1a1a2e' stroke-width='1' stroke-dasharray='6,4' marker-end='url(#arrow01)'/><line x1='62' y1='308' x2='155' y2='158' stroke='#1a1a2e' stroke-width='1.8' marker-end='url(#arrow01)'/><line x1='155' y1='158' x2='232' y2='308' stroke='#1a1a2e' stroke-width='1.8' marker-end='url(#arrow01)'/><line x1='232' y1='308' x2='313' y2='158' stroke='#1a1a2e' stroke-width='1.8' marker-end='url(#arrow01)'/><line x1='313' y1='158' x2='338' y2='308' stroke='#1a1a2e' stroke-width='1.8' marker-end='url(#arrow01)'/><text x='155' y='140' text-anchor='middle' font-size='13' fill='#1a1a2e'>제도''</text><text x='313' y='140' text-anchor='middle' font-size='13' fill='#1a1a2e'>제도'''</text><text x='62' y='328' text-anchor='middle' font-size='13' fill='#1a1a2e'>정치'</text><text x='232' y='328' text-anchor='middle' font-size='13' fill='#1a1a2e'>정치''</text><text x='323' y='328' text-anchor='middle' font-size='13' fill='#1a1a2e'>정치'''</text><line x1='344' y1='103' x2='656' y2='103' stroke='#1a1a2e' stroke-width='1' stroke-dasharray='6,4' marker-end='url(#arrow01)'/><line x1='344' y1='253' x2='656' y2='253' stroke='#1a1a2e' stroke-width='1' stroke-dasharray='6,4' marker-end='url(#arrow01)'/><line x1='358' y1='253' x2='418' y2='103' stroke='#1a1a2e' stroke-width='1.8' marker-end='url(#arrow01)'/><line x1='418' y1='103' x2='478' y2='253' stroke='#1a1a2e' stroke-width='1.8' marker-end='url(#arrow01)'/><line x1='478' y1='253' x2='538' y2='103' stroke='#1a1a2e' stroke-width='1.8' marker-end='url(#arrow01)'/><line x1='538' y1='103' x2='598' y2='253' stroke='#1a1a2e' stroke-width='1.8' marker-end='url(#arrow01)'/><text x='418' y='85' text-anchor='middle' font-size='13' fill='#1a1a2e'>제도'</text><text x='538' y='85' text-anchor='middle' font-size='13' fill='#1a1a2e'>제도''</text><text x='358' y='273' text-anchor='middle' font-size='13' fill='#1a1a2e'>정치'</text><text x='478' y='273' text-anchor='middle' font-size='13' fill='#1a1a2e'>정치''</text><text x='598' y='273' text-anchor='middle' font-size='13' fill='#1a1a2e'>정치'''</text></svg>",
+    "question": "아래 역사적 제도주의 그림에 대한 설명으로 틀린 것은?",
     "options": [
       "역사적 제도주의를 설명하고 있다.",
       "제도는 정치적 관계의 산물이다.",
@@ -29169,7 +29180,7 @@ const QUIZ_BANK = {
     "id": "ch13_006",
     "chapter": 13,
     "question": "아래 그림(취업에 따라 달라지는 노동자의 상이한 상태: 대기업 정규직A, 대기업 비정규직B, 중소기업 정규직C, 중소기업 비정규직D)에 대한 설명으로 옳은 것은?",
-    "image": "/images/q1_ch13_006.png",
+    "image": "/images/q1_ch13_006.png",    
     "options": [
       "노동자들이 A, B, C, D가 하나의 노조에 가입하는 것이 기업별 노조형태이다.",
       "삼자협의주의는 A, B, C, D 노동자들이 기업별 노조로 단결할 때 가능성이 높아진다.",
@@ -29187,6 +29198,7 @@ const QUIZ_BANK = {
     "id": "ch13_007",
     "chapter": 13,
     "question": "아래 그림(취업에 따라 달라지는 노동자의 상이한 상태)에 대한 설명으로 옳은 것은?",
+    "image": "/images/q1_ch13_006.png",    
     "options": [
       "노동자들이 A, B, C, D가 하나의 노조에 가입된 형태가 산업별 노조형태이다.",
       "삼자협의주의는 A, B, C, D 노동자들이 기업별 노조로 단결할 때 가능성이 높아진다.",
@@ -29205,6 +29217,7 @@ const QUIZ_BANK = {
     "id": "ch13_008",
     "chapter": 13,
     "question": "아래 그림(취업에 따라 달라지는 노동자의 상이한 상태)에 대한 설명으로 옳은 것은?",
+    "image": "/images/q1_ch13_006.png",    
     "options": [
       "노동자들이 A, B, C, D가 하나의 노조에 가입하는 것을 기업별 노조형태이다.",
       "삼자협의주의는 A, B, C, D 노동자들이 하나의 노조로 단결할 때 가능성이 높아진다.",
@@ -42956,6 +42969,17 @@ function renderQzQuestion() {
   document.getElementById('qz-chapter-badge').textContent = `📖 제${q.chapter}강`;
   document.getElementById('qz-q-number').textContent = `문제 ${idx+1}`;
   document.getElementById('qz-q-text').textContent = q.question;
+  
+  const imageWrap = document.getElementById('qz-image-wrap');
+  const imageEl = document.getElementById('qz-image');
+  if (q.image) {
+    imageEl.src = location.protocol === 'file:' && q.image.startsWith('/') ? q.image.slice(1) : q.image;
+    imageEl.alt = q.imageAlt || '문제 그림';
+    imageWrap.classList.add('show');
+  } else {
+    imageEl.removeAttribute('src');
+    imageWrap.classList.remove('show');
+  }
 
   const optEl = document.getElementById('qz-options');
   optEl.innerHTML = '';
