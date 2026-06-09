@@ -1721,7 +1721,8 @@ hr {
           <span>🔍</span>
           <input type="text" id="sumSearchInput"
             placeholder="키워드 검색 예) 생존권, 사회보험, 인권..."
-            oninput="doSumSearch(this.value)">
+            oninput="doSumSearch(this.value)"
+            onclick="event.stopPropagation()">
           <button class="sum-srch-clear" id="sumClearBtn"
             onclick="clearSumSearch()" style="display:none">✕</button>
         </div>
@@ -1744,7 +1745,8 @@ hr {
         <div class="sr-search-box">
           <span>🔍</span>
           <input type="text" id="sumSearchInput2" placeholder="키워드 검색..."
-            oninput="syncSumSearch(this.value)">
+            oninput="syncSumSearch(this.value)"
+            onclick="event.stopPropagation()">
           <button class="sum-srch-clear" id="sumClearBtn2"
             onclick="clearSumSearch()" style="display:none">✕</button>
         </div>
