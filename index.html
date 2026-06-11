@@ -26604,19 +26604,19 @@ function filterSrCh(secIdx, btn, q) {
 }
 
 function doSumSearch(q) {
-  q = q.trim();
-  document.getElementById('sumClearBtn').style.display = q ? 'block' : 'none';
+  var trimmed = q.trim();
+  document.getElementById('sumClearBtn').style.display = trimmed ? 'block' : 'none';
   var inp2 = document.getElementById('sumSearchInput2');
   if (inp2 && inp2.value !== q) inp2.value = q;
   var clr2 = document.getElementById('sumClearBtn2');
-  if (clr2) clr2.style.display = q ? 'block' : 'none';
-  if (!q) { document.getElementById('sumSearchResults').style.display = 'none'; var nav=document.getElementById('srChNav'); if(nav) nav.innerHTML=''; return; }
+  if (clr2) clr2.style.display = trimmed ? 'block' : 'none';
+  if (!trimmed) { document.getElementById('sumSearchResults').style.display = 'none'; var nav=document.getElementById('srChNav'); if(nav) nav.innerHTML=''; return; }
   if (!sumSearchIdx) sumSearchIdx = buildSumSearchIdx();
-  var kw = q.toLowerCase();
+  var kw = trimmed.toLowerCase();
   var hits = sumSearchIdx.filter(function(item){ return item.cardText.toLowerCase().indexOf(kw) !== -1; });
   renderSrHits(hits, kw);
   document.getElementById('sumSearchResults').style.display = 'block';
-  buildSrChNav(hits, q);
+  buildSrChNav(hits, trimmed);
 }
 
 function goSumCard(secIdx, cardTitle) {
